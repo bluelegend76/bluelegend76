@@ -5,8 +5,10 @@ choco install vim
 choco install autohotkey
 choco install freecommander
 choco install vlc
-wsl --install
+# wsl --install
+choco install ImageMagick
 choco install discord
+# https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 
 # - Question: Is there a keyboard shortcut in Windows 10 to move the active app/window to the next desktop? I.e. grabbing and moving it with the mouse is kind of tedious
 # 
