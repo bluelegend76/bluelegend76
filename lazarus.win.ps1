@@ -10,6 +10,18 @@ choco install ImageMagick
 choco install discord
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 
+# https://cdn.insynchq.com/builds/win/Insync-3.8.7.50505.exe
+# Download the Insync installer (replace with the actual download URL)
+$downloadUrl = "https://download.insync.com/latest/windows/insync-setup.exe" 
+$installerPath = "$env:TEMP\insync-setup.exe" 
+
+# Download the installer using Invoke-WebRequest
+Invoke-WebRequest -Uri $downloadUrl -OutFile $installerPath
+
+# Execute the installer (adjust the arguments as needed)
+Start-Process -FilePath $installerPath -ArgumentList "/S"
+
+
 # - Question: Is there a keyboard shortcut in Windows 10 to move the active app/window to the next desktop? I.e. grabbing and moving it with the mouse is kind of tedious
 # 
 # Unfortunately, there isn't a single, dedicated keyboard shortcut to directly move the active app/window to the next desktop in Windows 10.
