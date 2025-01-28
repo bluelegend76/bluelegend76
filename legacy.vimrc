@@ -1122,10 +1122,10 @@ set nrformats=
 " increase commandline history to 200 slots (def.=50)
 "set history=200
 "
-"Next/Previous buffer**
+"Next/Prev. buffer**
 nnoremap <C-S-A-n> :bn<CR>
 nnoremap <C-S-A-p> :bp<CR>
-"Foldmethods
+"Foldmethods Convenience Mappings
 nnoremap <C-S-A-i> :set foldmethod=indent<CR>
 nnoremap <C-S-A-m> :set foldmethod=marker<CR>
 nnoremap <C-S-A-l> :ls<CR>
@@ -1159,7 +1159,7 @@ inoremap <leader>aa <Esc>V'[J
 inoremap <leader>iv <C-R>*
 nnoremap <leader>yo "+yiW
 
-" Set text-formatting to phone-width = 'fmt35'
+" Set text-formatting to phone-width = 'fmt35' / std=0
 nnoremap g3 :set textwidth=35 nosi ai nojs spell shiftwidth=2<CR><CR>-gqap<CR>
 nnoremap g2 :set textwidth=0<CR><CR>-A
 
@@ -1198,7 +1198,7 @@ nnoremap <C-S-A-F3> :wviminfo! ~/Dropbox/planeringsdok.viminfo<CR>
 " KÖR M PROGR./HEMSIDA           'ÖPPNA LÄNK M DICT/FIREFOX' MM {{{
 "   =Öppna/Starta/Kör/Processa länk/adress/fil m/genom program/hemsida
 
-" 'KÖR RADEN' = T.EX. EVINCE -P  OSV  ,ex/,ru
+" 'RUN LINE', with Ext.Progr/Ex  ,ex/,ru
 nnoremap <leader>ru ^yg_:!<C-R>"<CR><CR>
 nnoremap <leader>ex ^yg_:<C-R>"<CR><CR>
 nnoremap <leader>et mm:normal! H
@@ -1331,7 +1331,7 @@ nnoremap <leader>tr viwy:!firefox -new-tab http://sv.bab.la/lexikon/engelsk-sven
 " }}}
 " file-utilities mm ***           #inkl. markering till valoud-temp *** {{{
 
-" ~/
+" ~/  __
 nnoremap <leader>cda viWy:cd <C-R>"<CR> \| :pw<CR>
 nnoremap <leader>cdl viWy:lcd <C-R>"<CR> \| :pw<CR>
 " viWy:cd <C-R>"<CR><CR>
@@ -1439,7 +1439,7 @@ nnoremap <leader>ast :%y<CR>:tabedit<CR>pdgg:%s/.*;//g<CR>:%s/ /\r/g<CR>:%!sort 
 nnoremap <leader>aq :cd ~/Dropbox \| .w >> ~/Dropbox/ankisource_<C-R>%<CR>
 
 " }}}
-" .  vimplane/alltodoplane        folding mm {{{
+" .  vimplane/alltodoplane        folding mm  __ {{{
 
 " indent last edit/paste **
 nnoremap <leader>ie >`]
@@ -1489,7 +1489,7 @@ nnoremap <leader>fw [zo<Esc>]zO<Esc><c-o><c-o>
 
 nnoremap <leader>z :norm ggg?G<CR>
 
-"FLYTTA RADER MED ALT-PIL=GEDIT STYLE
+" Move lines with Alt-Up/Down (Gedit-style)
 nnoremap <A-Up> ddkP
 nnoremap <A-Down> ddjP
 vnoremap <A-Up> dkkpV`]
@@ -1529,7 +1529,7 @@ nnoremap <S-A-m> <C-w>w<C-w>\|<C-w>_
 " }}}
 " substitution/global ** {{{
 
-" STARTA SUBSTITUTION-RAD ***
+" Start Substitution-Line ***
 nnoremap <leader>sj :.,$s///gc<Left><Left><Left>
 nnoremap <leader>sv :'<,'>s///gc<Left><Left><Left>
 nnoremap <leader>sa :%s///gc<Left><Left><Left>
@@ -1551,7 +1551,7 @@ cnoremap <leader>ta :s/\v//gc<left><left><left><left>
 " }}}
 " filter o rapporter              nyck.ordsfiltr, radstartfiltr. mm {{{
 
-" LISTA ALLA ANVÄNDA KEYBOARD-SHORTCUTS
+" LISTA ALLA ANVÄNDA KEYBOARD-SHORTCUTS  __ __
 "VIMGREP FOR TAG UNDER CURSOR*****
 "old: = noremap <C-S-A-v> viWy:vimgrep /<C-R>"/ % \| copen \| resize<CR>
 nnoremap <C-S-A-v> y:vimgrep /<C-R>"/ % \| copen \| resize<CR>

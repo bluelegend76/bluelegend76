@@ -1,3 +1,5 @@
+vim:foldmethod=indent:foldlevel=2:
+
 WinKeys ----
         Show windows (persistent) + Select with Arrows
             w-Tab // ca-Tab
