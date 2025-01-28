@@ -10,6 +10,9 @@ choco install vlc
 choco install discord
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 
+# WSL/Ext4
+# sudo modprobe ext4
+
 # https://cdn.insynchq.com/builds/win/Insync-3.8.7.50505.exe
 # Download the Insync installer (replace with the actual download URL)
 $downloadUrl = "https://download.insync.com/latest/windows/insync-setup.exe" 
