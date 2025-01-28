@@ -6,7 +6,7 @@ choco install autohotkey
 choco install freecommander
 choco install vlc
 # wsl --install
-choco install ImageMagick
+# choco install ImageMagick
 choco install discord
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 

@@ -3,6 +3,12 @@
 - [ ] TODO: Item
 
 ## Directories
+- Reflists
+  - Win
+    - win-keys
+    - msoft teams
+    - msoft outlook
+  - BROWSERS ETC(.Empire)
 - emacs
 - vim
 - fluxbox
