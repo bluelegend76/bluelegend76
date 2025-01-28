@@ -37,7 +37,7 @@ inoremap <leader>ii <C-R>+<CR>
 
 nnoremap <leader>ia "*p
 inoremap <leader>ia <C-R>*
-" inoremap <leader>ia *
+" inoremap <leader>ia <C-R><C-R>*
 
 " Macros/Actions  __
 " Run latest run macro **

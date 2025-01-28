@@ -28,14 +28,14 @@ let maplocalleader = "\\"
 "  +'First Run' only highlights. Continue with 'n' (****)
 " "Search" for text without moving cursor:
 " :let @/ = "stuff"  [*****]
-"vnoremap * y/"<CR>N
+"vnoremap * y/<C-R>"<CR>N
 "nnoremap * yiw:sil let @/=@@<CR>:sil set hlsearch<CR>
 "vnoremap g* y:let @/=@@<CR>:sil set hlsearch<CR>
-"vnoremap * y/\<"\><CR>N
-""vnoremap # y?"<CR>N
+"vnoremap * y/\<<C-R>"\><CR>N
+""vnoremap # y?<C-R>"<CR>N
 "nnoremap # yiw:sil let @?=@@<CR>:sil set hlsearch<CR>
 "vnoremap g# y:let @?=@@<CR>
-"vnoremap # y?\<"\><CR>N
+"vnoremap # y?\<<C-R>"\><CR>N
 
 " NEW TODO(??|!): sa_+ / sa_-  =  zr / zm
 
@@ -44,25 +44,25 @@ let maplocalleader = "\\"
 " #split merged column paragraphs
 " nnoremap <F5> xd$2}-o<C-R>"<Esc><C-O>
 
-"  @h(ms2sec): f Bs"*3600f:r+wct:"*60f:r+ciW="
-
+"  @h(ms2sec): f Bs<C-R>"*3600<Esc>f:r+wct:<C-R>"*60<Esc>f:r+ciW<C-R>=<C-R>"
+<Esc>
 
 " NEW 2021!!  SET 'CS-E/Y' TO LARGER NUM (EG. 5 C-E/Y ETC)
 "   (+perhaps if inputs num (eg. '5') =sets cs-e/y to that val. ****!!)
 
 " RDS-UTIL NY: OMVANDLA  TILL PDFREF-SIDNUMMER (********/!!) 2020++
 "   @a: /
-A----nx,pu   (el. ev ,ppu
+A----<Esc>nx,pu   (el. ev ,ppu
 " OPEN PREVIOUS/NEXT REF-PDF_PAGE *********!!
 nnoremap <leader>pf ?evince -p
-^yg_:!"
+^yg_:!<C-R>"
 V
 " nnoremap <leader>opp ?evince -p \d
 ,ruzz
 "  ?evince -p \d
 ,ruzz   ,opp ,opn
 nnoremap <leader>pn /evince -p
-^yg_:!"
+^yg_:!<C-R>"
 
 V
 " nnoremap <leader>opn /evince -p \d
@@ -73,14 +73,14 @@ nnoremap <leader>pn /evince -p
 " SAMLING MAKRON MM:
 " ÖVERSÄTT(=OMVANDLA PVERKTL=TABSEP LISTA) TILL VIMANKI (=VIKN(!/**))
 " @b(?):  $F    vgelc
--,fazo
+<Esc>-,fazo
 
-dg_-i    " 
+dg_-i    <C-R>" <Esc>
 dd
 "       (=skapad när översatte emacs-pverktl till vimanki-version) (***/(!))
 
 " ="Förtydl." av 'n'
-" noremap (el. nnoremap o vnoremap) n nV      el. nzzV / nzz
+" noremap (el. nnoremap o vnoremap) n <Esc>nV      el. <Esc>nzzV / nzz
 " EV. NY NOV. 2019 ****
 " 'cycle back through vis. marked text' (=saved history for gv
 "  =kunna gå tillbaks till tidigare markeringar, inte bara exakt förra) *****
@@ -91,7 +91,7 @@ dd
 "   dG
 "   o
 
-
+<Esc>
 "
 "
 "   TODO TODO TODO
@@ -99,7 +99,7 @@ dd
 "       ev keys: =',qc'     #=macro-cut
 "   OBS, SE UPP! REG. R ÄR FÖR NÄRVARANDE BLOCKAD (=SUDDAS NÄR KÖR MAKROT)
 "   utkast (=ev senare ändra till att inte blockera 'register r' mm
-nnoremap <leader>qc ^lv"ryf:Wyg_:let @r=@"
+nnoremap <leader>qc ^lv"ryf:Wyg_:let @<C-R>r=@"
 
 
 "   NY: Indrag upp till märket 'm + Hoppa tillbaks ****
@@ -134,10 +134,10 @@ nnoremap <C-A-A> z=
 " RDS-UTILS:  JOIN LINES ENDING IN '-' + NEW SPLIT ****
 "   @j:  Jh2xf r
 " CUT HAND-EDITED VLC TIMESTAMP (eg. 14:38 = '14*60+38') + CONVERT TO SECONDS ************
-"   @z:  "yyiWvEc=y
-     #OBS: behöver handjusteras efteråt (!%¤%¤)
+"   @z:  "yyiWvEc<C-R>=<C-R>y
+<Esc>     #OBS: behöver handjusteras efteråt (!%¤%¤)
 "    CUT LINE AT CURSOR, AND RUN FROM COMMANDLINE ***************************
-"   @a/r(esource_run) ***********: ^"zyg_:z
+"   @a/r(esource_run) ***********: ^"zyg_:<C-R>z
 "
 " wallpapers  @p: ,papj
 "
@@ -210,7 +210,7 @@ nnoremap <A-Right> dawf pge
 "       @a:  :let @z=@/
 ?evince
 ,ru
-?z
+?<C-R>z
          (+GÖR VAR. FÖR RSTENO =M. \t\tOrd / Ord )
 "   =GENERALISERA TILL TEXTFIL M. PDFFILS-LÄNKAR (=ÖPPNA PDF NÄR SÖKT I
 "   TEXTEN************/!!!!!!!)
@@ -227,7 +227,7 @@ nnoremap <A-Right> dawf pge
 " Ful-indentering innan löst tab/retabs mm indentinställningar smidigt
 "   mellan 4 och 2 spaceindrag ********
 " @m(ore) och @l(ess)  (dra in/dra tillbaks resten på paragraph 2 blanksteg)
-" }k^I  ^
+" }k^I  <Esc>^
 " V]zkk:s/^//n
 
 " Sätta fontstorlek a-+ och a-- + c-mushjul_upp/ner ****
@@ -650,8 +650,8 @@ augroup END
 " 
 " --------------------
 "  /^\s*\(<\|r[0-9]\+\)
-" OI% takt =i
-" :let i=i+1
+" O<Esc>I% takt <C-R>=i
+" <Esc>:let i=i+1
 " j0
 "  =  v-markering + ': (sudda '<,'>) + let @a=@*'
 "  +  let i=1
@@ -668,7 +668,7 @@ augroup END
 " vnoremap _sl o<ESC>a(<ESC>gvo<ESC> a)<ESC>     =gör med E och a istället
 "  }}}
 " Splitta defaultgruppering för åttondelar {{{
-" Ea[Ea]$gEa]gEa[/^\s\+<
+" Ea[<Esc>Ea]<Esc>$gEa]<Esc>gEa[<Esc>/^\s\+<
 " k
 "  }}}
 " Sudda alla strängangivelser i markerade området {{{
@@ -941,8 +941,8 @@ nnoremap n nzzh | nnoremap N Nzz
 nnoremap U <C-R>
 
 " ucase, lcase and ccase completed word
-inoremap <leader>au gUaWea, 
-inoremap <leader>eu gUaWea
+inoremap <leader>au <Esc>gUaWea, 
+inoremap <leader>eu <Esc>gUaWea
 " inoremap <C-u> <Esc>gUiwA
 "inoremap <C-l>
 " inoremap <C-c> <Esc>bgUlA
@@ -1158,13 +1158,13 @@ nnoremap <c-w>V <c-w>v<c-w><c-w><c-f>
 let g:user_emmet_leader_key='<C-H>'
 "       :-history win           c-m     (????)
 "       /-history win           c-s     (????)
-inoremap <leader>ii +
+inoremap <leader>ii <C-R>+
 nnoremap <leader>ia "*p
-inoremap <leader>ia *
+inoremap <leader>ia <C-R>*
 " TODO: Maybe add '[ (=back to start of input)
 "         if paste is longer than 1 line(!)
-inoremap <leader>aa V'[J
-inoremap <leader>iv *
+inoremap <leader>aa <Esc>V'[J
+inoremap <leader>iv <C-R>*
 nnoremap <leader>yo "+yiW
 
 " Set text-formatting to phone-width = 'fmt35'
@@ -1215,7 +1215,7 @@ mt:normal! gg
 nnoremap <leader>eb mm:normal! H
 mt'm?\v^\s*\zsset 
 ^yg_:!<C-R>"<CR><CR>'tzt'm
-nnoremap <leader>tx mmVHmz1G^yg_:<C-R>"<CR><CR>'zzt'm
+nnoremap <leader>tx mmVH<Esc>mz1G^yg_:<C-R>"<CR><CR>'zzt'm
 
 " OPEN LEXILOGOS {LANG/SYMBOLS} KEYBOARD ********
 "   https://www.lexilogos.com/keyboard/index.htm
@@ -1597,10 +1597,10 @@ vnoremap <leader>td y:belowright split ~/Dropbox/frasteno--REF_förkortningar.tx
 vnoremap <leader>te y:belowright split ~/Dropbox/rapsteno--REF_förkortningar.txt<CR>/\v^\s*<C-R>"<CR>
 " -------
 vnoremap <leader>trs mmy:botright vsplit ~/Dropbox/rsc/data/lists/ref/shorth/rapidskr.txt
-/^\A\?"
+/^\A\?<C-R>"
 yycp^:s/\v.{-}  //
 :s/  .*//
-"rdg_dd`ma[]ir:bd rapidskr
+"rdg_dd`ma[]<Esc>i<C-R><C-R>r<Esc>:bd rapidskr
 :nohlsearch
 "vnoremap <leader>tg (=Gregg-var)
 " -----
@@ -1611,21 +1611,21 @@ vnoremap <F6> y:!ristretto `find /home/bluelegend/Dropbox/ankiimages-steno_rskri
 
 "dra in rsteno-sträng  vid[/"\"]
 vnoremap <F3> mmy:botright vsplit ~/Dropbox/rsc/data/lists/ref/shorth/rapidskr.txt
-/^\A*".\{-}\ze  
+/^\A*<C-R>".\{-}\ze  
 yycp^:s/\v.{-}  //
 :s/  .*//
-"rdg_dd`ma[]ir:bd rapidskr
+"rdg_dd`ma[]<Esc>i<C-R><C-R>r<Esc>:bd rapidskr
 :nohlsearch
 "dra in rsteno-sträng + ha kvar reffils-fönstret
 vnoremap <F4> mmy:botright vsplit ~/Dropbox/rsc/data/lists/ref/shorth/rapidskr.txt
-/^\A*"
+/^\A*<C-R>"
 yyp^:s/\v.{-}  //
 :s/  .*//
-"rdg_dd`ma[]ir
+"rdg_dd`ma[]<Esc>i<C-R><C-R>r<Esc>
 
 "search rsteno string in new
 " evince -l "string"
-vnoremap <F5> y:!evince --find='"' ~/Dropbox/rsc/Doks/Lang/Shorth/sv/rskrift.empire.pdf &
+vnoremap <F5> y:!evince --find='<C-R>"' ~/Dropbox/rsc/Doks/Lang/Shorth/sv/rskrift.empire.pdf &
 
 
 "dra in svår gregg-sträng
@@ -1633,16 +1633,16 @@ vnoremap <F5> y:!evince --find='"' ~/Dropbox/rsc/Doks/Lang/Shorth/sv/rskrift.em
 "       / '  '-SOLUTIONS FROM NEXT LINE TO F3/F3 (=support for longer phrases
 "       etc (!! ###)
 " __ vnoremap <F11> mmy:botright vsplit ~/Dropbox/rsc/data/lists/ref/shorth/gregg.txt
-/^\t*"\ze  
+/^\t*<C-R>"\ze  
 yycp^:s/\v.{-}  //
 :s/  .*//
-"rdg_dd`ma[]ir:bd gregg.txt
+"rdg_dd`ma[]<Esc>i<C-R><C-R>r<Esc>:bd gregg.txt
 :nohlsearch
 " __ vnoremap <F12> mmy:botright vsplit ~/Dropbox/rsc/data/lists/ref/shorth/gregg.txt
-/^\t*"\ze  
+/^\t*<C-R>"\ze  
 yyp^:s/\v.{-}  //
 :s/  .*//
-"rdg_dd`ma[]ir
+"rdg_dd`ma[]<Esc>i<C-R><C-R>r<Esc>
 
 " __ Search shorthand shapes by string (i.e. from shorthand reference PDF's)
 " let g:last_search_key = ""
@@ -1691,9 +1691,9 @@ ddp-J
   ******(!!!!)
 " pull/read                       t.ex. senaste filnamnet från akt. mapp {{{
 " Find New Path for Moved File (=Broken Path-link [!!]) ******
-" nnoremap <leader>FF $T/yE:r !find -L -type f -name '"' 2>/dev/null<CR>
+" nnoremap <leader>FF $T/yE:r !find -L -type f -name '<C-R>"' 2>/dev/null<CR>
 " !#¤&!"#¤½!¤!"#%¤!"¤%  Pull out and input root path from filename  + use x and z registers
-" nnoremap <leader>FF $T/yE:r !find -L -type f -name '"' 2>/dev/null; ding<CR>
+" nnoremap <leader>FF $T/yE:r !find -L -type f -name '<C-R>"' 2>/dev/null; ding<CR>
 
 " Plocka in filnamnet för senaste redigerade (=t.ex. tillagda filen) i aktiva mappen ******
 nnoremap <leader>f $:r !ls -tr \| tail -1 <CR>kgJ
