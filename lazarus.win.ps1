@@ -1,7 +1,9 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+# choco search vim
 
 choco upgrade -y git
 choco install vim
+choco install neovim
 choco install autohotkey
 choco install freecommander
 choco install vlc

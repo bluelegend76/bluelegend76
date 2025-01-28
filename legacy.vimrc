@@ -959,21 +959,18 @@ nnoremap <leader>ic :set ic!<CR>
 
 " Cut next blank
 nnoremap <C-D> f x
+" Forget-delete v-marked
 vnoremap <C-D> "_d
 
-"kopiera till slutet på raden (##)  (el 'yL')??
-nnoremap yl y$
-" KOPIERA ORD (=iW?) TILL "+ *******    =HEXSTRÄNGAR FÖR INKSCAPE MM*****
+" Copy WORD to "+ **
 nnoremap <leader>yy "+yiW
-" Klipp ut hel fils innehåll *****
+" Copy Whole Buffer to "+ **
 nnoremap YY :%y+<CR>
-" sudda hela bufferns innehåll *
+" Scratch whole buffer
 nnoremap D+ :%d+
 nnoremap DD :%d
-" nnoremap DD :%d<CR>   ___activate
-
-nnoremap <C-S-A-d> :bd
-"nnoremap <C-S-A-d> :bd<CR>
+" Pop buffer from buffer list
+nnoremap <C-S-A-w> :bw<CR>
 
 " inoremap <C-S-e>   ##DEPREC. (=maps kan inte skilja på c-e och cs-e(!!))
 " inoremap <C-S-y> 
@@ -993,8 +990,6 @@ onoremap gH ^
 
 noremap <leader>L L
 noremap <leader>H H
-
-nnoremap <leader>de d$
 
 " https://stackoverflow.com/questions/1636297/how-to-change-the-folder-path-for-swp-files-in-vim/1636944
 set directory=~/.vim//
@@ -1019,11 +1014,8 @@ set backupdir=~/.vim//
 "    BACKSPACE
 
 "ev byt till 'e'
-nnoremap <leader>o <CR>
-inoremap <leader>o <Esc>o
-cnoremap <leader>o <CR>
-nnoremap <leader><leader>o o<Esc>
-nnoremap <leader><leader>u O<Esc><CR>
+nnoremap <leader>o <CR> | inoremap <leader>o <Esc>o | cnoremap <leader>o <CR>
+nnoremap <leader><leader>o o<Esc> | nnoremap <leader><leader>u O<Esc><CR>
 nnoremap <leader><leader>m J<CR>
 " nnoremap <leader>u -
 " inoremap <leader>u -
