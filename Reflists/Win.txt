@@ -1,4 +1,6 @@
-
+WinKeys ----
+                Show windows (persistent) + Select with Arrows
+                    w-Tab // ca-Tab
 
 FreeCommander ----
                 File: Attribute/Timestamp...
