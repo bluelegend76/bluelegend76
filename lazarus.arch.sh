@@ -316,6 +316,84 @@ sudo apt install speech-dispatcher
 # testing that it works:
 # spd-say hi 
 
+# Arch Linux: WAKE ON LAN + SSH
+#
+## Regarding your question about accessing your
+## Ext4 drive remotely using SSH and Wake-on-LAN:
+## 
+## 1. Enable Wake-on-LAN (WOL) in BIOS/UEFI:
+## - Access your computer's BIOS/UEFI settings.
+## - Locate the power management settings.
+## - Enable the Wake-on-LAN option.
+## - Save and exit the BIOS/UEFI settings.
+## 
+## 2. Configure Network Interface for Wake-on-LAN:
+## - Open a terminal on your Arch Linux system.
+## - Use ethtool to configure your network interface:
+## 
+## sudo ethtool <interface_name> 
+## 
+## Replace <interface_name> with the name of your
+## network interface (e.g., eth0, enp0s25).
+## 
+## Set the Wake-on parameter to g (magic packet):
+## 
+## sudo ethtool -s <interface_name> wol g
+## 
+## 3. Install and Configure SSH Server:
+## 
+## Install OpenSSH server:
+## 
+## sudo pacman -S openssh 
+## 
+## Configure SSH server:
+## 
+## - Edit the SSH configuration file:
+##   sudo vim /etc/ssh/sshd_config
+## - Uncomment and adjust settings as needed:
+##   - PermitRootLogin yes (or configure a
+##     specific user for SSH access)
+##   - PasswordAuthentication yes (or configure
+##     key-based authentication for enhanced security)
+## - Restart the SSH service:
+## 
+## sudo systemctl restart sshd 
+## 
+## 4. Test Wake-on-LAN:
+## 
+## - Use a Wake-on-LAN tool: There are various tools
+##   available (e.g., wakeonlan command-line tool,
+##   dedicated software) to send the magic packet to
+##   your computer.
+## - Find your computer's MAC address:
+##   - Use ip addr show in your terminal to find the
+##     MAC address of your network interface.
+## - Send the Wake-on-LAN packet: Use the Wake-on-LAN
+##   tool to send the magic packet to your computer's
+##   MAC address.
+## 
+## 5. SSH into your computer:
+## 
+## - Once your computer wakes up, you can SSH into it using:
+## 
+## ssh <username>@<ip_address_of_your_computer> 
+## 
+## Important Notes:
+## 
+## - Firewall Rules: Ensure that your firewall
+##   (both on your computer and your router)
+##   allows incoming SSH connections.
+## - Network Configuration: Your network configuration
+##   (router settings, etc.) might need adjustments to
+##   ensure that the Wake-on-LAN packets can reach your computer.
+## - Security: Exercise caution with remote access
+##   and ensure that your SSH server is properly secured.
+## 
+## This approach allows you to remotely access your Arch
+## Linux system (and therefore your Ext4 drive) even when
+## the computer is powered off. However, it requires careful
+## configuration of Wake-on-LAN and SSH.
+
 
 # Google Chrome
 #     https://itslinuxfoss.com/install-google-chrome-ubuntu-22-04/
