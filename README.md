@@ -1,6 +1,6 @@
 # -- bluelegend76 dotfiles and portable config --
 
-- [ ] TODO: Item
+- [ ] Reformat External Drives to ExFAT
 
 ## Directories
 - Reflists
@@ -8,7 +8,7 @@
     - win-keys
     - msoft teams
     - msoft outlook
-  - BROWSERS ETC(.Empire)
+  - BROWSERS ETC (=Empire-Lists)
 - emacs
 - vim
 - fluxbox

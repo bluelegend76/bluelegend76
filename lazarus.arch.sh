@@ -11,6 +11,9 @@
 #              /##.~   ~.##\  #   %#e" #  #
 #             /.^         ^.\ 
 
+# sudo pacman -S exfat-utils
+# sudo mkfs.exfat /dev/sdb1
+
 # Search for a package in the repos (e.g. Firefox):
 #  pacman -Ss firefox
 
