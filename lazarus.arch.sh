@@ -11,6 +11,7 @@
 #              /##.~   ~.##\  #   %#e" #  #
 #             /.^         ^.\ 
 
+# Format external drive to ExFat (Lin/Win/Mac compatability):
 # sudo pacman -S exfat-utils
 # sudo mkfs.exfat /dev/sdb1
 
@@ -67,6 +68,25 @@ read -p "Start?: "
 # network-manager-applet
 
 read -p "Start nm-tray(=applet) and make sure Network is up and Connected. +Press enter when Done(!)(=to continue): "
+
+# sudo gvim -c '/en_US\.UTF-8' /etc/locale.gen
+# sudo locale-gen
+## Edit Systemd
+# sudo systemctl edit systemd-localeapplications.service
+## Add following to the service-file
+# [Service]
+# ExecStartPost=/usr/bin/localectl set-locale LANG=en_US.UTF-8
+## Restart the service
+# sudo systemctl daemon-reload
+# sudo systemctl restart systemd-localeapplications.service
+# (+log in and out)
+
+# sudo gvim /usr/share/lightdm/lightdm.conf.d/50-user.conf
+# Add lines to file
+# [SeatDefaults]
+# keyboard-layout=sv,variant=dvorak 
+#
+# sudo systemctl restart lightdm
 
 echo "Now linking up bashrc, inputrc: ..."
 rm -f ~/.bashrc ~/.inputrc ~/.profile
