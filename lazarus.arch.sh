@@ -43,6 +43,17 @@
 # TODO: Set Login-Menu to Svorak
 # TODO: Set System-lang to En-Us
 
+
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+cd
+yay -Syu dropbox
+dropbox start
+dropbox start &
+
 EXTHD1='3a7592f8-41d6-4c29-b6d0-53533881b86a'
 read -p "[Pre 0] Current ExtHd 1 set to ${EXTHD1}. Exit and modify if this setup has changed[!]: "
 read -p "[Pre 1/3] Start off with a done Dropbox and Fluxbox install. Ready?: "
@@ -132,6 +143,7 @@ echo "Creating directory for Gdrive: ..."
 mkdir gdrive
 
 # TODO: SET FOR MANUAL DOWNLOAD(!!)
+yay -S insync
 #@@__ read -p "Next: Downloading Insync [22.04] (with info 'trulystrange' and 'i0...'): "
 #@@__ wget https://cdn.insynchq.com/builds/linux/insync_3.8.4.50481-jammy_amd64.deb
 #@@__ sudo dpkg -i insync_3.8.4.50481-jammy_amd64.deb
@@ -192,6 +204,7 @@ pacman -S soundstretch mma
 pacman -S csound
 pacman -S csoundqt
 # csound-plugins
+yay -S csound-blue
 # https://github.com/kunstmusik/blue/releases/download/2.9.1/blue-linux-2.9.1.zip
 # +TODO: SET+UPDATE LINKS TO CUSTOM SHOTWELL DB:S
 #   (=stored in Drop|Empire-dirs)
@@ -915,6 +928,7 @@ pacman -S code
 # }}}
 
 # ==== 'Search: Mono vs Dotnet SDK Ubuntu' +F# Ubuntu ==== {{{
+sudo pacman -S dotnet-sdk dotnet-runtime
 # Note! 'Unity uses Mono(!!(??))'
 #     ? https://download.mono-project.com/sources/monodevelop/monodevelop-7.8.4.1.tar.bz2
 #
