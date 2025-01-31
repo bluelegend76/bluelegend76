@@ -7,6 +7,7 @@ choco install neovim
 choco install autohotkey
 choco install freecommander
 choco install vlc
+choco install sumatrapdf.install
 # wsl --install
 # choco install ImageMagick
 choco install discord
