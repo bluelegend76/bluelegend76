@@ -1,0 +1,2109 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+Firefox  @
+                    save open tabs as bookmarks (=in directory)  cs-d
+                    bookmark-toolbar  -b
+                    organize bookmarks  cs-o
+
+                    ----Tabs-Navigation--- **
+                    Search in open Tabs ***(*)      % search
+                    Flip between current/last
+                      Tab // list recent Tabs ****  c-tab(=tap) // t-cab(Hold*)
+                    Full list for open Tabs **(*)   cs-tab
+                    -- -
+                    Select Tabs                     c-1 .. c8  |  c-9  **
+
+                    open link in new tab (=active) **  cs-click
+                    --- " --- bg tab *              c-click / c-ent
+                    last / next visited link  in new tab **(*)    c-back/next **
+
+                    find  +next/previous **         c-f  ent/s-ent  # c-g / f3
+                    find link on page (*)           ' + search  **
+                    search-engine shortcut
+                      (+set custom shortname) *     @wikipedia + search   # @wik
+                    (next/previous search-engine)
+                    [open search-result in new tab    a-ent]
+                    ----
+                    Search in:
+                        bookm.                  *
+                        tabs (**)               %
+                        url/webaddr.            $
+                        --
+                        in tagged               +
+                        in suggestions(??/*)    ?
+                    
+                    download-manager                cs-y
+
+                    next/previous 'frame'           f6
+ffox devtools
+gsearch webtricks  [@@(@)]
+                ~/Empire/Doks/Comp/_tipstricks/cheatsh-qref/ghack2.cheatsh.txt  __
+                ----
+                Google Hacking Cheat Sheet
+                Advanced Querying
+
+                Query
+                inurl:
+
+                Description & Example
+                Value is contained somewhere in the url.
+
+                Ex: "preventing ransomware inurl:fbi"
+
+                site:
+
+                Only search within this website's given domain
+                Ex: "windows xp end of life site:microsoft.com"
+
+                filetype:
+
+                Search only for files, not webpages
+                Ex: "nasa moon landing filetype:JPG"
+
+                allinurl:
+
+                Search all of the following words in the url.
+
+                Ex: allinurl: "blog wordpress" information security
+
+                intext:
+
+                Search the body of the webpage for specific text.
+
+                Ex: patient record intext:"index of /htdocs"
+
+                related:
+
+                Find website results that are related to your search term.
+
+                Ex: related:sans.org
+
+                info:
+
+                Find supplemental information Google may have on this page
+                (useful for finding cached pages)
+                Ex: info:www.usgs.gov
+
+                link:
+
+                Find other pages indexed by Google that reference this link
+                Ex: link:http://www.somecompany.com/supersecretfile.doc
+
+                "quote"
+
+                Find an exact phrase (though results may include related words)
+                Ex: "Malware Hunting"
+
+                +word
+
+                Show results with this word exactly. Do not include similar words.
+
+                Ex: Malware +Hunter
+
+                ­word/query
+
+                Do not include this word in search results or queries.
+
+                Ex: Advanced Malware Hunting ­beginner ­introduction ­site:microsoft.com
+
+                "word * word"
+
+                Wildcard. Search for anything between these two words, but include both.
+
+                Ex: "Next * Firewalls with *"
+
+                OR (or | )
+
+                Return results for either item. The pipe character can be used in place
+                Ex: "locky OR ransomware"; Ex: "locky | ransomware"
+
+                AND (or &)
+
+                Return results with both items. Ampersand character can be used in place.
+
+                Ex: "cissp AND certification" Ex: "cissp & certification"
+
+                Remember, the real power comes in stringing multiple advanced operators together.
+                ("Index Of" | "[To Parent Directory]") AND "*financ*" inbody:xlsx site:somebank.com
+                ----
+                ~/Empire/Doks/Comp/_tipstricks/cheatsh-qref/ghack1.cheatsh.txt  __
+                ----
+                Google Hacking 101
+                Google Search Basics
+                Google being a full-text search engine, it indexes entire web pages instead of just titles and
+                descriptions. This allows comprehensive searches based upon key (query) words. Straight from the Google
+                search page.
+
+                Google's Boolean default is AND; that means if you enter query words without modifiers, Google
+                will search for all of them.
+
+                If you search for:
+
+                snowblower Honda "Green Bay"
+                Google will search for all the words.
+
+                If you want to specify that either word is acceptable, you put
+                an OR between each item:
+
+                snowblower OR snowmobile OR "Green Bay"
+                If you want to definitely have one term and have one of two or more other terms, you group them
+                with parentheses, like this:
+
+                snowblower (snowmobile OR "Green Bay")
+                This query searches for the word "snowmobile" or phrase "Green Bay" along with the word
+                "snowblower."
+
+                A stand-in for OR borrowed from the computer programming realm is the | (pipe)
+                character, as in:
+
+                snowblower (snowmobile | "Green Bay")
+                If you want to specify that a query item must not appear in your results, use a - (minus sign or
+                dash).
+
+                snowblower snowmobile -"Green Bay"
+                This will search for pages that contain both the words "snowblower" and "snowmobile," but not
+                the phrase "Green Bay."
+
+                Google Syntax Words
+                Google also allows keyword searches in specific parts of web pages using special syntax words. Additional
+                commands, called special syntaxes, let Google users search specific parts This comes in handy when you're
+                dealing with billions of web pages and need every opportunity to narrow your search results. Specifying that
+                your query words must appear only in the title or URL of a returned web page is a great way to have
+                your results get very specific without making your keywords themselves too specific.
+
+                intitle:
+
+                intitle: restricts your search to the titles of web pages. The variation,
+                allintitle: finds pages wherein all the words specified make up the title of the
+                web page. It's probably best to avoid the allintitle: variation, because it doesn't
+                mix well with some of the other syntaxes.
+
+                intitle:"george bush"
+                allintitle:"money supply" economics
+
+                inurl:
+
+                inurl: restricts your search to the URLs of web pages. This syntax tends to work well
+                for finding search and help pages, because they tend to be rather regular in composition.
+
+                An allinurl: variation finds all the words listed in a URL but doesn't mix well with
+                some other special syntaxes.
+
+                inurl:help
+                allinurl:search help
+
+                intext:
+
+                intext: searches only body text (i.e., ignores link text, URLs, and titles). There's an
+                allintext: variation, but again, this doesn't play well with others. While its uses are
+                limited, it's perfect for finding query words that might be too common in URLs or link
+                titles.
+
+                intext:"yahoo.com"
+                intext:html
+
+                inanchor:
+
+                inanchor: searches for text in a page's link anchors. A link anchor is the descriptive
+                text of a link.
+
+                For example, the link anchor in the HTML code <a
+
+                href="http://www.oreilly.com>O'Reilly and Associates</a>
+                is "O'Reilly and Associates."
+
+                inanchor:"tom peters"
+
+                site:
+
+                site: allows you to narrow your search by either a site or a top-level domain.
+
+                AltaVista, for example, has two syntaxes for this function (host: and domain:), but
+                Google has only the one.
+
+                site:loc.gov
+                site:thomas.loc.gov
+                site:edu
+                site:nc.us
+
+                link:
+
+                link: returns a list of pages linking to the specified URL. Enter
+                link:www.google.com and you'll be returned a list of pages that link to Google.
+
+                You can includethe http:// bit; you don't need it, and, indeed, Google
+                appears to ignore it even if you do put it in. link: works just as well with "deep"
+                URLs - http://www.raelity.org/apps/blosxom/ for instance - as with top-level URLs such
+                as raelity.org.
+
+                cache:
+
+                cache: finds a copy of the page that Google indexed even if that page is no longer
+                available at its original URL or has since changed its content completely. This is
+                particularly useful for pages that change often.
+
+                If Google returns a result that appears to have little to do with your query, you're almost
+                sure to find what you're looking for in the latest cached version of the page at Google.
+
+                cache:www.yahoo.com
+
+                daterange:
+
+                daterange: limits your search to a particular date or range of dates that a page was
+                indexed. It's important to note that the search is not limited to when a page was created,
+                but when it was indexed by Google. So a page created on February 2 and not indexed by
+                Google until April 11 could be found with daterange: search on April 11.
+
+                Remember also that Google reindexes pages. Whether the date range changes depends on
+                whether the page content changed. For example, Google indexes a page on June 1.
+
+                Google reindexes the page on August 13, but the page content hasn't changed. The date
+                for the purpose of searching with daterange: is still June 1.
+
+                Note that daterange: works with Julian, not Gregorian dates (the
+                calendar we use every day.) There are Gregorian/Julian converters online, but if you want
+                to search Google without all that nonsense, use the FaganFinder Google interface
+                (http://www.faganfinder.com/engines/google.shtml), offering daterange: searching
+                via a Gregorian date pull-down menu. Some of the hacks deal with daterange:
+
+                searching without headaches, so you'll see this popping up again and again in the book.
+
+                "George Bush" daterange:2452389-2452389
+                neurosurgery daterange:2452389-2452389
+
+                filetype:
+
+                filetype: searches the suffixes or filename extensions. These are usually, but not
+                necessarily, different file types. I like to make this distinction, because searching for
+                filetype:htm and filetype:html will give you different result counts, even
+                though they're the same file type. You can even search for different page generators, such
+                as ASP, PHP, CGI, and so forth - presuming the site isn't hiding them behind redirection
+                and proxying. Google indexes several different Microsoft formats, including: PowerPoint
+                (PPT), Excel (XLS), and Word (DOC).
+
+                homeschooling filetype:pdf
+                "leading economic indicators" filetype:ppt
+
+                related:
+
+                related:, as you might expect, finds pages that are related to the specified page. Not
+                all pages are related to other pages. This is a good way to find categories of pages; a
+                search for related:google.com would return a variety of search engines,
+                including HotBot, Yahoo!, and Northern Light.
+
+                related:www.yahoo.com
+                related:www.cnn.com
+
+                info:
+
+                info: provides a page of links to more information about a specified URL. Information
+                includes a link to the URL's cache, a list of pages that link to that URL, pages that are
+                related to that URL, and pages that contain that URL. Note that this information is
+                dependent on whether Google has indexed that URL or not. If Google hasn't indexed that
+                URL, information will obviously be more limited.
+
+                info:www.oreilly.com
+                info:www.nytimes.com/technology
+
+                phonebook:
+
+                phonebook:, as you might expect, looks up phone numbers.
+                phonebook:John Doe CA
+                phonebook:(510) 555-1212
+
+                Google Search Form
+                <!-- Search Google -->
+                <form method="get" action="http://www.google.com/search">
+                <input type="text" name="q" size=31 maxlength=255 value="">
+                <input type="submit" name="sa" value="Search Google">
+                </form>
+                <!-- Search Google -->
+
+                Save it as search.htm and double click on it.
+
+                A more specific form:
+
+                <!-- Custom Google Search Form-->
+                <form method="get" action="http://www.google.com/search">
+                <input type="text" name="q" size=31 maxlength=255 value="">
+                <br />
+                Search for file type:
+
+                <select name="as_filetype">
+                <option value="ppt">PowerPoint</option>
+                <option value="xls">Excel</option>
+                <option value="doc">Word</option>
+                </select>
+                <br />
+                Search site:
+
+                <select name="as_sitesearch"></option>
+                <option value="tompeters.com">TomPeters.com</option>
+                <option value="state.ca.us">State of California</option>
+                <option value="loc.gov">The Library of Congress</option>
+                </select>
+                <input type="hidden" name="num" value="100">
+                </form>
+                <!-- Custom Google Search Form-->
+
+                Google Hacking DataBase (GHDB)
+                Google Hacking refers to the practice of using search engines, like Google and Bing, in order to discover
+                vulnerable web pages and critical information. It's based on the idea that search engines index a lot of public
+                pages and files, making their discovery a simple matter of building the correct query. Simply place the search
+                string from a database in the Search box and you're on your way.
+
+                For example, it's trivial to look for a specific type of file (filetype:), on a specific domain (site:), with a specific
+                name (inurl:), containing a certain string (intext:).
+
+                The Google Hacking Database (GHDB) was started by Johnny Long, who also published books on the matter,
+                but is now mantained and updated at Exploit Database. The strings are constantly updated. The Google
+                Hacking Database (GHDB) is a compiled list of common mistakes web/server admins make, which can be
+                easily searched by using Google. As a result, you can find things like administrator consoles, password files,
+                credit card numbers, unprotected webcams, etc.
+
+                There is also FSDB (Foundstone database). The FSDB is a list of queries that Foundstone has included in
+                addition to the public/commonly known GHDB ones.
+
+                GHDB and FSDM contain common search strings for locating vulnerable websites on the Internet, performing
+                DDoS attacks or just general poking around . An example:
+
+                https://encrypted.google.com/search?q=filetype:config%20inurl:web.config%20inurl:ftp
+                Sites: Exploit DataBase and hackersforcharity have more info on the actual queries, how they're structured,
+                and what kind of information you can find. The SiteDigger tool gives an indication as to the type of
+                information you can find, but is not as specific as the above mentioned sites.
+                See also Google Hacker Tools.
+                ----
+                ~/Empire/Doks/Comp/_tipstricks/websearch-tipstricks.txt  __
+
+                    https://www.googleguide.com/advanced_operators_reference.html
+                https://www.wincher.com/blog/google-search-operators
+
+                https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/
+                    cats dogs           cats or dogs
+                    "cats and dogs"
+                    cats -dogs          less result ab. dogs
+                    cats +dogs          more result ab. dogs
+                    cats filetype:pdf
+                            doc(x)
+                            xls(x)
+                            ppt(x)
+                            html
+                     tesla model 3 filetype:pdf
+                    dogs site:example.com    =only search one website
+                    cats -site:example.com   =excluding site example.com
+                      android development -flutter
+                      pasta recipes -tomato -egg
+                    intitle:dogs       "dogs" in page title (!)
+                    inurl:dogs         "dogs" in page url (!)
+                    --
+                    !a blink182        search amazon.com for blink182
+                    --
+                    LeBron James news
+                    Philadelphia map
+
+                https://duckduckgo.com/bang
+                 duckduckgo search tips
+                google search pro tips
+
+                 https://www.freecodecamp.org/news/how-to-search-google-like-a-pro/
+                     related freecodecamp org
+                     search:freecodecamp.org web development
+                     Developer 1992...1999    =between 1992 and 1999
+                       What teams have won the Stanley Cup ..2004   41..43
+
+                     *oriented programming in python
+                      "Come * right now * me"  ****
+                     define:object oriented programming
+                        define: object oriented programming
+                      site: web dev blog posts
+                     --
+                     cs-n          (=spawn inkognito tab)
+
+                 https://www.techspot.com/article/2421-google-search-tips/
+                     rtx 3090 review site:techspot.com
+                      Sidney Crosby site:nhl.com  (=without http, www and the like)
+                     graph for y=x^3      +sin, log, square root (etc)
+                     20 celsius in fahrenheit
+                       USD to british pound sterlin  miles to km
+                     search image  (=find info about photo, +check integrity of image found online)
+                       (=upload image by clicking image icon  by clicking camera icon by google searchbox)
+                     best games android OR iphone
+                      best games android | iphone
+                       chocolate OR white chocolate
+                     games AND (ps4 OR ps5)
+                     location:
+                     new york to washington dc
+                     steam deck  (+click tools and select time frame)
+                      40 days after tomorrow
+                     timer
+                      (set) timer for 15 minutes
+                     =english  +  spell "102,437,446,057"
+                     american airlines flight 990
+                     settings > advanced search
+                      related:techspot.com    related:amazon.com (=find other sites like amazon)
+                     8 * 5 + 5    Planck's Consant
+                     “Best ways to prepare for a job interview” OR “How to prepare for a job interview”
+
+
+                 [google search documentation]
+                https://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html
+                     link:nytimes.com      = who cited nytimes on their site?  **
+                     Incremental: First try: job interviews  Second try: prepare for job interviews  Third try: how to prepare for a job interview
+                     Use words that websites would use:  “I have a flat tire” could be replaced by “repair a flat tire.”  “My head hurts” could be replaced by “headache relief.”
+                     Use Important (and less) words:  Don’t use: Where can I find a Chinese restaurant that delivers.  Instead try: Chinese restaurants nearby.  Or: Chinese restaurants near me.
+
+
+                https://zapier.com/blog/advanced-google-search-tricks/
+                    calculator, tip calculator, or mortgage calculator
+                    area of circle with radius of 4
+                     cos(3x)+sin(x) cos(7x)+sin(x)  (=draws a graph)
+                    megabyte to gigabyte  + energy  frequency  fuel economy  degree to radian  etc
+                     100 usd to aud  currency converter
+                    chicago hotels  chicago events
+                    time in chicago
+                    etymology slander
+                    AAPL  (=get information on a certain stock)
+                    ip address  (** =find your ip address)
+                    find my phone
+                     mother's day 2023
+                    drag + drop a url (=to open in new page)
+                    click tools (=for getting eg. 'any time' or 'all results'
+                     narrow image results (=by image type)  #tools
+                     narrow video results  (by time, high-quality (etc))
+                    down-arrow by search result  =view cached/similar pages
+                    Chrome:  Create Shortcuts (=eg. 'ZSS' for site:zapier.blog) **(!!)  ___SEEMORE
+                    naan recipes site:.in  #=only indian pages *(*)
+                    allintitle:
+                    allintext:
+                    allinurl:
+                    Facebook AROUND(7) Microsoft ****  ___SEEMORE
+                    intitle:
+                    intext:  **
+                     "marketing manager" intext:remote -Glassdoor -jobs
+                    [[When to use really long search queries]]
+                     evernote webclipper(!!)
+
+                https://uk.pcmag.com/software-services/138320/21-google-search-tips-youll-want-to-learn
+                    iPhone ~cheap
+                    'Perform a Reverse Image Search' [!!!!]
+                    find streaming sites
+                     some games:  Solitaire, Zerg Rush, Snake Game, Tic Tac Toe
+                    100000=english
+                    Google Alert
+                    'Calc'
+
+                https://www.ubuntupit.com/cool-and-useful-google-search-tricks-to-maximize-search-efficiency/
+                    Search By Voice
+                    mango nutrition **(!)
+                     my ip address
+                    friendship day date
+                    news.google.com/newspapers Indian Express
+                    cache.www.ubuntupit.com  #=can search offline pages (!!)
+                     Google Trends
+                ----
+                ~/Empire/Doks/Comp/_tipstricks/ghacks1_2002.txt  __
+                Chapter 1. Searching Google
+                1. Setting Preferences
+                2. Language Tools
+                3. Anatomy of a Search Result
+                4. Specialized Vocabularies: Slang and Terminology
+                5. Getting Around the 10 Word Limit
+                6. Word Order Matters
+                7. Repetition Matters
+                8. Mixing Syntaxes
+                9. Hacking Google URLs
+                10. Hacking Google Search Forms
+                11. Date-Range Searching
+                12. Understanding and Using Julian Dates
+                13. Using Full-Word Wildcards
+                14. inurl: Versus site:
+                15. Checking Spelling
+                16. Consulting the Dictionary
+                17. Consulting the Phonebook
+                18. Tracking Stocks
+                19. Google Interface for Translators
+                20. Searching Article Archives
+                21. Finding Directories of Information
+                22. Finding Technical Definitions
+                23. Finding Weblog Commentary
+                24. The Google Toolbar
+                25. The Mozilla Google Toolbar
+                26. The Quick Search Toolbar
+                27. GAPIS
+                28. Googling with Bookmarklets
+
+                Chapter 2. Google Special Services and Collections
+                29. Google Directory
+                30. Google Groups
+                31. Google Images
+                32. Google News
+                33. Google Catalogs
+                34. Froogle
+                35. Google Labs
+
+                Chapter 3. Third-Party Google Services
+                36. XooMLe: The Google API in Plain Old XML
+                37. Google by Email
+                38. Simplifying Google Groups URLs
+                39. What Does Google Think Of...
+                40. GooglePeople
+
+                Chapter 4. Non-API Google Applications
+                41. Don't Try This at Home
+                42. Building a Custom Date-Range Search Form
+                43. Building Google Directory URLs
+                44. Scraping Google Results
+                45. Scraping Google AdWords
+                46. Scraping Google Groups
+                47. Scraping Google News
+                48. Scraping Google Catalogs
+                49. Scraping the Google Phonebook
+
+                Chapter 5. Introducing the Google Web API
+                50. Programming the Google Web API with Perl
+                51. Looping Around the 10-Result Limit
+                52. The SOAP::Lite Perl Module
+                53. Plain Old XML, a SOAP::Lite Alternative
+                54. NoXML, Another SOAP::Lite Alternative
+                55. Programming the Google Web API with PHP
+                56. Programming the Google Web API with Java
+                57. Programming the Google Web API with Python
+                58. Programming the Google Web API with C# and .NET
+                59. Programming the Google Web API with VB.NET
+
+                Chapter 6. Google Web API Applications
+                60. Date-Range Searching with a Client-Side Application
+                61. Adding a Little Google to Your Word
+                62. Permuting a Query
+                63. Tracking Result Counts over Time
+                64. Visualizing Google Results
+                65. Meandering Your Google Neighborhood
+                66. Running a Google Popularity Contest
+                67. Building a Google Box
+                68. Capturing a Moment in Time
+                69. Feeling Really Lucky
+                70. Gleaning Phonebook Stats
+                71. Performing Proximity Searches
+                72. Blending the Google and Amazon Web Services
+                73. Getting Random Results (On Purpose)
+                74. Restricting Searches to Top-Level Results
+                75. Searching for Special Characters
+                76. Digging Deeper into Sites
+                77. Summarizing Results by Domain
+                78. Scraping Yahoo! Buzz for a Google Search
+                79. Measuring Google Mindshare
+                80. Comparing Google Results with Those of Other Search Engines
+                81. SafeSearch Certifying URLs
+                82. Syndicating Google Search Results
+                83. Searching Google Topics
+                84. Finding the Largest Page
+                85. Instant Messaging Google
+
+                Chapter 7. Google Pranks and Games
+                86. The No-Result Search (Prank)
+                87. Google Whacking
+                88. GooPoetry
+                89. Creating Google Art
+                90. Google Bounce
+                91. Google Mirror
+                92. Finding Recipes
+
+                Chapter 8. The Webmaster Side of Google
+                93. A Webmaster's Introduction to Google
+                94. Generating Google AdWords
+                95. Inside the PageRank Algorithm
+                96. 26 Steps to 15K a Day
+                97. Being a Good Search Engine Citizen
+                98. Cleaning Up for a Google Visit
+                99. Getting the Most out of AdWords
+                100. Removing Your Materials from Google
+                ----
+                ~/Empire/Doks/Comp/_tipstricks/websearch-google.de.txt  __
+
+                Google Hacking Tutorial 2005 Edition
+                Google Hacking
+                1.
+                2.
+                3.
+                4.
+                5.
+                6.
+                7.
+                8.
+
+                Vorwort
+                Wie funktioniert Google?
+
+                Einige wichtige Befehle
+                Richtige Kombination
+                Passwörter suchen und finden
+                Web Server Detection
+                Weitere sensible Daten
+                Quellen
+
+                1. Vorwort
+                Google Hacking Tutorial 2005 Edition copyright dav2600 [at] gmail.com.
+                16 August 2005 / 8.168.684.336 Sites @Google
+                31 Juli 2004 / 4.285.199.774 Sites @Google
+                2. Wie funktioniert Google?
+
+                Google ist zu nächst mal eine voll automatische Suchmaschine, die mit Hilfe von so
+                genannten Spidern (Webcrawler/Suchrobotern), das
+                gesamte Web durchsucht und die gefunden Websites indiziert. D.h. es ist eigentlich nicht
+                mal notwendig seine Website bei Google anzumelden, die Suchrobots werden sie früher
+                oder später sowieso finden.
+                3. Einige wichtige Befehle
+                Bevor wir gleich zum "Google hacking" übergehen einige wichtige Befehle, die man in
+                seinem Google Query nutzen kann.
+                filetype:
+
+                Mit filetype lassen sich bestimmte Dateitypen finden.
+
+                Bsp: filetype:txt
+                +
+                Mit + lassen sich alle Webseiten finden, die ein bestimmtes Wort enthalten.
+
+                Bsp: +FBI +Agent
+                Mit - werden nur Seiten gefunden, die ein bestimmtes Wort nicht enthalten.
+
+                Bsp: -public -user
+                intitle:
+
+                Per Intitle: lässt sich das <title> tag durchsuchen.
+
+                Bsp: intitle:index
+                intext:
+
+                Mit intext: findet man bestimmte Wörter auf einer Webseite.
+
+                Bsp: intext:Hacker
+                inurl:
+
+                Über inurl: lassen sich Wörter in einer URL festlegen.
+
+                Bsp: inurl:etc inurl:bin
+                site:
+
+                Mit site: kann man auf bestimmten Domains suchen.
+
+                Bsp: site:com site:de
+
+                ""
+                Mit "" lassen sich aufeinander folgende Wörter suchen.
+
+                Bsp: "index of"
+                4. Richtige Kombination
+                Das die oben genannten Befehle alleine nicht viel bringen dürfte klar sein, also müssen
+                wir kombinieren.
+
+                Bsp:
+
+                intitle:"index of" +etc
+
+                Über solche Ergebnisse kann man sich nur wundern!
+
+                Warum gibt es immer noch Systeme auf denen man ohne Probleme sich über Google, die
+                passwd anschauen kann? Für potenzielle Cracker sind solche Umstände ein El Dorado.
+
+                Achtung: Viele vermeintliche, für Google Hacking anfällige Systeme könnten auch sog.
+
+                Honeypots sein (http://ghh.sourceforge.net/).
+                „Als ein Honeypot (deutsche Übersetzung: Honigtopf) wird ein Programm (oder ein
+                kompletter Server) bezeichnet, das die Aufgabe hat, Angriffe in einem Netzwerk auf sich
+                zu ziehen und Aktionen des Angreifers zu protokollieren."
+                http://de.wikipedia.org/wiki/Honeypot
+
+                #5. Passwörter suchen und finden
+                Mit Google lässt sich alles finden, auch oder geradezu Passwörter.
+
+                Einige Beispiele:
+
+                filetype:dat "password.dat"
+                filetype:ini +ws_ftp +pwd
+                filetype:log inurl:"password.log"
+                intitle:Index.of etc shadow
+                intitle:"Index of..etc" passwd
+                6. Web Server Detection (Webserver Erkennung)
+                Es ist dank Google kein Problem mehr Webserver zu identifizieren.
+
+                Einige Beispiele:
+
+                "Microsoft-IIS/5.0 server at"
+                intitle:"Apache HTTP Server" intitle:"documentation"
+                intitle:"Welcome to IIS 4.0″
+                "powered by openbsd" +"powered by apache"
+
+                7. Weitere sensible Daten in diversen Verzeichnissen
+                Was man nicht so alles findet...
+
+                Einige Beispiele:
+
+                intitle:index.of.private
+                intitle:index.of.secret
+                intitle:"index.of.secure"
+
+                #8. Quellen
+                http://johnny.ihackstuff.com/
+                http://www.google.de/
+                http://de.wikipedia.org/
+
+                Copyright 2004 - 2005 dav
+
+                
+                ----
+                ~/Empire/Doks/Comp/_tipstricks/websearchgoogle-pcwelt.de.txt
+
+                10 Google-Hacks
+                Datum:12.08.2008
+                Autor(en):Daniel Behrens
+                URL: http://www.pcwelt.de/174411
+
+                Aufgedeckt: Unbekannte Tricks, mit denen Sie wirklich alles finden. Es genügt, die richtigen Suchbegriffe und Befehle zu verwenden.
+
+                Der Suchindex von Google ist riesig. Über acht Milliarden Web-Adressen befinden sich nach Angaben des Betreibers in der Datenbank. Darunter sind allerdings auch einige, die dort eigentlich
+                nicht hingehören. Die Adressen führen zu vertraulichen Dokumenten, Seriennummern, Sitzungsprotokollen, Konfigurationsseiten von Netzwerkgeräten, Excel-Tabellen mit Passwörtern,
+                Gehaltsaufstellungen oder ausführlichen Adresslisten, Backups, Besucherstatistiken, illegalen MP3s, Büchern im PDF-Format und und und. Es bedarf keinerlei krimineller Energie, um darauf zu
+                stoßen. Dies kann entweder durch Zufall passieren oder durch gezielte Auswahl von Suchbegriffen und -kommandos.
+
+                Ungeschützte Webcams & Netzwerkgeräte im Internet
+                Es sind übrigens nicht nur Dateien, die unbeabsichtigt im Google-Index landen. Immer mehr Geräte hängen am Netz und lassen sich über eine Web-Oberfläche konfigurieren. Zum Teil indiziert
+                Google auch diese Konfigurationsseiten, wenn sie offen im Web zugänglich und nicht durch eine Firewall geschützt sind. Da sie alle einen ähnlichen Aufbau haben, zum Beispiel immer den
+                gleichen Seitentitel tragen, lassen sie sich gezielt auffinden. Betroffen sind einfache Webcams genauso wie professionelle fernsteuerbare Internet-Kameras, Festplatten-Recorder, Drucker ...
+
+                Besonders heikel wird es, wenn der Besitzer die ursprünglichen Standardpasswörter des Auslieferungszustands nicht geändert hat. Diese sind nämlich im Web leicht zu recherchieren, zum
+                Beispiel über www.pcwelt.de/ef4 1.
+
+                Gezielte Suche mit den richtigen Befehlen
+                In diesem Beitrag stellen wir Google-Parameter für eine gezielte Suche im Web vor. In erster Linie dienen sie dazu, Suchergebnisse von vornherein so genau einzuschränken, dass Sie nicht in
+                Tausenden von Treffern ersticken, sondern genau das finden, was Sie suchen. Die Parameter lassen sich aber natürlich auch verwenden, um sich selbst ein Bild von den ungebetenen Gästen im
+                Google-Index zu machen. Bei der Eingabe der Suchparameter, die wir im Beitrag nennen (etwa "inurl" und "intitle") ist es wichtig, dass Sie diese in Kleinschreibung eingeben. Wenn wir Beispiele
+                für Suchabfragen nennen, stellen wir diese zur besseren Lesbarkeit in typografischen Anführungszeichen ("). Diese dürfen Sie nicht mit eintippen. Es gibt jedoch auch Situationen, in denen
+                Anführungszeichen für die Suche notwendig sind und eingegeben werden müssen. In solchen Fällen verwenden wir gerade Anführungszeichen (").
+
+                Google-Hacks
+                - 1. Der Trick mit den Anführungszeichen
+                Immer wenn es darum geht, einen Ausdruck in einer ganz spezifischen Schreibweise zu finden, helfen Anführungszeichen. Wenn Sie bei Google also "Die besten Bücher" eingeben, tauchen in
+                den Ergebnissen nur Seiten auf, die genau diesen Text enthalten. Nur die Groß- und Kleinschreibung spielt keine Rolle. Wenn Sie die Anführungszeichen weglassen, würden Sie zwar wesentlich
+                mehr Treffer erzielen. Darunter wären aber Seiten, auf denen die Wörter "Die", "besten" und "Bücher" bunt verstreut und in völlig anderer Reihenfolge und anderen Zusammenhängen stehen.
+
+                Sinnvoll ist die Suchweise mit Anführungszeichen auch bei Namen. Denn wenn man Vor- und Nachname ohne Anführungszeichen eintippt, findet man viele Seiten, auf denen zwar beide
+                Namensbestandteile auftauchen, aber in Zusammenhang mit einem jeweils anderen Vor- oder Nachnamen.
+
+                Platzhalter:
+
+                Eine Besonderheit bei der Suche mit Anführungszeichen ist, dass Sie den Stern als Platzhalter verwenden können. So würde "Digitalkamera*" sowohl den Singular als auch den Plural,
+                "Digitalkameras", finden. Oder, um beim ersten Beispiel zu bleiben: "Die * Bücher" würde nicht nur den Ausdruck "Die besten Bücher" finden, sondern auch "Die neuesten Bücher" und "Die
+                lustigsten Bücher". Mehrere Platzhalter sind möglich. Bei einer Suche nach "Die * * Bücher" erhalten Sie Treffer, bei denen zwei beliebige Wörter zwischen "Die" und "Bücher" stehen. Durch ein
+                vorangestelltes Minus-Zeichen können Sie übrigens festlegen, dass der darauf folgende Ausdruck nicht auftauchen darf. So schließen Sie etwa mit ""Die * * Bücher" -koch" Kochbücher aus.
+
+                Google-Hacks 2 bis 3
+
+                Offene Verzeichnisse im Web
+                - 2. Backups, MP3s & Seriennummern leicht auffindbar
+                Hacker nutzen die Suchmöglichkeit nach ganz speziellen Zeichenketten, um Dateien oder Seiten aufzustöbern, die eigentlich nicht öffentlich zugänglich sein sollten, es aber trotzdem sind. Der
+                Ausdruck "This report was generated by WebLog" erscheint zum Beispiel auf Seiten, die das Statistik-Tool Weblog erstellt hat. Diesen Auswertungen kann man entnehmen, wann ein Webserver
+                wie viele Besucher hatte, über welchen Link diese gekommen sind und welche Browser sie benutzt haben. Natürlich erfährt man auch, welche Seiten sie aufgerufen haben. Das sind zwar alles
+                keine hochsensiblen Daten, aber für einen Konkurrenten durchaus interessant.
+
+                Belarc Advisor:
+
+                Etwas intimer wird es bei der Suchanfrage "Belarc Advisor Current Profile key:". Hier erfahren Sie, wie es um die PC-Ausstattung anderer Anwender bestellt ist. Belarc Advisor ist ein kostenloses
+                Tool, das den Rechner analysiert und Details zu seiner Ausstattung als HTML-Bericht ausgibt. Manche Anwender haben diesen Report - aus welchen Gründen auch immer - ins Web gestellt, und
+                Google hat ihn indiziert. Besonders pikant dabei: Der Report enthält auch Seriennummern und Freischaltschlüssel zur installierten Software, dazu eine Aufstellung aller eingerichteten
+                Benutzer-Accounts.
+
+                Weiterer Suchausdruck:
+
+                Sehr ergiebig ist auch "Index of /". Denn wenn der Administrator eines Webservers in ein (Unter-) Verzeichnis keine Web-Seite hineingelegt und das Auflisten von Verzeichnisinhalten nicht
+                deaktiviert hat, erscheint beim Aufruf eine Liste mit allen enthaltenen Dateien. Und diese trägt meist "Index of /" in der Überschrift. Die aufgelisteten Dateien lassen sich per Klick aufrufen oder
+
+                herunterladen. Die Abfrage lässt sich auch verfeinern. Die Suche nach "Index of /MP3" findet etwa offene Verzeichnisse, die den Namen "MP3" tragen. Im Unterschied dazu liefert die Abfrage
+                "Index of /" MP3" alle offenen Verzeichnisse gleich welchen Namens, in denen Dateien mit dem Namensbestandteil oder der Endung MP3 liegen. Bei der Bildung der Suchabfrage sind der
+                Fantasie keine Grenzen gesetzt. Denkbar wären auch "Index of /backup", "Index of /documents", "Index of /dokumente" und so weiter.
+
+                Achtung:
+
+                Nicht nur, aber speziell hier bei der "Index of /"-Suchmethode gibt es inzwischen einige Trittbrettfahrer. Diese bauen die Zeichenfolge "Index of" in ihre Web-Seiten ein, um neugierige
+                Google-Sucher dorthin zu locken. Bestenfalls bieten diese Seiten nicht das Gesuchte, schlimmstenfalls versuchen sie, Ihnen Malware unterzuschieben. Seien Sie also wachsam und surfen Sie
+                nur mit installiertem Virenscanner oder innerhalb eines virtuellen PCs.
+
+                Webcams: Mit dem richtigen Suchbegriff findet man viele ungeschützt im Netz
+                - 3. Steuerbare Webcams frei zugänglich
+                Schlüssellochgucker können mit speziellen Suchbegriffen gezielt nach den Web-Schnittstellen von Internet-Kameras suchen, bei denen immer eine spezifische Zeichenkette auftaucht. Mit "live
+                view - axis" stöbert man zum Beispiel Netzwerkkameras des Herstellers Axis auf. Diese lassen sich zum Teil sogar fernsteuern.
+
+                Google-Hacks 4 bis 7
+                - 4. Suche in fremden Word-, Excel- & Powerpoint-Dateien
+                Mit dem mächtigen Parameter "filetype:" gefolgt von einer Datei-Endung können Sie gezielt nach bestimmten Dateitypen suchen. Der Ausdruck "filetype:pdf" findet zum Beispiel alle von Google
+                indizierten PDF-Dokumente. Im Test waren das 184 Millionen. Sinnvoll ist die Suche aber erst, wenn sie durch normale Schlüsselwörter oder andere Parameter ergänzt wird. So findet
+                "filetype:pdf Handbuch Linux" eine Menge Dokumentationen zum freien Betriebssystem. Auch Bücher, deren Copyright abgelaufen ist, liegen häufig als PDF-Datei im Web offen herum - auf die
+
+                Weise können Sie sich manchen Weg in die Bibliothek sparen. Ebenfalls sehr ergiebig ist die Suche nach den weit verbreiteten Datei-Endungen DOC (für Word-Dateien), XLS (Excel) und PPT
+                (Powerpoint).
+                5. "Vertrauliches" ganz und gar nicht geheim
+                Findige Schnüffler kombinieren die Suche nach Dateitypen mit Schlüsselwörtern wie "Vertraulich" oder dem englischen Pendant "Confidential". Gebräuchlich sind auch Ausdrücke wie "für den
+                internen Gebrauch" beziehungsweise "internal use". Es ist schon erstaunlich, wie viele Dokumente, die nicht für fremde Augen bestimmt zu sein scheinen, im Web offen herumliegen. Manche
+                Dateien kann man betrachten, ohne die entsprechende Anwendung installiert zu haben und ohne zum eigentlichen Server Kontakt aufzunehmen. Das ist immer dann der Fall, wenn neben einem
+                Treffer der Link "HTML-Version" steht. Diese wird von Google generiert.
+
+                Besonders bei Spammern beliebt
+                sind Suchabfragen wie "mail filetype:csv" oder "mail filetype:xls". Sie fördern Tabellen zutage, die eine Vielzahl an Mailadressen enthalten - von der Mitgliederliste bis hin zur Kundendatenbank.
+
+                CSV ist übrigens ein sehr simples Dateiformat für Tabellen mit maximaler Kompatibilität, das von vielen Anwendungen gelesen werden kann. Daher wird es gerne zum Dateiaustausch benutzt
+                und auch im Web abgelegt. Viele Ergebnisse erhält beispielsweise auch, wer nach "Lebenslauf filetype:pdf" sucht.
+                - 6. Schlüsselwörter in Web-Adressen finden
+                Der Parameter "inurl:" findet Seiten, bei denen das nachfolgende Suchwort in der Web-Adresse enthalten ist. Mit "inurl:videos" würden Sie Seiten wie www.server1.test/videos/index.html zu Tage
+                fördern. Bei unserem Test kamen wir auf über 45 Millionen Treffer, von denen zumindest die ersten zielsicher zu Bewegtbildern führten. Eine andere Variante wäre "inurl:downloads", um schnell
+                und ohne Umschweife zu den Download-Rubriken von Websites zu gelangen. Inurl lässt sich beliebig mit mehreren Suchbegriffen kombinieren. Die Suche nach "inurl:downloads Freeware" findet
+                Seiten, bei denen der Ausdruck "downloads" in der Adresse und der Begriff "Freeware" irgendwo im Text vorkommt.
+
+                Mehrere Schlüsselwörter:
+
+                Möchten Sie Web-Adressen finden, die mehrere ausgewählte Schlüsselwörter enthalten, verwenden Sie "allinurl:" und schreiben dahinter die Suchbegriffe wie folgt: "allinurl:videos flash". Diese
+                Abfrage können Sie jedoch nicht mit anderen Suchvarianten kombinieren. Abhilfe schafft die mehrfache Verwendung des einfachen "inurl", etwa "lustig inurl:flash inurl:videos".
+                - 7. Server-Software erkennbar an Standardpfaden
+                Hacker nutzen "inurl: / allinurl:", um Standardpfade von Webservern zu finden. "inurl:/admin/login.asp" spürt zum Beispiel gezielt Log-in-Formulare für Administrations-Bereiche,
+                "inurl:exchange/logon.asp" solche für Exchange-Mailserver auf. Die Abfrage "inurl:cgi-bin/ultimatebb.cgi?ubb= login" führt zu Anmeldemasken auf Forums-Servern, die die Software Ultimate
+                Bulletin Board benutzen. Confixx ist eine weit verbreitete Software, über die sich Web-Präsenzen konfigurieren lassen. Die Abfrage "inurl:confixx inurl:login|anmeldung" findet
+                Confixx-Log-in-Seiten. Der senkrechte Strich bedeutet "oder". Er ist zu erreichen über "AltGr"-"Spitzklammer". Zwar kann der Hacker mit einem Anmeldeformular alleine noch nichts anfangen.
+
+                Aber er hat einen Ansatzpunkt. Manchmal gibt es auch Sicherheitslücken, die er ausnutzen kann, um Zugang zu erlangen. Dann hat er die volle Kontrolle über die Web-Präsenz und kann sie
+                entweder lahm legen oder Inhalte austauschen: Auf der Startseite eine Hetzbotschaft platzieren, das Foto des Geschäftsführers gegen ein anderes austauschen ...
+
+                Google-Hacks 8 bis 10
+                - 8. Suche im Seitentitel hilft beim gezielten Filtern
+                Mit "intitle:" schränken Sie die Suche auf Begriffe ein, die im Titel einer Seite vorkommen. Damit sind die Angaben gemeint, die beim Besuch einer Seite in der Titelzeile des Browsers erscheinen.
+
+                Außerdem dient der Begriff meist als Überschrift in den Google-Trefferlisten. Intitle hilft zum Beispiel weiter, wenn Sie vor einer Fülle an Suchergebnissen stehen und diese schärfer eingrenzen
+                wollen. Voraussetzung ist natürlich, dass Sie davon ausgehen, dass der Suchbegriff im Titel der gewünschten Seite(n) auftaucht. Ein Beispiel wäre: "Rezept intitle:Caipirinha". Wenn Sie nur nach
+                "Rezept Caipirinha" suchen, erhalten Sie zwar wesentlich mehr Treffer. Darunter sind aber auch viele Rezepte, in denen der Begriff Caipirinha in anderen Zusammenhängen vorkommt, zum
+                Beispiel: "Nach diesem Gericht stoßen Sie am besten mit einem Caipirinha an."
+                - 9. Konfigurationen von Netzwerkgeräten offen im Web
+                Intitle lässt sich auch dazu verwenden, ungeschützte Websites oder Netzwerkgeräte zu finden. Mit "intitle:"Webview Logon Page"" gelangen Sie etwa zu offen stehenden Firmen-Switches der
+                Firma Alcatel. Switches verbinden mehrere Netzteilnehmer miteinander. Wenn der Admin hier vergessen hat, das Standardpasswort zu ändern, steht einem Hacker Tür und Tor offen. Er könnte
+                das Gerät so umkonfigurieren, dass in der Firma, in der es steht, plötzlich nichts mehr geht. Möglicherweise gelingt es ihm sogar, Datenverkehr zu belauschen. Detaillierter suchen: Mit Intitle
+                können Sie auch Abfragen präzisieren. Wenn Sie beispielsweise "This report was generated by WebLog" aus Punkt 2 um "intitle:"Access Details Report"" erweitern, erhalten Sie zwar weniger,
+                dafür aber genauere Ergebnisse.
+                - 10. Die rechtliche Situation: Prinzipiell unproblematisch
+                Bleibt die Frage, wie die rechtliche Situation ist, wenn Sie bei der Internet-Suche auf vertrauliche Dokumente stoßen. Das Strafgesetzbuch sagt dazu in §202a, Absatz 1: "Wer unbefugt sich oder
+                einem anderen Zugang zu Daten, die nicht für ihn bestimmt und die gegen unberechtigten Zugang besonders gesichert sind, unter Überwindung der Zugangssicherung verschafft, wird mit
+                Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe bestraft." Da die von Google indizierten Dokumente keinen Zugangsschutz besitzen, machen Sie sich also nicht strafbar, wenn Sie darauf
+
+                zugreifen.
+
+                Einen Freifahrtschein können wir Ihnen trotz offenbar eindeutiger Rechtslage nicht ausstellen. Denn einschlägige Gerichtsurteile gibt es in diesem Bereich noch nicht. Was Sie auf jeden Fall
+                beachten müssen, ist das Urheberrecht - das kommt beispielsweise zur Anwendung, wenn Sie auf MP3s mit kommerzieller Musik stoßen. Einhalten sollten Sie auch, wenn Sie auf ein
+                Log-in-Formular stoßen. Denn hier kann man schon unterstellen, dass der Zugang "besonders gesichert" ist - es sei denn, das Standardpasswort wurde nicht geändert.
+
+                Vorgefertigte Suchparameter
+                Hilfreiche Tools für die gezielte Google-Suche
+                Statt selber mit Suchparametern zu experimentieren, können Sie auch vorgefertigte Abfragen ausprobieren. Ein Sicherheitsexperte mit dem Pseudonym Johnny hat auf seiner Website
+                http://johnny.ihackstuff.com/ghdb.php unter dem Titel "Google Hacking Database" eine Vielzahl online gestellt. Die Auflistung hat eine Gruppe von Software-Entwicklern dazu inspiriert, das
+                englischsprachige Tool Goolag Scanner2
+                zu schreiben, das diese Abfragen ausführt (kostenlos, für Windows XP und Vista). Die Ergebnisse werden direkt im Programm angezeigt statt im Browser. Das Tool ist darauf ausgelegt, dass der
+                Benutzer damit Sicherheitslücken in seinem eigenen Server finden kann. Daher ist die Eingabe einer Server-Adresse nötig, auf die das Tool die Suchergebnisse einschränkt. Nicht erschrecken:
+
+                Bei der Installation und beim Start des Tools werden einige englischsprachige Hinweise und Haftungsausschlüsse über die Soundkarte wiedergegeben. Außerdem melden manche Virenscanner
+                es als "Hack-Tool".
+
+                PC-WELT-TOOL: Auch wir haben ein kleines Utility entwickelt, das eine Menge vorgefertigter Suchanfragen enthält. Es nennt sich pcwGoogleHacks3 (kostenlos, für Windows XP und Vista).
+
+                Sie wählen eine Kategorie, zum Beispiel "Dateitypen: Dokumente", entscheiden sich für ein Dateiformat, geben optional einen Suchbegriff ein und klicken auf "Suchen". Daraufhin öffnet sich Ihr
+                Standard-Browser, der die Anfrage bei Google ausführt.
+
+                Besser suchen: Die wichtigsten Google-Parameter
+
+                Parameter
+
+                Funktion
+
+                Beispiel
+
+                Zeichenkette
+
+                Suche nach exakt angegebener Zeichenkette
+
+                "Die besten Bücher"
+
+                *
+
+                Innerhalb von Anführungszeichen Platzhalter für (Wildcard) für Zeichen oder Wörter
+
+                "Die*Bücher"
+
+                filetype:
+
+                Suche innerhalb von Dateien des angegebenen Typs
+
+                filetype:pdf Handbuch Linux
+
+                inurl:
+
+                Suche nach Bestandteilen von Web-Adressen
+
+                inurl:videos
+
+                intitle:
+
+                Suche nach Wörtern in Seitentiteln
+
+                intitle:Caipirinha
+
+                Links im Artikel:
+
+                1
+
+                http://www.pcwelt.de/index.cfm?pid=784&mu=ef4
+                http://www.pcwelt.de/start/sicherheit/sicherheitsluecken/news/148633/google_hacking_fuer_dummies/
+                3
+                http://www.pcwelt.de/downloads/pcwelt_tools/tools/164187/pcwgooglehacks/
+                2
+
+                IDG Magazine Media GmbH
+                Alle Rechte vorbehalten. Jegliche Vervielfältigung oder Weiterverbreitung in jedem Medium in Teilen oder als Ganzes bedarf der schriftlichen Zustimmung der IDG Magazine Media GmbH. DPA-Texte und Bilder sind urheberrechtlich
+                geschützt und dürfen weder reproduziert noch wiederverwendet oder für gewerbliche Zwecke verwendetwerden. Für den Fall, dass in PC-WELT unzutreffende Informationen veröffentlicht oder in Programmen oder Datenbanken
+                Fehler enthalten sein sollten, kommt eine Haftung nur bei grober Fahrlässigkeit des Verlages oder seiner Mitarbeiter in Betracht. Die Redaktion übernimmt keine Haftung für unverlangt eingesandte Manuskripte, Fotos und
+                Illustrationen. Für Inhalte externer Seiten, auf die von PC-WELT aus gelinkt wird, übernimmt die IDG Magazine Media GmbH keine Verantwortung.
+
+                
+                ----
+Chrome
+chrome devtools
+
+    TODO TODO: MIGRATE TO OWN FILE(?? =Web Text)
+Vimium C  @@(@)[!!]
+                    Vimium C - All by Keyboard List of Commands
+                    https://github.com/gdh1995/vimium-c#keyboard-bindings
+                    moz-extension://c83c7685-da41-4fa0-bf4d-19c23d12f695/pages/options.html#  __
+                    https://github.com/gdh1995/vimium-c/wiki/List-of-all-commands
+        Navigating the page ----
+                    f  Open a link in the current tab (use button=""/right, touch=false/true/"auto")(LinkHints.activate)
+                    F  Open a link in a new tab (LinkHints.activateOpeninNewTab)
+                        Open a link in a new tab and switch to it (LinkHints.activateOpeninNewForegroundTab)
+                        a-f  Open multiple links in a new tab (LinkHints.activateWithQueue)
+                    c-e, j  Scroll down (use keepHover=true|false|auto|never) (scrollDown)
+                        k, c-y  Scroll up (use keepHover=true|false|auto|never) (scrollUp)
+                        h  Scroll left (scrollLeft)
+                        l  Scroll right (scrollRight)
+                        gg  Scroll to the top of the page (scrollToTop)
+                        G  Scroll to the bottom of the page (scrollToBottom)
+                        zH  Scroll all the way to the left (scrollToLeft)
+                        zL  Scroll all the way to the right (scrollToRight)
+                        d  Scroll a page down (scrollPageDown)
+                        u  Scroll a page up (scrollPageUp)
+                        Scroll 1px down (scrollPxDown)
+                        Scroll 1px up (scrollPxUp)
+                        Scroll 1px left (scrollPxLeft)
+                        Scroll 1px right (scrollPxRight)
+                        Scroll a full page down (scrollFullPageDown)
+                        Scroll a full page up (scrollFullPageUp)
+                        Switch in items of a (closed) selection box (use dir=down|up, position=""|begin|end)(scrollSelect)
+                    r  Reload current frame (use hard)(reloag)
+                        a-r  Reload N tabs (reloadTab)
+                        R  Reload N-th tab (use hard, bypassCache) (reloadGivenTab)
+                        Make a current tab Zoom (use in, out, reset)(zoom)
+                        Make a current tab Zoom in (zoomin)
+                        Make a current tab Zoom out (zoomOut)
+                        Reset zoom level (zoomReset)
+                        gs  View page source (toggle ViewSource)
+                yy  Copy page's info (use type=url/title/frame, decoded) (copyCurrentUrl)
+                        Copy current tab's title (copyCurrentTitle)
+                        s-f1, f2  Blur activeElement or refocus it (use flash, select=""/all/all-line/start/end)(switchFocus)
+                        gi  Focus the N-th visible text box on the page and cycle using tab (use keep, select=""/all/all-line/starv/end) (focusinput)
+                        yf  Copy a link URL to the clipboard (LinkHints.activateCopyLinkUrl)
+                        Copy a link text to the clipboard (use join:boolean/String) (LinkHints.activateCopyLinkText)
+                        P  Open the clipboard's URL in the current tab (openCopiedUrlinCurrentTab)
+                        P  Open the clipboard's URL in N new tabs (openCopiedUrlinNewTab)
+                        gu  Go up the URL hierarchy (use trailingSlash=null/true/false)(goUp)
+                        gU  Go to root of current URL hierarchy (goToRoot)
+                        yi  Copy image to the clipboard (use richText=safe) (LinkHints.activateCopylmage)
+                        Download image, video and audio (LinkHints.activateDownloadimage)
+                        Show image in a new tab (use auto=true) (LinkHints.activateOpenimage)
+                        Download link URL (LinkHints.activateDownloadLink)
+                        Open a link in incognito window (LinkHints.activateOpenincognito)
+                        Open a URL directly without simulating mouse actions (LinkHints.activateOpenUrl)
+                        Focus an element (LinkHints.activateFocus)
+                        Select an element and hover (LinkHints.activateHover)
+                        Let mouse leave link (LinkHints.activateLeave)
+                        Stop hovering at last location (LinkHints.unhoverLast)
+                        Open or search a link text (LinkHints.activateSearchLink Text)
+                        Select an editable area (LinkHints.activateEdit)
+                        yv  Select text and enter visual mode (use visual=true, caret, then:{})(LinkHints.activateSelect)
+                        Click selected text, focused element or the nearest clicked (use direct=true|element|sel|focus|click| sel.focus, click) (LinkHints.click)
+                        f1>  Simulate backspace once if focused (simulateBackspace)
+                        Simulate dipatching arbitrary DOM event (use key="key,keyCode,code" init:{})(dispatchEvent)
+                        ]]  Follow the link labeled next or ">" (use sed=true, patterns:string, rel:string, noRel, isNext)(goNext)
+                        [[  Follow the link labeled previous or "<" (goPrevious)
+                        gf  Cycle forward to the next frame on the page (nextFrame)
+                        gF  Select the tab's main/top frame (mainFrame)
+                        Focus a parent frame (parentFrame)
+                        i  Enter insert mode (use key:string, unhover, reset) (enterinsertMode)
+                        f8, v  Enter visual mode (enterVisualMode)
+                        V  Enter visual line mode (enterVisualLineMoge)
+                        m  Create a new mark (use swap)(Marks.activateCreate)
+                        `  Go to a mark (use prefix=true, swap, mapKey) (Marks.activate)
+                        Remove all local marks for this site (Marks.clearLocal)
+                        Remove all global marks (Marks.clearGlobal)
+                        Open URL (use url:string, urls:string[], reuse=newFg/ current/newBg/reuse, incognito, window, position) (openUrl)
+                        Focus a tab with given URL or open it (use url:string, prefix) (focusOrLaunch)
+        Using the Vomnibar ----
+                        .
+                        .
+                    o  Open URL, bookmark, or history entry (use keyword="", url:boolean/string)(Vomnibar.activate)
+                        O  Open URL, history, (Vomnibar.activatelnNewTab)
+                        b  Open a bookmark (Vomnibar.activateBookmarks)
+                        B  Open a bookmark in a new tab (Vomnibar.activateBookmarksinNewTab)
+                        Open a history (Vomnibar.activateHistory)
+                        Open a history in a new tab (Vomnibar.activateHistoryinNewTab)
+                    T  Search through your open tabs (Vomnibar.activate Tabs)
+                        ge  Edit the current URL (Vomnibar.activateEditUri)
+                        gE  Edit the current URL and open in a new tab (Vomnibar.activateEditUrliinNewTab)
+                        Edit a link text on Vomnibar (use url, newtab, then:{}) (LinkHints.activateOpenVomnibar)
+                        gn  Toggle styles of vomnibar page (use style=dark, Current)(toggle VomnibarStyle)
+        Using find ----
+                        .
+                        /  Enter find mode (use last, selected=true) (enterFindMode)
+                        n  Cycle forward to the next find match (performFind)
+                        N  Cycle backward to the previous find match (performBackwardsFind)
+                        a-n  Find the second or even earlier query words (performAnotherFing)
+                        Clear find mode history (clearFindHistory)
+        Navigating history ----
+                        .
+                        .
+                    H  Go back in history (use reuse=currenUnewBg/newFg) (goBack)
+                    L  Go forward in history (goForward)
+                        .
+                        sa-r  Reopen current page (reopenTab)
+        Manipulating tabs ----
+                        .
+                        .
+                    sa-c, gt, K, a-v  Go one tab right (use blur)(nextTab)
+                        .
+                        a-c, gT, J  Go one tab left (use blur)(previous Tab)
+                    g0  Go to the first N-th tab (firstTab)
+                        .
+                        g$  Go to the last N-th tab (lastTab)
+                    t, a-t  Create new tabs (createTab)
+                    yt  Duplicate current tab for N times (duplicate Tab)
+                        x  Close N tabs (use keepWindow="/always, mayClose, goto=""/left/right/previous) (remove Tab)
+                        Close N-th tab on the right (removeRightTab)
+                        X  Restore closed tabs (restore Tab)  cs-t
+                        Restore the last N-th tab (restoreGivenTab)
+                        Discard some other tabs (discardTab)
+                        W  Move tab to next window (use last, position, right=true, tabs) (move Tab ToNextWindow)
+                        Move N tabs to new window (use limited=null/true/false) (moveTabToNewWindow)
+                        Make tab in incognito window (moveTabToIncognito)
+                        Collect all tabs into current window (joinTabs)
+                        Sort all tabs in current window (use sort=recency|create Time)(sortTabs)
+                        a-p  Pin or unpin N tabs (togglePinTab)
+                    a-m  Mute or unmute current tab (use all, other) (toggleMuteTab)
+                        ^  Go to previously-visited tab on current window (use blur, acrossWindows, onlyActive)(visitPrevious Tab)
+                        Close all tabs on the left (use $count=0) (close TabsOnLeft)
+                        Close all tabs on the right (use Scount=0) (close TabsOnRight)
+                        Close all other tabs (use filter=""/url/url+hash/url+title) (closeOtherTabs)
+                    <<  Move tab to the left (use group=true)(moveTabLeft)
+                        >>  Move tab to the right (use group=true)(move TabRight)
+                        Toggle the site's content settings (use type=images) (toggleContentSetting)
+                        Enable the site's ContentSetting in incognito window (enableContentSettingTemp)
+                        Clear extension's content settings (clearContentSettings)
+                        Copy title/URL info of a current window (use format="${title}: ${url}", join:true/string, decoded) (copyVindowinfo)
+                        Capture visible area of current tab (captureTab)
+                        Change window status (use states="normal maximized")(toggieWindow)
+                        Toggle reader view (toggleReaderMode)
+        Miscellaneous ----
+                        .
+                        ?  Show help (showHelp)
+                        Copy selected text or current frame's title or URL (use text: string, url, decoded) (autoCopy)
+                        Open selected or copied text in a new tab (autoOpen)
+                        Search selected or copied text using current search engine (use copied=true, selected=true)/(searchAs)
+                        Redo search in another search engine (use keyword, reuse=currenUnewFg/newBg/reuse)(searchinAnother)
+                        Show a tip on the HUD (use text:string)/showTip)
+                        Open a bookmark (folder) (use title, path) (openBookmark)
+                        Add tabs into a bookmark folder (use folder:string) (addBookmark)
+                        Add or disable CSS styles (use id/selector:string, css: string) (toggleStyle)
+                        Toggle the other link hints (use value:string) (toggleLinkHintCharacters)
+                        Send editing action to browser (use run:string, dom=false)/eaitText)
+                        Toggle switch only on current page (use key:string, [value:any])(toggleSwitchTemp)
+                        Pass the next keys to the page (use expect:string, normal)(passNextKey)
+                        Debug the background page (debugBackground) reset to normal mode (reset)
+                        Select and run another mapped key sequence (use expect:Envs, keys:KeySequence|]|string)(runKey)
+                        Send message to another extension (use id:string, data:any, raw)/(sendToExtension)
+                        Display confirmation dialog and wait (use ask:string, Sthen, $else)(contirm)
+                        Do nothing (blank)
+lynx   ~/Dropbox/rsc/data/lists/learnqna/vanki/lynx.txt
+                cleaned orig. (=picklist) {{{
+
+                               m              - Modify the name or location of selected file 
+                               r              - Remove selected file 
+                               t              - Tag highlighted file 
+                               u              - Upload a file into the current directory 
+                    
+                    OTHER:       ? (or h)       - Help (this screen)  
+                               a              - Add the current link to a bookmark file (+d, l, c =page, link el cancel) 
+                               c              - Send a comment to the document owner 
+                               d              - Download the current link 
+                               e              - Edit the current file 
+                               E              - Edit the current link's URL (or ACTION) and 
+                                                use that as a goto URL. 
+                               g              - Goto a user specified URL or file 
+                               G              - Edit the current document's URL and use that 
+                                                as a goto URL. 
+                               i              - Show an index of documents 
+                               j              - Execute a jump operation 
+                               k              - Show list of actual key mappings 
+                               l              - List references (links) in current document 
+                               m              - Return to main screen 
+                               o              - Set your options 
+                               p              - Print to a file, mail, printers, or other 
+                               q              - Quit (Capital 'Q'/Ctrl-D for quick quit) 
+                               /              - Search for a string within the current document 
+                               s              - Enter a search string for an external search 
+                               n              - Go to the next search string 
+                               N              - Go to the previous search string 
+                               v              - View a bookmark file 
+                               V              - Go to the Visited Links Page 
+                               x              - Force submission of form or link with no-cache 
+                               z              - Cancel transfer in progress 
+                               [del]/[backspace]    - Go to the History Page 
+                               =              - Show info about current document, URL and link 
+                               \              - Toggle document source/rendered view 
+                               !              - Spawn your default shell 
+                               '              - Toggle "historical" vs minimal or valid comment 
+                                                parsing 
+                               _              - Clear all authorization info for this session 
+                               `              - Toggle minimal or valid comment parsing 
+                               *              - Toggle image_links mode on and off 
+                               @              - Toggle raw 8-bit translations or CJK mode 
+                                                on or off 
+                               .              - Run external program on the current link. 
+                               ,              - Run external program on the current document. 
+                               {              - Shift the screen left. 
+                               }              - Shift the screen right. 
+                               |              - Toggle line-wrap mode.  When line-wrap is 
+                                                off, you may use { and } to shift the screen 
+                                                left/right.  The screen width is set to 999. 
+                               ~              - Toggle parsing of nested tables (experimental). 
+                               [              - Toggle pseudo_inlines mode on and off 
+                               ]              - Send a HEAD request for the current doc or link 
+                               "              - Toggle valid or "soft" double-quote parsing 
+                               CTRL-R         - Reload current file and refresh the screen 
+                               CTRL-L         - Refresh the screen 
+
+                               CTRL-V         - Outside of a text input line or field, 
+                                                switch to alternative parsing of HTML. 
+                                              - In a form text input field, 
+                                                CTRL-V prompts for a key command (allows 
+                                                escaping from the field). 
+
+                                                Note that on most UNIX hosts, CTRL-V is bound 
+                                                via stty to the lnext (literal-next) code but 
+                                                the exact behavior of that is implementation 
+                                                specific.  On Solaris you must type CTRL-V 
+                                                twice to use it, since it quotes the following 
+                                                keystroke. 
+
+                               CTRL-U         - Inside text input line or field, 
+                                                erase input line (more input line commands) 
+                                              - Outside of text input or field, 
+                                                undo returning to previous topic. 
+
+                               CTRL-G         - Cancel input or transfer 
+
+                               CTRL-T         - Toggle trace mode on and off 
+                               ;              - View the Lynx Trace Log for the current session 
+                               CTRL-K         - Invoke the Cookie Jar Page 
+                               CTRL-X         - Invoke the Cache Jar Page 
+                               numbers        - Invoke the prompt 
+                                                Follow link (or goto link or page) number: 
+                                                  or the 
+                                                  Select option (or page) number: 
+                                                prompt 
+
+                plocka från 
+
+                LYNX
+
+                   If you want to recall recent status-line messages, you can do so by entering the 'g' 
+                   command, followed by 'LYNXMESSAGES:'. 
+
+                If the filename does not have one of the suffixes mapped by Lynx to 
+                   HTML, the -force_html command line option can be included to force treatment of the file 
+                   as hypertext. 
+
+
+                Directory editing  **** (hel liten underkategori kommandon)
+
+
+                 The session 
+                   data is saved if lynx is invoked with the -session=FILENAME switch. The FILENAME is the 
+                   name of the file where the session will be stored. 
+
+                   There are also switches for only restoring: -sessionin=FILENAME and for only saving: 
+                   -sessionout=FILENAME sesions: 
+
+                   A summary of the Lynx command line options (switches) is returned to stdout if Lynx is 
+                   invoked with the -help switch. (el manpage)
+
+
+                Exempel från commandline-options (titta mer på :) : 
+                        -cmd_log=FILENAME 
+                                write keystroke commands and related information to the specified file. 
+
+                        -cmd_script=FILENAME 
+                                read keystroke commands from the specified file. You can use the data 
+                                written using the -cmd_log option. Lynx will ignore other information which 
+                                the command-logging may have written to the log- file. Each line of the 
+                                command script contains either a comment beginning with "#", or a keyword: 
+
+                              exit 
+                                      causes the script to stop, and forces lynx to exit immediately. 
+
+                              key 
+                                      the character value, in printable form. Cursor and other special keys 
+                                      are given as names, e.g., Down Arrow. Printable 7-bit ASCII codes are 
+                                      given as-is, and hexadecimal values represent other 8-bit codes. 
+
+                              set 
+                                      followed by a "name=value" allows one to override values set in the 
+                                      lynx.cfg file. 
+                    
+
+
+                       -dump 
+                                dumps the formatted output of the default document or one specified on the command line to standard out. This can be used in the following way: lynx -dump http://www.w3.org/ 
+                        -editor=EDITOR 
+                                enable external editing using the specified EDITOR. (vi, ed, emacs, etc.)  :DDD
+                        -help 
+                                print this Lynx command syntax usage message. 
+
+                }}}
+
+                movement, scrolling
+                    # seems like 'page' means "subpage/curr. page", 'document' means 'whole of page/website'
+
+                    ----
+                highlight next/prev. topic		#=link ???
+                {{{
+                    down/up (=arrow) }}}
+                jump to highl. topic		#=link ???
+                {{{
+                    right (=arrow) }}}
+                follow sel. link
+                {{{
+                    enter }}}
+                go back from link  **  #'return to prev. topic'
+                {{{
+                    left (=arrow) / u }}}
+                scroll down / up to next 'page'(?)
+                {{{
+                    + / space  //  - / b }}}
+                go to first/last page of 'current document' (??)
+                {{{
+                    c-a / c-e }}}
+                scroll to prev./next 'page'
+                {{{
+                    c-b / c-f }}}
+                forw./back two lines (in curr. 'document')  (**)
+                {{{
+                    c-n / c-p }}}
+                go forw./back half a page (in curr. 'document') *!
+                {{{
+                    )  //  ( }}}
+                search for string in curr. dok  (+external)  **
+                {{{
+                    /  (+ n/N for next/prev.) **    (+ s =seek external(=??)) }}}
+                return to main screen (=of lynx ??)
+                {{{
+                    m }}}
+                toggle line-wrap mode  #+shift screen right/left
+                {{{
+                    |    } / { }}}
+                    ----
+
+                save text of dok's/page's rendered version **
+                {{{
+                    lynx -dump http://www.w3.org/ }}}
+                save text of dok's/page's all(!) subpages ***!
+                {{{
+                    lynx -crawl -traversal "http://learnvimscriptthehardway.stevelosh.com/" }}}
+
+                links + toolbar(??) || 'dired'
+
+                    ----
+                go to user specified url/file **!
+                {{{
+                    g }}}
+                edit current 'documents' url + go to url **!!
+                {{{
+                    G }}}
+                go to: first / last link in curr. line *
+                {{{
+                    ^ / $ }}}
+                go to: next / prev. link in curr. column
+                {{{
+                    >  //  < }}}
+                (edit curr. file  (=with vim(??/*)))
+                {{{
+                    e  (??) }}}
+                edit curr. link's url/action + go to url *(*)
+                {{{
+                    E }}}
+                list links(='references') in curr. document (**)
+                {{{
+                    l }}}
+                go to: toolbar/banner(??) in curr. 'document'
+                {{{
+                    # }}}
+                reload curr. file  //  refresh screen
+                {{{
+                    c-r  /  c-l }}}
+                'dired': create new file(??  =sending a email/comment to page owner)
+                {{{
+                    c }}}
+                'dired': download 'sel. file' / 'current link'
+                {{{
+                    d }}}
+                x
+                {{{
+                    x }}}
+                x
+                {{{
+                    x }}}
+                'dired': 'edit sel. file' (??(?))
+                {{{
+                    e }}}
+                'dired': show full menu of options for curr. 'file'
+                {{{
+                    f }}}
+                'dired': 
+                {{{
+                    x }}}
+                'dired': upload a file into the curr. directory
+                {{{
+                    u }}}
+                Record lynx script to file  #to be replayed as macro by lynx
+                {{{
+                    cline: -cmd_log=filename }}}
+                Read keystroke commands from specified file  #run as macro
+                {{{
+                    -cmd_script=filename }}}
+                    ----
+
+                Extra/Other (**)
+
+                history etc
+
+                    ----
+                add current link to a bookmark file
+                {{{
+                    a }}}
+                ('show an index of documents' (=??))
+                {{{
+                    i }}}
+                ('execute a jump operation' (=???))
+                {{{
+                    j }}}
+                x
+                {{{
+                    x }}}
+                clear authorization info for this session
+                {{{
+                    _ }}}
+                save data from/for session in file *!
+                {{{
+                    -session=filename  #+-sessionin/sessionout }}}
+                x
+                {{{
+                    x }}}
+                show info ab. curr. dok, url and link
+                {{{
+                    = }}}
+                toggle dok source / rendered view  **!
+                {{{
+                    \ }}}
+                run external program on curr link / document
+                {{{
+                    . / , }}}
+                'spawn your default shell' (=??)
+                {{{
+                    ! }}}
+                toggle image links mode on/off
+                {{{
+                    * }}}
+                    ----
+
+                    ----
+                quit / emphatic quit
+                {{{
+                    q / Q }}}
+                show help (**!)
+                {{{
+                    ?  /  h }}}
+                list key-mappings  *
+                {{{
+                    k }}}
+                set prefs/options
+                {{{
+                    o }}}
+                go to 'visited links' page **
+                {{{
+                    V }}}
+                go to 'history' page  (??)
+                {{{
+                    del / bs }}}
+                x
+                {{{
+                    x }}}
+                x
+                {{{
+                    x }}}
+                force submission of form/link w. no-cache
+                {{{
+                    x }}}
+                cancel transfer in progress
+                {{{
+                    z }}}
+                Cancel input or(!) transfer
+                {{{
+                    c-g }}}
+                    ----
+
+                Cache jar
+                Cookie jar
+                 Trace mode + trace log
+Nyxt
+                overide-map
+                C-space	execute-command
+
+                vi-vi-normal-map
+                i	vi-insert-mode
+                button1	vi-button1
+
+                web-vi-normal-map
+                +	zoom-in-page
+                /	search-buffer
+                0	unzoom-page
+                ?	remove-search-hints
+                F	follow-hint-new-buffer-focus
+                G	scroll-to-bottom
+                H	history-backwards
+                L	history-forwards
+                f	follow-hint
+                h	scroll-left
+                j	scroll-down
+                k	scroll-up
+                l	scroll-right
+                f3	search-buffer
+                ; f	follow-hint-new-buffer
+                C-+	zoom-in-page
+                C-.	jump-to-heading
+                C-0	unzoom-page
+                C-=	zoom-in-page
+                C-b	scroll-page-up
+                C-f	scroll-page-down
+                C-g	follow-hint
+                C-i	autofill
+                C-n	scroll-down
+                C-p	scroll-up
+                C-v	scroll-page-down
+                C-y	paste
+                M-<	scroll-to-top
+                M->	scroll-to-bottom
+                M-H	history-all-query
+                M-L	history-forwards-all-query
+                M-[	history-backwards
+                M-]	history-forwards
+                M-b	history-backwards-query
+                M-f	remove-search-hints
+                M-g	follow-hint-new-buffer-focus
+                M-h	history-backwards-query
+                M-l	history-forwards-query
+                M-v	scroll-page-up
+                M-w	copy
+                end	maybe-scroll-to-bottom
+                g F	follow-hint-nosave-buffer-focus
+                g f	follow-hint-nosave-buffer
+                g g	scroll-to-top
+                g h	jump-to-heading
+                m f	bookmark-hint
+                z i	zoom-in-page
+                z o	zoom-out-page
+                z z	unzoom-page
+                C-up	scroll-to-top
+                home	maybe-scroll-to-top
+                C-M-b	history-all-query
+                C-M-c	open-inspector
+                C-M-f	history-forwards-all-query
+                C-M-g	follow-hint-nosave-buffer-focus
+                C-c '	edit-with-external-editor
+                C-m g	bookmark-hint
+                C-s k	remove-search-hints
+                C-s s	search-buffer
+                C-s-H	history-all-query
+                C-s-h	history-all-query
+                M-g g	follow-hint-new-buffer-focus
+                M-s-<	scroll-to-top
+                M-s->	scroll-to-bottom
+                space	scroll-page-down
+                C-down	scroll-to-bottom
+                M-left	history-backwards
+                hyphen	zoom-out-page
+                pageup	scroll-page-up
+                C-M-g g	follow-hint-nosave-buffer
+                C-u M-g	follow-hint-new-buffer
+                C-x C-+	zoom-in-page
+                C-x C-0	unzoom-page
+                C-x C-=	zoom-in-page
+                C-x C-w	copy-hint-url
+                M-g M-g	follow-hint
+                M-right	history-forwards
+                button8	history-backwards
+                button9	history-forwards
+                pageend	scroll-to-bottom
+                s-space	scroll-page-up
+                C-M-left	history-all-query
+                C-hyphen	zoom-out-page
+                M-s-left	history-backwards-query
+                keypadup	scroll-up
+                pagedown	scroll-page-down
+                pagehome	scroll-to-top
+                C-M-right	history-forwards-all-query
+                C-button4	zoom-in-page
+                C-button5	zoom-out-page
+                C-u C-M-g	follow-hint-nosave-buffer
+                C-u M-g g	follow-hint-new-buffer
+                M-s-right	history-forwards-query
+                keypadend	scroll-to-bottom
+                keypaddown	scroll-down
+                keypadhome	scroll-to-top
+                keypadleft	scroll-left
+                keypadnext	scroll-page-down
+                C-M-g C-M-g	follow-hint-nosave-buffer-focus
+                C-u M-g M-g	follow-hint-new-buffer
+                keypadprior	scroll-page-up
+                keypadright	scroll-right
+                C-x C-hyphen	zoom-out-page
+                keypadpageup	scroll-page-up
+                base-vi-normal-map
+
+                :	execute-command
+                B	make-buffer-focus
+                D	delete-current-buffer
+                O	set-url-new-buffer
+                R	reload-current-buffer
+                W	make-window
+                [	switch-buffer-previous
+                ]	switch-buffer-next
+                d	delete-buffer
+                o	set-url
+                r	reload-buffer
+                u	reopen-buffer
+                f5	reload-current-buffer
+                C-/	reopen-buffer
+                C-R	reload-buffer
+                C-T	reopen-buffer
+                C-W	delete-current-window
+                C-[	switch-buffer-previous
+                C-]	switch-buffer-next
+                C-b	list-bookmarks
+                C-d	bookmark-current-page
+                C-j	list-downloads
+                C-l	set-url
+                C-n	make-window
+                C-o	load-file
+                C-p	print-buffer
+                C-q	quit
+                C-r	reload-current-buffer
+                C-t	make-buffer-focus
+                C-w	delete-current-buffer
+                M-l	set-url-new-buffer
+                M-w	delete-window
+                M-x	execute-command
+                Z Z	quit
+                f11	toggle-fullscreen
+                g b	switch-buffer
+                g o	set-url-nosave-buffer
+                m M	bookmark-current-page
+                m O	set-url-from-bookmark-new-buffer
+                m d	bookmark-delete
+                m m	bookmark-page
+                m o	set-url-from-bookmark
+                m u	bookmark-url
+                y t	copy-title
+                y u	copy-url
+                f1 C	describe-class
+                f1 b	describe-bindings
+                f1 c	describe-command
+                f1 f	describe-function
+                f1 k	describe-key
+                f1 r	manual
+                f1 s	describe-slot
+                f1 t	tutorial
+                f1 v	describe-variable
+                C-M-i	copy-title
+                C-M-l	copy-url
+                C-h C	describe-class
+                C-h b	describe-bindings
+                C-h c	describe-command
+                C-h f	describe-function
+                C-h h	help
+                C-h k	describe-key
+                C-h r	manual
+                C-h s	describe-slot
+                C-h t	tutorial
+                C-h v	describe-variable
+                C-m k	bookmark-delete
+                C-m o	set-url-from-bookmark
+                C-m s	bookmark-current-page
+                C-m u	bookmark-url
+                C-s-W	delete-current-window
+                C-s-t	reopen-buffer
+                C-tab	switch-buffer-next
+                C-w q	delete-current-window
+                C-x b	switch-buffer
+                C-x k	delete-buffer
+                M-c l	copy-url
+                M-c t	copy-title
+                f1 f1	help
+                C-h C-h	help
+                C-m C-o	set-url-from-bookmark-new-buffer
+                C-m C-s	bookmark-page
+                C-s-tab	switch-buffer-previous
+                C-space	execute-command
+                C-u M-l	set-url-nosave-buffer
+                C-w C-q	delete-window
+                C-w C-w	make-window
+                C-x 5 0	delete-current-window
+                C-x 5 1	delete-window
+                C-x 5 2	make-window
+                C-x C-b	list-buffers
+                C-x C-c	quit
+                C-x C-f	open-file
+                C-x C-k	delete-current-buffer
+                C-pageup	switch-buffer-previous
+                C-x left	switch-buffer-previous
+                C-x right	switch-buffer-next
+                C-pagedown	switch-buffer-next
+w3m
+                Keyboard shortcuts for w3m,a text based Web browser
+                Page/Cursor motion
+                SPC, C-v 	Forward page
+                b, ESC v 	Backward page
+                l, C-f 	Cursor right
+                h, C-b 	Cursor left
+                j, C-n 	Cursor down
+                k, C-p 	Cursor up
+                J 	Roll up one line
+                K 	Roll down one line
+                ^, C-a 	Go to the beginning of line
+                $, C-e 	Go to the end of line
+                w 	Go to next word
+                W 	Go to previous word
+                > 	Shift screen right
+                < 	Shift screen left
+                . 	Shift screen one column right
+                , 	Shift screen one column left
+                g, M-< 	Go to the first line
+                G, M-> 	Go to the last line
+                ESC g 	Go to specified line
+                Z 	Move to the center line
+                z 	Move to the center column
+                TAB 	Move to next hyperlink
+                C-u, ESC TAB 	Move to previous hyperlink
+                [ 	Move to the first hyperlink
+                ] 	Move to the last hyperlink
+                Hyperlink operation
+                RET 	Follow hyperlink
+                a, ESC RET 	Save link to file
+                u 	Peek link URL
+                i 	Peek image URL
+                l 	View inline image
+                ESC l 	Save inline image to file
+                : 	Mark URL-like strings as anchors
+                ESC : 	Mark Message-ID-like strings as news anchors
+                c 	Peek current URL
+                = 	Display information about current document
+                C-g 	Show current line number
+                C-h 	View history of URL
+                F 	Render frame
+                M 	Browse current document using external browser (use 2M and 3M to invoke second and third browser)
+                ESC M 	Browse link using external browser (use 2ESC M and 3ESC M to invoke second and third browser)
+                File/Stream operation
+                U 	Open URL
+                V 	View new file
+                @ 	Execute shell command and load
+# 	Execute shell command and browse
+                Buffer operation
+                B 	Back to the previous buffer
+                v 	View HTML source
+                s 	Select buffer
+                E 	Edit buffer source
+                C-l 	Redraw screen
+                R 	Reload buffer
+                S 	Save buffer
+                ESC s 	Save source
+                ESC e 	Edit buffer image
+                Buffer selection mode
+                k, C-p 	Select previous buffer
+                j, C-n 	Select next buffer
+                D 	Delect current buffer
+                RET 	Go to the selected buffer
+                Bookmark operation
+                ESC b 	Load bookmark
+                ESC a 	Add current to bookmark
+                Search
+                \, C-s 	Search forward
+                ?, C-r 	Search backward
+                n 	Search next
+                N 	Search previous
+                C-w 	Toggle wrap search mode
+                Mark operation
+                C-SPC 	Set/unset mark
+                ESC p 	Go to previous mark
+                ESC n 	Go to next mark
+                " 	Mark by regular expression
+                Miscellany
+                ! 	Execute shell command
+                H 	Help (load this file)
+                o 	Set option
+                C-k 	Show cookie jar
+                C-c 	Stop
+                C-z 	Suspend
+                q 	Quit (with confirmation, if you like)
+                Q 	Quit without confirmation
+                Line-edit mode
+                C-f 	Move cursor forward
+                C-b 	Move cursor backward
+                C-h 	Delete previous character
+                C-d 	Delete current character
+                C-k 	Kill everything after cursor
+                C-u 	Kill everything before cursor
+                C-a 	Move to the top of line
+                C-e 	Move to the bottom of line
+                C-p 	Fetch the previous string from the history list
+                C-n 	Fetch the next string from the history list
+                TAB, SPC 	Complete filename
+                RET 	Accept
+luakit
+                Modes
+
+                Luakit can run in various modes, which specify how the user interacts with the browser.
+
+                Normal mode
+                    This is the default mode when Luakit is started. You can load URIs, open tabs and windows, access to other modes, etc.
+                All mode
+                    Special meta-mode in which the bindings are present in all modes.
+                Insert mode
+                    When selecting form fields Luakit will enter the insert mode which allows you to enter text in form fields without accidentally triggering normal mode bindings.
+                Passthrough mode
+                    Luakit will pass every key event to the WebView until the user presses Escape. This is useful for using webpage shortcuts.
+                Command mode
+                    Enter commands. Every action in Luakit is a command, so basically you can do anything from there.
+                Lua mode
+                    Execute arbitrary Lua commands within the Luakit environment.
+
+                Userscripts
+
+                Luakit is highly extensible with userscripts written in Lua. These scripts may provide additional modes. Some are embedded by default. You will need to load the userscript to use its features. See the CONFIGURATION section for more details.
+                OPTIONS
+                Help options
+
+                -h, --help
+                    Show help options.
+                --help-all
+                    Show all help options.
+                --help-gtk
+                    Show GTK+ help options.
+
+                Application options
+
+                -k, --check
+                    Check configuration file and exit.
+                -c, --config=FILE
+                    Configuration file to use.
+                -n, --nonblock
+                    Fork Luakit into the background.
+                -U, --nounique
+                    Ignore libunique bindings.
+                -u, --uri=URI
+                    URI(s) to load at startup.
+                -v, --verbose
+                    Print debugging output.
+                -V, --version
+                    Print version and exit.
+                --display=DISPLAY
+                    X display to use.
+
+                KEYBINDINGS
+
+                Luakit is fully usable with keyboard. Default bindings should be familiar to users of Emacs and Vim; nonetheless a lot of keyboards and mouse shortcuts are shared with popular web browsers.
+
+                Pressing : will open the command prompt. You can enter commands from there. You can view the current list of bindings in Luakit's help page with the
+
+                    :help
+
+                command.
+
+                Some bindings have an uppercase version which will behave somewhat differently. Some come with userscripts, so you will need to have the appropriate userscript loaded to use it. Here follows a list of some noteworthy default bindings.
+
+                ZZ
+                    Quit and save the session.
+                ZQ
+                    Quit without saving the session.
+                o, O
+                    Open specified URIs. If uppercase, edit current URI.
+                t, T
+                    Open specified URIs in new tab. If uppercase, edit current URI.
+                w, W
+                    Open specified URIs in new window. If uppercase, edit current URI.
+
+                <Left>, <Down>, <Up>, <Right>
+                h, j, k, l
+                Scroll page vertically and horizontally.
+
+                <Home>, <End>
+                gg, G
+                Go to top / bottom of the page.
+
+                [count]%
+                    Go to [count] percent of the page.
+                f, F
+                    Enter follow mode. Use numbers or text to open corresponding links. Use arrow to navigate between links. If uppercase, open in new tab. Requires follow userscript.
+                i
+                    Enter insert mode. In some case form fields may not receive characters; press an arrow key to insert characters correctly.
+                gi
+                    Enter insert mode in the first form field. Requires go_input userscript.
+                <F11>
+                    Toggle fullscreen.
+                +, -
+                    Change the zoom level.
+                =
+                    Restore zoom level.
+                p, P
+                    Open URI from clipboard. If uppercase, open in new tab.
+                y
+                    Yank current URI to clipboard.
+                <Ctrl>x, <Ctrl>a
+                    Decrement / increment last number in URI. This is useful for forum threads or any ordered website.
+                H, L
+                    Go back / forward in the browser history.
+
+                <Ctrl><Shift><Tab>, <Ctrl><Tab>
+                <Ctrl><PageDown>, <Ctrl><PageUp>
+                gT, gt
+                Go to previous / next tab.
+
+                <Alt>[0-9]
+                    Go to tab #, where # is between 0 and 9.
+                <, >
+                    Reorder tabs. Requires taborder userscript.
+                [count]d
+                    Close [count] tabs.
+                u
+                    Restore last closed tab.
+                gy
+                    Duplicate current tab.
+                gh, gH
+                    Open homepage. If uppercase, open in new tab.
+                r, R
+                    Reload current page. If uppercase, skip cache.
+                <Ctrl>c
+                    Stop loading the current page.
+                <Ctrl>z
+                    Enter passthrough mode. Use ESC to return to normal mode.
+                M[a-zA-Z0-9]
+                    Associate current URI to quickmark #, where # is an ASCII letter or a digit. Requires quickmarks userscript.
+                go[a-zA-Z0-9], gn[a-zA-Z0-9], gw[a-zA-Z0-9]
+                    Open specified quickmark in current tab / new tab / new window. Requires quickmarks userscript.
+                B
+                    Add current URI to bookmarks.
+                gb, gB
+                    Open bookmarks manager. If uppercase, open in new tab.
+                /, ?
+                    Search / reverse search for a string on current page.
+                n, N
+                    Find next / previous result from search.
+
+                COMMANDS
+
+                All bindings actually refer to commands. However, some commands do not have bindings associated by default. If completion userscript is used, you can autocomplete commands by pressing <TAB> by default. Once again, you should consult the configuration files to get an exhaustive list. The currently available functions may be displayed from the help view, which you can open with the :help command.
+
+                Here follows some noteworthy commands:
+
+                :bookmarks
+                    Display and search bookmarks.
+                :downloads
+                    Open Download page, which displays all downloads along with their status.
+                :dump
+                    Download current page.
+                :save
+                    Save the complete page as a single mhtml file.
+                :help
+                    Display all commands and bindings, along with their description. The help page also features some details about modes.
+                :history
+                    Display and search history.
+                :inspect
+                    Launch WebKit inspector. Use :inspect! to toggle off.
+                :nohlsearch
+                    Disable search highlighting.
+                :qmarks
+                    Display the quickmarks list.
+                :tabhistory
+                    Display the tab history.
+                :view-source
+                    Display page source code. Use :view-source! to toggle off.
+
+                FILES
+
+                Luakit will load configuration files from the following folders in priority order:
+
+                    $XDG_CONFIG_HOME/luakit
+                    $XDG_CONFIG_DIRS/luakit
+
+                Default configuration files:
+
+                binds.lua
+                    The keyboard and mouse bindings.
+                globals.lua
+                    General configuration, like home page, search engines, user agent, per-domain properties, cookies policy.
+                modes.lua
+                    All default modes are set in this file.
+                rc.lua
+                    Main configuration files. All other files are loaded from there.
+                theme.lua,
+                    Colors definition.
+                webview.lua
+                    WebKit related.
+                window.lua
+                    Status bar, windows and tabs behaviour.
+
+                Embedded userscript will be loaded from $XDG_DATA_DIRS/luakit/lib.
+
+                All browsing-related files are stored in $XDG_DATA_HOME/luakit. All of are created if needed and if they do not exist. Depending on the userscripts you are using, you may find:
+
+                bookmarks.db
+                    An SQLite3 database containing your complete bookmark list. If you want to synchronise your bookmarks between your different systems, just share this file. You can use a symbolic link if the file is not stored in the required folder.
+                cookies.db
+                    This file contains all details needed for websites keeping track of your status, like login information. Delete this file once you are finished with browsing if you are not on your personal system.
+                history.db
+                    Your browsing history. Delete this file once you are finished with browsing if you are not on your personal system.
+                quickmarks
+                    A plain text file saving your quickmarks. The structure is extremely simple: each line is a single quickmark; first character is the quickmark shortcut and may be one of [a-zA-Z0-9]; second character is a space; the remaining part is the URI.
+
+                CONFIGURATION
+
+                If you do not want to stick to the default configuration and want to benefit from the flexibility and extensibility of Luakit, you can fully configure it from the Lua configuration files.
+
+                If you do not want to start from scratch, you may use default configuration files and tweak them to fit your needs. Use the following command to copy configuration file to your home folder:
+
+                    cp -r $XDG_CONFIG_DIRS/luakit $XDG_CONFIG_HOME
+
+                You can now edit the new files. Configuration should be quite straightforward, even if you do not know much about Lua.
+qutebrowser
+                f - Show hints for page
+
+                (1) copying/yanking:
+                yy - copy/yank URL
+                yY - copy URL to selection
+                yt - copy title to clipboard
+                yT - copy title to selection
+
+                (2) pasting:
+                pp - open URL from clipboard
+                pP - open URL from selection
+                Pp - like pp, in new tab
+                PP - like pP, in new tab
+                wp - like pp, in new window
+                wP - like pP, in new window
+
+                (3) navigation:
+                [[ - click "previous"-link on page
+                ]] - click "next"-link on page
+                {{ - like [[, in new tab
+                }} - like ]], in new tab
+                <Ctrl-A> - increment no. in URL
+                <Ctrl-X> - decrement no. in URL
+
+                (4) scrolling:
+                <Ctrl-F> - page down
+                <Ctrl-B> - page up
+                <Ctrl-D> - half page down
+                <Ctrl-U> - half page up
+
+                in prompt mode:
+                Enter - accept prompt
+                y - answer yes to prompt
+                n - answer no to prompt
+
+                (6) opening:
+                go - edit & open current URL
+                gO - like go, in new tab
+                xO - like go, in bg. tab
+                xO - open in background tab
+                wo - open in new window
+
+                               * = can be prefixed by a count
+                (7) back/forward:
+                th - back (in new tab)                      *
+                wh - back (in new window)                   *
+                tl - forward (in new tab)                   *
+                wl - forward (in new window)                *
+
+                (8)
+                prefix with w - in new window
+
+                (9) extended hint mode:
+                ;b - open hint in background tab
+                ;f - open hint in foreground tab
+                ;h - hover over hint (mouse-over)
+                ;i - hint images
+                ;l - hint images in new tab
+                ;t - hint inputs
+                ;o - put hinted URL in cmd. line
+                ;O - like ;o, in new tab
+                ;y - yank hinted URL to clipboard
+                ;Y - yank hinted URL to selection
+                ;r - rapid hinting
+                ;R - like ;r, in new window
+
+                (10) misc. commands:
+                gt - switch tabs by name
+                gm/gK/gJ - move tab (to index/left/right)   *
+                gC - clone tab
+                gD - detach tab
+                gf - view page source
+                gu - navigate up in URL
+                gU - like gu, in new tab
+                sf - save config
+                ss - set setting (sl: temp)
+                sk - bind key
+                Ss - show settings
+                wi - open web inspector
+                gd - download page
+                ad - cancel download                        *
+                co - close other tabs
+                cd - clear downloads
+
+                (11) modifier commands:
+                <Alt-num> - select tab
+                <Ctrl-Tab> - select prev. tab
+                <Ctrl-V> - passthrough mode
+                <Ctrl-Q> - quit
+                <Ctrl-H> - home
+                <Ctrl-S> - stop loading
+                <Ctrl-Alt-P> - print
+
+                in insert mode:
+                <Ctrl-E> - open editor
+                in command mode:
+                <Ctrl-P> - prev. history item
+                <Ctrl-N> - next history item
+                <Ctrl-D> - delete current item
+
+                (12) toggling settings:
+                tsh - toggle scripts for the current host (temporarily)
+                tSh - like tsh, but permanently
+                tsH/tsu - like tsh, but including subdomains / with exact URL
+                tph - toggle plugins
+
