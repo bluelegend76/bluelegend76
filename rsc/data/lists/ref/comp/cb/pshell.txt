@@ -1,0 +1,209 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+
+~/Dropbox/rsc/data/lists/at/sysadm.win.txt
+/media/bluelegend/328668208667E339/Users/bluelegend/Desktop/drswin/rsc/Doks/Pshell/sysadm-pshellcourse.txt
+[[ /media/bluelegend/3a7592f8-41d6-4c29-b6d0-53533881b86a/drswin/rsc/Doks/Pshell/sysadm-pshellcourse.txt ]] = Future move into Empire dir/backup-structure[?!]
+~/Dropbox/rsc/Doks/pshell.cheatsh.pdf
+                    Import, Export, Convert ----
+                        .
+                        .
+                        Export-CliXML
+                        ConvertTo-XML
+                        Export-CSV
+                        ConvertTo-CSV
+                    Common cmdlets ----
+                        .
+                        .
+                        Import-CliXML
+                        ConvertTo-HTML
+                        Import-CSV
+                        ConvertFrom-CSV
+                        cd, chdir, sl
+                        cat, gc, type
+                        ac
+                        sc
+                    Basic Commands ----
+                        .
+                        .
+                        copy, cp, cpi
+                        del,
+                        erase,
+                        rd,
+                        ri, rm, rmdir
+                        Cmdlet Commands built into shell written in .NET
+                    Flow Control ----
+                        .
+                        .
+                        mi, move, mv
+                        Functions Commands written in PowerShell language
+                        si
+                        If(){} Elseif(){ } Else{ }
+                        Parameter Argument to a Cmdlet/Function/Script
+                        ni
+                        while(){}
+                        Alias Shortcut for a Cmdlet or Function
+                        sleep
+                        For($i=0; $i -lt 10; $i++){}
+                        Scripts Text files with .ps1 extension
+                        sajb
+                        Foreach($file in dir C:\){$file.name}
+                        Applications Existing windows programs
+                        compare, diff
+                        1..10 | foreach{$_}
+                        Pipelines Pass objects Get-process word | Stop-Process
+                        group
+                        Ctrl+c Interrupt current command
+                        curl,
+                        iwr,
+                        wget
+                        Left/right Navigate editing cursor
+                    Comments, Escape Characters ----
+                        .
+                        .
+                        measure
+                        Ctrl+left/right Navigate a word at a time
+                        nal
+                        Home / End End Move to start / end of line
+#Comment Comment
+                        rvpa
+                        Up/down Move up and down through history
+                        <#comment#> Multiline Comment
+                        rujb
+                        Insert Toggles between insert/overwrite mode
+                        "`"test`"" Escape char `
+                        set, sv
+                        F7 Command history in a window
+                        `t Tab
+                        shcm
+                        Tab / Shift-Tab Command line completion
+                        `n New line
+                        sort
+                        ` Line continue
+                        sasv
+                    Variables ----
+                        .
+                        .
+                        saps, start
+                        sujb
+                    Parameters ----
+                        .
+                        .
+                        $var = "string" Assign variable
+                        wjb
+                        $a,$b = 0 or $a,$b = 'a','b' Assign multiple variables
+                        -Confirm Prompt whether to take action
+                        ?, where
+                        $a,$b = $b,$a Flip variables
+                        -WhatIf Displays what command would do
+                        echo, write
+                        $var=[int]5 Strongly typed variable
+                        Set-Location
+                        Get-Content
+                        Add-Content
+                        Set-Content
+                        Copy-Item
+                        Remove-Item
+                        Move-Item
+                        Set-Item
+                        New-Item
+                        Start-Sleep
+                        Start-Job
+                        Compare-Object
+                        Group-Object
+                        Invoke-WebRequest
+                        Measure-Object
+                        New-Alias
+                        Resolve-Path
+                        Resume-Job
+                        Set-Variable
+                        Show-Command
+                        Sort-Object
+                        Start-Service
+                        Start-Process
+                        Suspend-Job
+                        Wait-Job
+                        Where-Object
+                        Write-Output
+                    Common Aliases ----
+                        .
+                        .
+                        Common
+                        Aliases
+                        gcm Get-Command
+                        foreach,% Foreach-Object
+                        sort Sort-Object
+                        where, ? Where-Object
+                        diff, compare Compare-Object
+                        dir, ls, gci Get-ChildItem
+                        gi Get-Item
+                        copy, cp, cpi Copy-Item
+                        move, mv, mi Move-Item
+                        del, rm Remove-Item
+                        rni, ren Rename-Item
+                        fFt Format-Table
+                        fl Format-List
+                        gcim Get-CimInstance
+                        cat, gc, type Get-Content
+                        sc Set-Content
+                        h, history, ghy Get-History
+                        ihy, r Invoke-History
+                        gp Get-ItemProperty
+                        sp Set-ItemProperty
+                        pwd, gl Get-Location
+                        gm Get-Member
+                        sls Select-String
+                        cd, chdir, sl Set-Location
+                        cls, clear Clear-Host
+                    Arrays Objects ----
+                        .
+                        .
+                        $arr = "a", "b" Array of strings
+                        $arr = @() Empty array
+                        =, +=, -=, ++,-- Assign values to variable
+                        $arr[5] Sixth array element
+                        Get-Command Get all commands
+                        -and, -or, -not,! Connect expressions / statements
+                        $arr[-3..-1] Last three array elements
+                        Get-Command -Module RGHS Get all commands in RGHS module
+                        -eq, -ne Equal, not equal
+                        $arr[1,4+6..9] Elements at index 1,4, 6-9
+                    Help ----
+                        .
+                        .
+                        Get-Command Get-p* Get all commands starting with get-p
+                        -gt, -ge Greater than, greater than or equal
+                        $arr[1] += 200 Add to array item value
+                        Get-help get-process Get help for command
+                        -lt, -le Less than, less than or equal
+                        $z = $arA + $arB Two arrays into single array
+                        Get-Process | Get-Member Get members of the object
+                        -replace "Hi" -replace "H", "P"
+                        [pscustomobject]@{x=1;z=2} Create custom object
+                        Get-Process| format-list -properties * Get-Process as list with all properties
+                        -match, -notmatch Regular expression match
+                        (Get-Date).Date Date property of object
+                        -like, -notlike Wildcard matching
+                        -contains, -notcontains Check if value in array
+                    Writing output and reading ----
+                        .
+                        .
+                        -in, -notin Reverse of contains, notcontains.
+                    Scripts ----
+                        .
+                        .
+                        Set-ExecutionPolicy -ExecutionPolicy Bypass Set execution policy to allow all scripts
+                        ."\\c-is-ts-91\c$\scripts\script.ps1" Run Script.PS1 script in current scope
+                        &"\\c-is-ts-91\c$\scripts\script.ps1" Run Script.PS1 script in script scope
+                        .\Script.ps1 Run Script.ps1 script in script scope
+                        $profile Your personal profile that runs at launch
+                    Assignment, Logical, Comparison ----
+                        .
+                        .
+                        "This displays a string" String is written directly to output
+                        Write-Host "color" -ForegroundColor Red -NoNewLine String with colors, no new line at end
+                        $age = Read-host "Please enter your age" Set $age variable to input from user
+                        $pwd = Read-host "Please enter your password" -asSecureString Read in $pwd as secure string
+                        Clear-Host Clear console
+

@@ -1,0 +1,22 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/mlearn-ai/ [****(!!)]
+  [= Rename Doks]
+~/Empire/Doks/Comp/mlearn-ai/machinelearnpycb.pdf **
+~/Empire/Doks/Comp/mlearn-ai/mlearn-fullcourse.pdf
+~/Empire/Doks/Comp/mlearn-ai/mlearnmath.pdf
+~/Empire/Doks/Comp/mlearn-ai/mlearn-algos.pdf
+  ~/Empire/Doks/Comp/mlearn-ai/mlearn-stats.pdf
+~/Empire/Doks/Comp/mlearn-ai/mlearnpy.tutspoint.pdf
+~/Empire/Doks/Comp/mlearn-ai/mlearn-pyeveryone.pdf
+~/Empire/Doks/Comp/mlearn-ai/mlearn-pyprojects.pdf
+~/Empire/Doks/Comp/mlearn-ai/mlearn-masterclass.pdf
+--
+~/Empire/Doks/Comp/lang/java/cloj/clojmachlearn.txt
+    ~/Empire/Doks/Comp/lang/java/cloj/clojmachlearn.pdf
+
+TODO: Include|Recreate ref-pdfs:  ~/Empire/Doks/Comp/mlearn-ai/neurnetze.txt
+                                  ~/Empire/Doks/Comp/mlearn-ai/praxiseinstieg-deeplearning.txt
++ FreecMlearning-Videos(!!)
+

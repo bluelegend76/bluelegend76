@@ -1,0 +1,522 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
++INCLUDE CHEATSHEETS
+
+~/Empire/Doks/Comp/lang/rust/rust-cookbook.pdf
+~/Empire/Doks/Comp/lang/rust/rustcb.txt 
+  ~/Empire/Doks/Comp/lang/rust/rustcb.pdf
+~/Empire/Doks/Comp/lang/rust/rust-stdlibcb.txt
+~/Empire/Doks/Comp/lang/rust/rust-structsalgos.txt
+
+rustcb
+            Chapter 1 - Starting Off with Rust ----
+            Setting up your environment
+            Managing the Rust installation with rustup.rs
+            Installing Visual Studio Code and extensions
+            Troubleshooting
+            Working with the command line I/O
+            Creating and using data types
+            Controlling execution flow
+            Splitting your code with crates and modules
+            Writing tests and benchmarks
+            Documenting your code
+            Testing your documentation
+            Sharing code among types
+            Sequence types in Rust
+            Table of Contents
+            Debugging Rust
+            Chapter 2 - Going Further with Advanced Rust ----
+            Creating meaningful numbers with enums
+            There is no null
+            Complex conditions with pattern matching
+            Implementing custom iterators
+            Filtering and transforming sequences efficiently
+            Reading memory the unsafe way
+            Shared ownership
+            Shared mutable ownership
+            Referencing with explicit lifetimes
+            Enforcing behavior with trait bounds
+            Working with generic data types
+            Table of Contents
+            Chapter 3 - Managing Projects with Cargo ----
+            Organizing large projects with workspaces
+            Uploading to crates.io
+            Using dependencies and external crates
+            Extending cargo with sub-commands
+            Testing your project with cargo
+            Continuous integration with cargo
+            Customizing the build
+            Chapter 4 - Fearless Concurrency ----
+            Moving data into new threads
+            Managing multiple threads
+            Using channels to communicate between threads
+            Sharing mutable states
+            Multiprocessing in Rust
+            Making sequential code parallel
+            Table of Contents
+            Concurrent data processing in vectors
+            Shared immutable states
+            Handling asynchronous messages with actors
+            Asynchronous programming with futures
+            Chapter 5 - Handling Errors and Other Results ----
+            Panicking responsibly
+            Handling multiple errors
+            Working with exceptional results
+            Seamless error handling
+            Customizing errors
+            Resilient programming
+            Working with external crates for error handling
+            Moving between Option and Result
+            Chapter 6 - Expressing Yourself with Macros ----
+            Building custom macros in Rust
+            Implementing matching with macros
+            Table of Contents
+            Using predefined macros
+            Code generation using macros
+            Macro overloading
+            Using repeat for parameter ranges
+            Don't Repeat Yourself
+            Chapter 7 - Integrating Rust with Other Languages ----
+            Including legacy C code
+            Calling into Rust from Node.js using FFI
+            How to do it ...
+            Running Rust in the browser
+            Using Rust and Python
+            Generating bindings for legacy applications
+            Chapter 8 - Safe Programming for the Web ----
+            Setting up a web server
+            Table of Contents
+            Designing a RESTful API
+            Handling JSON payloads
+            Web error handling
+            Rendering HTML templates
+            Using an ORM to save data to a database
+            Running advanced queries using an ORM
+            Authentication on the web
+            Chapter 9 - Systems Programming Made Easy ----
+            Cross-compiling Rust
+            Creating I2C device drivers
+            Efficiently reading hardware sensors
+            Chapter 10 - Getting Practical with Rust ----
+            Generating random numbers
+            [ vi ]
+            Writing to and reading from files
+            Parsing unstructured formats like JSON
+            Extract text using regular expressions
+            Recursively searching the filesystem
+            Custom command-line arguments
+            Working with piped input data
+            Sending web requests
+            Running machine learning models
+            Configuring and using logging
+            Starting subprocesses
+            Other Books You May Enjoy
+            Index
+rust stdlibcb
+            Chapter 1 - Learning the Basics ----
+            Concatenating strings
+            Using the format! macro
+            Providing a default implementation
+            Using the constructor pattern
+            Using the builder pattern
+            Parallelism through simple threads
+            Generating random numbers
+            Querying with regexes
+            Table of Contents
+            Accessing the command line
+            Interacting with environment variables
+            Reading from stdin
+            Accepting a variable number of arguments
+            Getting started
+            Chapter 2 - Working with Collections ----
+            Introduction
+            Using a vector
+            Using a string
+            Accessing collections as iterators
+            Using a VecDeque
+            Using a HashMap
+            Using a HashSet
+            [ ii ]
+            Table of Contents
+            Creating an own iterator
+            Using a slab
+            Chapter 3 - Handling Files and the Filesystem ----
+            Introduction
+            Working with text files
+            Handling bytes
+            Working with binary files
+            Compressing and decompressing data
+            Traversing the filesystem
+            Finding files with glob patterns
+            Chapter 4 - Serialization ----
+            [ iii ]
+            Table of Contents
+            Introduction
+            Working with CSV
+            Serialization basics with Serde
+            Working with TOML
+            Getting started
+            Working with JSON
+            Building JSON dynamically
+            Chapter 5 - Advanced Data Structures ----
+            Introduction
+            Creating lazy static objects
+            Working with bit fields
+            Getting started
+            Providing custom derives
+            Getting started
+            [ iv ]
+            Table of Contents
+            Converting types into each other
+            Boxing data
+            Sharing ownership with smart pointers
+            Working with interior mutability
+            Chapter 6 - Handling Errors ----
+            Introduction
+            Providing user-defined error types
+            Providing logging
+            Creating a custom logger
+            Implementing the Drop trait
+            Understanding RAII
+            [v]
+            Table of Contents
+            Chapter 7 - Parallelism and Rayon ----
+            Introduction
+            Parallelizing iterators
+            Running two operations together
+            Sharing resources in multithreaded closures
+            Sending data across threads
+            Accessing resources in parallel with RwLocks
+            Atomically accessing primitives
+            Putting it all together in a connection handler
+            Chapter 8 - Working with Futures ----
+            Introduction
+            Providing futures with a CPU pool and waiting for them
+            Handling errors in futures
+            [ vi ]
+            Table of Contents
+            Combining futures
+            Using Streams
+            Using Sinks
+            Using the oneshot channel
+            Returning futures
+            Locking resources with BiLocks
+            Chapter 9 - Networking ----
+            Introduction
+            Setting up a basic HTTP server
+            Configuring an HTTP server to perform echoing and routing
+            Configuring an HTTP server to perform file serving
+            Making requests to APIs
+            Chapter 10 - Using Experimental Nightly Features ----
+            [ vii ]
+            Table of Contents
+            Introduction
+            Iterating over an inclusive range
+            Returning abstract types
+            Composing functions
+            Filtering strings efficiently
+            Stepping through an iterator in regular intervals
+            Benchmarking your code
+            Using generators
+            Other Books You May Enjoy
+            Index
+rust structsalgos
+            Chapter 1 - Hello Rust! ----
+            Rust in 2018
+            The 2018 edition
+            The Rust language
+            Objects and behavior
+            Going wrong
+            Macros
+            Unsafe
+            Borrowing and ownership
+            Exceptional lifetimes
+            Multiple owners
+            Concurrency and mutability
+            Immutable variables
+            Shadowing
+            Interior mutability
+            Moving data
+            Sharing data
+            Send and Sync
+            Deeper into Rust
+            Requests for Comments (RFCs)
+            Summary
+            Questions
+            Further reading
+            Chapter 2 - Cargo and Crates ----
+            Cargo
+            Project configuration
+            The manifest – Cargo.toml
+            Package
+            Profiles
+            Dependencies
+            Dependencies – Cargo.lock
+            Commands
+            The compile and run commands
+            Testing
+            Third-party subcommands
+            Crates
+            Rust libraries and binaries
+            Static and dynamic libraries
+            Linking and interoperability
+            Table of Contents
+            FFI
+            Wasm
+            The main repository – crates.io
+            Publishing
+            Summary
+            Questions
+            Further reading
+            Chapter 3 - Storing Efficiently ----
+            Heaps and stacks
+            Sized and unsized
+            Generics
+            Accessing the box
+            Copying and cloning
+            Immutable storage
+            States and reasoning
+            Concurrency and performance
+            Summary
+            Questions
+            Further reading
+            Chapter 4 - Lists, Lists, and More Lists ----
+            Linked lists
+            A transaction log
+            Adding entries
+            Log replay
+            After use
+            Wrap up
+            Upsides
+            Downsides
+            Doubly linked list
+            A better transaction log
+            Examining the log
+            Reverse
+            Wrap up
+            Upsides
+            Downsides
+            Skip lists
+            The best transaction log
+            The list
+            Adding data
+            Leveling up
+            Jumping around
+            Thoughts and discussion
+            Upsides
+            Downsides
+            Dynamic arrays
+            [ ii ]
+            Table of Contents
+            Favorite transactions
+            Internal arrays
+            Quick access
+            Wrap up
+            Upsides
+            Downsides
+            Summary
+            Questions
+            Further reading
+            Chapter 5 - Robust Trees ----
+            Binary search tree
+            IoT device management
+            More devices
+            Finding the right one
+            Finding all devices
+            Wrap up
+            Upsides
+            Downsides
+            Red-black tree
+            Better IoT device management
+            Even more devices
+            Balancing the tree
+            Finding the right one, now
+            Wrap up
+            Upsides
+            Downsides
+            Heaps
+            A huge inbox
+            Getting messages in
+            Taking messages out
+            Wrap up
+            Trie
+            Upsides
+            Downsides
+            More realistic IoT device management
+            Adding paths
+            Walking
+            Wrap up
+            Upsides
+            Downsides
+            B-Tree
+            An IoT database
+            Adding stuff
+            Searching for stuff
+            Walking the tree
+            Wrap up
+            [ iii ]
+            Table of Contents
+            Upsides
+            Downsides
+            Graphs
+            The literal Internet of Things
+            Neighborhood search
+            The shortest path
+            Wrap up
+            Upsides
+            Downsides
+            Summary
+            Questions
+            Chapter 6 - Exploring Maps and Sets ----
+            Hashing
+            Create your own
+            Message digestion
+            Wrap up
+            Maps
+            A location cache
+            The hash function
+            Adding locations
+            Fetching locations
+            Wrap up
+            Sets
+            Upsides
+            Downsides
+            Storing network addresses
+            Networked operations
+            Union
+            Intersection
+            Difference
+            Wrap up
+            Upsides
+            Downsides
+            Summary
+            Questions
+            Further reading
+            Chapter 7 - Collections in Rust ----
+            Sequences
+            Vec<T> and VecDeque<T>
+            Architecture
+            Insert
+            Look up
+            Remove
+            LinkedList<T>
+            Architecture
+            [ iv ]
+            Table of Contents
+            Insert
+            Look up
+            Remove
+            Wrap up
+            Maps and sets
+            HashMap and HashSet
+            Architecture
+            Insert
+            Lookup
+            Remove
+            BTreeMap and BTreeSet
+            Architecture
+            Insert
+            Look up
+            Remove
+            Wrap up
+            Summary
+            Questions
+            Further reading
+            Chapter 8 - Algorithm Evaluation ----
+            The Big O notation
+            Other people's code
+            The Big O
+            Asymptotic runtime complexity
+            Making your own
+            Loops
+            Recursion
+            Complexity classes
+            O(1)
+            O(log(n))
+            O(n)
+            O(n log(n))
+            O(n²)
+            O(2n)
+            Comparison
+            In the wild
+            Data structures
+            Everyday things
+            Exotic things
+            Summary
+            Questions
+            Further reading
+            Chapter 9 - Ordering Things ----
+            From chaos to order
+            Bubble sort
+            Shell sort
+            [v]
+            Table of Contents
+            Heap sort
+            Merge sort
+            Quicksort
+            Summary
+            Questions
+            Further reading
+            Chapter 10 - Finding Stuff ----
+            Finding the best
+            Linear searches
+            Jump search
+            Binary searching
+            Wrap up
+            Summary
+            Questions
+            Further reading
+            Chapter 11 - Random and Combinatorial ----
+            Pseudo-random numbers
+            LCG
+            Wichmann-Hill
+            The rand crate
+            Back to front
+            Packing bags or the 0-1 knapsack problem
+            N queens
+            Advanced problem solving
+            Dynamic programming
+            The knapsack problem improved
+            Metaheuristic approaches
+            Example metaheuristic – genetic algorithms
+            Summary
+            Questions
+            Further reading
+            Chapter 12 - Algorithms of the Standard Library ----
+            Slicing and iteration
+            Iterator
+            Slices
+            Search
+            Linear search
+            Binary search
+            Sorting
+            Stable sorting
+            Unstable sorting
+            Appendix A: Assessments
+
+
+~/Empire/Doks/Comp/lang/rust/Programming Rust 1st Edition 1491927283.pdf
+~/Empire/Doks/Comp/lang/rust/rustcb.pdf
+~/Empire/Doks/Comp/lang/rust/rustcb.txt
+~/Empire/Doks/Comp/lang/rust/rustess.pdf
+~/Empire/Doks/Comp/lang/rust/rustess.txt
+~/Empire/Doks/Comp/lang/rust/rust-fullstack.pdf
+~/Empire/Doks/Comp/lang/rust/rust-fullstack.txt
+~/Empire/Doks/Comp/lang/rust/rustlearn.pdf
+~/Empire/Doks/Comp/lang/rust/rustlearn.txt
+~/Empire/Doks/Comp/lang/rust/RustProjects_2020.pdf
+~/Empire/Doks/Comp/lang/rust/rustref-2019.pdf
+~/Empire/Doks/Comp/lang/rust/rustref-2019.txt
+~/Empire/Doks/Comp/lang/rust/rust-stdlibcb.pdf
+~/Empire/Doks/Comp/lang/rust/rust-stdlibcb.txt
+~/Empire/Doks/Comp/lang/rust/rust-structsalgos.pdf
+~/Empire/Doks/Comp/lang/rust/rust-structsalgos.txt
+~/Empire/Doks/Comp/lang/rust/rustwasmprojs-2020.pdf
+~/Empire/Doks/Comp/lang/rust/rustwasmprojs-2020.txt
+--
+
+~/Empire/Doks/Comp/lang/rust/rust-webd.pdf
+~/Empire/Doks/Comp/lang/rust/rust-webd.txt
+~/Empire/Doks/Comp/lang/rust/rust-webd.aux.txt
+

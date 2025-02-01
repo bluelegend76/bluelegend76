@@ -1,0 +1,19 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/lang/ps/PLRM.txt
+--
+~/Empire/Doks/Comp/lang/ps/bluebook-postscr_tut-cb.txt
+~/Empire/Doks/Comp/lang/ps/greenbook-postscr_use-effective.txt
+~/Empire/Doks/Comp/lang/ps/postscript_thinkingin.txt
+~/Empire/Doks/Comp/lang/ps/postscript-tut1_paulbourke.txt
+~/Empire/Doks/Comp/lang/ps/postscript-tutorial_learnbydoing.txt
+~/Empire/Doks/Comp/lang/ps/ps-byex.txt
+~/Empire/Doks/Comp/lang/ps/ps-handson.txt
+~/Empire/Doks/Comp/lang/ps/ps-realworld.txt
+~/Empire/Doks/Comp/lang/ps/ps-understand.txt
+~/Empire/Doks/Comp/lang/ps/pstricks-grafik-mit-postscript-fr-tex-und-latex.pdf
+~/Empire/Doks/Comp/lang/ps/pstricks-grafik-mit-postscript-fur-tex-und-latex.djvu
+--
+~/Empire/Doks/Comp/lang/ps/postscript-fontcatalog2.txt
+

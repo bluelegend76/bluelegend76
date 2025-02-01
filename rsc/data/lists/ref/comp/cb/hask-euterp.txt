@@ -1,0 +1,13 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/haskmu.txt
+
+https://stackoverflow.com/questions/53977864/installing-euterpea-for-computer-music-applications-and-haskell
+https://github.com/Euterpea/Euterpea2
+https://www.youtube.com/watch?v=Da7qwYADeds
+https://www.donyaquick.com/compositions-using-euterpea/
+    https://www.donyaquick.com/kulitta/
+https://www.youtube.com/watch?v=Q0tPYbniPzw
+https://www.youtube.com/watch?v=Jmw6LLNQQfs&t=3s
+

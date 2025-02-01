@@ -1,0 +1,229 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+(+Maybe subsumes new vim-latex (=Latex-Suite(!)))
+
+~/Empire/Doks/Comp/lang/tex/latex/Freedman_LaTeXCheatSheet.pdf
+~/Empire/Doks/Comp/lang/tex/latex/latexcheatsheet.pdf [@]
+  ~/Empire/Doks/Comp/lang/tex/latex/notes4pros-latex.pdf
+
+  [+pull out all methods etc from 'Beautiful Typography in Tex and Friends' ****]
+  https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends#24719
+
+    https://www.scribd.com/read/287708181/LaTeX-Cookbook
+evince -p 1 ~/Dropbox/rsc/data/lists/ref/comp/cb/latexcb.pdf &
+            Downloading the example code
+            1 - The Variety of Document Types ----
+              TeX and LaTeX distributions
+              LaTeX editors
+            Writing a short text
+            Writing a thesis
+              Changing the input encoding
+              Getting a right-justified table of contents
+              Changing the margins
+              Modifying the layout of captions
+              Centering displayed equations
+            Designing a book
+              Changing the page layout
+              Designing a title page
+              Adding a cover page
+              Changing the document class
+            Creating a presentation
+              Using short titles and names
+              Uncovering information piecewise
+              Splitting frames in columns
+              Showing an outline for each section
+              Removing the navigation symbols
+              Changing the font
+              Changing the color
+              Loading a theme from the Internet
+              Providing a handout
+            Designing a curriculum vitae
+            Writing a letter
+              Separating paragraphs
+              Changing the signature
+              Adding enclosures
+            Producing a leaflet
+              Fold marks and cut lines
+              Adjusting the margins
+              Adding a background image
+              Changing the sectioning font
+            Creating a large poster
+            2 - Tuning the Text ----
+            Inputting accented characters
+            Improving justification and hyphenation
+            Converting numbers to words
+              Multilingual support
+              Gender
+              Enumerated lists
+            Putting text into a colorful box
+            Visualizing the layout
+              Using geometry
+              Examining the page layout details
+            Visualizing boxes of letters and symbols
+            Typesetting in a grid
+            Absolute positioning of text
+            Starting a paragraph with an over-sized letter
+              Changing the drop cap size
+              Coloring the initial
+            Fitting text to a shape
+              Further shapes
+              Cutting out shapes
+            Creating a pull quote
+            3 - Adjusting Fonts ----
+            Basic font commands
+            Choosing a font for a document
+              Latin Modern
+              Kepler fonts
+              Font combinations
+            Locally switching to a different font
+              A command for changing the font
+              An environment for changing the font
+            Importing just a single symbol from a font family
+            Writing bold mathematical symbols
+              Standard LaTeX
+              AMS-LaTeX and amsmath
+              Comparing bm and amsmath
+            Getting the sans serif mathematics font
+              An alternative approach
+              Sans serif fonts with direct math support
+              Arev Sans
+              Kepler fonts
+            Writing double stroke letters as if on a blackboard
+            Enabling the searching and copying of ligatures
+            Suppressing ligatures
+            Adding a contour
+            4 - Working with Images ----
+            Including images with optimal quality
+            Automating image positioning
+              Limiting the floating figures and tables
+              Fixing the position of a figure
+            Manipulating images
+            Adding a frame to an image
+            Cutting an image to get rounded corners
+            Shaping an image like a circle
+            Drawing over an image
+            Aligning images
+            Arranging images in a grid
+            Stacking images
+            5 - Beautiful Designs ----
+            Adding a background image
+            Creating beautiful ornaments
+            Preparing pretty headings
+            Producing a calendar
+            Mimicking keys and menu items
+            6 - Designing Tables ----
+            Creating a legible table
+            Adding footnotes to a table
+            Aligning numeric data
+            Merging cells
+            Splitting a cell diagonally
+            Adding shape, shading, and transparency
+              Numbering table rows automatically
+              Adding styles to rows and columns
+            Importing data from files
+            7 - Contents, Indexes and Bibliographies ----
+            Tuning a table of contents, lists of figures, and tables
+              Automatic correction of widths
+              Printing a flat table of contents
+              Getting KOMA-Script like-sans-serif headings
+            Creating a bibliography
+            Adding _a glossary
+            Creating a list of acronyms
+            Producing an index
+            8 - Getting the Most out of the PDF ----
+            Adding hyperlinks
+              Inserting custom hyperlinks
+               Linking to a place within the document
+               Linking to labeled objects
+               Linking to the Internet
+              Changing the color and shape of the hyperlinks
+              Getting backreferences in the bibliography
+              Hyperlinking index entries
+            Adding metadata
+            Adding copyright information
+            Inserting comments
+            Producing fillable forms
+            Optimizing the output for e-book readers
+            Removing white margins
+            Combining PDF files
+            Creating an animation
+            9 - Creating Graphics ----
+            Building smart diagrams
+              Circular diagrams
+              Bubble diagrams
+              Constellation diagrams
+              Descriptive diagrams
+              Priority descriptive diagrams
+              Animating a diagram
+              Further customization
+            Constructing a flowchart
+            Building a tree
+              Creating a decision tree
+            Building a bar chart
+            Drawing a pie chart
+              Square charts
+              Polar area charts
+              Cloud charts
+            Drawing a Venn diagram
+            Putting thoughts in a mind map
+            Generating a timeline
+            10 - Advanced Mathematics ----
+            Quick-start for beginners
+              Math styles
+              Greek letters
+              Math symbols
+              Squares and fractions
+              --
+              Subscripts and superscripts
+              Operators
+              Numbering and referencing equations
+              Writing multiline formulas with alignment
+               Aligning at the relation symbol
+               Centering a block of equations
+              Adjusting numbering
+            Fine-tuning math formulas
+            Automatic line-breaking in equations
+            Highlighting in a formula
+            Stating definitions and theorems
+              Adjusting the numbering
+              An alternative theorem package
+              Additional theorem tools
+            Drawing commutative diagrams
+            Plotting functions in two dimensions
+              Adding ticks and grids
+              Reducing axes
+              Plotting in polar coordinates
+            Plotting in three dimensions
+              Reducing axes
+            Drawing geometry pictures
+              Defining points
+              Calculating points
+              Drawing objects
+              Printing labels
+            Doing calculations
+            11 - Science and Technology ----
+            Typesetting an algorithm
+            Printing a code listing
+            Application in graph theory
+            Writing physical quantities with units
+            Writing chemical formulae
+            Drawing molecules
+              Drawing rings
+              Naming molecules
+              Using building blocks
+              Applying TikZ options
+              Using ready-drawn carbohydrates
+            Representing atoms
+            Drawing electrical circuits
+            12 - Getting Support on the Internet ----
+            Exploring online LaTeX resources
+              Software archives and catalogues
+              User groups
+              Web forums and discussion groups
+              Frequently Asked Questions
+            Using web forums
+            Framing a really good question
+
+[=Include Reveal.js/Impress.js here(??)]
+

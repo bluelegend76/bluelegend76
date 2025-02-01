@@ -1,0 +1,1654 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+https://memgraph.com/blog/cypher-cheat-sheet
+            Cypher is the most widely adopted, fully specified, and open query language for property graph databases. It provides an intuitive and fast way to work with property graphs.
+
+            This article contains some of the most useful and common Cypher queries and their explanations. Whenever you are not sure how to write a Cypher query, you can take a look at this cheat sheet and try again. If you are new to graph databases and Cypher, you can also use this post to get acquainted with some of the features that Cypher and Memgraph offer.
+            1. Matching
+            Find nodes with specific properties
+
+            MATCH (c:City)
+
+            WHERE c.name = "London"
+
+            RETURN c.population_size;
+
+                MATCH (c:City): the MATCH clause specifies a node pattern with the label City and assigns the matches to variable c.
+                WHERE c.name = "London": the WHERE clause filters the matched results to those with a name property with value London.
+                RETURN c.population_size: the RETURN clause is used to request specific results.
+
+            This query can be rewritten without a WHERE clause to achieve the same result.
+
+            MATCH (c:City {name: "London"})
+
+            RETURN c.population_size;
+
+            Find nodes with specific relationships
+
+            MATCH (city:City)-[:IN]-(country:Country)
+
+            WHERE city.name = "London"
+
+            RETURN country.name;
+
+                MATCH (city:City)-[:IN]-(country:Country): the MATCH clause specifies a node and relationship pattern with two connected nodes, labeled City and Country, connected by a relationship of type IN.
+
+            Match labels
+
+            MATCH (c:City)
+
+            RETURN c;
+
+            This query can be rewritten using the WHERE clause to achieve the same result.
+
+            MATCH (c)
+
+            WHERE c:City
+
+            RETURN c;
+
+            Match multiple labels
+
+            MATCH (c:City:Country)
+
+            RETURN c;
+
+            This query can be rewritten using the WHERE clause to achieve the same result.
+
+            MATCH (c)
+
+            WHERE c:City AND c:Country
+
+            RETURN c;
+
+            Matching nodes with properties in a range
+
+            MATCH (c:City)
+
+            WHERE c.population_size >= 1000000 AND c.population_size <= 2000000
+
+            RETURN c;
+
+            2. Creating
+            Create a node
+
+            CREATE (c:City {name: "Zagreb", population_size: 1000000});
+
+                c:City: creates a new node with the label City and assigns it to variable c (which can be omitted if it’s not needed).
+                {name: "Zagreb", population_size: 1000000}: the newly created node has two properties, one with a string value and another with an integer value.
+
+            Create nodes with relationships
+
+            CREATE (c1:City {name: "UK"}),
+
+                   (c2:City {name: "London", population_size: 9000000})
+
+                   (c1)<-[r:IN]-(c2)
+
+            RETURN c1, c2, r;
+
+            The CREATE clause is used to create two new nodes and a directed relationship between them.
+            Create a relationship between existing nodes
+
+            MATCH (c1), (c2)
+
+            WHERE c1.name = "UK" AND c2.name = "London"
+
+            CREATE (c2)-[:IN]->(c1);
+
+            This will create a directed relationship of type IN between two existing nodes. If such a relationship already exists, this query will result in a duplicate. To avoid this, you can use the MERGE clause:
+
+            MATCH (c1), (c2)
+
+            WHERE c1.name = "UK" AND c2.name = "London"
+
+            MERGE (c2)-[:IN]->(c1);
+
+            3. Updating
+            Add or update node properties
+
+            MATCH (c:Country {name: "UK"})
+
+            SET c.name = "United Kingdom";
+
+            If you use the SET clause on a property that doesn’t exist, it will be created.
+            Replace all node properties
+
+            MATCH (c:Country)
+
+            WHERE c.name = "United Kingdom"
+
+            SET c = {name: "UK", population_size: "66650000"};
+
+                SET c = {name: "UK" ...}: this SET clause will delete all existing properties and create the newly specified ones.
+
+            Update multiple node properties
+
+            MATCH (c:Country)
+
+            WHERE c.name = "United Kingdom"
+
+            SET c += {name: "UK", population_size: "66650000"};
+
+                SET c += {name: "UK" ...}: this SET clause will add new properties and update existing ones if they are already set.
+
+            Check if a property exists and update it
+
+            MATCH (c:Country)
+
+            WHERE c.name = "Germany" AND c.language IS NULL
+
+            SET c.language = "German";
+
+            Because the WHERE clause contains the statement c.language IS NULL, the node will only be matched if it doesn’t have a language property.
+            Rename a property
+
+            MATCH (c:Country)
+
+            WHERE c.official_language IS null
+
+            SET c.official_language = c.language
+
+            REMOVE c.language;
+
+                WHERE c.official_language IS null: the WHERE clause makes sure that you only create the new property in nodes that don’t have a property with the same name.
+                SET n.official_language = n.language: you are technically not renaming a property but rather creating a new one with a different name and the same value.
+                REMOVE n.language: the REMOVE clause is used to delete the old property.
+
+            4. Deleting
+            Delete a node
+
+            MATCH (c)-[r]-()
+
+            WHERE c.name = "US"
+
+            DELETE r, c;
+
+                DELETE r, c: before you can delete a node, all of its relationships must be deleted first.
+
+            This query can be rewritten with the DETACH clause to achieve the same result.
+
+            MATCH (c)
+
+            WHERE c.name = "US"
+
+            DETACH DELETE c;
+
+            Delete a property
+
+            MATCH (c:Country)
+
+            WHERE c.name = "US" AND c.language IS NOT null
+
+            DELETE c.language;
+
+            This query will delete the property language from a specific node.
+            Delete label in every node
+
+            MATCH (c)
+
+            DELETE c:Country;
+
+            This query will delete the label Country from every node.
+            Delete one of multiple labels
+
+            MATCH (c)
+
+            WHERE c:Country:City
+
+            REMOVE c:City;
+
+            This will delete the label City from every node that has the labels Country and City.
+            Delete all nodes and relationships
+
+            MATCH (n)
+
+            DETACH DELETE n;
+
+            This query will delete the whole database.
+            5. Constraints
+            Create a uniqueness constraint
+
+            CREATE CONSTRAINT ON (c:City)
+
+            ASSERT c.location IS UNIQUE;
+
+            This query will make sure that every node with the label City has a unique value for the location property.
+            Create an existence constraint
+
+            CREATE CONSTRAINT ON (c:City)
+
+            ASSERT exists (c.name);
+
+            This query will make sure that every node with the label City has the property name.
+            Check constraints
+
+            SHOW CONSTRAINT INFO;
+
+            This query will list all active constraints in the database.
+            Drop a uniqueness constraint
+
+            DROP CONSTRAINT ON (c:City)
+
+            ASSERT c.location IS UNIQUE;
+
+            This query will remove the specified uniqueness constraint.
+            Drop an existence constraint
+
+            DROP CONSTRAINT ON (c:City)
+
+            ASSERT exists (c.name);
+
+            This query will remove the specified existence constraint.
+            6. Graph Algorithms
+
+            To find out more about the built-in algorithms in Memgraph, take a look at the reference guide.
+            Breadth First Search
+
+            MATCH (c1:City {name: "London"})-[
+
+                    edge_list:ROAD_TO *bfs..10
+
+                ]-(c2:City {name: "Paris"})
+
+            RETURN *;
+
+            This query will find all paths of length up to 10 between nodes c1 and c2.
+            Weighted Shortest Path
+
+            MATCH (c1:City {name: "London"})-[
+
+                    edge_list:ROAD_TO *wShortest 10 (e, n | e.weight) total_weight
+
+                ]-(c2:City {name: "Paris"})
+
+            RETURN *;
+
+            The above query will find the shortest path of length up to 10 nodes between nodes c1 and c2. The length restriction parameter is optional.
+            7. NetworkX
+
+            If you want to know which NetworkX algorithms are available in Memgraph, take a look at the reference guide.
+            Analyze the whole graph
+
+            CALL graph_analyzer.analyze() WITH YIELD *;
+
+            This query will return various information like the number of nodes, number of edges, average degree, etc.
+            Find weakly connected components (Union Find)
+
+            MATCH (n)-[e]->()
+
+            WITH collect(n) AS nodes, collect(e) AS edges
+
+            CALL wcc.get_components(nodes, edges) YIELD *
+
+            RETURN n_components, components;
+
+            This query will search the whole graph for weakly connected components.
+            Calculate PageRank for all nodes
+
+            CALL nxalg.pagerank() YIELD *
+
+            RETURN node.name AS name, rank
+
+            ORDER BY rank DESC
+
+            LIMIT 10;
+
+            This query will calculate the rank of every node, order them from highest to lowest and return the first 10 results.
+            8. Other Useful Cypher Queries
+            Count all nodes
+
+            MATCH (n)
+
+            RETURN count(n);
+
+            This query will return the number of nodes in the database.
+            Count all relationships
+
+            MATCH ()-->()
+
+            RETURN count(*);
+
+            This query will return the number of relationships in the database.
+            Limit the number of returned results
+
+            MATCH (c:City)
+
+            RETURN c
+
+            LIMIT 5;
+
+                LIMIT 5: this will limit the number of returned nodes to 5.
+
+            Specify an alias for results
+
+            MATCH (c:Country)
+
+            WHERE c.name = "US"
+
+            RETURN c.population_size AS population
+
+            By using AS with the RETURN clause, the property population_size will be returned with an alias.
+            Conclusion
+
+            Cypher is an extensive query language with lots of features, and this cheat sheet is a great starting point for mastering them. If you are new to Cypher, we suggest taking our ten-day Cypher email course. You can also go through our Cypher lessons on Memgraph Playground, an online platform for running Cypher queries on live data.
+
+            If you have any questions about Cypher that aren’t covered in this article, please take a look at our Cypher manual. Feel free also to share your questions at our Discord server.
+            In this article
+            Introduction
+            1. Matching
+            Find nodes with specific properties
+            Find nodes with specific relationships
+            Match labels
+            Match multiple labels
+            Matching nodes with properties in a range
+            2. Creating
+            Create a node
+            Create nodes with relationships
+            Create a relationship between existing nodes
+            3. Updating
+            Add or update node properties
+            Replace all node properties
+            Update multiple node properties
+            Check if a property exists and update it
+            Rename a property
+            4. Deleting
+            Delete a node
+            Delete a property
+            Delete label in every node
+            Delete one of multiple labels
+            Delete all nodes and relationships
+            5. Constraints
+            Create a uniqueness constraint
+            Create an existence constraint
+            Check constraints
+            Drop a uniqueness constraint
+            Drop an existence constraint
+            6. Graph Algorithms
+            Breadth First Search
+            Weighted Shortest Path
+            7. NetworkX
+            Analyze the whole graph
+            Find weakly connected components (Union Find)
+            Calculate PageRank for all nodes
+            8. Other Useful Cypher Queries
+            Count all nodes
+            Count all relationships
+            Limit the number of returned results
+            Specify an alias for results
+            Conclusion
+            Sign up for our Newsletter
+
+            Get the latest articles on all things graph databases, algorithms, and Memgraph updates delivered straight to your inbox
+            Read next
+            Graph Database 101
+            Comparison
+            Graph Database vs Relational Database
+
+            Discover the differences between relational and graph databases, their respective characteristics, features, and applications. This article also delves into Cypher and SQL query languages, various data modeling techniques, and differences in performance.
+            by
+            Katarina Supe
+            May 8, 2023
+            Graph Database 101
+            Modeling the Data: A Key Step in Using a Graph Database
+
+            Did you ever fall down some bottomless pit of bad data modeling? Our inter Adrian sure did, but he learned a lot from it - how to recognize the pitfalls and how to avoid them in the future! Hope his experience helps you… but let’s be honest, we never really learn from other people’s mistakes, so if you fall be sure to yell for help!
+            by
+            Adrian Cvijanovic
+            October 10, 2022
+            Graph Database 101
+            Comparison
+            Graph Database Query Languages You Should Try
+
+            Query languages used for graph data management are called graph query languages (GQLs). Below are the popular graphDB query languages that provide a way to unpack information in graphs. Let’s dive into the details of popular query languages with their pros and cons.
+            by
+            Memgraph
+            May 19, 2022
+            Platform
+            Memgraph DB
+            Cloud
+            Lab
+            MAGE
+            GQLAlchemy
+            How it works
+            Use Cases
+            Pricing
+            Resources
+            Docs
+            Playground
+            Community
+            Blog
+            Webinars
+            Email Courses
+            Code with Buda
+            Newsletter
+            Company
+            About Us
+            Careers
+            Teams
+            Legal
+            Partners
+            Press Room
+            Contact
+            Join us on Discord
+
+            Our growing community of graph enthusiasts awaits you!
+            Join our community
+            Linkedin icon
+            © 2023 Memgraph Ltd. All rights reserved. Terms & Privacy
+  https://neo4j.com/docs/cypher-manual/current/syntax/
+  https://neo4j.com/docs/browser-manual/current/reference-commands/
+https://astrofarsi.com/cypher-cheat-sheet-pdf
+            This Comprehensive Cypher Cheat Sheet
+            Ivanko Despot
+            April 9, 2021
+            Topics:
+            Graphic Database 101
+            Cypher QL
+            Induction
+
+            Cypher is the most widely adopted, fully specified, and open queries language for property graphics databases. It provides a quick and intuitive way to work with property graphs.
+
+            This article contains some of the most useful and common Cypher queries and their explanations. Whenever you are not sure as to write a Cypher query, you can take a look at is deceive sheet the try again. If you are modern to graph databases and Code, her cannot also use this station to get acquainted with some the the features is Encrypt and Memgraph offer. View Neo4j_CheatSheet_v3.pdf from COMPUTER S 3336 at Western University. Neo4j Cryptography Cheat Sheet Cypher is the declarative query language for Neo4j, the world’s leiterin graph database. - Cypher
+
+            1 - Matching ----
+            Find nodes with specific properties
+
+            MATCH (c:City)
+            WHERE c.name = "London"
+
+            RETURN c.population_size;
+
+                MATCH (c:City): the MATCH clause specifies a node pattern with the labelCity furthermore assigns the matches to variable c.
+                WHERE c.name = "London": the WHEREABOUTS clause filters the matched results to those with a name property with value London.
+                RETURN c.population_size: the RETURN clause is used to requirement specific results.
+
+            This query can be rewritten without a LOCATION clause at achieve the same result.
+
+            MATCH (c:City {name: "London"})
+
+            RETURN c.population_size;
+
+            Find intersections with specific relationships
+
+            FIT (city:City)-[:IN]-(country:Country)
+            WHERE city.name = "London"
+
+            RETURN country.name;
+
+                MATCH (city:City)-[:IN]-(country:Country): the MATCH clause specifies a node and relationship pattern with second network nodes, labeled City andCountry, connected by a relationship of type IN.
+
+            Match labeled
+
+            MATCH (c:City)
+
+            RETURN c;
+
+            Save query can be recast using the WHERE clause to achieve the same result.
+
+            MATCH (c)
+            WHERE c:City
+
+            RETURN century;
+
+            Match multiple labels
+
+            MATCH (c:City:Country)
+
+            RETURN hundred;
+
+            This query can be rewritten using the WHERE clause to achieve the same result.
+
+            MATCH (c)
+            WHERE c:City THE c:Country
+
+            RETURN hundred;
+
+            Matching intersections with properties in a operating
+
+            TREFFEN (c:City)
+            WHERE c.population_size >= 1000000 AND c.population_size <= 2000000
+
+            RETURN c;
+
+            2. How
+            Create a node
+
+            CREATE (c:City {name: "Zagreb", population_size: 1000000});
+
+                c:City: creates a new knob with the label City and assigns it to variablec (which can be omitted if it’s not needed).
+                {name: "Zagreb", population_size: 1000000}: the newly created node has two properties, one with a string value the different with certain integer value.
+
+            Create nodes with relationships
+
+            CREATE (c1:City {name: "UK"}),
+                   (c2:City {name: "London", population_size: 9000000})
+                   (c1)<-[r:IN]-(c2)
+
+            RETURN c1, c2, r;
+
+            The CREATE clause is used to create two new nodes both a directed relationship between them.
+            Create a related amongst existing nodes
+
+            MATCH (c1), (c2)
+            WHERE c1.name = "UK" AND c2.name = "London"
+
+            CREATE (c2)-[:IN]->(c1);
+
+            This will establish a directed relationship of type INCLUDES between two existing nodes. If such a relationship already exists, this query will result in a duplicate. To avoid this, you can use the MERGE clauses:
+
+            MATCH (c1), (c2)
+            WHERE c1.name = "UK" AND c2.name = "London"
+
+            MERGE (c2)-[:IN]->(c1);
+
+            3. Updating
+            Add or update node properties
+
+            MATCH (c:Country {name: "UK"})
+
+            SET c.name = "United Kingdom";
+
+            Is you use the SET exclusive off a property the doesn’t exist, it will be created.
+            Replace all node properties
+
+            MATCH (c:Country)
+            WHERE c.name = "United Kingdom"
+
+            SET c = {name: "UK", population_size: "66650000"};
+
+                SET carbon = {name: "UK" ...}: the ADJUSTED clause will deleting all existing properties and make who recent specified on.
+
+            Update multiple node eigenheiten
+
+            CONFORM (c:Country)
+            WHERE c.name = "United Kingdom"
+
+            SET c += {name: "UK", population_size: "66650000"};
+
+                SET c += {name: "UK" ...}: this SET exclusive will add new properties and update existing ones if they are already set.
+
+            Check if an property exists and update it
+
+            MATCH (c:Country)
+            WHERE c.name = "Germany" AND c.language IS NULL
+
+            SET c.language = "German";
+
+            Because the WHERE clause contains the statement c.language IS NULL, that node will no be matched if it doesn’t have a language property.
+            Renaming a property
+
+            MATCH (c:Country)
+            WHERE c.official_language IS null
+            SET c.official_language = c.language
+
+            REMOVE c.language;
+
+                WHERE c.official_language IS null: to WHERE clause makes sure such you only create the new property in nodules that don’t have a property from the same name.
+                SET n.official_language = n.language: you are technically not renaming a property when fairly creating a news one with a different name and the same value.
+                REMOVE n.language: the REMOVE clauses a used to delete which old property.
+
+            4. Deleting
+            Delete a node
+
+            MATCH (c)-[r]-()
+            WHERE c.name = "US"
+
+            DELETE r, century;
+
+                DELETE r, century: before you ability delete a node, all of its relationships must be deleted first.
+
+            This query can be rewritten with the DISENGAGE article to achieve the same result.
+
+            MATCH (c)
+            WHERE c.name = "US"
+
+            DETACH DELETE c;
+
+            Deleting a property
+
+            MATCH (c:Country)
+            WHERE c.name = "US" AND c.language IS NOT null
+
+            DELETE c.language;
+
+            This challenge becomes erase the property select from a specific node.
+            Delete label in every node
+
+            MATCH (c)
+
+            DELETE c:Country;
+
+            This query leave delete the label Country from every node.
+            Delete one starting multiple labels
+
+            MATCH (c)
+            WHERE c:Country:City
+
+            REMOVE c:City;
+
+            This will delete the label City after every swelling ensure has the labels Country and Urban.
+            Delete all nodes furthermore relationships
+
+            MATCH (n)
+
+            DETACH RESET n;
+
+            This query will delete the whole browse.
+            5. Constraints
+            Generate an uniqueness constraint
+
+            CREATE CONFINEMENT ON (c:City)
+
+            ASSERT c.location IS UNIQUE;
+
+            This query will make sure is every node with the label City has a unique value for the location eigenheim.
+            Create an existence control
+
+            CREATE CONSTRAINT ON (c:City)
+
+            ASSERT does (c.name);
+
+            This query desires make sure that everyone node with the label Urban has the propertyname.
+            Check relationship
+
+            SHOW CONSTRAINT INFO;
+
+            This query becomes list all active constraints in the database.
+            Drop a uniqueness constraint
+
+            DROP CONSTRAINT ON (c:City)
+
+            ASSERT c.location IS UNIQUE;
+
+            This consult will remove that specified uniqueness constraint.
+            Dump an existence constraint
+
+            DROP CONSTRAINT ON (c:City)
+
+            ASSERT existing (c.name);
+
+            Aforementioned request will remove the specified existence constraint.
+            6. Gradient Algorithms
+
+            To find out more info the built-in algorithms in Memgraph, take a look at thereference guide.
+            Breadth First Explore
+
+            MATCHINGS (c1:City {name: "London"})-[
+                    edge_list:ROAD_TO *bfs..10
+                ]-(c2:City {name: "Paris"})
+
+            RETURN *;
+
+            This query willing find all paths of length up to 10 bet nodes c1 and c2.
+            Weighted Shortest Path
+
+            MATCH (c1:City {name: "London"})-[
+                    edge_list:ROAD_TO *wShortest 10 (e, north | e.weight) total_weight
+                ]-(c2:City {name: "Paris"})
+
+            RETURN *;
+
+            The above query want find the shortest path off length up to 10 nodes between nodes c1 and c2. The length restriction parameter is optional.
+            7. NetworkX
+
+            For you what to see which NetworkX algorithms are available in Memgraph, take a look at that reference guide.
+            Analyze the whole graphically
+
+            CLAIM graph_analyzer.analyze() WITH YIELD *;
+
+            This poll will return diverse information like the numerical of nodes, numbered of edges, average degree, etc.
+            Find weakly connected equipment (Union Find)
+
+            MATCHING (n)-[e]->()
+            WITH collect(n) AS nodes, collect(e) AS edges
+            CALL wcc.get_components(nodes, edges) SURRENDER *
+
+            RETURN n_components, components;
+
+            Here query will search the whole graph for weakly connected components.
+            Calculate PageRank since all nodes
+
+            CALL nxalg.pagerank() YIELD *
+            RETURN node.name THAN name, rank
+            ORDER BY rank DESC
+
+            LIMIT 10;
+
+            Get query be calculate to ranking of every tree, order her upon utmost to lowest and return the first 10 results.
+            8. Other Useful Cyphers Interrogations
+            Counters all nodes
+
+            MATCH (n)
+
+            RETURN count(n);
+
+            This query intention returned the piece out nodes in the data.
+            Count all relationships
+
+            MATCH ()-->()
+
+            RETURN count(*);
+
+            This query will return that number of relationships in the database.
+            Limiting the number of reverted results
+
+            MATCH (c:City)
+            RETURN c
+
+            LIMIT 5;
+
+                LIMIT 5: this wishes limit that number of returned nodes to 5.
+
+            Specify an alias for results
+
+            MATCH (c:Country)
+            WHERE c.name = "US"
+
+            RETURN c.population_size AS current
+
+            By exploitation AS with this RETURN section, the property population_size will be returned with an alias.
+            Conclusion
+
+            Ciphers is an extensive query language with lots of features, and this cheat sheet is a great starting point for mastering them. If you are new to Code, we suggestion taking the ten-day Cypher email course. Thee can also go through our Cypher lesson on Memgraph Playground, an online platform for running Cypher queries on live data.
+
+            If you possess any questions about Cypher that aren’t roofed in this article, please take a look at unseren Cypher manual. Feel free also to share your questions at our Dissensy select.
+
+https://people.inf.elte.hu/kiss/14kor/Neo4j_CheatSheet_v3.pdf
+            Cypher is the declarative query language for Neo4j, the world’s leading graph database.
+
+            - matches patterns of nodes and relationship in the graph, to extract information or modify the data.
+            - has the concept of identifiers which denote named, bound elements and parameters.
+            - can mutate graph data by creating, updating, and removing nodes, relationships, and properties.
+
+            You can try cypher snippets live in the Neo4j Console at http://console.neo4j.org
+
+            Read-Only Query Structure ----
+            START me=node:people(name='Andres')
+            [MATCH me-[:FRIEND]->friend ]
+            WHERE friend.age > 18
+            RETURN me, friend.name
+            ORDER BY friend.age asc
+            SKIP 5 LIMIT 10
+
+            START n=node(id,[id2, id3])
+                Load the node with id id into n
+            START n=node:indexName (key="value")
+                Query the index with an exact query and put the result into n
+                Use node_auto_index for the auto-index
+            START n=node:indexName
+            ("lucene query")
+            Query the index using a
+            full Lucene query and
+            put the result in n
+            START n=node(*) Load all nodes
+            START m=node(1), n=node(2)
+            Multiple start points
+            RETURN * Return all named nodes,
+            relationships and iden-
+            tifiers
+            RETURN expr AS alias Set result column name
+            as alias
+            RETURN distinct
+            expr
+            Return unique values
+            for expr
+            MATCH n-->m A pattern where n has
+            outgoing relationships to
+            another node, no matter
+            relationship-type
+            MATCH n--m n has relationship in
+            either direction to m
+            MATCH n-[:KNOWS]->m The outgoing relationship
+            between n and m has to be
+            of KNOWS relationship type
+            MATCH n-[:KNOWS|LOVES]-m n has KNOWS or LOVES
+            relationship to m
+            MATCH n-[r]->m An outgoing relationship
+            from n to m, and store the
+            relationship in r
+            MATCH n-[r?]->m The relationship is
+            optional
+            MATCH n-[*1..5]->m A multi step relationship
+            between between n and m,
+            one and five steps away
+            MATCH n-[*]->m A pattern where n has a
+            relationship to m unbound
+            number of steps away
+            MATCH n-[?:KNOWS*..5]->m An optional relationship
+            between n and m that is of
+            KNOWS relationship type,
+            and between one and five
+            steps long.
+            MATCH n-->m<--o A pattern with n having an
+            outgoing relationship to
+            m, and m having incoming
+            relationship from o
+            MATCH p=n-->m<--o Store the path going from
+            n to o over m into the
+            path identifier p
+            MATCH p = shortestPath(
+            n-[:KNOWS*3]->m )
+            Find the shortest path
+            between n and m of type
+            KNOWS of at most length 3
+            MATCH meaning
+            START meaning
+            RETURN meaning
+            neo4j.org
+            neotechnology.com
+            © 2012 Neo Technology Inc.
+            NOT pred1 AND/OR pred2 Boolean operators for
+            predicates
+            ALL(x in coll: pred) TRUE if pred is TRUE for all
+            values in
+            coll
+            ANY(x in coll : pred) TRUE if pred is TRUE for at
+            least one value in coll
+            NONE(x in coll : pred) TRUE if pred returns FALSE
+            for all values in
+            coll
+            SINGLE(x in coll : pred) TRUE if pred returns TRUE
+            for a single value in coll
+            identifier IS NULL TRUE if identifier is <NULL>
+            n.prop? = value TRUE if n.prop = value or n
+            is NULL or n.prop does not
+            exist
+            n.prop! = value TRUE if n.prop = value,
+            FALSE if n is NULL or n.prop
+            does not exist
+            n =~ /regexp/ Regular expression
+            e1 <> e2
+            e1 < e2
+            e1 = e2
+            Comparison operators
+            has(n.prop) Checks if property exists
+            n-[:TYPE]->m Filter on existence of
+            relationship
+            expr IN coll Checks for existence of expr
+            in coll
+            CREATE (n {
+            name :"Name" })
+            Creates the node with
+            the given properties
+            CREATE n = {map} Create node from map
+            parameter
+            CREATE n = {manyMaps} Create many nodes from
+            parameter with
+            coll of maps
+            CREATE n-[:KNOWS]->m Creates the
+            relationship with the
+            given type and dir
+            CREATE n-[:LOVES
+            {since: 2007}] ->m
+            Creates the
+            relationship with the
+            given type, dir, and
+            properties
+            CREATE UNIQUE
+            n-[:KNOWS]->m
+            Tries to match the
+            pattern. Creates the
+            missing pieces if the
+            match fails
+            CREATE UNIQUE
+            n-[:KNOWS]->(m
+            {name:"Name"})
+            Tries to match a node
+            with the property name
+            set to "Name". Creates
+            the node and sets the
+            property if it can’t be
+            found.
+            CREATE UNIQUE
+            n-[:LOVES {since: 2007}]
+            ->m
+            Tries to find the
+            relationship with the
+            given type, direction,
+            and attributes.
+            Creates it if not
+            found.
+            DELETE n, DELETE rel Deletes the node,
+            relationship
+            DELETE n.prop Removes the property
+            SET n.prop = value Updates or creates the
+            property prop with the given
+            value
+            SET n = {map} Updates the properties with
+            the given map
+            parameter
+            SET n.prop = null Deletes the property prop
+            Predicates meaning
+            Cypher Cheat Sheet
+            CREATE meaning
+            DELETE meaning
+            CREATE UNIQUE meaning
+            SET meaning
+            neo4j.org
+            neotechnology.com
+            © 2012 Neo Technology Inc.
+            2
+            START emil=node:people(name='Emil')
+            MATCH emil-[:MARRIED_TO]-madde
+            CREATE/CREATE UNIQUE
+            emil-[:DAD]->(noomi {name:"Noomi"})<-[:MOM]-madde
+            DELETE emil.spare_time
+            SET emil.happy=true
+            RETURN noomi
+            Read-Write-Return Query Structure
+            HEAD(coll) First element of
+            coll
+            TAIL(coll) coll except first
+            element
+            LAST(coll) Last element of
+            coll
+            TYPE(rel) Relationship type of
+            rel
+            ID(node)
+            ID(relationship)
+            Id of node or
+            relationship
+            COALESCE(expr,default) Returns default if
+            expr is NULL
+            otherwise expr
+            RANGE(start,end[,step]) Creates a range from
+            start to end
+            (inclusive) with a
+            optional step
+            ABS(v)
+            ROUND(v)
+            SQRT(v)
+            SIGN(v)
+            Math functions
+            COUNT([distinct] expr) Returns the number of non-
+            NULL values in expr
+            COUNT(*) Returns the number of values
+            aggregated over
+            SUM(expr) Returns the sum of all
+            values in expr
+            Throws exception for
+            non-numeric values
+            AVG(expr) Returns the average of all
+            values in expr
+            MAX(expr) Returns the largest value in
+            expr
+            MIN(expr) Returns the smallest values
+            in expr
+            COLLECT(expr) Returns an coll containing
+            all values in expr
+            FILTER( x in coll :
+            predicate )
+            Returns a all the elements
+            in coll that match the given
+            predicate
+            EXTRACT( x in coll :
+            expr)
+            Applies the
+            expr once for every element
+            in coll
+            NODES(path) Returns the nodes in path
+            RELS(path) Returns the relationships in
+            path
+            LENGTH(path) Returns the length of path
+            Functions meaning
+            Aggregate Functions meaning
+            Path Functions meaning
+            Cypher Cheat Sheet
+            neo4j.org
+            neotechnology.com
+            © 2012 Neo Technology Inc.
+            3
+            a-zA-Z0-9_
+            or
+            'some na-me'
+            Allowed identifier
+            (or quoted)
+            n + / - * % m Arithmetic operators
+            "+" also works on
+            strings and collections
+            n.prop, n.prop? Property on node,
+            property on node, or
+            NULL if missing
+            [42,"Hello",'World',{p}] A collection
+            {param} Parameter value, passed
+            into the query execution
+            as map
+            { param : "value", ... }
+            a-->()<--b A path-pattern
+            Expressions meaning
+            Cypher Cheat Sheet
+            START n=node(...)
+            MATCH n-->m-->o
+            WHERE not ( n-->o )
+            RETURN o
+            Not already connected to
+            This returns nodes that m is
+            connected to, that n is not
+            already connected to.
+            START n=node(...)
+            MATCH path = n-[*]-n
+            RETURN n, length(path)
+            Find cycles
+            This returns nodes that m is
+            connected to, that n is not
+            already connected to.
+            START n=node(...)
+            MATCH n-[r]-m
+            RETURN type(r), count(*)
+            Group count relationship
+            types
+            Returns a count of each of
+            the relationship-types.
+            START n=node(...)
+            MATCH n-[r?]-()
+            DELETE n,r
+            Delete node with
+            relationships
+            Finds the node and all
+            relationships (if any) and
+            deletes node and
+            relationships.
+            START n = node(1), m =
+            node(2) RETURN n.name
+            +" and "+ m.name
+            String concat on expressions
+            Useful Snippets
+            Cypher Screencast
+            http://bit.ly/cypher-stanley
+            Cypher Reference Manual
+            http://bit.ly/cypher-reference
+            Cypher Presentation
+            http://bit.ly/cypher-slide
+            neo4j.org
+            neotechnology.com
+            © 2012 Neo Technology Inc.
+            Useful Links
+            4
+            The Neo4j-Shell supports commands to begin transactions,
+            which allows you issue multiple commands and then only
+            commit them when you’re satisfied and rollback if you ran into
+            an issue or don’t want your changes to happen.
+            neo4j-sh (0)$ begin
+            ==> Transaction started
+            neo4j-sh (0)$ rollback
+            ==> Transaction rolled back
+            neo4j-sh (0)$ commit
+            ==> Transaction committed
+            Transactions
+            FOREACH is used to execute a mutating operation for each
+            element of a collection, e.g. creating a node for each ele-
+            ment
+            using the element as an attribute value.
+            START user=node:users("name:A*"),
+            promotion=node(...)
+            MATCH user-[:FRIEND]-friend-[:FRIEND]-foaf
+            WITH user, collect(distinct foaf) as new_friends
+            FOREACH
+            WITH
+            WITH syntax is similar to RETURN. It separates query parts
+            explicitly, allowing you to declare which identifiers to carry
+            over to the next part. This can be used to limit the visible
+            identifiers but mostly for creating aggregate values that can
+            be used in the next query part either for filtering
+            (implementing HAVING) or for the creation of new structures
+            in the graph.
+            WITH also creates a boundary between reading and
+            updating query parts so that they don’t interfere.
+            START user=node:users("name:A*")
+            MATCH user-[:FRIEND]-friend
+            WITH user, count(friend) as friends
+            WHERE friends > 10
+            RETURN user
+            START user=node:users("name:A*")
+            MATCH user-[:FRIEND]-friend
+            WITH user, count(friend) as friends
+            SET user.numberOfFriends = friends
+Neo4J Tutorial
+            https://gist.github.com/DaniSancas/1d5265fc159a95ff457b940fc5046887
+            --
+            Neo4j Tutorial
+            Fundamentals
+
+            Store any kind of data using the following graph concepts:
+
+                Node: Graph data records
+                Relationship: Connect nodes (has direction and a type)
+                Property: Stores data in key-value pair in nodes and relationships
+                Label: Groups nodes and relationships (optional)
+
+            Browser editor
+            CLI
+
+            Examples: :help :clear
+            Cypher
+            Match
+            Match node
+
+            MATCH (ee:Person)
+            WHERE ee.name = "Emil"
+            RETURN ee;
+
+                MATCH clause to specify a pattern of nodes and relationships
+                (ee:Person) a single node pattern with label 'Person' which will assign matches to the variable ee
+                WHERE clause to constrain the results
+                ee.name = "Emil" compares name property to the value "Emil"
+                RETURN clause used to request particular results
+
+            Gets gets the id<5> and id<0> nodes and creates a :KNOWS relationship between them
+            Match nodes and relationships
+
+            MATCH (ee:Person)-[:KNOWS]-(friends)
+            WHERE ee.name = "Emil"
+            RETURN ee, friends
+
+                MATCH clause to describe the pattern from known Nodes to found Nodes
+                (ee) starts the pattern with a Person (qualified by WHERE)
+                -[:KNOWS]- matches "KNOWS" relationships (in either direction)
+                (friends) will be bound to Emil's friends
+
+            Match labels
+
+            MATCH (n:Person)
+            RETURN n
+
+            or
+
+            MATCH (n)
+            WHERE n:Person
+            RETURN n
+
+            Match multiple labels
+
+            :Car OR :Person labels
+
+            MATCH (n)
+            WHERE n:Person OR n:Car
+            RETURN n
+
+            :Car AND :Person labels
+
+            MATCH (n)
+            WHERE n:Person:Car
+            RETURN n
+
+            Match same properties
+
+            MATCH (a:Person)
+            WHERE a.from = "Sweden"
+            RETURN a
+
+            Returns every node (and their relationships) where there's a property from with "Sweden" value
+            Match friends of friends with same hobbies
+
+            Johan is learning surfing, and wants to know any friend of his friends who already knows surfing
+
+            MATCH (js:Person)-[:KNOWS]-()-[:KNOWS]-(surfer)
+            WHERE js.name = "Johan" AND surfer.hobby = "surfing"
+            RETURN DISTINCT surfer
+
+                () empty parenthesis to ignore these nodes
+                DISTINCT because more than one path will match the pattern
+                surfer will contain Allison, a friend of a friend who surfs
+
+            Match by ID
+
+            Every node and relationship has an internal autonumeric ID, which can be queried using <, <=, =, =>, <> and IN operators:
+
+            Search node by ID
+
+            MATCH (n)
+            WHERE id(n) = 0
+            RETURN n
+
+            Search multiple nodes by ID
+
+            MATCH (n)
+            WHERE id(n) IN [1, 2, 3]
+            RETURN n
+
+            Search relationship by ID
+
+            MATCH ()-[n]-()
+            WHERE id(n) = 0
+            RETURN n
+
+            Create
+            Create node
+
+            CREATE (ee:Person { name: "Emil", from: "Sweden", klout: 99 })
+
+                CREATE clause to create data
+                () parenthesis to indicate a node
+                ee:Person a variable ee and label Person for the new node
+                {} brackets to add properties (key-value pairs) to the node
+
+            Create nodes and relationships
+
+            MATCH (ee:Person) WHERE ee.name = "Emil"
+            CREATE (js:Person { name: "Johan", from: "Sweden", learn: "surfing" }),
+            (ir:Person { name: "Ian", from: "England", title: "author" }),
+            (rvb:Person { name: "Rik", from: "Belgium", pet: "Orval" }),
+            (ally:Person { name: "Allison", from: "California", hobby: "surfing" }),
+            (ee)-[:KNOWS {since: 2001}]->(js),(ee)-[:KNOWS {rating: 5}]->(ir),
+            (js)-[:KNOWS]->(ir),(js)-[:KNOWS]->(rvb),
+            (ir)-[:KNOWS]->(js),(ir)-[:KNOWS]->(ally),
+            (rvb)-[:KNOWS]->(ally)
+
+                MATCH clause to get "Emil" in ee variable
+                CREATE clause to create multiple nodes (comma separated) with their labels and properties. Also creates directed relationships (a)-[:Label {key: value}]->(b)
+
+            Create relationship between 2 unrelated nodes
+
+            MATCH (n), (m)
+            WHERE n.name = "Allison" AND m.name = "Emil"
+            CREATE (n)-[:KNOWS]->(m)
+
+            Alternative with MERGE, which ensures that the relationship is created only once
+
+            MATCH (n:User {name: "Allison"}), (m:User {name: "Emil"})
+            MERGE (n)-[:KNOWS]->(m)
+
+            Create node with multiple labels
+
+            CREATE (n:Actor:Director)
+
+            Update
+            Update node properties (add new or modify)
+
+            Add new .owns property or modify (if exists)
+
+            MATCH (n)
+            WHERE n.name = "Rik"
+            SET n.owns = "Audi"
+
+            Replace all node properties for the new ones
+
+            Danger: It will delete all previous properties and create .plays and .age properties
+
+            MATCH (n)
+            WHERE n.name = "Rik"
+            SET n = {plays: "Piano", age: 23}
+
+            Add new node properties without deleting old ones
+
+            Danger: If .plays or .age properties are already set, it will overwrite them
+
+            MATCH (n)
+            WHERE n.name = "Rik"
+            SET n += {plays: "Piano", age: 23}
+
+            Add new node property if property not already set
+
+            MATCH (n)
+            WHERE n.plays = "Guitar" AND NOT (EXISTS (n.likes))
+            SET n.likes = "Movies"
+
+            Rename a property in all nodes
+
+            MATCH (n)
+            WHERE NOT (EXISTS (n.instrument))
+            SET n.instrument = n.plays
+            REMOVE n.plays
+
+            Alternative
+
+            MATCH (n)
+            WHERE n.instrument is null
+            SET n.instrument = n.plays
+            REMOVE n.plays
+
+            Add label to existing node
+
+            Adds the :Food label to nodes id<7> and id<8>
+
+            MATCH (n)
+            WHERE id(n) IN [7, 8]
+            SET n:Food
+
+            Creates the node if not exists and updates (or creates) a property
+
+            MERGE (n:Person {name: "Rik"})
+            SET n.owns = "Audi"
+
+            Delete
+            Delete nodes
+
+            To delete a node (p.e. id<5>), first we need to delete its relationships. Then, the node can be deleted
+
+            MATCH (n)-[r]-()
+            WHERE id(n) = 5
+            DELETE r, n
+
+            To delete multiple nodes (must have their relationships previously deleted)
+
+            MATCH (n)
+            WHERE id(n) IN [1, 2, 3]
+            DELETE n
+
+            Deletes a property in a specific node
+
+            MATCH (n)
+            WHERE n:Person AND n.name = "Rik" AND n.plays is NOT null
+            REMOVE n.plays
+
+            Alternative
+
+            MATCH (n)
+            WHERE n:Person AND n.name = "Rik" AND EXISTS (n.plays)
+            REMOVE n.plays
+
+            Delete a label from all nodes
+
+            Deletes the :Person label from all nodes
+
+            MATCH (n)
+            REMOVE n:Person
+
+            Delete a label from nodes with specific labels
+
+            Deletes the :Person label from nodes with :Food and :Person labels
+
+            MATCH (n)
+            WHERE n:Food:Person
+            REMOVE n:Person
+
+            Delete multiple labels from nodes
+
+            Deletes the :Food and :Person labels from nodes which have both labels
+
+            MATCH (n)
+            WHERE n:Food:Person
+            REMOVE n:Food:Person
+
+            Danger: Deletes the :Food and :Person labels from nodes which have :Food or :Person or :Food:Person labels
+
+            MATCH (n)
+            REMOVE n:Food:Person
+
+            Delete entire database
+
+            MATCH (n)
+            OPTIONAL MATCH (n)-[r]-()
+            DELETE n, r
+
+            Other clauses
+            Show execution plan
+
+            Use PROFILE or EXPLAIN before the query
+
+            PROFILE: Shows the execution plan, query information and db hits. Example: Cypher version: CYPHER 3.0, planner: COST, runtime: INTERPRETED. 84 total db hits in 32 ms.
+
+            EXPLAIN: Shows the execution plan and query information. Example: Cypher version: CYPHER 3.0, planner: COST, runtime: INTERPRETED.
+            Count
+
+            Count all nodes
+
+            MATCH (n)
+            RETURN count(n)
+
+            Count all relationships
+
+            MATCH ()-->()
+            RETURN count(*);
+
+            Limit
+
+            Returns up to 2 nodes (and their relationships) where there's a property from with "Sweden" value
+
+            MATCH (a:Person)
+            WHERE a.from = "Sweden"
+            RETURN a
+            LIMIT 2
+
+            Create unique property constraint
+
+            Make .name property unique on nodes with :Person label
+
+            CREATE CONSTRAINT ON (n:Person)
+            ASSERT n.name IS UNIQUE
+
+            Drop unique property constraint
+
+            Make .name property unique on nodes with :Person label
+
+            DROP CONSTRAINT ON (n:Person)
+            ASSERT n.name IS UNIQUE
+
+            @RMSD
+            RMSD commented Jul 3, 2017
+
+            Note that later Neo4j's (2.3+, it seems) have the shortcut keyword Detach Delete, which can be pointed at a node, and automatically remove relationships and then delete the node. The delete a node query can be simplified to:
+
+            MATCH (n) WHERE id(n) = 5 DETACH DELETE  n
+
+            And you should be able to wipe the entire database with only two simple lines:
+
+            MATCH (n) DETACH DELETE n
+
+            As you can see, you have to be a little careful not to nuke everything, but the keyword is useful.
+            @Askill
+            Askill commented Dec 2, 2017
+
+            This is really usefull, thanks mate.
+            @nishalpradhan999
+            nishalpradhan999 commented Mar 4, 2018
+
+            Thanks a lot. You saved my day!!!
+            @edsase
+            edsase commented May 25, 2018
+
+            Extremely handy. Thanks!
+            @ssadasivan
+            ssadasivan commented Sep 14, 2018
+
+            I am looking for some help on how to write the equivalent of SQL subqueries in Neo4j ... like summarizing an existing SQL query with a query on top if it. Would appreciate any examples .
+            @cnarvaa
+            cnarvaa commented Mar 27, 2019
+
+            smile Perfect
+            @NJ2046
+            NJ2046 commented Mar 28, 2019
+
+            不错
+            @oguzaktas
+            oguzaktas commented Jun 18, 2019
+
+            Great explanation, thanks.
+            @Devendra0110
+            Devendra0110 commented Dec 12, 2019
+
+            Is there a way we can use an object in where clause?
+            @milanjelisavcic
+            milanjelisavcic commented Feb 6, 2020
+
+            How to match on more than one Node type? Something like:
+
+            MATCH (p:Person)
+            RETURN count(p) AS number_of_persons, 
+            EXISTS( (p)-[:INCLUDES]->(:Job | :Hobby) ) AS includes_n_or_f
+
+            This does not work. Is there something similar to | (OR) clause?
+            @dcsan
+            dcsan commented Jan 1, 2021
+
+            @milanjelisavcic there are OR examples in the WHERE clause here:
+            https://dev.to/sandordargo/cypher-tutorial-the-match-keyword-6c
+            @K-J-HYEON
+            K-J-HYEON commented May 4, 2023
+
+            I will apply it in practice, Thank you!!
+            to join this conversation on GitHub. Already have an account? Sign in to comment
+            Footer
+            © 2023 GitHub, Inc.
+            Footer navigation
+
+                Terms
+                Privacy
+                Security
+                Status
+                Docs
+                Contact GitHub
+                Pricing
+                API
+                Training
+                Blog
+                About
+
+~/Empire/Doks/Comp/lang/webdev/db/nosql/graphdb/cypher-neo4j.pdf
+            1 - Querying Neo4j Effectively with Pattern Matching ----
+            Setting up a new Neo4j database
+             Neo4j running modes  ___eng_hm
+              Neo4j Server
+              An embedded database
+               Preparing the development environment
+               Creating an embedded database
+               Configuration
+            HR management tool - an example
+             Creating nodes and relationships using the Java API
+             A querying database
+              Invoking Cyppher from Java
+              Finding nodes by relationships
+              Filtering properties
+              Filtering relationships
+              Dealing with missing parts
+              Working with paths
+              Node IDs as starting points
+            Query parameters
+              Passing parameters with Java
+            2 - Filter, Aggregate, and Combine Results ----
+             Filtering
+              The book store - an example
+              Text search  ___eng_hm
+               Working with regular expressions
+               Escaping the text
+              Value comparisons
+               The IN predicate
+               Boolean operators
+              Working with collections
+              Paging results - LIMIT and SKIP
+            Sorting
+             A descending sort
+             Dealing with null values using the COALESCE function
+            Aggregating results
+             Counting matching rows or non-null values
+              Summation
+              Average
+              Maximum and minimum
+              Standard deviation
+              Collecting values in an array
+              Grouping keys
+              Conditional expressions
+              Separating query parts using WITH
+             The UNION statement
+             Summary
+            3 - Manipulating the Database ----
+             Using Neo4j Browser
+             Creating nodes and relationships
+              Labels and properties
+              Multiple labels
+              Properties
+              Creating multiple patterns
+             Creating relationships
+              Creating full paths
+              Creating relationships between existing nodes using read-and-write queries  ___eng_hm
+            Modifying existing data
+             Creating unique patterns
+              Complex patterns
+             Setting properties and labels
+              Cloning a node
+              Adding labels to nodes
+             Merging matched patterns
+              Idempotent queries
+            Deleting data
+             Removing labels
+             Removing properties
+             Deleting nodes and relations
+             Clearing the whole database
+            Loops
+             Working with collections
+            4 - Improving Performance ----
+            Performance issues
+            Best practices and recommendations
+             Using parameterized queries
+              Parameterized queries with the REST API
+             Reusing ExecutionEngine
+             Finding the optimum transaction size
+             Avoiding unnecessary clauses
+             Specifying the direction of relationships and variable length paths
+            Profiling queries
+             Profiling using the Java API
+             Inside the execution plan description
+             Profiling with Neo4j Shell
+             Profiling with the REST API
+            Indexes and constraints
+             SCAN hints
+             Index hints
+             Constraints
+            5 - Migrating from SQL ----
+            Our example
+            Migrating the schema
+             Labels
+             Indexes and constraints
+             Relationships
+            Migrating the data
+             Entities
+             Relationships
+            Migrating queries
+             CRUD
+             Searching queries
+             Grouping queries
+            A - Operators and Functions ----
+            Operators
+             Comparison operators
+              Ordering operators
+              Equality operators
+              NULL equality operators
+             Mathematical operators
+             The concatenation operator
+             The IN operator
+             Regular expressions
+            Functions
+             COALESCE
+             TIMESTAMP
+             ID
+             Working with nodes
+              NODES
+              LABELS
+             Working with paths and relationships
+              TYPE
+              ENDNODE and STARTNODE
+              SHORTESTPATH and ALLSHORTESTPATHS
+              RELATIONSHIPS
+             Working with collections
+              HEAD, TAIL, and LAST
+              LENGTH
+              EXTRACT
+              FILTER
+              REDUCE
+              RANGE
+             Working with strings
+              SUBSTRING, LEFT, and RIGHT
+              STR
+              REPLACE
+              Trimming functions
+              LOWER and UPPER
+             Aggregation functions
+              COUNT
+              SEIN
+              AVG
+              PERCENTILEDISC and PERCENTILECONT
+              STDEV and STDEVP
+              MIN and MAX
+             Mathematical functions
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/graphdbs.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/graphdbalgos-neo4j.txt
+    ~/Empire/Doks/Comp/lang/webdev/db/neo4j-begin.pdf
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/cypher-neo4j.txt
+[+INCLUDE MORE/NEWER DOKS[!!]]
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/greml-pract.txt
+    https://tinkerpop.apache.org/index.html  #'practical gremlin' online
+

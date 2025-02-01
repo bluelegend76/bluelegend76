@@ -1,0 +1,8 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/lang/tj/exempelfil--för_taskjuggler.tjp
+~/Empire/Doks/Comp/lang/tj/taskj-man.txt
+~/Empire/Doks/Comp/lang/tj/tj.txt
+~/Empire/Doks/Comp/lang/tj/tjman-2006.txt
+

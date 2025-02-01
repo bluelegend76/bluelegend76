@@ -1,0 +1,3812 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+https://github.com/clojure-cookbook/clojure-cookbook
+
+http://docs.lighttable.com/
+            new file
+                c-n
+            open file
+                cs-o
+            evaluate a clojure form
+                c-Enter
+
+            With Javascript/HTML/CSS
+
+            In order to evaluate Javascript,
+            HTML, or CSS, we need a browser to
+            see the result in. To open a
+            browser tab in Light Table:
+
+            - 1. In the view menu click the
+              commands item
+            - 2. Type "browse" and press enter
+              when the Browser: add browser tab
+              command is highlighted
+            - 3. Use the url bar at the bottom
+              to open your page (note: this can
+              be a file:// url to open an html
+              file locally, or it can be
+              something on the
+              internet/localhost).
+
+            Now that we have a place to send
+            our code, let's open a .js file and
+            eval something:
+
+            - 1. Create a new file and save it
+              with a .js extension or open a
+              .js file
+            - 2. Press Cmd/Ctrl+Enter while the
+              cursor is over a top-level block
+              of code. To eval an inner block,
+              select and then eval it.
+            - 3. Select the webpage name from
+              the available clients popup
+            - 4. You'll now see results inline!
+            - 5. Evaling from a .css file will
+              inject the css into the page.
+            - 6. Evaling from an .html file
+              will refresh the browser tab.
+
+            With Python
+
+            Getting started with Python is as
+            simple as:
+
+            - 1. Create a new file with a .py
+              extension or open a .py file
+            - 2. While over some code press
+              Cmd/Ctrl+Enter
+            - 3. Allow Light Table a few
+              seconds while it connects to a
+              python process
+            - 4. You'll now see results inline!
+
+            If you want to use Light Table to
+            do matplotlib/pylab graphs and
+            such, you'll want to install the
+            IPython kernel:
+
+            - 1. Follow these instructions to
+              install IPython (note: it must
+              IPython 1.0 or greater and you
+              must install pyzmq as well in
+              order for it to work with Light
+              Table.)
+            - 2. Make sure IPython is on your
+              path
+            - 3. Restart Light Table
+            - 4. Open a .py file by pressing
+              Cmd/Ctrl+Shift+O
+            - 5. Over an expression that will
+              return a graph, press
+              Cmd/Ctrl+Enter
+            - 6. You'll see the graph embedded
+              below your expression.
+
+            With the workspace tree (or how to open files)
+
+            Opening each file individually
+            through the native open dialogs
+            isn't very efficient. The workspace
+            tree allows you to instead add
+            files and folders into a file
+            explorer that you can then use to
+            open/rename/delete/etc the files
+            you're interested in. To open the
+            workspace tree, click the Workspace
+            item in the view menu. You can then
+            add files or folders to the
+            workspace using the buttons at the
+            top.
+
+              workspace tab
+
+            Once you have items in your
+            workspace, you can use the
+            right-click context menu to do the
+            standard file actions you would
+            expect (rename, delete, new file,
+            etc) as well as remove them from
+            the workspace if you no longer want
+            them there.
+
+              workspace tab menu
+
+            When you open a new window of Light
+            Table, you'll be given a new blank
+            workspace - if you want to switch
+            to a recently used one, click the
+            recent button and select one of
+            your old workspaces from the list.
+
+              workspace tab recent
+
+            With the Navigate pane
+
+            open the navigate pane
+                c-o
+
+            Once you have files and folders in
+            your workspace, the navigate pane
+            provides the quickest way to open a
+            file by name. Opening it is bound
+            to Cmd/Ctrl+O by default.
+
+              navigate tab
+    
+            filter for file my-cool-file in the navigate tab (=a "filter list")
+                write 'mcf'
+
+            The navigate tab is a "filter list"
+            where typing in the top input will
+            filter the results down to those
+            that match what you've typed. All
+            filter lists inside of Light Table
+            use a form of sequential partial
+            substring matching, which is a
+            fancy way of saying that you can
+            type letters and as long as those
+            letters appear in order in one of
+            the list items it will be
+            considered a match. This allows you
+            to type "mcf" to match
+            "my-cool-file" and so on,
+            dramatically increasing efficiency
+            of filter operations.
+
+              navigate tab filtered
+
+            With the Connections pane
+
+            The connect pane shows you a list
+            of currently connected "clients"
+            that can be used for doing language
+            operations like eval. To open it,
+            use the Connections item in the
+            View menu or the Connect: Show
+            connect bar command.
+
+              connect tab
+
+            This list allows you to disconnect
+            a client, which often kills the
+            process it is associated to, or
+            unset a client associated to an
+            editor. You might do the latter
+            when you want to change the context
+            in which you eval something, for
+            example. Clients associated with
+            the currently active editor will
+            appear highlighted.
+
+              connect tab
+
+            The connect tab also allows you to
+            explicitly add a connection to a
+            client, by presenting a list of all
+            the available client type for you
+            to select one from.
+
+              connect tab
+
+            With the Command pane
+
+            open command-pane
+                c-Space
+
+            The command pane is your one stop
+            shop to figure out if Light Table
+            can do something. It's a filter
+            list like navigate that presents a
+            list of all the visible commands in
+            Light Table. Want to open a file or
+            change some setting? Type "open
+            file" or "setting" to filter down
+            to what you want to do and then
+            press enter to do it. Opening the
+            command pane is bound to Ctrl+Space
+            by default, but you can use the
+            Commands item in the View menu as
+            well.
+
+              command tab
+
+            see keybindings for commands in the command tab
+                = are shown underneath the command's name
+
+            The command pane will also show keybindings for the given command underneath the command's name.
+
+              command tab
+
+            How Do I...
+
+            Change settings (fonts, line numbers…)?
+
+            change settings
+                Settings: (+modify val.s in square brackets)
+                +See More
+
+            Settings are represented as
+            behaviors in Light Table. To modify
+            your user behaviors, execute the
+            Settings: User behaviors command
+            and modify the file that is opened.
+            For example, to turn on the line
+            number gutter, find the :editor tag
+            and in the square brackets type
+            "number". Then select Editor: Show
+            line numbers behavior. This
+            workflow lets you search for the
+            behavior you want via the
+            auto-complete and then the helper
+            will show you what parameters are
+            needed (if any) for that behavior.
+
+            All settings in Light Table work
+            this way and behaviors give you the
+            ability to fundamentally change the
+            functionality of Light Table.
+
+            Configure behaviors
+
+            behaviors (i.e. for settings) are saved in
+                the user.behaviors file
+
+            To add a behavior to your
+            user.behaviors file, add a vector
+            in the format [:TAG :COMMAND :ARG1
+            :ARG2 ...] e.g. [:editor
+            :lt.objs.editor/no-wrap]. If a
+            command takes arguments append them
+            after the command e.g. [:app
+            :lt.objs.app/set-default-zoom-level
+            0.8]. Behaviors that are set by
+            default can be subtracted/removed
+            by prefixing the command with ‘-‘
+            e.g. [:editor
+            :-lt.objs.editor/no-wrap].
+
+            Change theme
+
+            To set the editor theme execute the
+            Settings: User behaviors command,
+            type [:editor
+            :lt.objs.style/set-theme "" ] and
+            in between quotation marks type a
+            theme name (auto-complete will help
+            you here). To see what different
+            themes look like, try the
+            CodeMirror theme demo. Note that
+            some themes listed there may not be
+            available because LightTable may
+            not be on the same CodeMirror
+            version as the demo. To try third
+            party themes, like these ones,
+            download them and add an entry for
+            it in user.behaviors file: [:app
+            :lt.objs.style/provide-theme
+            "theme-name"
+            "/full/path/to/theme/css"]. Once a
+            theme is provided you can set it
+            with the aforementioned set-theme.
+
+            Evaluate code inline?
+
+            eval a single 'block'
+                c-Enter
+            eval whole file
+                cs-Enter
+
+            Within an editor, eval a single
+            "block" (or form if you're used to
+            LISP) is bound to Cmd/Ctrl+Enter by
+            default and evaling an entire file
+            is bound to Cmd/Ctrl+Shift+Enter.
+            Not all file types know how to
+            eval, to find out what kinds of
+            clients are available for
+            evaluation, open the connect tab
+            and press the "Add Connection"
+            button. This will give you a list
+            of all the clients Light Table
+            knows how to start.
+
+            Change keybindings?
+
+            change keybindings
+                = in the .keymap file
+
+            Keybindings are defined in .keymap
+            files in Light Table. To open the
+            user keymap, execute the Settings:
+            User keymap command. To see the
+            default keybindings you can execute
+            the Settings: Default keymap
+            command. Keys are bound based on
+            context (tag), which allows you to
+            create contextual command schemes.
+
+            Configure keybindings
+
+            To add a keybinding to your
+            user.keymap file, add a vector in
+            the format [:TAG "KEYBINDING"
+            :COMMAND] e.g. [:editor "alt-w"
+            :editor.watch.watch-selection]. If
+            a command takes arguments wrap the
+            command and its arguments in a
+            parentheses e.g. [:editor "alt-("
+            (:paredit.select.parent "(")]. If
+            you want to bind multiple commands
+            to the same keybinding, use a
+            simple vector for the whole
+            binding-command e.g. [:editor
+            "alt-(" (:paredit.select.parent
+            "(") :smart-indent-selection].
+            Keybindings that are set by default
+            can be subtracted/removed by
+            prefixing the key with ‘-‘ e.g.
+            [:app "-ctrl-shift-d"
+            :docs.search.show].
+
+            Split windows?
+
+            You can create a new tabset by
+            either right clicking in the tab
+            area and selecting New tabset or by
+            using the Tabs: Add a tabset
+            command in the command bar. To
+            close a tabset you can either use
+            the Tabs: Remove active tabset
+            command or resize it such that it
+            has 0 width.
+
+            Open a new window?
+
+            open a new window
+                cs-n
+
+            By default, Cmd/Ctrl+Shift+N is
+            bound to the command Window: Open
+            new window, which you can also just
+            execute from the command tab.
+
+            Open a browser tab for live modification?
+
+            refresh an open browser
+                c-r
+
+            You can open a browser tab by
+            either using the Browser: add
+            browser tab command or by choosing
+            the browser client type form the
+            "Add Connection" menu in the
+            connect tab. Once open, it is now
+            available as an evaluation client
+            and Cmd/Ctrl+R is bound to
+            refreshing it.
+
+            Bring up auto-completion?
+
+            auto-completion
+                tab
+
+            Auto-complete is bound to the Tab
+            key if there's some non-space
+            character preceding the cursor,
+            otherwise a tab is inserted.
+
+            Eval an arbitraty unit of code?
+
+            If you have something selected
+            Light Table will send the selection
+            text for eval if you press
+            Cmd/Ctrl+Enter.
+
+            eval selected text
+                c-Enter
+
+            Eval Clojure?
+
+            To eval Clojure, open a .clj file
+            and press Cmd/Ctrl+Enter. Light
+            Table will find a leiningen project
+            if there is one or it will use it's
+            local REPL client to evaluate your
+            code.
+
+            Eval ClojureScript
+
+            You can eval ClojureScript a couple
+            of different ways. For your
+            ClojureScript project, building
+            your cljs assets and then pressing
+            Cmd/Ctrl+Enter is recommended. To
+            read more about this workflow, see
+            the Clojure plugin REAMDE.
+
+            Eval Javascript in NodeJS?
+
+            To eval in a Node process:
+
+            - 1. Go to the connect tab
+            - 2. Click "Add Connection"
+            - 3. Select "NodeJS"
+            - 4. Choose a Javascript file to
+              start the node server with.
+            - 5. Open a .js file
+            - 6. Press Cmd/Ctrl+Enter
+            - 7. Select your nodejs client from
+              the popup
+
+            Eval Python?
+
+            The easiest way is to simply open a
+            Python file and press
+            Cmd/Ctrl+Enter. This will cause
+            Light Table to start a python
+            client that it can then send code
+            to.
+
+            Use IPython for Python eval?
+
+            By default, if Light Table can find
+            a recent IPython installed on your
+            machine, it will use it to provide
+            a much more robust python
+            evaluation environment. If you
+            don't have it installed, follow
+            these instructions to do so (make
+            sure you install pyzmq as well).
+            With it you can use matplotlib and
+            pylab inline. To see if Light Table
+            is using IPython for Python eval,
+            open the connect tab and look to
+            see if your Python client has the
+            type of ipython. Note that in order
+            for Light Table to use IPython,
+            pyzmq also needs to be installed.
+
+            See the output from STDOUT and STDERR?
+
+            When you print from a client, it
+            will appear in the Console, which
+            can be opened by clicking the blue
+            number in the bottom right corner
+            of the editor, from the View menu,
+            or by using the Console: Toggle
+            console command.
+
+            Use a different client once I've evaled something?
+
+            From the connect tab, find the
+            client and make sure the editor you
+            evaled in is active. The connected
+            client(s) will appear highlighted.
+            Click the "unset" button to force
+            Light Table to re-evaluate what
+            clients are available to eval in
+            the editor.
+
+            Close a client?
+
+            From the connect tab, find the
+            client and click the "disconnect"
+            button.
+
+            Install a Plugin
+
+            Open the command pane and find the
+            command "Plugins: Show Plugin
+            Manager". In the manager, search
+            for a plugin. Hover over a search
+            result and click its install
+            button.
+
+
+            Toggle Vim keybindings?
+
+            Install the Vim plugin using the
+            Plugin Manager and then run the
+            command App: Reload behaviors. If
+            Emacs is already installed, disable
+            it in users.behaviors with [:editor
+            :-lt.plugins.emacs/activate-emacs].
+
+            Toggle Emacs keybindings?
+
+            Install the Emacs plugin using the
+            Plugin Manager and then run the
+            command App: Reload behaviors. If
+            Vim is already installed, disable
+            it in users.behaviors with [:editor
+            :-lt.plugins.vim/activate-vim].
+
+            Exclude files from the workspace?
+
+            Open your user behaviors and in the
+            :app tag start typing "ignore".
+            Select the Files: Set ignore
+            pattern behavior.
+
+            Change the location of the lighttable directory?
+
+            You can use the environment
+            variable LTHOME to tell the command
+            line scripts where to find LT.
+
+            Find out what version of Light Table I'm using?
+
+            Use the App: Light Table version
+            command from the command tab.
+
+            Plugins directory
+
+            The plugins directory varies
+            depending on the platform:
+
+            - Mac: ~/Library/Application\ Support/LightTable/plugins
+            - Linux: ~/.config/LightTable/plugins
+            - Windows: %APPDATALOCAL%/LightTable/plugins
+
+            Alternatively, you can see your
+            location from running the command
+            App: Light Table version.
+
+            User plugin
+
+            Your complete configuration,
+            including plugins you've installed,
+            is stored in a User plugin. Since
+            the User plugin is just a
+            directory, you can share it by
+            putting it under revision control
+            e.g. git and uploading it to a
+            service like Github. To explore it,
+            add it to your workspace with the
+            command Settings: Add User plugin
+            to workspace. Any custom
+            keybindings and behaviors are added
+            to user.keymap and user.behaviors.
+            To write commands, behaviors and
+            more, see src/lt/plugins/user.cljs.
+            To open your user.cljs at anytime
+            use the command Settings: User
+            script. Inside the default
+            user.cljs is an example command and
+            behavior. If you're upgrading Light
+            Table, you will need to add two
+            behaviors to user.behaviors in
+            order for the examples to work:
+
+            [:app :lt.objs.plugins/load-js "user_compiled.js"]
+            [:user.hello :lt.plugins.user/on-close-destroy]
+
+            Run the command User: Say Hello to
+            see your own command!
+
+            Write a plugin
+
+            Plugins are a great way to share
+            your Light Table enhancement with
+            the community. The recommended way
+            to generate one is with lein new
+            lt-plugin my-plugin --to-dir
+            MyPlugin. Make sure to run that it
+            in your plugin directory. Add the
+            generated plugin to your workspace
+            and open the generated .cljs file.
+            With your LT UI connection set up,
+            eval the file with Cmd-Shift Enter.
+            Now try your new plugin command Say
+            Hello! For more about writing
+            plugins, see this wiki page.
+
+            Submit a plugin
+
+            If it's your first time submitting
+            a plugin, make sure you have a
+            valid plugin.edn. Fill out the keys
+            as follows:
+
+            - :name*: Camel case is recommended
+            - :version*: Must be in format
+              X.X.X e.g. 0.1.4
+            - :source*: Must be a github url
+              e.g.
+              https://github.com/USER/PLUGIN
+            - :behaviors*: Refers to the
+              behaviors file which is needed to
+              load the plugin and define any
+              keybinding or behavior.
+            - :desc: Primary means users can
+              find your plugin
+            - :author: Your name and another
+              useful way to find your plugin
+
+            * Means the field is required.
+
+            When releasing a new version, you
+            must update the :version key and
+            push the new git tag e.g. git tag
+            X.X.X && git push --tags. With your
+            updated plugin.edn, add or update
+            your plugin to the plugin metadata
+            repository using these
+            instructions. For more questions,
+            see the user contributed FAQ. What
+            is...
+
+            Eval?
+
+            Eval, short for evaluation, is the
+            act of executing code inside of a
+            running process. This means you
+            modify the code that is currently
+            executing without having to restart
+            whatever you're doing. This also
+            gives you the ability to evaluate
+            an expression and see the result of
+            it in real time based on the actual
+            state of your application.
+
+            A REPL?
+
+            REPL stands for
+            Read-Eval-Print-Loop, wikipedia has
+            a decent description of it.
+            Basically the gist of it is that
+            it's a little prompt that you can
+            type code in and when submit that
+            code, it evaluates it, prints the
+            result, and lets you do it again.
+            REPLs make for a great way to try
+            things out. Inside of Light Table
+            we remove the need for a special
+            prompt, and instead you can eval
+            directly in a file to see what
+            something does/evaluates to.
+
+            An Instarepl?
+
+            The Instarepl is a term we coined
+            for an editor that evaluates as you
+            type and shows you not only the
+            result of an expression, but also
+            how all the variables in your code
+            are filled in to get that result.
+            This allows you to see data flow
+            through your program and amounts to
+            a sort of real-time debugging.
+            Results are blue and variable
+            values are shown in purple to the
+            right of their use in the code.
+
+            A client?
+
+            A client is a process that is
+            connected to Light Table that we
+            can send messages to. Usually these
+            messages revolve around being able
+            to eval code in that process, but
+            they don't necessarily have to. For
+            example, in order to eval Python
+            code, we run a Python process that
+            talks to Light Table over TCP and
+            acts a client for us to send code
+            to.
+
+            A workspace?
+
+            In the Light Table world, a
+            workspace is the group of files and
+            folders that you're interested in.
+            Workspaces are saved and created
+            automatically, and you can access
+            the last 20 workspaces you've used
+            by clicking the "recent" button at
+            the top of the workspace tree.
+
+            A behavior
+
+            Light Table's functionality is
+            defined by functions that respond
+            to a set of triggers. This
+            combination of a function and the
+            triggers that it reacts to is
+            called a behavior. Behaviors serve
+            as the way to define what Light
+            Table does in any number of
+            situations and operate as a very
+            powerful settings system. Behaviors
+            are not applied directly to
+            objects, but rather to "tags".
+            These tags allow you to specify
+            behavior for kinds of things at
+            different levels of specificity.
+            For example, you can apply behavior
+            to all editors by adding a behavior
+            to the :editor tag or to only
+            clojure editors by adding it to the
+            :editor.clojure tag. To modify
+            behaviors, execute the Settings:
+            User behaviors command. Other stuff
+
+            What languages does Light Table support?
+
+            Light Table's general editor
+            capabilities will work with most
+            languages out there, but it has
+            deeper language integrations
+            (things like inline eval) for
+            Clojure, ClojureScript, Javascript,
+            Python, HTML, and CSS. More
+            languages can be added via plugins
+            in the future.
+
+            What platforms does Light Table support?
+
+            Light Table runs on Windows, Mac
+            OSX 10.7+, and most flavors of
+            Linux.
+
+            Does Light Table auto-update?
+
+            Yes, Light Table will download
+            updates in the background and let
+            you know when you need to restart
+            to get the newest version.
+
+            What is Light Table written in?
+
+            Light Table, with the exception of
+            specific language clients, is
+            written almost entirely in
+            ClojureScript. For more detail on
+            how it is architected, take a look
+            at Chris's blog post The IDE as a
+            Value.
+
+~/Empire/Doks/Comp/lang/java/cloj/patts-algos/clojalgodatastruct.txt
+~/Empire/Doks/Comp/lang/java/cloj/patts-algos/clojscala-functprogrpatts_2013.txt
+~/Empire/Doks/Comp/lang/java/cloj/patts-algos/clojscalfunct-datastructalgos.txt
+CLOJURE DATA-STRUCTURES
+                ___Clojure_DATASTRUCTURES
+                Very good. Could you give me an overview of the data-structures available in Clojure, and what they are good/commonly used for?
+
+                Clojure Data Structures: An Overview
+
+                Clojure is known for its rich set of immutable data structures. These structures offer advantages like efficient memory management, thread safety, and predictability, making them popular choices for functional programming tasks. Here's a rundown of some key data structures in Clojure and their common uses:
+
+                Collections:
+
+                Vectors: Ordered, indexed collections good for random access and efficient storage of fixed-size data (lists, numbers, strings).
+                Lists: Linked lists useful for efficient prepend operations and lazy evaluation (sequencing, building data incrementally).
+                Sets: Unordered collections of unique values helpful for fast membership checks and avoiding duplicates (deduplication, unique IDs).
+                Maps: Unordered collections of key-value pairs for associating data (configuration, dictionaries).
+
+                Specialized Collections:
+
+                Keyword: Represents unique, case-insensitive keys often used in maps (symbol-like but faster lookups).
+                Atoms: Mutable single-value cells for sharing mutable state in a thread-safe way (state management, configuration).
+                Refs: Similar to atoms but offer finer-grained control over mutations (complex state management).
+                Sequences:
+
+                Seq: An interface representing any sequential collection, allowing unified operations across different data structures (iteration, filtering, transformation).
+                Lazy sequences: Sequences evaluated only as needed, useful for infinite or large data sets (efficient processing, memory conservation).
+
+                Common Uses:
+
+                Vectors: Storing fixed datasets like user profiles, game board states.
+                Lists: Representing sequences of tasks, processing logs, building temporary data.
+                Sets: Checking for unique items in user IDs, ensuring no duplicate elements.
+                Maps: Storing configuration settings, user preferences, dictionaries.
+                Keywords: As keys in maps for efficiency and clarity in symbol-like operations.
+                Atoms and Refs: Managing shared state in multi-threaded applications, like game scores or session variables.
+                Sequences: Processing data pipelines, transforming and filtering information.
+                Lazy sequences: Handling large datasets without overwhelming memory, iterating through infinite streams efficiently.
+
+                Choosing the Right Data Structure:
+
+                Understanding the strengths and weaknesses of each data structure is crucial for making informed choices in your Clojure projects. Consider factors like:
+
+                Access patterns: Do you need random access (vector) or sequential access (list)?
+                Mutability: Is your data static (vector, map) or dynamic (atom, ref)?
+                Performance: Are there specific operations you need to optimize (e.g., fast lookups in sets)?
+                Memory usage: Are you dealing with large datasets that require memory efficiency (lazy sequences)?
+                Additional Resources:
+
+                Clojure Documentation: https://clojure.org/reference/data_structures
+                Practicalli Clojure: [[invalid URL removed]]([invalid URL removed])
+
+                I hope this overview helps you understand the key data structures in Clojure and their common uses! Feel free to ask if you have any further questions about specific data structures or their suitability for your projects.
+
+                Could you also give some code using the different ones, so I can get an overview of the syntax for the different ones?
+
+
+                Clojure Data Structures: Code Examples
+                Sure, here are some code examples demonstrating the syntax for different Clojure data structures:
+
+                Vectors:
+
+                (def fruit-basket ["apple" "banana" "orange"])
+                (get fruit-basket 1) ;; => "banana"
+                (conj fruit-basket "mango") ;; => ["apple" "banana" "orange" "mango"]
+
+                Lists:
+
+                (def shopping-list '(milk eggs bread))
+                (first shopping-list) ;; => "milk"
+                (rest shopping-list) ;; => '(eggs bread)
+                (conj shopping-list "cheese") ;; => '(milk eggs bread cheese)
+
+                Sets:
+
+                (def unique-ids #{1 2 3 2 4})
+                (contains? unique-ids 3) ;; => true
+                (count unique-ids) ;; => 3
+                (conj unique-ids 5) ;; => #{1 2 3 4 5}
+
+                Maps:
+
+                (def person-info {:name "Alice" :age 30 :city "New York"})
+                (get person-info :name) ;; => "Alice"
+                (keys person-info) ;; => [:name :age :city]
+                (assoc person-info :occupation "software engineer") ;; => {:name "Alice" :age 30 :city "New York" :occupation "software engineer"}
+
+                Keywords:
+
+                (def my-keyword :my-unique-key)
+                (keyword? my-keyword) ;; => true
+                (:name {:name "Bob" :age 40}) ;; => "Bob"
+
+                Atoms and Refs:
+
+                (def counter (atom 0))
+                (swap! counter inc) ;; => increments counter to 1
+                @counter ;; => 1
+
+                (def score (ref 0))
+                (dosync (ref-set score 10)) ;; thread-safe way to set score to 10
+                @score ;; => 10
+
+                Sequences:
+
+                (map inc [1 2 3]) ;; => (2 3 4)
+                (filter even? [1 2 3 4]) ;; => (2 4)
+                (range 5) ;; => (0 1 2 3 4)
+
+                Lazy Sequences:
+
+                (defn infinite-naturals [] (cons 1 (lazy infinite-naturals)))
+                (take 5 (infinite-naturals)) ;; => (1 2 3 4 5)
+
+                Remember, these are just basic examples to demonstrate syntax. Feel free to explore the documentation and experiment further to understand the nuances and advanced features of each data structure!
+clojure vs lein repl __
+            Sure, here is a quick breakdown of the differences between running clojure and lein repl from a Clojure developer perspective:
+
+            Resource Usage
+
+            clojure: Running clojure will start up the Clojure runtime environment, which can be resource-intensive, especially on older machines.
+
+            lein repl: lein repl is a more lightweight alternative to running clojure. It uses the Leiningen framework to manage dependencies and configuration, and it does not start up the full Clojure runtime environment. This makes it a better choice for running Clojure on resource-constrained machines.
+
+            Convenience Features
+
+            clojure: clojure provides a REPL that is well-suited for interactive development. It allows you to evaluate Clojure expressions, explore the Clojure namespace, and load and unload Clojure libraries.
+
+            lein repl: lein repl provides additional features for interactive development, such as auto-completion, syntax highlighting, and tab completion. It also has built-in support for Leiningen projects, which makes it a convenient way to start a new Clojure project and run tests.
+
+            Overall
+
+            clojure: clojure is a good choice for production deployments and for developing large Clojure applications.
+
+            lein repl: lein repl is a good choice for interactive development and for lightweight Clojure projects.
+
+            In general, I recommend using lein repl for most development work, and then switching to clojure for running production applications.
+
+            Here is a table summarizing the key differences between clojure and lein repl:
+
+            Feature	clojure	lein repl
+            Resource usage	Resource-intensive	Lightweight
+            REPL	Basic REPL	Enhanced REPL with auto-completion, syntax highlighting, and tab completion
+            Leiningen support	No	Built-in support
+            I hope this helps!
+
+            Right. Leiningen REPL seems like the most feasible for most cases, especially since it features syntax highlighting and auto-completion.
+            Yes, Leiningen REPL is a great choice for most Clojure development. It is lightweight, has a rich set of features, and is well-integrated with the Leiningen framework. If you are new to Clojure, I recommend starting with Leiningen REPL. You can then switch to clojure for production deployments or for developing large Clojure applications.
+
+            __ Could you give me a list or breakdown of some of the more interesting features in Lein REPL? I'm thinking specifically about keyboard shortcuts (perhaps most importantly for code completion) and some other neat features in Lein REPL?
+
+            Yes, here is a list of some of the more interesting features in Lein REPL:
+
+            Keyboard Shortcuts
+
+            Lein REPL has a number of keyboard shortcuts that can make your development experience more efficient. Here are a few of the most useful ones:
+
+            ca-f: This shortcut brings up the completion menu, which shows you a list of possible completions for the current word.
+            ----
+            c-j: This shortcut inserts the selected completion into the REPL.
+            c-k: This shortcut removes the last character from the REPL input.
+            c-l: This shortcut clears the REPL input.
+            c-q: This shortcut exits the REPL.
+
+            Syntax Highlighting
+
+            Lein REPL provides syntax highlighting for Clojure code, which can make it easier to read and understand your code. This feature is particularly helpful for beginners, who may not be familiar with the syntax of Clojure.
+
+            Tab Completion
+
+            Lein REPL supports tab completion, which makes it easy to complete function names, variable names, and other symbols. This feature can save you a lot of time when typing code.
+
+            Dynamic Clojuredoc
+
+            Lein REPL provides dynamic Clojuredoc, which means that you can get documentation for Clojure functions and keywords without leaving the REPL. This feature is very convenient for learning about the Clojure API.
+
+            Built-in Support for Leiningen Projects
+
+            Lein REPL has built-in support for Leiningen projects, which makes it easy to start a new Clojure project, load and unload Clojure libraries, and run tests. This feature can save you a lot of time when developing Clojure applications.
+
+            Other Neat Features
+
+            In addition to the features listed above, Lein REPL also has a number of other neat features, such as:
+
+            A built-in console for running commands in a subshell.
+            A built-in debugger for stepping through Clojure code.
+            A built-in ClojureDocs browser for viewing Clojure documentation.
+            I hope this information is helpful!
+Intellij Plugins: Recursive
+linux scripting with clojure (including 'shallow web-scraper')
+            Could Clojure be a good fit for writing scripts or the like tools for everyday tasks on Linux?
+            Yes, Clojure can be a good fit for writing scripts or the like tools for everyday tasks on Linux. It is a powerful and expressive language that is well-suited for scripting and automation tasks. Clojure is also very fast, so it can be used to write scripts that run efficiently.
+
+            Here are some specific reasons why Clojure is a good fit for scripting on Linux:
+
+            Expressiveness: Clojure's Lisp syntax is very expressive, making it easy to write concise and readable code. This is particularly useful for scripting tasks, where code readability and maintainability are important.
+
+            Functional: Clojure is a functional language, which means that it uses functions as its primary building blocks. This makes it easy to write modular and reusable code, which is essential for complex scripting tasks.
+
+            Fast: Clojure is a compiled language, which means that it can be translated into native code. This makes Clojure scripts very fast to run, even for complex tasks.
+
+            Java interop: Clojure can seamlessly interoperate with Java, which means that you can use Clojure to access Java libraries and APIs. This can be very useful for scripts that need to interact with existing Java code.
+
+            Large ecosystem: Clojure has a growing ecosystem of libraries and tools for scripting, making it easy to find the resources you need to get started.
+
+            Here are some examples of how Clojure can be used for scripting on Linux:
+
+            Automating system administration tasks: Clojure can be used to automate a wide range of system administration tasks, such as provisioning new servers, configuring software, and managing user accounts.
+            Processing text and data: Clojure can be used to process text and data files, such as extracting data from CSV files, parsing JSON data, and generating reports.
+            Building web services: Clojure can be used to build web services that can be used to expose data or functionality to other applications.
+            Developing desktop applications: Clojure can be used to develop desktop applications that can be used to interact with the user and perform tasks.
+            Overall, Clojure is a powerful and versatile language that is well-suited for scripting and automation tasks on Linux. It is a good choice for developers who want to write concise, readable, and maintainable code that runs efficiently.
+
+            profile picture
+            I know we discussed a 'shallow' web-scraper before (i.e. saving out text for a manual spread as e.g. 20 sub-pages of one central webpage to one long textfile). Would it be possible to re-write that with Clojure instead of Python, and what would that code look like?
+            Yes, it is possible to rewrite a "shallow" web-scraper with Clojure instead of Python. Here is an example of how to do this:
+
+            Clojure
+            (require '[clojure.core.io :as io])
+            (require '[clj-http.client :as clj-http])
+            (require '[clojure.string :as str])
+
+            (defn scrape-page [url]
+              (let [response (clj-http/get url)]
+                (if (:status response 200)
+                  (str/join "\n" (html/parse-html (:body response)))
+                  nil)))
+
+            (defn scrape-subpages [url]
+              (let [page-content (scrape-page url)]
+                (str/join "\n"
+                         (for [subpage (seq (re-find #"<a href=\"([^\"]+)\">" page-content))
+                              :when (not= subpage "https://www.google.com")]
+                           (scrape-subpages subpage)))))
+
+            (defn scrape-website [url]
+              (str/join "\n"
+                         (for [subpage (seq (re-find #"<a href=\"([^\"]+)\">"
+                                                 (scrape-page url)))]
+                           (scrape-subpages subpage))))
+
+            (def url "https://www.example.com")
+            (def output (scrape-website url))
+            (io/write-file "output.txt" output)
+            Use code with caution. Learn more
+            This code will scrape the website at https://www.example.com and all of its subpages, and save the text of each page to a file called output.txt.
+
+            Here is a breakdown of the code:
+
+            The scrape-page function takes a URL as input and returns the text of the page. It uses the clj-http library to make an HTTP GET request to the URL, and then uses the html/parse-html function to parse the HTML content of the response.
+
+            The scrape-subpages function takes a URL as input and returns the text of all of the subpages of the page. It uses a regular expression to find all of the links on the page and then recursively calls itself to scrape each of the subpages.
+
+            The scrape-website function takes a URL as input and returns the text of all of the pages on the website. It calls the scrape-subpages function to scrape all of the subpages of the homepage.
+
+            The main part of the code declares a URL, calls the scrape-website function to scrape the website, and then writes the output to a file called output.txt.
+
+            This is just a simple example, and there are many other ways to write a web scraper in Clojure. For example, you could use a different library to parse HTML content, or you could use a more sophisticated algorithm to crawl the website.
+
+            profile picture
+            Very nice. And if I wanted to replace sed for removing and replacing different sets of characters in a text-file with Clojure (i.e. instead of using Python like we talked about before), what could that look like in code?
+            Yes, you can replace sed with Clojure to perform text manipulation tasks, such as removing and replacing different sets of characters in a text file. Here is an example of how to do this:
+
+            Clojure
+            (require '[clojure.core.io :as io])
+            (require '[clojure.string :as str])
+
+            (defn remove-replace [file pattern1 pattern2]
+              (let [file-contents (io/read-file file)]
+                (io/write-file file
+                          (str/replace file-contents pattern1 pattern2))))
+
+            (def file "input.txt")
+            (def pattern1 "old-pattern")
+            (def pattern2 "new-pattern")
+
+            (remove-replace file pattern1 pattern2)
+            Use code with caution. Learn more
+            This code will read the contents of the file input.txt, replace all occurrences of the pattern old-pattern with the pattern new-pattern, and then write the modified contents back to the file input.txt.
+
+            Here is a breakdown of the code:
+
+            The remove-replace function takes a file path, a pattern to be removed, and a pattern to be replaced with as input. It reads the contents of the file, replaces all occurrences of the first pattern with the second pattern, and then writes the modified contents back to the file.
+
+            The main part of the code declares the file path, the patterns to be removed and replaced with, and calls the remove-replace function to perform the text manipulation.
+
+            This is just a simple example, and there are many other ways to use Clojure for text manipulation tasks. For example, you could use regular expressions to match more complex patterns, or you could use more sophisticated data structures to process large amounts of text data.
+
+            I hope this helps!
+
+derek banas tut clojure
+            lein new app appname
+            cd appname/src/appname  [=core.clj]
+            a-x cider-jack-in
+            (-main)
+            (def randVar 10)
+            [long, double]
+            true false
+            (type false)  c-x c-e
+            (defn -main
+              "A description"
+              [& args]
+            (nil? aLong)
+            pos? neg? even? odd?
+            number? integer? float? zero?
+            ----
+            (def aString "Hello")
+            (format "Simple string %s" aString)
+            %5d %04d %-4d %.3f
+            ----
+            c-c c-k  [=compiling in emacs]
+            (:require [clojure.string :as str])
+            str/blank?
+            str/includes?
+            str/index-of
+            str/split str #"\d"
+            str/join  **
+            str/replace
+            str/trim-newline
+            str/triml str/trimr
+            str/lower-case str/upper-case
+            ----
+            lists:
+            (println (list "Dog" 1 1.43 true))
+            => ("Dog" 1 1.43 true)
+            nth
+            list*
+            cons
+            ----
+            sets:
+            (println (set '(1 1 2)))
+            => #{1 2}
+            get
+            conj  #conjoin
+            contains?
+            disj  #=removing a value
+            ----
+            vectors:
+            (println (conj (vector 1 2 3 4)))
+            => [1 2 3 4]
+            pop
+            subvec
+            ----
+            maps: (dictionaries)
+            (println (hash-map "Name" "Derek" "Age" 42)))
+            => {"Age" 42, "Name" "Derek"}
+            sorted map:
+            (println (sorted-map "Name" "Derek" "Age" 42)))
+            get   #value
+            find  #
+            contains?
+            keys
+            vals
+            merge-with +
+            ----
+            atoms:   changeable variables
+            watch(ers??)
+            @atomEx
+            reset!
+            swap!
+              inc
+            ----
+            agents:  (able to change values via functions)
+            await-for
+            shutdown-agents
+            ----
+           math:
+            (mod 12 5)
+            Math/abs
+            Math/sqrt
+            Math/cbrt
+            Math/ceil
+            Math/floor
+            Math/exp
+            Math/hypot
+            Math/log
+            Math/log10
+            Math/max Math/min
+            Math/pow
+            Math/PI
+            (println (rand-int 20))
+            reduce + [1 2 3]
+            ----
+           functions:
+            (defn say-hello
+              "Prints name"
+              [name]
+              (println "Hello again" name)
+
+            (str "Hello " name)
+            map
+            ----
+            (use `tutorial.core :reload)
+            ----
+           flow control:
+            = not=  (+others like <, <= ...)
+            and or not
+            ----
+            if (>= age 18)
+              (do (println ...
+                  (println ...
+            when
+            cond
+              :else
+            ----
+            (while (<= @i x)
+              inc
+            dotimes   (=bit like a for loop
+            (loop
+              recur
+            doseq   (=bit like a for loop
+            ----
+           File-IO:
+            (use 'clojure.java.io)
+            with-open
+              wrtr
+              .write   #=Java
+            slurp
+            ----
+            (try
+            (catch Exception e (println "Error : " (.getMessage
+            ----
+            :append true
+            rdr  (+doseq)
+            [line (line-seq rdr)]
+            ----
+           destructuring:   (the binding of values in a data structure to symbols)
+             (defstruct Customer :Name :Phone)
+             struct
+           struct maps:
+             structmap
+            ----
+           let
+           [[one two & the-rest]  ]
+           ----
+           anonymous functions:
+            (map (fn [x] (* x x)) (range 1 10)
+           compact anon. funct:
+            (map #(* % 3) (range 1 10)
+            ----
+          Clojures:
+            ----
+          Filtering Lists:
+            take drop
+            take-while drop-while
+            filter
+            ----
+          Macros:
+            defmacro
+            `  just return (i.e. not evaluate)
+            ~cond  unquote
+            ~@body  unquote many
+
+https://clojure.org/api/cheatsheet
+Clojure 1.11 Cheat Sheet (v54)
+~/Dropbox/rsc/data/lists/ref/comp/lang/freq/clj.freq100.txt
+--
+~/Empire/Doks/Comp/lang/java/cloj/cheatsh-qref/cloj1.cheatsh.pdf
+            Clojure Cheat Sheet (Clojure 1.8 - 1.11, sheet v55)
+            Documentation
+            clojure.repl/
+
+            doc find-doc apropos dir source pst javadoc (foo.bar/ is namespace
+            for later syms)
+
+            Primitives
+            Numbers
+            Literals
+
+            Long: 7, hex 0xff, oct 017, base 2 2r1011, base 36 36rCRAZY BigInt:
+            7N Ratio: -22/7 Double: 2.78 -1.2e-5 BigDecimal: 4.2M
+            + - * / quot rem mod inc dec max min +’ -’ *’ inc’ dec’ (1.11) abs
+            (clojure.math/) floor-div floor-mod ceil floor rint round pow sqrt
+            cbrt E exp expm1 log log10 log1p PI sin cos tan asin acos atan atan2
+            == < > <= >= compare
+            bit-and bit-or bit-xor bit-not bit-flip bit-set
+            bit-shift-right bit-shift-left bit-and-not bit-clear bit-test
+            unsigned-bit-shift-right (see BigInteger for integers larger than Long)
+            byte short int long float double bigdec bigint num rationalize
+            biginteger
+            zero? pos? neg? even? odd? number? rational? integer? ratio?
+            decimal? float? (1.9) double? int? nat-int? neg-int? pos-int?
+            (1.11) NaN? infinite?
+            rand rand-int (1.11) (clojure.math/) random
+            with-precision
+            *unchecked-math* unchecked-add unchecked-dec unchecked-inc
+            unchecked-multiply unchecked-negate unchecked-subtract
+
+            Arithmetic
+
+            Compare
+            Bitwise
+
+            Cast
+            Test
+
+            Random
+            BigDecimal
+            Unchecked
+            Strings
+            Create
+            Use
+
+            Regex
+
+            Letters
+            Trim
+            Test
+
+            str format "a string" "escapes \b\f\n\t\r\" octal \377 hex \ucafe" See
+            also section IO/to string
+            count get subs compare (clojure.string/) join escape split split-lines
+            replace replace-first reverse index-of last-index-of (1.11) (clojure.core/)
+            parse-boolean parse-double parse-long parse-uuid
+#"pattern" re-find re-seq re-matches re-pattern re-matcher re-groups (clojure.string/) replace replace-first re-quote-replacement Note: \ in #"" is
+            not escape char. (re-pattern "\\s*\\d+") can be written #"\s*\d+"
+            (clojure.string/) capitalize lower-case upper-case
+            (clojure.string/) trim trim-newline triml trimr
+            string? (clojure.string/) blank? starts-with? ends-with? includes?
+
+            Other
+            Characters
+            Keywords
+            Symbols
+            Misc
+
+            char char? char-name-string char-escape-string literals: \a \newline
+            (more at link)
+            keyword keyword? find-keyword literals: :kw :my.name.space/kw
+            ::in-cur-namespace ::namespace-alias/kw
+            symbol symbol? gensym literals: my-sym my.ns/foo
+            literals: true false nil
+
+            Content tests
+            Capabilities
+            Type tests
+
+            count empty not-empty into conj (clojure.walk/) walk prewalk
+            prewalk-demo prewalk-replace postwalk postwalk-demo
+            postwalk-replace (1.9) bounded-count
+            distinct? empty? every? not-every? some not-any?
+            sequential? associative? sorted? counted? reversible?
+            coll? list? vector? set? map? seq? record? map-entry?
+
+            Lists (conj, pop, & peek at beginning)
+            Create
+            () list list*
+            Examine
+            first nth peek .indexOf .lastIndexOf
+            ‘Change’
+            cons conj rest pop
+            Vectors (conj, pop, & peek at end)
+            Create
+            [] vector vec vector-of mapv filterv
+            Examine
+            (my-vec idx) → ( nth my-vec idx) get peek .indexOf .lastIndexOf
+            ‘Change’
+            assoc assoc-in pop subvec replace conj rseq update update-in
+            Ops
+            reduce-kv
+            Sets
+            Create unsorted
+            Create sorted
+
+            Examine
+            ‘Change’
+            Set ops
+            Test
+            Sorted sets
+            Maps
+            Create unsorted
+            Create sorted
+
+            Examine
+            ‘Change’
+
+            Ops
+            Entry
+            Sorted maps
+
+            Transients (clojure.org/reference/transients)
+            Create
+            transient persistent!
+            Change
+            conj! pop! assoc! dissoc!
+            changes, never original!
+            Misc
+            Compare
+            Test
+
+#{} set hash-set
+            sorted-set sorted-set-by (clojure.data.avl/) sorted-set sorted-set-by
+            (ﬂatland.ordered.set/) ordered-set (clojure.data.int-map/) int-set
+            dense-int-set
+            (my-set item) → ( get my-set item) contains?
+            conj disj
+            (clojure.set/) union difference intersection select See also section Relations
+            (clojure.set/) subset? superset?
+            rseq subseq rsubseq
+            {} hash-map array-map zipmap bean frequencies group-by (clojure.set/) index
+            sorted-map sorted-map-by (clojure.data.avl/) sorted-map sorted-map-by
+            (ﬂatland.ordered.map/) ordered-map (clojure.data.priority-map/)
+            priority-map (ﬂatland.useful.map/) ordering-map (clojure.data.int-map/)
+            int-map
+            (my-map k) → ( get my-map k) also (:key my-map) → ( get my-map
+            :key) get-in contains? find keys vals
+            assoc assoc-in dissoc merge merge-with select-keys update
+            update-in (clojure.set/) rename-keys map-invert (1.11) (clojure.core/)
+            update-keys update-vals GitHub: Medley
+            reduce-kv
+            key val
+            rseq subseq rsubseq
+
+            Queues (conj at end, peek & pop from beginning)
+            Create
+            clojure.lang.PersistentQueue/EMPTY (no literal syntax or constructor
+            fn)
+            Examine
+            peek
+            ’Change’
+            conj pop
+
+            disj!
+
+            Note: always use return value for later
+
+            = identical? not= not compare clojure.data/diff
+            true? false? instance? nil? some?
+
+            Sequences
+            Creating a Lazy Seq
+            From collection
+            From producer fn
+            From constant
+            From other
+            From seq
+            Seq in, Seq out
+            Get shorter
+            Get longer
+            Tail-items
+            Head-items
+            ‘Change’
+            Rearrange
+            Process items
+            Using a Seq
+            Extract item
+            Construct coll
+            Pass to fn
+            Search
+            Force evaluation
+            Check for forced
+
+            seq vals keys rseq subseq rsubseq sequence
+            lazy-seq repeatedly iterate (1.11) iteration
+            repeat range
+            file-seq line-seq resultset-seq re-seq tree-seq xml-seq
+            iterator-seq enumeration-seq
+            keep keep-indexed
+
+            distinct filter remove take-nth for dedupe random-sample
+            cons conj concat lazy-cat mapcat cycle interleave interpose
+            rest nthrest next fnext nnext drop drop-while take-last for
+            take take-while butlast drop-last for
+            conj concat distinct flatten group-by partition partition-all
+            partition-by split-at split-with filter remove replace shuffle
+            reverse sort sort-by compare
+            map pmap map-indexed mapcat for replace seque
+
+            first second last rest next ffirst nfirst fnext nnext nth nthnext
+            rand-nth when-first max-key min-key
+            zipmap into reduce reductions set vec into-array to-array-2d mapv
+            filterv
+            apply
+            some filter
+            doseq dorun doall run!
+            realized?
+
+            Transducers (clojure.org/reference/transducers)
+            Oﬀ the shelf
+
+            Create your own
+            Use
+            Early termination
+
+            Collections
+            Collections
+            Generic ops
+
+            Relations (set of maps, each with same keys, aka rels)
+            Rel algebra
+            (clojure.set/) join select project union difference intersection index
+            rename
+
+            map mapcat filter remove take take-while take-nth drop
+            drop-while replace partition-by partition-all keep keep-indexed
+            map-indexed distinct interpose cat dedupe random-sample (1.9)
+            halt-when
+            completing ensure-reduced unreduced See
+            also
+            section
+            Concurrency/Volatiles
+            into sequence transduce eduction
+            reduced reduced? deref
+
+            Spec (rationale, guide)
+            Operations
+            Generator ops
+            Defn. & registry
+            Logical
+            Collection
+            Regex
+            Range
+            Other
+            Custom explain
+
+            valid? conform unform explain explain-data explain-str
+            explain-out form describe assert check-asserts check-asserts?
+            gen exercise exercise-fn
+            def fdef registry get-spec spec? spec with-gen
+            and or
+            coll-of map-of every every-kv keys merge
+            cat alt * + ? & keys*
+            int-in inst-in double-in int-in-range? inst-in-range?
+            nilable multi-spec fspec conformer
+            explain-printer *explain-out*
+
+            Predicates with test.check generators
+            Numbers
+            number? rational? integer? ratio? decimal? float? zero? (1.9)
+            double? int? nat-int? neg-int? pos-int?
+            Symbols,
+            keyword? symbol? (1.9) ident? qualified-ident? qualified-keyword?
+            keywords
+            qualified-symbol? simple-ident? simple-keyword? simple-symbol?
+            Other
+            string? true? false? nil? some? (1.9) boolean? bytes? inst?
+            scalars
+            uri? uuid?
+            Collections
+            list? map? set? vector? associative? coll? sequential? seq?
+            empty? (1.9) indexed? seqable?
+            Other
+            (1.9) any?
+
+            IO
+            to/from
+            ...
+            to *out*
+            to writer
+            to string
+            from *in*
+            from reader
+            from string
+            Open
+            Binary
+            Misc
+            Data readers
+            tap
+
+            spit slurp (to writer/from reader, Socket, string with ﬁle name, URI, etc.)
+            pr prn print printf println newline (clojure.pprint/) print-table
+            (clojure.pprint/) pprint cl-format also: (binding [*out* writer] ...)
+            format with-out-str pr-str prn-str print-str println-str
+            read-line (clojure.edn/) read (clojure.tools.reader.edn/) read
+            line-seq (clojure.edn/) read (clojure.tools.reader.edn/) read also:
+            (binding [*in* reader] ...) java.io.Reader
+            with-in-str (clojure.edn/) read-string (clojure.tools.reader.edn/)
+            read-string
+            with-open (clojure.java.io/) text: reader writer binary: input-stream
+            output-stream
+            (.write ostream byte-arr) (.read istream byte-arr)
+            java.io.OutputStream java.io.InputStream GitHub: gloss byte-spec
+            flush (.close s) file-seq *in* *out* *err* (clojure.java.io/) file copy
+            delete-file resource as-file as-url as-relative-path GitHub: fs
+            *data-readers* default-data-readers *default-data-reader-fn*
+            (1.10) tap> add-tap remove-tap
+
+            Functions
+            Create
+            Call
+            Test
+
+            fn defn defn- definline identity constantly memfn comp complement partial
+            juxt memoize fnil every-pred some-fn
+            apply -> ->> trampoline as-> cond-> cond->> some-> some->>
+            fn? ifn?
+
+            Abstractions (Clojure type selection ﬂowchart)
+            Protocols (clojure.org/reference/protocols)
+            Deﬁne
+            ( defprotocol Slicey (slice [at]))
+            Extend
+            ( extend-type String Slicey (slice [at] ...))
+            Extend null
+            ( extend-type nil Slicey (slice [_] nil))
+            Reify
+            ( reify Slicey (slice [at] ...))
+            Test
+            satisfies? extends?
+            Other
+            extend extend-protocol extenders
+            Records (clojure.org/reference/datatypes)
+            Deﬁne
+            ( defrecord Pair [h t])
+            Access
+            (:h (Pair. 1 2)) → 1
+            Create
+            Pair. ->Pair map->Pair
+            Test
+            record?
+            Types (clojure.org/reference/datatypes)
+            Deﬁne
+            ( deftype Pair [h t])
+            Access
+            (.h (Pair. 1 2)) → 1
+            Create
+            Pair. ->Pair
+            ( deftype Pair [h t]
+            Object
+            With methods
+            (toString [this] (str "<" h "," t ">")))
+            Multimethods (clojure.org/reference/multimethods)
+            Deﬁne
+            ( defmulti my-mm dispatch-fn)
+            Method deﬁne
+            ( defmethod my-mm :dispatch-value [args] ...)
+            Dispatch
+            get-method methods
+            Remove
+            remove-method remove-all-methods
+            Prefer
+            prefer-method prefers
+            Relation
+            derive underive isa? parents ancestors descendants make-hierarchy
+
+            Special Forms (clojure.org/reference/special_forms)
+            def if do let letfn quote var fn loop recur set! throw try monitor-enter
+            monitor-exit
+            Binding Forms /
+            (examples) let fn defn defmacro loop for doseq if-let when-let
+            Destructuring
+            if-some when-some
+
+            Vars and global environment (clojure.org/reference/vars)
+            Def variants
+            Interned vars
+            Var objects
+            Var validators
+
+            def defn defn- definline defmacro defmethod defmulti defonce
+            defrecord
+            declare intern binding find-var var
+            with-local-vars var-get var-set alter-var-root var? bound?
+            thread-bound?
+            set-validator! get-validator
+
+            Namespace
+            Current
+            Create/Switch
+            Add
+            Find
+            Examine
+            From symbol
+            Remove
+
+            *ns*
+            (tutorial) ns in-ns create-ns
+            alias def import intern refer
+            all-ns find-ns
+            ns-name ns-aliases ns-map ns-interns ns-publics ns-refers
+            ns-imports
+            resolve ns-resolve namespace the-ns (1.10) requiring-resolve
+            ns-unalias ns-unmap remove-ns
+
+            Loading
+            Load libs
+            List loaded
+            Load misc
+
+            (tutorial) require use import refer
+            loaded-libs
+            load load-file load-reader load-string
+
+            Concurrency
+            Datafy (article)
+            Datafy
+
+            (clojure.datafy/) datafy nav
+
+            Atoms
+            Futures
+            Threads
+
+            Macros
+            Create
+            Debug
+            Branch
+            Loop
+            Arrange
+            Scope
+            Lazy
+            Doc.
+
+            defmacro definline
+            macroexpand-1 macroexpand (clojure.walk/) macroexpand-all
+            and or when when-not when-let when-first if-not if-let cond condp case
+            when-some if-some
+            for doseq dotimes while
+            .. doto -> ->> as-> cond-> cond->> some-> some->>
+            binding locking time with-in-str with-local-vars with-open with-out-str
+            with-precision with-redefs with-redefs-fn
+            lazy-cat lazy-seq delay
+            assert comment doc
+
+            Special Characters (clojure.org/reference/reader, guide)
+            ,
+            ’
+            /
+            \
+            :
+            ;
+            ˆ
+            *foo*
+            @
+            ‘
+            foo#
+            ~
+            ~@
+            ->
+            ->>
+            >!!
+            (
+            [
+            {
+#’
+#"
+#{
+#(
+            %
+
+            <!!
+
+#?
+#?@
+
+#foo
+#:
+##
+            $
+            foo?
+            foo!
+            _
+#_
+
+            >!
+
+            <!
+
+            Comma reads as white space. Often used between map key/value pairs for
+            readability.
+            quote: ’form → ( quote form)
+            Namespace separator (see Primitives/Other section)
+            Character literal (see Primitives/Other section)
+            Keyword (see Primitives/Other section)
+            Single line comment
+            Metadata (see Metadata section)
+            ’earmuffs’ - convention to indicate dynamic vars, compiler
+            warns if not dynamic
+            Deref: @form → ( deref form)
+            Syntax-quote
+            ’auto-gensym’, consistently replaced with same auto-generated
+            symbol everywhere inside same ‘( ... )
+            Unquote
+            Unquote-splicing
+            ’thread first’ macro ->
+            ’thread last’ macro ->>
+            core.async channel macros >!! <!! >! <!
+            List literal (see Collections/Lists section)
+            Vector literal (see Collections/Vectors section)
+            Map literal (see Collections/Maps section)
+            Var-quote #’x → ( var x)
+#"p" reads as regex pattern p (see Strings/Regex section)
+            Set literal (see Collections/Sets section)
+            Anonymous function literal: #(...) → (fn [args] (...))
+            Anonymous function argument: %N is value of anonymous function
+            arg N. % short for %1. %& for rest args.
+            Reader conditional: #?(:clj x :cljs y) reads as x on JVM, y in
+            ClojureScript, nothing elsewhere. Other keys: :cljr :default
+            Splicing reader conditional: [1 #?@(:clj [x y] :cljs [w z])
+            3] reads as [1 x y 3] on JVM, [1 w z 3] in ClojureScript, [1 3]
+            elsewhere.
+            tagged literal e.g. #inst #uuid
+            map namespace syntax e.g. #:foo{:a 1 :b 2} is equal to {:foo/a
+            1 :foo/b 2}
+            (1.9) symbolic values: ##Inf ##-Inf ##NaN
+            JavaContainerClass$InnerClass
+            conventional ending for a predicate, e.g.: zero? vector?
+            instance? (unenforced)
+            conventional ending for an unsafe operation, e.g.: set! swap!
+            alter-meta! (unenforced)
+            conventional name for an unused value (unenforced)
+            Ignore next form
+
+            Volatiles
+            Misc
+
+            Refs and Transactions (clojure.org/reference/refs)
+            Create
+            ref
+            Examine
+            deref @ (@form → (deref form))
+            Transaction
+            sync dosync io!
+            In transaction
+            ensure ref-set alter commute
+            Validators
+            set-validator! get-validator
+            History
+            ref-history-count ref-min-history ref-max-history
+            Agents and Asynchronous Actions (clojure.org/reference/agents)
+            Create
+            agent
+            Examine
+            agent-error
+            Change state
+            send send-off restart-agent send-via set-agent-send-executor!
+            set-agent-send-off-executor!
+            Block waiting
+            await await-for
+            Ref validators
+            set-validator! get-validator
+            Watchers
+            add-watch remove-watch
+            Thread handling
+            shutdown-agents
+            Error
+            error-handler set-error-handler! error-mode set-error-mode!
+            Misc
+            *agent* release-pending-sends
+
+            Java Interoperation (clojure.org/reference/java_interop)
+            General
+
+            Cast
+            Exceptions
+
+            Arrays
+            Create
+
+            Use
+            Cast
+
+            General
+            Abbrevs
+            Common
+            Examples
+            On Vars
+
+            ˆ{:key1 val1 :key2 val2 ...}
+            ˆType → ˆ{:tag Type}, ˆ:key → ˆ{:key true}
+            ˆ:dynamic ˆ:private ˆ:doc ˆ:const
+            (defn ˆ:private ˆString my-fn ...)
+            (def ˆ:dynamic *dyn-var* val)
+            meta with-meta vary-meta alter-meta! reset-meta! doc find-doc test
+
+            .. doto Classname/ Classname. new bean comparator enumeration-seq
+            import iterator-seq memfn set! class class? bases supers type
+            gen-class gen-interface definterface
+            boolean byte short char int long float double bigdec bigint num cast
+            biginteger
+            throw try catch finally pst ex-info ex-data Throwable->map (1.9)
+            StackTraceElement->vec (1.10) ex-cause ex-message (clojure.main/)
+            ex-triage ex-str err->msg report-error
+
+            make-array object-array boolean-array byte-array short-array char-array
+            int-array long-array float-array double-array aclone to-array to-array-2d
+            into-array
+            aget aset aset-boolean aset-byte aset-short aset-char aset-int aset-long
+            aset-float aset-double alength amap areduce
+            booleans bytes shorts chars ints longs floats doubles
+
+            Proxy (Clojure type selection ﬂowchart)
+            Create
+            proxy get-proxy-class construct-proxy init-proxy
+            Misc
+            proxy-mappings proxy-super update-proxy
+            Zippers (clojure.zip/)
+            Create
+            zipper seq-zip vector-zip xml-zip
+            Get loc
+            up down left right leftmost rightmost
+            Get seq
+            lefts rights path children
+            ‘Change’
+            make-node replace edit insert-child insert-left insert-right
+            append-child remove
+            Move
+            next prev
+            Misc
+            root node branch? end?
+
+            Other
+            XML
+            REPL
+            Code
+
+            Metadata (clojure.org/reference/reader, special_forms)
+
+            atom swap! reset! compare-and-set! (1.9) swap-vals! reset-vals!
+            future future-call future-done? future-cancel future-cancelled?
+            future?
+            bound-fn bound-fn* get-thread-bindings push-thread-bindings
+            pop-thread-bindings thread-bound?
+            volatile! vreset! vswap! volatile?
+            locking pcalls pvalues pmap seque promise deliver
+
+            Misc
+            Browser
+            / Shell
+
+            clojure.xml/parse xml-seq
+            *1 *2 *3 *e *print-dup* *print-length* *print-level* *print-meta*
+            *print-readably*
+            *compile-files* *compile-path* *file* *warn-on-reflection* compile
+            loaded-libs test
+            eval force hash name *clojure-version* clojure-version
+            *command-line-args* (1.11) random-uuid
+            (clojure.java.browse/) browse-url (clojure.java.shell/) sh with-sh-dir
+            with-sh-env
+
+            
+~/Empire/Doks/Comp/lang/java/cloj/cheatsh-qref/cloj2.cheatsh.pdf
+            Clojure Cheat Sheet (Clojure 1.5 - 1.8, sheet v35)
+            Documentation
+            clojure.repl/
+
+            doc find-doc apropos dir source pst javadoc (foo.bar/ is
+            namespace for later syms)
+
+            Relations (set of maps, each with same keys, aka rels)
+            Rel algebra
+            (clojure.set/) join select project union difference intersection
+            index rename
+
+            Primitives
+            Numbers
+            Literals
+            Arithmetic
+            Compare
+            Bitwise
+
+            Cast
+            Test
+            Random
+            BigDecimal
+            Unchecked
+            Strings
+            Create
+            Use
+            Regex
+
+            Letters
+            Trim
+            Test
+
+            Queues (conj at end, peek & pop from beginning)
+            Create
+            clojure.lang.PersistentQueue/EMPTY (no literal syntax or
+            constructor fn)
+            Examine
+            peek
+            ’Change’
+            conj pop
+
+            Long: 7, hex 0xff, oct 017, base 2 2r1011, base 36 36rCRAZY
+            BigInt: 7N Ratio: -22/7 Double: 2.78 -1.2e-5 BigDecimal: 4.2M
+            + - * / quot rem mod inc dec max min +’ -’ *’ inc’ dec’
+            == < > <= >= compare
+            bit-and bit-or bit-xor bit-not bit-flip bit-set bit-shift-right
+            bit-shift-left bit-and-not bit-clear bit-test (1.6)
+            unsigned-bit-shift-right (see BigInteger for integers larger
+            than Long)
+            byte short int long float double bigdec bigint num rationalize
+            biginteger
+            zero? pos? neg? even? odd? number? rational? integer? ratio?
+            decimal? float?
+            rand rand-int
+            with-precision
+            *unchecked-math* unchecked-add unchecked-dec unchecked-inc
+            unchecked-multiply unchecked-negate unchecked-subtract
+
+            Transients (clojure.org/reference/transients)
+            Create
+            transient persistent!
+            Change
+            conj! pop! assoc! dissoc! disj! Note: always use return value for later
+            changes, never original!
+            Misc
+            Compare
+            Test
+
+            = identical? not= not compare clojure.data/diff
+            true? false? instance? nil? (1.6) some?
+
+            Sequences
+            Creating a Lazy Seq
+            From collection
+            From producer fn
+            From constant
+            From other
+            From seq
+
+            str format "a string" "escapes \b\f\n\t\r\" octal \377 hex \ucafe"
+            See also section IO/to string
+            count get subs compare (clojure.string/) join escape split split-lines
+            replace replace-first reverse (1.8) index-of last-index-of
+#"pattern" re-find re-seq re-matches re-pattern re-matcher re-groups
+            (clojure.string/) replace replace-first re-quote-replacement Note: \
+            in #"" is not escape char. (re-pattern "\\s*\\d+") can be written
+#"\s*\d+"
+            (clojure.string/) capitalize lower-case upper-case
+            (clojure.string/) trim trim-newline triml trimr
+            string? (clojure.string/) blank? (1.8) starts-with? ends-with?
+            includes?
+
+            Other
+            Characters
+            Keywords
+            Symbols
+            Misc
+
+            char char? char-name-string char-escape-string literals: \a
+            \newline (more at link)
+            keyword keyword? find-keyword literals: :kw :my.ns/kw ::in-cur-ns
+            symbol symbol? gensym literals: my-sym my.ns/foo
+            literals: true false nil
+
+            Collections
+            Collections
+            Generic ops
+
+            Content tests
+            Capabilities
+            Type tests
+
+            count empty not-empty into conj (clojure.walk/) walk prewalk
+            prewalk-demo prewalk-replace postwalk postwalk-demo
+            postwalk-replace
+            distinct? empty? every? not-every? some not-any?
+            sequential? associative? sorted? counted? reversible?
+            coll? list? vector? set? map? seq? (1.6) record? (1.8)
+            map-entry?
+
+            Vectors (conj, pop, & peek at end)
+            Create
+            [] vector vec vector-of mapv filterv (clojure.core.rrb-vector/) vector
+            vec vector-of
+            Examine
+            (my-vec idx) → ( nth my-vec idx) get peek .indexOf .lastIndexOf
+            ‘Change’
+            assoc assoc-in pop subvec replace conj rseq update-in (1.7) update
+            Ops
+            reduce-kv
+
+            Examine
+            ‘Change’
+            Set ops
+            Test
+            Sorted sets
+            Maps
+            Create unsorted
+            Create sorted
+
+            Examine
+            ‘Change’
+
+            Ops
+            Entry
+            Sorted maps
+
+            distinct filter remove take-nth for
+            cons conj concat lazy-cat mapcat cycle interleave interpose
+            rest nthrest next fnext nnext drop drop-while take-last for
+            take take-while butlast drop-last for
+            conj concat distinct flatten group-by partition partition-all
+            partition-by split-at split-with filter remove replace shuffle
+            reverse sort sort-by compare
+            map pmap map-indexed mapcat for replace seque
+
+            Rearrange
+            Process items
+            Using a Seq
+            Extract item
+
+            first second last rest next ffirst nfirst fnext nnext nth
+            nthnext rand-nth when-first max-key min-key
+            zipmap into reduce reductions set vec into-array to-array-2d
+            mapv filterv
+            apply
+            some filter
+            doseq dorun doall (1.7) run!
+            realized?
+
+            Construct coll
+            Pass to fn
+            Search
+            Force evaluation
+            Check for forced
+
+            Transducers (clojure.org/reference/transducers)
+
+            Lists (conj, pop, & peek at beginning)
+            Create
+            () list list*
+            Examine
+            first nth peek .indexOf .lastIndexOf
+            ‘Change’
+            cons conj rest pop
+
+            Sets
+            Create unsorted
+            Create sorted
+
+            Seq in, Seq out
+            Get shorter
+            Get longer
+            Tail-items
+            Head-items
+            ‘Change’
+
+            seq vals keys rseq subseq rsubseq sequence
+            lazy-seq repeatedly iterate
+            repeat range
+            file-seq line-seq resultset-seq re-seq tree-seq xml-seq
+            iterator-seq enumeration-seq
+            keep keep-indexed
+
+            Oﬀ the shelf
+
+            Create your own
+            Use
+            Early termination
+
+            map mapcat filter remove take take-while take-nth drop
+            drop-while replace partition-by partition-all keep
+            keep-indexed map-indexed distinct interpose (1.7) cat
+            dedupe random-sample
+            (1.7) completing ensure-reduced unreduced See also section Concurrency/Volatiles
+            into sequence (1.7) transduce eduction
+            reduced reduced? deref
+
+            Zippers (clojure.zip/)
+            Create
+            zipper seq-zip vector-zip xml-zip
+            Get loc
+            up down left right leftmost rightmost
+            Get seq
+            lefts rights path children
+            ‘Change’
+            make-node replace edit insert-child insert-left insert-right
+            append-child remove
+            Move
+            next prev
+            Misc
+            root node branch? end?
+
+            IO
+#{} set hash-set
+            sorted-set sorted-set-by (clojure.data.avl/) sorted-set
+            sorted-set-by (flatland.ordered.set/) ordered-set (clojure.data.intmap/) int-set dense-int-set
+            (my-set item) → ( get my-set item) contains?
+            conj disj
+            (clojure.set/) union difference intersection select See also section Relations
+            (clojure.set/) subset? superset?
+            rseq subseq rsubseq
+
+            to/from
+            ...
+            to *out*
+            to writer
+
+            {} hash-map array-map zipmap bean frequencies group-by (clojure.set/) index
+            sorted-map sorted-map-by (clojure.data.avl/) sorted-map
+            sorted-map-by (flatland.ordered.map/) ordered-map
+            (clojure.data.priority-map/) priority-map (flatland.useful.map/)
+            ordering-map (clojure.data.int-map/) int-map
+            (my-map k) → ( get my-map k) also (:key my-map) → ( get
+            my-map :key) get-in contains? find keys vals
+            assoc assoc-in dissoc merge merge-with select-keys update-in
+            (1.7) update (clojure.set/) rename-keys map-invert GitHub:
+            Medley
+            reduce-kv
+            key val
+            rseq subseq rsubseq
+
+            Binary
+
+            spit slurp (to writer/from reader, Socket, string with file name, URI, etc.)
+
+            to string
+            from *in*
+            from reader
+            from string
+            Open
+
+            Misc
+
+            Data readers
+
+            pr prn print printf println newline (clojure.pprint/) print-table
+            (clojure.pprint/) pprint cl-format also: (binding [*out* writer]
+            ...)
+            format with-out-str pr-str prn-str print-str println-str
+            read-line (clojure.tools.reader.edn/) read
+            line-seq (clojure.tools.reader.edn/) read also: (binding [*in*
+            reader] ...) java.io.Reader
+            with-in-str (clojure.tools.reader.edn/) read-string
+            with-open (clojure.java.io/) text: reader writer binary: input-stream
+            output-stream
+            (.write ostream byte-arr) (.read istream byte-arr)
+            java.io.OutputStream java.io.InputStream GitHub: gloss
+            byte-spec
+            flush (.close s) file-seq *in* *out* *err* (clojure.java.io/)
+            file copy delete-file resource as-file as-url as-relative-path
+            GitHub: fs
+            *data-readers* default-data-readers *default-data-reader-fn*
+
+            Functions
+            Create
+            Call
+            Test
+
+            fn defn defn- definline identity constantly memfn comp complement
+            partial juxt memoize fnil every-pred some-fn
+            apply -> ->> trampoline as-> cond-> cond->> some-> some->>
+            fn? ifn?
+
+            Abstractions (Clojure type selection flowchart)
+            Protocols (clojure.org/reference/protocols)
+            Define
+            ( defprotocol Slicey (slice [at]))
+            Extend
+            ( extend-type String Slicey (slice [at] ...))
+            Extend null
+            ( extend-type nil Slicey (slice [_] nil))
+            Reify
+            ( reify Slicey (slice [at] ...))
+            Test
+            satisfies? extends?
+            Other
+            extend extend-protocol extenders
+            Records (clojure.org/reference/datatypes)
+            Define
+            ( defrecord Pair [h t])
+            Access
+            (:h (Pair. 1 2)) → 1
+            Create
+            Pair. ->Pair map->Pair
+            Test
+            record?
+            Types (clojure.org/reference/datatypes)
+            Define
+            ( deftype Pair [h t])
+            Access
+            (.h (Pair. 1 2)) → 1
+            Create
+            Pair. ->Pair
+            ( deftype Pair [h t]
+            Object
+            With methods
+            (toString [this] (str "<" h "," t ">")))
+            Multimethods (clojure.org/reference/multimethods)
+            Define
+            ( defmulti my-mm dispatch-fn)
+            Method define
+            ( defmethod my-mm :dispatch-value [args] ...)
+            Dispatch
+            get-method methods
+            Remove
+            remove-method remove-all-methods
+            Prefer
+            prefer-method prefers
+            Relation
+            derive underive isa? parents ancestors descendants
+            make-hierarchy
+
+            Loop
+            Arrange
+            Scope
+            Lazy
+            Doc.
+
+            defmacro definline
+            macroexpand-1 macroexpand (clojure.walk/) macroexpand-all
+            and or when when-not when-let when-first if-not if-let cond condp
+            case (1.6) when-some if-some
+            for doseq dotimes while
+            .. doto -> ->> as-> cond-> cond->> some-> some->>
+            binding locking time with-in-str with-local-vars with-open
+            with-out-str with-precision with-redefs with-redefs-fn
+            lazy-cat lazy-seq delay
+            assert comment doc
+
+            Special Characters (clojure.org/reference/reader, tutorial)
+            ,
+            ’
+            /
+            \
+            :
+            ;
+            ˆ
+            *foo*
+            @
+            ‘
+            foo#
+            ~
+            ~@
+            ->
+            ->>
+            (
+            [
+            {
+#’
+#"
+#{
+#(
+            %
+#?
+#?@
+
+#foo
+            $
+            foo?
+            foo!
+            _
+#_
+
+            Comma reads as white space. Often used between map key/value pairs for readability.
+            quote: ’form → ( quote form)
+            Namespace separator (see Primitives/Other section)
+            Character literal (see Primitives/Other section)
+            Keyword (see Primitives/Other section)
+            Single line comment
+            Metadata (see Metadata section)
+            ’earmuffs’ - convention to indicate dynamic vars, compiler warns if
+            not dynamic
+            Deref: @form → ( deref form)
+            Syntax-quote
+            ’auto-gensym’, consistently replaced with same auto-generated symbol
+            everywhere inside same ‘( ... )
+            Unquote
+            Unquote-splicing
+            ’thread first’ macro ->
+            ’thread last’ macro ->>
+            List literal (see Collections/Lists section)
+            Vector literal (see Collections/Vectors section)
+            Map literal (see Collections/Maps section)
+            Var-quote #’x → ( var x)
+#"p" reads as regex pattern p (see Strings/Regex section)
+            Set literal (see Collections/Sets section)
+            Anonymous function literal: #(...) → (fn [args] (...))
+            Anonymous function argument: %N is value of anonymous function arg N.
+            % short for %1. %& for rest args.
+            (1.7) Reader conditional: #?(:clj x :cljs y) reads as x on JVM, y in
+            ClojureScript, nothing elsewhere. Other keys: :cljr :default
+            (1.7) Splicing reader conditional: [1 #?@(:clj [x y] :cljs [w z])
+            3] reads as [1 x y 3] on JVM, [1 w z 3] in ClojureScript, [1 3]
+            elsewhere.
+            tagged literal e.g. #inst #uuid
+            JavaContainerClass$InnerClass
+            conventional ending for a predicate, e.g.: zero? vector? instance?
+            (unenforced)
+            conventional ending for an unsafe operation, e.g.: set! swap!
+            alter-meta! (unenforced)
+            conventional name for an unused value (unenforced)
+            Ignore next form
+
+            Metadata (clojure.org/reference/reader, special_forms)
+            General
+            Abbrevs
+            Common
+            Examples
+            On Vars
+
+            def if do let letfn quote var fn loop recur set! throw try monitor-enter
+            monitor-exit
+            Binding Forms /
+            (examples) let fn defn defmacro loop for doseq if-let
+            Destructuring
+            when-let (1.6) if-some when-some
+
+            Vars and global environment (clojure.org/reference/vars)
+            Def variants
+            Interned vars
+            Var objects
+            Var validators
+
+            ˆ{:key1 val1 :key2 val2 ...}
+            ˆType → ˆ{:tag Type}, ˆ:key → ˆ{:key true}
+            ˆ:dynamic ˆ:private ˆ:doc ˆ:const
+            (defn ˆ:private ˆString my-fn ...)
+            (def ˆ:dynamic *dyn-var*
+            val)
+            meta with-meta vary-meta alter-meta! reset-meta! doc find-doc test
+
+            def defn defn- definline defmacro defmethod defmulti defonce
+            defrecord
+            declare intern binding find-var var
+            with-local-vars var-get var-set alter-var-root var? bound?
+            thread-bound?
+            set-validator! get-validator
+
+            Namespace
+            Current
+            Create/Switch
+            Add
+            Find
+            Examine
+            From symbol
+            Remove
+
+            *ns*
+            (tutorial) ns in-ns create-ns
+            alias def import intern refer
+            all-ns find-ns
+            ns-name ns-aliases ns-map ns-interns ns-publics ns-refers
+            ns-imports
+            resolve ns-resolve namespace the-ns
+            ns-unalias ns-unmap remove-ns
+
+            Loading
+            Load libs
+            List loaded
+            Load misc
+
+            (tutorial) require use import refer
+            loaded-libs
+            load load-file load-reader load-string
+
+            Concurrency
+            Atoms
+            Futures
+
+            Macros
+            Create
+            Debug
+            Branch
+
+            Special Forms (clojure.org/reference/special_forms)
+
+            Threads
+            Volatiles
+            Misc
+
+            atom swap! reset! compare-and-set!
+            future future-call future-done? future-cancel future-cancelled?
+            future?
+            bound-fn bound-fn* get-thread-bindings push-thread-bindings
+            pop-thread-bindings thread-bound?
+            (1.7) volatile! vreset! vswap! volatile?
+            locking pcalls pvalues pmap seque promise deliver
+
+            Refs and Transactions (clojure.org/reference/refs)
+            Create
+            ref
+            Examine
+            deref @ (@form → (deref form))
+            Transaction
+            sync dosync io!
+            In transaction
+            ensure ref-set alter commute
+            Validators
+            set-validator! get-validator
+            History
+            ref-history-count ref-min-history ref-max-history
+            Agents and Asynchronous Actions (clojure.org/reference/agents)
+            Create
+            agent
+            Examine
+            agent-error
+            Change state
+            send send-off restart-agent send-via
+            set-agent-send-executor! set-agent-send-off-executor!
+            Block waiting
+            await await-for
+            Ref validators
+            set-validator! get-validator
+            Watchers
+            add-watch remove-watch
+            Thread handling
+            shutdown-agents
+            Error
+            error-handler set-error-handler! error-mode set-error-mode!
+            Misc
+            *agent* release-pending-sends
+
+            Java Interoperation (clojure.org/reference/java_interop)
+            General
+
+            Cast
+            Exceptions
+            Arrays
+            Create
+
+            Use
+            Cast
+
+            .. doto Classname/ Classname. new bean comparator enumeration-seq
+            import iterator-seq memfn set! class class? bases supers type
+            gen-class gen-interface definterface
+            boolean byte short char int long float double bigdec bigint num
+            cast biginteger
+            throw try catch finally pst ex-info ex-data
+
+            make-array object-array boolean-array byte-array short-array
+            char-array int-array long-array float-array double-array aclone
+            to-array to-array-2d into-array
+            aget aset aset-boolean aset-byte aset-short aset-char aset-int
+            aset-long aset-float aset-double alength amap areduce
+            booleans bytes shorts chars ints longs floats doubles
+
+            Proxy (Clojure type selection flowchart)
+            Create
+            proxy get-proxy-class construct-proxy init-proxy
+            Misc
+            proxy-mappings proxy-super update-proxy
+
+            Other
+            XML
+            REPL
+            Code
+            Misc
+            Browser
+            / Shell
+
+            clojure.xml/parse xml-seq
+            *1 *2 *3 *e *print-dup* *print-length* *print-level* *print-meta*
+            *print-readably*
+            *compile-files* *compile-path* *file* *warn-on-reflection* compile
+            loaded-libs test
+            eval force hash name *clojure-version* clojure-version
+            *command-line-args*
+            (clojure.java.browse/) browse-url (clojure.java.shell/) sh with-sh-dir
+            with-sh-env
+
+            
+--
+~/Empire/Doks/Comp/lang/java/cloj/cloj_1.8-1.11.cheatsh.pdf
+            Documentation
+            clojure.repl/
+            doc find-doc apropos dir source pst javadoc (foo.bar/ is namespace for later syms)
+
+            Primitives
+            Numbers
+            Litera
+            Long: 7, hex 0xff, oct 017, base 2 2r1011, base 36 36rCRAZY BigInt: 7N Ratio: -22/7 Double: 2.78 -1.2e-5 BigDecimal: 4.2M
+            Arithmetic
+            + - * / quot rem mod inc dec max min +' -' *' inc' dec' (1.11) abs
+            Compare
+            == < > <= >= compare
+            Bitwise
+            bit-and bit-or bit-xor bit-not bit-flip bit-set bit-shift-right bit-shift-left bit-and-not bit-clear bit-test unsigned-bit-shift-right (see BigInteger for integers larger than Long)
+            Cast
+            byte short int long float double bigdec bigint num rationalize biginteger
+            Test
+            zero? pos? neg? even? odd? number? rational? integer? ratio? decimal? float? (1.9) double? int? nat-int? neg-int? pos-int? (1.11) NaN? infinite?
+            Random
+            rand rand-int
+            BigDecimal
+            with-precision
+            Unchecked
+            *unchecked-math* unchecked-add unchecked-dec unchecked-inc unchecked-multiply unchecked-negate unchecked-subtract
+            Strings
+            Create
+            str format "a string" "escapes \b\f\n\t\r\" octal \377 hex \ucafe" See also section IO/to string
+            Use
+            count get subs compare (clojure.string/) join escape split split-lines replace replace-first reverse index-of last-index-of (1.11) (clojure.core/) parse-boolean parse-double parse-long parse-uuid
+            Regex
+            #"pattern" re-find re-seq re-matches re-pattern re-matcher re-groups (clojure.string/) replace replace-first re-quote-replacement Note: \ in #"" is not escape char. (re-pattern "\\s*\\d+") can be written #"\s*\d+"
+            Letters
+            (clojure.string/) capitalize lower-case upper-case
+            Trim
+            (clojure.string/) trim trim-newline triml trimr
+            Test
+            string? (clojure.string/) blank? starts-with? ends-with? includes?
+            Other
+            Characters
+            char char? char-name-string char-escape-string literals: \a \newline (more at link)
+            Keywords
+            keyword keyword? find-keyword literals: :kw :my.name.space/kw ::in-cur-namespace ::namespace-alias/kw
+            Symbols
+            symbol symbol? gensym literals: my-sym my.ns/foo
+            Misc
+            literals: true false nil
+            Collections
+            Collections
+            Generic ops
+            count empty not-empty into conj (clojure.walk/) walk prewalk prewalk-demo prewalk-replace postwalk postwalk-demo postwalk-replace (1.9) bounded-count
+            Content tests
+            distinct? empty? every? not-every? some not-any?
+            Capabilities
+            sequential? associative? sorted? counted? reversible?
+            Type tests
+            coll? list? vector? set? map? seq? record? map-entry?
+            Lists (conj, pop, & peek at beginning)
+            Create
+            () list list*
+            Examine
+            first nth peek .indexOf .lastIndexOf
+            'Change'
+            cons conj rest pop
+            Vectors (conj, pop, & peek at end)
+            Create
+            [] vector vec vector-of mapv filterv
+            Examine
+            (my-vec idx) → ( nth my-vec idx) get peek .indexOf .lastIndexOf
+            'Change'
+            assoc assoc-in pop subvec replace conj rseq update update-in
+            Ops
+            reduce-kv
+            Sets
+            Create unsorted
+            #{} set hash-set
+            Create sorted
+            sorted-set sorted-set-by (clojure.data.avl/) sorted-set sorted-set-by (flatland.ordered.set/) ordered-set (clojure.data.int-map/) int-set dense-int-set
+            Examine
+            (my-set item) → ( get my-set item) contains?
+            'Change'
+            conj disj
+            Set ops
+            (clojure.set/) union difference intersection select See also section Relations
+            Test
+            (clojure.set/) subset? superset?
+            Sorted sets
+            rseq subseq rsubseq
+            Maps
+            Create unsorted
+            {} hash-map array-map zipmap bean frequencies group-by (clojure.set/) index
+            Create sorted
+            sorted-map sorted-map-by (clojure.data.avl/) sorted-map sorted-map-by (flatland.ordered.map/) ordered-map (clojure.data.priority-map/) priority-map (flatland.useful.map/) ordering-map (clojure.data.int-map/) int-map
+            Examine
+            (my-map k) → ( get my-map k) also (:key my-map) → ( get my-map :key) get-in contains? find keys vals
+            'Change'
+            assoc assoc-in dissoc merge merge-with select-keys update update-in (clojure.set/) rename-keys map-invert (1.11) (clojure.core/) update-keys update-vals GitHub: Medley
+            Ops
+            reduce-kv
+            Entry
+            key val
+            Sorted maps
+            rseq subseq rsubseq
+            Queues (conj at end, peek & pop from beginning)
+            Create
+            clojure.lang.PersistentQueue/EMPTY (no literal syntax or constructor fn)
+            Examine
+            peek
+            'Change'
+            conj pop
+            Relations (set of maps, each with same keys, aka rels)
+            Rel algebra
+            (clojure.set/) join select project union difference intersection index rename
+            Transients (clojure.org/reference/transients)
+            Create
+            transient persistent!
+            Change
+            conj! pop! assoc! dissoc! disj! Note: always use return value for later changes, never original!
+            Misc
+            Compare
+            = identical? not= not compare clojure.data/diff
+            Test
+            true? false? instance? nil? some?
+            Sequences
+            Creating a Lazy Seq
+            From collection
+            seq vals keys rseq subseq rsubseq sequence
+            From producer fn
+            lazy-seq repeatedly iterate (1.11) iteration
+            From constant
+            repeat range
+            From other
+            file-seq line-seq resultset-seq re-seq tree-seq xml-seq iterator-seq enumeration-seq
+            From seq
+            keep keep-indexed
+            Seq in, Seq out
+            Get shorter
+            distinct filter remove take-nth for dedupe random-sample
+            Get longer
+            cons conj concat lazy-cat mapcat cycle interleave interpose
+            Tail-items
+            rest nthrest next fnext nnext drop drop-while take-last for
+            Head-items
+            take take-while butlast drop-last for
+            'Change'
+            conj concat distinct flatten group-by partition partition-all partition-by split-at split-with filter remove replace shuffle
+            Rearrange
+            reverse sort sort-by compare
+            Process items
+            map pmap map-indexed mapcat for replace seque
+            Using a Seq
+            Extract item
+            first second last rest next ffirst nfirst fnext nnext nth nthnext rand-nth when-first max-key min-key
+            Construct coll
+            zipmap into reduce reductions set vec into-array to-array-2d mapv filterv
+            Pass to fn
+            apply
+            Search
+            some filter
+            Force evaluation
+            doseq dorun doall run!
+            Check for forced
+            realized?
+            Transducers (clojure.org/reference/transducers)
+            Off the shelf
+            map mapcat filter remove take take-while take-nth drop drop-while replace partition-by partition-all keep keep-indexed map-indexed distinct interpose cat dedupe random-sample (1.9) halt-when
+            Create your own
+            completing ensure-reduced unreduced See also section Concurrency/Volatiles
+            Use
+            into sequence transduce eduction
+            Early termination
+            reduced reduced? deref
+            Spec (rationale, guide)
+            Operations
+            valid? conform unform explain explain-data explain-str explain-out form describe assert check-asserts check-asserts?
+            Generator ops
+            gen exercise exercise-fn
+            Defn. & registry
+            def fdef registry get-spec spec? spec with-gen
+            Logical
+            and or
+            Collection
+            coll-of map-of every every-kv keys merge
+            Regex
+            cat alt * + ? & keys*
+            Range
+            int-in inst-in double-in int-in-range? inst-in-range?
+            Other
+            nilable multi-spec fspec conformer
+            Custom explain
+            explain-printer *explain-out*
+            Predicates with test.check generators
+            Numbers
+            number? rational? integer? ratio? decimal? float? zero? (1.9) double? int? nat-int? neg-int? pos-int?
+            Symbols, keywords
+            keyword? symbol? (1.9) ident? qualified-ident? qualified-keyword? qualified-symbol? simple-ident? simple-keyword? simple-symbol?
+            Other scalars
+            string? true? false? nil? some? (1.9) boolean? bytes? inst? uri? uuid?
+            Collections
+            list? map? set? vector? associative? coll? sequential? seq? empty? (1.9) indexed? seqable?
+            Other
+            (1.9) any?
+            IO
+            to/from ...
+            spit slurp (to writer/from reader, Socket, string with file name, URI, etc.)
+            to *out*
+            pr prn print printf println newline (clojure.pprint/) print-table
+            to writer
+            (clojure.pprint/) pprint cl-format also: (binding [*out* writer] ...)
+            to string
+            format with-out-str pr-str prn-str print-str println-str
+            from *in*
+            read-line (clojure.edn/) read (clojure.tools.reader.edn/) read
+            from reader
+            line-seq (clojure.edn/) read (clojure.tools.reader.edn/) read also: (binding [*in* reader] ...) java.io.Reader
+            from string
+            with-in-str (clojure.edn/) read-string (clojure.tools.reader.edn/) read-string
+            Open
+            with-open (clojure.java.io/) text: reader writer binary: input-stream output-stream
+            Binary
+            (.write ostream byte-arr) (.read istream byte-arr) java.io.OutputStream java.io.InputStream GitHub: gloss byte-spec
+            Misc
+            flush (.close s) file-seq *in* *out* *err* (clojure.java.io/) file copy delete-file resource as-file as-url as-relative-path GitHub: fs
+            Data readers
+            *data-readers* default-data-readers *default-data-reader-fn*
+            tap
+            (1.10) tap> add-tap remove-tap
+            Functions
+            Create
+            fn defn defn- definline identity constantly memfn comp complement partial juxt memoize fnil every-pred some-fn
+            Call
+            apply -> ->> trampoline as-> cond-> cond->> some-> some->>
+            Test
+            fn? ifn?
+            Abstractions (Clojure type selection flowchart)
+            Protocols (clojure.org/reference/protocols)
+            Define
+            ( defprotocol Slicey (slice [at]))
+            Extend
+            ( extend-type String Slicey (slice [at] ...))
+            Extend null
+            ( extend-type nil Slicey (slice [_] nil))
+            Reify
+            ( reify Slicey (slice [at] ...))
+            Test
+            satisfies? extends?
+            Other
+            extend extend-protocol extenders
+            Records (clojure.org/reference/datatypes)
+            Define
+            ( defrecord Pair [h t])
+            Access
+            (:h (Pair. 1 2)) → 1
+            Create
+            Pair. ->Pair map->Pair
+            Test
+            record?
+            Types (clojure.org/reference/datatypes)
+            Define
+            ( deftype Pair [h t])
+            Access
+            (.h (Pair. 1 2)) → 1
+            Create
+            Pair. ->Pair
+            With methods
+            ( deftype Pair [h t]
+                  Object
+                  (toString [this] (str "<" h "," t ">")))
+            Multimethods (clojure.org/reference/multimethods)
+            Define
+            ( defmulti my-mm dispatch-fn)
+            Method define
+            ( defmethod my-mm :dispatch-value [args] ...)
+            Dispatch
+            get-method methods
+            Remove
+            remove-method remove-all-methods
+            Prefer
+            prefer-method prefers
+            Relation
+            derive underive isa? parents ancestors descendants make-hierarchy
+            Datafy (article)
+            Datafy
+            (clojure.datafy/) datafy nav
+            Macros
+            Create
+            defmacro definline
+            Debug
+            macroexpand-1 macroexpand (clojure.walk/) macroexpand-all
+            Branch
+            and or when when-not when-let when-first if-not if-let cond condp case when-some if-some
+            Loop
+            for doseq dotimes while
+            Arrange
+            .. doto -> ->> as-> cond-> cond->> some-> some->>
+            Scope
+            binding locking time with-in-str with-local-vars with-open with-out-str with-precision with-redefs with-redefs-fn
+            Lazy
+            lazy-cat lazy-seq delay
+            Doc.
+            assert comment doc
+            Special Characters (clojure.org/reference/reader, guide)
+            ,
+            Comma reads as white space. Often used between map key/value pairs for readability.
+            '
+            quote: 'form → ( quote form)
+            /
+            Namespace separator (see Primitives/Other section)
+            \
+            Character literal (see Primitives/Other section)
+            :
+            Keyword (see Primitives/Other section)
+            ;
+            Single line comment
+            ^
+            Metadata (see Metadata section)
+            *foo*
+            'earmuffs' - convention to indicate dynamic vars, compiler warns if not dynamic
+            @
+            Deref: @form → ( deref form)
+            `
+            Syntax-quote
+            foo#
+            'auto-gensym', consistently replaced with same auto-generated symbol everywhere inside same `( ... )
+            ~
+            Unquote
+            ~@
+            Unquote-splicing
+            ->
+            'thread first' macro ->
+            ->>
+            'thread last' macro ->>
+            >!! <!! >! <!
+            core.async channel macros >!! <!! >! <!
+            (
+            List literal (see Collections/Lists section)
+            [
+            Vector literal (see Collections/Vectors section)
+            {   Map literal (see Collections/Maps section)
+            #'  Var-quote: #'x → ( var x)
+            #"  #"p" reads as regex pattern p (see Strings/Regex section)
+            #{  Set literal (see Collections/Sets section)
+            #(  Anonymous function literal: #(...) → (fn [args] (...))
+            %
+            Anonymous function argument: %N is value of anonymous function arg N. % short for %1. %& for rest args.
+            #?
+            Reader conditional: #?(:clj x :cljs y) reads as x on JVM, y in ClojureScript, nothing elsewhere. Other keys: :cljr :default
+            #?@
+            Splicing reader conditional: [1 #?@(:clj [x y] :cljs [w z]) 3] reads as [1 x y 3] on JVM, [1 w z 3] in ClojureScript, [1 3] elsewhere.
+            #foo
+            tagged literal e.g. #inst #uuid
+            #:
+            map namespace syntax e.g. #:foo{:a 1} is equal to {:foo/a 1}
+            ##
+            (1.9) symbolic values: ##Inf ##-Inf ##NaN
+            $
+            JavaContainerClass$InnerClass
+            foo?
+            conventional ending for a predicate, e.g.: zero? vector? instance? (unenforced)
+            foo!
+            conventional ending for an unsafe operation, e.g.: set! swap! alter-meta! (unenforced)
+            _
+            conventional name for an unused value (unenforced)
+            #_
+            Ignore next form
+            Metadata (clojure.org/reference/reader, special_forms)
+            General
+            ^{:key1 val1 :key2 val2 ...}
+            Abbrevs
+            ^Type → ^{:tag Type}
+            ^:key → ^{:key true}
+            Common
+            ^:dynamic ^:private ^:doc ^:const
+            Examples
+            (defn ^:private ^String my-fn ...)
+            (def ^:dynamic *dyn-var* val)
+            On Vars
+            meta with-meta vary-meta alter-meta! reset-meta! doc find-doc test
+            Special Forms (clojure.org/reference/special_forms)
+            def if do let letfn quote var fn loop recur set! throw try monitor-enter monitor-exit
+            Binding Forms / Destructuring
+            (examples) let fn defn defmacro loop for doseq if-let when-let if-some when-some
+            Vars and global environment (clojure.org/reference/vars)
+            Def variants
+            def defn defn- definline defmacro defmethod defmulti defonce defrecord
+            Interned vars
+            declare intern binding find-var var
+            Var objects
+            with-local-vars var-get var-set alter-var-root var? bound? thread-bound?
+            Var validators
+            set-validator! get-validator
+            Namespace
+            Current
+            *ns*
+            Create/Switch
+            (tutorial) ns in-ns create-ns
+            Add
+            alias def import intern refer
+            Find
+            all-ns find-ns
+            Examine
+            ns-name ns-aliases ns-map ns-interns ns-publics ns-refers ns-imports
+            From symbol
+            resolve ns-resolve namespace the-ns (1.10) requiring-resolve
+            Remove
+            ns-unalias ns-unmap remove-ns
+            Loading
+            Load libs
+            (tutorial) require use import refer
+            List loaded
+            loaded-libs
+            Load misc
+            load load-file load-reader load-string
+            Concurrency
+            Atoms
+            atom swap! reset! compare-and-set! (1.9) swap-vals! reset-vals!
+            Futures
+            future future-call future-done? future-cancel future-cancelled? future?
+            Threads
+            bound-fn bound-fn* get-thread-bindings push-thread-bindings pop-thread-bindings thread-bound?
+            Volatiles
+            volatile! vreset! vswap! volatile?
+            Misc
+            locking pcalls pvalues pmap seque promise deliver
+            Refs and Transactions (clojure.org/reference/refs)
+            Create
+            ref
+            Examine
+            deref @ (@form → (deref form))
+            Transaction
+            sync dosync io!
+            In transaction
+            ensure ref-set alter commute
+            Validators
+            set-validator! get-validator
+            History
+            ref-history-count ref-min-history ref-max-history
+            Agents and Asynchronous Actions (clojure.org/reference/agents)
+            Create
+            agent
+            Examine
+            agent-error
+            Change state
+            send send-off restart-agent send-via set-agent-send-executor! set-agent-send-off-executor!
+            Block waiting
+            await await-for
+            Ref validators
+            set-validator! get-validator
+            Watchers
+            add-watch remove-watch
+            Thread handling
+            shutdown-agents
+            Error
+            error-handler set-error-handler! error-mode set-error-mode!
+            Misc
+            *agent* release-pending-sends
+            Java Interoperation (clojure.org/reference/java_interop)
+            General
+            .. doto Classname/ Classname. new bean comparator enumeration-seq import iterator-seq memfn set! class class? bases supers type gen-class gen-interface definterface
+            Cast
+            boolean byte short char int long float double bigdec bigint num cast biginteger
+            Exceptions
+            throw try catch finally pst ex-info ex-data Throwable->map (1.9) StackTraceElement->vec (1.10) ex-cause ex-message (clojure.main/) ex-triage ex-str err->msg report-error
+            Arrays
+            Create
+            make-array object-array boolean-array byte-array short-array char-array int-array long-array float-array double-array aclone to-array to-array-2d into-array
+            Use
+            aget aset aset-boolean aset-byte aset-short aset-char aset-int aset-long aset-float aset-double alength amap areduce
+            Cast
+            booleans bytes shorts chars ints longs floats doubles
+            Proxy (Clojure type selection flowchart)
+            Create
+            proxy get-proxy-class construct-proxy init-proxy
+            Misc
+            proxy-mappings proxy-super update-proxy
+            Zippers (clojure.zip/)
+            Create
+            zipper seq-zip vector-zip xml-zip
+            Get loc
+            up down left right leftmost rightmost
+            Get seq
+            lefts rights path children
+            'Change'
+            make-node replace edit insert-child insert-left insert-right append-child remove
+            Move
+            next prev
+            Misc
+            root node branch? end?
+            Other
+            XML
+            clojure.xml/parse xml-seq
+            REPL
+            *1 *2 *3 *e *print-dup* *print-length* *print-level* *print-meta* *print-readably*
+            Code
+            *compile-files* *compile-path* *file* *warn-on-reflection* compile loaded-libs test
+            Misc
+            eval force hash name *clojure-version* clojure-version *command-line-args* (1.11) random-uuid
+            Browser / Shell
+            (clojure.java.browse/) browse-url (clojure.java.shell/) sh with-sh-dir with-sh-env
+            Community
+            Resources
+            Contributing
+            Companies
+            Site
+            Legal
+            License
+            Privacy Policy
+            Documentation
+            Overview
+            Reference
+            API
+            Guides
+            Libraries & Tools
+            Updates
+            News
+            Events
+            ETC
+            ClojureTV
+            Books
+            Swag
+            Code
+            Releases
+            Source
+            ClojureScript
+            ClojureCLR
+            Copyright 2008-2022 Rich Hickey | Privacy Policy
+                 
+            Published 2022-09-08
+            Logo & site design by Tom Hickey
+            Update this page
+
+~/Empire/Doks/Comp/lang/java/cloj/clojcb_2014.txt  2014
+    TODO =INPUT(!)
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/clojurecb.txt
+            1. Live Programming with Clojure
+                REPL up!
+                Working with primitive data types
+                    Using numbers
+                    Using strings and characters
+                    Using booleans and nil
+                    Using symbols and keywords
+                Using bindings of vars, conditions, loops, and error handling
+                    def and let
+                    if and if-not
+                    when and when-not
+                    case and cond
+                    do and dotimes
+                    loop and recur
+                    try... catch... throw
+                Using and defining functions
+                    Defining simple functions
+                    Defining variadic functions
+                    Defining multiple arity functions
+                    Defining functions that specify arguments using a keyword
+                    Defining functions with pre-condition and post-condition
+                Using third-party libraries
+                    Adding the JAR file manually to your classpath
+                    Using Leiningen and a project.clj file
+                    Viewing dependencies
+                    one-off
+                    New dependencies at runtime
+                Using namespaces
+                    Creating a new namespace
+                    Inspecting namespaces
+                    Adding functions with :import and :refer
+                    Loading namespaces from files
+                    Reloading namespaces
+                    How to organize namespaces
+                    --
+                    Namespace for public API
+                    tools.namespace
+            2. Interacting with Collections
+                Clojure collections and their basic functions
+                    Lists
+                    Vectors
+                    Maps
+                    Sets
+                    --
+                    Clojure collections
+                    Differences between lists and vectors
+                    Clojure is immutable
+                    --
+                    Converting collections between different types
+                    Using distinct
+                Accessing and updating elements from collections
+                    Accessing collections using the nth function
+                    Accessing maps or sets using get
+                    Maps, sets and keywords are functions to access collections
+                    Accessing a collection using second, next, ffirst, and nfirst
+                    Using update to update collections
+                    --
+                    Using get for vectors
+                    Using collections as keys in maps
+                    Wane-eatt
+                    Using assoc-in
+                    Using update-in
+                Filtering elements from collections
+                    Filtering multiples of three
+                    Filtering items of a map
+                    Filtering non-nil values
+                    Removing odd values from a sequence
+                    Using keep
+                    Using keep-indexed
+                    --
+                    Filter as a transducer
+                    Filtering with core.async
+                Transforming and sorting collections
+                    Using built-in sort
+                    Migrating to sort-by
+                    LOR Tet aela ees
+                    Working with sorted collection subsets
+                    Sorting Clojure maps
+                    Sorted map structure
+                    Are you sorted yet?
+                    --
+                    Sorting lines of a file
+                Merging and splitting collections
+                    Using merge and merge-with for merging
+                    The zipmap merges keys and values for maps
+                    Using interleave
+                    Using split-at and split-with to split collections
+                    --
+                    Using group-by to split collections
+                    Using the filter function to split collections
+                How to become lazy
+                    The iterate function
+                    Realized?
+                    Random sequences with repeatedly
+                    Using the macro lazy-seq
+                    --
+                    Other lazy-seq-producing functions
+                    Force evaluation with doall
+                    Lazy evaluation with files
+                    The map function and calling rest
+            3. Clojure Next
+                Using destructuring techniques
+                    Sequential destructuring
+                    Using map destructuring
+                    --
+                    Sequential destructuring for string
+                    Conditional destructing with core.match
+                Using functional programming style
+                    Functions taking functions as their arguments
+                        map
+                        reduce
+                        apply
+                Using anonymous functions
+                    Anonymous functions using fn
+                    Using function literals to define anonymous functions
+                Functions returning functions
+                    constantly
+                    complement
+                    partial
+                    comp
+                    every-pred and some-fn
+                    --
+                    Clojure functions are first-class functions
+                    Pure functions
+                    --
+                    reduce and apply
+                    loop and recur
+                Using threading macros
+                    Introducing the -> macro
+                    Introducing the ->> macro
+                    Introducing the cond-> and the cond->> macros
+                    Introducing some-> and some->>
+                    --
+                    Introducing as->
+                    Flambo preview
+                Defining simple macros
+                    Your first macro
+                    Your second macro
+                    --
+                    Using quotes
+                    Macros everywhere
+                Defining more advanced macros
+                    Tracking when code was started
+                    Logging a message with macro
+                    --
+                    deftest
+                Using protocols
+                    Defining a record
+                    Defining a type
+                    Defining a protocol
+                    --
+                    Records and types are Java classes
+                    Differentiating between records and types
+                Defining multimethods
+                        Defining a multimethod
+                Transducers for dummies
+                    Composable functions
+                    Inserting elements
+                    Writing your own transducers
+                        Short circuit
+                    --
+                    Transducers with core.async
+                    Summing things up
+                Logic programming in Clojure
+                    Baby logic steps
+                    Getting to know the "o" vocabulary
+                        conso: check for vector association
+                        resto: check for the rest of a vector
+                        membero
+                        appendo: appending list
+                        conde
+                        Matche
+                    Beginner logic
+                        Keeping fresh
+                        Finding only one result
+                    Mature logic
+                        Range of values
+                        --
+                        Generating data
+                        Generating more data with more logic variables
+                        Using a project
+                        Validating the results of a function
+                        Working with external data
+            4. File Access and the Network
+                Manipulating files and directories
+                    spit and slurp
+                    Reader and writer with with-open
+                    Creating a file and directory
+                    Copying a file
+                    Deleting a file and a directory
+                    Listing files and directories in a directory
+                    --
+                    slurp and spit
+                    with-open macro
+                    --
+                    Reading HTTP resource
+                    Examining the source code
+                Manipulating various formats of files - XML, JSON, YAML, and EDN
+                    XML
+                    JSON
+                    YAML isn't a markup language
+                    MessagePack, Clojure library
+                    --
+                    Extensible Data Notation
+                Making use of Clojure HTTP client
+                    --
+                    async HTTP and core async
+                Using queues and topics in the RabbitMQ
+                    Installing RabbitMQ
+                    --
+                    Producing hello world messages and consuming them
+                        Declaring the namespace and loading Langohr libraries and IP address of the Docker container
+                        Defining a producer function
+                        Defining a message handler and consumer
+                        Testing producer and consumer
+                    Using blocking consumer
+                        Connect to broker and open channel
+                            Declaring queue
+                            Producing messages
+                            --
+                            Consumer messages
+                            Defining message handler
+                            Using fanout exchange
+                                fanout-producer
+                                fanout-consumer
+                                Running the fanout consumers
+                                Testing fanout consumers
+                            Using topic exchange
+                                Topic-publisher
+                                Topic-consumer
+                                Running the topic consumers
+                                Testing the topic consumers
+                Using Kafka
+                    Downloading Kafka 0.8.2.2
+                    Start ZooKeeper and Kafka server
+                    Create topic
+                    Run a console consumer
+                    Using clj-kafka
+                    --
+                    Declaring the namespace and load Clojure library
+                    Producing messages
+                    Consuming messages
+                    --
+                    Producing messages
+                    Consuming messages
+                    --
+                    Creating a new topic
+                Using MQTT
+                    Installing the MQTT broker
+                        MQTT graphical client
+                        Send our first MQTT message
+                        Getting some Clojure
+                Streaming access to provide high performance
+                    Streaming out
+                    Streaming in
+                    Streaming with line-seq
+                Using Apache Camel to connect everything
+                    Importing Camel classes
+                    Your first ride on Camel with Clojure
+                    Writing more Clojure idiomatic code with Camel
+            5. Working with Other Languages
+                Calling Java methods and accessing Java objects from Clojure
+                    Instantiating objects
+                    Calling instance methods
+                    Calling class methods
+                    Accessing instance fields
+                    Accessing class fields
+                    Accessing inner classes
+                    Referencing classes
+                    Using arrays
+                    --
+                    Summary of how Clojure accesses Java methods and objects
+                    Clojure does not inherit Java's checked exception
+                    Summary of array accesses
+                    Print strings of Java's primitives
+                    --
+                    Chained calls with the double-dot macro
+                    Using the doto macro
+                    Using reflections
+                Extending Java superclasses and implementing Java interfaces
+                    Using proxy
+                    Using reify for implementing interfaces
+                    --
+                    Defining anonymous classes in Clojure
+                    Using annotations
+                Calling Clojure from Java
+                    Defining a simple named class using gen-class
+                    Defining a class with instance methods and constructors in Clojure
+                    Creating a JAR file callable from Java
+                    --
+                    The project.clj for generating Java classes
+                    AQT compilation
+                    --
+                    Defining an interface and implementing a class callable from Java
+                    Using Maven for Clojure and Java projects
+                Calling Scala from Clojure
+                    Using Leiningen to develop Scala and Clojure
+                        Importing Scala classes
+                        Calling instance methods
+                        Calling singleton methods
+                        Accessing tuples
+                        Accessing Scala fields
+                    Using SBT
+                        Creating an SBT-based project
+                        Writing source code
+                ClojureCLR
+                    Installing Visual Code Studio and creating a project
+                    Installing Mono Studio IDE
+                    Lein CLR
+                    --
+                    Calling .NET code from Clojure
+                        Starting an REPL
+                        Working with lO
+                        Parsing some XML using C# code
+                        Calling a REST API using Clojure/C#
+                        UI Prototyping
+                        Putting it all together
+                        --
+                        Compiling Clojure code for .NET
+                            Adding Clojure code to a Visual Studio project
+                            Running Clojure code using Clojure.RT
+                            Using Xamarin Mono Studio
+                ClojureScript
+                    Autocompiling your code
+                    Fibonacci'ed
+                    Interacting with JavaScript
+                    Using jQuery from ClojureScript
+                    Creating a ClojureScript library
+                    Using a third-party library
+                    --
+                    Running in the REPL
+                    Compiling code for both Clojure and ClojureScript
+            6. Concurrency and Parallelism
+                Solving concurrent problems using Clojure
+                    Using atoms
+                        Creating and referring atom
+                        Updating atom
+                        Using validator
+                        Using CAS operation
+                    Software Transactional Memory using ref and dosync
+                        Creating ref
+                        Updating refs using alter
+                        Using ensure
+                        Using watcher and a refined transaction code
+                        Using commute
+                    Using agents
+                        Creating agents
+                        Updating agents
+                    --
+                    Summary of three reference types in Clojure
+                        Coordinated /uncoordinated
+                        Synchronous/asynchronous
+                    How STM works in Clojure
+                    Alter and commute
+                    --
+                    promise and deliver
+                    pmap, pcalls, and pvalues
+                        pcalls
+                        pvalues
+                Distributed actor-based dev with Akka
+                    Your first okku
+                    Creating actors
+                    Dispatching messages
+                    --
+                    Actor system
+                    Understanding actors
+                    --
+                    Calling remote actors
+                    Request and reply
+                Using Spyglass and Couchbase to share state between JVMs
+                    Setting up dependencies in project.clj
+                    Setting up Couchbase Server as a Memcached server
+                    Using docker-compose to start Couchbase Server
+                        Creating a directory and a file for docker-compose
+                        Start Couchbase cluster
+                        Check if Docker processes are running
+                    Summary of Couchbase cluster
+                    Using Couchbase web administrator console
+                        Logging into the web console
+                        Adding nodes to the cluster
+                        Adding Cluster
+                        Defining Memcached bucket
+                    --
+                    Defining to use Spyglass library
+                    Connecting server
+                    Set values
+                    Get values from another REPL
+                    Testing time to live
+                    Disconnecting
+                    --
+                    What is Memcached?
+                    Access Memcached from Telnet
+                    Couchbase Server
+                    --
+                    Using get-multi
+                    Using async-get
+                    Using CAS operations
+                Reactive programming with meltdown
+                    Defining a reactor
+                    Sending a message to a reactor
+                    Going the sync way
+                    --
+                    Selectors
+                    Streams
+                    Streams and reduce
+                    Combining functions with a graph
+                    Custom streams
+                Bridging core.async
+                    Memories - reviewing core.async basics
+                    Pub/sub
+                    --
+                    Async socket server
+                    Async socket client
+                    Chiming
+                    --
+                    Client to Python WebSockets
+                    Clojure WebSocket server
+                On Quasar/Pulsar
+                    Watching over other actors lifecycles
+                    State of an actor
+                    --
+                    Blazar
+            7. Advanced Tips
+                Hacking the Clojure code
+                Using Reader Conditionals, compile to Clojure, and ClojureScript
+                    Your first Reader Conditional
+                    Using Reader Conditionals in namespaces
+                    --
+                    The form of Reader Conditionals and Splice macros
+                    Macros in ClojureScript
+                    --
+                    Building an application for Clojure and ClojureScript
+                        Adding a cljc file for demonstrating Quail
+                        Testing cljc code in both Clojure and ClojureScript
+                        Building and running a demo
+                Real-time shared development with an REPL
+                    Shared REPLs
+                    Using Atom and proto-repl
+                    Using an embedded NREPL
+                    --
+                    Custom REPL using Java interop
+                        Server
+                        Client
+                    The async custom REPL server
+                    Server REPL or more on real-time work on production code
+                Declarative data descriptions and validations with plumatic/schema
+                    My first schema
+                    Using schema for records and other types
+                    Defining functions with validations
+                    --
+                    Performance considerations
+                    Generating test data
+                    --
+                    Data coercion with prismatic/schema
+                    Using core.typed
+                    core.spec
+            8. Web Applications
+                Clojure with Vaadin - easy web widgets
+                    Project settings
+                    The Clojure/Vaadin flow
+                    --
+                    Using the Calendar widget
+                    Reacting to events
+                    Clicking a button
+                    Using and reloading namespaces
+                    Server-side push
+                    --
+                    Reactive Vaadin - ideas
+                    Reactive Vaadin - CPU monitoring
+                    Reactive Vaadin - Telegram on Raspberry Pi
+                    Deployment bonus
+                Quickly create a REST API with Liberator
+                    Your first Liberator
+                    Using defresource
+                    Parameterized resources
+                    Defining GET/POST/PUT/DELETE methods for REST APIs
+                    --
+                    Methods and status codes of HTTP
+                    Tracing requests
+                    --
+                    Persistent REST resources using clojure.java.jdbc
+                        Preparing for jdbc
+                        Our service spec
+                        Creating a product table and defining access functions
+                        Defining resources and starting a server
+                        Accessing from an HTTP client
+                Working with Immutant - reusing infrastructure
+                    Simple messaging with Artemis
+                    Remote messaging
+                    Remote procedure call with queues
+                    Scheduling code execution
+                    Piping and defining data transformation pipelines
+                    Using WebSockets made easy
+                    --
+                    Packaging as standalone
+                    Packaging as a deployable web archive (WAR file)
+                Developing with om.next, the next-generation ClojureScript library
+                    Creating a new project for om.next
+                    Updating the om version
+                    Tips for dependencies
+                    Starting figwheel
+                    --
+                    Getting started with om.next
+                    Using states
+                    --
+                    React fundamentals
+                        defui
+                        reconciler
+                    Life cycle of components
+                    Task list using om.next
+                        Defining the namespace and libraries to use
+                        Defining state
+                        Defining read
+                        Defining mutate
+                        Defining UIs
+            9. Testing
+                    Behavior-driven development
+                    Dependencies
+                        The first feature
+                        Designing a folder structure to organize features
+                    --
+                    Many assumptions with tables
+                    Reading assumptions from a CSV file
+                    Doing it with Excel
+                    Doing it with web APIs and MongoDB
+                    --
+                    VirtualBox
+                    Freactive
+                    Flambo, or BDD meets Apache Spark
+                    EEP for BDD
+                    OpenCV
+                Testing with random inputs and pattern-based testing
+                    Libraries
+                    Generating random values or groups of values
+                    Random values based on schema
+                    --
+                    Your first test.check specification
+                    Auto-running tests
+                    More specifications and generators
+                    Generators and de-structuring
+                    Herbert
+                Benchmarking with Criterium, performance tips, and other tools
+                    Using Criterium
+                    --
+                    Type hints
+                    Maps versus records versus types
+                    Primitive arrays
+                    Working with transient data structures
+                    Memoize functions
+                    --
+                    Logging with timbre and profiling with tufte
+                    Using jvisualvm
+            10. Deployment and DevOps
+                Riemann - monitoring deliverance and slacking
+                    Installing the Riemann service
+                    Configuring the Riemann daemon
+                    The Riemann dashboard
+                    Riemann-health
+                    Just enough dashboard configuration
+                    Preparing to send events
+                    --
+                    Basic event reporting for a service
+                    Expiring events
+                    --
+                    From Riemann to Slack webhooks
+                    From Slack bots to Riemann
+                Deploying Clojure with Docker
+                    Installing Docker on OS X or Windows
+                    Installing Docker on Debian
+                    Packaging the application into a JAR file
+                    Creating the Docker container
+                    --
+                    Connecting directly to a remote Docker
+                    --
+                    Clojure on Amazon Web Services
+                        Signing up on AWS
+                        Getting the access key and secret access key
+                        Setting up dependencies in your project.clj
+                    --
+                    Using EC_2
+                    Using $3
+                    Using Amazon SQS
+                    Serverless Clojure with AWS Lambda
+                        Clojure namespace helloworld
+                        Hello World - the AWS part
+                        Hello Stream
+                        Real-world Lambdas
+                    --
+                    What is Amazon EC2?
+                    Amazon S3
+                        Buckets and keys
+                        Objects
+clojurerecip
+~/Empire/Doks/Comp/lang/java/cloj/clojrecip.txt
+    TODO =INPUT(!)
+
+.
+            ~/Empire/Doks/Comp/lang/java/cloj/clojlearn-riptuts.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/jcloj-2e.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/cloj-action.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/getting-clojure2.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojcb.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojelems.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojliving.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojpragm.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojquick_2017.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/cloj-progr-2e.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojrecip.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojurecb.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/clojure-realworld.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/Getting Clojure - Russ Olsen.pdf
+            ~/Empire/Doks/Comp/lang/java/cloj/practical_clojure.txt
+            ~/Empire/Doks/Comp/lang/java/cloj/programming-clojure.txt
+~/Empire/Doks/Comp/lang/java/cloj/getting-clojure_2022.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojelems_2019.txt
+~/Empire/Doks/Comp/lang/java/cloj/getting-clojure2_2018.txt
+~/Empire/Doks/Comp/lang/java/cloj/programming-clojure_2018.txt
+~/Empire/Doks/Comp/lang/java/cloj/microservices-with-clojure_2018.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojquick_2017.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojway_2017.spa.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojrecip.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojrecip-toc.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojurecb.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-workshop.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-action_2016.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-forjavadevs_2016.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojlearn-riptuts_2016.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojprof_2016.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojliving_2015.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojpragm_2015.txt
+~/Empire/Doks/Comp/lang/java/cloj/jcloj-2e_2014.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojcb_2014.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-progr-2e_2012.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojure-realworld_2012.txt
+~/Empire/Doks/Comp/lang/java/cloj/practical_clojure_2010.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-pract_2010.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-progr_2009.txt
+~/Empire/Doks/Comp/lang/java/cloj/cloj-hiperf.txt
+~/Empire/Doks/Comp/lang/java/cloj/clojure.mini.txt
+
+    https://cljs.info/cheatsheet/
+    https://github.com/readevalprintlove/clojurescript-cheatsheet
+ClojureScript Cheatsheet
+            Basics
+            Basics
+            Define	defdefndefn-letletfndeclarens
+            Branch	ifif-notwhenwhen-notwhen-letwhen-firstif-letcondcondpcasewhen-someif-some
+            Compare	=not=andornotidentical?compare
+            Loop	mapmap-indexedreducefordoseqdotimeswhile
+            Test	true?false?instance?nil?some?
+            #( ) Functions
+            Create	
+            #(...) → (fn [args] (...))
+            fndefndefn-identityconstantlycompcomplementpartialjuxtmemoizefnilevery-predsome-fn
+            Call	apply->->>as->cond->cond->>some->some->>
+            Test	fn?ifn?
+            Numbers
+            Literals	73.14-1.2e30x0000ff
+            Arithmetic	+-*/quotremmodincdecmaxmin
+            Compare	===not=<><=>=compare
+            Cast	int
+            Test	zero?pos?neg?even?odd?number?integer?
+            Random	randrand-int
+            " " Strings
+            Create	"abc"strname
+            Use	(.-length my-str)countgetsubs(clojure.string/)joinescapesplitsplit-linesreplacereplace-firstreverse
+            Regex	#"pattern"re-findre-seqre-matchesre-pattern(clojure.string/)replacereplace-first
+            Letters	(clojure.string/)capitalizelower-caseupper-case
+            Trim	(clojure.string/)trimtrim-newlinetrimltrimr
+            Test	charstring?(clojure.string/)includes?blank?
+            Atoms / State
+            Create	atom
+            Get Value	@my-atom → (deref my-atom)
+            Set Value	swap!reset!compare-and-set!
+            Watch	add-watchremove-watch
+            Validators	set-validator!get-validator
+            JavaScript Interop
+            Create Object	#js {}js-obj
+            Create Array	#js []arraymake-arrayaclone
+            Get Property	
+            (.-innerHTML el)
+            Using cljs-oops library:
+            (oget el "innerHTML")
+            Set Property	
+            (set! (.-innerHTML el) "Hi!")
+            Using cljs-oops library:
+            (oset! el "innerHTML" "Hi!")
+            Delete Property	js-delete
+            Convert Between	clj->jsjs->clj
+            Type Tests	array?fn?number?object?string?
+            Exceptions	trycatchfinallythrow
+            External Library	
+            (js/alert "Hello world!")
+            (js/console.log my-obj)
+            (.html (js/jQuery "#myDiv") "Hi!")
+            Collections
+            Collections
+            General	countemptynot-emptyintoconj
+            Content Tests	distinct?empty?every?not-every?somenot-any?
+            Capabilities	sequential?associative?sorted?counted?reversible?
+            Type Tests	coll?list?vector?set?map?seq?
+            ( ) Lists
+            Create	'()listlist*
+            Examine	firstnthpeek
+            'Change'	consconjrestpop
+            [ ] Vectors
+            Create	[]vectorvec
+            Examine	
+            (my-vec idx) → (nth my-vec idx)
+            getpeek
+            'Change'	assocpopsubvecreplaceconjrseq
+            Loop	mapvfiltervreduce-kv
+            #{ } Sets
+            Create	#{}sethash-setsorted-setsorted-set-by
+            Examine	
+            (my-set itm) → (get my-set itm)
+            contains?
+            'Change'	conjdisj
+            Set Ops	(clojure.set/)uniondifferenceintersectionselect
+            Test	(clojure.set/)subset?superset?
+            { } Maps
+            Create	
+            {:key1 "a" :key2 "b"}
+            hash-maparray-mapzipmapsorted-mapsorted-map-byfrequenciesgroup-by
+            Examine	
+            (:key my-map) → (get my-map :key)
+            get-incontains?findkeysvals
+            'Change'	assocassoc-indissocmergemerge-withselect-keysupdate-in
+            Entry	keyval
+            Sorted Maps	rseqsubseqrsubseq
+            Sequences
+            Seq in, Seq out
+            Get Shorter	distinctfilterremovetake-nthfor
+            Get Longer	consconjconcatlazy-catmapcatcycleinterleaveinterpose
+            Get From Tail	restnthrestnextfnextnnextdropdrop-whiletake-lastfor
+            Get From Head	taketake-whilebutlastdrop-lastfor
+            'Change'	conjconcatdistinctflattengroup-bypartitionpartition-allpartition-bysplit-atsplit-withfilterremovereplaceshuffle
+            Rearrange	reversesortsort-bycompare
+            Process Items	mapmap-indexedmapcatforreplace
+            Using a Seq
+            Extract Item	firstsecondlastrestnextffirstnfirstfnextnnextnthnthnextrand-nthwhen-firstmax-keymin-key
+            Construct Collection	zipmapintoreducereductionssetvecinto-arrayto-array-2d
+            Pass to Function	apply
+            Search	somefilter
+            Force Evaluation	doseqdorundoall
+            Check For Forced	realized?
+            Create a Seq
+            From Collection	seqvalskeysrseqsubseqrsubseq
+            From JS Array	array-seqprim-seq
+            Producer Functions	lazy-seqrepeatedlyiterate
+            From Constant	repeatrange
+            From Other	re-seqtree-seq
+            From Sequence	keepkeep-indexed
+            Misc
+            Bitwise
+            bit-andbit-orbit-xorbit-notbit-flipbit-setbit-shift-rightbit-shift-leftbit-and-notbit-clearbit-testunsigned-bit-shift-right
+            reference: Clojure cheatsheet, Cheatsheet with tooltips, ClojureScript source
+            source: github.com/oakmac/cljs-cheatsheet
+            license: MIT
+

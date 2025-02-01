@@ -1,0 +1,1219 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+@t: :set syntax= textwidth=35 nosi ai nojs spell shiftwidth=2 | colors ron
+@c:
+set syntax=fsharp textwidth=47 nosi ai nojs shiftwidth=2 | colors ron
+  @c: :set syntax=fsharp textwidth=0 nosi ai nojs shiftwidth=2 | colors ron
+
+~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/cheatsh-qref/fsharp.cheatsh.pdf
+            F# Cheatsheet
+
+            This cheatsheet glances over some
+            of the common syntax of F# 3.0. If
+            you have any comments, corrections,
+            or suggested additions, please open
+            an issue or send a pull request to
+            https://github.com/dungpa/fsharp-cheatsheet
+
+
+            Comments
+
+            Block comments are placed between
+            (* and *). Line comments start from
+            // and continue until the end of
+            the line.
+
+            (* This is block comment *)
+            // And this is line comment
+
+            XML doc comments come after ///
+            allowing us to use XML tags to
+            generate documentation.
+
+            /// The 'let' keyword defines an (immutable) value
+            let result = 1 + 1 = 2
+
+
+            Strings
+
+            F# string type is an alias for System.String type.
+
+            /// Create a string using string concatenation
+            let hello = "Hello" + " World"
+
+            Use verbatim strings preceded by @
+            symbol to avoid escaping control
+            characters (except escaping " by
+            ""). "
+
+            let verbatimXml = @"<book title=""Paradise Lost"">"
+
+            We don't even have to escape " with
+            triple-quoted strings. "
+
+            let tripleXml = """<book title="Paradise Lost">"""
+
+            Backslash strings indent string
+            contents by stripping leading
+            spaces.
+
+            let poem =
+              "The lesser world was daubed\n\
+              By a colorist of modest skill\n\
+              A master limned you in the finest inks\n\
+              And with a fresh-cut quill."
+
+
+            Basic Types and Literals
+
+            Most numeric types have associated
+            suffixes, e.g., uy for unsigned
+            8-bit integers and L for signed
+            64-bit integer.
+
+            let b, i, l = 86uy, 86, 86L
+
+            val b : byte = 86uy
+            val i : int = 86
+            val l : int64 = 86L
+
+            Other common examples are F or f
+            for 32-bit floating-point numbers,
+            M or m for decimals, and I for big
+            integers.
+
+            let s, f, d, bi = 4.14F, 4.14, 0.7833M, 9999I
+
+            val s : float32 = 4.14f
+            val f : float = 4.14
+            val d : decimal = 0.7833M
+            val bi : System.Numerics.BigInteger = 9999
+
+            Comment: See Literals (MSDN) for
+            complete reference.
+
+
+            Functions
+
+            The let keyword also defines named
+            functions.
+
+            let negate x = x * -1
+            let square x = x * x
+            let print x = printfn "The number is: %d" x
+
+            let squareNegateThenPrint x =
+                print (negate (square x))
+
+
+            Pipe and composition operators
+
+            Pipe operator |> is used to chain
+            functions and arguments together.
+            Double-backtick identifiers are
+            handy to improve readability
+            especially in unit testing:
+
+            let ''square, negate, then print'' x =
+              x |> square |> negate |> print
+
+            This operator is essential in
+            assisting the F# type checker by
+            providing type information before
+            use:
+
+            let sumOfLengths (xs : string []) =
+              xs
+              |> Array.map (fun s -> s.Length)
+              |> Array.sum
+
+            Composition operator >> is used to
+            compose functions:
+
+            let squareNegateThenPrint' =
+              square >> negate >> print
+
+
+            Recursive functions
+
+            The rec keyword is used together
+            with the let keyword to define a
+            recursive function:
+
+            let rec fact x =
+              if x < 1 then 1
+              else x * fact (x - 1)
+
+            Mutually recursive functions (those
+            functions which call each other)
+            are indicated by the and keyword:
+
+            let rec even x =
+              if x = 0 then true
+              else odd (x - 1)
+
+            and odd x =
+              if x = 1 then true
+              else even (x - 1)
+
+
+            Pattern Matching
+
+            Pattern matching is often
+            facilitated through the match
+            keyword.
+
+            let rec fib n =
+              match n with
+              | 0 -> 0
+              | 1 -> 1
+              | _ -> fib (n - 1) + fib (n - 2)
+
+            In order to match sophisticated
+            inputs, one can use when to create
+            filters or guards on patterns:
+
+            let sign x =
+              match x with
+              | 0 -> 0
+              | x when x < 0 -> -1
+              | x -> 1
+
+            Pattern matching can be done
+            directly on arguments:
+
+            let fst' (x, _) = x
+
+            or implicitly via the function
+            keyword:
+
+            /// Similar to 'fib'; using 'function' for pattern matching
+            let rec fib' = function
+              | 0 -> 0
+              | 1 -> 1
+              | n -> fib' (n - 1) + fib' (n - 2)
+
+            For a more complete reference,
+            visit Pattern Matching (MSDN).
+
+
+            Collections
+
+            Lists
+
+            A list is an immutable collection
+            of elements of the same type.
+
+            // Lists use square brackets and the ';' delimiter
+            let list1 = [ "a"; "b" ]
+            T@// :: is prepending
+            let list2 = "c" :: list1
+            T@// @ is concat
+            let list3 = list1 @ list2
+
+            // Recursion on list using (::) operator
+            let rec sum list =
+              match list with
+              | [] -> 0
+              | x :: xs -> x + sum xs
+
+
+            Arrays
+
+            Arrays are fixed-size, zero-based,
+            mutable collections of consecutive
+            data elements.
+
+            // Arrays use square brackets with bar
+            let array1 = [| "a"; "b" |]
+            // Indexed access using dot
+            let first = array1.[0]
+
+
+            Sequences
+
+            A sequence is a logical series of
+            elements of the same type.
+            Individual sequence elements are
+            computed only as required, so a
+            sequence can provide better
+            performance than a list in
+            situations in which not all the
+            elements are used.
+
+            // Sequences can use yield and contain subsequences
+            let seq1 =
+              seq {
+                // "yield" adds one element
+                yield 1
+                yield 2
+
+                // "yield!" adds a whole subsequence
+                yield! [5..10]
+              }
+
+
+            Higher-order functions on collections
+
+            The same list [ 1; 3; 5; 7; 9 ] or
+            array [| 1; 3; 5; 7; 9 |] can be
+            generated in various ways.
+
+              - Using the range operator ..
+
+              let xs = [ 1..2..9 ]
+
+              - Using list or array comprehensions
+
+              let ys = [| for i in 0..4 -> 2 * i + 1 |]
+
+              - Using the init function
+
+              let zs = List.init 5 (fun i -> 2 * i + 1)
+
+            Lists and arrays have comprehensive
+            sets of higher-order functions for
+            manipulation.
+
+              - fold starts from the left of
+                the list (or array) and
+                foldBack goes in the opposite
+                direction
+
+              let xs' = Array.fold (fun str n ->
+                  sprintf "%s,%i" str n) "" [| 0..9 |]
+
+              - reduce doesn't require an
+                initial accumulator
+
+              let last xs = List.reduce (fun acc x -> x) xs
+
+              - map transforms every element of
+                the list (or array)
+
+              let ys' = Array.map (fun x -> x * x) [| 0..9 |]
+
+              - iterate through a list and
+                produce side effects
+
+              let _ = List.iter (printfn "%i") [ 0..9 ]
+
+            All these operations are also
+            available for sequences. The added
+            benefits of sequences are laziness
+            and uniform treatment of all
+            collections implementing
+            IEnumerable<'T>.
+
+            let zs' =
+              seq {
+                for i in 0..9 do
+                  printfn "Adding %d" i
+                  yield i
+              }
+
+
+            Tuples and Records
+
+            A tuple is a grouping of unnamed
+            but ordered values, possibly of
+            different types:
+
+            // Tuple construction
+            let x = (1, "Hello")
+
+            // Triple
+            let y = ("one", "two", "three")
+
+            // Tuple deconstruction / pattern
+            let (a', b') = x
+
+            N@The first and second elements of a
+            tuple can be obtained using fst,
+            snd, or pattern matching:
+
+            let c' = fst (1, 2)
+            let d' = snd (1, 2)
+
+            let print' tuple =
+              match tuple with
+              | (a, b) -> printfn "Pair %A %A" a b
+
+            Records represent simple aggregates
+            of named values, optionally with
+            members:
+
+            // Declare a record type
+            type Person = { Name : string; Age : int }
+
+            // Create a value via record expression
+            let paul = { Name = "Paul"; Age = 28 }
+
+            // 'Copy and update' record expression
+            let paulsTwin = { paul with Name = "Jim" }
+
+            Records can be augmented with
+            properties and methods:
+
+            type Person with
+              member x.Info = (x.Name, x.Age)
+
+            Records are essentially sealed
+            classes with extra topping: default
+            immutability, structural equality,
+            and pattern matching support.
+
+            let isPaul person =
+              match person with
+              | { Name = "Paul" } -> true
+              | _ -> false
+
+
+            Discriminated Unions
+
+            Discriminated unions (DU) provide
+            support for values that can be one
+            of a number of named cases, each
+            possibly with different values and
+            types.
+
+            HM@type Tree<'T> =
+              | Node of Tree<'T> * 'T * Tree<'T>
+              | Leaf
+
+            let rec depth = function
+              | Node(l, _, r) -> 1 + max (depth l) (depth r)
+              | Leaf -> 0
+
+            N@F# Core has a few built-in
+            discriminated unions for error
+            handling, e.g., Option and Choice.
+
+            let optionPatternMatch input =
+              match input with
+                | Some i -> printfn "input is an int=%d" i
+                | None -> printfn "input is missing"
+
+            HM@Single-case discriminated unions
+            are often used to create type-safe
+            abstractions with pattern matching
+            support:
+
+            type OrderId = Order of string
+
+            // Create a DU value
+            let orderId = Order "12"
+
+            // Use pattern matching to deconstruct single-case DU
+            let (Order id) = orderId
+
+
+            Exceptions
+
+            The failwith function throws an
+            exception of type Exception.
+
+            let divideFailwith x y =
+              if y = 0 then
+                failwith "Divisor cannot be zero."
+              else x / y
+
+            Exception handling is done via
+            try/with expressions.
+
+            let divide x y =
+              try
+                Some (x / y)
+              with :? System.DivideByZeroException ->
+                printfn "Division by zero!"
+                None
+
+            The try/finally expression enables
+            you to execute clean-up code even
+            if a block of code throws an
+            exception. Here's an example which
+            also defines custom exceptions.
+
+            exception InnerError of string
+            exception OuterError of string
+
+            let handleErrors x y =
+              try
+                try
+                  if x = y then raise (InnerError("inner"))
+                  else raise (OuterError("outer"))
+                with InnerError(str) ->
+                  printfn "Error1 %s" str
+              finally
+                printfn "Always print this."
+
+
+            Classes and Inheritance
+
+            This example is a basic class with
+            (1) local let bindings, (2)
+            properties, (3) methods, and (4)
+            static members.
+
+            type Vector(x : float, y : float) =
+              let mag = sqrt(x * x + y * y) // (1)
+              member this.X = x // (2)
+              member this.Y = y
+              member this.Mag = mag
+              member this.Scale(s) = // (3)
+                Vector(x * s, y * s)
+              static member (+) (a : Vector, b : Vector) = // (4)
+                Vector(a.X + b.X, a.Y + b.Y)
+
+            Call a base class from a derived one.
+
+            type Animal() =
+              member __.Rest() = ()
+
+            type Dog() =
+              inherit Animal()
+              member __.Run() =
+                base.Rest()
+
+            N@Upcasting is denoted by :>
+            operator.
+
+            let dog = Dog()
+            let animal = dog :> Animal
+
+            Dynamic downcasting (:?>) might
+            throw an InvalidCastException if
+            the cast doesn't succeed at
+            runtime.
+
+            let shouldBeADog = animal :?> Dog
+
+
+            Interfaces and Object Expressions
+
+            Declare IVector interface and
+            implement it in Vector'.
+
+            type IVector =
+              abstract Scale : float -> IVector
+
+            type Vector'(x, y) =
+              interface IVector with
+                member __.Scale(s) =
+                  Vector'(x * s, y * s) :> IVector
+              member __.X = x
+              member __.Y = y
+
+            Another way of implementing
+            interfaces is to use object
+            expressions.
+
+            type ICustomer =
+              abstract Name : string
+              abstract Age : int
+
+            let createCustomer name age =
+              { new ICustomer with
+                member __.Name = name
+                member __.Age = age }
+
+
+            Active Patterns
+
+            Complete active patterns:
+
+            let (|Even|Odd|) i =
+              if i % 2 = 0 then Even else Odd
+
+            let testNumber i =
+              match i with
+              | Even -> printfn "%d is even" i
+              | Odd -> printfn "%d is odd" i
+
+            Parameterized active patterns:
+
+            let (|DivisibleBy|_|) by n =
+              if n % by = 0 then Some DivisibleBy else None
+
+            let fizzBuzz = function
+              | DivisibleBy 3 & DivisibleBy 5 -> "FizzBuzz"
+              | DivisibleBy 3 -> "Fizz"
+              | DivisibleBy 5 -> "Buzz"
+              | i -> string i
+
+            Partial active patterns share the
+            syntax of parameterized patterns
+            but their active recognizers accept
+            only one argument.
+
+
+            Compiler Directives
+
+            Load another F# source file into FSI.
+            
+            '#load "../lib/StringParsing.fs"
+
+            Reference a .NET assembly (/ symbol
+            is recommended for Mono
+            compatibility).
+
+            '#r "../lib/FSharp.Markdown.dll"
+
+            Include a directory in assembly
+            search paths.
+
+            '#I "../lib"
+            '#r "FSharp.Markdown.dll"
+
+            Other important directives are
+            conditional execution in FSI
+            (INTERACTIVE) and querying current
+            directory (__SOURCE_DIRECTORY__).
+
+            '#if INTERACTIVE
+            let path = __SOURCE_DIRECTORY__ + "../lib"
+            '#else
+            let path = "../../../lib"
+            '#endif
+~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/cheatsh-qref/fsharp2.cheatsh.pdf
+            F# Cheat Sheet
+
+            This sheet glances over some of the
+            common syntax of the F# language.
+            It is designed to be kept close for
+            those times when you need to jog
+            your memory on something like loops
+            or object expressions. Everything
+            is designed to be used with the
+            #light syntax directive. If you
+            type any of these lines directly
+            into the interactive command shell,
+            be sure to follow them up with two
+            semicolons ";;". If you have any
+            comments, corrections or suggested
+            additions please send them to
+            chance@a6systems.com.
+
+
+            1 - Comments
+
+            There are a few different kinds of
+            comments in F#. Comment blocks,
+            which are placed between (* and *)
+            markers.
+
+            Line by line comments which follow
+            // until the end of a line and xml
+            doc comments which follow /// and
+            allow the programmer to place
+            comments in xml tags that can be
+            used to generate xml documents.
+
+
+            2 - Strings
+
+            In F# Code the type string is
+            equivalent to System.String
+
+            let s = "This is a string"
+            let hello = "Hello"+" World"
+
+            Preserve all characters
+
+            let share = @"\\share"
+
+            Use escape characters
+
+            let shareln = "\\\\share\n"
+
+
+            3 - Numbers
+
+            type is int16 = System.Int16
+            let int16num = 10s
+
+            type is int32 = System.Int32
+            let int32num = 10
+
+            type is int64 = System.Int64
+            let int64num = 10L
+
+            type is float32, single or System.Single
+            let float32num = 10.0f
+
+            type is float, double or System.Double
+            let floatnum = 10.0
+
+            convert to int64
+            let int64frm32 = int64 int32num
+
+            Other conversion functions:
+            float float32 int int16
+
+
+            4 - Tuples
+
+            Construction
+            let x = (1,"Hello")
+
+            Deconstruction
+            let a,b = x
+
+            Reconstruction and value reuse
+            let y = (x,(a,b))
+
+            Reconstruction into a 3 tuple
+            (triple)
+            let z = (x,y,a)
+
+            Partial deconstruction triple
+            let ((a',b'),y',a'') = z
+
+
+            5 - Lists, Arrays, Seqs: Generation
+
+            Creates the list [0 ; 2 ; 4]
+            let lsinit = List.init 3
+              (fun i -> i * 2)
+
+            Creates same list as above
+            let lsgen = [ 0 ; 2 ; 4]
+
+            Creates the list [0;2;4;6;8]
+            let lsgen2 = [0 .. 2 .. 8]
+
+            Can also do above one increment at
+            a time to get [0;1;2;3;4;5;6;7;8]
+            let lsgen2' = [0..8]
+
+            Creates a list [0.0; 0.5; 1.0; 1.5]
+            let lsgen3 =
+              [for i in 0..3 -> 0.5 * float i]
+
+            Can also do above one increment at
+            a time to get [0;1;2;3;4;5;6;7;8]
+            let lsgen2' = [0..8]
+
+            Creates a list [0.0; 0.5; 1.0; 1.5]
+            let lsgen3 =
+              [for i in 0..3 -> 0.5 * float i]
+
+            Put other steps into a generator
+            let lsgen3' =
+              [for i in 0..3 ->
+                printf "Adding %d\n" i
+                0.5 * float i]
+
+            Place -1 at the head of a list
+            let inserted = -1 :: lsgen2'
+
+            Concatenation
+            let concat = lsgen2 @ lsgen2'
+
+            Create an array [|0 ; 2 ; 4|]
+            let arinit = Array.init 3
+            (fun i -> i * 2)
+
+            Create same array as above
+            let argen = [| 0 ; 2 ; 4|]
+
+            Create the array [|0;2;4;6;8|]
+            let argen2 = [|0 .. 2 .. 8|]
+
+            Same as above one increment at a
+            time
+            to get [|0;1;2;3;4;5;6;7;8|]
+            let argen2' = [|0..8|]
+
+            Create an array [0.0; 0.5; 1.0; 1.5]
+            let argen3 =
+              [|for i in 0..3 -> 0.5 * float i|]
+
+            Put other computation steps into
+            the generator
+            let argen3' =
+              [|for i in 0..3 ->
+                printf "Adding %d\n" i
+                0.5 * float i|]
+
+            Creating a seq - remember these are
+            lazy
+            let s =
+              seq { for i in 0 .. 10 do yield i }
+
+            Illustrate laziness – consume the
+            seq below and note the difference
+            from the generated array.
+
+            let s2 =
+              seq { for i in 0 .. 10 do
+                printf "Adding %d\n" i
+                yield i }
+
+
+            6 - Lists, Arrays, Seqs : Consuming
+
+            "left" fold starts from the left of
+            the list, the "right" fold does the
+            opposite
+            List.fold_left
+              (fun state a -> state + 1 ) 0
+              [ for i in 0 .. 9 -> true]
+
+            Reduce doesn't require the starter
+            argument
+            List.reduce_left
+              (fun accum a -> accum + a )
+              [0..9]
+
+            Square all of the elements in a list
+            List.map (fun x -> x * x) [1..10]
+
+            Prints all the items of a list
+            List.iter
+              (fun x -> printf "%d" x) [1..10]
+
+            Same examples for arrays
+            Array.fold_left
+              (fun state a -> state + 1 ) 0
+              [| for i in 0 .. 9 -> true|]
+
+            Array.reduce_left
+              (fun accum a -> accum + a )
+              [|0..9|]
+
+            Squares all the elements in the
+            array Array.map
+              (fun x -> x * x) [| 1 .. 10 |]
+
+            Prints all the items of an array
+            Array.iter
+              (fun x -> printf "%d" x)
+              [|1..10|]
+
+            Access all elements of an array
+            from 2 on
+            let arr = [|for i in 0..3 -> i|]
+            arr.[2..]
+
+            Access elements between 2 and 4
+            (inclusive)
+            let arr = [|for i in 0..3 -> i|]
+            arr.[2..4]
+
+            Access all elements of an array up
+            to 4
+            let arr = [|for i in 0..3 -> i|]
+            arr.[..4]
+
+            Seq also has iter, fold, map and
+            reduce
+            Seq.reduce
+              (fun accum a -> accum + a)
+              (seq { for i in 0 .. 9 do
+                yield i })
+
+
+            7 - Arrays: Manipulating
+
+            Array elements can be updated
+            let arrayone = [|0..8|]
+              arrayone.[0] <- 9
+
+
+            8 - Composition Operators
+
+            the |> operator is very helpful for
+            chaining arguments and functions
+            together
+            let piped = [0..2] |> List.sum
+
+            the >> operator is very helpful for
+            composing functions
+            open System
+            let composedWriter =
+              string >>
+              Console.WriteLine
+
+
+            9 Functions as values
+
+            Create a function of 3 arguments
+            let add x y z = x + y + z
+
+            Currying example
+            let addWithFour= add 4
+
+            Apply remaining arguments
+            addWithFour 2 10
+
+            Take a function as an argument
+            let runFuncTenTimes f a =
+              [ for 0..9 -> f a]
+
+            Return a list of functions as
+            arguments
+            let listOfPrintActions =
+              [ for 0 .. 10 ->
+                printf "%s\n"]
+
+            Apply those functions iteratively
+            listOfPrintActions
+            |> List.iteri (fun i a -> a i)
+
+            Anonymous function (applied to 2)
+            (fun x -> x * x) 2
+
+            Anonymous function (applied to
+            tuple,which is deconstructed
+            inside)
+            let arg = (3,2)
+            (fun (x,y) -> x * y) arg
+
+
+            10 - Union Types
+
+            Discriminated Union
+            type option<'a> =
+              | Some of 'a
+              | None
+
+            Augmented Discriminated Union
+            type BinTree<‟a> =
+              | Node of
+                BinTree<‟a> * „a *
+                BinTree<‟a>
+              | Leaf
+              with member self.Depth() =
+                match self with
+                | Leaf -> 0
+                | Node(l,_,r) -> 1 +
+                  l.Depth() +
+                  r.Depth()
+
+
+            11 - Types: Records
+
+            type Person = {name:string;age:int}
+
+            let paul = {name="Paul";age=35}
+
+            let paulstwin =
+              {paul with name="jim"}
+
+            do printf "Name %s, Age %d"
+                paul.name paul.age
+
+            Augmenting Records
+            type Person = {name:string;age:int}
+              with member o.Tupilize() =
+                (o.name,o.age)
+
+
+            12 - Types: OOP
+
+            Classes
+            type BaseClass()=
+              let mutable myIntValue=1
+              member o.Number
+                with get() = myIntValue
+                and set v = myIntValue<-v
+              abstract member
+                InheritNum:unit->int
+              default o.InheritNum() =
+                  o.Number + 1
+
+            Subclass
+            type MyClass() =
+              inherit BaseClass()
+              let someval = "SomeVal"
+              let mutable myIntValue = 1
+              member self.SomeMethod(x,y) =
+                gxy
+              static member StaticMethod(x,y)=
+                fxy
+              member override o.InheritNum() =
+                base.InheritNum()+
+                myIntValue
+
+            Interface
+            type MyAbsFoo =
+              abstract Foo:unit->string
+
+            type MyFooClass() =
+              let mutable myfoo ="Foo"
+              member o.MyFoo
+                with get () = myfoo
+                and set v = myfoo<-v
+              interface MyAbsFoo with
+                member o.Foo() = myfoo
+              end
+
+            Object Expressions
+            let foo =
+              {new MyAbsFoo with
+                member o.Foo()="Bar"}
+
+            Augmenting Existing Objects (note:
+            augmented members only available
+            when augmenting module is opened)
+            open System.Xml
+            type XmlDocument() =
+              member o.GetInnerXml() =
+                self.InnerXml
+
+            Static Upcasting
+            let strAsObj =
+              let str = "Hello"
+              str :> obj
+
+            Dynamic Downcasting
+            let objSub (o:‟a when „a:>object) =
+              o :?> SomeSubType
+
+
+            13 - Pattern Matching
+
+            Basic
+            let f (x:option<int>) =
+              match x with
+              | None -> ()
+              | Some(i) -> printf "%d" i
+
+            As a function definition
+            let f = function
+              | None -> ()
+              | Some(i) -> printf "%d" i
+
+            With when operation
+            let f = function
+              | None -> ()
+              | Some(i) when i=0 -> ()
+              | Some(i) when i>0 ->printf"%d"i
+
+            Common matches on a literal
+            let f x =
+              match x with
+              | 0 | 1 as y -> f y
+              | i -> printf "%d" i
+
+            Wildcard
+            let f = function
+              | 0 | 1 as y -> printf "Nothing"
+              | _ -> printf "Something"
+
+
+            14 - Exceptions
+
+            try
+              obj.SomeOp()
+            with | ex ->
+              printf "%s\n" ex.Message
+
+            With (exception) type test
+            try
+              obj.SomeOp()
+            with
+              | :? ArgumentException as ex ->
+                printf "Bad Argument:\n"
+              | exn -> printf "%s\n" exn.Message
+
+            Add block that runs whether
+            exception is thrown or not
+            try
+              obj.SomeOp()
+            finally
+              obj.Close()
+
+            Raise an exception in code
+            - Shorthand
+            let f x =
+              if not x.Valid then
+                invalid_arg "f:x is not valid"
+              else x.Process()
+
+            - Full
+            let f x =
+              if not x.SupportsProcess() then
+              raise
+                (InvalidOperationException
+                ("x must support process"))
+              else x.Process()
+
+            Create your own
+            exception InvalidProcess of string
+
+            try
+              raise InvalidProcess("Raising Exn")
+            with
+              | InvalidProcess(str) ->
+                printf "%s\n" str
+
+
+            15 - Loops
+
+            for i in 0..10 do
+              printf "%d" i
+            done
+
+            Over an IEnumerable
+            for x in xs do
+              printf "%s\n"(x.ToString())
+            done
+
+            While
+            let mutable mutVal = 0
+            while mutVal<10 do
+              mutVal <- mutVal + 1
+            done
+
+
+            16 - Async Computations
+
+            (Note: FSharp.PowerPack.dll should
+            be referenced in your project – as
+            of the CTP - to get the augmented
+            async methods available in existing
+            IO operations)
+
+            Basic computation that returns
+            Async<int> that will yield 1 when
+            executed
+            let basic = async { return 1 }
+
+            Composing expressions and applying
+            to arguments
+            let compound num =
+              async {
+                let! anum = basic
+                return num + anum }
+
+            Returning existing expressions
+            let composedReturn =
+              async { return! compound 2}
+
+            Creating Primitives with existing
+            Begin/End Async Calls
+            let asyncCall args =
+              Async.BuildPrimitive
+                ((fun (callback,asyncState) ->
+                  myService.BeginMethod(args,
+                                        callback,
+                                        asyncState)),
+                  myService.EndMethod)
+
+            Make your own primitive from scratch
+            let asyncPrimitive args =
+              Async.Primitive (fun (con,exn) ->
+                let result = runSomething args
+                if good result then con result
+                else exn result)
+
+            Other primitives
+            Async.Parallel
+            Async.Primitive
+            Async.Catch
+
+            Making sure I/O threads don't block
+            (Note the MethodAsync convention in
+            "Expert F#" seems to have changed
+            to AsyncMethod)
+            let asyncRead file (numBytes:int)=
+              async {
+                let inStr = File.OpenRead(file)
+                let! data = inStr.AsyncRead numBytes
+                return processData(data) }
+
+            Execution Methods (apply the async
+            computation as an argument to
+            these)
+            Async.Run
+            Async.Spawn
+            Async.SpawnFuture
+            Async.SpawnThenPostBack
+
+
+            17 - Active Patterns
+
+            Basic
+            let (|Xml|) doc = doc.InnerXml
+
+            let getXml = function
+              | Xml(xml) -> xml
+
+            Multiple Patterns
+            let (|Xml|NoXml|) doc =
+              if doc.InnerXml="" then NoXml
+              else Xml(doc.InnerXml)
+
+            let getXml = function
+              | Xml(xml) -> Some(xml)
+              | NoXml -> None
+
+            Partial Pattern
+            let (|Xml|_|) doc =
+              if doc.InnerXml="" then None
+              else Some(doc.InnerXml)
+
+            let getXml = function
+              | Xml(xml) -> Some(xml) //Xml Matched
+              | _ -> None // Xml did not match
+
+
+            18 - Compiler Directives and Interop with other .NET Languages
+
+            Make indentation significant in
+            parsing (i.e. turn on light syntax)
+            '#light
+
+            Reference a DLL from another .NET
+            library (interactive F# scripts
+            only – in compiled code use normal
+            interface for reference additions)
+            '#r @".\src\bin\mylib.dll"
+
+            Include a directory in the
+            reference search (also in
+            interactive scripts only)
+            '#I @"[dir path]"
+
+            For a C# class Foo in a dll with a
+            method ToString(), invoke just as
+            you would an F# class.
+            let foo = Foo()
+            let s = foo.ToString()
+
+            To have code run only in when
+            working with the compiled version
+            '#if COMPILED
+            ...code
+            '#endif
+
+            For example, when writing a
+            windowed application that you test
+            in script, but eventually compile
+            to run
+            let window =
+              Window(Title="My Window")
+            '#if COMPILED
+            [<STAThread>]
+            do
+              let app = Application in
+              app.Run(window) |> ignore
+            '#endif
+            ... later in script (.fsx) file ...
+            window.Show()
+            
+            Version 1.01
+            You can always get the most recent
+            updates to this cheat sheet from
+            http://a6systems.com/fsharpcheatsheet.pdf
+            
+            A6 Systems, LLC is an Austin, TX
+            based company that provides
+            consulting services and F#
+            QuickStart training.
+            
+            http://a6systems.com
+

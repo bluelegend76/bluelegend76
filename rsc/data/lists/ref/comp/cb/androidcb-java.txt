@@ -1,0 +1,804 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/lang/java/kotlin/2/android-uidesign.pdf
+  ~/Empire/Doks/Comp/lang/java/kotlin/2/andoid-security.pdf
+
+~/Empire/Doks/Comp/lang/java/kotlin/2/androiddevcb.pdf  #TODO
+~/Empire/Doks/Comp/lang/java/kotlin/2/android-devdesign.pdf
+~/Empire/Doks/Comp/lang/java/kotlin/2/androiddev-enterprisegrade.pdf
+~/Empire/Doks/Comp/lang/java/kotlin/2/androidlearn-java.pdf  #riptuts =java and kotlin
+
++TODO: Organize AndroidDev-Books(!!)
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/android_tpoint.txt
+android9devcookb java
+            Chapter 1: Activities
+                Declaring an activity
+                Starting a new activity with an intent object
+                Switching between activities
+                Passing data to another activity
+                Returning a result from an activity
+                Saving an activity's state
+                Storing persistent activity data
+                Using more than one preference file
+                Understanding the activity life cycle
+            Chapter 2: Layouts
+                Defining and inflating a layout
+                Using RelativeLayout
+                Using LinearLayout
+                Creating tables – TableLayout and GridLayout
+                RecyclerView replaces ListView
+                Changing layout properties during runtime
+            Chapter 3: Views, Widgets, and Styles
+                Inserting a widget into a layout
+                Using graphics to show button state
+                 Using designated folders for screen-specific resources
+                Creating a widget at runtime
+                Creating a custom component
+                Applying a style to a View
+                Turning a style into a theme
+                Selecting a theme based on the Android version
+            Chapter 4: Menus and Action Mode
+                Creating an options menu
+                Using a menu item to launch an activity
+                Modifying menus and menu items during runtime
+                 Enabling Contextual Action Mode for a view
+                Creating a floating context menu
+                Using Contextual Batch Mode with RecyclerView
+                Creating a pop-up menu
+            Chapter 5: Fragments
+                Creating and using a Fragment
+                Adding and removing Fragments during runtime
+                Passing data between Fragments
+                Handling the Fragment back stack
+            Chapter 6: Home Screen Widgets, Search, and the System UI
+                Creating a shortcut on the Home screen
+                Creating a Home screen widget
+                Adding Search to the Action Bar
+                Showing your app full-screen
+                Sticky Immersion
+                 Dimming the System UI
+                 Setting the Action Bar as an overlay
+                 Translucent system bars
+            Chapter 7: Data Storage
+                Storing simple data
+                Read and write a text file to internal storage
+                 Caching files
+                Read and write a text file to external storage
+                Getting public folders
+                 Checking available space
+                 Deleting a file
+                 Working with directories
+                 Preventing files from being included in galleries
+                Including resource files in your project
+                Creating and using an SQLite database
+                 Upgrading a database
+                Accessing data in the background using a Loader
+                Accessing external storage with scoped directories in Android N
+            Chapter 8: Alerts and Notifications
+                Lights, Action, and Sound – getting the user's attention!
+                Creating a Toast with a custom layout
+                Displaying a message box with AlertDialog
+                 Add an icon
+                 Using a list
+                 Custom layout
+                Displaying a progress dialog
+                Lights, Action, and Sound Redux using Notifications
+                Adding a button to the notification using addAction()
+                 Expanded notifications
+                 Lock screen notifications
+                Creating a Media Player Notification
+                Making a Flashlight with a Heads-Up Notification
+                Notifications with Direct Reply
+            Chapter 9: Using the Touchscreen and Sensors
+                Listening for click and long-press events
+                Recognizing tap and other common gestures
+                Pinch-to-zoom with multi-touch gestures
+                Swipe-to-Refresh
+                Listing available sensors – an introduction to the Android Sensor
+                Reading sensor data – using Android Sensor Framework events
+                 Environment sensors
+                 Position sensors
+                 Motion sensors
+                Reading device orientation
+                Getting current device rotation
+            Chapter 10: Graphics and Animation
+                Scaling down large images to avoid Out of Memory exceptions
+                A transition animation – defining scenes and applying a transition
+                Creating a Compass using sensor data and RotateAnimation
+                Creating a slideshow with ViewPager
+                 Creating a Setup Wizard
+                Creating a Card Flip Animation with Fragments
+                Creating a Zoom Animation with a Custom Transition
+                 Getting the default animation duration
+                Displaying animated image (GIF/WebP) with the new ImageDecoder
+                Creating a circle image with the new ImageDecoder
+            Chapter 11: A First Look at OpenGL ES
+                Setting up the OpenGL ES environment
+                Declaring OpenGL in the Android Manifest
+                 Extending the GLSurfaceView class
+                 Creating an OpenGL rendered class
+                Drawing shapes on GLSurfaceView
+                Applying the projection and camera view while drawing
+                Moving the triangle with rotation
+                 The render mode
+                Rotating the triangle with user input
+            Chapter 12: Multimedia
+                Playing sound effects with SoundPool
+                 Playing audio with MediaPlayer
+                Playing music in the background
+                 Using hardware volume keys to control your app's audio volume
+                Responding to hardware media controls in your app
+                 Checking the hardware type
+                Taking a photo with the default camera app
+                 Calling the default video app
+                Taking a picture using the Camera2 API
+                Setting up the camera preview
+                 Capturing the image
+            Chapter 13: Telephony, Networks, and the Web
+                How to make a phone call
+                Monitoring phone call events
+                How to send SMS (text) messages
+                Multipart messages
+                 Delivery status notification
+                Receiving SMS messages
+                 Reading existing SMS messages
+                Displaying a web page in your application
+                Controlling page navigation
+                 How to enable JavaScript
+                 Enable built-in zoom
+                Checking online status and connection type
+                 Monitoring network state changes
+                Phone number blocking API
+            Chapter 14: Location and Using Geofencing
+                How to get the device location
+                 Mock locations
+                Resolving problems reported with the GoogleApiClient
+                 OnConnectionFailedListener
+                Creating and monitoring a Geofence
+            Chapter 15: Getting Your App Ready for the Play Store
+                The Android 6.0 Runtime Permission Model
+                How to schedule an alarm
+                 Cancel the alarm
+                 Repeating alarm
+                Receiving notification of device boot
+                Using the AsyncTask for background work
+                 Parameter types
+                 Canceling the task
+                Adding speech recognition to your app
+                How to add Google sign-in to your app
+            Chapter 16: Getting Started with Kotlin
+                 How to create an Android project with Kotlin
+                Creating a Toast in Kotlin
+                Runtime permission in Kotlin
+            Other Books You May Enjoy
+
+android.tpoint
+            1. ANDROID - OVERVIEW  1
+            What is Android?  1
+            Features of Android  1
+            Android Applications  2
+            2. ANDROID - ENVIRONMENT SETUP 3
+            Step 1 - Setup Java Development Kit (JDK) 3
+            Step 2 - Setup Android SDK  4
+            Step 3 - Setup Eclipse IDE  5
+            Step 4 - Setup Android Development Tools (ADT) Plugin  6
+            Step 5 - Create Android Virtual Device  8
+            3. ANDROID - ARCHITECTURE  10
+            Linux kernel  10
+            Libraries  10
+            Android Runtime  11
+            Application Framework  11
+            Applications  11
+            4. ANDROID - APPLICATIONS COMPONENT  12
+            Activities  12
+            Services  12
+            Broadcast Receivers  13
+            iiContent Providers  13
+            Additional Components  13
+            5. ANDROID - HELLO WORLD EXAMPLE  15
+            Create Android Application  15
+            Anatomy of Android Application  16
+            The Main Activity File  18
+            The Manifest File  19
+            The Strings File  20
+            The R File  21
+            The Layout File  22
+            Running the Application  23
+            6. ANDROID - ORGANIZING & ACCESSING THE RESOURCES  24
+            Organize Resources  24
+            Alternative Resources  25
+            Accessing Resources  27
+            Accessing Resources in Code  27
+            Accessing Resources in XML  28
+            7. ANDROID - ACTIVITIES  30
+            8. ANDROID - SERVICES  36
+            9. ANDROID - BROADCAST RECEIVERS  46
+            Creating the Broadcast Receiver  46
+            Registering Broadcast Receiver  46
+            Broadcasting Custom Intents  48
+            10. ANDROID - CONTENT PROVIDERS  55
+            Content URIs  55
+            iiiCreate Content Provider  56
+            11. ANDROID - FRAGMENTS  70
+            Fragment Life Cycle  71
+            How to use Fragments?  72
+            12. ANDROID - INTENTS & FILTERS  80
+            Intent Objects  80
+            Action  81
+            Data  81
+            Category  82
+            Extras  82
+            Flags  82
+            Component Name  82
+            Types of Intents  82
+            Explicit Intents  82
+            Implicit Intents  83
+            Intent Filters  88
+            13. ANDROID - UI LAYOUTS  98
+            Android Layout Types  99
+            Layout Attributes  99
+            View Identification  102
+            14. ANDROID - UI CONTROLS  103
+            Android UI Controls  103
+            Create UI Controls  105
+            15. ANDROID - EVENT HANDLING  106
+            Event Listeners & Event Handlers  106
+            ivEvent Listeners Registration:  107
+            Event Handling Examples  107
+            Registration Using the Activity Implements Listener Interface  112
+            Registration Using Layout file activity_main.xml  115
+            Exercise:  118
+            17. ANDROID - STYLES & THEMES  119
+            Defining Styles  119
+            Using Styles  120
+            Style Inheritance  120
+            Android Themes  122
+            Default Styles & Themes  122
+            18. ANDROID - CUSTOM COMPONENTS  123
+            Creating a Simple Custom Component  123
+            Instantiate using code inside activity class  124
+            Instantiate using Layout XML file  124
+            Custom Component with Custom Attributes  125
+            Step 1  126
+            Step 2  126
+            Step 3  127
+            19. ANDROID - DRAG & DROP  129
+            The Drag/Drop Process  129
+            The DragEvent Class  130
+            Listening for Drag Event  131
+            Starting a Drag Event  131
+            20. ANDROID - NOTIFICATIONS  138
+            Create and Send Notifications  139
+            vThe NotificationCompat.Builder Class  140
+            Big View Notification  151
+            21. ANDROID - LOCATION-BASED SERVICES  154
+            The Location Object  154
+            Get the Current Location  156
+            Get the Updated Location  157
+            Location Quality of Service  157
+            Displaying a Location Address  158
+            Install the Google Play Services SDK  158
+            Create Android Application  159
+            22. ANDROID - SENDING EMAIL  170
+            Intent Object - Action to send Email  170
+            Intent Object - Data/Type to send Email  170
+            Intent Object - Extra to send Email  170
+            23. ANDROID - SENDING SMS  178
+            Using SmsManager to send SMS  178
+            Using Built-in Intent to send SMS  185
+            Intent Object - Action to send SMS  185
+            Intent Object - Data/Type to send SMS  185
+            Intent Object - Extra to send SMS  185
+            24. ANDROID - PHONE CALLS  192
+            Intent Object - Action to make Phone Call  192
+            Intent Object - Data/Type to make Phone Call  192
+            25. ANDROID - PUBLISHING ANDROID APPLICATION  199
+            Export Android Application 200
+            viGoogle Play Registration  204
+            26. ANDROID - ALERT DIALOG TUTORIAL  206
+            27. ANDROID - ANIMATIONS  220
+            Tween Animation  220
+            Zoom in animation 221
+            28. ANDROID - AUDIO CAPTURE  235
+            29. ANDROID - AUDIO MANAGER  248
+            30. ANDROID - AUTOCOMPLETE  261
+            31. ANDROID - BEST PRACTICES  271
+            Best Practices - User input  271
+            Best Practices - Performance  272
+            Best Practices - Security and privacy  272
+            32. ANDROID - BLUETOOTH  283
+            33. ANDROID - CAMERA  297
+            Using existing android camera application in our application  297
+            Directly using Camera API Provided by Android in our Application  306
+            34. ANDROID - CLIPBOARD  317
+            Copying data  317
+            Pasting data  318
+            35. ANDROID - CUSTOM FONTS  328
+            36. ANDROID - DATA BACKUP  333
+            Test your BackupAgent  337
+            37. ANDROID - DEVELOPER TOOLS  339
+            viiSDK tools  339
+            Android 340
+            DDMS  340
+            Capturing ScreenShot  344
+            Sqlite3  344
+            Platform tools  345
+            38. ANDROID - EMULATOR  346
+            Creating AVD  346
+            Creating Snapshots  346
+            Changing Orientation  346
+            Emulator Commands.  347
+            Emulator - Sending SMS  348
+            Emulator - Making Call  350
+            Emulator - Transferring files  351
+            39. ANDROID - FACEBOOK INTEGRATION  352
+            Integrating Facebook SDK  352
+            Intent share  354
+            40. ANDROID - GESTURES 364
+            Handling Pinch Gesture  364
+            41. ANDROID - GOOGLE MAPS  374
+            Adding Google Map  374
+            Customizing Google Map  375
+            Integrating Google Maps  377
+            Download and configure. Google Play Services SDK  377
+            Obtaining the API key  378
+            Specify Android Manifest Settings  380
+            viiiAdding Google Maps to your application.  380
+            42. ANDROID - IMAGE EFFECTS  386
+            43. ANDROID - IMAGE SWITCHER  399
+            44. ANDROID - INTERNAL STORAGE  409
+            Writing file  409
+            Reading file  409
+            45. ANDROID - JETPLAYER  420
+            Using JetCreator  421
+            Verifying Results  424
+            46. ANDROID - JSON PARSER  426
+            JSON - Elements  426
+            JSON - Parsing  427
+            47. ANDROID - LINKEDIN INTEGRATION  440
+            Integrating LinkedIn SDK  440
+            Intent share  441
+            48. ANDROID - LOADING SPINNER  451
+            49. ANDROID - LOCALIZATION  458
+            Localizing Strings  458
+            50. ANDROID - LOGIN SCREEN 466
+            51. ANDROID - MEDIA PLAYER  478
+            52. ANDROID - MULTITOUCH  493
+            53. ANDROID - NAVIGATION  506
+            Providing Up Navigation  506
+            ixHandling device back button  506
+            54. ANDROID –NETWORK CONNECTION  518
+            Checking Network Connection  518
+            Performing Network Operations  519
+            55. ANDROID - NFC GUIDE  531
+            How It Works:  531
+            How it works with Android:  531
+            Future Applications 533
+            56. ANDROID - PHP/MYSQL  534
+            PHP - MYSQL  534
+            Android - Connecting MYSQL  536
+            57. ANDROID - PROGRESS CIRCLE  553
+            58. ANDROID - PROGRESS BAR USING PROGRESS DIALOG  562
+            59. ANDROID - PUSH NOTIFICATION  572
+            60. ANDROID - RENDERSCRIPT  584
+            How RenderScript Works:  584
+            How to Begin:  584
+            61. ANDROID - RSS READER  587
+            RSS Example  587
+            RSS Elements  587
+            Parsing RSS  588
+            62. ANDROID - SCREEN CAST  600
+            Screen Cast Steps  600
+            63. ANDROID - SDK MANAGER  604
+            xRunning Android SDK Manager: 604
+            Recommended 605
+            Enabling Proxy in Android SDK Manager 605
+            Adding New Third Party Sites  606
+            64. ANDROID - SENSORS  608
+            Getting list of sensors supported.  608
+            65. ANDROID - SESSION MANAGEMENT  615
+            Shared Preferences  615
+            Session Management through Shared Preferences  616
+            66. ANDROID - SIP PROTOCOL  631
+            Applications  631
+            Requirements  631
+            SIP Classes  631
+            Functions of SIP  632
+            Components of SIP  632
+            UAC  632
+            UAS  632
+            SipManager  632
+            67. ANDROID - SPELLING CHECKER 634
+            68. ANDROID - SQLITE DATABASE  644
+            Database - Package  644
+            Database - Creation  644
+            Database - Insertion  645
+            Database - Fetching  645
+            Database - Helper class  646
+            xi69. ANDROID - SUPPORT LIBRARY  673
+            Support Library Features  673
+            Downloading the Support Libraries  674
+            70. ANDROID - TESTING  676
+            Test Structure  676
+            Testing Tools in Android  676
+            JUnit  677
+            Monkey  678
+            71. ANDROID - TEXT TO SPEECH  687
+            72. ANDROID - TEXTURE VIEW  698
+            73. ANDROID - TWITTER INTEGRATION  708
+            Integrating Twitter SDK  708
+            Intent share  710
+            74. ANDROID - UI DESIGN  720
+            UI screen components  720
+            Understanding Screen Components  721
+            Units of Measurement  724
+            Screen Densities  724
+            Optimizing layouts  725
+            75. ANDROID - UI PATTERNS  726
+            UI Patterns components  726
+            Action Bar  726
+            Confirming and Acknowledging  727
+            Settings  728
+            Help  728
+            xiiSelection  728
+            76. ANDROID - UI TESTING  730
+            uiautomatorviewer  730
+            uiautomator  734
+            77. ANDROID - WEBVIEW  742
+            78. ANDROID - WI-FI  751
+            79. ANDROID - WIDGETS  759
+            Widget - XML file  759
+            Widget - Layout file  759
+            Widget - Java file  759
+            Widget - Manifest file  760
+            80. ANDROID - XML PARSER  768
+            XML - Elements  768
+            XML - Parsing  769
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/androidcb-java.txt
+androidcb java
+            1 Android Tutorial For Beginners 1
+            1.1 What is Android?  1
+            1.2 Installing Android Studio  1
+            1.3 Android versions and Android SDK Manager  7
+            1.4 Supporting different screen sizes  7
+            1.5 Android Project Structure  8
+            1.6 Create "Hello Android World" application  9
+            1.6.1 Create a New Android Studio Project  9
+            1.6.2 Create the source code of a simple FirstAndroidApplication Activity 13
+            1.6.3 Create the layout of the project  14
+            1.6.4 Android Manifest  14
+            1.6.5 Edit the FirstAndroidApplication dimensions  15
+            1.6.6 Edit the FirstAndroidApplication strings  15
+            1.6.7 Add the drawable for every screen density  15
+            1.6.8 Build, compile and run  16
+            1.7 Download the Android Studio Project  18
+            1.8 How to continue?  18
+
+            2 Android Project migration from Eclipse to Android Studio  19
+            2.1 Why to use Android Studio over Eclipse ADT?  19
+            2.2 Android Studio new project structure  20
+            2.3 Gradle and build.gradle  20
+            2.4 Simple Eclipse ADT project migration to Android Studio  21
+            2.5 Java code and resources migration  27
+            2.6 AndroidManifest.xml and build.gradle file  29
+            2.7 Download the Android Studio Project  32
+
+            3 Android Google Maps v2 Tutorial  33
+            3.1 Create a Google Maps API key  33
+            3.2 Create a New Android Application Project  39
+            3.3 Importing Google Play Services in your project  46
+            3.4 Create the layout of the main Google Maps v2  51
+            3.5 Create the source code of the main AndroidGoogleMapsActivity  52
+            3.6 Creating the source code of the helper class CustomMarker.java  58
+            3.7 Creating the source code of the helper class LatLngInterpolator.java  59
+            3.8 Creating the source code of the helper class MarkerAnimation.java  61
+            3.9 Modifying the AndroidManifest.xml  63
+            3.10 Build, compile and run  64
+            3.11 Download the Eclipse Project  66
+
+            4 Android Start Service on Boot Example  67
+            4.1 Create a New Android Studio Project  67
+            4.2 Create the layout and the source code of a simple AndroidStartServiceOnBoot Activity  71
+            4.3 Creating the source code of the BroadcastReceiverOnBootComplete Service  72
+            4.4 Creating the source code of the AndroidServiceStartOnBoot Service  72
+            4.5 Editing the Android Manifest xml  73
+            4.6 Build, compile and run  74
+            4.7 Download the Android Studio Project  79
+
+            5 Android Bluetooth Connection Example  80
+            5.1 Introduction  80
+            5.2 Create a New Android Studio Project  80
+            5.3 Create the layout of the BluetoothChat  84
+            5.4 Create the source code of the BluetoothChat  85
+            5.5 Create the source code of the BluetoothChatService  90
+            5.6 Create the layout of the DeviceListActivity  96
+            5.7 Create the source code of the DeviceListActivity  97
+            5.8 AndroidManifest.xml  100
+            5.9 build.gradle  101
+            5.10 Build, compile and run  101
+            5.11 Download the Android Studio Project  104
+
+            6 Android Multitouch Example  105
+            6.1 Create a New Android Studio Project  105
+            6.2 Create the layout of the project  109
+            6.3 Creating the source code of the TouchableFrameLayout FrameLayout  110
+            6.4 Creating the source code of the main AndroidMultitouchActivity Activity  113
+            6.5 Create the strings.xml  115
+            6.6 Android Manifest  115
+            6.7 build.gradle  115
+            6.8 Build, compile and run  116
+            6.9 Download the Android Studio Project  118
+
+            7 Android StackView Example  119
+            7.1 Create a New Android Studio Project  119
+            7.2 Create the layout of the AndroidStackViewActivity  123
+            7.3 Create the layout of the StackView items  124
+            7.4 Create the source code of the StackItems  124
+            7.5 Create the source code of the StackAdapter  124
+            7.6 Create the source code of the AndroidStackViewActivity  125
+            7.7 AndroidManifest.xml  126
+            7.8 build.gradle  127
+            7.9 Build, compile and run  127
+            7.10 Download the Android Studio Project  129
+
+            8 Android ViewPager Example  130
+            8.1 Create a New Android Studio Project  130
+            8.2 Create the layout of the main AndroidViewPagerExample  134
+            8.3 Create the source code of the main AndroidViewPagerExample Activity  135
+            8.4 Create the layout of the main FragmentViewPager  136
+            8.5 Create the source code of the main FragmentViewPager support.v4.app.Fragment  136
+            8.6 Android Manifest  137
+            8.7 Composing build.gradle file  138
+            8.8 Build, compile and run  138
+            8.9 Download the Android Studio Project  143
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/android9devcookb-java.txt
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/androidstudiocookb-java.txt
+androidstudiocookb java
+            Chapter 1: Welcome to Android Studio  1
+                Creating your first app called Hello Android Studio  4
+                The use of Gradle build scripts  8
+                Testing your app with an emulator called Genymotion  9
+                Refactoring your code  13
+            Chapter 2: Applications with a Cloud-based Backend  17
+                Introduction  17
+                Setting up Parse  18
+                Consuming data from the cloud  22
+                Submitting data to the cloud  28
+            Chapter 3: Material Design  37
+                Introduction  37
+                Reycler views and card views  39
+                Ripples and elevations  46
+                Great transitions  54
+            Chapter 4: Android Wear  61
+                Wearables  61
+                Fullscreen wearable app  62
+                Watch faces  67
+                Notifications  71
+            Chapter 5: Size Does Matter  77
+                Size and context  77
+                Phone, phablet, and tablet  78
+                Media playback  92
+                TV and media centre  96
+            Chapter 6: Capture and Share  99
+                Introduction  99
+                Capturing images the easy way  100
+                Image capturing using the Camera2 API  101
+                Image sharing  108
+                Orientation issues  111
+            Chapter 7: Content Providers and Observers  117
+                Content providers  118
+                Consuming and updating data using a content provider – daily thoughts  119
+                Change projections to display KPIs in your app  133
+                Communicate with other apps using content providers  138
+            Chapter 8: Improving Quality  143
+                Patterns and support annotations  144
+                Unit testing using Robolectric  158
+                Code analysis  164
+            Chapter 9: Improving Performance  169
+                Memory profilers and performance tools  170
+                Here comes the bad app – performance improvements  175
+                Overdraw issues  185
+            Chapter 10: Beta Testing Your Apps  191
+                Build variants  192
+                Runtime permissions  201
+                Play Store beta distribution  205
+androiddevcb
+            1. Overview of Android  1
+                The Evolution of Android  1
+                The Dichotomy of Android  2
+                Devices Running Android
+                 HTC Models
+                 Motorola Models  6
+                 Samsung Models  6
+                 Tablets
+                 Other Devices
+                Hardware Differences on Android Devices
+                 Screens
+                 User Input Methods
+                 Sensors
+                Features of Android
+                 Multiprocess and App Widgets
+                 Touch, Gestures, and Multitouch
+                 Hard and Soft Keyboards
+                Android Development
+                 How to Use the Recipes in This Book
+                 Designing Applications Well
+                 Maintaining Forward Compatibility
+                 Robustness
+                Software Development Kit
+                 Installing and Upgrading
+                 Software Features and API Level
+                 Emulator and Android Device Debug
+                 Using the Android Debug Bridge
+                 Signing and Publishing
+                Android Market
+                 End-User License Agreement
+                 Improving App Visibility
+                 Differentiating an App
+                 Charging for an App
+                 Managing Reviews and Updates
+                 Alternatives to the Android Market
+            2. Application Basics: Activities and Intents
+                Android Application Overview
+                 Recipe: Creating a Project and an Activity
+                 Directory Structure of Project and Autogenerated Content 26
+                 Android Package and Manifest File
+                 Renaming Parts of an Application
+                Activity Lifecycle
+                 Recipe: Utilizing Other Lifecycle Functions
+                 Recipe: Forcing Single Task Mode
+                 Recipe: Forcing Screen Orientation
+                 Recipe: Saving and Restoring Activity Information
+                Multiple Activities
+                 Recipe: Using Buttons and TextView
+                 Recipe: Launching Another Activity from an Event
+                 Recipe: Launching an Activity for a Result Using Speech to Text 41
+                 Recipe: Implementing a List of Choices
+                 Recipe: Using Implicit Intents for Creating an Activity 44
+                 Recipe: Passing Primitive Data Types Between Activities 46
+            3. Threads, Services, Receivers, and Alerts
+                Threads
+                 Recipe: Launching a Secondary Thread
+                 Recipe: Creating a Runnable Activity
+                 Recipe: Setting a Thread’s Priority
+                 Recipe: Canceling a Thread
+                 Recipe: Sharing a Thread Between Two Applications 58
+                Messages Between Threads: Handlers
+                 Recipe: Scheduling a Runnable Task from the Main Thread 59
+                 Recipe: Using a Countdown Timer
+                 Recipe: Handling a Time-Consuming Initialization
+                Services
+                 Recipe: Creating a Self-Contained Service
+                Adding a Broadcast Receiver
+                 Recipe: Starting a Service When the Camera Button Is Pressed 70
+                App Widgets
+                 Recipe: Creating an App Widget
+                Alerts
+                 Recipe: Using Toast to Show a Brief Message on the Screen 74
+                 Recipe: Using an Alert Dialog Box
+                 Recipe: Showing Notification in Status Bar
+            4. User Interface Layout
+                Resource Directories and General Attributes
+                 Recipe: Specifying Alternate Resources
+                Views and ViewGroups
+                 Recipe: Building Layouts in the Eclipse Editor
+                 Recipe: Controlling the Width and Height of UI Elements 86
+                 Recipe: Setting Relative Layout and Layout ID
+                 Recipe: Declaring a Layout Programmatically
+                 Recipe: Updating a Layout from a Separate Thread 92
+                Text Manipulation
+                 Recipe: Setting and Changing Text Attributes
+                 Recipe: Providing Text Entry
+                 Recipe: Creating a Form
+                Other Widgets: From Buttons to Seek Bars
+                 Recipe: Using Image Buttons in a Table Layout 102
+                 Recipe: Using Check Boxes and Toggle Buttons 105
+                 Recipe: Using Radio Buttons
+                 Recipe: Creating a Drop-Down Menu
+                 Recipe: Using a Progress Bar
+                 Recipe: Using a SeekBar
+            5. User Interface Events
+                Event Handlers and Event Listeners
+                 Recipe: Intercepting a Physical Key Press
+                 Recipe: Building Menus
+                 Recipe: Defining Menus in XML
+                 Recipe: Utilizing the SEARCH Key 127
+                 Recipe: Reacting to Touch Events 128
+                 Recipe: Listening for Fling Gestures
+                 Recipe: Using Multitouch
+                Advanced User Interface Libraries
+                 Recipe: Using Gestures
+                 Recipe: Drawing 3D Images
+            6. Multimedia Techniques
+                Images
+                 Recipe: Loading an Image for Manipulation
+                Audio
+                 Recipe: Choosing and Playing Back Audio Files
+                 Recipe: Recording Audio Files
+                 Recipe: Manipulating Raw Audio
+                 Recipe: Using Sound Resources Efficiently 163
+                 Recipe: Adding Media and Updating Paths 165
+                Video
+            7. Hardware Interface
+                Camera
+                 Recipe: Customizing the Camera
+                Other Sensors
+                 Recipe: Getting a Device’s Rotational Attitude
+                 Recipe: Using the Temperature and Light Sensor
+                Telephony
+                 Recipe: Utilizing the Telephony Manager
+                 Recipe: Listening for Phone States
+                 Recipe: Dialing a Phone Number
+                Bluetooth
+                 Recipe: Turning on Bluetooth
+                 Recipe: Discovering Bluetooth Devices
+                 Recipe: Pairing with Bonded Bluetooth Devices
+                 Recipe: Opening a Bluetooth Socket
+                 Recipe: Using Device Vibration
+                 Recipe: Accessing the Wireless Network
+            8. Networking
+                Using SMS
+                 Recipe: Autosend an SMS Based on a Received
+                 SMS 197
+                Using Web Content
+                 Recipe: Customizing a Web Browser
+                 Recipe: Using an HTTP GET
+                 Recipe: Using HTTP POST
+                Social Networking
+                 Recipe: Integrating with Twitter
+            9. Data Storage Methods
+                Shared Preferences
+                 Recipe: Creating and Retrieving Shared Preferences 222
+                 Recipe: Using the Preferences Framework
+                 Recipe: Changing the UI Based on Stored Data
+                 Recipe: Adding a EULA
+                SQLite Database
+                 Recipe: Creating a Separate Database Package
+                 Recipe: Using a Separate Database Package
+                 Recipe: Creating a Personal Diary
+                Content Provider
+                 Recipe: Creating a Custom Content Provider
+                File Saving and Loading
+            10. Location-Based Services
+                Location Basics
+                 Recipe: Retrieving Last Location
+                 Recipe: Updating Location Upon Change
+                 Recipe: Listing All Enabled Providers
+                 Recipe: Translating a Location to Address (Reverse Geocoding) 258
+                 Recipe: Translating an Address to Location (Geocoding) 261
+                Using Google Maps
+                 Recipe: Adding Google Maps to an Application
+                 Recipe: Adding Markers on a Map
+                 Recipe: Adding Views to a Map
+                 Recipe: Marking the Device’s Current Location on a Map 274
+                 Recipe: Setting up a Proximity Alert
+            11. Advanced Android Development
+                Android Custom View
+                 Recipe: Customizing a Button
+                Android Native Components
+                 Recipe: Developing a Native Component
+                Android Security
+                 Recipe: Declaring and Enforcing Permissions
+                Android Inter-Process Communication
+                 Recipe: Implementing a Remote Procedure Call
+                Android Backup Manager
+                 Recipe: Creating a Backup of Runtime Data
+                 Recipe: Backing Up Files to the Cloud 296
+                 Recipe: Triggering Backup and Restore 296
+                Android Animation
+                 Recipe: Creating an Animation
+            12. Debugging
+                Eclipse Built-in Debug Tools
+                 Recipe: Specifying a Run Configuration
+                 Recipe: Using the DDMS
+                 Recipe: Debugging Through Breakpoints
+                Android SDK Debug Tools
+                 Recipe: Using the Android Debug Bridge
+                 Recipe: Using LogCat
+                 Recipe: Using the Hierarchy Viewer
+                 Recipe: Using TraceView
+                Android System Debug Tools
+                 Recipe: Setting up GDB Debugging
+

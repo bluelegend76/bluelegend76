@@ -1,0 +1,1369 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/threejs01-learn.txt
+  ~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/threejsess.txt
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/threejs02-cb.txt
+
+~/Dropbox/rsc/samples/code/hello-svgcanvas.txt
+
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/h5multdevcb.pdf
+            1 - Structuring for Rich Media Applications ----
+            Setting up an HTML5 test area
+              WebKit rendering engine
+              Gecko rendering engine
+              Trident rendering engine
+            Using the header tag for logos and site titles
+              Use <header> elsewhere
+              Content, not position
+              Semantic naming
+            Creating a table of contents using the nav tag
+              Use <nav> elsewhere
+              More semantic = more gooder
+              Still evolving
+            Using section tags to structure areas of a page
+              Section doesn't equal div
+              Section guidelines
+              Still evolving
+            Aligning graphics using the aside tag
+              Not all <section>s are alike
+              Tip to remember
+              Aside from <aside>
+            Displaying multiple sidebars using the aside tag
+              Pull quotes good for <aside>
+              Remember to validate
+            Implementing the footer tag
+              This happens usually
+              Flexible footer content
+              More flexible footer content
+            Applying the outline algorithm
+              Are you sure?
+              An exception
+              Remember accessibility
+            Creating a stylish promo page in HTML5
+              Try sans shiv
+              Mobile first
+              IE evil?
+            2 - Supporting the Content ----
+            Structuring a blog article
+              Put your code on a diet?
+              Validation as an aid, not a crutch
+              Eric Meyer's funny
+              Where to find validators
+            Highlighting text using the mark element
+              <Mark> long and prosper
+              Waiting for browsers
+              Is "future proof" a word?
+            Using the time element
+              Odd rules
+              <time>'s Time will come
+              Always remember SEO
+            Specifying the pubdate of an article
+              Still waiting on browsers
+              Extra credit
+              Let's end confusion
+            Displaying comment blocks using the article element
+              Blog comments
+              Value comments
+              Opportunity's yours
+            Adding fonts dynamically with @font-face
+              Don't steal
+              Firefox note
+              Paul Irish rocks
+            Adding drop-shadow effects to fonts
+              Browser support
+              With great power...
+              A plea to all readers
+            Applying gradient effects to fonts
+            Annotating visual elements using the figure and figcaption tags
+              Grouping's good
+              Semantics are valuable too
+              <figure> vs <aside>
+            3 -Styling with CSS ----
+            Setting elements to display:block
+              No need to repeat and repeat and...
+              Style once
+              Echoes of the past
+            Styling a nav block element
+              Browser support
+              Text-shadow is cool
+            Using background-size to control background appearance
+              Browser support
+              Acceptable in IE
+              Simple Scott simply rocks
+            Adding rounded corners with border-radius
+              Browser support
+              Acceptable in IE
+              Devin's Heaven goes to 11
+            Including multiple background images
+              Where's the content?
+              Let's be Frank
+            Adding a box shadow to images
+              Browser support
+              Ignorance is bliss
+              Box-shadow for The Box
+            Styling for Internet Explorer browsers
+              Border-radius
+              Box-shadow
+              Text-shadow
+              Note
+            4 - Creating Accessible Experiences ----
+            Testing browser support
+              With an eye to the future
+              What Modernizr really does
+              Do it for the right reasons
+            Adding skip navigation
+              Full browser support
+              Less equals more
+            Adding meta tags
+              Whatchu talkin' 'bout?
+              It all comes back to SEO
+              Did I do that?
+            Using semantic descriptions in tags for screen readers
+              Always improve
+              Semantics for good SEO
+              Greg finally learned
+            Providing alternate site views
+              Min-width
+              My math teacher was right
+              Is bigger always better?
+            Using hgroup to create accessible header areas
+            Displaying alternate content for non-supported browsers
+            Using WAI-ARIA
+              Still awaiting browser support
+              That's how I role
+              Accessibility first
+            5 - Learning to Love Forms ----
+            Displaying placeholder text
+              Text only
+              Embrace italics
+              Browser support
+            Adding autofocus to form fields
+              One per page
+              Older browsers
+              Browser support
+            Styling forms using HTML5 and CSS3
+              Older browsers
+              Test, test, test
+              About pseudo classes
+            Using the e-mail input type
+              Browser support
+              No JavaScript
+              Validation evolution
+            Adding a URL using the URL input type
+              Browser support
+              No JavaScript
+              What's next?
+            Using the number tag
+              Browser support
+              No JavaScript
+            Using the range tag
+              Use caution
+              No JavaScript
+              Browser support
+            Creating a search field
+              Why fix perfection?
+              Browser support
+              Search results
+            Creating a picker to display date and time
+              Browser support
+              If all else fails
+            6 - Developing Rich Media Applications Using Canvas ----
+            Setting up the canvas environment
+              He's smart
+              What am I sayin'?
+              What's next for <canvas>?
+            Understanding the 2d rendering context
+              You can master <canvas>
+              X, meet Y
+              Respect my authority!
+            Processing shapes dynamically
+              Any way you want it
+              Similar to tables?
+              Be a square first
+            Drawing borders for images using canvas
+              Style first
+              Many color values work
+              I like big borders and I cannot lie
+            Rounding corners
+              Just like the Scholastic Aptitude Tests
+              What about IE?
+              We're laying a foundation
+            Creating interactive visualizations
+              Evil of two lessors
+              What about fallback content?
+              Take him up on his offer.
+            Bouncing a ball
+              Start again
+              Don't box me in
+              And that's one to grow on
+            Creating fallback content
+              Thanks, Mozilla
+              How will we deal with accessibility?
+              Are we ready for <canvas>?
+            7 - Interactivity using JavaScript ----
+            Playing audio files with JavaScript
+              Controlling the appearance of audio clips with jQuery
+            Using the drag-and-drop API with text
+              Create a canvas-based tic-tac-toe game
+              Show responsive messages as the user plays
+            Crossbrowser video support with vid.ly and jQuery
+            Displaying video dynamically using jQuery
+              More interactive explosions using video and canvas
+              What's with all the explosions?
+              Chroma key background replacement in real time
+            Movable video ads using jQuery
+              Have HTML element, will travel
+            Controlling the display of images using Easel.js and the canvas tag
+            Animating a sequence of images using Easel.js and the canvas tag
+              Pirates Love Daisies and so should you
+              The return of old school computer animation techniques
+            Random animation with audio using the canvas tag and JavaScript
+              Visualizing your audio with cutting edge browsers
+              Pushing the implementation of audio in HTML5
+            8 - Embracing Audio and Video ----
+            Saying no to Flash
+              Some good news
+              Video with style
+              Cover your assets
+            Understanding audio and video file formats
+              Audio file formats
+              File format agnosticism
+              Can we stop the madness one day?
+            Displaying video for everyone
+              A mime is a terrible thing to waste
+              External "Video for Everybody"
+              Be flexible with your approach
+            Creating accessible audio and video
+              Always consider accessibility
+              Browser support
+            Crafting a slick audio player
+              Style and substance
+              Being careful with details
+            Embedding audio and video for mobile devices
+              Vimeo offers much more
+              Coming full circle
+            9 - Data Storage ----
+            Testing browsers for data storage support
+              Mobile testing
+              Adobe browser lab
+              Free cross-browser and OS testing with BrowserShots
+            Using browser developer tools to monitor web storage
+              Use a Firebug addon even if you don't use Firefox
+              Safari developer tools are native to the Safari browser
+            Setting and getting a session storage variable
+              One browser, one session
+            Setting and getting a local storage variable
+            Converting local storage strings to numbers using parseInt
+              Storing and retrieving arrays in localStorage
+            Creating a Web SQL Database
+              Web SQL may be replaced by SQLite
+            Using a Web SQL database
+              Save script code in a separate file
+              Guard against SQL injection on production servers
+            Creating a cache manifest for offline storage
+            Displaying the current location using geolocation and geo.js
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/webpaint-mmed_2008.pdf
+            Chapter 1 - You Must Have Fun ----
+            Section 1.1. What Was Good Enough for Grandpappy…
+            Section 1.2. Draw Me!
+            Section 1.3. $$$$$$$$$$$$
+            Section 1.4. Graphics: Taste Great, Less Filling
+            Section 1.5. It Hurts! Make It Stop!
+            Section 1.6. Web Graphics Hall of Shame
+            Section 1.7. On with the Wondrous Variety
+            Chapter 2 - Imagine ----
+            Section 2.1. Raster Graphics and RGB Color 101
+            Section 2.2. JPEG
+            Section 2.3. GIF: Lossless and Paletted
+            Section 2.4. PNG
+            Section 2.5. Images: Annotated, Embedded, and Optimized
+            Section 2.6. Steal This: Images, Copyright, and Hotlinking
+            Section 2.7. Image Storage
+            Chapter 3 - Photographs: From Camera to Web Page ----
+            Section 3.1. The Web Photographer's Workflow
+            Section 3.2. Working with RAW Images
+            Section 3.3. Editing Photos: Bending Light
+            Section 3.4. Color Match That Group: Optimization in Numbers
+            Section 3.5. It's Black and White and Not Red All Over
+            Section 3.6. The Illustrative Effect
+            Section 3.7. Knockouts and Extractions
+            Section 3.8. A Survey of Desktop Photo Editors
+            Section 3.9. Online Editors: Fauxto and Picnik
+            Section 3.10. Photo Workflow Software
+            Section 3.11. Photo Workflow: Camera to Web Redux
+            Chapter 4 - The Web As Frame ----
+            Section 4.1. The Art of Thumbnail Sizing
+            Section 4.2. The Creative Art of Thumbnails
+            Section 4.3. Expanding Thumbnails
+            Section 4.4. Embedding Photos: Condiment and Spice
+            Section 4.5. Plating Photos
+            Section 4.6. Generated Galleries and Slideshows
+            Section 4.7. Gallery Software on the Server
+            Section 4.8. A Bit of Code
+            Chapter 5 - Pop Graphics ----
+            Section 5.1. The Graphic Toolbox: Shapes, Layers, Gradient, and Blur
+            Section 5.2. Shiny Buttons:Gel, Wet, and Glass
+            Section 5.3. Badges and Bows: Beyond the Buttons
+            Section 5.4. Reflecting on Reflection, and Shadowing Revisited
+            Section 5.5. Reverse-Engineering Ideas
+            Section 5.6. Instant in Time: Screenshots
+            Chapter 6 - Vector This: Early Days and Markup ----
+            Section 6.1. WebCGM
+            Section 6.2. The 3Ds
+            Section 6.3. VML
+            Section 6.4. Hello SVG
+            Chapter 7 - SVG Bootcamp ----
+            Section 7.1. SVG Full, Basic, and Tiny
+            Section 7.2. Browser Support: Standoffish or Integrated
+            Section 7.3. The Structure of the SVG Space
+            Section 7.4. SVG Elements
+            Section 7.5. Paths, Patterns, and Markers
+            Section 7.6. Revisiting the Viewport and the viewBox
+            Section 7.7. Transformations
+            Section 7.8. SVG Tools
+            Section 7.9. Static SVG Secrets
+            Chapter 8 - CSS Über Zone ----
+            Section 8.1. Selector Magic
+            Section 8.2. CSS Tips and Tricks
+            Section 8.3. div Play Dough
+            Section 8.4. CSS Tools and Utilities
+            Chapter 9 - Design for the Non-Designer ----
+            Section 9.1. The Elements of Page Design
+            Section 9.2. Web Pages Are Like Ogres, and Ogres Have Layers
+            Section 9.3. Flexible Designs
+            Section 9.4. Colors: Make Your Page Happy, Make Your Page Sad
+            Section 9.5. Typography for the Page
+            Section 9.6. Web Design Tools
+            Section 9.7. Additional Readings
+            Chapter 10 - Dynamic Web Page Graphics ----
+            Section 10.1. The Quick Intro to the DOM
+            Section 10.2. Coloring Highlights
+            Section 10.3. Changing Class and Transparency
+            Section 10.4. Programming with Images
+            Section 10.5. Accordions: Smooshable Spaces
+            Chapter 11 - Canvassing ----
+            Section 11.1. Cross-Browser canvas Support and Microsoft's Silverlight
+            Section 11.2. canvas Basics
+            Section 11.3. Saving State
+            Section 11.4. Layering and Clipping
+            Section 11.5. canvas Effects
+            Chapter 12 - Dynamic SVG and canvas ----
+            Section 12.1. Embedded Animation
+            Section 12.2. Scripting SVG
+            Section 12.3. Embedded Scripting
+            Section 12.4. Animated Clock: The Hello World of Animated and Interactive SVG
+            Section 12.5. Scripting canvas: Zoom!
+            Chapter 13 - Image Magic: Programming and Power Tools ----
+            Section 13.1. Serving Up Photos: Insta-Slideshows
+            Section 13.2. Manipulate Images with PHP/GD
+            Section 13.3. Forget the Interface: The Magic of ImageMagick
+            Section 13.4. Programming with ImageMagick and IMagick
+            Chapter 14 - The Geo Zone ----
+            Section 14.1. Mapping with Google
+            Section 14.2. Yahoo!'s Maps
+            Section 14.3. Living Within the Geoweb
+            Chapter 15 - Like Peanut Butter and Jelly: Data and Graphics ----
+            Section 15.1. Graphs: Every Which Way but Static
+            Section 15.2. Mining Your Photos
+            Section 15.3. Rosy Glow of Completion
+            Section 15.4. One Last Look at Data and Visualization
+            Section 15.5. The data: URI
+            Section 15.6. At the End of This Rainbow
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvascb.pdf
+            1 - Paths and Text ----
+            Drawing lines
+            Drawing horizontal, vertical, and assorted lines
+            Drawing joins
+            Dariwng arc1
+            Dariwng arc2
+            Drawing a quadratic curve
+            Drawing a rainbow
+            Drawing a Bezier curve
+            Drawing a flag
+            Drawing 3D text with shadows
+            Adding shadows to objects
+            Drawing a house
+            2 - Shapes and Composites ----
+            Drawing rectangles
+            Drawing triangles
+            Drawing circles
+            Drawing gradients
+              Radial gradient
+              Linear gradient
+            Working with custom shapes and styles
+            Demonstrating translation, rotation, and scaling
+            Drawing an ellipse
+            Saving and restoring canvas state
+            Demonstrating composites
+            Drawing a mouse
+            3 - Animation ----
+            Creating an animation class
+            Demonstrating acceleration
+            Demonstrating gravity
+            Animating a line
+            Animating text
+            Animating a clock
+            Animating a solar system
+            Animating particles
+            Animating a particle fountain
+            Animating a rain effect
+            Animating a snow effect
+            4 - Images and Videos ----
+            Drawing and cropping an image
+            Rendering effects to images
+            Drawing a mirror image
+            Clipping a path
+            Animated clipping
+            Converting canvas to image and back to canvas
+            Working with videos
+            Rendering effects to videos
+            Creating a pixelated image focus
+            5 - Interactivity through Events ----
+            Working with mouse coordinates
+            Making a face smile
+            Detecting a point in a path
+            Simulating car movements
+            Dragging and dropping
+            Combining events and animation
+            Demonstrating a touch event
+            6 - Creating Graphs and Charts ----
+            OTE ltt mee
+            Drawing the axes
+            Drawing a simple equation
+            Drawing a sinusoidal wave
+            Drawing a line graph
+            Drawing a bar graph
+            Drawing a pie chart
+            7 - 3D Modeling ----
+            Rendering 3D objects
+            Drawing 3D cubes
+            Drawing a 3D cylinder and a cone
+            Drawing a 3D sphere and a torus
+            Drawing 3D text decorated by particles
+            Drawing a panorama
+            Drawing a snowman
+            8 - Game Development ----
+            Understanding the gaming states
+            Drawing on canvas
+            Playing some music
+            Using sprites from the sprite sheet
+            Demonstrating animation
+            Demonstrating collision
+            Demonstrating physics
+            Game 1 - Fruit Basket
+            Game 2 - Catapult
+            9 - Interoperability and Deployment ----
+            Introduction
+            Understanding interoperability
+            Styling text and background using CSS
+            Deploying a game on Android mobile
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvas_kng.pdf
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvas_kng.txt
+            Canvas
+            Vorwort
+            1 - Canvas-Tutorial ----
+            Linien zeichnen und Polygone füllen
+            Grafikattribute
+            Canvas-Dimensionen und -Koordinaten
+            Koordinatensystemtransformationen
+            Transformationen mathematisch verstehen
+            Transformationsbeispiel
+            Kurven zeichnen und füllen
+            Rechtecke
+            Farben, Transparenz, Verläufe und Muster
+            Strichattribute
+            Text
+            Clipping
+            Schatten
+            Bilder
+            Compositing
+            Pixelmanipulation
+            Treffererkennung
+            Canvas-Beispiel: Sparklines
+            2 - Canvas-Referenz ----
+            Canvas
+            Canvas.getContext()
+            Canvas.toDataURL()
+            CanvasGradient
+            CanvasGradient.addColorStop()
+            CanvasPattern
+            CanvasPixelArray
+            CRC
+            CRC.arc()
+            CRC.arcTo()
+            CRC.beginPath()
+            CRC.bezierCurveTo()
+            CRC.clearRect()
+            CRC.clip()
+            CRC.closePath()
+            CRC.createImageData()
+            CRC.createLinearGradient()
+            CRC.createPattern()
+            CRC.createRadialGradient()
+            CRC.drawImage()
+            CRC.fill()
+            CRC.fillRect()
+            CRC.fillText()
+            CRC.getImageData()
+            CRC.globalCompositeOperation
+            CRC.isPointInPath()
+            CRC.lineCap
+            CRC.lineJoin
+            CRC.lineTo()
+            CRC.measureText()
+            CRC.miterLimit
+            CRC.moveTo()
+            CRC.putImageData()
+            CRC.quadraticCurveTo()
+            CRC.rect()
+            CRC.restore()
+            CRC.rotate()
+            CRC.save()
+            CRC.scale()
+            CRC.setTransform()
+            CRC.stroke()
+            CRC.strokeRect()
+            CRC.strokeText()
+            CRC.transform()
+            CRC.translate()
+            ImageData
+            TextMetrics
+            Index
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/h5canvcb.pdf
+            Who this book is for
+            What is HTML5 Canvas
+            Chapter 1 - Getting Started with Paths and Text ----
+            Drawing a line
+            Drawing an arc
+            Drawing a Quadratic curve
+            Drawing a Bezier curve
+            Drawing a zigzag
+            Drawing a spiral
+            Working with text
+            Drawing 3D text with shadows
+            Unlocking the power of fractals: Drawing a haunted tree
+            Chapter 2 - Shape Drawing and Composites ----
+            Drawing a rectangle
+            Drawing a circle
+            Working with custom shapes and fill styles
+            Fun with Bezier curves: drawing a cloud
+            Drawing transparent shapes
+            Working with the context state stack to save and restore styles
+            Working with composite operations
+            Creating patterns with loops: drawing a gear
+            Randomizing shape properties: drawing a field of flowers
+            Creating custom shape functions: playing card suits
+            Putting it all together: drawing a jet
+            Chapter 3 - Working with Images and Videos ----
+            Drawing an image
+            Cropping an image
+            Copying and pasting sections of the canvas
+            Working with video
+            Getting image data
+            Introduction to pixel manipulation: inverting image colors
+            Inverting video colors
+            Converting image colors to grayscale
+            Converting a canvas drawing into a data URL
+            Saving a canvas drawing as an image
+            Loading the canvas with a data URL
+            Creating a pixelated image focus
+            Chapter 4 - Mastering Transformations ----
+            Translating the canvas context
+            Rotating the canvas context
+            Scaling the canvas context
+            Creating a mirror transform
+            Creating a custom transform
+            Shearing the canvas context
+            Handling multiple transforms with the state stack
+            Transforming a circle into an oval
+            Rotating an image
+            Drawing a simple logo and randomizing its position, rotation, and scale
+            Chapter 5 - Bringing the Canvas to Life with Animation ----
+            Introduction
+            Creating an Animation class
+            Creating a linear motion
+            Creating acceleration
+            Creating oscillation
+            Oscillating a bubble
+            Swinging a pendulum
+            Animating mechanical gears
+            Animating a clock
+            Simulating particle physics
+            Creating microscopic life forms
+            Stressing the canvas and displaying the FPS
+            Chapter 6 - Interacting with the Canvas: Attaching Event Listeners to Shapes and Regions ----
+            Chapter 7 - Creating Graphs and Charts ----
+            Creating an Events class
+            Working with canvas mouse coordinates
+            Attaching mouse event listeners to regions
+            Attaching touch event listeners to regions on a mobile device
+            Attaching event listeners to images
+            Dragging-and-dropping shapes
+            Dragging-and-dropping images
+            Creating an image magnifier
+            Creating a drawing application
+            Creating a pie chart
+            Creating a bar chart
+            Graphing equations
+            Plotting data points with a line chart
+            Chapter 8 - Saving the World with Game Development ----
+            Creating sprite sheets for the heroes and enemies
+            Creating level images and boundary maps
+            Creating an Actor class for the hero and enemies
+            Creating a Level class
+            Creating a Health Bar class
+            Creating a Controller class
+            Creating a Model class
+            Creating a View class
+            Setting up the HTML document and starting the game
+            Chapter 9 - Introducing WebGL ----
+            Creating a WebGL wrapper to simplify the WebGL API
+            Creating a triangular plane
+            Rotating a triangular plane in 3D space
+            Creating a rotating cube
+            Adding textures and lighting
+            Creating a 3D world that you can explore
+            --
+            Appendix A: Detecting Canvas Support
+            Appendix B: Canvas Security
+            Appendix C: Additional Topics
+            Canvas vs. CSS3 transitions and animations
+            Canvas performance on mobile devices
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/h5-graphdatavis.pdf
+            1 - Drawing Shapes in Canvas ----
+            Graphics with 2D canvas
+            Starting from basic shapes
+            Layered rectangles to create the flag of Greece
+              BeginPath method and closePath method
+            Creating shapes using paths
+            Creating complex shapes
+            Adding more vertices
+            Overlapping shapes to create other shapes
+            2 - Advanced Drawing in Canvas ----
+            Drawing arcs
+            Drawing curves with a control point
+            Creating a Bezier curve
+            Integrating images into our art
+              Scaling images
+              Adding even more control
+              Using images as a fill
+            Drawing with text
+              Using gradients in your text
+              Adding shadows and glows
+            Understanding pixel manipulation
+              Making an image grayscale
+              Pixel reversing
+            3 - Creating Cartesian-based Graphs ----
+            Building a bar chart from scratch
+              Revisiting the code
+              Using the fillChart function
+              Using the createBars function
+            Spreading data in a scatter chart
+            Building line charts
+              Enabling switching mode between dots and lines
+              Creating fill shapes
+            Creating the flying brick chart (waterfall chart)
+              Cleaning the format of numbers
+              Other tasks I've left open
+            Building a candlestick chart (stock chart)
+              Adding other render options to our stock chart
+            4 - Let's Curve Things Up ----
+            Building a bubble chart
+            Creating a pie chart
+              Revisiting Math.cos() and Math.sin()
+              Improving our bubbles' text format
+            Using a doughnut chart to show relationships
+              Adding an outline
+              Creating a legend
+            Leveraging a radar
+              Adding a rotated legend
+            Structuring a tree chart
+            5 - Getting Out of the Box ----
+            Going through a funnel (a pyramid chart)
+              Making findLine smarter
+              Changing the logic in init to create shapes
+              Adding text into our graph
+            Revisiting lines: making the line chart interactive
+              Breaking down the logic of onChangedRadio
+            Tree mapping and recursiveness
+              Updating the init function — recalculating the total
+              Turning drawTreeMap into a recursive function
+              Turning the data and total to recursive data
+            Adding user interaction into tree mapping
+              Going back to the main treemap
+            Making an interactive click meter
+            6 - Bringing Static Things to Life ----
+            Stacking graphical layers
+              Optimizing the drawChart function
+              Further streamlining our code
+              Creating the radio buttons dynamically
+            Moving to an OOP perspective
+              Moving our base canvas element into our constructor
+              Creating all the HTML components dynamically
+              Removing the lose ends
+              Testing our work by creating two charts
+            Animating independent layers
+            Adding an interactive legend
+            Creating a context-aware legend
+            7 - Depending on the Open Source Sphere ----
+            Animating a gauge meter (jqPlot)
+              Creating the updateMeter function
+            Creating an animated 3D chart (canvas3DGraph)
+              The logic behind plotBar
+              The logic behind styleFormatter
+            Charting over time (flotJS)
+              The GetData function
+              The UpdateChart function
+            Building a clock with RaphaelJS
+            Animating paths
+            Making a sunburst chart with InfoVis
+              Where is the copy?
+            8 - Playing with Google Charts ----
+            Getting started with a pie chart
+              Changing the chart type
+            Creating charts using the ChartWrapper
+              Changing a chart in one line
+            Changing data source to Google Spreadsheet
+            Customizing the chart properties with an options object
+            Adding a dashboard to charts
+            9 - Using Google Maps ----
+            Creating a geographic chart with Google Visualization API
+              Making smaller areas more visible
+            Obtaining a Google API key
+            Building a Google map
+              Working with latitude and longitude
+              Map types
+            Adding markers and events
+            Customizing controls and overlapping maps
+            Redesigning maps using styles
+            10 - Maps in Action ----
+            Connecting a Twitter feed to a Google map
+            Building an advanced interactive marker
+            Adding multiple tweets into an InfoWindow bubble
+            Customizing the look and feel of markers
+            Final project: building a live itinerary
+              Understanding the Traveler marker
+              Updating the Animator object
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/notes4pros-h5canvas.pdf
+
++CANVAS CHEATSHEETS(??)
+~/Empire/Doks/Comp/lang/webdev/js/h5multdevcb.txt
+h5multdevcb
+            1. Structuring for Rich Media Applications
+                Setting up an HTMLs test area
+                  WebKit rendering engine
+                  Gecko rendering engine
+                  Trident rendering engine
+                Using the header tag for logos and site titles
+                  Use <header> elsewhere
+                  Content, not position
+                  Semantic naming
+                Creating a table of contents using the nav tag
+                  Use <nav> elsewhere
+                  More semantic = more gooder
+                  Still evolving
+                Using section tags to structure areas of a page
+                  Section doesn't equal div
+                  Section guidelines
+                  Still evolving
+                Aligning graphics using the aside tag
+                  Not all <section>s are alike
+                  Tip to remember
+                  Aside from <aside>
+                Displaying multiple sidebars using the aside tag
+                  Pull quotes good for <aside>
+                  Remember to validate
+                Implementing the footer tag
+                  This happens usually
+                  Flexible footer content
+                  More flexible footer content
+                Applying the outline algorithm
+                  Are you sure?
+                  An exception
+                  Remember accessibility
+                Creating a stylish promo page in HTML5
+                  Try sans shiv
+                  Mobile first
+                  IE evil?
+            2. Supporting the Content
+                Structuring a blog article
+                  Put your code on a diet?
+                  Validation as an aid, not a crutch
+                  Eric Meyer's funny
+                  Where to find validators
+                Highlighting text using the mark element
+                  <Mark> long and prosper
+                  Waiting for browsers
+                  Is "future proof" a word?
+                Using the time element
+                  Odd rules
+                  <time>'s Time will come
+                  Always remember SEO
+                Specifying the pubdate of an article
+                  Still waiting on browsers
+                  Extra credit
+                  Let's end confusion
+                Displaying comment blocks using the article element
+                  Blog comments
+                  Value comments
+                  Opportunity's yours
+                Adding fonts dynamically with @font-face
+                  Don't steal
+                  Firefox note
+                  Paul Irish rocks
+                Adding drop-shadow effects to fonts
+                  Browser support
+                  With great power...
+                  A plea to all readers
+                Applying gradient effects to fonts
+                Annotating visual elements using the figure and figcaption tags
+                  Grouping's good
+                  Semantics are valuable too
+                  <figure> vs <aside>
+            3. Styling with CSS
+                Setting elements to display:block
+                  No need to repeat and repeat and repeat and repeat
+                  Style once
+                  Echoes of the past
+                Styling a nav block element
+                  Browser support
+                  Text-shadow is cool
+                Using background-size to control background appearance
+                  Browser support
+                  Acceptable in IE
+                  Simple Scott simply rocks
+                Adding rounded corners with border-radius
+                  Browser support
+                  Acceptable in IE
+                  Devin's Heaven goes to 11
+                Including multiple background images
+                  Where's the content?
+                  Let's be Frank
+                Adding a box shadow to images
+                  Browser support
+                  Ignorance is bliss
+                  Box-shadow for The Box
+                Styling for Internet Explorer browsers
+                  Border-radius
+                  Box-shadow
+                  Text-shadow
+                  Note
+            4. Creating Accessible Experiences
+                Testing browser support
+                  With an eye to the future
+                  What Modernizr really does
+                  Do it for the right reasons
+                Adding skip navigation
+                  Full browser support
+                  Less equals more
+                Adding meta tags
+                  Whatchu talkin' 'bout?
+                  It all comes back to SEO
+                  Did I do that?
+                Using semantic descriptions in tags for screen readers
+                  Always improve
+                  Semantics for good SEO
+                  Greg finally learned
+                Providing alternate site views
+                  Min-width
+                  My_math teacher was right
+                  Is bigger always better?
+                Using hgroup to create accessible header areas
+                Displaying alternate content for non-supported browsers
+                Using WAI-ARIA
+                  Still awaiting browser support
+                  That's how I role
+                  Accessibility first
+            5. Learning to Love Forms
+                Introduction
+                Displaying placeholder text
+                  Text only
+                  Embrace italics
+                  Browser support
+                Adding autofocus to form fields
+                  One per page
+                  Older browsers
+                  Browser support
+                Styling forms using HTML5 and CSS3
+                  Older browsers
+                  Test, test, test
+                  About pseudo classes
+                Using the e-mail input type
+                  Browser support
+                  No JavaScript
+                  Validation evolution
+                Adding a URL using the URL input type
+                  Browser support
+                  No JavaScript
+                  What's next?
+                Using the number tag
+                  Browser support
+                  No JavaScript
+                Using the range tag
+                  Use caution
+                  No JavaScript
+                  Browser support
+                Creating a search field
+                  Why fix perfection?
+                  Browser support
+                  Search results
+                Creating a picker to display date and time
+                  Browser support
+                  If all else fails
+            6. Developing Rich Media Applications Using Canvas
+                Setting up the canvas environment
+                  He's smart
+                  What am I sayin’?
+                  What's next for <canvas>?
+                Understanding the 2d rendering context
+                  You can master <canvas>
+                  X, meet Y
+                  Respect my authority!
+                Processing shapes dynamically
+                  Any way you want it
+                  Similar to tables?
+                  Be a square first
+                Drawing borders for images using canvas
+                  Style first
+                  Many color values work
+                  I like big borders and I cannot lie
+                Rounding corners
+                  Just like the Scholastic Aptitude Tests
+                  What about IE?
+                  We're laying a foundation
+                Creating interactive visualizations
+                  Evil of two lessors
+                  What about fallback content?
+                  Take him up on his offer.
+                Bouncing a ball
+                  Start again
+                  Don't box me in
+                  And that's one to grow on
+                Creating fallback content
+                  Thanks, Mozilla
+                  How will we deal with accessibility?
+                  Are we ready for <canvas>?
+            7. Interactivity using JavaScript
+                Introduction
+                Playing audio files with JavaScript
+                  Controlling the appearance of audio clips with jQuery
+                Using the drag-and-drop API with text
+                  Create a canvas-based tic-tac-toe game
+                  Show responsive messages as the user plays
+                Crossbrowser video support with vid.ly and jQuery
+                Displaying video dynamically using jQuery
+                  More interactive explosions using video and canvas
+                  What's with all the explosions?
+                  Chroma key background replacement in real time
+                Movable video ads using jQuery
+                  Have HTML element, will travel
+                Controlling the display of images using Easel.js and the canvas tag
+                Animating a sequence of images using Easel.js and the canvas tag  @
+                  Pirates Love Daisies and so should you
+                  The return of old school computer animation techniques
+                Random animation with audio using the canvas tag and JavaScript
+                  Visualizing your audio with cutting edge browsers
+                  Pushing the implementation of audio in HTML5
+            8. Embracing Audio and Video
+                Saying no to Flash
+                  Some good news
+                  Video with style
+                  Cover your assets
+                Understanding audio and video file formats
+                  Audio file formats
+                  File format agnosticism
+                  Can we stop the madness one day?
+                Displaying video for everybody
+                  A mime is a terrible thing to waste
+                  External "Video for Everybody"
+                  Be flexible with your approach
+                Creating accessible audio and video
+                  Always consider accessibility
+                  Browser support
+                  See more
+                Crafting a slick audio player
+                  Style and substance
+                  Being careful with details
+                Embedding audio and video for mobile devices
+                  Vimeo offers much more
+                  Coming full circle
+            9. Data Storage
+                Testing browsers for data storage support
+                  Mobile testing
+                  Adobe browser lab
+                  Free cross-browser and OS testing with BrowserShots
+                Using browser developer tools to monitor web storage
+                  Use a Firebug addon even if you don't use Firefox
+                  Safari developer tools are native to the Safari browser
+                Setting and getting a session storage variable
+                  One browser, one session
+                Setting and getting a local storage variable
+                Converting local storage strings to numbers using parseInt
+                  Storing and retrieving arrays in localStorage
+                Creating a Web SQL Database
+                  Web SQL may be replaced by SQLite
+                Using a Web SQL database
+                  Save script code in a separate file
+                  Guard against SQL injection on production servers
+                Creating a cache manifest for offline storage
+                Displaying the current location using geolocation and geo.js
+# ~/Dropbox/rsc/data/lists/ref/comp/gamedev/canvas-cb.txt
+
+~/Empire/Doks/Comp/lang/webdev/js/h5canvcb.txt
+h5canvcb
+                What this book covers  1
+                What you need for this book  3
+                Who this book is for  3
+                What is HTML5 Canvas  3
+            Chapter 1: Getting Started with Paths and Text  7
+                Drawing a line  8
+                Drawing an arc  11
+                Drawing a Quadratic curve  13
+                Drawing a Bezier curve  15
+                Drawing a zigzag  16
+                Drawing a spiral  18
+                Working with text  20
+                Drawing 3D text with shadows  22
+                Unlocking the power of fractals: Drawing a haunted tree  24
+            Chapter 2: Shape Drawing and Composites  27
+                Drawing a rectangle  28
+                Drawing a circle  30
+                Working with custom shapes and fill styles  32
+                Fun with Bezier curves: drawing a cloud  35
+                Drawing transparent shapes  37
+                Working with the context state stack to save and restore styles  38
+                Working with composite operations  41
+                Creating patterns with loops: drawing a gear  47
+                Randomizing shape properties: drawing a field of flowers  50
+                Creating custom shape functions: playing card suits  53
+                Putting it all together: drawing a jet  59
+            Chapter 3: Working with Images and Videos  67
+                Drawing an image  68
+                Cropping an image  69
+                Copying and pasting sections of the canvas  72
+                Working with video  74
+                Getting image data  76
+                Introduction to pixel manipulation: inverting image colors  79
+                Inverting video colors  81
+                Converting image colors to grayscale  83
+                Converting a canvas drawing into a data URL  85
+                Saving a canvas drawing as an image  87
+                Loading the canvas with a data URL  89
+                Creating a pixelated image focus  90
+            Chapter 4: Mastering Transformations  95
+                Translating the canvas context  96
+                Rotating the canvas context  97
+                Scaling the canvas context  99
+                Creating a mirror transform  101
+                Creating a custom transform  102
+                Shearing the canvas context  104
+                Handling multiple transforms with the state stack  106
+                Transforming a circle into an oval  108
+                Rotating an image  110
+                Drawing a simple logo and randomizing its position, rotation, and scale  112
+            Chapter 5: Bringing the Canvas to Life with Animation  115  @
+                Creating an Animation class  116
+                Creating a linear motion  120
+                Creating acceleration  122
+                Creating oscillation  125
+                Oscillating a bubble  127
+                Swinging a pendulum  130
+                Animating mechanical gears  133
+                Animating a clock  138
+                Simulating particle physics  142
+                Creating microscopic life forms  146
+                Stressing the canvas and displaying the FPS  151
+            Chapter 6: Interacting with the Canvas: Attaching Event Listeners to Shapes and Regions  157
+                Creating an Events class  158
+                Working with canvas mouse coordinates  167
+                Attaching mouse event listeners to regions  169
+                Attaching touch event listeners to regions on a mobile device  172
+                Attaching event listeners to images  176
+                Dragging-and-dropping shapes  180
+                Dragging-and-dropping images  183
+                Creating an image magnifier  186
+                Creating a drawing application  192
+            Chapter 7: Creating Graphs and Charts  201
+                Creating a pie chart  202
+                Creating a bar chart  208
+                Graphing equations  215
+                Plotting data points with a line chart  221
+            Chapter 8: Saving the World with Game Development  229
+                Creating sprite sheets for the heroes and enemies  232
+                Creating level images and boundary maps  234
+                Creating an Actor class for the hero and enemies  238
+                Creating a Level class  243
+                Creating a Health Bar class  246
+                Creating a Controller class  247
+                Creating a Model class  252
+                Creating a View class  262
+                Setting up the HTML document and starting the game  267
+            Chapter 9: Introducing WebGL  269
+                Creating a WebGL wrapper to simplify the WebGL API  270
+                Creating a triangular plane  284
+                Rotating a triangular plane in 3D space  286
+                Creating a rotating cube  289
+                Adding textures and lighting  293
+                Creating a 3D world that you can explore  300
+            Appendix A: Detecting Canvas Support  315
+            Appendix B: Canvas Security  319
+            Appendix C: Additional Topics  321
+                Canvas vs. CSS3 transitions and animations  321
+                Canvas performance on mobile devices  322
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvas-cb.pdf
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvas-cb.txt
+            1. Paths and Text
+                Drawing lines
+                Drawing horizontal, vertical, and assorted lines
+                Drawing joins
+                Drawing arc1
+                Drawing arc2
+                Drawing a quadratic curve
+                Drawing a rainbow
+                Drawing a Bezier curve
+                Drawing a flag
+                Drawing text
+                Drawing 3D text with shadows
+                Adding shadows to objects
+                Drawing a house
+            2. Shapes and Composites
+                Drawing rectangles
+                Drawing triangles
+                Drawing circles
+                Drawing gradients
+                Radial gradient
+                Linear gradient
+                Working with custom shapes and styles
+                Demonstrating translation, rotation, and scaling
+                Drawing an ellipse
+                Saving and restoring canvas state
+                Demonstrating composites
+                Drawing a mouse
+            3. Animation  @(??)
+                Creating an animation class
+                Demonstrating acceleration
+                Demonstrating gravity
+                Animating a line
+                Animating text
+                Animating a clock
+                Animating a solar system
+                Animating particles
+                Animating a particle fountain
+                Animating a rain effect
+                Animating a snow effect
+            4. Images and Videos
+                Drawing and cropping an image
+                Rendering effects to images
+                Drawing a mirror image
+                Clipping a path
+                Animated clipping
+                Converting canvas to image and back to canvas
+                Working with videos
+                Rendering effects to videos
+                Creating a pixelated image focus
+            5. Interactivity through Events  @@(!)
+                Working with mouse coordinates
+                Making a face smile
+                Detecting a point in a path
+                Simulating car movements
+                Dragging and dropping
+                Combining events and animation
+                Demonstrating a touch event
+            6. Creating Graphs and Charts
+                Drawing the axes
+                Drawing a simple equation
+                Drawing a sinusoidal wave
+                Drawing a line graph
+                Drawing a bar graph
+                Drawing a pie chart
+            7. 3D Modeling
+                Rendering 3D objects
+                Drawing 3D cubes
+                Drawing a 3D cylinder and a cone
+                Drawing a 3D sphere and a torus
+                Drawing 3D text decorated by particles
+                Drawing a panorama
+                Drawing a snowman
+            8. Game Development  @[!!]
+                Understanding the gaming states
+                Drawing on canvas
+                Playing some music
+                Using sprites from the sprite sheet
+                Demonstrating animation
+                Demonstrating collision
+                Demonstrating physics
+                Game 1 - Fruit Basket
+                Game 2 - Catapult
+                Understanding interoperability
+                Deploying a game on Android mobile
+https://www.scribd.com/read/365188221/Canvas-Cookbook  (=TODO(!))
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvascb.pdf
+~/Empire/Doks/Comp/lang/webdev/js/mmedia/canvas/canvascb.txt
+canvas cookbook
+            1. Paths and Text
+                Introduction
+                Drawing lines
+                me CekW Ace) dee
+                Blea tile) <-e
+                Drawing horizontal, vertical, and assorted lines
+                Metco le) <e
+                Drawing joins
+                PTE Lect
+                Bi t-te tile) <e
+                PTE Wilt Lhe
+                Bh tcl) ce
+                Drawing a quadratic curve
+                Cela ake) oe
+                Drawing a rainbow
+                Drawing a Bezier curve
+                eka ace) oe
+                Drawing _a flag
+                PYM ater
+                Drawing 3D text with shadows
+                emcee (on oem
+                Adding shadows to objects
+                Drawing a house
+            2. Shapes and Composites
+                Introduction
+                Drawing rectangles
+                ela aCe) doe
+                BYE N ily MedElite
+                Ble em tile) <e
+                OTeENwilil Ae eas
+                Drawing gradients
+                Radial gradient
+                Linear gradient
+                i t-te tke) ce
+                Working with custom shapes and styles
+                eek Wake) oe
+                Demonstrating translation, rotation, and scaling
+                eek al ce)
+                Metco) ce
+                Drawing an ellipse
+                eek Wate) oe
+                Saving and restoring canvas state
+                Demonstrating composites
+                eel a le) oe
+                Drawing a mouse
+                eek aL aCe) oe
+            3. Animation  @
+                Introduction
+                etc Vilat alae rele me
+                Demonstrating acceleration
+                Demonstrating gravity
+                a Ce\WaL ae) oe
+                Animating a line
+                Animating text
+                eka ace) oe
+                i t-te tke) ce
+                Animating a clock
+                eek Wake) oe
+                Animating a solar system
+                eek al ce)
+                Animating particles
+                me CekW Ace) dee
+                Blea tile) <-e
+                Animating a particle fountain
+                Animating a rain effect
+                eel WaL ke)
+                Animating a snow effect
+                t-te tle) ce
+            4. Images and Videos
+                Introduction
+                Drawing and cropping an image
+                How to do it
+                Rendering effects to images
+                How to do it
+                Drawing a mirror image
+                How to do it
+                pel] TTF oS
+                How to do it
+                Animated clipping
+                How to do it
+                Converting canvas to image and back to canvas
+                How to do it
+                Working with videos
+                How to do it
+                Rendering effects to videos
+                How to do it
+                Creating a pixelated image focus
+                How to do it
+            5. Interactivity through Events
+                Introduction
+                Working with mouse coordinates
+                How to do it
+                Bi st -te-eom ile) <e
+                Making a face smile
+                How to do it
+                Bh e-em ce
+                Detecting a point in a path
+                How to do it
+                a Ce\WaL ae) oe
+                i t-te tle) <
+                Simulating car movements
+                How to do it
+                Dragging and dropping
+                How to do it
+                Combining events and animation
+                How to do it
+                Demonstrating a touch event
+                How to do it
+                eka aCe).
+            6. Creating Graphs and Charts
+                Introduction
+                OTE ltt mee
+                emcee (oe oe
+                Drawing a simple equation
+                Drawing a sinusoidal wave
+                Drawing _a line graph
+                emcee (oe oe
+                Pes mek Ae) Lh)
+                momen (on oe
+                Drawing a pie chart
+                t-te tile) ce
+            7. 3D Modeling
+                Introduction
+                Rendering 3D objects
+                Drawing 3D cubes
+                emcee (on | oe
+                Drawing a 3D cylinder and a cone
+                Co) co) oe
+                Drawing a 3D sphere and a torus
+                mle) AL 10) de
+                Drawing 3D text decorated by particles
+                eel a le) oe
+                Blea ile) <-e
+                Drawing a panorama
+                Bi st -te-eom ile) <e
+                OTe ty ated dat Ul
+                Bh e-em ce
+            8. Game Development
+                Introduction
+                Understanding the gaming states
+                Drawing on canvas
+                Playing some music
+                eka ae)
+                Using sprites from the sprite sheet
+                Demonstrating animation
+                me CekW Ace) dee
+                Blea tile) <-e
+                Demonstrating collision
+                Metco le) <e
+                Demonstrating physics
+                eel WaL ke)
+                Game 1 - Fruit Basket
+                t-te tle) ce
+                Game 2 — Catapult
+                Bloc ile) coe
+                Introduction
+                Understanding interoperability
+                Styling text and background using CSS
+                How to do it
+                Deploying a game on Android mobile
+                How to do it
+canvas kurz & gut
+https://www.scribd.com/book/340094797/Canvas-kurz-gut
+            [=Extract Index from done Textfile
+            .
+

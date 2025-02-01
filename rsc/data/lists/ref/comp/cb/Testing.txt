@@ -1,0 +1,5 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/PROGR/test/framew/xunit/XunitPatts.txt
+

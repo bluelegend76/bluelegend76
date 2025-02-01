@@ -1,0 +1,3067 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
+~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
+
+bcb (**(!))
+            1. Beginning Bash
+            1.1 Decoding the Prompt
+            1.2 Showing Where You Are
+            1.3 Finding and Running Commands
+            1.4 Getting Information About Files
+            1.5 Showing All Hidden (dot) Files in the Current Directory
+            1.6 Using Shell Quoting
+            1.7 Using or Replacing Built-ins and External Commands
+            1.8 Determining If You Are Running Interactively
+            1.9 Setting bash As Your Default Shell
+            1.10 Getting bash for Linux
+            1.11 Getting bash for xBSD
+            1.12 Getting bash for Mac OS X
+            1.13 Getting bash for Unix
+            1.14 Getting bash for Windows
+            1.15 Getting bash Without Getting bash
+            1.16 Learning More About bash Documentation
+
+            2. Standard Output
+            2.1 Writing Output to the Terminal/Window
+            2.2 Writing Output but Preserving Spacing
+            2.3 Writing Output with More Formatting Control
+            2.4 Writing Output Without the Newline
+            2.5 Saving Output from a Command
+            2.6 Saving Output to Other Files
+            2.7 Saving Output from the ls Command
+            2.8 Sending Both Output and Error Messages to Different Files
+            2.9 Sending Both Output and Error Messages to the Same File
+            2.10 Appending Rather Than Clobbering Output
+            2.11 Using Just the Beginning or End of a File
+            2.12 Skipping a Header in a File
+            2.13 Throwing Output Away
+            2.14 Saving or Grouping Output from Several Commands
+            2.15 Connecting Two Programs by Using Output As Input
+            2.16 Saving a Copy of Output Even While Using It As Input
+            2.17 Connecting Two Programs by Using Output As Arguments
+            2.18 Using Multiple Redirects on One Line
+            2.19 Saving Output When Redirect Doesn't Seem to Work
+            2.20 Swapping STDERR and STDOUT
+            2.21 Keeping Files Safe from Accidental Overwriting
+            2.22 Clobbering a File on Purpose
+
+            3. Standard Input
+            3.1 Getting Input from a File
+            3.2 Keeping Your Data with Your Script
+            3.3 Preventing Weird Behavior in a Here-Document
+            3.4 Indenting Here-Documents
+            3.5 Getting User Input
+            3.6 Getting Yes or No Input
+            3.7 Selecting from a List of Options
+            3.8 Prompting for a Password
+
+            4. Executing Commands
+            4.1 Running Any Executable
+            4.2 Telling If a Command Succeeded or Not
+            4.3 Running Several Commands in Sequence
+            4.4 Running Several Commands All at Once
+            4.5 Deciding Whether a Command Succeeds
+            4.6 Using Fewer if Statements
+            4.7 Running Long Jobs Unattended
+            4.8 Displaying Error Messages When Failures Occur
+            4.9 Running Commands from a Variable
+            4.10 Running All Scripts in a Directory
+
+            5. Basic Scripting: Shell Variables
+            5.1 Documenting Your Script
+            5.2 Embedding Documentation in Shell Scripts
+            5.3 Promoting Script Readability
+            5.4 Separating Variable Names from Surrounding Text
+            5.5 Exporting Variables
+            5.6 Seeing All Variable Values
+            5.7 Using Parameters in a Shell Script
+            5.8 Looping Over Arguments Passed to a Script
+            5.9 Handling Parameters with Blanks
+            5.10 Handling Lists of Parameters with Blanks
+            5.11 Counting Arguments
+            5.12 Consuming Arguments
+            5.13 Getting Default Values
+            5.14 Setting Default Values
+            5.15 Using null As a Valid Default Value
+            5.16 Using More Than Just a Constant String for Default
+            5.17 Giving an Error Message for Unset Parameters
+            5.18 Changing Pieces of a String
+            5.19 Using Array Variables
+
+            6. Shell Logic and Arithmetic
+            6.1 Doing Arithmetic in Your Shell Script
+            6.2 Branching on Conditions
+            6.3 Testing for File Characteristics
+            6.4 Testing for More Than One Thing
+            6.5 Testing for String Characteristics
+            6.6 Testing for Equal
+            6.7 Testing with Pattern Matches
+            6.8 Testing with Regular Expressions
+            6.9 Changing Behavior with Redirections
+            6.10 Looping for a While
+            6.11 Looping with a read
+            6.12 Looping with a Count
+            6.13 Looping with Floating-Point Values
+            6.14 Branching Many Ways
+            6.15 Parsing Command-Line Arguments
+            6.16 Creating Simple Menus
+
+            6.17 Changing the Prompt on Simple Menus
+            6.18 Creating a Simple RPN Calculator
+            6.19 Creating a Command-Line Calculator
+
+            7. Intermediate Shell Tools I
+            7.1 Sifting Through Files for a String
+            7.2 Getting Just the Filename from a Search
+            7.3 Getting a Simple True/False from a Search
+            7.4 Searching for Text While Ignoring Case
+            7.5 Doing a Search in a Pipeline
+            7.6 Paring Down What the Search Finds
+            7.7 Searching with More Complex Patterns
+            7.8 Searching for an SSN
+            7.9 Grepping Compressed Files
+            7.10 Keeping Some Output, Discarding the Rest
+            7.11 Keeping Only a Portion of a Line of Output
+            7.12 Reversing the Words on Each Line
+            7.13 Summing a List of Numbers
+            7.14 Counting String Values
+            7.15 Showing Data As a Quick and Easy Histogram
+            7.16 Showing a Paragraph of Text After a Found Phrase
+
+            8. Intermediate Shell Tools II
+            8.1 Sorting Your Output
+            8.2 Sorting Numbers
+            8.3 Sorting IP Addresses
+            8.4 Cutting Out Parts of Your Output
+            8.5 Removing Duplicate Lines
+            8.6 Compressing Files
+            8.7 Uncompressing Files
+            8.8 Checking a tar Archive for Unique Directories
+            8.9 Translating Characters
+            8.10 Converting Uppercase to Lowercase
+            8.11 Converting DOS Files to Linux Format
+            8.12 Removing Smart Quotes
+            8.13 Counting Lines, Words, or Characters in a File
+            8.14 Rewrapping Paragraphs
+            8.15 Doing More with less
+
+            9. Finding Files: find, locate, slocate
+            9.1 Finding All Your MP3 Files
+            9.2 Handling Filenames Containing Odd Characters
+            9.3 Speeding Up Operations on Found Files
+            9.4 Finding Files Across Symbolic Links
+            9.5 Finding Files Irrespective of Case
+            9.6 Finding Files by Date
+            9.7 Finding Files by Type
+            9.8 Finding Files by Size
+            9.9 Finding Files by Content
+            9.10 Finding Existing Files and Content Fast
+            9.11 Finding a File Using a List of Possible Locations
+
+            10. Additional Features for Scripting
+            10.1 “Daemon-izing” Your Script
+            10.2 Reusing Code with Includes and Sourcing
+            10.3 Using Configuration Files in a Script
+            10.4 Defining Functions
+            10.5 Using Functions: Parameters and Return Values
+            10.6 Trapping Interrupts
+            10.7 Redefining Commands with alias
+            10.8 Avoiding Aliases, Functions
+
+            11. Working with Dates and Times
+            11.1 Formatting Dates for Display
+            11.2 Supplying a Default Date
+            11.3 Automating Date Ranges
+            11.4 Converting Dates and Times to Epoch Seconds
+            11.5 Converting Epoch Seconds to Dates and Times
+            11.6 Getting Yesterday or Tomorrow with Perl
+            11.7 Figuring Out Date and Time Arithmetic
+            11.8 Handling Time Zones, Daylight Saving Time, and Leap Years
+            11.9 Using date and cron to Run a Script on the Nth Day
+
+            12. End-User Tasks As Shell Scripts
+            12.1 Starting Simple by Printing Dashes
+            12.2 Viewing Photos in an Album
+            12.3 Loading Your MP3 Player
+            12.4 Burning a CD
+            12.5 Comparing Two Documents
+
+            13. Parsing and Similar Tasks
+            13.1 Parsing Arguments for Your Shell Script
+            13.2 Parsing Arguments with Your Own Error Messages
+            13.3 Parsing Some HTML
+            13.4 Parsing Output into an Array
+            13.5 Parsing Output with a Function Call
+            13.6 Parsing Text with a read Statement
+            13.7 Parsing with read into an Array
+            13.8 Getting Your Plurals Right
+            13.9 Taking It One Character at a Time
+            13.10 Cleaning Up an SVN Source Tree
+            13.11 Setting Up a Database with MySQL
+            13.12 Isolating Specific Fields in Data
+            13.13 Updating Specific Fields in Data Files
+            13.14 Trimming Whitespace
+            13.15 Compressing Whitespace
+            13.16 Processing Fixed-Length Records
+            13.17 Processing Files with No Line Breaks
+            13.18 Converting a Data File to CSV
+            13.19 Parsing a CSV Data File
+
+            14. Writing Secure Shell Scripts
+            14.1 Avoiding Common Security Problems
+            14.2 Avoiding Interpreter Spoofing
+            14.3 Setting a Secure $PATH
+            14.4 Clearing All Aliases
+            14.5 Clearing the Command Hash
+            14.6 Preventing Core Dumps
+            14.7 Setting a Secure $IFS
+            14.8 Setting a Secure umask
+            14.9 Finding World-Writable Directories in Your $PATH
+            14.10 Adding the Current Directory to the $PATH
+            14.11 Using Secure Temporary Files
+            14.12 Validating Input
+            14.13 Setting Permissions
+            14.14 Leaking Passwords into the Process List
+            14.15 Writing setuid or setgid Scripts
+            14.16 Restricting Guest Users
+            14.17 Using chroot Jails
+            14.18 Running As a Non-root User
+            14.19 Using sudo More Securely
+            14.20 Using Passwords in Scripts
+            14.21 Using SSH Without a Password
+            14.22 Restricting SSH Commands
+            14.23 Disconnecting Inactive Sessions
+
+            15. Advanced Scripting
+            15.1 Finding bash Portably for #!
+            15.2 Setting a POSIX $PATH
+            15.3 Developing Portable Shell Scripts
+            15.4 Testing Scripts in VMware
+            15.5 Using for Loops Portably
+            15.6 Using echo Portably
+            15.7 Splitting Output Only When Necessary
+            15.8 Viewing Output in Hex
+            15.9 Using bash Net-Redirection
+            15.10 Finding My IP Address
+            15.11 Getting Input from Another Machine
+            15.12 Redirecting Output for the Life of a Script
+            15.13 Working Around “argument list too long” Errors
+            15.14 Logging to syslog from Your Script
+            15.15 Sending Email from Your Script
+            15.16 Automating a Process Using Phases
+
+            16. Configuring and Customizing bash
+            16.1 bash Startup Options
+            16.2 Customizing Your Prompt
+            16.3 Change Your $PATH Permanently
+            16.4 Change Your $PATH Temporarily
+            16.5 Setting Your $CDPATH
+            16.6 Shortening or Changing Command Names
+            16.7 Adjusting Shell Behavior and Environment
+            16.8 Adjusting readline Behavior Using .inputrc
+            16.9 Keeping a Private Stash of Utilities by Adding ~/bin
+            16.10 Using Secondary Prompts: $PS2, $PS3, $PS4
+            16.11 Synchronizing Shell History Between Sessions
+            16.12 Setting Shell History Options
+            16.13 Creating a Better cd Command
+            16.14 Creating and Changing into a New Directory in One Step
+            16.15 Getting to the Bottom of Things
+            16.16 Adding New Features to bash Using Loadable Built-ins
+            16.17 Improving Programmable Completion
+            16.18 Using Initialization Files Correctly
+            16.19 Creating Self-Contained, Portable RC Files
+            16.20 Getting Started with a Custom Configuration
+
+            17. Housekeeping and Administrative Tasks
+            17.1 Renaming Many Files
+            17.2 Using GNU Texinfo and Info on Linux
+            17.3 Unzipping Many ZIP Files
+            17.4 Recovering Disconnected Sessions Using screen
+            17.5 Sharing a Single bash Session
+            17.6 Logging an Entire Session or Batch Job
+            17.7 Clearing the Screen When You Log Out
+            17.8 Capturing File Metadata for Recovery
+            17.9 Creating an Index of Many Files
+            17.10 Using diff and patch
+            17.11 Counting Differences in Files
+            17.12 Removing or Renaming Files Named with Special Characters
+            17.13 Prepending Data to a File
+            17.14 Editing a File in Place
+            17.15 Using sudo on a Group of Commands
+            17.16 Finding Lines in One File But Not in the Other
+            17.17 Keeping the Most Recent N Objects
+            17.18 Grepping ps Output Without Also Getting the grep Process Itself
+            17.19 Finding Out Whether a Process Is Running
+            17.20 Adding a Prefix or Suffix to Output
+            17.21 Numbering Lines
+            17.22 Writing Sequences
+            17.23 Emulating the DOS Pause Command
+            17.24 Commifying Numbers
+
+            18. Working Faster by Typing Less
+            18.1 Moving Quickly Among Arbitrary Directories
+            18.2 Repeating the Last Command
+            18.3 Running Almost the Same Command
+            18.4 Substituting Across Word Boundaries
+            18.5 Reusing Arguments
+            18.6 Finishing Names for You
+            18.7 Playing It Safe
+
+            19. Tips and Traps: Common Goofs for Novices
+            19.1 Forgetting to Set Execute Permissions
+            19.2 Fixing “No such file or directory” Errors
+            19.3 Forgetting That the Current Directory Is Not in the $PATH
+            19.4 Naming Your Script Test
+            19.5 Expecting to Change Exported Variables
+            19.6 Forgetting Quotes Leads to “command not found” on Assignments
+            19.7 Forgetting That Pattern Matching Alphabetizes
+            19.8 Forgetting That Pipelines Make Subshells
+            19.9 Making Your Terminal Sane Again
+            19.10 Deleting Files Using an Empty Variable
+            19.11 Seeing Odd Behavior from printf
+            19.12 Testing bash Script Syntax
+            19.13 Debugging Scripts
+            19.14 Avoiding “command not found” When Using Functions
+            19.15 Confusing Shell Wildcards and Regular Expressions
+
+            A. Reference Lists
+            bash Invocation
+            Prompt String Customizations
+            ANSI Color Escape Sequences
+            Built-in Commands and Reserved Words
+            Built-in Shell Variables
+            set Options
+            shopt Options
+            Adjusting Shell Behavior Using set, shopt, and Environment Variables
+            Test Operators
+            I/O Redirection
+            echo Options and Escape Sequences
+            printf
+            Date and Time String Formatting with strftime
+            Pattern-Matching Characters
+            extglob Extended Pattern-Matching Operators
+            tr Escape Sequences
+            Readline Init File Syntax
+            emacs Mode Commands
+            vi Control Mode Commands
+            Table of ASCII Values
+
+            B. Examples Included with bash
+            Startup-Files Directory Examples
+
+            C. Command-Line Processing
+            Command-Line Processing Steps
+
+            D. Revision Control
+            CVS
+            Subversion
+            RCS
+            Other
+
+            E. Building bash from Source
+            Obtaining bash
+            Unpacking the Archive
+            What's in the Archive
+            Who Do I Turn To?
+
+~/Empire/Doks/Comp/sysadm/lin/ref/lincmdref.list.pdf
+~/Empire/Doks/Comp/sysadm/lin/ref/lincmds.de.pdf
+
+Index/Categories
+                Part I User Commands ----
+                    addftinfo
+                    afmtodit
+                    ansi2knr
+                    anytopnm
+                    appres
+                    ar
+                    arch
+                    GNU as
+                    asciitopgm
+                    atktopbm
+                    bash
+                    bdftopcf
+                    beforelight
+                    biff
+                    bioradtopgm
+                    bitmap, bmtoa, atobm
+                    bmptoppm
+                    brushtopbm
+                    cal
+                    cat
+                    chattr
+                    chfn
+                    chgrp
+                    chkdupexe
+                    chmod
+                    chown
+                    chsh
+                    ci
+                    cidentd
+                    cksum
+                    clear
+                    cmuwmtopbm
+                    co
+                    col
+                    colcrt
+                    colrm
+                    column
+                    comm
+                    convdate
+                    cp
+                    cccp, cpp
+                    crontab
+                    csplit
+                    ctags
+                    cu
+                    cut
+                    cvs
+                    date
+                    dd
+                    depmod, modprobe
+                    df
+                    dig
+                    dnsquery
+                    domainname
+                    dsplit
+                    du
+                    editres
+                    elvis, ex, vi, view, input
+                    elvprsv
+                    elvrec
+                    emacs
+                    emacstool
+                    etags
+                    expand
+                    find
+                    fitstopnm
+                    fmt
+                    fold
+                    free
+                    fsinfo
+                    fslsfonts
+                    fstobdf
+                    fstopgm
+                    ftp
+                    fuser
+                    g++
+                    g3topbm
+                    gawk
+                    gcal
+                    gcc, g++
+                    gemtopbm
+                    geqn
+                    getlist
+                    getopt
+                    giftopnm
+                    gindxbib
+                    glookbib
+                    gnroff
+                    gouldtoppm
+                    gpic
+                    gprof
+                    grefer
+                    grep, egrep, fgrep
+                    grephistory
+                    grodvi
+                    groff
+                    grog
+                    grops
+                    grotty
+                    gsoelim
+                    gtbl
+                    gtroff
+                    gzip, gunzip, zcatgzip, gunzip, zcat
+                    gzexe
+                    head
+                    hexdump
+                    hipstopgm
+                    host
+                    hostid
+                    hostname
+                    hpcdtoppm v0.3
+                    httpd
+                    icontopbm
+                    ident
+                    ilbmtoppm
+                    imake
+                    imgtoppm
+                    inews
+                    info
+                    innconfval
+                    insmod
+                    install
+                    installit
+                    ispell, buildhash, munchlist, findaffix, tryaffix, icombine, ijoin
+                    join
+                    kill
+                    killall
+                    ksyms
+                    last
+                    lbxproxy
+                    ld
+                    lispmtopgm
+                    lkbib
+                    ln
+                    lndir
+                    locate
+                    logger
+                    login
+                    look
+                    lpq
+                    lpr
+                    lprm
+                    lptest
+                    ls, dir, vdir
+                    lsattr
+                    lsmod
+                    lynx
+                    macptopbm
+                    make
+                    makedepend
+                    makestrs
+                    mattrib
+                    mbadblocks
+                    mcd
+                    mcookie
+                    mcopy
+                    md5sum
+                    mdel
+                    mdeltree
+                    mdir
+                    merge
+                    mesg
+                    mformat
+                    mgrtopbm
+                    mkdir
+                    mkdirhier
+                    mkfifo
+                    mkmanifest
+                    mknod
+                    mlabel
+                    mmd
+                    mmount
+                    mmove
+                    more
+                    mrd
+                    mread
+                    mren
+                    mtest
+                    mtools
+                    mtvtoppm
+                    mtype
+                    mv
+                    mwrite
+                    namei
+                    newaliases
+                    newgrp
+                    nl
+                    nlmconv
+                    nm
+                    nntpget
+                    objcopy
+                    objdump
+                    oclock
+                    od
+                    passwd
+                    paste
+                    pbmclean
+                    pbmfilters
+                    pbmlife
+                    pbmmake
+                    pbmmask
+                    pbmpscale
+                    pbmreduce
+                    pbmtext
+                    pbmto10x
+                    pbmto4425
+                    pbmtoascii
+                    pbmtoatk
+                    pbmtobg
+                    pbmtocmuwm
+                    pbmtoepsi
+                    pbmtoepson
+                    pbmtog3
+                    pbmtogem
+                    pbmtogo
+                    pbmtoicon
+                    pbmtolj
+                    pbmtoln03
+                    pbmtolps
+                    pbmtomacp
+                    pbmtomgr
+                    pbmtopgm
+                    pbmtopi3
+                    pbmtopk
+                    pbmtoplot
+                    pbmtoptx
+                    pbmtox10bm
+                    pbmtoxbm
+                    pgmtoybm
+                    pbmtozinc
+                    pbmupc
+                    pcxtoppm
+                    pfbtops
+                    pgmbentley
+                    pgmcrater
+                    pgmedge
+                    pgmenhance
+                    pgmhist
+                    pgmkernel
+                    pgmnoise
+                    pgmnorm
+                    pgmoil
+                    pgmramp
+                    pgmtexture
+                    pgmtofs
+                    pgmtolispm
+                    pgmtopbm
+                    pgmtoppm
+                    pi1toppm
+                    pi3topbm
+                    picttoppm
+                    pjtoppm
+                    pktopbm
+                    pnmalias
+                    pnmarith
+                    pnmcat
+                    pnmcomp
+                    pnmconvol
+                    pnmcrop
+                    pnmcut
+                    pnmdepth
+                    pnmenlarge
+                    pnmfile
+                    pnmflip
+                    pnmgamma
+                    pnmhistmap
+                    pnmindex
+                    pnminvert
+                    pnmmargin
+                    pnmnlfilt
+                    pnmnoraw
+                    pnmpad
+                    pnmpaste
+                    pnmrotate
+                    pnmscale
+                    pnmshear
+                    pnmsmooth
+                    pnmtile
+                    pnmtoddif
+                    pnmtofits
+                    pnmtops
+                    pnmtorast
+                    pnmtosgi
+                    pnmtosir
+                    pnmtotiff
+                    pnmtoxwd
+                    ppm3d
+                    ppmbrighten
+                    ppmchange
+                    ppmdim
+                    ppmdist
+                    ppmdither
+                    ppmflash
+                    ppmforge
+                    ppmhist
+                    ppmmake
+                    ppmmix
+                    ppmnorm
+                    ppmntsc
+                    ppmpat
+                    ppmquant
+                    ppmquantall
+                    ppmqvga
+                    ppmrelief
+                    ppmshift
+                    ppmspread
+                    ppmtoacad
+                    ppmtobmp
+                    ppmtogif
+                    ppmtoicr
+                    ppmtoilbm
+                    ppmtomap
+                    ppmtomitsu
+                    ppmtopcx
+                    ppmtopgm
+                    ppmtopi1
+                    ppmtopict
+                    ppmtopj
+                    ppmtopjxl
+                    ppmtopuzz
+                    ppmtorgb3
+                    ppmtosixel
+                    ppmtotga
+                    ppmtouil
+                    ppmtoxpm
+                    ppmtoyuv
+                    ppmtoyuvsplit
+                    pr
+                    ps
+                    psbb
+                    psidtopgm
+                    pstopnm
+                    pstree
+                    psupdate
+                    qrttoppm
+                    quota
+                    ranlib
+                    rasttopnm
+                    rawtopgm
+                    rawtoppm
+                    rcp
+                    rcs
+                    rcsclean
+                    rcsdiff
+                    rcsfreeze
+                    rcsintro
+                    rcsmerge
+                    rdist
+                    xixii
+                    reconfig
+                    ref
+                    reset
+                    resize
+                    rev
+                    rgb3toppm
+                    rlog
+                    rlogin
+                    rm
+                    rmdir
+                    rmmod
+                    rnews
+                    rpcgen
+                    rsh
+                    rstart
+                    rstartd
+                    rup
+                    rusers
+                    rwall
+                    rwho
+                    script
+                    sed
+                    sessreg
+                    setterm
+                    sgitopnm
+                    shar
+                    shlock
+                    showrgb
+                    shrinkfile
+                    sirtopnm
+                    size
+                    sldtoppm
+                    smproxy
+                    sort
+                    spctoppm
+                    split
+                    spottopgm
+                    sputoppm
+                    sq
+                    startx
+                    strings
+                    strip
+                    subst
+                    sum
+                    SuperProbe
+                    tac
+                    tail
+                    talk
+                    tcal
+                    telnet
+                    tfmtodit
+                    tftp
+                    tgatoppm
+                    tifftopnm
+                    tin, rtin, cdtin, tind
+                    tload
+                    top
+                    touch
+                    tr
+                    tset, reset
+                    tsort
+                    twm
+                    txt2gcal
+                    ul
+                    unexpand
+                    uniq
+                    unshar
+                    updatedb
+                    uptime
+                    userlist
+                    uucp
+                    uuencode
+                    uustat
+                    uux
+                    uuxqt
+                    w
+                    wall
+                    wc
+                    whereis
+                    write
+                    x11perf
+                    x11perfcomp
+                    xargs
+                    xauth
+                    xbmtopbm
+                    xcmsdb
+                    xclock
+                    xclipboard
+                    xconsole
+                    xcutsel
+                    xdm
+                    xdpyinfo
+                    Xf86_Accel
+                    XF86_Mono
+                    XF86_SVGA
+                    XF86_VGA16
+                    xf86config
+                    xfd
+                    XFree86
+                    xfs
+                    xhost
+                    xieperf
+                    ximtoppm
+                    xinetd
+                    xinit
+                    xkill
+                    xlogo
+                    xlsatoms
+                    xlsclients
+                    xlsfonts
+                    xmag
+                    xmkmf
+                    xmodmap
+                    xon
+                    xpmtoppm
+                    xprop
+                    xrdb
+                    xrefresh
+                    Xserver
+                    xset
+                    xsetroot
+                    xsm
+                    xsmclient
+                    xstdcmap
+                    xterm
+                    Xvfb
+                    xvidtune
+                    xvminitoppm
+                    xwd
+                    xwdtopnm
+                    xwininfo
+                    xwud
+                    ybmtopbm
+                    ytalk
+                    yuvplittoppm
+                    yuvtoppm
+                    zcmp, zdiff
+                    zeisstopnm
+                    zforce
+                    zgrep
+                    zmore
+                    znew
+                Part II System Calls ----
+                    exit
+                    accept
+                    access
+                    acct
+                    adjtimex
+                    alarm
+                    bdflush
+                    bind
+                    brk, sbrk
+                    cacheflush
+                    chdir, fchdir
+                    chmod, fchmod
+                    chown, fchown
+                    chroot
+                    clone
+                    close
+                    connect
+                    dup, dup2
+                    execve
+                    fcntl
+                    fdatasync
+                    flock
+                    fork, vfork
+                    fsync
+                    getdents
+                    getdomainname, setdomainname
+                    getdtablesize
+                    getgid, getegid
+                    getgroups, setgroups
+                    gethostid, sethostid
+                    gethostname, sethostname
+                    getitimer, setitimer
+                    getpagesize
+                    getpeername
+                    getpid, getppid
+                    getpriority, setpriority
+                    getrlimit, getrusage, setrlimit
+                    getsid
+                    getsockname
+                    getsockopt, setsockopt
+                    gettimeofday, settimeofday
+                    getuid, geteuid
+                    idle
+                    ioctl
+                    ioperm
+                    iopl
+                    ipc
+                    kill
+                    killpg
+                    link
+                    listen
+                    llseek
+                    lseek
+                    mkdir
+                    mknod
+                    mlock
+                    mlockall
+                    mmap, munmap
+                    modify_ldt
+                    get_kernel_syms, create_module, init_module, delete_module
+                    mount, umount
+                    mprotect
+                    mremap
+                    msgctl
+                    msgget
+                    msgop
+                    msync
+                    munlock
+                    munlockall
+                    nanosleep
+                    nice
+                    oldfstat, oldlstat, oldstat, oldolduname, olduname
+                    open, creat
+                    outb, outw, outl, outsb, outsw, outsl
+                    pause
+                    personality
+                    phys
+                    pipe
+                    profil
+                    ptrace
+                    quotactl
+                    read
+                    readdir
+                    readlink
+                    readv, writev
+                    reboot
+                    recv, recvfrom, recvmsg
+                    rename
+                    rmdir
+                    sched_get_priority_max, sched_get_priority_min
+                    sched_rr_get_interval
+                    sched_setparam, sched_getparam
+                    sched_setscheduler, sched_getscheduler
+                    sched_yield
+                    select, FD_CLR, FD_ISSET, FD_SET, FD_ZERO
+                    semctl
+                    semget
+                    semop
+                    send, sendto, sendmsg
+                    setfsgid
+                    setfsuid
+                    setgid
+                    setpgid, getpgid, setpgrp, getpgrp
+                    setregid, setegid
+                    setreuid, seteuid
+                    setsid
+                    setuid
+                    setup
+                    shmctl
+                    shmget
+                    shmop
+                    shutdown
+                    sigaction, sigprocmask, sigpending, sigsuspend
+                    signal
+                    sigblock, siggetmask, sigsetmask, sigmask
+                    sigpause
+                    sigreturn
+                    sigvec
+                    socket
+                    socketcall
+                    socketpair
+                    stat, fstat, lstat
+                    statfs, fstatfs
+                    stime
+                    swapon, swapoff
+                    symlink
+                    sync
+                    sysctl
+                    sysfs
+                    sysinfo
+                    syslog
+                    termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfgetospeed,
+                    cfgetispeed, cfsetispeed, cfsetospeed, tcgetpgrp, tcsetpgrp
+                    time
+                    times
+                    truncate, ftruncate
+                    umask
+                    uname
+                    none
+                    afs_syscall, break, gtty, lock, mpx, prof, quotactl, stty, ustat
+                    unlink
+                    uselib
+                    ustat
+                    utime, utimes
+                    vhangup
+                    vm86
+                    wait, waitpid
+                    wait3, wait4
+                    write
+                Part III Library Functions ----
+                    abort
+                    abs
+                    acos
+                    acosh
+                    alloca
+                    asin
+                    asinh
+                    assert
+                    atan
+                    atan2
+                    atanh
+                    atexit
+                    atof
+                    atoi
+                    atol
+                    bcmp
+                    bcopy
+                    bsearch
+                    bcmp, bcopy, bzero, memccpy, memchr, memcmp, memcpy, memfrob, memmem,
+                    memmove, memset
+                    htonl, htons, ntohl, ntohs
+                    bzero
+                    catgets
+                    catopen, catclose
+                    ceil
+                    clientlib
+                    clock
+                    closedir
+                    confstr
+                    copysign
+                    cos
+                    cosh
+                    crypt
+                    ctermid
+                    asctime, ctime, gmtime, localtime, mktime
+                    difftime
+                    div
+                    drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48,
+                    seed48, lcong48
+                    drem
+                    ecvt, fcvt
+                    erf, erfc
+                    execl, execlp, execle, exect, execv, execvp
+                    errno
+                    exit
+                    exp, log, log10, pow
+                    expm1, log1p
+                    fabs
+                    fclose
+                    clearerr, feof, ferror, fileno
+                    fflush, fpurge
+                    ffs
+                    fgetgrent
+                    fgetpwent
+                    floor
+                    fmod
+                    fnmatch
+                    fopen, fdopen, freopen
+                    fpathconf, pathconf
+                    fread, fwrite
+                    frexp
+                    fgetpos, fseek, fsetpos, ftell, rewind
+                    ftime
+                    ftok
+                    ftw
+                    gcvt
+                    getcwd, get_current_dir_name, getwd
+                    getdirentries
+                    getenv
+                    getgrent, setgrent, endgrent
+                    getgrnam, getgrgid
+                    getlogin, cuserid
+                    getmntent, setmntent, addmntent, endmntent, hasmntopt
+                    getnetent, getnetbyaddr, getnetbyname, setnetent, endnetent
+                    getopt
+                    getpass
+                    getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent
+                    getpw
+                    getpwent, setpwent, endpwent
+                    getpwnam, getpwuid
+                    fgetc, fgets, getc, getchar, gets, ungetc
+                    getservent, getservbyname, getservbyport, setservent, endservent
+                    getusershell, setusershell, endusershell
+                    getutent, getutid, getutline, pututline, setutent, endutent, utmpname
+                    getw, putw
+                    glob, globfree
+                    hosts_access, hosts_ctl
+                    hcreate, hdestroy, hsearch
+                    hypot
+                    index, rindex
+                    inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof,
+                    inet_netof
+                    infnan
+                    initgroups
+                    inndcomm
+                    insque, remque
+                    isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint,
+                    ispunct, isspace, isupper, isxdigit
+                    isatty
+                    isinf, isnan, finite
+                    j0, j1, jn, y0, y1, yn
+                    killpg
+                    labs
+                    ldexp
+                    ldiv
+                    lgamma
+                    libinn
+                    libpbm
+                    libpgm
+                    libpnm
+                    libppm
+                    localeconv
+                    longjmp
+                    lfind, lsearch
+                    calloc, malloc, free, realloc
+                    mblen
+                    mbstowcs
+                    mbtowc
+                    memccpy
+                    memchr
+                    memcmp
+                    memcpy
+                    memfrob
+                    memmem
+                    memmove
+                    memset
+                    mkfifo
+                    mkstemp
+                    mktemp
+                    modf
+                    asctime, ctime, difftime, gmtime, localtime, mktime
+                    tzset
+                    on_exit
+                    opendir
+                    parsedate
+                    perror
+                    popen, pclose
+                    printf, fprintf, sprintf, snprintf, vprintf, vfprintf, vsprintf, vsnprintf
+                    psignal
+                    putenv
+                    putpwent
+                    fputc, fputs, putc, putchar, puts
+                    qio
+                    qsort
+                    raise
+                    rand, srand
+                    random, srandom, initstate, setstate
+                    readdir
+                    readv, writev
+                    realpath
+                    Re_comp, re_exec
+                    regcomp, regexec, regerror, regfree
+                    remove
+                    res_query, res_search, res_mkquery, res_send, res_init, dn_comp,
+                    dn_expand
+                    rewinddir
+                    rint
+                    rquota
+                    scandir, alphasort
+                    scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf
+                    seekdir
+                    setbuf, setbuffer, setlinebuf, setvbuf
+                    setenv
+                    setjmp
+                    setlocale
+                    siginterrupt
+                    sigemptyset, sigfillset, sigaddset, sigdelset, sigismember
+                    sin
+                    sinh
+                    sleep
+                    snprintf, vsnprintf
+                    sqrt
+                    stdarg
+                    stdio
+                    stpcpy
+                    strcasecmp, strncasecmp
+                    strcat, strncat
+                    strchr, strrchr
+                    strcmp, strncmp
+                    strcoll
+                    strcpy, strncpy
+                    strdup
+                    strerror
+                    strfry
+                    strftime
+                    strcasecmp, strcat, strchr, strcmp, strcoll, strcpy, strcspn, strdup, strfry,
+                    strlen, strncat, strncmp, strncpy, strncasecmp, strpbrk, strrchr, strsep,
+                    strspn, strstr, strtok, strxfrm, index, rindex
+                    strlen
+                    strpbrk
+                    strptime
+                    strsep
+                    strsignal
+                    strspn, strcspn
+                    strstr
+                    strtod
+                    strtok
+                    strtol
+                    strtoul
+                    strxfrm
+                    swab
+                    sysconf
+                    closelog, openlog, syslog
+                    system
+                    tan
+                    tanh
+                    telldir
+                    tempnam
+                    termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw,
+                    cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, tcgetpgrp, tcsetpgrp
+                    tmpfile
+                    tmpnam
+                    toascii
+                    toupper, tolower
+                    tsearch, tfind, tdelete, twalk
+                    ttyname
+                    tzset
+                    none
+                    usleep
+                    wcstombs
+                    wctomb
+                Part IV Special Files ----
+                    charsets
+                    console
+                    console_codes
+                    console ioctls
+                    fd
+                    hd
+                    ispell
+                    lp
+                    mem, kmem, port
+                    mouse
+                    null, zero
+                    ram
+                    sd
+                    st
+                    tty
+                    ttys
+                    vcs, vcsa
+                Part V File Formats ----
+                    active, active.times
+                    adduser.conf
+                    aliases
+                    xxiiixxiv
+                    Linux Complete Command Reference
+                    cfingerd
+                    cfingerd.conf
+                    cfingerd text rules
+                    control.ctl
+                    cvs
+                    DEVINFO
+                    environ
+                    expire.ctl
+                    exports
+                    filesystems
+                    fstab
+                    groff_font
+                    groff_out
+                    group
+                    history
+                    hosts.nntp, hosts.nntp.nolimit
+                    hosts_access
+                    hosts_options
+                    inittab
+                    inn.conf
+                    innwatch.ctl
+                    ipc
+                    issue
+                    lilo.conf
+                    MAKEDEV.cfg
+                    moderators
+                    /etc/modules
+                    motd
+                    mtools
+                    newsfeeds
+                    newslog
+                    nfs
+                    nnrp.access
+                    nntpsend.ctl
+                    nologin
+                    overview.fmt
+                    passwd
+                    passwd.nntp
+                    pbm
+                    pgm
+                    pnm
+                    ppm
+                    /proc
+                    protocols
+                    rcsfile
+                    resolver
+                    securetty
+                    services
+                    shells
+                    syslog.conf
+                    termcap
+                    ttytype
+                    tzfile
+                    utmp, wtmp
+                    uuencode
+                    XF86Config
+                Part VI Games ----
+                    banner
+                    ddate
+                Part VII Miscellaneous ----
+                    ascii
+                    bootparam
+                    groff_me
+                    groff_mm
+                    groff_ms
+                    hier
+                    hostname
+                    iso_8859_1
+                    locale
+                    mailaddr
+                    man
+                    signal
+                    suffixes
+                    tr2tex
+                    Unicode
+                    UTF-8
+                Part VIII Administration and Privileged Commands ----
+                    adduser, addgroup
+                    agetty
+                    archive
+                    arp
+                    badblocks
+                    buffchan
+                    cfdisk
+                    chat
+                    chroot
+                    clock
+                    comsat
+                    crond
+                    ctlinnd
+                    ctrlaltdel
+                    cvsbug
+                    cvtbatch
+                    cytune
+                    debugfs
+                    dip
+                    dmesg
+                    dumpe2fs
+                    e2fsck
+                    edquota
+                    expire
+                    expireover
+                    fastrm
+                    fdformat
+                    fdisk
+                    filechan
+                    fsck
+                    fsck.minix
+                    ftpd
+                    ifconfig
+                    inetd
+                    init, telinit
+                    innd, inndstart
+                    innxmit
+                    ipcrm
+                    ipcs
+                    kbdrate
+                    klogd
+                    lpc
+                    lpd
+                    MAKEDEV
+                    MAKEDEV
+                    mke2fs
+                    mkfs
+                    mkfs
+                    mklost+found
+                    mkswap
+                    mount, umount
+                    mountd
+                    named-xfer
+                    named
+                    named.reload
+                    named.restart
+                    ndc
+                    netstat
+                    makeactive, makehistory, newsrequeue
+                    news.daily
+                    newslog
+                    nfsd
+                    nnrpd
+                    nntpsend
+                    nslookup
+                    overchan
+                    pac
+                    pcnfsd
+                    plipconfig
+                    ping
+                    portmap
+                    powerd
+                    pppd
+                    pppstats
+                    prunehistory
+                    quotacheck
+                    quotaon, quotaoff
+                    rarp
+                    rdev
+                    renice
+                    repquota
+                    rexecd
+                    rlogind
+                    route
+                    routed
+                    rpc.rusersd
+                    rpc.rwalld
+                    rpcinfo
+                    rquotad, rpc.rquotad
+                    rshd
+                    rwhod
+                    sendmail
+                    setfdprm
+                    setserial
+                    setsid
+                    showmount
+                    shutdown
+                    simpleinit
+                    slattach
+                    sliplogin
+                    swapon, swapoff
+                    sync
+                    sysklogd
+                    syslogd
+                    talkd
+                    telnetd
+                    tftpd
+                    timed
+                    timedc
+                    traceroute
+                    tune2fs
+                    tunelp
+                    update_state
+                    uucico
+                    vmstat
+                    vipw
+                    zdump
+                    zic
+                Part IX Kernel Reference Guide ----
+                    add_timer, del_timer, init_timer
+                    adjust_clock
+                    ctrl_alt_del
+                    file_table
+                    file_table_init
+                    filesystems
+                    get_empty_filp
+                    grow_files
+                    in_group_p
+                    insert_file_free
+                    kernel_mktime
+                    proc_sel
+                    put_file_last
+                    remove_file_free
+
+top
+                        Window 1:Def: Cumulative mode Off.  System: Delay 3,0 secs; Secure mode Off.
+                        Z,B,E,e   Global: 'Z' colors; 'B' bold; 'E'/'e' summary/task memory scale
+                    l,t,m,I   Toggle: 'l' load avg; 't' task/cpu; 'm' memory; 'I' Irix mode
+                        0,1,2,3,4 Toggle: '0' zeros; '1/2/3' cpu/numa views; '4' cpus two abreast
+                        f,F,X     Fields: 'f'/'F' add/remove/order/sort; 'X' increase fixed-width
+
+                        L,&,<,> . Locate: 'L'/'&' find/again; Move sort column: '<'/'>' left/right
+                        R,H,J,C . Toggle: 'R' Sort; 'H' Threads; 'J' Num justify; 'C' Coordinates
+                        c,i,S,j . Toggle: 'c' Cmd name/line; 'i' Idle; 'S' Time; 'j' Str justify
+                    x,y     . Toggle highlights: 'x' sort field; 'y' running tasks
+                    z,b     . Toggle: 'z' color/mono; 'b' bold/reverse (only if 'x' or 'y')
+                    u,U,o,O . Filter by: 'u'/'U' effective/any user; 'o'/'O' other criteria
+                        n,#,^O  . Set: 'n'/'#' max tasks displayed; Show: Ctrl+'O' other filter(s)
+                    V,v     . Toggle: 'V' forest view; 'v' hide/show forest view children
+                    k,r       Manipulate tasks: 'k' kill; 'r' renice
+                        .
+                        .
+                        d or s    Set update interval
+                    W,Y,!     Write config file 'W'; Inspect other output 'Y'; Combine Cpus '!'
+                        q         Quit
+                              ( commands shown with '.' require a visible task display window ) 
+                    Press 'h' or '?' for help with Windows,
+                        .
+                        .
+                        Type 'q' or <Esc> to continue 
+ps
+
+Xonsh
+
+Nu-Shell
+https://www.nushell.sh/cookbook/book/  #or migrate to sysadmin(!!)
+            Command Reference
+
+            If you're new to Nushell, the quick tour can show you the most important commands. You don't need to know them all!
+
+            To see all commands from inside Nushell, run help commands.
+            Command	Categories	Description	Feature
+            alias	core
+                Alias a command (with optional flags) to a new name.
+                default
+            all	filters
+                Test if every element of the input fulfills a predicate expression.
+                default
+            ansi	platform
+                Output ANSI codes to change color and style of text.
+                default
+            ansi gradient	platform
+                Add a color gradient (using ANSI color codes) to the given string.
+                extra
+            ansi link	platform
+                Add a link (using OSC 8 escape sequence) to the given string.
+                default
+            ansi strip	platform
+                Strip ANSI escape sequences from a string.
+                default
+            any	filters
+                Tests if any element of the input fulfills a predicate expression.
+                default
+            append	filters
+                Append any number of rows to a table.
+                default
+            ast	debug
+                Print the abstract syntax tree (ast) for a pipeline.
+                default
+            bits	bits
+                Various commands for working with bits.
+                extra
+            bits and	bits
+                Performs bitwise and for ints or binary values.
+                extra
+            bits not	bits
+                Performs logical negation on each bit.
+                extra
+            bits or	bits
+                Performs bitwise or for ints or binary values.
+                extra
+            bits rol	bits
+                Bitwise rotate left for ints or binary values.
+                extra
+            bits ror	bits
+                Bitwise rotate right for ints or binary values.
+                extra
+            bits shl	bits
+                Bitwise shift left for ints or binary values.
+                extra
+            bits shr	bits
+                Bitwise shift right for ints or binary values.
+                extra
+            bits xor	bits
+                Performs bitwise xor for ints or binary values.
+                extra
+            break	core
+                Break a loop.
+                default
+            bytes	bytes
+                Various commands for working with byte data.
+                default
+            bytes add	bytes
+                Add specified bytes to the input.
+                default
+            bytes at	bytes
+                Get bytes defined by a range.
+                default
+            bytes build	bytes
+                Create bytes from the arguments.
+                default
+            bytes collect	bytes
+                Concatenate multiple binary into a single binary, with an optional separator between each.
+                default
+            bytes ends-with	bytes
+                Check if bytes ends with a pattern.
+                default
+            bytes index-of	bytes
+                Returns start index of first occurrence of pattern in bytes, or -1 if no match.
+                default
+            bytes length	bytes
+                Output the length of any bytes in the pipeline.
+                default
+            bytes remove	bytes
+                Remove bytes.
+                default
+            bytes replace	bytes
+                Find and replace binary.
+                default
+            bytes reverse	bytes
+                Reverse the bytes in the pipeline.
+                default
+            bytes starts-with	bytes
+                Check if bytes starts with a pattern.
+                default
+            cal	generators
+                Display a calendar.
+                default
+            cd	filesystem
+                Change directory.
+                default
+            char	strings
+                Output special characters (e.g., 'newline').
+                default
+            clear	platform
+                Clear the terminal.
+                default
+            collect	filters
+                Collect the stream and pass it to a block.
+                default
+            columns	filters
+                Given a record or table, produce a list of its columns' names.
+                default
+            commandline	core
+                View or modify the current command line input buffer.
+                default
+            commandline edit	core
+                Modify the current command line input buffer.
+                default
+            commandline get-cursor	core
+                Get the current cursor position.
+                default
+            commandline set-cursor	core
+                Set the current cursor position.
+                default
+            compact	filters
+                Creates a table with non-empty rows.
+                default
+            complete	system
+                Capture the outputs and exit code from an external piped in command in a nushell table.
+                default
+            config	env
+                Edit nushell configuration files.
+                default
+            config env	env
+                Edit nu environment configurations.
+                default
+            config nu	env
+                Edit nu configurations.
+                default
+            config reset	env
+                Reset nushell environment configurations to default, and saves old config files in the config location as oldconfig.nu and oldenv.nu.
+                default
+            const	core
+                Create a parse-time constant.
+                default
+            continue	core
+                Continue a loop from the next iteration.
+                default
+            cp	filesystem
+                Copy files using uutils/coreutils cp.
+                default
+            date	date
+                Date-related commands.
+                default
+            date format	removed
+                Removed command: use `format date` instead.
+                default
+            date humanize	date
+                Print a 'humanized' format for the date, relative to now.
+                default
+            date list-timezone	date
+                List supported time zones.
+                default
+            date now	date
+                Get the current date.
+                default
+            date to-record	date
+                Convert the date into a record.
+                default
+            date to-table	date
+                Convert the date into a structured table.
+                default
+            date to-timezone	date
+                Convert a date to a given time zone.
+                default
+            debug	debug
+                Debug print the value(s) piped in.
+                default
+            debug info	debug
+                View process memory info.
+                default
+            decode	strings
+                Decode bytes into a string.
+                default
+            decode base64	hash
+                Base64 decode a value.
+                default
+            decode hex	formats
+                Hex decode a value.
+                extra
+            def	core
+                Define a custom command.
+                default
+            default	filters
+                Sets a default row's column if missing.
+                default
+            describe	core
+                Describe the type and structure of the value(s) piped in.
+                default
+            detect columns	strings
+                Attempt to automatically split text into multiple columns.
+                default
+            dfr	dataframe
+                Operate with data in a dataframe format.
+                dataframe
+            dfr agg	lazyframe
+                Performs a series of aggregations from a group-by.
+                dataframe
+            dfr agg-groups	expression
+                Creates an agg_groups expression.
+                dataframe
+            dfr all-false	dataframe
+                Returns true if all values are false.
+                dataframe
+            dfr all-true	dataframe
+                Returns true if all values are true.
+                dataframe
+            dfr append	dataframe
+                Appends a new dataframe.
+                dataframe
+            dfr arg-max	dataframe
+                Return index for max value in series.
+                dataframe
+            dfr arg-min	dataframe
+                Return index for min value in series.
+                dataframe
+            dfr arg-sort	dataframe
+                Returns indexes for a sorted series.
+                dataframe
+            dfr arg-true	dataframe
+                Returns indexes where values are true.
+                dataframe
+            dfr arg-unique	dataframe
+                Returns indexes for unique values.
+                dataframe
+            dfr arg-where	expression
+                Creates an expression that returns the arguments where expression is true.
+                dataframe
+            dfr as	expression
+                Creates an alias expression.
+                dataframe
+            dfr as-date	dataframe
+                Converts string to date.
+                dataframe
+            dfr as-datetime	dataframe
+                Converts string to datetime.
+                dataframe
+            dfr cache	lazyframe
+                Caches operations in a new LazyFrame.
+                dataframe
+            dfr cast	dataframe
+                Cast a column to a different dtype.
+                dataframe
+            dfr col	expression
+                Creates a named column expression.
+                dataframe
+            dfr collect	lazyframe
+                Collect lazy dataframe into eager dataframe.
+                dataframe
+            dfr columns	dataframe
+                Show dataframe columns.
+                dataframe
+            dfr concat-str	expression
+                Creates a concat string expression.
+                dataframe
+            dfr concatenate	dataframe
+                Concatenates strings with other array.
+                dataframe
+            dfr contains	dataframe
+                Checks if a pattern is contained in a string.
+                dataframe
+            dfr count	expression
+                Creates a count expression.
+                dataframe
+            dfr count-null	dataframe
+                Counts null values.
+                dataframe
+            dfr cumulative	dataframe
+                Cumulative calculation for a series.
+                dataframe
+            dfr datepart	expression
+                Creates an expression for capturing the specified datepart in a column.
+                dataframe
+            dfr drop	dataframe
+                Creates a new dataframe by dropping the selected columns.
+                dataframe
+            dfr drop-duplicates	dataframe
+                Drops duplicate values in dataframe.
+                dataframe
+            dfr drop-nulls	dataframe
+                Drops null values in dataframe.
+                dataframe
+            dfr dtypes	dataframe
+                Show dataframe data types.
+                dataframe
+            dfr dummies	dataframe
+                Creates a new dataframe with dummy variables.
+                dataframe
+            dfr explode	lazyframe
+                Explodes a dataframe or creates a explode expression.
+                dataframe
+            dfr expr-not	expression
+                Creates a not expression.
+                dataframe
+            dfr fetch	lazyframe
+                Collects the lazyframe to the selected rows.
+                dataframe
+            dfr fill-nan	lazyframe
+                Replaces NaN values with the given expression.
+                dataframe
+            dfr fill-null	lazyframe
+                Replaces NULL values with the given expression.
+                dataframe
+            dfr filter	lazyframe
+                Filter dataframe based in expression.
+                dataframe
+            dfr filter-with	dataframe or lazyframe
+                Filters dataframe using a mask or expression as reference.
+                dataframe
+            dfr first	dataframe
+                Show only the first number of rows or create a first expression
+                dataframe
+            dfr flatten	lazyframe
+                An alias for dfr explode.
+                dataframe
+            dfr get	dataframe
+                Creates dataframe with the selected columns.
+                dataframe
+            dfr get-day	dataframe
+                Gets day from date.
+                dataframe
+            dfr get-hour	dataframe
+                Gets hour from date.
+                dataframe
+            dfr get-minute	dataframe
+                Gets minute from date.
+                dataframe
+            dfr get-month	dataframe
+                Gets month from date.
+                dataframe
+            dfr get-nanosecond	dataframe
+                Gets nanosecond from date.
+                dataframe
+            dfr get-ordinal	dataframe
+                Gets ordinal from date.
+                dataframe
+            dfr get-second	dataframe
+                Gets second from date.
+                dataframe
+            dfr get-week	dataframe
+                Gets week from date.
+                dataframe
+            dfr get-weekday	dataframe
+                Gets weekday from date.
+                dataframe
+            dfr get-year	dataframe
+                Gets year from date.
+                dataframe
+            dfr group-by	lazyframe
+                Creates a group-by object that can be used for other aggregations.
+                dataframe
+            dfr implode	expression
+                Aggregates a group to a Series.
+                dataframe
+            dfr into-df	dataframe
+                Converts a list, table or record into a dataframe.
+                dataframe
+            dfr into-lazy	lazyframe
+                Converts a dataframe into a lazy dataframe.
+                dataframe
+            dfr into-nu	dataframe
+                Converts a dataframe or an expression into into nushell value for access and exploration.
+                dataframe
+            dfr is-duplicated	dataframe
+                Creates mask indicating duplicated values.
+                dataframe
+            dfr is-in	expression
+                Creates an is-in expression.
+                dataframe
+            dfr is-not-null	dataframe
+                Creates mask where value is not null.
+                dataframe
+            dfr is-null	dataframe
+                Creates mask where value is null.
+                dataframe
+            dfr is-unique	dataframe
+                Creates mask indicating unique values.
+                dataframe
+            dfr join	lazyframe
+                Joins a lazy frame with other lazy frame.
+                dataframe
+            dfr last	dataframe
+                Creates new dataframe with tail rows or creates a last expression.
+                dataframe
+            dfr lit	expression
+                Creates a literal expression.
+                dataframe
+            dfr lowercase	dataframe
+                Lowercase the strings in the column.
+                dataframe
+            dfr ls	dataframe
+                Lists stored dataframes.
+                dataframe
+            dfr max	expression
+                Creates a max expression or aggregates columns to their max value.
+                dataframe
+            dfr mean	expression
+                Creates a mean expression for an aggregation or aggregates columns to their mean value.
+                dataframe
+            dfr median	lazyframe
+                Aggregates columns to their median value
+                dataframe
+            dfr melt	dataframe
+                Unpivot a DataFrame from wide to long format.
+                dataframe
+            dfr min	expression
+                Creates a min expression or aggregates columns to their min value.
+                dataframe
+            dfr n-unique	dataframe
+                Counts unique values.
+                dataframe
+            dfr not	dataframe
+                Inverts boolean mask.
+                dataframe
+            dfr open	dataframe
+                Opens CSV, JSON, JSON lines, arrow, avro, or parquet file to create dataframe.
+                dataframe
+            dfr otherwise	expression
+                Completes a when expression.
+                dataframe
+            dfr quantile	lazyframe
+                Aggregates the columns to the selected quantile.
+                dataframe
+            dfr query	dataframe
+                Query dataframe using SQL. Note: The dataframe is always named 'df' in your query's from clause.
+                dataframe
+            dfr rename	dataframe or lazyframe
+                Rename a dataframe column.
+                dataframe
+            dfr replace	dataframe
+                Replace the leftmost (sub)string by a regex pattern.
+                dataframe
+            dfr replace-all	dataframe
+                Replace all (sub)strings by a regex pattern.
+                dataframe
+            dfr reverse	lazyframe
+                Reverses the LazyFrame
+                dataframe
+            dfr rolling	dataframe
+                Rolling calculation for a series.
+                dataframe
+            dfr sample	dataframe
+                Create sample dataframe.
+                dataframe
+            dfr schema	dataframe
+                Show schema for a dataframe.
+                dataframe
+            dfr select	lazyframe
+                Selects columns from lazyframe.
+                dataframe
+            dfr set	dataframe
+                Sets value where given mask is true.
+                dataframe
+            dfr set-with-idx	dataframe
+                Sets value in the given index.
+                dataframe
+            dfr shape	dataframe
+                Shows column and row size for a dataframe.
+                dataframe
+            dfr shift	dataframe or lazyframe
+                Shifts the values by a given period.
+                dataframe
+            dfr slice	dataframe
+                Creates new dataframe from a slice of rows.
+                dataframe
+            dfr sort-by	lazyframe
+                Sorts a lazy dataframe based on expression(s).
+                dataframe
+            dfr std	expression
+                Creates a std expression for an aggregation of std value from columns in a dataframe.
+                dataframe
+            dfr str-lengths	dataframe
+                Get lengths of all strings.
+                dataframe
+            dfr str-slice	dataframe
+                Slices the string from the start position until the selected length.
+                dataframe
+            dfr strftime	dataframe
+                Formats date based on string rule.
+                dataframe
+            dfr sum	expression
+                Creates a sum expression for an aggregation or aggregates columns to their sum value.
+                dataframe
+            dfr summary	dataframe
+                For a dataframe, produces descriptive statistics (summary statistics) for its numeric columns.
+                dataframe
+            dfr take	dataframe
+                Creates new dataframe using the given indices.
+                dataframe
+            dfr to-arrow	dataframe
+                Saves dataframe to arrow file.
+                dataframe
+            dfr to-avro	dataframe
+                Saves dataframe to avro file.
+                dataframe
+            dfr to-csv	dataframe
+                Saves dataframe to CSV file.
+                dataframe
+            dfr to-jsonl	dataframe
+                Saves dataframe to a JSON lines file.
+                dataframe
+            dfr to-parquet	dataframe
+                Saves dataframe to parquet file.
+                dataframe
+            dfr unique	dataframe or lazyframe
+                Returns unique values from a dataframe.
+                dataframe
+            dfr uppercase	dataframe
+                Uppercase the strings in the column.
+                dataframe
+            dfr value-counts	dataframe
+                Returns a dataframe with the counts for unique values in series.
+                dataframe
+            dfr var	expression
+                Create a var expression for an aggregation.
+                dataframe
+            dfr when	expression
+                Creates and modifies a when expression.
+                dataframe
+            dfr with-column	dataframe or lazyframe
+                Adds a series to the dataframe.
+                dataframe
+            do	core
+                Run a closure, providing it with the pipeline input.
+                default
+            drop	filters
+                Remove items/rows from the end of the input list/table. Counterpart of `skip`. Opposite of `last`.
+                default
+            drop column	filters
+                Remove N columns at the right-hand end of the input table. To remove columns by name, use `reject`.
+                default
+            drop nth	filters
+                Drop the selected rows.
+                default
+            du	filesystem
+                Find disk usage sizes of specified items.
+                default
+            each	filters
+                Run a closure on each row of the input list, creating a new list with the results.
+                default
+            each while	filters
+                Run a block on each row of the input list until a null is found, then create a new list with the results.
+                extra
+            echo	core
+                Returns its arguments, ignoring the piped-in value.
+                default
+            encode	strings
+                Encode a string into bytes.
+                default
+            encode base64	hash
+                Encode a string or binary value using Base64.
+                default
+            encode hex	formats
+                Encode a binary value using hex.
+                extra
+            enter	shells
+                Enters a new shell at the given path.
+                
+            enumerate	filters
+                Enumerate the elements in a stream.
+                default
+            error make	core
+                Create an error.
+                default
+            every	filters
+                Show (or skip) every n-th row, starting from the first one.
+                default
+            exec	system
+                Execute a command, replacing or exiting the current process, depending on platform.
+                default
+            exit	shells
+                Exit Nu.
+                default
+            explain	debug
+                Explain closure contents.
+                default
+            explore	viewers
+                Explore acts as a table pager, just like `less` does for text.
+                default
+            export	core
+                Export definitions or environment variables from a module.
+                default
+            export alias	core
+                Alias a command (with optional flags) to a new name and export it from a module.
+                default
+            export const	core
+                Use parse-time constant from a module and export them from this module.
+                default
+            export def	core
+                Define a custom command and export it from a module.
+                default
+            export extern	core
+                Define an extern and export it from a module.
+                default
+            export module	core
+                Export a custom module from a module.
+                default
+            export use	core
+                Use definitions from a module and export them from this module.
+                default
+            export-env	env
+                Run a block and preserve its environment in a current scope.
+                default
+            extern	core
+                Define a signature for an external command.
+                default
+            fill	conversions
+                Fill and Align.
+                default
+            filter	filters
+                Filter values based on a predicate closure.
+                default
+            find	filters
+                Searches terms in the input.
+                default
+            first	filters
+                Return only the first several rows of the input. Counterpart of `last`. Opposite of `skip`.
+                default
+            flatten	filters
+                Flatten the table.
+                default
+            fmt	conversions
+                Format a number.
+                extra
+            for	core
+                Loop over a range.
+                default
+            format	strings
+                Various commands for formatting data.
+                default
+            format date	date
+                Format a given date using a format string.
+                default
+            format duration	strings
+                Outputs duration with a specified unit of time.
+                default
+            format filesize	strings
+                Converts a column of filesizes to some specified format.
+                default
+            format pattern	strings
+                Format columns into a string using a simple pattern.
+                extra
+            from	formats
+                Parse a string or binary data into structured data.
+                default
+            from csv	formats
+                Parse text as .csv and create table.
+                default
+            from eml	formats
+                Parse text as .eml and create record.
+                default
+            from ics	formats
+                Parse text as .ics and create table.
+                default
+            from ini	formats
+                Parse text as .ini and create table.
+                default
+            from json	formats
+                Convert from json to structured data.
+                default
+            from nuon	formats
+                Convert from nuon to structured data.
+                default
+            from ods	formats
+                Parse OpenDocument Spreadsheet(.ods) data and create table.
+                default
+            from ssv	formats
+                Parse text as space-separated values and create a table. The default minimum number of spaces counted as a separator is 2.
+                default
+            from toml	formats
+                Parse text as .toml and create record.
+                default
+            from tsv	formats
+                Parse text as .tsv and create table.
+                default
+            from url	formats
+                Parse url-encoded string as a record.
+                extra
+            from vcf	formats
+                Parse text as .vcf and create table.
+                default
+            from xlsx	formats
+                Parse binary Excel(.xlsx) data and create table.
+                default
+            from xml	formats
+                Parse text as .xml and create record.
+                default
+            from yaml	formats
+                Parse text as .yaml/.yml and create table.
+                default
+            from yml	formats
+                Parse text as .yaml/.yml and create table.
+                default
+            g	shells
+                Switch to a given shell, or list all shells if no given shell number.
+                
+            generate	generators
+                Generate a list of values by successively invoking a closure.
+                default
+            get	filters
+                Extract data using a cell path.
+                default
+            glob	filesystem
+                Creates a list of files and/or folders based on the glob pattern provided.
+                default
+            grid	viewers
+                Renders the output to a textual terminal grid.
+                default
+            group	filters
+                Groups input into groups of `group_size`.
+                default
+            group-by	filters
+                Splits a list or table into groups, and returns a record containing those groups.
+                default
+            gstat	prompt
+                Get the git status of a repo
+                default
+            hash	hash
+                Apply hash function.
+                default
+            hash md5	hash
+                Hash a value using the md5 hash algorithm.
+                default
+            hash sha256	hash
+                Hash a value using the sha256 hash algorithm.
+                default
+            headers	filters
+                Use the first row of the table as column names.
+                default
+            help	core
+                Display help information about different parts of Nushell.
+                default
+            help aliases	core
+                Show help on nushell aliases.
+                default
+            help commands	core
+                Show help on nushell commands.
+                default
+            help escapes	core
+                Show help on nushell string escapes.
+                default
+            help externs	core
+                Show help on nushell externs.
+                default
+            help modules	core
+                Show help on nushell modules.
+                default
+            help operators	core
+                Show help on nushell operators.
+                default
+            hide	core
+                Hide definitions in the current scope.
+                default
+            hide-env	core
+                Hide environment variables in the current scope.
+                default
+            histogram	chart
+                Creates a new table with a histogram based on the column name passed in.
+                default
+            history	history
+                Get the command history.
+                default
+            history session	history
+                Get the command history session.
+                default
+            http	network
+                Various commands for working with http methods.
+                default
+            http delete	network
+                Delete the specified resource.
+                default
+            http get	network
+                Fetch the contents from a URL.
+                default
+            http head	network
+                Get the headers from a URL.
+                default
+            http options	network
+                Requests permitted communication options for a given URL.
+                default
+            http patch	network
+                Patch a body to a URL.
+                default
+            http post	network
+                Post a body to a URL.
+                default
+            http put	network
+                Put a body to a URL.
+                default
+            if	core
+                Conditionally run a block.
+                default
+            ignore	core
+                Ignore the output of the previous command in the pipeline.
+                default
+            inc	default
+                Increment a value or version. Optionally use the column of a table.
+                default
+            input	platform
+                Get input from the user.
+                default
+            input list	platform
+                Interactive list selection.
+                default
+            input listen	platform
+                Listen for user interface event.
+                default
+            insert	filters
+                Insert a new column, using an expression or closure to create each row's values.
+                default
+            inspect	debug
+                Inspect pipeline results while running a pipeline.
+                default
+            interleave	filters
+                Read multiple streams in parallel and combine them into one stream.
+                default
+            into	conversions
+                Commands to convert data from one type to another.
+                default
+            into binary	conversions
+                Convert value to a binary primitive.
+                default
+            into bits	conversions
+                Convert value to a binary primitive.
+                extra
+            into bool	conversions
+                Convert value to boolean.
+                default
+            into cell-path	conversions
+                Convert value to a cell-path.
+                default
+            into datetime	conversions
+                Convert text or timestamp into a datetime.
+                default
+            into duration	conversions
+                Convert value to duration.
+                default
+            into filesize	conversions
+                Convert value to filesize.
+                default
+            into float	conversions
+                Convert data into floating point number.
+                default
+            into glob	conversions
+                Convert value to glob.
+                default
+            into int	conversions
+                Convert value to integer.
+                default
+            into record	conversions
+                Convert value to record.
+                default
+            into sqlite	conversions
+                Convert table into a SQLite database.
+                default
+            into string	conversions
+                Convert value to string.
+                default
+            into value	filters
+                Infer nushell datatype for each cell.
+                default
+            is-admin	core
+                Check if nushell is running with administrator or root privileges.
+                default
+            is-empty	filters
+                Check for empty values.
+                default
+            is-not-empty	filters
+                Check for non-empty values.
+                default
+            is-terminal	platform
+                Check if stdin, stdout, or stderr is a terminal.
+                default
+            items	filters
+                Given a record, iterate on each pair of column name and associated value.
+                default
+            join	filters
+                Join two tables.
+                default
+            keybindings	platform
+                Keybindings related commands.
+                default
+            keybindings default	platform
+                List default keybindings.
+                default
+            keybindings list	platform
+                List available options that can be used to create keybindings.
+                default
+            keybindings listen	platform
+                Get input from the user.
+                default
+            kill	platform
+                Kill a process using the process id.
+                default
+            last	filters
+                Return only the last several rows of the input. Counterpart of `first`. Opposite of `drop`.
+                default
+            lazy make	core
+                Create a lazy record.
+                default
+            length	filters
+                Count the number of items in an input list or rows in a table.
+                default
+            let	core
+                Create a variable and give it a value.
+                default
+            let-env	removed
+                `let-env FOO = ...` has been removed, use `$env.FOO = ...` instead.
+                default
+            lines	filters
+                Converts input to lines.
+                default
+            load-env	filesystem
+                Loads an environment update from a record.
+                default
+            loop	core
+                Run a block in a loop.
+                default
+            ls	filesystem
+                List the filenames, sizes, and modification times of items in a directory.
+                default
+            match	core
+                Conditionally run a block on a matched value.
+                default
+            math	math
+                Use mathematical functions as aggregate functions on a list of numbers or tables.
+                default
+            math abs	math
+                Returns the absolute value of a number.
+                default
+            math arccos	math
+                Returns the arccosine of the number.
+                extra
+            math arccosh	math
+                Returns the inverse of the hyperbolic cosine function.
+                extra
+            math arcsin	math
+                Returns the arcsine of the number.
+                extra
+            math arcsinh	math
+                Returns the inverse of the hyperbolic sine function.
+                extra
+            math arctan	math
+                Returns the arctangent of the number.
+                extra
+            math arctanh	math
+                Returns the inverse of the hyperbolic tangent function.
+                extra
+            math avg	math
+                Returns the average of a list of numbers.
+                default
+            math ceil	math
+                Returns the ceil of a number (smallest integer greater than or equal to that number).
+                default
+            math cos	math
+                Returns the cosine of the number.
+                extra
+            math cosh	math
+                Returns the hyperbolic cosine of the number.
+                extra
+            math exp	math
+                Returns e raised to the power of x.
+                extra
+            math floor	math
+                Returns the floor of a number (largest integer less than or equal to that number).
+                default
+            math ln	math
+                Returns the natural logarithm. Base: (math e).
+                extra
+            math log	math
+                Returns the logarithm for an arbitrary base.
+                default
+            math max	math
+                Returns the maximum of a list of values, or of columns in a table.
+                default
+            math median	math
+                Computes the median of a list of numbers.
+                default
+            math min	math
+                Finds the minimum within a list of values or tables.
+                default
+            math mode	math
+                Returns the most frequent element(s) from a list of numbers or tables.
+                default
+            math product	math
+                Returns the product of a list of numbers or the products of each column of a table.
+                default
+            math round	math
+                Returns the input number rounded to the specified precision.
+                default
+            math sin	math
+                Returns the sine of the number.
+                extra
+            math sinh	math
+                Returns the hyperbolic sine of the number.
+                extra
+            math sqrt	math
+                Returns the square root of the input number.
+                default
+            math stddev	math
+                Returns the standard deviation of a list of numbers, or of each column in a table.
+                default
+            math sum	math
+                Returns the sum of a list of numbers or of each column in a table.
+                default
+            math tan	math
+                Returns the tangent of the number.
+                extra
+            math tanh	math
+                Returns the hyperbolic tangent of the number.
+                extra
+            math variance	math
+                Returns the variance of a list of numbers or of each column in a table.
+                default
+            merge	filters
+                Merge the input with a record or table, overwriting values in matching columns.
+                default
+            metadata	debug
+                Get the metadata for items in the stream.
+                default
+            mkdir	filesystem
+                Create directories, with intermediary directories if required using uutils/coreutils mkdir.
+                default
+            mktemp	filesystem
+                Create temporary files or directories using uutils/coreutils mktemp.
+                default
+            module	core
+                Define a custom module.
+                default
+            move	filters
+                Move columns before or after other columns.
+                default
+            mut	core
+                Create a mutable variable and give it a value.
+                default
+            mv	filesystem
+                Move files or directories using uutils/coreutils mv.
+                default
+            n	shells
+                Switch to the next shell.
+                
+            nu-check	strings
+                Validate and parse input content.
+                default
+            nu-highlight	strings
+                Syntax highlight the input string.
+                default
+            open	filesystem
+                Load a file into a cell, converting to table if possible (avoid by appending '--raw').
+                default
+            overlay	core
+                Commands for manipulating overlays.
+                default
+            overlay hide	core
+                Hide an active overlay.
+                default
+            overlay list	core
+                List all active overlays.
+                default
+            overlay new	core
+                Create an empty overlay.
+                default
+            overlay use	core
+                Use definitions from a module as an overlay.
+                default
+            p	shells
+                Switch to the previous shell.
+                
+            panic	experimental
+                Executes a rust panic, useful only for testing.
+                default
+            par-each	filters
+                Run a closure on each row of the input list in parallel, creating a new list with the results.
+                default
+            parse	strings
+                Parse columns from string data using a simple pattern.
+                default
+            path	path
+                Explore and manipulate paths.
+                default
+            path basename	path
+                Get the final component of a path.
+                default
+            path dirname	path
+                Get the parent directory of a path.
+                default
+            path exists	path
+                Check whether a path exists.
+                default
+            path expand	path
+                Try to expand a path to its absolute form.
+                default
+            path join	path
+                Join a structured path or a list of path parts.
+                default
+            path parse	path
+                Convert a path into structured data.
+                default
+            path relative-to	path
+                Express a path as relative to another path.
+                default
+            path split	path
+                Split a path into a list based on the system's path separator.
+                default
+            path type	path
+                Get the type of the object a path refers to (e.g., file, dir, symlink).
+                default
+            port	network
+                Get a free port from system.
+                default
+            prepend	filters
+                Prepend any number of rows to a table.
+                default
+            print	strings
+                Print the given values to stdout.
+                default
+            ps	system
+                View information about system processes.
+                default
+            query	filters
+                Show all the query commands
+                default
+            query db	database
+                Query a database using SQL.
+                default
+            query json	filters
+                execute json query on json file (open --raw <file> | query json 'query string')
+                default
+            query web	network
+                execute selector query on html/web
+                default
+            query xml	filters
+                execute xpath query on xml
+                default
+            random	random
+                Generate a random value.
+                default
+            random bool	random
+                Generate a random boolean value.
+                default
+            random chars	random
+                Generate random chars.
+                default
+            random dice	random
+                Generate a random dice roll.
+                default
+            random float	random
+                Generate a random float within a range [min..max].
+                default
+            random int	random
+                Generate a random integer [min..max].
+                default
+            random uuid	random
+                Generate a random uuid4 string.
+                default
+            range	filters
+                Return only the selected rows.
+                default
+            reduce	filters
+                Aggregate a list to a single value using an accumulator closure.
+                default
+            register	core
+                Register a plugin.
+                default
+            registry query	system
+                Query the Windows registry.
+                
+            reject	filters
+                Remove the given columns or rows from the table. Opposite of `select`.
+                default
+            rename	filters
+                Creates a new table with columns renamed.
+                default
+            return	core
+                Return early from a function.
+                default
+            reverse	filters
+                Reverses the input list or table.
+                default
+            rm	filesystem
+                Remove files and directories.
+                default
+            roll	filters
+                Rolling commands for tables.
+                extra
+            roll down	filters
+                Roll table rows down.
+                extra
+            roll left	filters
+                Roll record or table columns left.
+                extra
+            roll right	filters
+                Roll table columns right.
+                extra
+            roll up	filters
+                Roll table rows up.
+                extra
+            rotate	filters
+                Rotates a table or record clockwise (default) or counter-clockwise (use --ccw flag).
+                extra
+            run-external	system
+                Runs external command.
+                default
+            save	filesystem
+                Save a file.
+                default
+            schema	database
+                Show the schema of a SQLite database.
+                default
+            scope	core
+                Commands for getting info about what is in scope.
+                default
+            scope aliases	core
+                Output info on the aliases in the current scope.
+                default
+            scope commands	core
+                Output info on the commands in the current scope.
+                default
+            scope engine-stats	core
+                Output stats on the engine in the current state.
+                default
+            scope externs	core
+                Output info on the known externals in the current scope.
+                default
+            scope modules	core
+                Output info on the modules in the current scope.
+                default
+            scope variables	core
+                Output info on the variables in the current scope.
+                default
+            select	filters
+                Select only these columns or rows from the input. Opposite of `reject`.
+                default
+            seq	generators
+                Output sequences of numbers.
+                default
+            seq char	generators
+                Print a sequence of ASCII characters.
+                default
+            seq date	generators
+                Print sequences of dates.
+                default
+            shells	shells
+                Lists all open shells.
+                
+            shuffle	filters
+                Shuffle rows randomly.
+                default
+            skip	filters
+                Skip the first several rows of the input. Counterpart of `drop`. Opposite of `first`.
+                default
+            skip until	filters
+                Skip elements of the input until a predicate is true.
+                default
+            skip while	filters
+                Skip elements of the input while a predicate is true.
+                default
+            sleep	platform
+                Delay for a specified amount of time.
+                default
+            sort	filters
+                Sort in increasing order.
+                default
+            sort-by	filters
+                Sort by the given columns, in increasing order.
+                default
+            source	core
+                Runs a script file in the current context.
+                default
+            source-env	core
+                Source the environment from a source file into the current environment.
+                default
+            split	strings
+                Split contents across desired subcommand (like row, column) via the separator.
+                default
+            split chars	strings
+                Split a string into a list of characters.
+                default
+            split column	strings
+                Split a string into multiple columns using a separator.
+                default
+            split list	filters
+                Split a list into multiple lists using a separator.
+                default
+            split row	strings
+                Split a string into multiple rows using a separator.
+                default
+            split words	strings
+                Split a string's words into separate rows.
+                default
+            split-by	filters
+                Split a record into groups.
+                default
+            start	filesystem
+                Open a folder, file or website in the default application or viewer.
+                default
+            stor	database
+                Various commands for working with the in-memory sqlite database.
+                default
+            stor create	database
+                Create a table in the in-memory sqlite database.
+                default
+            stor delete	database
+                Delete a table or specified rows in the in-memory sqlite database.
+                default
+            stor export	database
+                Export the in-memory sqlite database to a sqlite database file.
+                default
+            stor import	database
+                Import a sqlite database file into the in-memory sqlite database.
+                default
+            stor insert	database
+                Insert information into a specified table in the in-memory sqlite database.
+                default
+            stor open	database
+                Opens the in-memory sqlite database.
+                default
+            stor reset	database
+                Reset the in-memory database by dropping all tables.
+                default
+            stor update	database
+                Update information in a specified table in the in-memory sqlite database.
+                default
+            str	strings
+                Various commands for working with string data.
+                extra
+            str camel-case	strings
+                Convert a string to camelCase.
+                extra
+            str capitalize	strings
+                Capitalize first letter of text.
+                default
+            str contains	strings
+                Checks if string input contains a substring.
+                default
+            str distance	strings
+                Compare two strings and return the edit distance/Levenshtein distance.
+                default
+            str downcase	strings
+                Make text lowercase.
+                default
+            str ends-with	strings
+                Check if an input ends with a string.
+                default
+            str escape-glob	strings
+                Escape glob pattern.
+                default
+            str expand	strings
+                Generates all possible combinations defined in brace expansion syntax.
+                default
+            str index-of	strings
+                Returns start index of first occurrence of string in input, or -1 if no match.
+                default
+            str join	strings
+                Concatenate multiple strings into a single string, with an optional separator between each.
+                default
+            str kebab-case	strings
+                Convert a string to kebab-case.
+                extra
+            str length	strings
+                Output the length of any strings in the pipeline.
+                default
+            str pascal-case	strings
+                Convert a string to PascalCase.
+                extra
+            str replace	strings
+                Find and replace text.
+                default
+            str reverse	strings
+                Reverse every string in the pipeline.
+                default
+            str screaming-snake-case	strings
+                Convert a string to SCREAMING_SNAKE_CASE.
+                extra
+            str snake-case	strings
+                Convert a string to snake_case.
+                extra
+            str starts-with	strings
+                Check if an input starts with a string.
+                default
+            str stats	strings
+                Gather word count statistics on the text.
+                default
+            str substring	strings
+                Get part of a string. Note that the start is included but the end is excluded, and that the first character of a string is index 0.
+                default
+            str title-case	strings
+                Convert a string to Title Case.
+                extra
+            str trim	strings
+                Trim whitespace or specific character.
+                default
+            str upcase	strings
+                Make text uppercase.
+                default
+            sys	system
+                View information about the system.
+                default
+            table	viewers
+                Render the table.
+                default
+            take	filters
+                Take only the first n elements of a list, or the first n bytes of a binary value.
+                default
+            take until	filters
+                Take elements of the input until a predicate is true.
+                default
+            take while	filters
+                Take elements of the input while a predicate is true.
+                default
+            tee	filters
+                Copy a stream to another command in parallel.
+                default
+            term size	platform
+                Returns a record containing the number of columns (width) and rows (height) of the terminal.
+                default
+            timeit	debug
+                Time the running time of a block.
+                default
+            to	formats
+                Translate structured data to a format.
+                default
+            to csv	formats
+                Convert table into .csv text .
+                default
+            to html	formats
+                Convert table into simple HTML.
+                extra
+            to json	formats
+                Converts table data into JSON text.
+                default
+            to md	formats
+                Convert table into simple Markdown.
+                default
+            to nuon	formats
+                Converts table data into Nuon (Nushell Object Notation) text.
+                default
+            to text	formats
+                Converts data into simple text.
+                default
+            to toml	formats
+                Convert record into .toml text.
+                default
+            to tsv	formats
+                Convert table into .tsv text.
+                default
+            to xml	formats
+                Convert special record structure into .xml text.
+                default
+            to yaml	formats
+                Convert table into .yaml/.yml text.
+                default
+            touch	filesystem
+                Creates one or more files.
+                default
+            transpose	filters
+                Transposes the table contents so rows become columns and columns become rows.
+                default
+            try	core
+                Try to run a block, if it fails optionally run a catch block.
+                default
+            tutor	misc
+                Run the tutorial. To begin, run: tutor.
+                default
+            ulimit	platform
+                Set or get resource usage limits.
+                default
+            uniq	filters
+                Return the distinct values in the input.
+                default
+            uniq-by	filters
+                Return the distinct values in the input by the given column(s).
+                default
+            update	filters
+                Update an existing column to have a new value.
+                default
+            update cells	filters
+                Update the table cells.
+                extra
+            upsert	filters
+                Update an existing column to have a new value, or insert a new column.
+                default
+            url	network
+                Various commands for working with URLs.
+                default
+            url build-query	network
+                Converts record or table into query string applying percent-encoding.
+                default
+            url decode	strings
+                Converts a percent-encoded web safe string to a string.
+                default
+            url encode	strings
+                Converts a string to a percent encoded web safe string.
+                default
+            url join	network
+                Converts a record to url.
+                default
+            url parse	network
+                Parses a url.
+                default
+            use	core
+                Use definitions from a module, making them available in your shell.
+                default
+            values	filters
+                Given a record or table, produce a list of its columns' values.
+                default
+            version	core
+                Display Nu version, and its build configuration.
+                default
+            view	debug
+                Various commands for viewing debug information.
+                default
+            view files	debug
+                View the files registered in nushell's EngineState memory.
+                default
+            view source	debug
+                View a block, module, or a definition.
+                default
+            view span	debug
+                View the contents of a span.
+                default
+            watch	filesystem
+                Watch for file changes and execute Nu code when they happen.
+                default
+            where	filters
+                Filter values based on a row condition.
+                default
+            which	system
+                Finds a program file, alias or custom command.
+                default
+            while	core
+                Conditionally run a block in a loop.
+                default
+            whoami	platform
+                Get the current username using uutils/coreutils whoami.
+                default
+            window	filters
+                Creates a sliding window of `window_size` that slide by n rows/elements across input.
+                default
+            with-env	env
+                Runs a block with an environment variable set.
+                default
+            wrap	filters
+                Wrap the value into a column.
+                default
+            zip	filters
+                Combine a stream with the input.
+                default
+

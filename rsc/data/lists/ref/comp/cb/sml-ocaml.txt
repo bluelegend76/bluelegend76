@@ -1,0 +1,253 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+SML ----
+~/Empire/Doks/Comp/lang/ml/cheatsh-qref/mlstd.cheatsh.docx
+            (*Declarations:*)
+            val rent = 1200
+            val negative_number = ~15 
+            fun is_large(x : int) = if x > 37 then true else false
+            (* Floating-point numbers are called "reals". *)
+            val tau = 2.0 * pi (* You can multiply two reals *)
+            val twice_rent = 2 * rent (*two ints*)
+            (* you can't multiply an int and a real *)
+            (* +, - and * are overloaded so they work for both int and real. The same cannot be said for division which has separate operators: *)
+            val real_division = 14.0 / 4.0 (* gives 3.5 *)
+            val int_division  = 14 div 4 (* rounds to 3 *)
+            val int_remainder = 14 mod 4(* gives 2 *)
+            (* ~ is actually sometimes a function (e.g. when put in front of variables) *)
+            val negative_rent = ~(rent)
+
+            (* There are also booleans and boolean operators *)
+            val got_milk = true
+            val got_bread = false
+            val has_breakfast = got_milk andalso got_bread  
+            val has_something = got_milk orelse got_bread 
+            val is_sad = not(has_something)(*not is a function *)
+            (* Many values can be compared using equality operators: = and <> *)
+            val pays_same_rent = (rent = 1300)  
+            (* false *)
+            val is_wrong_phone_no = (phone_no <> 5551337)  
+            (* false *)
+            (* The operator <> is != *)
+
+            (* Actually, most of the parentheses above are unnecessary. Here are some different ways to say some of the things mentioned above: *)
+            fun is_large x = x > 37  
+            val is_sad = not has_something
+            val pays_same_rent = rent = 1300  
+            val is_wrong_phone_no = phone_no <> 5551337
+            val negative_rent = ~rent  
+            (* Parentheses are necessary when grouping things:*)
+            val some_answer = is_large (5 + 5)      
+            (* Without parens, this would break! *)
+            (* val some_answer = is_large 5 + 5 *)  
+            (* Read as: (is_large 5) + 5. Bad! *)
+
+            (* Besides booleans, ints and reals, Standard ML also has Chars and Strings: *)
+            val foo = "Hello, World!\n"  
+            (* The \n is the escape sequence for linebreaks *)
+            val one_letter = #"a"        
+            (* That funky syntax is just one character, a *)
+            val combined = "Hello " ^ "there, " ^ "fellow!\n"  
+            (* Concatenate strings *)
+            val _ = print foo
+            val _ = print combined 
+            (*  print things *)
+            (* val _ = print one_letter NOPE ONLY STRINGS *)
+
+            (* SML also has Lists! *)  
+            val bar = [ #"H", #"e", #"l", #"l", #"o" ]
+            (* Library functs that take strings as argument. *)
+            val bob = String.implode bar (* gives "Hello" *)
+            val bob_char_count = String.size bob  (* gives 5 *)
+            val _ = print (bob ^ "\n")
+            (* You can have lists of any kind *)
+            val numbers = [1, 3, 3, 7, 229, 230, 248]  
+            (* : int list *)
+            val names = [ "Fred", "Jane", "Alice" ]    
+            (* : string list *)
+            (* Even lists of lists of things *)
+            val groups = [ [ "Alice", "Bob" ],[ "Huey", "Dewey", "Louie" ],[ "Bonnie", "Clyde" ] ]     
+            (* : string list list *)
+            val number_count = List.length numbers (* gives 7 *)
+            (* You can put single values in front of lists of the same kind using the :: operator, called "the cons operator" (known from Lisp). *)
+            val more_numbers = 13 :: numbers  
+            (* gives [13, 1, 3, 3, 7, ...] *)
+            val more_groups  = ["Batman","Superman"] :: groups
+            (* Lists of the same kind can be appended using the @ ("append") operator *)
+            val guest_list = ["Mom", "Dad"]@[ "Aunt", "Uncle"]
+            (* This could have been done with the "cons" operator. It is tricky because the left-hand-side must be an element whereas the right-hand-side must be a list of those elements. *)
+            val guest_list = "Mom" :: "Dad" :: ["Aunt", "Uncle"]
+            val guest_list = "Mom" :: ("Dad" :: ("Aunt" :: n("Uncle" :: [])))
+            (* If you have many lists of the same kind, you can concatenate them all *)
+            val everyone = List.concat groups  
+            (* [ "Alice", "Bob", "Huey", ... ] *)
+            (* A list can have any number of same type values*)
+            val lots = [ 5, 5, 5, 6, 4, 5, 6, 5, 4, 5, 7, 3 ]  
+
+            (* Tuples, on the other hand, can contain a fixed number of different things *)
+            val person1 = ("Simon", 28, 3.14159)  
+            (* : string * int * real *)
+            (* You can even have tuples inside lists and lists inside tuples *)
+            val likes = [("Alice", "ice cream"),("Bob", "hot dogs"),("Bob", "Alice")]     
+            (* : (string * string) list *)
+            val mixup = [ ("Alice", 39),("Bob",   37),("Eve",   41) ]  
+            (* : (string * int) list *)
+            val good_bad_stuff =
+              (["ice cream", "hot dogs", "chocolate"],
+               ["liver", "paying the rent" ])           
+            (* : string list * string list *)
+
+            (* Records are tuples with named slots *)
+            val rgb = { r=0.23, g=0.56, b=0.91 } 
+            (* : {b:real, g:real, r:real} *)
+            (* You don't need to declare their slots ahead of time. Records with different slot names are considered different types, even if their slot value types match up. For instance... *)
+            val Hsl = { H=310.3, s=0.51, l=0.23 } 
+            (* : {H:real, l:real, s:real} *)
+            val Hsv = { H=310.3, s=0.51, v=0.23 } 
+            (* : {H:real, s:real, v:real} *)
+            (* ...trying to evaluate `Hsv = Hsl` or `rgb = Hsl` would give a type error. While they're all three-slot records composed only of `real`s, they each have different names for at least some slots. *)
+            (* You can use hash notation to get values out of tuples. *)
+            val H = #H Hsv (* : real *)
+            val s = #s Hsl (* : real *)
+
+            (* Functions! *)
+            fun add_them (a, b) = a + b    
+            (* A simple function that adds two numbers *)
+            val test_it = add_them (3, 4)  (* gives 7 *)
+            (* Larger functions are usually broken into several lines for readability *)
+            fun thermometer temp =
+                if temp < 37
+                then "Cold"
+                else if temp > 37
+                     then "Warm"
+                     else "Normal"
+
+            val test_thermo = thermometer 40 (* gives "Warm" *)
+            (* if-sentences are actually expressions and not statements/declarations. A function body can only contain one expression. There are some tricks for making a function do more than just one thing, though. A function can call itself as part of its result (Recursion!) *)
+            fun fibonacci n =
+                if n = 0 then 0 else (* Base case *)
+                if n = 1 then 1 else (* Base case *)
+                fibonacci (n - 1) + fibonacci (n - 2)  
+                (* Recursive case *)
+            (* A function cannot change the variables it can refer to. It can only temporarily shadow them with new variables that have the same names. In this sense, variables are really constants and only behave like variables when dealing with recursion. For this reason, variables are also called value bindings. An example of this: *)
+            val x = 42
+            fun answer(question) =
+                if question = "What is the meaning of life, the universe and everything?"
+                then x
+                else raise Fail "I'm an exception. Also, I don't know what the answer is."
+            val x = 43
+            val hmm = answer "What is the meaning of life, the universe and everything?"
+            (* Now, hmm has the value 42. This is because the function answer refers to the copy of x that was visible before its own function definition. *)
+            (* Functions can take several arguments by taking one tuples as argument: *)
+            fun solve2 (a : real, b : real, c : real) =
+                ((~b + Math.sqrt(b*b-4.0*a*c)) / (2.0*a), 
+                 (~b - Math.sqrt(b*b-4.0*a*c)) / (2.0*a))
+            (* Sometimes, the same computation is carried out several times. It makes sensento save and re-use the result the first time. We can use 
+            "let-bindings": *)
+            fun solve2 (a : real, b : real, c : real) =
+                let val discr  = b * b - 4.0*a*c
+                    val sqr = Math.sqrt discr
+                    val denom = 2.0 * a
+                in ((~b + sqr) / denom,
+                    (~b - sqr) / denom) end
+
+            (* Pattern matching is a funky part of functional programming. It is an alternative to if-sentences. The fibonacci function can be rewritten: *)
+            fun fibonacci 0 = 0  (* Base case *)
+              | fibonacci 1 = 1  (* Base case *)
+              | fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)  (* Recursive case *)
+            (* Pattern matching is also possible on composite types like tuples, lists and records. Writing "fun solve2 (a, b, c) = ..." is in fact a pattern match on the one three-tuple solve2 takes as argument. Similarly, but less intuitively, you can match on a list consisting of elements in it (from the beginning of the list only). *)
+            fun first_elem (x::xs) = x
+            fun second_elem (x::y::xs) = y
+            fun evenly_positioned_elems (odd::even::xs) = even::evenly_positioned_elems xs
+              | evenly_positioned_elems [odd] = []  
+                (* Base case: throw away *)
+              | evenly_positioned_elems []    = []  
+                (* Base case *)
+            (* When matching on records, you must use their slot names, and you must bind every slot in a record. The order of the slots doesn't matter though. *)
+            fun rgbToTup {r, g, b} = (r, g, b)    
+            (* fn : {b:'a, g:'b, r:'c} -> 'c * 'b * 'a *)
+            fun mixRgbToTup {g, b, r} = (r, g, b) 
+            (* fn : {b:'a, g:'b, r:'c} -> 'c * 'b * 'a *)
+            (* If called with {r=0.1, g=0.2, b=0.3}, either of the above functions would return (0.1, 0.2, 0.3). But it would be a type error to call them with {r=0.1, g=0.2, b=0.3, a=0.4} *)
+            (* Higher order functions: Functions can take other functions as arguments.*)
+            val is_large = (fn x => x > 37)
+            val add_them = fn (a,b) => a + b
+            val thermometer =
+                fn temp => if temp < 37
+                           then "Cold"
+                           else if temp > 37
+                                then "Warm"
+                                else "Normal"
+
+            (* Write a function cube of type int -> int that 
+               returns the cube of its parameter. *)
+            fun cube x = x * x * x;
+            (* Write a function cuber of type real -> real that 
+               returns the cube of its parameter. *)
+            fun cuber(x:real):real = x*x*x;
+            (* Write a function forth of type 'a list -> 'a
+               that returns the fourth element of a list. Your 
+               function need not behave well on lists with less 
+               than four elements. *)
+            fun fourth (L) = hd (tl (tl (tl L)));
+            (* Write a function min3 of type int * int * int -> int that returns the smallest of three integers. *)
+            fun min3 (a, b, c) =
+               if a < b andalso a < c
+                  then a
+                  else if b<a andalso b<c
+                     then b
+                     else c;
+            (* Write a function red3 of type 'a * 'b * 'c ->  'a * 'c that converts a tuple with three elements into one with two by  eliminating the second element.*)
+            fun red3 (a, b, c) = (a, c);
+            (*Write a function thirds of type string -> char that returns the third character of a string. Your function need not behave well on strings with lengths less than 3. *)
+            fun thirds (s) = hd (tl (tl (explode s) ) );
+            (* Write a function cycle1 of type 'a list -> 'a list whose output list is the same as the input list, but with the first element  of the list moved to the end. For example, cycle1 [1, 2, 3, 4] should return [2, 3, 4, 1]. *)
+            fun cycle1(L) =
+               if null L
+                  then L
+                  else tl(L) @ [ hd (L) ];
+            (*Square Sum*)
+            fun sqsum (x:int, y:int) = 
+            let sum:int = x+y in 
+                sum*sum 
+            end
+            (*Max of three*)
+            fun max(a,b,c) =
+                if a > b then
+                    if a > c then a
+                    else c
+                else
+                    if b < c then c
+                    else b;
+~/Empire/Doks/Comp/lang/ml/ml-gentleintrod.pdf
+~/Empire/Doks/Comp/lang/ml/mlstd-workingprogr.txt
+~/Empire/Doks/Comp/lang/ml/sml-compilimplem.pdf
+~/Empire/Doks/Comp/lang/ml/stdml-progrin.pdf
+~/Empire/Doks/Comp/lang/ml/mlstd-basislib.txt
+~/Empire/Doks/Comp/lang/ml/sml-nj_cm-compile-libpackman.pdf
+~/Empire/Doks/Comp/lang/ml/sml-nj-Notes.pdf
+~/Empire/Doks/Comp/lang/ml/sml-UnixSysProgr.pdf
+
+
+OCaml ----
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml.cheatsheet.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/cheatsh-qref/ocaml.cheatsh.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-tut_presentation.pdf
+~/Dropbox/rsc/data/lists/ref/comp/lang/ml/ocaml-lang.pdf
+~/Dropbox/rsc/data/lists/ref/comp/lang/ml/ocaml-stdlib.pdf
+~/Dropbox/rsc/data/lists/ref/comp/lang/ml/ocaml-tools.pdf
+~/Dropbox/rsc/data/lists/ref/comp/lang/ml/ocamlemacs-tuaregmode.pdf
+----
+~/Empire/Doks/Comp/lang/ml/ocaml/more-ocaml-algorithms-methods-and-diversions.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml.fra.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-5.0-refman.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-appdevel.pdf
+--
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-realworld.txt
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-riptut.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-from-the-very-beginning.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-langintro.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-unixsysprogr.pdf
+~/Empire/Doks/Comp/lang/ml/ocaml/ocaml-useunderst.txt
+

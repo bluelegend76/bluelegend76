@@ -1,0 +1,98 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+  ~/Empire/Doks/Comp/mu/au/csound/man-tut/
+~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csoundqt.txt
+https://csound.com/docs/manual//??.html
+CsoundQt [keyb. shortcuts]
+            Check Syntax Ctri+U
+            Chnget->Invalue
+            Close current tab Ctrl+wW
+            Code Pad in Csound Mode Alt+Shift+S
+            Comment/Uncomment Ctri+/
+            Configuration Ctri+,
+            Copy Ctrl+C
+            Create App...
+            CsoundQt Documentation (online) F1
+            Cut Ctrl+X
+            Duplicate Widgets Ctrl+D
+            Edit Rendered Audiofile
+            Evaluate section Ctrl+Shift+w
+            Evaluate selection Ctrl+Shift+E
+            Exit Ctri+Q
+            File Information
+            Find again Ctri+G
+            Find and Replace Ctri+F
+            Focus Text Editor Ctrl+0
+            GEN Routines
+            Go Back Alt+Left
+            Goto Line Ctri+L
+            Help Back Ctri+Left
+            Help Forward Ctrl+Right
+            Indent Ctri+I
+            Insert/Update Cabbage text Ctrl+Shift+c
+            Insert/Update CsLADSPA text
+            Inspector F5
+            Invalue->Chnget
+            Join orc/sco
+            Kill Line Ctri+K
+            Kill to End of Line Alt+Shift+K
+            Live Events Ctrl+6
+            MIDI Learn Ctrl+Shift+M
+            New Ctri+N
+            Opcode Entry Shift+F1
+            Opcode Entry in External Browser Alt+Shift+F1
+            Opcode Overview
+            Open... Ctri+O
+            Paste Ctrl+V
+            Pause Ctrl+Shift+M
+            Play Rendered Audiofile
+            Print Ctrl+P
+            Quick Reference Guide
+            Record Ctrl+Space
+            Redo Ctrl+Shift+Z
+            Reload Alt+R
+            Render to file Alt+F
+            Run Csound Ctrl+R
+            Run in Terminal Ctrl+Shift+T
+            Save Ctri+S
+            Save As... Ctrl+Shift+S
+            Show CsOptions Alt+Shift+3
+            Show debugger F5
+            Show Embedded files Alt+Shift+4
+            Show Extra Tags Alt+Shift+6
+            Show Information Text Alt+Shift+5
+            Show Orchestra Alt+Shift+1
+            Show Score Alt+Shift+2
+            Show Table editor
+            Show CsOptions Alt+Shift+3
+            Show debugger F5
+            Show Embedded files Alt+Shift+4
+            Show Extra Tags Alt+Shift+6
+            Show Information Text Alt+Shift+5
+            Show Orchestra Alt+Shift+1
+            Show Score Alt+Shift+2
+            Show Table editor
+            Show Virtual Keyboard Ctrl+Shift+V
+            Show Widgets Text Alt+Shift+7
+            Show/hide line number area Alt+Shift+L
+            Show/Raise Code Pad Ctri+8
+            Show/Raise Console Ctri+3
+            Show/Raise help panel Ctrl+2
+            Show/Raise Inspector Panel Ctri+5
+            Show/Raise Python Console Ctrl+7
+            Show/Raise Widgets Panel Ctri+1
+            Split View Ctrl+Shift+A
+            Stop Ctri+.
+            Stop All Ctrl+Shift+.
+            Toggle parameter mode Alt+Shift+P
+            Undo Ctrl+Z
+            Unindent Ctrl+Shift+I
+            Utilities Ctri+9
+            View Code Graph
+            View Editor Fullscreen Ctri+Alt+0
+            View Fullscreen F11
+            View Help Fullscreen Ctri+Alt+2
+            View Widgets Fullscreen Ctri+Alt+1
+            Widget Edit Mode Ctri+E
+

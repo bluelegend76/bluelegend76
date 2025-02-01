@@ -1,0 +1,48 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/lang/py/datasci/cheatsh-qref/pydatasci.cheatsh.txt
+~/Empire/Doks/Comp/lang/py/datasci/cheatsh-qref/pypandas.cheatsh.txt
+
+  ~/Empire/Doks/Comp/datasci/cheatsh/dataliteracy.cheatsh.txt
+  ~/Empire/Doks/Comp/datasci/cheatsh/stat-formulas.cheatsh.txt
+
+~/Dropbox/rsc/Doks/phone/misc/PROJ-EXTRAS/Stat/stathack.txt
+  ~/Dropbox/rsc/Doks/phone/misc/PROJ-EXTRAS/Stat/statistics-wikib.txt
+
+#Note: tofmt35
+~/Dropbox/rsc/Doks/phone/Comp/lang/py/datasci-stat-mlearn/datasciesspy.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/py/datasci-stat-mlearn/pydatasci.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/py/datasci-stat-mlearn/pytextanalytics.txt
+[+SOME MORE NEWER DOKS]
+    ~/Empire/Doks/Comp/lang/py/pytextanalytics.epub
+Derek Banas: 'Investing with Datascience'
+
+~/Empire/Doks/Comp/lang/py/datasci/datanalys-numpyscikitipytensorflmatplot.pdf
+~/Empire/Doks/Comp/lang/py/datasci/datasciesspy.pdf
+~/Empire/Doks/Comp/lang/py/datasci/jupyter-cb.pdf
+~/Empire/Doks/Comp/lang/py/datasci/numpypandas-handson.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pandas.pdf
+~/Empire/Doks/Comp/lang/py/datasci/Pandas.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pandas-effective.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pandas-effective.txt
+~/Empire/Doks/Comp/lang/py/datasci/pandastechniques.docx
+~/Empire/Doks/Comp/lang/py/datasci/pybigdataai-casestudies.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pybigdatanalys.pdf
+~/Empire/Doks/Comp/lang/py/datasci/py-dataacquis.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatamining.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatamining2.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatanalys-lessons.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatanalys-pandasnumpyipy.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatanalytics.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatasci.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatasci-handb.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatascimlearn-handson.pdf
+~/Empire/Doks/Comp/lang/py/datasci/pydatascimlearn-handson.txt
+~/Empire/Doks/Comp/lang/py/datasci/py-datawrangl.pdf
+~/Empire/Doks/Comp/lang/py/datasci/py-datawrangl.txt
+~/Empire/Doks/Comp/lang/py/datasci/PyPandas.pdf
+~/Empire/Doks/Comp/lang/py/datasci/PyPandas.txt
+~/Empire/Doks/Comp/lang/py/datasci/pyspark-action.pdf
+~/Empire/Doks/Comp/lang/py/datasci/Upcomping--DataAnalysis-WithPython.txt
+
