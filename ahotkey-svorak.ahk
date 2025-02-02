@@ -1,0 +1,2 @@
+TODO: PLUGIN OUTLINE + TESTING
+TODO: Reversing KeyBindings

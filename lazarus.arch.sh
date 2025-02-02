@@ -43,9 +43,9 @@
 #     --
 # dropbox.py start       #trulystrange@_i3
 
+# TODO TODO: Set System-lang to En-Us
+# --
 # TODO: Set Login-Menu to Svorak
-# TODO: Set System-lang to En-Us
-
 
 sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
