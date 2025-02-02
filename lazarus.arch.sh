@@ -11,6 +11,8 @@
 #              /##.~   ~.##\  #   %#e" #  #
 #             /.^         ^.\ 
 
+# ____
+#
 # Format external drive to ExFat (Lin/Win/Mac compatability):
 # sudo pacman -S exfat-utils
 # sudo mkfs.exfat /dev/sdb1
@@ -309,6 +311,8 @@ read -p "Again, only continue for full Music/Media install. Continue?: "
 
 pacman -S rosegarden
 # Audacity __
+muse
+pacman -S musescore
 # TODO: MUSESCORE 4 (+MScore4 Hub)
 wget https://musescore.org/en/download/musescore-x86_64.AppImage \
   # TODO: MAY HAVE TO USE GLOB FOR RENAMING MS4 RELIABLY(!!)
@@ -349,7 +353,9 @@ sudo apt install speech-dispatcher
 # testing that it works:
 # spd-say hi 
 
-# Arch Linux: WAKE ON LAN + SSH
+
+# ____
+# Arch Linux: WAKE ON LAN + SSH {{{
 #
 ## Regarding your question about accessing your
 ## Ext4 drive remotely using SSH and Wake-on-LAN:
@@ -426,15 +432,77 @@ sudo apt install speech-dispatcher
 ## Linux system (and therefore your Ext4 drive) even when
 ## the computer is powered off. However, it requires careful
 ## configuration of Wake-on-LAN and SSH.
-
-
-# Google Chrome
-#     https://itslinuxfoss.com/install-google-chrome-ubuntu-22-04/
-#@@__ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#@@__ sudo apt install ./google-chrome-stable_current_amd64.deb
+# }}}
+# Xonshell  python3 -m pip install 'xonsh[full]'
+sudo pacman -S nushell
+pacman -S virtualbox
+# install windows 10 in linux virtualbox:
+# https://www.youtube.com/watch?v=2oO9CeZXjTY
+# ytdlp
+# Markdown + Reveal.js {{{
+# sudo npm -g install instant-markdown-d
+# }}}
+# per n. emacs-install
+# Install Latest Docker Ubuntu {{{
+  ### sudo apt install apt-transport-https ca-certificates curl software-properties-common  #=already installed
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+# echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# sudo apt update
+# apt-cache policy docker-ce
+# sudo apt install docker-ce
+# sudo systemctl status docker
+# }}}
+# ¤¤ Mutt [!!(**)] {{{
+# MUTT/NEOMUTT  https://seniormars.com/posts/neomutt/
+#               https://medium.com/@anupnewsmail/setting-up-neomutt-with-gmail-76f24da3601a
+# sudo apt install neomutt gnupg
+# mkdir -p ~/.config/mutt && touch ~/.config/mutt/muttrc
+# https://myaccount.google.com/  #generate app password
+#       https://neomutt.org/guide/advancedusage
+# -----
+#         https://duckduckgo.com/?q=install+and+configure+mutt+ubuntu+20.04&t=newext&atb=v332-1&ia=web
+#         https://linuxconfig.org/how-to-install-configure-and-use-mutt-with-a-gmail-account-on-linux
+#         https://www.thegeekdiary.com/how-to-install-and-configure-mutt-in-centos-rhel/
+#         https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
+#         https://stackoverflow.com/questions/64813656/send-mail-with-mutt-in-shell-script-file
+#   https://www.makeuseof.com/install-configure-mutt-with-gmail-on-linux/
+#   --
+#   muttdown - Compiles annotated text mail into html using the Markdown standard
+#     https://gideonwolfe.com/posts/workflow/neomutt/intro/
+#     https://neomutt.org/guide/configuration.html
+#     https://neomutt.org/guide/advancedusage.html
+#   --
+# https://www.linuxlinks.com/neomutt-fork-mutt/
+#     https://www.abdus.net/blog/2020/neomutt-the-command-line-email-client/
+#      https://neomutt.org/feature
+# https://neomutt.org/guide/
+# 
+# https://www.thegeekdiary.com/how-to-install-and-configure-mutt-in-centos-rhel/
+# https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
+#     https://betterprogramming.pub/how-to-send-emails-with-attachments-using-python-dd37c4b6a7fd
+#         https://www.linuxshelltips.com/send-email-with-file-attachment-from-command-line/
+# 
+# http://www.mutt.org/doc/manual/#intro-browser
+#     https://neomutt.org/feature.html
+#     https://neomutt.org/about.html
+# https://www.youtube.com/watch?v=2jMInHnpNfQ
+#     https://www.youtube.com/watch?v=CxPQ_IVLYvM
+#     ----
+#     https://www.claws-mail.org/features.php?section=general
+# }}}
+# Linux Anbox Alternatives[!!] {{{
+#  https://alternativeto.net/software/anbox/?platform=linux
+# }}}
+# Lineage OS
+# Google Chrome (+text to speech, speech to multilang-text
 # install 'speech to text' [******] __
 #   https://chrome.google.com/webstore/detail/speech-to-text-voice-reco/kcgloaobfaiejoiahlhnfaolfcifjjho/related?utm_source=ext_app_menu
+# openvpn {{{
+#  https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-ubuntu-20-04  =22.04
+# }}}
 
+
+# installing lampstack
 # Php (+VS Code / PhpStorm) aaaa {{{
 #
 # sudo apt -y install phpunit
@@ -481,7 +549,6 @@ sudo apt install speech-dispatcher
 #      xdebug.remote_port/xdebug.client_port=42797
 # }}}
 # Hack HHVM
-
 # ¤(¤) *(*) ---- install vs code [====TODO +Extensions] aaaa {{{
   pacman -Syu
   pacman -S software-properties-common apt-transport-https wget
@@ -531,15 +598,8 @@ pacman -S code
 # markdown all in one
 # japanese language pack
 # }}}
-
-
-# install windows 10 in linux virtualbox:
-# https://www.youtube.com/watch?v=2oO9CeZXjTY
-
-# konqueror, qutebrowser
-
-# qutebrowser: youtube-dl + mpv
-
+    # konqueror, qutebrowser
+    # qutebrowser:
 # Run Linux From Usb Stick {{{
 #   https://www.wikihow.com/Boot-Linux-from-a-USB-on-Windows-10
 # https://www.techradar.com/best/best-usb-bootable-distros
@@ -547,22 +607,7 @@ pacman -S code
 # puppy linux {{{
 # https://www.wikihow.com/Install-Puppy-Linux
 # }}}
-
-# ¤[¤] kitty terminal -- (**)
-#   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-#   set to alias kitty  '.local/kitty.app/bin/kitty'
-#   upsize font: cs-+
-### =OR SIMPLER SOLUTION =ALSO WORKING IN STANDARD VIM
-
-# sweet-mars, candy-icons
-# .themes, .icons
-#    https://askubuntu.com/questions/1356218/installing-candy-icon-theme-on-ubuntu-20-04-lts
-# https://www.addictivetips.com/ubuntu-linux-tips/install-candy-icon-theme-in-linux/
-#    https://www.addictivetips.com/ubuntu-linux-tips/customize-gnome-shell/
-#    https://www.linux.com/training-tutorials/usingediting-gtk-themes-fluxbox/
-#  https://bbs.archlinux.org/viewtopic.php?id=158433
-#  https://www.linuxquestions.org/questions/linux-software-2/setting-a-default-icon-theme-gnome-fluxbox-359794/
-
+# sweet-mars, candy-icons  .themes, .icons
 # ==== TODO: install t-browser ubuntu:  https://ubuntuhandbook.org/index.php/2021/01/install-tor-tor-browser-ubuntu-20-10-20-04/ {{{
 #### sudo apt install apt-transport-https  (+su-password)
 # sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org $(jammy -sc) main" >> /etc/apt/sources.list.d/tor-project.list'
@@ -581,14 +626,8 @@ pacman -S code
 # sudo apt install torbrowser-launcher  #+see base page if there is problem on 22.04
 # (+test launching  +instructions for removing the t-browser)
 # }}}
-# openvpn {{{
-#  https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-ubuntu-20-04  =22.04
-# }}}
 # drawio {{{
 #   sudo snap install drawio
-# }}}
-# Markdown + Reveal.js {{{
-# sudo npm -g install instant-markdown-d
 # }}}
 # Gimp GAP, Gimp Paint Studio, CinePaint, GIMP-ML, Resynthesizer, G'MIC,  {{{
 # https://www.gimp.org/tutorials/Using_GAP/
@@ -602,115 +641,15 @@ pacman -S code
 # https://www.linuxlinks.com/CinePaint/
 # https://sourceforge.net/projects/cinepaint/
 # }}}
-# Install latest Emacs {{{
-#   sudo add-apt-repository ppa:kelleyk/emacs -y
-#   sudo apt update
-#   sudo apt-get install emacs28
-# }}}
 # Acrobat Reader (+acrobat javascript console) {{{
 ## https://linux.how2shout.com/install-adobe-acrobat-reader-dc-on-ubuntu-22-04-lts-jammy/
 # sudo apt update && sudo apt upgrade
 # sudo snap install acrordrdc
 # acrordrdc  ##
 # }}}
-# Install Latest Docker Ubuntu {{{
-  ### sudo apt install apt-transport-https ca-certificates curl software-properties-common  #=already installed
-# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-# echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-# sudo apt update
-# apt-cache policy docker-ce
-# sudo apt install docker-ce
-# sudo systemctl status docker
-# }}}
-# ¤¤ Mutt [!!(**)] {{{
-# MUTT/NEOMUTT  https://seniormars.com/posts/neomutt/
-#               https://medium.com/@anupnewsmail/setting-up-neomutt-with-gmail-76f24da3601a
-# sudo apt install neomutt gnupg
-# mkdir -p ~/.config/mutt && touch ~/.config/mutt/muttrc
-# https://myaccount.google.com/  #generate app password
-#       https://neomutt.org/guide/advancedusage
-# -----
-#         https://duckduckgo.com/?q=install+and+configure+mutt+ubuntu+20.04&t=newext&atb=v332-1&ia=web
-#         https://linuxconfig.org/how-to-install-configure-and-use-mutt-with-a-gmail-account-on-linux
-#         https://www.thegeekdiary.com/how-to-install-and-configure-mutt-in-centos-rhel/
-#         https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
-#         https://stackoverflow.com/questions/64813656/send-mail-with-mutt-in-shell-script-file
-#   https://www.makeuseof.com/install-configure-mutt-with-gmail-on-linux/
-#   --
-#   muttdown - Compiles annotated text mail into html using the Markdown standard
-#     https://gideonwolfe.com/posts/workflow/neomutt/intro/
-#     https://neomutt.org/guide/configuration.html
-#     https://neomutt.org/guide/advancedusage.html
-#   --
-# https://www.linuxlinks.com/neomutt-fork-mutt/
-#     https://www.abdus.net/blog/2020/neomutt-the-command-line-email-client/
-#      https://neomutt.org/feature
-# https://neomutt.org/guide/
-# 
-# https://www.thegeekdiary.com/how-to-install-and-configure-mutt-in-centos-rhel/
-# https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
-#     https://betterprogramming.pub/how-to-send-emails-with-attachments-using-python-dd37c4b6a7fd
-#         https://www.linuxshelltips.com/send-email-with-file-attachment-from-command-line/
-# 
-# http://www.mutt.org/doc/manual/#intro-browser
-#     https://neomutt.org/feature.html
-#     https://neomutt.org/about.html
-# https://www.youtube.com/watch?v=2jMInHnpNfQ
-#     https://www.youtube.com/watch?v=CxPQ_IVLYvM
-#     ----
-#     https://www.claws-mail.org/features.php?section=general
-# }}}
-# ¤¤ doxygen
+# doxygen
 #  sudo apt-get -y install doxygen
-# --
-# install LAMP-Stack Ubuntu {{{
-### sudo apt update
-# sudo apt install apache2
-### sudo ufw app list
-# sudo ufw allow in "Apache"
-### sudo ufw status
-# sudo systemctl start apache2
-# sudo apt install net-tool  (=ifconfig etc)
-######## wtf??
-# sudo apt install mysql-server
-## test with: sudo mysql
-# sudo apt install php libapache2-mod-php php-mysql
-# sudo mkdir /var/www/instrumentalmagic
-# sudo chown -R $USER:$USER /var/www/instrumentalmagic
-#    <VirtualHost *:80>
-#        ServerName instrumentalmagic
-#        ServerAlias www.instrumentalmagic 
-#        ServerAdmin webmaster@localhost
-#        DocumentRoot /var/www/instrumentalmagic
-#        ErrorLog ${APACHE_LOG_DIR}/error.log
-#        CustomLog ${APACHE_LOG_DIR}/access.log combined
-#    </VirtualHost>
-# sudo a2ensite instrumentalmagic
-# sudo systemctl reload apache2
-# sudo a2dissite 000-default
-# sudo apache2ctl configtest
-# sudo systemctl reload apache2
-# vim /var/www/instrumentalmagic/index.html
-#    <html>
-#      <head>
-#        <title>instrumentalmagic website</title>
-#      </head>
-#      <body>
-#        <h1>Hello World!</h1>
-#    
-#        <p>This is the landing page of <strong>instrumentalmagic</strong>.</p>
-#      </body>
-#    </html>
-# }}}
 
-# Xonshell
-#   python3 -m pip install 'xonsh[full]'
-# Nushell
-#   brew install nushell
-
-# Linux Anbox Alternatives[!!] {{{
-#  https://alternativeto.net/software/anbox/?platform=linux
-# }}}
 # **** INSTALL UBUNTU TOUCH ON ANDROID PHONE {{{
 #  https://www.ubuntupit.com/how-to-install-ubuntu-touch-on-android-device-an-easy-tutorial-for-newbie/
 # https://ubuntu-touch.io/
@@ -730,6 +669,8 @@ pacman -S code
 #   http://thedarnedestthing.com/vimwiki%20cheatsheet
 #   https://vimwiki.github.io/
 # }}}
+vim-latexsuite
+texlive-basic texlive-context
 # ¤¤ *** -- install latex / context {{{
 # sudo apt-get install context
 #       texstudio
@@ -842,14 +783,9 @@ pacman -S code
 # __ __ https://www.youtube.com/watch?v=EOpcxy0RA1A&list=PL4Q2qNv0mHkPDWfyP9Y-NJ75hCl7nMyH9 (jupyter, markdown)
 
 # ReasonML / ReScript ***
-#   https://rescript-lang.org/docs/manual/v8.0.0/overview
-#   https://rescript-lang.org/docs/manual/v8.0.0/introduction
-#   https://rescript-lang.org/docs/manual/v8.0.0/installation
 # -- https://reasonml-old.github.io/guide/javascript/syntax-cheatsheet/
-
 # Node, Yarn, etc
 #   https://classic.yarnpkg.com/en/
-
 # Mermaid
 ### npm install -g mermaid
 # vs-code + install Green Trident (split window + cs-v = Compile)
@@ -867,8 +803,10 @@ pacman -S code
 
 # idris2 
 # }}}
+pacman -S idris
 # ¤¤ Hy Python: [sudo] pip3 install --user hy
 
+pacman -S xmlstarlet
 # ¤¤ Xml {{{
 # in Vim:
 # xmlstarlet
@@ -892,9 +830,12 @@ pacman -S code
 # ps2pdf (or ascii, etc)
 #  https://stackoverflow.com/questions/38200159/converting-postscript-to-pdf
 # }}}
+cmake
  # cmake [=installed by default]
 # Python  bpython / ipython
 # ** guile-2.2 guile-3.0
+pacman -S clojure leiningen
+jshell
 # ¤¤ *** Clojure Ubuntu + ====TODO Cljfx[!] {{{
 # https://clojureverse.org/
 #   https://clojurescript.org/guides/quick-start
@@ -950,82 +891,6 @@ pacman -S code
 # Install Dotnet SDK
 sudo pacman -S dotnet-sdk dotnet-runtime
 # run fsi using 'dotnet fsi'
-
-# ==== 'Search: Mono vs Dotnet SDK Ubuntu' +F# Ubuntu ==== {{{
-# Note! 'Unity uses Mono(!!(??))'
-#     ? https://download.mono-project.com/sources/monodevelop/monodevelop-7.8.4.1.tar.bz2
-#
-#     https://fsharp.org/use/linux/
-# curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version latest
-#   # export DOTNET_ROOT=$HOME/.dotnet
-#   # export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
-# ---- Step 2:
-#     https://carpenoctem.dev/blog/fsharp-for-linux-people/
-# sudo apt install dotnet-sdk-6.0
-# ----
-# hello.fsx
-#   printfn "Hello World from F#"
-# dotnet fsi hello.fsx
-# }}}
-# . {{{
-# ///  Variant: Register + Install 'dotnet-sdk-7.0
-#     https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#register-the-microsoft-package-repository
-# ///  Variant 3: Scripted Install
-#     https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual#scripted-install
-# More/Extras:  {{{
-#   https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
-# }}}
-# Mono:  https://itslinuxfoss.com/install-mono-ubuntu-22-04/
-# ----
-# }}}
-# **(!!) C# Ubuntu (=##Install Mono / Install Dotnet SDK 7) {{{
-#     https://www.monodevelop.com/download/#fndtn-download-lin-ubuntu
-#         https://www.mono-project.com/download/stable/  (**)
-#     https://www.click4infos.com/how-to-install-mono-on-ubuntu-debian-and-derivatives/
-
-    #  http://34.212.143.74/apps/s202111/tc3048/notes_installing_csharp/  (+confirm mcs compiler version)
-
-#  --
-#     ubuntu 20.04:  22.04
-# sudo apt install apt-transport-https dirmngr
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-# echo "deb https://download.mono-project.com/repo/ubuntu vs-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
-   #  //
-# echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
-#   'jammy' for 22.04
-#   #'focal' for 20.04
-#   #'bionic' for 18.04 (etc)
-# sudo apt update
-
-# @@ sudo apt-get install mono-complete  #compile w. mcs (or csc, eg. 'csc hello.cs')
-
-# https://stackoverflow.com/questions/60944370/stuck-with-apt-fix-broken-install-libc6amd64-package-post-installation *******(!!)
-# csharp, mono-csc, mono
-
-# ???? sudo apt-get install monodevelop / mono-devel
-# #+testing that the installation worked as planned
-# https://www.mono-project.com/docs/getting-started/mono-basics/
-#     #  http://34.212.143.74/apps/s202111/tc3048/notes_installing_csharp/  (+confirm mcs compiler version)
-#  run the file with 'mono file.exe'
-
-#  remove: sudo apt autoremove mono-runtime --purge
-# }}}
-# *(*) Install DotNet SDK Ubuntu {{{
-
-# dotnet tool install -g --ignore-failed-sources upgrade-assistant
-
-
-# https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.100-linux-x64-binaries
-#run:  mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-7.0.100-linux-x64.tar.gz -C $HOME/dotnet
-#+insert below into .bashrc:
-#     export DOTNET_ROOT=$HOME/dotnet
-#     export PATH=$PATH:$HOME/dotnet
-#
-# +then run 'dotnet' in shell (=to verify the installation)
-
-   #  ||
-# https://docs.hhvm.com/hhvm/installation/linux (????)
-# }}}
 # **(*) F# Ubuntu {{{
 # https://fsharp.org/use/linux/
 #     https://dotnet.microsoft.com/en-us/download/dotnet/7.0
@@ -1045,7 +910,9 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 # https://learn.microsoft.com/en-us/dotnet/fsharp/style-guide/?source=recommendations
 # https://learn.microsoft.com/en-us/dotnet/fsharp/tools/development-tools  #linting etc
 # }}}
+
 # --
+yay -S flutter
 # [¤¤] *(??)develop Dart/Flutter on ubuntu ==== TODO @@@@ {{{
     # (May first need to install 'xz-utils' and 'libglu1-mesa')
     # but seems to be already installed (!!!!)
@@ -1077,6 +944,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 # TODO: https://docs.flutter.dev/development/platform-integration/linux/building
 # TODO: https://docs.flutter.dev/get-started/install/linux
 # }}}
+pacman -S sbcl
 # *(*)? install CLisp (+slime) Ubuntu(!) [@@@@ TODO] {{{
 # sudo apt-get install sbcl
 # shell:
@@ -1114,48 +982,6 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 #  sbcl, quicklisp(=packman), emacs + slime
 #     https://www.ridvanbaluyos.com/how-to-install-common-lisp-on-ubuntu/
 # https://askubuntu.com/questions/670304/what-is-the-install-routine-for-common-lisp-slime-sbcl-quicklisp-on-ubuntu#670362
-# }}}
-# [CONVERT TO SCRIPT]  ***** https://stackoverflow.com/questions/60944370/stuck-with-apt-fix-broken-install-libc6amd64-package-post-installation **** {{{
-#  sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_old
-#  sudo mkdir /var/lib/dpkg/info
-#  sudo apt-get update && sudo apt-get -f install
-#  sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old
-#  sudo rm -rf /var/lib/dpkg/info　
-#  sudo mv /var/lib/dpkg/info_old /var/lib/dpkg/info
-# }}}
-# * ---- install Android Studio + Kotlin ubuntu {{{
-# Download:  https://developer.android.com/studio/
-
-#        Note: Android Studio is built on IntelliJ
-#  Extract Dir 'android-studio' + move to Home
-#    ~/Downloads/android-studio-2022.1.1.21-linux.tar.gz
-#  run './studio.sh' in bin/ to install
-#    android-studio/bin/./studio.sh
-#  + run ~/android-studio/bin/studio.sh to re-run the program(!)
-# +kvm in Bios (=for Android Phone/App Emulator)
-#  # https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux
-#  # install 'cpu-checker' + run kvm-ok
-#  sudo apt install dconf-cli
-#  sudo dconf update
-# --
-# Emulator =Strict software emulation(!!)
-# -- --
-#  sudo apt-get install android-sdk-platform-tools-common
-
-#  https://developer.android.com/studio/run/device
-#  https://developer.android.com/tools/releases/platform-tools
-#  able to connect + test app on phone(etc) via wifi/usb
-# ~/Android/Sdk/platform-tools/
-# sudo apt-get install adb  [android debug bridge]
-
-
-# https://developer.android.com/studio/install
-# https://www.geeksforgeeks.org/how-to-install-android-studio-on-ubuntu/
-# https://developer.android.com/studio/
-#  --
-# sudo apt-get -y install kotlin
-#   https://kotlinlang.org/docs/command-line.html#run-scripts (=using kotlin for scripting(**!))
-# install sdkmanager(??)
 # }}}
 # Install Jdk 19 Ubuntu / Oracle Java [!!] + Netbeans  | JavaFX(openjfx)/Fxml {{{
 # https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm
@@ -1209,10 +1035,11 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 # gobjc, gobjc++ (+maybe version number)
 # Jetbrains Webstorm
 # --
+rust rustup (cargo)
 # Rust {{{
 # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 # }}}
+luarocks
 # ¤¤ install Lua  # (+moonscript) {{{
 # lua5.3  (lua5.4)
 #      https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Unix
@@ -1225,21 +1052,10 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 # sudo luarocks install tl
 # sudo luarocks install cyan
 # }}}
-# Php Hack {{{
-# https://docs.hhvm.com/hhvm/installation/linux
-# Obtaining The Latest Stable Version: Ubuntu
-# apt-get update
-# apt-get install software-properties-common apt-transport-https
-# apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xB4112585D386EB94
-# --
-# add-apt-repository https://dl.hhvm.com/ubuntu
-# apt-get update
-# apt-get install hhvm
-# }}}
-# Scss + WebStorm (Ubuntu)
 # sudo npm install -g sass
 # ( sudo dpkg -i koala_2.3.0_x86_64.deb )
 # ( koala & )
+pacman -S elixir
 # ¤¤ *** Elixir {{{
 # sudo apt-get install elixir
 #   https://elixir-lang.org/install.html
@@ -1295,6 +1111,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 #   csi           interactive/repl
 #   chicken//csc  compiler
 # }}}
+pacman -S racket
 # ¤ **[!] Racket Scheme {{{
 # https://racket-lang.org/download/
 #
@@ -1308,7 +1125,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 
 # sudo snap install powershell --classic
 # }}}
-
+ocaml dune opam
 # ¤[¤] *(*) Ocaml {{{
 #  bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
 #  opam init
@@ -1330,6 +1147,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 # (**) Install Golang Ubuntu {{{
 #   https://go.dev/doc/install
 # }}}
+pacman -S supercollider sc3-plugins
 # ¤[¤] ==== TODO: (**) Csound vim, Supercollider, ChucK {{{
 # CSOUND:
 # https://github.com/luisjure/csound-vim
@@ -1393,6 +1211,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 
 # sudo apt-get install dub
 # }}}
+pacman -S smlnj
 # (¤¤) Install Standard ML {{{
 #  https://riptutorial.com/sml/example/23479/installation
 #  https://en.wikipedia.org/wiki/Standard_ML
@@ -1621,6 +1440,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 #  https://doc.qt.io/qt-6/gettingstarted.html
 #  https://doc.qt.io/qtdesignstudio/studio-installation.html
 # }}}
+pacman -S haxe
 # ((¤¤)) install haxe + neko ubuntu {{{
 # ! sudo add-apt-repository ppa:haxe/releases -y
 # ! sudo apt-get update
@@ -1700,6 +1520,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 #
 # }}}
 # ** install octave ubuntu
+pacman -S swi-prolog
 # (¤¤) (??) install prolog ubuntu {{{
 # sudo apt-add-repository ppa:swi-prolog/stable
 # sudo apt-get update
