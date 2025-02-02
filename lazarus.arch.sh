@@ -947,8 +947,11 @@ pacman -S code
 # Exit prompt/program: ':exit'
 # }}}
 
-# ==== 'Search: Mono vs Dotnet SDK Ubuntu' +F# Ubuntu ==== {{{
+# Install Dotnet SDK
 sudo pacman -S dotnet-sdk dotnet-runtime
+# run fsi using 'dotnet fsi'
+
+# ==== 'Search: Mono vs Dotnet SDK Ubuntu' +F# Ubuntu ==== {{{
 # Note! 'Unity uses Mono(!!(??))'
 #     ? https://download.mono-project.com/sources/monodevelop/monodevelop-7.8.4.1.tar.bz2
 #
