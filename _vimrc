@@ -30,11 +30,11 @@ syntax on
 "     set guifont=Consolas:h11:cANSI
 "   endif
 " endif
-    " ----
-" nnoremap <C-MouseUp> :silent! let &guifont = substitute( &guifont, ':h\zs\d+', '=eval(submatch(0)-1)', '')<CR>
-" nnoremap <C-MouseDown> :silent! let &guifont = substitute( &guifont,':h\zs\d+','=eval(submatch(0)+1)', '')<CR>
-"" nnoremap <C-MouseUp> :silent! let &guifont = substitute( &guifont, ':h\zs\d\+', '\=eval(submatch(0)-1)', '')<CR>
-"" nnoremap <C-MouseDown> :silent! let &guifont = substitute( &guifont,':h\zs\d\+','\=eval(submatch(0)+1)', '')<CR>
+"     " ----
+" nnoremap <C-MouseUp> :silent! let &guifont = substitute(&guifont, ':h\zs\d+', '=eval(submatch(0)-1)', '')<CR>
+" nnoremap <C-MouseDown> :silent! let &guifont = substitute(&guifont,':h\zs\d+','=eval(submatch(0)+1)', '')<CR>
+"" nnoremap <C-MouseUp> :silent! let &guifont = substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)-1)', '')<CR>
+"" nnoremap <C-MouseDown> :silent! let &guifont = substitute(&guifont,':h\zs\d\+','\=eval(submatch(0)+1)', '')<CR>
 
 " size of a hard tabstop
 set tabstop=4
@@ -64,6 +64,25 @@ nnoremap <A-Down> ddjP
 " nnoremap <C-A-Down> ddjPzc
 
 nnoremap <leader>co :colors <C-D>
+
+
+" Input-Completion Shortcuts  __
+inoremap <leader><leader> <c-n>
+" Eller =BYT TILL CTRL+LEADER ***** !!!!!
+inoremap <a-up> <c-p>
+inoremap <a-down> <c-n>
+" --
+inoremap <leader>ä <c-p>
+inoremap <leader>xf <c-x><c-f>
+inoremap <leader>xl <c-x><c-l><c-n>
+inoremap <leader>ö <c-x><c-n>
+inoremap <c-,> <c-x><c-n>
+" inoremap <c-s-,> <c-x><c-p>
+" inoremap <leader>xn <c-x><c-n>
+inoremap <leader>pn <c-p><c-n>
+"   +ev 'dra ihop rader'    #=om inte anv. 'snippets' för 
+"                           #  boilerplate mm/olikn.
+
 
 " TODO: Convenience-mappings for 'thorny' characters
 " --

@@ -14,6 +14,10 @@ choco install foxitreader
 choco install discord
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 
+
+# Setting up symbolic links to the Config-files in Windows
+C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
+
 # WSL/Ext4
 # sudo modprobe ext4
 
