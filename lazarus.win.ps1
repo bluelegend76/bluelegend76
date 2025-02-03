@@ -7,7 +7,8 @@ choco install neovim
 choco install autohotkey
 choco install freecommander
 choco install vlc
-choco install sumatrapdf.install
+# pdf reader (with dark mode)
+choco install foxitreader
 # wsl --install
 # choco install ImageMagick
 choco install discord
