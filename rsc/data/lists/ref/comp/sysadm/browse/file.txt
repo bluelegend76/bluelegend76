@@ -3846,6 +3846,235 @@ Evince
 
                     find // find next/prev.     c-f // c-g / cs-g
                                                         f3 / s-f3
+foxit reader (win)
+                Keyboard Shortcuts and Single-key Accelerators
+                Keyboard Shortcuts
+
+                There are number of keyboard shortcuts that you can use to speed up your navigation within Foxit PDF Reader. You can both use the default keyboard shortcuts and customize your own shortcuts.
+                Customize Keyboard Shortcuts
+
+                To customize the keyboard shortcuts, please do as below:
+                    Click  on the Quick Access Toolbar, and select More Commands. Or right-click the ribbon area and choose Customize Quick Access Toolbar.
+                    In the pop-up Customize Tools dialog box, choose Keyboard tab.
+                    Choose the command’s category in the Categories list and the action in the Command list.
+                    Input the appropriate shortcut with your keyboard in the Press shortcut field, and click Assign to apply the shortcut. If you want to change the shortcut, just input the new one to replace it directly.
+                    Note: The shortcut keys that have already being used cannot be reassigned. A message under the input tab will show you whether the shortcut key has been used by another command.
+                    (Optional) To remove the shortcut for a command, select the command from the Command list, and click Remove. To revert all the keyboard shortcuts to the default settings, click Rest All.
+                    Click OK to apply the settings and close the Customize Tools dialog box.
+                Check the Default Keyboard Shortcuts
+
+                To check the default keyboard shortcuts, click Help menu > Keyboard Mapping. Some particularly important ones are listed here:
+                File Keys
+                Action 	Shortcut
+                Open File 	Command + O
+                Close File 	Command + W
+                Save As 	Command + Shift + S
+                Print a Document 	Command + P
+                Exit Foxit PDF Reader 	Command + Q
+                Save 	Command + S
+                Document Properties 	Command + D
+
+                 
+                View Keys
+                Action 	Shortcut
+                Zoom In 	Command + =
+                Zoom Out 	Command + -
+                Zoom To 	Command + M
+                Actual Size 	Command + 1
+                Fit Page 	Command + 2
+                Fit Width 	Command + 3
+                Fit Visible 	Command + 4
+                Single Page 	Command + 7
+                Continuous 	Command + 8
+                Facing 	Command + 9
+                Continuous Facing 	Command + 0
+                Rotate Right 	Shift + Command + =
+                Rotate Left 	Shift + Command + -
+                Go to Page 	Command + G
+                First Page 	Fn + Left Arrow
+                Last Page 	Fn + Right Arrow
+                Previous View 	Command + Left Arrow
+                Next View 	Command + Right Arrow
+                Full Screen 	Command + L
+                AutoScroll 	Command + Shift + H
+                Marquee Zoom 	Option + 5
+                Show or Hide Rulers 	Command + Option + R
+                Line Weights 	Control + Command + 5
+                Show or Hide Navigation Panel 	F4 or Fn + F4 (if F4 is assigned to open the Launchpad on your device)
+
+                 
+                Edit Keys
+                Action 	Shortcut
+                Copy 	Command + C
+                Cut 	Command + X
+                Paste 	Command + V
+                Undo 	Command + Z
+                Redo 	Command + Shift + Z
+                Select All 	Command + A
+                Add Bookmark 	Command + B
+                Preferences 	Command + K
+                Delete the word before the cursor’s current position 	Command + Backspace
+                Connect to Digital Rights Management Servers and Get Templates 	Command + Option + G
+                Custom Templates 	Command + Option + T
+                Unrestricted Access 	Command + U
+
+                 
+                Tool Keys
+                Action 	Shortcut
+                Hand Tool 	Command + 5
+                Select Text and Image 	Command + 6
+                Select Annotation 	Control + 6
+                Find 	Command + F
+                Find Previous 	Shift + F3
+                Find Next 	F3
+
+                 
+                Comment Keys
+                Action 	Shortcut
+                Area Highlight 	Control + I
+                Typewriter 	Control + T
+                Textbox 	Control + X
+                Callout   	Control + J
+                Note 	Control + N
+                Pin a File 	Control + B
+                Rectangle 	Control + R
+                Arrow 	Control + A 
+                Line 	Control + L
+                Oval 	Control + O
+                Polyline 	Control + Y
+                Polygon 	Control + G
+                Cloud 	Control + C
+                Pencil 	Control + P
+                Eraser 	Control + E
+                Measure Distance 	Control + Shift + D
+                Measure Perimeter 	Control + Shift + P
+                Measure Area 	Control + Shift + A
+                Keep Tool Selected 	Control + Z
+                Export All Comments 	Control + Shift + L
+                Export Highlighted Text 	Control + Shift + I
+                Show All Comments 	Control + U
+                Hide All Comments 	Control + H
+                Open All Popups 	Control + K
+                Close All Popups 	Control + M
+
+                 
+                Help Keys
+                Action 	Shortcut
+                User Manual 	F1
+                Single-key Accelerators
+
+                You can select some commands and perform some actions with single-key accelerators. To enable single-key accelerators, please choose File in the Ribbon (or Foxit PDF Reader in the menu bar) > Preferences > General, and check Use single-key accelerators to access tools option in the Basic Tools group.
+                Keys for Selecting Commands
+                Command 	Single-key Accelerator
+                Hand 	H
+                Temporarily select Hand 	Spacebar
+                Select Text and Image 	V
+                Marquee 	Z
+                Cycle through zoom commands: Marquee, Loupe, Magnifier 	Shift + Z
+                Temporarily zoom out (when the Marquee command is selected) 	Command
+                Temporarily select Zoom In 	Command + Spacebar
+                Select Annotation 	R
+                Link 	L
+                Audio & Video 	M
+                Cycle through Multimedia commands: Audio & Video, Image Annotation 	Shift + M
+
+                 
+                Keys for Working with Comments
+                Action 	Single-key Accelerator
+                Sticky Note 	S
+                Replace Text 	E
+                Stamp 	K
+                Current highlighting command 	U
+                Cycle through highlighting tools: Highlight, Underline, Strikeout 	Shift + U
+                Current drawing markup command 	D
+                Cycle through drawing markup commands: Cloud, Arrow, Line, Rectangle, Oval, Polygon Line, Polygon, Pencil, Eraser 	Shift + D
+                Cloud 	Q
+                Text Box 	X
+                Current Stamp or Attach File command 	J
+                Cycle through Stamp and Attach File 	Shift + J
+                Move focus to next comment or form field 	Tab
+                Move focus to previous comment or form field 	Shift + Tab
+                Open pop-up note (or text field in Comments List) for comment that has focus 	Enter
+                Close pop-up (or text field in Comments List) for comment that has focus 	Esc
+
+                 
+                Keys for Navigating a PDF Document
+                Action 	Single-key Accelerator
+                Previous screen 	Command + Left Arrow
+                Next screen 	Command + Right Arrow
+                First page 	Fn + Left Arrow
+                Last page 	Fn + Right Arrow
+                Previous page 	Left Arrow or Command + Up Arrow
+                Next page 	Right Arrow or Command + Down Arrow
+                Scroll up 	Up Arrow
+                Scroll down 	Down Arrow
+                Scroll (when Hand command is selected) 	Spacebar
+                Zoom in 	Command + Equal Sign
+                Zoom out 	Command + Hyphen
+
+                 
+                Keys for Working with Forms
+                Action 	Single-key Accelerator
+                Highlight fields 	Shift + L
+
+                 
+                Keys for Working with PDF Portfolios
+                Action 	Single-key Accelerator
+                Move focus to the next or previous row when in the body of the file list on the left 	Up Arrow or Down Arrow
+                If pressed in the body of the file list, navigate one level up from within a folder 	Backspace
+                If pressed when focus is on a row in the file list representing a subfolder, navigate to a subfolder, or open an attachment in Preview mode. 	Enter
+                If in the body of the file list, move to the first or last row 	Fn + Left Arrow or Fn + Right Arrow
+                If in the body of the file list, move to the next or last set of rows to fit the screen 	Command + Left Arrow or Command + Right Arrow
+                Select or deselect all files 	Command + A or Shift + Command + A
+                If in the body of the file list, extend the selection by adding the next row above or below the selected row 	Shift + Up Arrow or Shift + Down Arrow
+                Change whether the row with focus is in the selection 	Command + Spacebar
+                Move focus up or down one row without changing the selection 	Command + Up Arrow or Command + Down Arrow
+
+                 
+                Keys for Navigating Task Panes
+                Action 	Single-key Accelerator
+                Navigate to the next item in the panel 	Tab
+                Open or close the Task pane 	Shift + F4
+
+                 
+                Keys for General Navigating
+                Action 	Single-key Accelerator
+                Close current document 	Command + Fn + F4
+                Close all open documents 	Command + Shift + W
+                Move focus to document pane 	Fn + F5
+                Move focus to next comment, link, or form field in the document pane 	Tab
+                Move focus to previous comment, link, or form field in the document pane 	Shift + Tab
+                Activate selected tool, item (such as a movie clip or bookmark), or command 	Spacebar or Enter
+                Open context menu 	Shift + Fn + F10
+                Close context menu 	Fn + F10
+                Return to Hand command or Select command 	Esc
+                Move to previous search result and highlight it in the document 	Shift + Fn + F3
+                Move to next search result and highlight it in the document 	Fn + F3
+                Search previous document (with Search results displaying multiple files) 	Option + Shift + Left Arrow
+                Search next document (with Search results displaying multiple files) 	Option + Shift + Right Arrow
+                Select text (with Select command selected) 	Shift + Arrow Keys
+                Select next word or deselect previous word (with Select command selected) 	Shift + Command + Right Arrow or Left Arrow
+
+                 
+                Keys for Working with Navigation Panels
+                Action 	Single-key Accelerator
+                Open and move focus to navigation pane 	Command + Shift + Fn + F5
+                Move focus among the document, status bar and navigation panels 	Fn + F6
+                Move focus to previous pane or panel 	Shift + Fn + F6
+                Move among the elements of the active navigation panel 	Tab
+                Move to previous or next navigation panel and make it active (when focus is on the panel button) 	Up Arrow or Down Arrow
+                Move to next navigation panel and make it active (when focus is anywhere in the navigation pane) 	Command + Tab
+                Expand the current bookmark (focus on Bookmarks panel) 	Right Arrow, or * (keypad), or Plus Sign (keypad)
+                Collapse the current bookmark (focus on Bookmarks panel) 	Left Arrow, or Forward Slash (/), or Minus Sign (keypad)
+                Expand all bookmarks 	Shift + *
+                Collapse all bookmarks 	Shift + Forward Slash (/) (keypad)
+                Move focus to next item in a navigation panel 	Down Arrow
+                Move focus to previous item in a navigation panel 	Up Arrow
+
+                 
+                Keys for Navigating the Help Window
+                Action 	Single-key Accelerator
+                Open Help window 	F1
 emacs pdf-tools
                 c-c c-l         store cliplink (=in reading list(??))
                 --

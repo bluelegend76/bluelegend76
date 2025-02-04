@@ -911,6 +911,9 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 # https://learn.microsoft.com/en-us/dotnet/fsharp/tools/development-tools  #linting etc
 # }}}
 
+# yay -S powershell  # +option '1'
+# Could not install. Test install using Docker
+
 # --
 yay -S flutter
 # [¤¤] *(??)develop Dart/Flutter on ubuntu ==== TODO @@@@ {{{
