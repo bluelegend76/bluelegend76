@@ -1,18 +1,20 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # choco search vim
 
-choco upgrade -y git
-choco install vim
-choco install neovim
-choco install autohotkey
-choco install freecommander
-choco install vlc
+choco upgrade git -y
+choco install vim -y
+choco install neovim -y
+choco install autohotkey -y
+choco install freecommander -y
+choco install vlc -y
 # pdf reader (with dark mode)
-choco install foxitreader
+choco install foxitreader -y
 # wsl --install
 # choco install ImageMagick
-choco install discord
+choco install discord -y
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
+choco install gimp -y
+choco install inkscape -y
 
 
 # Setting up symbolic links to the Config-files in Windows
