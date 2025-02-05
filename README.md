@@ -1,25 +1,9 @@
 # -- bluelegend76 dotfiles and portable config --
+(including Empire Reflists system/structure)
 
-- [ ] Reformat External Drives to ExFAT
-
-## Directories
-- Reflists
-  - Win
-    - win-keys
-    - msoft teams
-    - msoft outlook
-  - BROWSERS ETC (=Empire-Lists)
-- emacs
-- vim
-- fluxbox
-- grub
-- keymap
-- playlists.work
-- firefox-plugs
-- vscode
-- vs
-- training
-  - physic/cardio
-  - strength
-  - callisth.
-
+## TODO:
+~~- [ ] Reformat External Drives to ExFAT~~
+- [ ] Auto-Linking of config-files to Windows-directories
+- [ ] Add proper .gitingore file to project
+-----
+- [ ] Reactivate "Connect Ext4-Drives" in Windows 11
