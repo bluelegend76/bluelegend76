@@ -1,13 +1,242 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
+__
 
-                     Nature
-  Nature / Views --<
-                     Art - sculpt
-  Media -- fun
-          Graf
-  Ref --<
-          relscept
+Microsoft Teams  @
+              Feature
+              Desktop App
+              Web App
+
+            General ----
+            Show keyboard shortcuts
+                c-.
+            Go to Search
+                c-e  ca-e
+            Show commands
+                c-/  # cs-7
+            Open filter
+                cs-f
+            Go to a specific team or channel
+                c-g  cs-g
+            Open apps flyout
+                c-' / c-`
+            Start a new chat
+                c-n
+            Open Settings
+                c-,  cs-,
+            Open Help
+                F1  c-F1
+            Close
+                Esc
+            Zoom in
+                c-= (cs-0) / c_-
+            Reset zoom level
+                c-0
+
+            Navigation ----
+            Open Activity
+                c-1  cs-1
+            Open Chat
+                c-2  cs-2
+            Open Teams
+                c-3  cs-3
+            Open Calendar  __
+                c-4  cs-4
+            Open Calls
+                c-5  cs-5
+            Open Files
+                c-6  cs-6
+            Prev./Next list item
+                a-up / a-down
+            Move selected team up / down
+              cs-up / cs-down
+            Open the History menu
+              cs-h  cs-f6
+            Go to prev. / next section
+              cs-f6
+
+            Messaging ----
+            Start a new conversation
+                c-n  a-n
+            Go to compose box
+                sa-c  sa-c
+            Expand compose box
+                cs-x  cs-x
+            Send a message
+                c-Enter
+            Start a new line
+                s-Enter
+            Reply to a thread
+                sa-r
+            Mark a message as important
+                cs-i
+            Search current chat or channel messages
+                c-f
+
+            Meetings and calls ----
+            Accept video call
+                cs-a
+            Accept audio call
+                cs-s
+            Decline call
+                cs-d
+            Start audio call
+                cs-c
+            Start video call
+                cs-u
+            End call
+                cs-h
+            Toggle mute
+                cs-m
+            Temporarily unmute
+                c-Space
+            Announce raised hands (screen reader)
+                cs-l
+            Raise or lower your hand.
+                cs-k
+            Start screen share session
+                cs-e
+            Toggle video
+                cs-o
+            High motion screen share
+                csa-t
+            Filter current list
+                cs-f
+            Go to sharing toolbar
+                cs-Space
+            Decline screen share
+                cs-d
+            Accept screen share
+                cs-a
+            Admit people from lobby notification
+                cs-y
+            Open the Background settings menu
+                cs-p
+            Schedule a meeting
+                sa-n
+            Go to current time
+                a-.
+            Go to prev. / next day/week
+                ca-left / ca-right
+            View day
+                ca-1
+            View workweek
+                ca-2
+            View week
+                ca-3
+            Save or send meeting request
+                c-s
+            Join from meeting details
+                sa-j
+            Go to suggested time
+                sa-s
+
+            Debug ---
+            Download diagnostic logs
+                csa-1
+Jitsi
+                F - Show or hide video thumbnails
+                M - Mute or unmute your microphone
+                V - Start or stop your camera
+                A - Manage video quality
+                C - Open or close the chat
+                D - Switch between camera and screen sharing
+                P - Show or hide the participants pane
+                R - Raise or lower your hand
+                S - View or exit full screen
+                W - Toggle tile view
+                T - Show participants stats
+                Alt T - Send thumbs up reaction
+                Alt C - Send clap reaction
+                Alt L - Send laugh reaction
+                Alt O - Send surprised reaction
+                Alt B - Send boo reaction
+                Alt S - Send silence reaction
+                G - Toggle GIPHY menu
+                ? - Show or hide keyboard shortcuts
+                SPACE - Push to talk
+                0 - Focus on your video
+                1-9 - Focus on another person's video
+discord
+                ~/Dropbox/rsc/data/lists/ref/comp/discord-shortckeys.pdf
+
+                ---- Default Keybinds ----
+
+                Show Keyboard Shortcuts List  cs-7  # c-/
+
+                Messages ---- These shortcuts work when focused on a message.
+        Edit Last Message  up  __
+                Edit Message  e
+                Delete Message  bs
+                Pin Message  p
+                Add Reaction  +
+                Reply  r
+                Copy Text  c-c
+                Mark Unread  a-Enter
+                Focus text area  Esc
+
+                Navigation ----
+                Navigate between servers  ca-up / ca-down
+                Navigate between channels  a-up / a-down
+                Navigate forward and backward in page history  a-left / a-right
+                Navigate between unread channels  sa-up / sa-down
+                Navigate between unread channels with mentions  csa-up / csa-down
+                Navigate to current call  csa-v
+                Toggle between last server and DMs  ca-right
+                Toggle QuickSwitcher  c-k
+                  Create or join a server  cs-n
+                Start share of current window  cs-n  #In Linux
+
+                Drag And Drop ---- These shortcuts work when focused on a draggable item
+                Start Drag and Drop  c-d
+                Move  up / down
+                Drop item  Space / Enter
+                Cancel  Esc
+
+                Chat ----
+                Mark server read  s-Esc
+                Mark channel as read  Esc
+                Create a private group  cs-t
+                Toggle pins popout  c-p
+                Toggle inbox popout  c-i
+                Mark top inbox channel read  cs-e
+                Toggle channel member list or voice text chat  c-u
+                Toggle emoji picker  c-e
+                Toggle GIF picker  c-g
+                Toggle sticker picker  c-s
+                Scroll chat up or down  PgUp / PgDn
+                Jump to oldest unread message  s-PgUp
+                Focus text area  any key
+                Upload a file  cs-u
+
+                Voice And Video ----
+                Toggle mute  cs-m
+                Toggle deafen  cs-d
+                Answer incoming call  c-Enter
+                Decline incoming call  Esc
+                Start call in private message or group  csg-b  # c-'
+
+                Miscellaneous ----
+                Get help  cs-h
+                Search  c-f
+Google Meet
+        mute/unmute  c-d
+            Announce who is currently speaking 	Ctrl + ⌘ + s 	Ctrl + Alt + s
+            Announce current information about the room 	Ctrl + ⌘ + i 	Ctrl + Alt + i
+            Announce recently received reactions 	Ctrl + ⌘ + x 	Ctrl + Alt + x
+            Meeting controls 	Mac 	Windows/Chrome OS
+            Show or hide captions 	c 	c
+            Open picture-in-picture mode 	Shift + m 	Shift + m
+            Turn on or off camera 	⌘ + e 	Ctrl + e
+            Mute or unmute your microphone 	⌘ + d 	Ctrl + d
+            Increase the number of participant tiles 	Ctrl + ⌘ + k 	Ctrl + Alt + k
+            Decrease the number of participant tiles 	Ctrl + ⌘ + j 	Ctrl + Alt + j
+            Show or hide meeting chat window 	Ctrl + ⌘ + c 	Ctrl + Alt + c
+            Show or hide participants 	Ctrl + ⌘ + p 	Ctrl + Alt + p
+            Raise or lower your hand 	Ctrl + ⌘ + h 	Ctrl + Alt + h
+            Minimize or expand your video 	Ctrl + ⌘ + m 	Ctrl + Alt + m
+            Push to Talk*
+            *Enable "Push to Talk" in settings to use this shortcut. 	Press and hold spacebar 	Press and hold spacebar
 
 Shotwell  @@
                 ----
@@ -320,241 +549,6 @@ emacs im-viewer  @
                 - enter comment for im. (=fr. thumbnail buffer / dired) **! ; c / c-t c
                 - Rotat. image left/right *  ("+jpegtran"(?)) * ; l / r  #"L/R"
 
-Jitsi
-                F - Show or hide video thumbnails
-                M - Mute or unmute your microphone
-                V - Start or stop your camera
-                A - Manage video quality
-                C - Open or close the chat
-                D - Switch between camera and screen sharing
-                P - Show or hide the participants pane
-                R - Raise or lower your hand
-                S - View or exit full screen
-                W - Toggle tile view
-                T - Show participants stats
-                Alt T - Send thumbs up reaction
-                Alt C - Send clap reaction
-                Alt L - Send laugh reaction
-                Alt O - Send surprised reaction
-                Alt B - Send boo reaction
-                Alt S - Send silence reaction
-                G - Toggle GIPHY menu
-                ? - Show or hide keyboard shortcuts
-                SPACE - Push to talk
-                0 - Focus on your video
-                1-9 - Focus on another person's video
-discord
-                ~/Dropbox/rsc/data/lists/ref/comp/discord-shortckeys.pdf
-
-                ---- Default Keybinds ----
-
-                Show Keyboard Shortcuts List  cs-7  # c-/
-
-                Messages ---- These shortcuts work when focused on a message.
-        Edit Last Message  up  __
-                Edit Message  e
-                Delete Message  bs
-                Pin Message  p
-                Add Reaction  +
-                Reply  r
-                Copy Text  c-c
-                Mark Unread  a-Enter
-                Focus text area  Esc
-
-                Navigation ----
-                Navigate between servers  ca-up / ca-down
-                Navigate between channels  a-up / a-down
-                Navigate forward and backward in page history  a-left / a-right
-                Navigate between unread channels  sa-up / sa-down
-                Navigate between unread channels with mentions  csa-up / csa-down
-                Navigate to current call  csa-v
-                Toggle between last server and DMs  ca-right
-                Toggle QuickSwitcher  c-k
-                  Create or join a server  cs-n
-                Start share of current window  cs-n  #In Linux
-
-                Drag And Drop ---- These shortcuts work when focused on a draggable item
-                Start Drag and Drop  c-d
-                Move  up / down
-                Drop item  Space / Enter
-                Cancel  Esc
-
-                Chat ----
-                Mark server read  s-Esc
-                Mark channel as read  Esc
-                Create a private group  cs-t
-                Toggle pins popout  c-p
-                Toggle inbox popout  c-i
-                Mark top inbox channel read  cs-e
-                Toggle channel member list or voice text chat  c-u
-                Toggle emoji picker  c-e
-                Toggle GIF picker  c-g
-                Toggle sticker picker  c-s
-                Scroll chat up or down  PgUp / PgDn
-                Jump to oldest unread message  s-PgUp
-                Focus text area  any key
-                Upload a file  cs-u
-
-                Voice And Video ----
-                Toggle mute  cs-m
-                Toggle deafen  cs-d
-                Answer incoming call  c-Enter
-                Decline incoming call  Esc
-                Start call in private message or group  csg-b  # c-'
-
-                Miscellaneous ----
-                Get help  cs-h
-                Search  c-f
-Google Meet
-        mute/unmute  c-d
-            Announce who is currently speaking 	Ctrl + ⌘ + s 	Ctrl + Alt + s
-            Announce current information about the room 	Ctrl + ⌘ + i 	Ctrl + Alt + i
-            Announce recently received reactions 	Ctrl + ⌘ + x 	Ctrl + Alt + x
-            Meeting controls 	Mac 	Windows/Chrome OS
-            Show or hide captions 	c 	c
-            Open picture-in-picture mode 	Shift + m 	Shift + m
-            Turn on or off camera 	⌘ + e 	Ctrl + e
-            Mute or unmute your microphone 	⌘ + d 	Ctrl + d
-            Increase the number of participant tiles 	Ctrl + ⌘ + k 	Ctrl + Alt + k
-            Decrease the number of participant tiles 	Ctrl + ⌘ + j 	Ctrl + Alt + j
-            Show or hide meeting chat window 	Ctrl + ⌘ + c 	Ctrl + Alt + c
-            Show or hide participants 	Ctrl + ⌘ + p 	Ctrl + Alt + p
-            Raise or lower your hand 	Ctrl + ⌘ + h 	Ctrl + Alt + h
-            Minimize or expand your video 	Ctrl + ⌘ + m 	Ctrl + Alt + m
-            Push to Talk*
-            *Enable "Push to Talk" in settings to use this shortcut. 	Press and hold spacebar 	Press and hold spacebar
-Microsoft Teams
-              Feature
-              Desktop App
-              Web App
-
-            General ----
-            Show keyboard shortcuts
-                c-.
-            Go to Search
-                c-e  ca-e
-            Show commands
-                c-/  # cs-7
-            Open filter
-                cs-f
-            Go to a specific team or channel
-                c-g  cs-g
-            Open apps flyout
-                c-' / c-`
-            Start a new chat
-                c-n
-            Open Settings
-                c-,  cs-,
-            Open Help
-                F1  c-F1
-            Close
-                Esc
-            Zoom in
-                c-= (cs-0) / c_-
-            Reset zoom level
-                c-0
-
-            Navigation ----
-            Open Activity
-                c-1  cs-1
-            Open Chat
-                c-2  cs-2
-            Open Teams
-                c-3  cs-3
-            Open Calendar  __
-                c-4  cs-4
-            Open Calls
-                c-5  cs-5
-            Open Files
-                c-6  cs-6
-            Prev./Next list item
-                a-up / a-down
-            Move selected team up / down
-              cs-up / cs-down
-            Open the History menu
-              cs-h  cs-f6
-            Go to prev. / next section
-              cs-f6
-
-            Messaging ----
-            Start a new conversation
-                c-n  a-n
-            Go to compose box
-                sa-c  sa-c
-            Expand compose box
-                cs-x  cs-x
-            Send a message
-                c-Enter
-            Start a new line
-                s-Enter
-            Reply to a thread
-                sa-r
-            Mark a message as important
-                cs-i
-            Search current chat or channel messages
-                c-f
-
-            Meetings and calls ----
-            Accept video call
-                cs-a
-            Accept audio call
-                cs-s
-            Decline call
-                cs-d
-            Start audio call
-                cs-c
-            Start video call
-                cs-u
-            End call
-                cs-h
-            Toggle mute
-                cs-m
-            Temporarily unmute
-                c-Space
-            Announce raised hands (screen reader)
-                cs-l
-            Raise or lower your hand.
-                cs-k
-            Start screen share session
-                cs-e
-            Toggle video
-                cs-o
-            High motion screen share
-                csa-t
-            Filter current list
-                cs-f
-            Go to sharing toolbar
-                cs-Space
-            Decline screen share
-                cs-d
-            Accept screen share
-                cs-a
-            Admit people from lobby notification
-                cs-y
-            Open the Background settings menu
-                cs-p
-            Schedule a meeting
-                sa-n
-            Go to current time
-                a-.
-            Go to prev. / next day/week
-                ca-left / ca-right
-            View day
-                ca-1
-            View workweek
-                ca-2
-            View week
-                ca-3
-            Save or send meeting request
-                c-s
-            Join from meeting details
-                sa-j
-            Go to suggested time
-                sa-s
-
-            Debug ---
-            Download diagnostic logs
-                csa-1
 bluetooth-ctl
                 Usage:
                     bluetoothctl [--options] [commands]
@@ -1489,5 +1483,12 @@ mplayer
                 select
 
 
-
+<images categories/dir-structure>
+                                     Nature
+                  Nature / Views --<
+                                     Art - sculpt
+                  Media -- fun
+                          Graf
+                  Ref --<
+                          relscept
 

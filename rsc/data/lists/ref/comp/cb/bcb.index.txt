@@ -4,6 +4,107 @@ vim: fdm=indent:fdl=2:
 ~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
 
+Packman =MERGELIST: apt/aptitude, pacman, choco  pip
+                Install package
+                    sudo apt -y install program
+                    pacman -S program
+                    choco install program -y
+                Remove package
+                    pacman -R program
+                Search for package
+                    pacman -Ss program
+                    choco search package
+                fix missing dependencies
+
+                Install Package:
+                    Acquire and install a software package from the repository.
+                    Handle dependencies (automatically install required packages).
+                Remove Package:
+                    Uninstall a software package from the system.
+                    Optionally remove dependent packages if they are no longer needed.
+                Search for Package:
+                    Find available packages in the repository.
+                    Often includes filtering and searching by keywords.
+                Update Package Manager:
+                    Update the package manager itself and its internal database.
+                    Ensures you have access to the latest package information.
+                Update System/Packages:
+                    Check for and install updates for all installed packages.
+                    May include security updates and bug fixes.
+                List Installed Packages:
+                    Display a list of all currently installed packages.
+                Show Package Information:
+                    Display detailed information about a specific package, such as version, description, dependencies, etc.
+                Clean/Purge:
+                    Remove obsolete files and packages.
+                    May include removing old package files, configuration files, or dependencies that are no longer in use.
+                Pin Packages:
+                    Prevent specific packages from being upgraded.
+                    Useful for maintaining stability or preventing unwanted changes.
+                Manage Repositories:
+                    Add, remove, or update software repositories.
+                    Repositories define where the package manager gets its software.
+                ---- medium/advanced
+                Downgrade Package:
+                    Install an older version of a package.
+                    Useful for reverting to a stable version if a newer version has introduced bugs.
+                Install from Source:
+                    Build and install a package from source code.
+                    Provides more control over the installation process and allows for customizations.
+                Manage Dependencies:
+                    Force the installation or removal of specific dependencies.
+                    Useful for resolving dependency conflicts or installing packages with specific dependencies.
+                Virtual Environments:
+                    Create isolated environments for managing package installations.
+                    Allows you to install different versions of the same package for different projects without conflicts.
+                Group Installations:
+                    Install a group of related packages at once.
+                    Useful for installing a complete set of tools or libraries for a specific task.
+                Check for Security Advisories:
+                    Scan installed packages for known security vulnerabilities.
+                    Allows you to proactively address potential security risks.
+                Auto-Removal:
+                    Automatically remove packages that are no longer required as dependencies.
+                    Helps to keep the system clean and free of unused packages.
+                Local Repositories:
+                    Create and manage local repositories of packages.
+                    Useful for sharing packages within a local network or for offline installations.
+                Prioritize Repositories:
+                    Control the order in which repositories are searched for packages.
+                    Allows you to prioritize packages from specific sources.
+                Package Signing/Verification:
+                    Verify the authenticity and integrity of downloaded packages.
+                    Helps to ensure that packages have not been tampered with.
+                Dependency Resolution Algorithms:
+                    Understand how the package manager resolves dependencies.
+                    This can help in troubleshooting installation issues or customizing dependency resolution behavior.
+                Configuration Files:
+                    Understand how package managers handle configuration files.
+                    Learn how to manage and back up configuration files for installed packages.
+                Package Building:
+                    Learn how to create your own packages for distribution.
+                    Requires understanding of packaging formats and build systems.
+                Rollback:
+                    Revert the system to a previous state before a package update or installation.
+                    Provides a way to recover from failed upgrades or unexpected changes.
+                Transaction Management:
+                    Perform multiple package operations as a single atomic transaction.
+                    Ensures that all operations succeed or fail together.
+                Package Conflicts:
+                    Understand and resolve package conflicts.
+                    Learn how to identify and address situations where multiple packages have conflicting dependencies.
+                Metadata:
+                    Explore package metadata, such as version numbers, dependencies, and descriptions.
+                    This information can be useful for understanding package relationships and making informed decisions.
+                Plugins/Extensions:
+                    Discover and use available plugins or extensions to enhance the functionality of the package manager.
+                Automation:
+                    Integrate package management into scripts or automation tools.
+                    Automate common tasks such as installing updates, deploying applications, and managing system configurations.
+                Security Best Practices:
+                    Learn about security best practices for package management.
+                    This includes using trusted repositories, verifying package signatures, and keeping the package manager and system up-to-date.
+
 bcb (**(!))
             1. Beginning Bash
             1.1 Decoding the Prompt

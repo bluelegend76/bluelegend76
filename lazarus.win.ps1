@@ -4,11 +4,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco upgrade git -y
 choco install vim -y
 choco install neovim -y
+choco install nushell -y
+# pip install xonsh
 choco install autohotkey -y
 choco install freecommander -y
 choco install vlc -y
 # pdf reader (with dark mode)
 choco install foxitreader -y
+choco install mpv -y
 # wsl --install
 # choco install ImageMagick
 choco install discord -y

@@ -1,6 +1,258 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
+Outlook
+                Microsoft Outlook
+                Overview of common commands for Microsoft Outlook
+                Write email
+                N / Ctrl N 	Create a new email
+                Alt . 	Show address book
+                Alt S / Ctrl Enter 	Send an email
+                R 	Reply to an email
+                Shift R 	Reply all to an email
+                Shift F 	Forward an email
+                Alt + 	Show address book
+                F7 	Check spelling
+                Ctrl Y 	Insert an Emoji
+                Ctrl S 	Save draft
+                Read email
+                O / Enter 	Open an email
+                Shift, I 	Show blocked content
+                / 	Search your email
+                Esc 	Close an email
+                X 	Expand/Collapse a conversation
+                Go to
+                G, I 	Go to Inbox
+                G, I 	Show blocked content
+                G, D 	Go to Drafts
+                G, S 	Go to Sent
+                Ctrl 3 	Go to People
+                Email actions
+                Del 	Delete an email
+                E 	Archive
+                J 	Mark an email as junk
+                V 	Move to a folder
+                Shift E 	New folder
+                C 	Categorize an email
+                Shift G 	New Category
+                Y 	Remove all categories
+                Q 	Mark an email as read
+                U 	Mark an email as unread
+                Insert 	Flag an email
+                Shift P 	Print an email
+                Email list
+                S, A 	Select all emails
+                S, N 	Deselect all emails
+                Ctrl . / ↓ 	Move selection downwards
+                Ctrl , / ↑ 	Move selection upwards
+                M / F9 	Refresh 
+                -----
+                Frequently used shortcuts
+                This table lists the most frequently used shortcuts in new Outlook
+                To do this
+                Press
+                Create a new message or calendar event.
+                Ctrl+N
+                Open the selected message in a new window.
+                Shift+Enter
+                Delete message or item.
+                Delete
+                Forward message.
+                Ctrl+F
+                Go to Calendar.
+                Ctrl+2
+                Select the Reply All option.
+                Ctrl+Shift+R
+                Reply to email message.
+                Ctrl+R
+                Send an email message.
+                Ctrl+Enter
+                Open split buttons.
+                Alt+Down arrow key
+                Open keyboard shortcuts.
+                Question mark (?)
+                Key tips.
+                Alt
+                Top of Page
+                Edit text
+                The text editing keyboard shortcuts in new Outlook are the same as those in other Microsoft products.
+                To do this
+                Press
+                Copy your selection to the clipboard.
+                Ctrl+C
+                Cut the text you selected.
+                Ctrl+X
+                Delete selected text or characters to the left of the cursor.
+                Backspace
+                Delete the word to the left of the cursor, but not the space before the word.
+                Ctrl+Backspace
+                Insert a hyperlink.
+                Ctrl+K
+                Paste content from the clipboard into the current location.
+                Ctrl+V
+                Repeat the most recent action.
+                Ctrl+Y
+                Reverse the most recent action.
+                Ctrl+Z
+                Top of Page
+                Format text
+                The text formatting keyboard shortcuts in new Outlook are the same as those in other Microsoft products.
+                To do this
+                Press
+                Apply bold formatting.
+                Ctrl+B
+                Apply italic formatting.
+                Ctrl+I
+                Underline text.
+                Ctrl+U
+                Top of Page
+                Mail keyboard shortcuts in new Outlook
+                Use the Folder pane
+                To do this
+                Press
+                Go to the Folder pane.
+                Ctrl+Y
+                Quick jump to the folder name
+                Any alphanumeric key
+                Collapse the selected section.
+                Left arrow key
+                Expand the selected section.
+                Right arrow key
+                 Top of Page
+                Use the message and reading list
+                The keyboard shortcuts for new Outlook in the below table can be used to perform the same action in both the message list and the reading list.
+                To do this
+                Press
+                Delete the selected message.
+                Delete
+                Mark the selected conversation or message as read.
+                Ctrl+Q
+                Mark the selected conversation or message as unread.
+                Ctrl+U
+                Permanently delete the selected message or item.
+                Shift+Delete
+                Flag a message or mark a flagged message as complete.
+                Insert
+                Cancel a search.
+                Esc
+                Go to the next message
+                Ctrl+>
+                Go to the previous message
+                Ctrl+<
+                Top of Page
+                Use the message list
+                The keyboard shortcuts for new Outlook in the below table are message list specific.
+                To do this
+                Press
+                Select the current and next message in the list. Use this to select multiple, contiguous messages.
+                Shift+Down arrow key
+                Select the current and previous messages in the list. Use this to select multiple, contiguous messages.
+                Shift+Up arrow key
+                Select the first message in the folder.
+                Home or Ctrl+Home
+                Top of Page
+                Use the reading list
+                The keyboard shortcuts for new Outlook in the below table are reading list specific.
+                To do this
+                Press
+                Close a new message.
+                Esc
+                Create a new message.
+                Ctrl+N
+                Forward a selected message.
+                Ctrl+F
+                Go to the bottom of a conversation or message.
+                End
+                Go to the top of a conversation or message.
+                Home
+                Move down one page for conversations or messages of two or more pages.
+                Page down
+                Move up one page for conversations or messages of two or more pages.
+                Page up
+                Reply to the selected message.
+                Ctrl+R
+                Reply to the sender and all recipients of the selected message.
+                Ctrl+Shift+R
+                Send a message.
+                Ctrl+Enter
+                Top of Page
+                Calendar keyboard shortcuts in new Outlook
+                To do this
+                Press
+                Create a new calendar item.
+                Ctrl+N
+                Delete the selected item.
+                Delete
+                Go to the calendar.
+                Ctrl+2
+                Move to a different region in the calendar.
+                F6
+                Move to the next event or area in the current view.
+                Tab key
+                Move to a previous event or area in the current view.
+                Shift+Tab
+                Open the selected item.
+                Enter
+                Top of Page
+                Contacts (People) keyboard shortcuts
+                The People view is your address book in Outlook where your personal contacts are stored and where you can open any address book that has been set up for your organization. The People, Mail, and Calendar views work together so you can easily send mail to and schedule appointments with your most important people.
+                To do this
+                Press
+                Go to People.
+                Ctrl+3
+                Go to Mail.
+                Ctrl+1
+                Go to Calendar.
+                Ctrl+2
+                Delete a contact or contact list.
+                Delete or Ctrl+D
+                Create a contact.
+                Ctrl+N
+                Search for a contact.
+                Ctrl+E
+                Discard contact.
+                Esc
+                Save a contact or contact list.
+                Ctrl+S
+                Select all contacts or contact lists.
+                Ctrl+A
+                Unselect all contacts or contact lists.
+                Esc
+                Edit a contact or contact list.
+                Shift+E
+                Move down in the contact list or hub list.
+                Down arrow key
+                Move up in the contact list or hub list.
+                Up arrow key
+                Create a contact list.
+                Ctrl+L
+                Display the list of People keyboard shortcuts.
+                Shift+Question mark (?)
+                Move the focus to the Home tab.
+                Alt, H
+                Move the focus to the View tab.
+                Alt, V
+                Top of Page 
+                Use keyboard shortcuts to add accent marks and special characters for new Outlook
+                To add accents or special characters in new Outlook, use the number pad on your external keyboard with Num Lock turned on.
+                    Press and hold Alt.
+                    Type the numeric code on the number pad and release Alt.
+                Top of Page 
+                Vowels with accents
+                The following table lists vowels with accent marks and the Alt code for them in new Outlook.
+                Uppercase vowel with grave accent
+                Press
+                À
+                0192
+                È
+                0200
+                Ì
+                0204
+                Ò
+                0210
+                Ù
+                0217
+
 Mutt
                 + https://sheet.shiar.nl/mutt
 

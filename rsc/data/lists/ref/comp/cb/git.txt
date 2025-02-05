@@ -15,6 +15,9 @@ Git Ptools (Empire)
                                         +--private key
                         clone with ssh: git@github.com:bluelegend76/komvux2023-cpp.git
 
+Git Extensions (win) / git-bash (win)
+    TODO: Generate + paste shortcuts quicklist
+
 evince -p 1 ~/Dropbox/rsc/Doks/gitbitb.cheetsh.pdf &
             Git Basics ----
                 .

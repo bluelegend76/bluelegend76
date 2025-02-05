@@ -4,6 +4,354 @@ vim:fdm=marker:
 @c: :set syntax=CODELANG textwidth=35 nosi ai nojs shiftwidth=2 | colors ron
 ____
 __
+
+Browsers (File, Web, Media, Web) {{{
+media ----
+    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/sysadm/browse/{file,media,web,mail,remote}.txt
+    gvim -p comp/sysadm/browse/file.txt comp/sysadm/browse/media.txt comp/sysadm/browse/web.txt comp/sysadm/browse/mail.txt comp/sysadm/browse/remote.txt
+    gvim -c '/.*@.*' -p ~/Dropbox/rsc/Doks/phone/comp/sysadm/browse/{file,media,web,mail,remote}.txt
+
+    ## at.pr.mplayer.bash
+tmp:mpv
+    PLAYLIST WITH LUA-SCRIPTING **** {{{
+        https://duckduckgo.com/?t=ffab&q=mpv+playlist&ia=web
+        https://smarttech101.com/how-to-configure-use-mpv-video-player/
+        https://duckduckgo.com/?t=ffab&q=mpv+lua&ia=web
+    https://github.com/mpvnet-player/mpv.net/wiki/Extending-mpv-and-mpv.net-via-Lua-scripting
+      https://mpv.io/manual/master/#lua-scripting
+    https://github.com/mpv-player/mpv/wiki/User-Scripts
+https://github.com/jonniek/mpv-playlistmanager
+    https://github.com/drogers141/mpv-playlist-navigator
+      https://github.com/422658476/MPV-EASY-Player/blob/master/portable-data/scripts/playlistnoplayback.lua
+      https://github.com/occivink/mpv-gallery-view
+    }}}
+Mpv-Mplayer SectionLoop+Cropping[!!] {{{
+
+Quick question concerning mpv and mplayer - I have the documentation for it set in a file somewhere, but it might be easier to submit the question here: Let's say I wanted to play a video file with looping between two time-points, and also crop the video to a certain geometry specification. I know I can do this with vlc and set it interactively (via the Gui), but if I wanted to do that using either mpv or player, I suspect that could be specified as a directive directly from the command-line. Could you help me out on that?
+expand_more
+volume_up
+
+Absolutely! Both mpv and mplayer offer command-line options to achieve looping and cropping for your video playback. Here's how to accomplish it:
+
+Looping a Video between Time Points
+
+mpv:
+Use the -loop option along with the start and end times (in seconds) to specify the loop range.
+
+Bash
+mpv -loop start_time-end_time video_file.mp4
+Use code with caution.
+content_copy
+Replace start_time and end_time with the actual starting and ending seconds of your desired loop.
+
+mplayer:
+Mplayer doesn't have a built-in looping option. However, you can achieve a similar effect using the -ao null option to mute the audio and loop the video playback with external tools. Here's an example using the sleep command:
+
+Bash
+mplayer -ao null -loop 0 video_file.mp4 & sleep ((end_time - start_time)) ; kill %1
+Use code with caution.
+content_copy
+This command first plays the muted video in a loop (-loop 0) using mplayer. The sleep command pauses for the duration of your loop ((end_time - start_time)) and then kills the mplayer process using its process ID (%1).
+
+Cropping the Video
+
+mpv:
+Use the --crop option followed by a colon (:) separated width and height specification (e.g., width:height).
+
+Bash
+mpv --crop width:height video_file.mp4
+Use code with caution.
+content_copy
+Replace width and height with the desired cropped dimensions.
+
+mplayer:
+Mplayer doesn't have a direct cropping option. However, you can achieve a similar effect by combining scaling and positioning with the -vf option. This requires some experimentation to get the exact crop you desire. Here's a basic example:
+
+Bash
+mplayer -vf scale=width:height video_file.mp4
+Use code with caution.
+content_copy
+This scales the video to the specified width and height. You might need to adjust positioning further using options like -af for horizontal and vertical adjustments.
+
+Combining Looping and Cropping:
+
+You can combine these options in your command line to achieve both looping and cropping simultaneously:
+
+Bash
+# mpv example
+mpv --crop width:height -loop start_time-end_time video_file.mp4
+
+# mplayer example (with sleep for looping)
+mplayer -vf scale=width:height -ao null -loop 0 video_file.mp4 & sleep ((end_time - start_time)) ; kill %1
+Use code with caution.
+content_copy
+Remember to replace placeholders with your specific values and adjust the scaling/positioning options in mplayer for the desired crop. While mplayer requires some workarounds, mpv offers a more straightforward approach for both looping and cropping using command-line options.
+
+}}}
+browse:web-text ----
+    TextbasedWebbrowsers(, Reveal|Impress.js)
+    ---- consolidation-list: lynx, links, Nyxt/Vimium(+?), w3m, qutebrowser ----  xterm
+    ~/Dropbox/rsc/data/lists/learnqna/vanki/lynx.txt
+    ~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/lynx.txt
+browse:(file, web, im, mail) ----
+    Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
+}}}
+Multimedia, MuRec {{{
+    gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
+    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
+      MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
+    TODO: COPY IN FROM EMPIRE  gvim -p graf/pr/MultiMedia.txt comp/mu/MuRec.txt
+
+}}}
+
+m/loffice (excel/calc + basic  +/base etc) {{{
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
+                                                                   |
+                                                                =set to include impress.js, reveal.js (etc) =??(|**(!!))
+  gvim -p comp/cb/moffice.txt comp/cb/loffice.txt comp/cb/latexcb.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
+
+}}}
+--
+Git + Compile/Build, Deploy/Devops / CI, Testing (, disassembly) {{{
+  TODO/ADD: Compile/Build
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{git,compile-build,Testing,deploy-devops,math-progr,algos,probltask-leetrosetta,disassembly}.txt
+  gvim -p comp/cb/git.txt comp/cb/compile-build.txt comp/cb/Testing.txt comp/cb/deploy-devops.txt comp/cb/math-progr.txt comp/cb/algos.txt comp/cb/probltask-leetrosetta.txt comp/cb/disassembly.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{git,compile-build,Testing,deploy-devops,math-progr,algos,probltask-leetrosetta,disassembly}.txt
+
+}}}
+Sysadm(+wm) Redhat, nushell {{{
+  https://www.nushell.sh/cookbook/
+
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
+  gvim -p comp/cb/bcb.index.txt comp/sysadm/cmdl-fu.shell.txt comp/cb/RegexCb.txt comp/cb/regex-vim.txt comp/cb/pshell.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
+
+  regex: (vim, emacs, python/js, grep-posix, find, ag|perl)
+}}}
+  ¤¤ gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
+  ¤¤ gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
+  ¤¤ gvim -p comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
+--
+  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/xml/xml.txt
+  gvim comp/lang/xml/xml.txt
+  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/xml/xml.txt
+  gvim comp/lang/xml/xml.txt
+@@ scripting / web {{{
+. {{{
+h5, c3  Todo (=at top of scripting**(??))
+~/Empire/Doks/Comp/lang/webdev/h5/h5cb.pdf
+~/Empire/Doks/Comp/lang/webdev/c3/c3cb.pdf
+}}}
+  ____
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
+  gvim -p comp/cb/jscb.txt comp/cb/h5c3.txt comp/cb/jqcb.txt comp/cb/phpcb.txt comp/cb/luacb.txt comp/cb/elixir.txt
+    ## ~/Dropbox/rsc/data/lists/ref/comp/lang/erlang-elixir/elixir.txt
+    ## ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/erlang-elixir/elixir.txt
+    ## ~/Dropbox/rsc/data/lists/ref/comp/lang/erlang-elixir/elixir.txt
+  elixir / erlang (=Put into Webdev/Handheld) {{{
+      --
+      https://devhints.io/elixir
+        https://elixir-lang.org/getting-started/introduction.html#interactive-mode
+      https://github.com/vnegrisolo/cheat-sheet-elixir
+      https://www.programming-idioms.org/cheatsheet/Elixir
+      https://elixir-lang.org/docs.html
+      https://hexdocs.pm/elixir/Kernel.html
+      https://hexdocs.pm/elixir/File.html
+  }}}
+
+  ~/Empire/Doks/Comp/lang/lua/lua-game-development-cookbook.txt
+  ~/Empire/Doks/Comp/lang/lua/Gamedev-Lua.txt
+  ~/Empire/Doks/Comp/lang/lua/corona-webappwith.txt
+  ~/Empire/Doks/Comp/lang/lua/luaprogr-gems.txt
+    --
+    ~/Empire/Doks/Comp/Gamedev/webmob/lua-iosgamedev.pdf
+    ~/Empire/Doks/Comp/Gamedev/love-solar-corona/luagame-coronasdk.epub
+    ## ~/Empire/Doks/Comp/Gamedev/love-solar-corona/luagame-coronasdk.txt
+    ~/Empire/Doks/Comp/lang/lua/corona-buildgames.txt
+    ~/Empire/Doks/Comp/lang/lua/corona-sdk.txt
+    ~/Empire/Doks/Comp/lang/lua/corona-tutorial.txt
+    --
+    ~/Empire/Doks/Comp/lang/lua/corona-buildgames.pdf
+    ~/Empire/Doks/Comp/lang/lua/corona-sdk.pdf
+    ~/Empire/Doks/Comp/lang/lua/corona-tutorial.pdf
+. {{{
+TODO !!!! ~/Empire/curr-desktop/laravel5cb.pdf
+TODO   ~/Empire/curr-desktop/js-goodpractice.pptx
+              ~/Empire/curr-desktop/js-cleancode.pdf
+              ~/Empire/curr-desktop/js-cleanrobust.pdf
+                --
+              ~/Empire/curr-desktop/js-professional.pdf
+TODO !!   ~/Empire/curr-desktop/jsjsoncb.pdf
+
+--
+    lua
+    https://www.scribd.com/document/22065348/Lua-Programming-Gems
+    https://github.com/lua-cookbook/lua-cookbook/tree/master/src/book/en_US
+    https://github.com/lua-cookbook/lua-cookbook/wiki/The-table-of-contents
+    https://simion.com/info/lua_cookbook.html
+    https://www.lua.org/gems/ **(!**)
+    https://www.lua.org/gems/front.pdf
+
+        --
+    ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.pdf
+    ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.txt
+    ~/Dropbox/rsc/Doks/phone/gocb.txt
+    ~/Empire/Doks/Comp/lang/go-v/gocb.pdf
+    ~/Empire/curr-desktop/go-designpatt.pdf
+--
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/elixcb.txt
+}}}
+}}}
+multimedia + media {{{
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
+  gvim -p comp/cb/svganim.txt comp/cb/h5multimedia_canvas.txt comp/cb/imagickcb.txt comp/cb/ffmpegcb.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
+
+  TODO  =CANVAS CHEATSHEETS(??)
+  gamedev
+    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/levelup-gamedevbig.txt
+    --
+    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/threejs03-gamedev.txt
+      ~/Empire/curr-desktop/gameprogr-gems1.pdf
+      ~/Empire/curr-desktop/gameprogr-gems6.pdf
+    ~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/
+
+. {{{
+        svg
+        canvas
+    lilypond (!)
+    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.pdf
+    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.txt
+    #
+
+    aux = programs, media (etc)
+    audacity
+    vlc
+    mplayer
+    blender *
+    inkscape
+}}}
+}}}
+handheld / mobile (=android, ios, etc) {{{
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
+  gvim -p comp/cb/androidcb-java.txt comp/cb/androidcb-kotlin.txt comp/cb/dart-flutter.txt comp/cb/ios.txt
+
+. {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/kotlin-androiddevs.txt  #google-devs
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/kotlin-androiddev.txt
+  
+  --
+  dart+flutter  (=FLUTTER COOKBOOK)
+}}}
+}}}
+@@ system {{{
+  __
+  ada/spark
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
+                                                                      +including: go-v
+  gvim -p comp/cb/asm.txt comp/cb/cppcb.txt comp/cb/dlangcb.txt comp/cb/rustcb.txt comp/cb/jcb.txt comp/cb/cscb.txt comp/cb/go-v.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
+
+  --
+  ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.txt
+  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-man.check.txt
+  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-methods.scratch.txt
+}}}
+.  asm, wasm {{{
+}}}
+@@ Funct + Lisp {{{
+  ____
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
+                                                  +lfe(??)
+  gvim -p comp/cb/clispcb.txt comp/cb/schemecb.txt comp/cb/clojure.txt comp/cb/haskell.txt comp/cb/sml-ocaml.txt comp/cb/fs.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
+
+elisp  / newlisp {{{
+  https://www.emacswiki.org/emacs/ElispCookbook
+}}}
+}}}
+-- fsharp / fstar / coq  agda
+  gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
+  gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
+  gvim -p comp/cb/{fsharp,fstar,coq}.txt
+@@ Db mongo, sql, nosql, graph {{{
+  __
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
+  gvim -p comp/cb/Db.sql.txt comp/cb/db.graph.txt comp/cb/db.nosql.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
+
+}}}
+stat datasci || mlearn-ai {{{
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
+  gvim -p comp/cb/stat-datasci.txt comp/cb/mlearn-ai.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
+
+  gvim -p comp/cb/
+  comp/cb/stat-datasci.txt
+  comp/cb/mlearn-ai.txt
+  R gnuplot Datasci(!) {{{
+  . {{{
+  ~/Empire/curr-desktop/gnuplotcb.pdf
+      R
+  https://www.scribd.com/book/290055884/Python-Data-Science-Cookbook
+    https://www.scribd.com/book/272080010/Practical-Data-Science-Cookbook
+    https://www.scribd.com/book/253053167/Practical-Data-Analysis
+  }}}
+  }}}
+}}}
+@@ nyq muHask csound scoll  pd chuck [!!!!] {{{
+  __
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
+  gvim -p comp/cb/nyq.txt comp/cb/csound.txt comp/cb/scoll.txt comp/cb/hask-euterp.txt comp/cb/pd.txt comp/cb/chuck.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
+
+}}}
+https://docs.scala-lang.org/cheatsheets/
+    prolog/mercury {{{
+
+        https://mercurylang.org/about/comparison_with_haskell.html
+        https://mercurylang.org/information/doc-release/faq.pdf
+        https://mercury-in.space/crash.html
+        https://mercurylang.org/documentation/papers/book.pdf
+        https://github.com/Mercury-Language/mercury/wiki/Tutorial
+        https://mercurylang.org/information/doc-release/reference_manual.pdf
+        https://mercurylang.org/information/doc-release/library.pdf
+        https://mercurylang.org/information/doc-release/transition_guide.pdf
+    }}}
+
+markup: md, wiki, github-md, x-markd {{{
+    TODO: ADD INDEX-FILE[**]
+    org
+    Markdown
+      markdown extra
+    wiki markup
+    latex, mermaid
+    context, texinfo
+      plantuml
+    xml
+    docbook
+      json, yaml
+}}}
+ps
+  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/ps/ps.txt
+  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/ps/ps.txt
+  gvim comp/lang/ps/ps.txt
+tj
+  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/tj/tj.txt
+  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/tj/tj.txt
+  gvim comp/lang/tj/tj.txt
+
+anki
+    vimscript
+solidity etc {{{
+  ~/Empire/curr-desktop/blockchain-byex.pdf
+}}}
+
+
+TODO (Etc) ----
 Files to create:
     rsc/data/lists/ref/comp/cb/disassembly.txt
     rsc/data/lists/ref/comp/cb/ssh.txt
@@ -138,337 +486,5 @@ Note: This is just a small sample of Elixir data structures. I encourage you to 
 
 Remember, while syntax might differ slightly between languages, the core concepts of data structures often translate well. Use this overview as a stepping stone to further exploration and practical application!
 
-}}}
-
-
-Browsers (File, Web, Media, Web) {{{
-media ----
-    gvim -c '/.*@.*' -p ~/Dropbox/rsc/Doks/phone/comp/sysadm/browse/{file,media,web,mail,remote}.txt
-    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/sysadm/browse/{file,media,web,mail,remote}.txt
-    gvim -p comp/sysadm/browse/file.txt comp/sysadm/browse/media.txt comp/sysadm/browse/web.txt comp/sysadm/browse/mail.txt comp/sysadm/browse/remote.txt
-
-    ## at.pr.mplayer.bash
-tmp:mpv
-    PLAYLIST WITH LUA-SCRIPTING **** {{{
-        https://duckduckgo.com/?t=ffab&q=mpv+playlist&ia=web
-        https://smarttech101.com/how-to-configure-use-mpv-video-player/
-        https://duckduckgo.com/?t=ffab&q=mpv+lua&ia=web
-    https://github.com/mpvnet-player/mpv.net/wiki/Extending-mpv-and-mpv.net-via-Lua-scripting
-      https://mpv.io/manual/master/#lua-scripting
-    https://github.com/mpv-player/mpv/wiki/User-Scripts
-https://github.com/jonniek/mpv-playlistmanager
-    https://github.com/drogers141/mpv-playlist-navigator
-      https://github.com/422658476/MPV-EASY-Player/blob/master/portable-data/scripts/playlistnoplayback.lua
-      https://github.com/occivink/mpv-gallery-view
-    }}}
-Mpv-Mplayer SectionLoop+Cropping[!!] {{{
-
-Quick question concerning mpv and mplayer - I have the documentation for it set in a file somewhere, but it might be easier to submit the question here: Let's say I wanted to play a video file with looping between two time-points, and also crop the video to a certain geometry specification. I know I can do this with vlc and set it interactively (via the Gui), but if I wanted to do that using either mpv or player, I suspect that could be specified as a directive directly from the command-line. Could you help me out on that?
-expand_more
-volume_up
-
-Absolutely! Both mpv and mplayer offer command-line options to achieve looping and cropping for your video playback. Here's how to accomplish it:
-
-Looping a Video between Time Points
-
-mpv:
-Use the -loop option along with the start and end times (in seconds) to specify the loop range.
-
-Bash
-mpv -loop start_time-end_time video_file.mp4
-Use code with caution.
-content_copy
-Replace start_time and end_time with the actual starting and ending seconds of your desired loop.
-
-mplayer:
-Mplayer doesn't have a built-in looping option. However, you can achieve a similar effect using the -ao null option to mute the audio and loop the video playback with external tools. Here's an example using the sleep command:
-
-Bash
-mplayer -ao null -loop 0 video_file.mp4 & sleep ((end_time - start_time)) ; kill %1
-Use code with caution.
-content_copy
-This command first plays the muted video in a loop (-loop 0) using mplayer. The sleep command pauses for the duration of your loop ((end_time - start_time)) and then kills the mplayer process using its process ID (%1).
-
-Cropping the Video
-
-mpv:
-Use the --crop option followed by a colon (:) separated width and height specification (e.g., width:height).
-
-Bash
-mpv --crop width:height video_file.mp4
-Use code with caution.
-content_copy
-Replace width and height with the desired cropped dimensions.
-
-mplayer:
-Mplayer doesn't have a direct cropping option. However, you can achieve a similar effect by combining scaling and positioning with the -vf option. This requires some experimentation to get the exact crop you desire. Here's a basic example:
-
-Bash
-mplayer -vf scale=width:height video_file.mp4
-Use code with caution.
-content_copy
-This scales the video to the specified width and height. You might need to adjust positioning further using options like -af for horizontal and vertical adjustments.
-
-Combining Looping and Cropping:
-
-You can combine these options in your command line to achieve both looping and cropping simultaneously:
-
-Bash
-# mpv example
-mpv --crop width:height -loop start_time-end_time video_file.mp4
-
-# mplayer example (with sleep for looping)
-mplayer -vf scale=width:height -ao null -loop 0 video_file.mp4 & sleep ((end_time - start_time)) ; kill %1
-Use code with caution.
-content_copy
-Remember to replace placeholders with your specific values and adjust the scaling/positioning options in mplayer for the desired crop. While mplayer requires some workarounds, mpv offers a more straightforward approach for both looping and cropping using command-line options.
-
-}}}
-browse:web-text ----
-    TextbasedWebbrowsers(, Reveal|Impress.js)
-    ---- consolidation-list: lynx, links, Nyxt/Vimium(+?), w3m, qutebrowser ----  xterm
-    ~/Dropbox/rsc/data/lists/learnqna/vanki/lynx.txt
-    ~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/lynx.txt
-browse:(file, web, im, mail) ----
-    Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
-}}}
-Multimedia, MuRec {{{
-    gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
-    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
-      MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
-    gvim -p {graf/pr/MultiMedia,comp/mu/MuRec}.txt
-}}}
-
-m/loffice (excel/calc + basic  +/base etc) {{{
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
-  gvim -p comp/cb/moffice.txt comp/cb/loffice.txt comp/cb/latexcb.txt
-                                                                   |
-                                                                =set to include impress.js, reveal.js (etc) =??(|**(!!))
-}}}
---
-Git + Compile/Build, Deploy/Devops / CI, Testing (, disassembly) {{{
-  TODO/ADD: Compile/Build
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{git,compile-build,Testing,deploy-devops,math-progr,algos,probltask-leetrosetta,disassembly}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{git,compile-build,Testing,deploy-devops,math-progr,algos,probltask-leetrosetta,disassembly}.txt
-  ## gvim -p comp/cb/gitcompile-build.txt comp/cb/gitTesting.txt comp/cb/gitdeploy-devops.txt comp/cb/gitmath-progr.txt comp/cb/gitalgos.txt comp/cb/gitprobltask-leetrosetta.txt comp/cb/gitdisassembly.txt
-}}}
-Sysadm(+wm) Redhat, nushell {{{
-  https://www.nushell.sh/cookbook/
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
-  gvim -p comp/cb/bcb.index.txt comp/sysadm/cmdl-fu.shell.txt comp/cb/RegexCb.txt comp/cb/regex-vim.txt comp/cb/pshell.txt
-  regex: (vim, emacs, python/js, grep-posix, find, ag|perl)
-}}}
-  ¤¤ gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
-  ¤¤ gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
-  ¤¤ gvim -p comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
---
-  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/xml/xml.txt
-  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/xml/xml.txt
-  gvim comp/lang/xml/xml.txt
-@@ scripting / web {{{
-. {{{
-h5, c3  Todo (=at top of scripting**(??))
-~/Empire/Doks/Comp/lang/webdev/h5/h5cb.pdf
-~/Empire/Doks/Comp/lang/webdev/c3/c3cb.pdf
-}}}
-  ____
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
-  gvim -p comp/cb/jscb.txt comp/cb/h5c3.txt comp/cb/jqcb.txt comp/cb/phpcb.txt comp/cb/luacb.txt comp/cb/elixir.txt
-    ## ~/Dropbox/rsc/data/lists/ref/comp/lang/erlang-elixir/elixir.txt
-    ## ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/erlang-elixir/elixir.txt
-    ## ~/Dropbox/rsc/data/lists/ref/comp/lang/erlang-elixir/elixir.txt
-  elixir / erlang (=Put into Webdev/Handheld) {{{
-      --
-      https://devhints.io/elixir
-        https://elixir-lang.org/getting-started/introduction.html#interactive-mode
-      https://github.com/vnegrisolo/cheat-sheet-elixir
-      https://www.programming-idioms.org/cheatsheet/Elixir
-      https://elixir-lang.org/docs.html
-      https://hexdocs.pm/elixir/Kernel.html
-      https://hexdocs.pm/elixir/File.html
-  }}}
-  ~/Empire/Doks/Comp/lang/lua/lua-game-development-cookbook.txt
-  ~/Empire/Doks/Comp/lang/lua/Gamedev-Lua.txt
-  ~/Empire/Doks/Comp/lang/lua/corona-webappwith.txt
-  ~/Empire/Doks/Comp/lang/lua/luaprogr-gems.txt
-    --
-    ~/Empire/Doks/Comp/Gamedev/webmob/lua-iosgamedev.pdf
-    ~/Empire/Doks/Comp/Gamedev/love-solar-corona/luagame-coronasdk.epub
-    ## ~/Empire/Doks/Comp/Gamedev/love-solar-corona/luagame-coronasdk.txt
-    ~/Empire/Doks/Comp/lang/lua/corona-buildgames.txt
-    ~/Empire/Doks/Comp/lang/lua/corona-sdk.txt
-    ~/Empire/Doks/Comp/lang/lua/corona-tutorial.txt
-    --
-    ~/Empire/Doks/Comp/lang/lua/corona-buildgames.pdf
-    ~/Empire/Doks/Comp/lang/lua/corona-sdk.pdf
-    ~/Empire/Doks/Comp/lang/lua/corona-tutorial.pdf
-. {{{
-TODO !!!! ~/Empire/curr-desktop/laravel5cb.pdf
-TODO   ~/Empire/curr-desktop/js-goodpractice.pptx
-              ~/Empire/curr-desktop/js-cleancode.pdf
-              ~/Empire/curr-desktop/js-cleanrobust.pdf
-                --
-              ~/Empire/curr-desktop/js-professional.pdf
-TODO !!   ~/Empire/curr-desktop/jsjsoncb.pdf
-
---
-    lua
-    https://www.scribd.com/document/22065348/Lua-Programming-Gems
-    https://github.com/lua-cookbook/lua-cookbook/tree/master/src/book/en_US
-    https://github.com/lua-cookbook/lua-cookbook/wiki/The-table-of-contents
-    https://simion.com/info/lua_cookbook.html
-    https://www.lua.org/gems/ **(!**)
-    https://www.lua.org/gems/front.pdf
-
-        --
-    ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.pdf
-    ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.txt
-    ~/Dropbox/rsc/Doks/phone/gocb.txt
-    ~/Empire/Doks/Comp/lang/go-v/gocb.pdf
-    ~/Empire/curr-desktop/go-designpatt.pdf
---
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/elixcb.txt
-}}}
-}}}
-multimedia + media {{{
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
-  gvim -p comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
-  TODO  =CANVAS CHEATSHEETS(??)
-  gamedev
-    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/levelup-gamedevbig.txt
-    --
-    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/threejs03-gamedev.txt
-      ~/Empire/curr-desktop/gameprogr-gems1.pdf
-      ~/Empire/curr-desktop/gameprogr-gems6.pdf
-    ~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/
-
-. {{{
-        svg
-        canvas
-    lilypond (!)
-    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.pdf
-    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.txt
-    #
-
-    aux = programs, media (etc)
-    audacity
-    vlc
-    mplayer
-    blender *
-    inkscape
-}}}
-}}}
-handheld / mobile (=android, ios, etc) {{{
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
-  gvim -p comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
-. {{{
-  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/kotlin-androiddevs.txt  #google-devs
-  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/kotlin-androiddev.txt
-  
-  --
-  dart+flutter  (=FLUTTER COOKBOOK)
-}}}
-}}}
-@@ system {{{
-  __
-  ada/spark
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
-                                                                      +including: go-v
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
-  gvim -p comp/cb/asm.txt comp/cb/cppcb.txt comp/cb/dlangcb.txt comp/cb/rustcb.txt comp/cb/jcb.txt comp/cb/cscb.txt comp/cb/go-v.txt
-  --
-  ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.txt
-  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-man.check.txt
-  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-methods.scratch.txt
-}}}
-.  asm, wasm {{{
-}}}
-@@ Funct + Lisp {{{
-  ____
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
-                                                  +lfe(??)
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
-  gvim -p comp/cb/clispcb.txt comp/cb/schemecb.txt comp/cb/clojure.txt comp/cb/haskell.txt comp/cb/sml-ocaml.txt comp/cb/fs.txt
-elisp  / newlisp {{{
-  https://www.emacswiki.org/emacs/ElispCookbook
-}}}
-}}}
--- fsharp / fstar / coq  agda
-  gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
-  gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
-  gvim -p comp/cb/{fsharp,fstar,coq}.txt
-@@ Db mongo, sql, nosql, graph {{{
-  __
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
-  gvim -p comp/cb/Db.sql.txt comp/cb/db.graph.txt comp/cb/db.nosql.txt
-}}}
-stat datasci || mlearn-ai {{{
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
-  gvim -p comp/cb/
-  comp/cb/stat-datasci.txt
-  comp/cb/mlearn-ai.txt
-  R gnuplot Datasci(!) {{{
-  . {{{
-  ~/Empire/curr-desktop/gnuplotcb.pdf
-      R
-  https://www.scribd.com/book/290055884/Python-Data-Science-Cookbook
-    https://www.scribd.com/book/272080010/Practical-Data-Science-Cookbook
-    https://www.scribd.com/book/253053167/Practical-Data-Analysis
-  }}}
-  }}}
-}}}
-@@ nyq muHask csound scoll  pd chuck [!!!!] {{{
-  __
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
-  gvim -p comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
-}}}
-https://docs.scala-lang.org/cheatsheets/
-    prolog/mercury {{{
-
-        https://mercurylang.org/about/comparison_with_haskell.html
-        https://mercurylang.org/information/doc-release/faq.pdf
-        https://mercury-in.space/crash.html
-        https://mercurylang.org/documentation/papers/book.pdf
-        https://github.com/Mercury-Language/mercury/wiki/Tutorial
-        https://mercurylang.org/information/doc-release/reference_manual.pdf
-        https://mercurylang.org/information/doc-release/library.pdf
-        https://mercurylang.org/information/doc-release/transition_guide.pdf
-    }}}
-
-markup: md, wiki, github-md, x-markd {{{
-    TODO: ADD INDEX-FILE[**]
-    org
-    markdown
-      markdown extra
-    wiki markup
-    latex, mermaid
-    context, texinfo
-      plantuml
-    xml
-    docbook
-      json, yaml
-}}}
-ps
-  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/ps/ps.txt
-  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/ps/ps.txt
-  gvim comp/lang/ps/ps.txt
-tj
-  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/tj/tj.txt
-  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/tj/tj.txt
-  gvim comp/lang/tj/tj.txt
-
-anki
-    vimscript
-solidity etc {{{
-  ~/Empire/curr-desktop/blockchain-byex.pdf
 }}}
 

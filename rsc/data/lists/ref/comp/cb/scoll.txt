@@ -4,6 +4,8 @@ vim: fdm=indent:fdl=2:
 ~/Empire/Doks/Comp/mu/au/scoll/ScollBook.txt
 ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/scoll-mapvisu.tagged.txt
 
+Overtone
+
 scide (1)            - SuperCollider IDE
 scsynth (1)          - SuperCollider audio synthesis server
 supernova (1)        - SuperCollider audio synthesis server
