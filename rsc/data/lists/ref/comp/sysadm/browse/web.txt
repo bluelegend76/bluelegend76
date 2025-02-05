@@ -1,6 +1,70 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
+Edge
+                Edge  ____
+
+                add to fav.s/reading list
+                    c-d
+                favorites pane
+                    c-i
+                downloads pane
+                    c-j
+                history (*)
+                    c-h
+                    open cortana (*)
+                    a-c
+                enter reading view @(@)
+                    cs-r
+                    
+                reopen last closed tab
+                    cs -t(??)
+                duplicate tab (*) @
+                    c-k
+                next/prev. tab (*)
+                    c-tab/cs-tab
+                switch to tab N
+                    c-1, 2 osv
+                last tab
+                    c-9
+                go back (alt.)
+                    bs
+                ( refresh) / stop loading
+                    c-r|f5/esc
+
+                (select address bar (x3))
+                    c-l, f4, a-d
+                adress-field search =in new flik ((*)) @(@)
+                    cs-l
+                'open search query in the address bar' (?/*)
+                    c-e
+                www + .com to adress-word
+                    c-ent
+            Open link in new tab @
+                c-click
+            Open link in new tab +(!) change to @
+                cs-click
+            ( open link in new win )
+                sa-click)
+
+            Create 'web notes' (?/*) @(@)
+                cs-m
+            Copy selection to Web Note @@
+                ca-m
+
+                Dev. tools @
+                    f12
+                view page source @
+                    c-u
+                focus between adress-field/page
+                    f6
+                Caret browsing on/off (*) @
+                    f7
+                delete browsing-data
+                    cs-del
+                IME reconversion (?)
+                    ws-7  #="concerns correcting an/errors in documents (=??)"
+
 Firefox  @
                     save open tabs as bookmarks (=in directory)  cs-d
                     bookmark-toolbar  -b
