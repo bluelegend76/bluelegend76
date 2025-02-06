@@ -100,7 +100,7 @@ Multimedia, MuRec {{{
     gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
     gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
       MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
-    TODO: COPY IN FROM EMPIRE  gvim -p graf/pr/MultiMedia.txt comp/mu/MuRec.txt
+    gvim -p graf/pr/MultiMedia.txt comp/mu/MuRec.txt
 
 }}}
 
