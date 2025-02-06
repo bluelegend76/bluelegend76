@@ -20,6 +20,9 @@
 - Adding preferred programs for filetypes (to Windows Registry)
 ----
 - [ ] Construct AHotKey Svorak script (+'reverser')
+ 
+## lazarus.arch.sh:
+- [ ] Set system language to English (US)
 
 ## Playlists.Perform
 - Texts + Startlist 'ShowPieces'

@@ -1,0 +1,1038 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+Inkscape
+                ----
+                select/view  #+zoom
+                pen
+                  spiro/shaped lines (+simplif.)
+                bezier
+                node
+                calligr. *
+                hints
+                boolean
+                convert  #i.e. shape to outline etc.  #'obj. to path', 'stroke to path'
+                eraser
+                snap (*)
+                  grids|guides (+'obj. to guides' ****)
+                layers  (+sublayers|layer-groups)
+                align|distrib.
+                trace (manual|auto)
+                edit|create|generate svg (with Vim - from svg code(**(!)))
+                tweak
+                  gradient
+                [generate]
+                'grad. mesh'
+                CommandLine
+                clean svg
+Gimp
+                ----
+                .
+Scribus
+                    ----
+                    scribus-man: (keyb-shortc.s) {{{
+                     (renskrivn. sista delen av manualen (=keyboard shortcuts))
+
+                        evince -p 330 ~/documents-legacy/doks/scribusmanual.pdf &
+
+                    14.2 Keyboard and Mouse Shortcuts
+
+                    14.2.1 Keyboard Shortcuts
+
+                    Entries in italics don't appear in any menu.
+
+                    File:
+                        new file                    c-n
+                    new from template           ca-n
+                        open an existing file       c-o
+                        close current file            c-w
+                    save as                 cs-s
+                    save as template        ca-s
+                        print                   c-p
+                    print preview           ca-p
+                        quit                    c-q
+
+                    Edit:
+                        cut                     c-x
+                        copy                    c-c
+                        paste                   c-v
+                    select all                c-a
+                    deselect all              cs-a
+                    search / replace        c-f
+                    edit text(??)           c-y
+                    copy contents           cs-c
+                    paste contents          cs-v
+                    undo | redo             c-z | cs-z
+
+                    Item:
+                    duplicate               csa-d
+                    delete                  c-k
+                    group                   c-g
+                    ungroup                 cs-g
+                    lock / unlock           cs-l
+                    raise / lower *         c-home / c-end
+                    raise / lower to top/bottom              home / end
+
+
+                    Insert:
+                    text frame              t
+                    image frame             i
+                    table                   a
+                    shape                   s
+                    polygon                 p
+                    line                    l
+                    bezier curve            b
+                    freehand line           f
+                    char. / page num. *         csa-p
+                    char. / smart hyphen        cs_-
+                    char. / non-br. hyphen      ca_-
+                    char. / frame-break (**)    c-enter
+                    char. / column-break *      enter
+                    char. / new line            s-enter
+
+                    Style:
+                    image effects               c-e
+
+                    View:
+                    fit in window *             c-0
+                    100% zoom               c-1
+                    show rulers             cs-r
+                    zoom in / out           c_+ / c_-
+
+                    Tools:
+                    select *                c
+                    zoom tool               z
+                    edit contents           e
+                    edit text-frame with story editor **       c-y
+                    eye dropper             y
+                    link text-frame *(*)    n
+                    unlink text-frame       u
+                    rotate object           r
+
+
+                        evince -p 331 ~/documents-legacy/doks/scribusmanual.pdf &
+
+                    Windows:
+                    open properties-window **      f2
+                    open layers-window *           f6
+
+                    Help:
+                        scribus manual            f1
+
+                    misc:
+                    hide/bring back all palettes (**)       f10
+                    hide/bring back all guides, grids etc(**)     f11
+                    value (??)              f12
+
+                    Inside text frames or in the
+                    Story Editor, shortcuts are working
+                    as common in modern text editors:
+
+                    Add the next character
+                      to the selection      s-right/left  **
+                            marks the current word            cs-left/right
+                            marks the complete text         c-a
+                            move to the end / start of the line         end / home
+                    moves the cursor one word(!)    ca-left / ca-right
+
+                    14.2.2 Changing Keyboard Shortcuts
+
+                    In File > Preferences you can change all menu-related
+                    shortcuts and also set new ones.
+                        a_f,r
+
+                    To change or assign an action ta a shortcut, select the action
+                    in the list. If a shortcut is assigned, it will be displayed in the
+                    gray field on the right. If the action has no shortcut assigned,
+                    will show the radio button "No Key" active. Click
+                    "Set Key" and type the new shortcut on the keyboard. If the
+                    shortcut isn't already assigned to another action, the radio button
+                    "User Defined Key" becomes active. In case the shortcut is
+                    already in use by another action, a warning will pop up.
+
+                    __
+                    You can also use your custom shortcuts on another
+                    computer. Just click on the "Export" button, and save a "Key
+                    Set XML File" Using a file dialog. To use it on another computer,
+                    copy it to a USB stick or similar and load it with the
+                    "Import" button there. By clicking the "OK" button, you make
+                    the loaded set the shortcut set for your current and future documents.
+                    If you want or need to return to the default shortcut set,
+                    click on "Reset."
+
+                    Another option is "Loadable Shortcut Sets." By default, it
+                    doesn't seem to be useful, as the only set in the dropdown list
+                    is "Scribus 1.3.3." You can, however, easily create your own
+                    shortcut set, eg. to mimic the behavior of another layout
+                    program you know. Just create a plain text file that looks like this:
+
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <shortcutset name="InDesign 2.x">
+                          <function name="fileOpen" shortcut="Ctrl+O"/>
+                          <function name="fileSave" shortcut="Ctrl+S"/>
+                      </shortcutset>
+
+                    __
+                    "function name" denotes the action in Scribus, and since you
+                    probably won't know what all the functions' names are, it's
+                    probably better to open the file scribus13.ksxml in the install
+                    directory of Scribus under /lib/scribus/keysets (or
+                    \lib\scribus\keysets on Windows and OS/2) and use it
+                    as a template. If you edit the file, don't forget to save it under a
+                    different name, because otherwise you'll lose your Scribus
+                    default shortcuts. Once you've finished adding your desired
+                    shortcuts, save or copy the file to the "keysets" directory
+                    mentioned above, and the new shortcut will be available from
+                    the dropdown list. Please note that you'll probably need
+                    root/Administrator privileges to save the file in this directory.
+                    After selecting the new set from the list, you have to click the
+                    "Load" button and then click "OK."
+
+
+                    14.2.3 Mouse Usage
+
+                    Mouse usage in Scribus has some subtle, but once learned,
+                    very useful shortcuts:
+
+                      __
+                      - Click third button, or on two button mice ("chord" them by
+                        click left and right together) refreshes the view.
+                      - Control + Shift + left click for select through levels on the
+                        same layer.
+                      - Control + left click resize/move for lower objects. Release +
+                        drag resizes. Hold down Control + drag moves.
+                      - Left click + drag resizes frames. Add Ctrl, you get orthogonal
+                        movement.
+                      - Shift + left click + drag resizes frames proportionally.
+                      - Ctrl + Alt + left click + drag resizes text frames and their
+                        content.
+                      - Rotate tool + Ctrl + left click rotates an item in steps of 15
+                        degrees.
+                      - Right click: A context menu will pop up offering some choices.
+
+                      - Ctrl + wheel zooms the view in and out.
+
+                        evince -p 332 ~/documents-legacy/doks/scribusmanual.pdf &
+
+                      - Shift + wheel adds a 10x multiplier to scroll wheel action.
+                      - Ctrl + right button drag allows you to pan the document up or
+                        down and/or left to right depending on the zoom factor.
+
+                    14.2.4 Other Shortcuts
+
+                      - Space bar toggles the panning mode for the mouse if nothing is
+                        selected.
+                      - With nothing selected, Tab will change between the open
+                        documents.
+
+                      - In normal mode we can:
+                        · Use backspace or delete the item
+                        · Use PageUp/PageDown to raise/lower an item.
+                        · Use the arrow keys to move an item or group around:
+                                - With no meta, by 1.0 unit
+                                - Ctrl, by 10.0 units
+                                - Shift, by 0.1 units
+                                - Ctrl Shift, 0.01 units
+                        · Use the arrow keys to resize an item:
+                                - Alt right / left, move right/left side
+                                    outwards (expand)
+                                - Alt Shift right / left, move right/left side
+                                    inwards (shrink)
+
+                      - In edit mode of an image frame, use the arrow keys to resize
+                        the image:
+                        - Alt right, move right side of image outwards
+                                (expand)
+                        - Alt left arrow, move right side inwards (shrink)
+                        - Alt down arrow, move bottom side downwards (expand)
+                        - Alt up arrow, move top side inwards (shrink)
+
+
+
+                    terminology:
+
+                    Scribus                     QuarkXPress     InDesign
+
+                    align and distrib.          space/align     align palette
+                    collect for output          collect for
+                                                    output      package
+                    color                       color           swatch
+                    convert to outlines         text to box     create outlines
+                    default text properties     normal style
+                                                    sheet           default text attributes
+                    document                    layout          document
+                    dclick on image frame/
+                      /prop.s palette > image   content tool    position tool
+                    edit text (e)               content tool    type tool
+                    frame                       box             frame
+                    get image/get text          get image/
+                                                    /get text       place
+                    gradient                    blend           gradient
+                    image                       picture         graphic
+                    image frame                 picture box     picture frame
+                    item                        item            object
+                    item color                  bg color        fill
+                    line                        frame           stroke
+                    line                        line            path
+                    line spacing                leading         leading
+                    linking (text frames        linking (text
+                                                    boxes)      threading (text)
+                    manage pictures             picture usage   links
+                    n.a.                        project         book
+                    page display color          white color     paper
+                    path text properties        text path
+                                                    tools           type on a path tool
+                    plug-in                     xtension        plug-in
+                    preferences/document
+                      setup                     pref.s          pref.s
+                    prop.s palette              measurem.s
+                                                    palette     control palette
+                    prop.s palette > x, y, z    modify          transform
+                    select item tool            item tool       selection tool
+                    shade                       shade           tint
+                    shear                       skew            shear
+                    story editor                n.a.            story editor
+                    style                       style sheet     style
+                    table of contents           lists           table of contents
+                    text flow (around a frame)  runaround       text wrap
+
+                    }}}
+                    Scribus-Man Checkthrough 1 (2020?) {{{
+
+                    s - Shape
+                    f2 - scribus prop.s palette
+                    draw horiz. line - c-drag
+                    pstoedit (etc)
+                    (c-f + f3/s-f3)
+                        tooltips
+                    .SLA        collect for output
+                    'Fit in window' - c-0
+                     show grids/guides/frames
+                    Hide grids/guides etc - f11
+
+                      windows > outline (+names in prop.s palette)
+                    Bookmarks*  p47
+                      working w. frames  p53
+                    t(ext) i(mage) s(hape) p(olygon)
+
+                    "Sel. under" for frames  p53
+                    Duplicate"++"  csa-d  (etc)
+                      edit frame size - a-arrows
+                    group/ungroup frames - c-g/cs-g
+
+                    (text)story editor - c-y    p63
+                     edit contents of frame - e   c
+                    link/unlink next frame(s) - n/u
+                    resize textframe + contents - ca-drag
+
+                    Styles - p76
+                    Images - p87
+                    ppi etc - p89
+
+                    get image into frame - c-d
+                      scale/repos. image *  p93
+                    image over sever. pages *  p94
+
+                    Shapes/Polygons - p95
+                      straight lines/arrows - l
+                    béz. curves / freehand - p106
+                    col.s/grad.s - p108
+                    color sets - p111
+
+                    Import Vectors - p113 (eg. SVG) *
+                      ps  OODraw + formulas
+
+                    Tables - p122
+                      Master-Pages - p125
+                                (=underlay of fixed elements)
+                        for pages *
+
+                    page numbering - p129
+                     (frame + csa-p)
+
+                    Prefs etc - p131
+                    4.5 Guides
+                    4.6 Typogr. ++  Tools Hyphenator
+                     Fonts  Preflight Verific. (....)
+                    TOC/Indexes
+                    Sections*
+
+                    4.18 External tools
+                     (4.20 Plugins)
+
+                    5.1 The Scrapbook
+                    5.2 Converting frames (*)
+                    Action History *
+                        5.4 Search/Replace
+                    text to path - p152
+                    (importing text w. text filters) ((+styles))
+                                        +regexes - p162
+
+                    [Typogr. + Fonts (+Fontforge)  - p163 *! ***]
+                    5.7.3  fontmatrix (etc?)  + install fonts(*)
+
+                    Drop Caps - p183
+                    short words + hyphen
+                      Spec. Char.s - p192
+                      quotes, ligatures
+
+                     == == == == == ==
+
+                    5.7.7 Lists (incl. Custom) ?
+                      measuring-tool
+                      Prop.s palette - p203
+                    Move/Resize obj.s w. keyoard - p204
+
+                    rotate - r
+                     Multiple Duplicate (**)
+                    Align/Distrib.
+                      Grids  Guides
+                     TOC * - p216
+                    Layer - p219
+
+                    -----
+
+                    Barcode write
+                        6.1 eyedropper + Col. Managem. *
+
+
+                    te:Spot-colors (??)
+                        'the objective of color managem.'  ICC/ICM
+                        Soft proofing
+                       rendering intents
+
+                    7- Export
+                        Presentations (??)
+                    8 - Printing
+                        P.F.Verif. - p278
+                    Booklet printing - p285
+                        professional printing
+
+
+
+                    9 - PDF Forms - p296 ***(!!)
+                     Forms - JS - p305 *
+
+                    PDF Annotations - p312
+                        + Links *
+
+                    10 - PDF Presentations - p316
+
+                    11 - The Scripter - p323 *
+                      Script info - p327
+                    Scripting Basics - p343
+
+
+                    ----
+                    12 - Tips and tricks - "p2-303"
+                        tiled image *
+                       Circular diagram
+                         Borders
+                       Text over images
+                        custom frames
+
+                    Batik + Squiggle
+                                 + +
+                     gsview  kpdf
+                      LProf
+
+                    }}}
+Audacity  @@(!)
+            ~/Empire/Doks/Comp/mu/au/audacity/audacity-shortc.pdf
+            File Menu ----
+                New  c-n
+                Open...  c-o
+                Close  c-w
+                Save Project
+                  Save Project  c-s
+                  Save Project As...
+                  Save Lossless Copy of Project...
+                  Save Compressed Copy of Project...
+                Export
+                  Export as MP3
+                  Export as WAV
+                  Export as OGG
+                  Export Audio...  cs-e
+                  Export Selected Audio...
+                  Export Labels...
+                  Export Multiple...  cs-l
+                  Export MIDI...
+                Import
+                  Import Audio...  cs-i
+                  Labels...
+                  MIDI...
+                  Raw Data...
+                Page Setup...
+                Print...
+                Exit  c-q
+            Edit Menu ----  ___hm_eng
+                Undo  c-z
+                Redo  cs-z
+                Cut  c-x
+                Delete  c-k
+                Copy  c-c
+                Paste  c-v
+                Duplicate  c-d  __
+                Remove Special
+                  Split Cut  ca-x
+                  Split Delete  ca-k
+                  Silence Audio  c-l
+                  Trim Audio  c-t
+                Clip Boundaries
+                  Split  c-i
+                  Split New
+                  Join
+                  Detach at Silences
+                Labels
+                  Edit Labels...
+                  Add Label at Selection  c-b  __
+                  Add Label at Playback Position  c-m
+                  Paste Text to New Label
+                  Type to Create a Label (on/off)
+                Labeled Audio
+                  Cut
+                  Delete
+                  Split Cut  sa-x
+                  Split Delete  sa-k
+                  Silence Audio
+                  Copy  sa-c  __
+                  Split
+                  Join
+                  Detach at Silences  sa-j
+                Metadata...
+                Preferences...  c-p
+            Select Menu ----  ___hm_eng
+                All  c-a
+                None
+                Tracks
+                  Select In All Tracks  cs-k
+                  Select In All Sync-Locked Tracks  cs-y
+                Region
+                  Select Left at Playback Position  [
+                  Select Right at Playback Position  ]
+                  Select Track Start to Cursor  s-j
+                  Select Cursor to Track End  s-k
+                  Select Track Start to End
+                  Store Selection
+                  Retrieve Selection
+                Spectral  ____
+                  Toggle Spectral Selection  q  __
+                  Next Higher Peak Frequency
+                  Next Lower Peak Frequency
+                Clip Boundaries
+                  Previous Clip Boundary to Cursor
+                  Cursor to Next Clip Boundary
+                  ?? Previous Clip  a-,  __
+                  Next Clip  a-.
+                Cursor to Stored Cursor Position
+                Store Cursor Position
+                Select At Zero Crossings  z
+            View Menu ----  ___hm_eng
+                Zoom
+                  Zoom In  c-1
+                  Zoom Out  c-3
+                  Zoom Normal  c-2
+                  Zoom to Selection  c-e
+                  ?? Zoom Toggle  s-z
+                  Advanced Vertical Zooming
+                Track Size
+                  Fit to Width  c-f
+                  Fit to Height  cs-f
+                  Collapse All Tracks  cs-c
+                  Expand Collapsed Tracks  cs-x
+                Skip to
+                  Selection Start
+                  Selection End
+                History...
+                Karaoke...
+                Mixer Board...
+                Toolbars
+                  Reset Toolbars
+                  Transport Toolbar
+                  Tools Toolbar
+                  Recording Meter Toolbar
+                  Playback Meter Toolbar
+                  Mixer Toolbar
+                  Edit Toolbar
+                  Play-at-Speed Toolbar
+                  Scrub Toolbar
+                  Device Toolbar
+                  Selection Toolbar
+                  Time Toolbar
+                  Spectral Selection Toolbar
+                Extra Menus (on/off)
+                Show Clipping (on/off)
+            Transport Menu ----
+                Playing
+                  Play/Stop  Space
+                  Play/Stop and Set Cursor  x  __
+                  Loop Play  s-Space
+                  Pause  p
+                Recording  __
+                  Record  r
+                  Record New Track  s-r
+                  Timer Record...  s-t
+                  Punch and Roll Record  s-d
+                Scrubbing
+                  Scrub
+                  Seek
+                  Scrub Ruler
+                Cursor to
+                  Selection Start
+                  Selection End
+                  Track Start  j  [__]
+                  Track End  k
+                  Previous Clip Boundary
+                  Next Clip Boundary
+                  Project Start  home
+                  Project End  end
+                Play Region
+                  Lock
+                  Unlock
+                Rescan Audio Devices
+                Transport Options
+                  Sound Activation Level...
+                  Sound Activated Recording (on/off)
+                  Pinned Play/Record Head (on/off)
+                  Overdub (on/off)
+                  Software Playthrough (on/off)
+            Tracks Menu
+                Add New
+                  Mono Track
+                  Stereo Track
+                  Label Track
+                  Time Track
+                Mix
+                  Mix Stereo Down to Mono
+                  Mix and Render
+                  Mix and Render to New Track
+                Resample...
+                Remove Tracks
+                Mute/Unmute
+                  Mute All Tracks  c-u
+                  Unmute All Tracks  cs-u
+                  Mute Tracks  ca-u
+                  Unmute Tracks  csa-u
+                Pan
+                  Left
+                  Right
+                  Center
+                Align Tracks
+                  Align End to End
+                  Align Together
+                  Start to Zero
+                  Start to Cursor/Selection Start
+                  Start to Selection End
+                  End to Cursor/Selection Start
+                  End to Selection End
+                  Move Selection with Tracks (on/off)
+                Sort Tracks
+                  By Start Time
+                  By Name
+                Sync-Lock Tracks (on/off)
+            Generate Menu ----  ___hm_eng
+                Add / Remove Plug-ins...
+                Chirp...
+                DTMF Tones...
+                Noise...
+                Silence...
+                Tone...
+                Pluck...
+                Rhythm Track...
+                Risset Drum...
+            Effect Menu ----
+                .
+                Add / Remove Plug-ins...
+            Repeat Last Effect  c-r
+                Amplify...
+                Auto Duck...
+                Bass and Treble...
+                Change Pitch...
+                Change Speed...
+                Change Tempo...
+                Click Removal...
+                Compressor...
+                Distortion...
+                Echo...
+                Fade In
+                Fade Out
+                Filter Curve...
+                Graphic EQ...
+                Invert
+                Loudness Normalization...
+                Noise Reduction...
+                Normalize...
+                Paulstretch...
+                Phaser...
+                Repair
+                Repeat...
+                Reverb...
+                Reverse
+                Truncate Silence...
+                Wahwah...
+                Plug-in 1 to 15
+                  Adjustable Fade...
+                  Clip Fix...
+                  Crossfade Clips
+                  Crossfade Tracks...
+                  Delay...
+                  High-Pass Filter...
+                  Limiter...
+                  Low-Pass Filter...
+                  Noise Gate...
+                  Notch Filter...
+                  Spectral Delete
+                  Spectral edit multi tool
+                  Spectral edit parametric EQ...
+                  Spectral edit shelves...
+                  Studio Fade Out
+                Plug-in 16 to 18
+                  Tremolo...
+                  Vocal Reduction and Isolation...
+                  Vocoder...
+            Analyze Menu ----  ___hm_eng
+                Add / Remove Plug-ins...
+                Contrast...
+                Plot Spectrum...
+                Find Clipping...
+                Beat Finder...
+                Silence Finder...
+                Sound Finder...
+            Tools Menu ----
+                Add / Remove Plug-ins...
+                Macros...
+                Apply Macro
+                  Palette...
+                Reset Configuration
+                Screenshot...
+                Run Benchmark...
+                NyquistPrompt..
+                Nyquist Plug-inInstallen.
+                Regular Interval Labels..
+                Sample DataExport..
+                Sample DataImport..
+            Extra Menu
+                Transport  __
+                  Play
+                  Stop
+                  Play One Second  [ 1 ]
+                  Play to Selection  b
+                  Play Before Selection Start
+                  Play After Selection Start
+                  Play Before Selection End
+                  Play After Selection End
+                  Play Before and After Selection Start
+                  Play Before and After Selection End
+                  Play Cut Preview  c
+                  Scrub Backwards  u
+                  Scrub Forwards  i
+                Tools
+                  Selection Tool  F1
+                  Envelope Tool  F2
+                  Draw Tool  F3
+                  Zoom Tool  F4
+                  Time Shift Tool  F5
+                  Multi Tool  F6
+                  Previous Tool
+                  Next Tool
+                Mixer
+                  Adjust Playback Volume...
+                  Increase Playback Volume
+                  Decrease Playback Volume
+                  Adjust Recording Volume...
+                  Increase Recording Volume
+                  Decrease Recording Volume
+                Edit
+                  Delete Key  Bs
+                  Delete Key2  Del
+                Play-at-Speed
+                  Normal Play-at-Speed
+                  Loop Play-at-Speed
+                  Play Cut Preview-at-Speed
+                  Adjust Playback Speed...
+                  Increase Playback Speed
+                  Decrease Playback Speed
+            Move to Prev./Next Label  a-left/right
+                Seek
+                  Short Seek Left During Playback  left
+                  Short Seek Right During Playback  right
+                  Long Seek Left During Playback  s-left
+                  Long Seek Right During Playback  s-right
+                Device
+                  Change Recording Device...
+                  Change Playback Device...
+                  Change Audio Host...
+                  Change Recording Channels...
+                Selection
+                  Snap-To Off
+                  Snap-To Nearest
+                  Snap-To Prior
+                  Selection to Start  s-Home
+                  Selection to End  s-End
+                  Selection Extend Left  s-left
+                  Selection Extend Right  s-right
+                  Set (or Extend) Left Selection
+                  Set (or Extend) Right Selection
+                  Selection Contract Left  cs-right
+                  Selection Contract Right  cs-left
+                Move Backward Through Active Windows
+                Move Forward Through Active Windows
+                Focus
+                  Move Backward from Toolbars to Tracks  cs-f6  __
+                  Move Forward from Toolbars to Tracks  c-f6
+                  Move Focus to Previous Track  up
+                  Move Focus to Next Track  down
+                  Move Focus to First Track
+                  Move Focus to Last Track
+                  Move Focus to Previous and Select  s-up
+                  Move Focus to Next and Select  s-down
+                  Toggle Focused Track  Return
+                  Toggle Focused Track  k-Enter
+                Cursor
+                  Cursor Left
+                  Cursor Right
+                  Cursor Short Jump Left
+                  Cursor Short Jump Right
+                  Cursor Long jump Left
+                  Cursor Long Jump Right
+                  Clip Left
+                  Clip Right
+                Track
+                  Change Pan on Focused Track...
+                  Pan Left on Focused Track
+                  Pan Right on Focused Track
+                  Change Gain on Focused Track...  s-g  [__]
+                  Increase Gain on Focused Track
+                  Decrease Gain on Focused Track
+                  Open Menu on Focused Track...  s-m  <__>
+                  Mute/Unmute Focused Track  s-u
+                  Solo/Unsolo Focused Track  s-s
+                  Close Focused Track
+                  Move Focused Track Up
+                  Move Focused Track Down
+                  Move Focused Track to Top
+                  Move Focused Track to Bottom
+                Scriptables I
+                  Select Time...
+                  Select Frequencies...
+                  Select Tracks...
+                  Set Track Status...
+                  Set Track Audio...
+                  Set Track Visuals...
+                  Get Preference...
+                  Set Preference...
+                  Set Clip...
+                  Set Envelope...
+                  Set Label...
+                  Set Project...
+                Scriptables II
+                  Select...
+                  Set Track...
+                  Get Info...
+                  Message...
+                  Help...
+                  Import...
+                  Export...
+                  Open Project...
+                  Save Project...
+                  Move Mouse...
+                  Compare Audio...
+                  Screenshot (short format)...
+                Full Screen (on/off)  f11
+            Help Menu ----  ___hm_eng
+                Quick Help...
+                Manual...
+                Diagnostics
+                  Audio Device Info...
+                  MIDI Device Info...
+                  Show Log...
+                  Generate Support Data...
+                  Check Dependencies...
+                Check for Updates...
+                About Audacity...
+Blender
+                ----
+                .
+pdftk  @@[@] [**]  (from Transcribe)
+                .
+                .
+potrace  [@@]
+                .
+                .
+imagick
+                ----
+                .
+ffmpeg  (from Blender at-index (etc))  @(@!)
+                ----
+                .
+fontforge
+                ----
+                .
+Reveal.js  (@@)
+                ----
+                .
+impress.js
+                ----
+                .
+
+
+FFMPEG Extras
+
+~/Dropbox:
+  rsc/aubooks/comp/dolphin-man.tags.txt
+  rsc/aubooks/comp/dolphin-man.txt
+rsc/data/lists/at/Blender.g.txt
+rsc/data/lists/ref/comp/cb/ffmpegcb.txt
+rsc/data/lists/ref/comp/cb/imagickcb.txt
+rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
+rsc/data/lists/ref/comp/pr/media/FFmpeg-Faq-Toc--Docs.txt
+rsc/data/lists/ref/comp/sysadm/cmdl-fu.shell.txt
+rsc/data/lists/ref/graf/pr/MultiMedia.txt
+rsc/Doks/phone/Comp/lang/py/au-transcribe/Py-VoiceCompute-Intro_2018.txt
+rsc/Doks/phone/Comp/lang/py/ipy/ipy-interactive-comp_2013.txt
+rsc/Doks/phone/Comp/sysadm/lin/distro/NixGuix/NixpkgsRefman.txt
+rsc/Doks/phone/graf/pr/Blender/blender-refman_pythonscripting.txt
+rsc/Doks/phone/graf/pr/ffmpeg/FfmpegBook.txt
+rsc/Doks/phone/graf/pr/ffmpeg/ffmpeg-cookb.toc.txt
+rsc/Doks/phone/graf/pr/ffmpeg/Ffmpeg.txt
+rsc/Doks/phone/graf/vid/vidaudcompr.txt
+
+rsc/data/lists/ref/comp/cb/ffmpegcb.txt
+rsc/Doks/phone/graf/pr/ffmpeg/ffmpeg-cookb.toc.txt
+
+
+- Great. Just as a clarifier (on a previous snippet of our conversation above), I would like to learn a lot more about the ffmpeg command and its uses in the future.
+
+I'll just outline it here for future reference:
+
+I find that when learning about a complex and versatile command like ffmpeg, it's quite tricky to just try to force-feed oneself 50 or a hundred different flags and what they do.
+
+What I instead try to do is to approach it from several different angles a bit in tandem.
+
+- What are the broad areas of utility where the command can be used (i.e. conversion, adding audio to a video track, cropping video, etc etc)
+- Taking a glance at specific flags and see what they do
+- Listing areas of multimedia problems I suspect could be solved with ffmpeg
+- Organizing an overview of one or more manuals/documentation into broad areas of use
+etc
+
+
+You've outlined an excellent and effective strategy for learning ffmpeg. Approaching it from multiple angles simultaneously is much more effective than rote memorization of flags. Here's a refined version of your approach and how I can help:
+
+Your Learning Strategy (Refined):
+
+Broad Areas of Utility (Categories of Tasks): Identifying the broad categories of tasks that ffmpeg can handle is a great starting point. Here are some key categories:
+
+Transcoding (Conversion): Converting between different video and audio formats (e.g., MP4 to AVI, MP3 to AAC).
+Encoding/Decoding: Changing the encoding parameters within a format (e.g., changing the bitrate or codec of an MP4 video).
+Demuxing/Muxing: Separating audio and video streams from a container (demuxing) or combining them into a container (muxing).
+Filtering: Applying various filters to audio and video streams (e.g., scaling, cropping, adding watermarks, applying effects).
+Metadata Manipulation: Adding, editing, or removing metadata (e.g., tags, titles, album art).
+Streaming: Streaming audio and video over a network.
+Device Capture: Capturing audio and video from devices (e.g., webcams, microphones, screens).
+Exploring Specific Flags (Targeted Learning): Instead of trying to learn all the flags at once, focus on the flags relevant to the specific tasks you want to accomplish. As you encounter new tasks, you'll learn new flags.
+
+Listing Multimedia Problems (Problem-Driven Learning): This is a very effective approach. When you encounter a multimedia problem (e.g., "How do I extract the audio from this video?"), try to solve it with ffmpeg. This makes the learning process more practical and engaging.
+
+Organizing Documentation (Structured Overview): The official ffmpeg documentation is comprehensive but can be overwhelming. Creating your own structured overview based on the broad areas of utility can be very helpful.
+
+How I Can Help (Aligned with Your Strategy):
+
+Category-Based Examples: I can provide ffmpeg commands and explanations organized by the broad areas of utility listed above.
+Flag Explanations: When explaining commands, I will provide detailed explanations of the relevant flags, including their syntax, purpose, and usage examples.
+Problem-Solving Assistance: If you have a specific multimedia problem you want to solve with ffmpeg, I can help you construct the command and explain the reasoning behind it.
+Documentation Summarization: I can help you summarize and organize information from the ffmpeg documentation related to specific areas of use.
+Example (Transcoding):
+
+Let's say you want to convert a .mov file to .mp4.
+
+Category: Transcoding.
+Basic Command: ffmpeg -i input.mov output.mp4
+Relevant Flags:
+-i: Specifies the input file.
+No other flags are strictly required for a basic conversion, as ffmpeg will usually choose appropriate defaults.
+Problem: "I need to convert a .mov file to .mp4 so I can play it on my phone."
+Documentation: You can then consult the ffmpeg documentation for more advanced options related to MP4 encoding, such as setting the video codec (-c:v), audio codec (-c:a), bitrate (-b:v, -b:a), and quality (-crf).
+Example (Filtering - Cropping):
+
+Let's say you want to crop a video to remove black bars.
+
+Category: Filtering.
+Relevant Flags:
+-filter:v crop=w:h:x:y: This is the crop filter.
+w: Output width.
+h: Output height.
+x: X-coordinate of the top-left corner of the cropped area.
+y: Y-coordinate of the top-left corner of the cropped area.
+Problem: "My video has black bars at the top and bottom, and I want to remove them."
+Example Command: ffmpeg -i input.mp4 -filter:v "crop=1280:720:0:100" output.mp4 (This crops the video to 1280x720, starting at coordinates 0,100.)
+Documentation: You can then refer to the ffmpeg documentation for more details on the crop filter and other video filters.
+By following this combined approach, you'll learn ffmpeg more effectively and be able to apply it to a wide range of multimedia tasks. I'm here to help you through this process. Just provide specific tasks, problems, or areas you want to explore, and I'll provide relevant commands, explanations, and documentation summaries.
+
+
+- Oh, and one more: Trying to extract and list (and organize with the other overview material) areas and problems where different people have found ffmpeg useful
+
+That's an excellent addition to your learning strategy. Understanding how others use ffmpeg in real-world scenarios can provide valuable insights and inspiration. Here's how we can approach this:
+
+1. Common Use Cases and Problems Solved by ffmpeg:
+
+Here's a breakdown of common areas where people find ffmpeg useful, along with specific problems it solves:
+
+Video Conversion and Format Compatibility:
+Problem: Playing a video file on a device that doesn't support its format (e.g., playing an MKV file on an older DVD player).
+ffmpeg Solution: Converting the video to a widely supported format like MP4 or AVI.
+Example: ffmpeg -i input.mkv output.mp4
+Reducing File Size:
+Problem: A video file is too large to share or store efficiently.
+ffmpeg Solution: Reducing the video bitrate or using a more efficient codec.
+Example: ffmpeg -i input.mp4 -b:v 1000k output.mp4 (reduces video bitrate)
+Extracting Audio from Video:
+Problem: You need the audio track from a video file.
+ffmpeg Solution: Extracting the audio stream to a separate audio file (e.g., MP3, WAV).
+Example: ffmpeg -i input.mp4 -vn output.mp3 (-vn disables video)
+Joining/Concatenating Video Files:
+Problem: You have multiple video clips that you want to combine into a single video.
+ffmpeg Solution: Concatenating the video files.
+Example: This is a bit more complex and usually involves creating a text file listing the input files.
+Splitting/Cutting Video Files:
+Problem: You want to extract a specific segment from a video file.
+ffmpeg Solution: Cutting the video at specific timestamps.
+Example: ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 output.mp4 (extracts the segment from 1:00 to 2:00)
+Adding Subtitles:
+Problem: You want to add subtitles to a video.
+ffmpeg Solution: Embedding subtitle files (e.g., SRT, ASS) into the video.
+Example: ffmpeg -i input.mp4 -vf subtitles=subtitles.srt output.mp4
+Adding Watermarks:
+Problem: You want to add a logo or watermark to a video.
+ffmpeg Solution: Overlaying an image onto the video.
+Example: ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=10:10" output.mp4 (overlays watermark.png at position 10,10)
+Changing Video Resolution/Scaling:
+Problem: You need to resize a video to fit a specific screen or device.
+ffmpeg Solution: Scaling the video to a different resolution.
+Example: ffmpeg -i input.mp4 -vf scale=1280:720 output.mp4
+Rotating/Flipping Videos:
+Problem: A video is rotated incorrectly.
+ffmpeg Solution: Rotating or flipping the video.
+Example: ffmpeg -i input.mp4 -vf "transpose=1" output.mp4 (rotates 90 degrees clockwise)
+Creating GIFs from Videos:
+Problem: You want to create an animated GIF from a short video clip.
+ffmpeg Solution: Extracting frames and encoding them into a GIF.
+Example: This usually requires a few steps involving palette generation.
+Streaming Video:
+Problem: You want to stream a video over a network.
+ffmpeg Solution: Streaming to various protocols like RTMP or HLS.
+2. Finding Real-World Examples:
+
+Online Forums and Communities: Search online forums like Stack Overflow, Reddit (subreddits like r/ffmpeg), and video production forums for ffmpeg use cases and solutions.
+Blog Posts and Tutorials: Many blog posts and tutorials demonstrate how to use ffmpeg for specific tasks. Search for tutorials related to the problems you're interested in.
+Scripts and Projects: Look for open-source scripts or projects that use ffmpeg. This can give you practical examples of how ffmpeg is used in larger contexts.
+3. Creating Your Own Use Case List:
+
+Start creating your own list of multimedia problems you encounter or anticipate encountering. Then, try to find ffmpeg solutions for them. This will make your learning more focused and relevant.
+
+How I Can Help with This:
+
+I can provide more detailed explanations and examples for each of the use cases listed above.
+If you have a specific multimedia problem, I can help you find or construct the appropriate ffmpeg command.
+I can help you interpret and understand ffmpeg commands you find online.
+By combining this approach with the other learning strategies we discussed, you'll be well on your way to mastering ffmpeg and using it effectively for a wide range of multimedia tasks. Just let me know which area you want to explore further, or if you have a specific problem you'd like to solve.
+
