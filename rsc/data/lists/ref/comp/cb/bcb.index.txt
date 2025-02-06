@@ -4,7 +4,7 @@ vim: fdm=indent:fdl=2:
 ~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
 
-PackMan =MERGELIST: apt/aptitude, pacman, choco  pip
+PackMan =MERGELIST: apt/aptitude, pacman/yay, choco  pip
                 Install package
                     sudo apt -y install program
                     pacman -S program

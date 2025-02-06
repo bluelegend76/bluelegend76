@@ -113,6 +113,7 @@ read -p "Tip: Now try Refreshing Fluxbox: "
 
 echo "Installing Git ... "
 pacman -S meld diffuse
+# yay -S gitkraken
 # git-gui
 # git
 
