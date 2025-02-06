@@ -12,6 +12,10 @@ TODO [=MAY WANT TO MOVE 'GREPS' HERE (i.e.
   - grep
   - rg
 
+C# Regex  __
+Perlstyle Regex  ____
+[TODO: ADD PDF-REF]
+
  ~/Empire/Doks/Comp/regex/regcb.pdf
             1 - Introduction to Regular Expressions  1 ----
             Regular Expressions Defined  1

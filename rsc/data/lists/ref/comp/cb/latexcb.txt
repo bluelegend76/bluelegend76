@@ -1,15 +1,81 @@
+vim:fdm=indent:fdl=2:
 set foldmethod=indent foldlevel=2
-vim: fdm=indent:fdl=2:
 
-(+Maybe subsumes new vim-latex (=Latex-Suite(!)))
+PowerPoint
+LOffice Impress
 
+Pandoc
+Reveal
+Impress
+
+Emacs Org
+Markdown
+GitHub-flavor Markdown
+Mermaid
+PlantUml
+----
+markdown extra
+MultiMarkdown
+writers markdown
+----
+Xml
+Emacs XML-Mode
+Vim Xml-Tools
+json, yaml  # look at more m.u. formats
+vim json-tools
+Context
+texinfo
+Docbook
+Wiki
+
+Gemini-Question: Listing different Markdown flavors 
+                - Standard Markdown:
+                The original and most basic flavor.
+                - GitHub-Flavored Markdown (GFM): Popularized by GitHub, it adds features like tables, task lists, and user mentions.
+                - CommonMark: A standardized and stricter version of Markdown.
+                - Markdown Extra: Extends Standard Markdown with features like tables, fenced code blocks, and definition lists.
+                - MultiMarkdown: A powerful flavor with advanced features like footnotes, citations, and metadata.
+                - Pandoc Markdown: A versatile flavor supported by the Pandoc document converter, offering a wide range of extensions.
+                - Kramdown: A robust Markdown superset used by Jekyll and Ruby on Rails.
+                - Discount: An early and influential Markdown implementation.
+                - PEG Markdown: A modern parser for Markdown based on Parsing Expression Grammars.
+                - Remark: A fast and efficient Markdown parser.
+                - Maruku: Another popular Markdown parser with a focus on simplicity and readability.
+                - Markdown Here: A browser extension that allows you to easily write and preview Markdown. (Not strictly a "flavor" but a significant implementation)
+                - StackEdit: A cloud-based Markdown editor with support for various flavors. (Similar to Markdown Here)
+                - MyST Markdown: A flavor specifically designed for scientific and technical documentation, with support for mathematical equations (using LaTeX).
+                - GitHub Pages Markdown: The flavor used for creating websites with GitHub Pages.
+                - Hugo Markdown: The flavor used by the Hugo static site generator, with features like shortcodes and front matter.
+                - Mermaid Markdown: While technically a separate language, it's often used within Markdown documents for creating diagrams and flowcharts.
+                - PlantUML Markdown: Similar to Mermaid, allows embedding PlantUML diagrams within Markdown.
+                - Critic Markup: Designed for peer review and collaborative editing of Markdown documents.
+                - Org-mode: While not strictly Markdown, it's a powerful text-based outlining and organization system with some Markdown-like features.
+                Restructured Text (reST):
+                    A markup language developed by the Python documentation project.
+                    Known for its clear and concise syntax.
+                    Often used for technical documentation, especially within the Python ecosystem.
+                Python Markdown:
+                    While there isn't an official "Python Markdown" standard, this generally refers to Markdown implementations and libraries written in Python.
+                    Popular libraries include markdown and mistune.
+                    These libraries provide Python developers with tools to parse, render, and manipulate Markdown text.
+                Jupyter Markdown:
+                    A variant of Markdown used within Jupyter Notebooks.
+                    Supports features like code blocks, equations (using LaTeX), and interactive elements.
+                Sphinx Markdown:
+                    The flavor used by the Sphinx documentation generation system.
+                    Extends Markdown with features like directives for including code blocks, cross-referencing, and generating tables of contents.
+
+Pdf
+Emacs Pdf-Tools
+a2ps
+
+Vim LatexSuite
+----
 ~/Empire/Doks/Comp/lang/tex/latex/Freedman_LaTeXCheatSheet.pdf
 ~/Empire/Doks/Comp/lang/tex/latex/latexcheatsheet.pdf [@]
   ~/Empire/Doks/Comp/lang/tex/latex/notes4pros-latex.pdf
-
   [+pull out all methods etc from 'Beautiful Typography in Tex and Friends' ****]
   https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends#24719
-
     https://www.scribd.com/read/287708181/LaTeX-Cookbook
 evince -p 1 ~/Dropbox/rsc/data/lists/ref/comp/cb/latexcb.pdf &
             Downloading the example code
@@ -224,6 +290,4 @@ evince -p 1 ~/Dropbox/rsc/data/lists/ref/comp/cb/latexcb.pdf &
               Frequently Asked Questions
             Using web forums
             Framing a really good question
-
-[=Include Reveal.js/Impress.js here(??)]
 

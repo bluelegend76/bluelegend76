@@ -1,10 +1,7 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
-~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
-~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
-
-PackMan =MERGELIST: apt/aptitude, pacman/yay, choco  pip
+META.PackMan: apt/aptitude, pacman/yay, choco  pip
                 Install package
                     sudo apt -y install program
                     pacman -S program
@@ -466,1139 +463,16 @@ bcb (**(!))
             Unpacking the Archive
             What's in the Archive
             Who Do I Turn To?
+~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
+~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
 
-~/Empire/Doks/Comp/sysadm/lin/ref/lincmdref.list.pdf
-~/Empire/Doks/Comp/sysadm/lin/ref/lincmds.de.pdf
-
-Index/Categories
-                Part I User Commands ----
-                    addftinfo
-                    afmtodit
-                    ansi2knr
-                    anytopnm
-                    appres
-                    ar
-                    arch
-                    GNU as
-                    asciitopgm
-                    atktopbm
-                    bash
-                    bdftopcf
-                    beforelight
-                    biff
-                    bioradtopgm
-                    bitmap, bmtoa, atobm
-                    bmptoppm
-                    brushtopbm
-                    cal
-                    cat
-                    chattr
-                    chfn
-                    chgrp
-                    chkdupexe
-                    chmod
-                    chown
-                    chsh
-                    ci
-                    cidentd
-                    cksum
-                    clear
-                    cmuwmtopbm
-                    co
-                    col
-                    colcrt
-                    colrm
-                    column
-                    comm
-                    convdate
-                    cp
-                    cccp, cpp
-                    crontab
-                    csplit
-                    ctags
-                    cu
-                    cut
-                    cvs
-                    date
-                    dd
-                    depmod, modprobe
-                    df
-                    dig
-                    dnsquery
-                    domainname
-                    dsplit
-                    du
-                    editres
-                    elvis, ex, vi, view, input
-                    elvprsv
-                    elvrec
-                    emacs
-                    emacstool
-                    etags
-                    expand
-                    find
-                    fitstopnm
-                    fmt
-                    fold
-                    free
-                    fsinfo
-                    fslsfonts
-                    fstobdf
-                    fstopgm
-                    ftp
-                    fuser
-                    g++
-                    g3topbm
-                    gawk
-                    gcal
-                    gcc, g++
-                    gemtopbm
-                    geqn
-                    getlist
-                    getopt
-                    giftopnm
-                    gindxbib
-                    glookbib
-                    gnroff
-                    gouldtoppm
-                    gpic
-                    gprof
-                    grefer
-                    grep, egrep, fgrep
-                    grephistory
-                    grodvi
-                    groff
-                    grog
-                    grops
-                    grotty
-                    gsoelim
-                    gtbl
-                    gtroff
-                    gzip, gunzip, zcatgzip, gunzip, zcat
-                    gzexe
-                    head
-                    hexdump
-                    hipstopgm
-                    host
-                    hostid
-                    hostname
-                    hpcdtoppm v0.3
-                    httpd
-                    icontopbm
-                    ident
-                    ilbmtoppm
-                    imake
-                    imgtoppm
-                    inews
-                    info
-                    innconfval
-                    insmod
-                    install
-                    installit
-                    ispell, buildhash, munchlist, findaffix, tryaffix, icombine, ijoin
-                    join
-                    kill
-                    killall
-                    ksyms
-                    last
-                    lbxproxy
-                    ld
-                    lispmtopgm
-                    lkbib
-                    ln
-                    lndir
-                    locate
-                    logger
-                    login
-                    look
-                    lpq
-                    lpr
-                    lprm
-                    lptest
-                    ls, dir, vdir
-                    lsattr
-                    lsmod
-                    lynx
-                    macptopbm
-                    make
-                    makedepend
-                    makestrs
-                    mattrib
-                    mbadblocks
-                    mcd
-                    mcookie
-                    mcopy
-                    md5sum
-                    mdel
-                    mdeltree
-                    mdir
-                    merge
-                    mesg
-                    mformat
-                    mgrtopbm
-                    mkdir
-                    mkdirhier
-                    mkfifo
-                    mkmanifest
-                    mknod
-                    mlabel
-                    mmd
-                    mmount
-                    mmove
-                    more
-                    mrd
-                    mread
-                    mren
-                    mtest
-                    mtools
-                    mtvtoppm
-                    mtype
-                    mv
-                    mwrite
-                    namei
-                    newaliases
-                    newgrp
-                    nl
-                    nlmconv
-                    nm
-                    nntpget
-                    objcopy
-                    objdump
-                    oclock
-                    od
-                    passwd
-                    paste
-                    pbmclean
-                    pbmfilters
-                    pbmlife
-                    pbmmake
-                    pbmmask
-                    pbmpscale
-                    pbmreduce
-                    pbmtext
-                    pbmto10x
-                    pbmto4425
-                    pbmtoascii
-                    pbmtoatk
-                    pbmtobg
-                    pbmtocmuwm
-                    pbmtoepsi
-                    pbmtoepson
-                    pbmtog3
-                    pbmtogem
-                    pbmtogo
-                    pbmtoicon
-                    pbmtolj
-                    pbmtoln03
-                    pbmtolps
-                    pbmtomacp
-                    pbmtomgr
-                    pbmtopgm
-                    pbmtopi3
-                    pbmtopk
-                    pbmtoplot
-                    pbmtoptx
-                    pbmtox10bm
-                    pbmtoxbm
-                    pgmtoybm
-                    pbmtozinc
-                    pbmupc
-                    pcxtoppm
-                    pfbtops
-                    pgmbentley
-                    pgmcrater
-                    pgmedge
-                    pgmenhance
-                    pgmhist
-                    pgmkernel
-                    pgmnoise
-                    pgmnorm
-                    pgmoil
-                    pgmramp
-                    pgmtexture
-                    pgmtofs
-                    pgmtolispm
-                    pgmtopbm
-                    pgmtoppm
-                    pi1toppm
-                    pi3topbm
-                    picttoppm
-                    pjtoppm
-                    pktopbm
-                    pnmalias
-                    pnmarith
-                    pnmcat
-                    pnmcomp
-                    pnmconvol
-                    pnmcrop
-                    pnmcut
-                    pnmdepth
-                    pnmenlarge
-                    pnmfile
-                    pnmflip
-                    pnmgamma
-                    pnmhistmap
-                    pnmindex
-                    pnminvert
-                    pnmmargin
-                    pnmnlfilt
-                    pnmnoraw
-                    pnmpad
-                    pnmpaste
-                    pnmrotate
-                    pnmscale
-                    pnmshear
-                    pnmsmooth
-                    pnmtile
-                    pnmtoddif
-                    pnmtofits
-                    pnmtops
-                    pnmtorast
-                    pnmtosgi
-                    pnmtosir
-                    pnmtotiff
-                    pnmtoxwd
-                    ppm3d
-                    ppmbrighten
-                    ppmchange
-                    ppmdim
-                    ppmdist
-                    ppmdither
-                    ppmflash
-                    ppmforge
-                    ppmhist
-                    ppmmake
-                    ppmmix
-                    ppmnorm
-                    ppmntsc
-                    ppmpat
-                    ppmquant
-                    ppmquantall
-                    ppmqvga
-                    ppmrelief
-                    ppmshift
-                    ppmspread
-                    ppmtoacad
-                    ppmtobmp
-                    ppmtogif
-                    ppmtoicr
-                    ppmtoilbm
-                    ppmtomap
-                    ppmtomitsu
-                    ppmtopcx
-                    ppmtopgm
-                    ppmtopi1
-                    ppmtopict
-                    ppmtopj
-                    ppmtopjxl
-                    ppmtopuzz
-                    ppmtorgb3
-                    ppmtosixel
-                    ppmtotga
-                    ppmtouil
-                    ppmtoxpm
-                    ppmtoyuv
-                    ppmtoyuvsplit
-                    pr
-                    ps
-                    psbb
-                    psidtopgm
-                    pstopnm
-                    pstree
-                    psupdate
-                    qrttoppm
-                    quota
-                    ranlib
-                    rasttopnm
-                    rawtopgm
-                    rawtoppm
-                    rcp
-                    rcs
-                    rcsclean
-                    rcsdiff
-                    rcsfreeze
-                    rcsintro
-                    rcsmerge
-                    rdist
-                    xixii
-                    reconfig
-                    ref
-                    reset
-                    resize
-                    rev
-                    rgb3toppm
-                    rlog
-                    rlogin
-                    rm
-                    rmdir
-                    rmmod
-                    rnews
-                    rpcgen
-                    rsh
-                    rstart
-                    rstartd
-                    rup
-                    rusers
-                    rwall
-                    rwho
-                    script
-                    sed
-                    sessreg
-                    setterm
-                    sgitopnm
-                    shar
-                    shlock
-                    showrgb
-                    shrinkfile
-                    sirtopnm
-                    size
-                    sldtoppm
-                    smproxy
-                    sort
-                    spctoppm
-                    split
-                    spottopgm
-                    sputoppm
-                    sq
-                    startx
-                    strings
-                    strip
-                    subst
-                    sum
-                    SuperProbe
-                    tac
-                    tail
-                    talk
-                    tcal
-                    telnet
-                    tfmtodit
-                    tftp
-                    tgatoppm
-                    tifftopnm
-                    tin, rtin, cdtin, tind
-                    tload
-                    top
-                    touch
-                    tr
-                    tset, reset
-                    tsort
-                    twm
-                    txt2gcal
-                    ul
-                    unexpand
-                    uniq
-                    unshar
-                    updatedb
-                    uptime
-                    userlist
-                    uucp
-                    uuencode
-                    uustat
-                    uux
-                    uuxqt
-                    w
-                    wall
-                    wc
-                    whereis
-                    write
-                    x11perf
-                    x11perfcomp
-                    xargs
-                    xauth
-                    xbmtopbm
-                    xcmsdb
-                    xclock
-                    xclipboard
-                    xconsole
-                    xcutsel
-                    xdm
-                    xdpyinfo
-                    Xf86_Accel
-                    XF86_Mono
-                    XF86_SVGA
-                    XF86_VGA16
-                    xf86config
-                    xfd
-                    XFree86
-                    xfs
-                    xhost
-                    xieperf
-                    ximtoppm
-                    xinetd
-                    xinit
-                    xkill
-                    xlogo
-                    xlsatoms
-                    xlsclients
-                    xlsfonts
-                    xmag
-                    xmkmf
-                    xmodmap
-                    xon
-                    xpmtoppm
-                    xprop
-                    xrdb
-                    xrefresh
-                    Xserver
-                    xset
-                    xsetroot
-                    xsm
-                    xsmclient
-                    xstdcmap
-                    xterm
-                    Xvfb
-                    xvidtune
-                    xvminitoppm
-                    xwd
-                    xwdtopnm
-                    xwininfo
-                    xwud
-                    ybmtopbm
-                    ytalk
-                    yuvplittoppm
-                    yuvtoppm
-                    zcmp, zdiff
-                    zeisstopnm
-                    zforce
-                    zgrep
-                    zmore
-                    znew
-                Part II System Calls ----
-                    exit
-                    accept
-                    access
-                    acct
-                    adjtimex
-                    alarm
-                    bdflush
-                    bind
-                    brk, sbrk
-                    cacheflush
-                    chdir, fchdir
-                    chmod, fchmod
-                    chown, fchown
-                    chroot
-                    clone
-                    close
-                    connect
-                    dup, dup2
-                    execve
-                    fcntl
-                    fdatasync
-                    flock
-                    fork, vfork
-                    fsync
-                    getdents
-                    getdomainname, setdomainname
-                    getdtablesize
-                    getgid, getegid
-                    getgroups, setgroups
-                    gethostid, sethostid
-                    gethostname, sethostname
-                    getitimer, setitimer
-                    getpagesize
-                    getpeername
-                    getpid, getppid
-                    getpriority, setpriority
-                    getrlimit, getrusage, setrlimit
-                    getsid
-                    getsockname
-                    getsockopt, setsockopt
-                    gettimeofday, settimeofday
-                    getuid, geteuid
-                    idle
-                    ioctl
-                    ioperm
-                    iopl
-                    ipc
-                    kill
-                    killpg
-                    link
-                    listen
-                    llseek
-                    lseek
-                    mkdir
-                    mknod
-                    mlock
-                    mlockall
-                    mmap, munmap
-                    modify_ldt
-                    get_kernel_syms, create_module, init_module, delete_module
-                    mount, umount
-                    mprotect
-                    mremap
-                    msgctl
-                    msgget
-                    msgop
-                    msync
-                    munlock
-                    munlockall
-                    nanosleep
-                    nice
-                    oldfstat, oldlstat, oldstat, oldolduname, olduname
-                    open, creat
-                    outb, outw, outl, outsb, outsw, outsl
-                    pause
-                    personality
-                    phys
-                    pipe
-                    profil
-                    ptrace
-                    quotactl
-                    read
-                    readdir
-                    readlink
-                    readv, writev
-                    reboot
-                    recv, recvfrom, recvmsg
-                    rename
-                    rmdir
-                    sched_get_priority_max, sched_get_priority_min
-                    sched_rr_get_interval
-                    sched_setparam, sched_getparam
-                    sched_setscheduler, sched_getscheduler
-                    sched_yield
-                    select, FD_CLR, FD_ISSET, FD_SET, FD_ZERO
-                    semctl
-                    semget
-                    semop
-                    send, sendto, sendmsg
-                    setfsgid
-                    setfsuid
-                    setgid
-                    setpgid, getpgid, setpgrp, getpgrp
-                    setregid, setegid
-                    setreuid, seteuid
-                    setsid
-                    setuid
-                    setup
-                    shmctl
-                    shmget
-                    shmop
-                    shutdown
-                    sigaction, sigprocmask, sigpending, sigsuspend
-                    signal
-                    sigblock, siggetmask, sigsetmask, sigmask
-                    sigpause
-                    sigreturn
-                    sigvec
-                    socket
-                    socketcall
-                    socketpair
-                    stat, fstat, lstat
-                    statfs, fstatfs
-                    stime
-                    swapon, swapoff
-                    symlink
-                    sync
-                    sysctl
-                    sysfs
-                    sysinfo
-                    syslog
-                    termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfgetospeed,
-                    cfgetispeed, cfsetispeed, cfsetospeed, tcgetpgrp, tcsetpgrp
-                    time
-                    times
-                    truncate, ftruncate
-                    umask
-                    uname
-                    none
-                    afs_syscall, break, gtty, lock, mpx, prof, quotactl, stty, ustat
-                    unlink
-                    uselib
-                    ustat
-                    utime, utimes
-                    vhangup
-                    vm86
-                    wait, waitpid
-                    wait3, wait4
-                    write
-                Part III Library Functions ----
-                    abort
-                    abs
-                    acos
-                    acosh
-                    alloca
-                    asin
-                    asinh
-                    assert
-                    atan
-                    atan2
-                    atanh
-                    atexit
-                    atof
-                    atoi
-                    atol
-                    bcmp
-                    bcopy
-                    bsearch
-                    bcmp, bcopy, bzero, memccpy, memchr, memcmp, memcpy, memfrob, memmem,
-                    memmove, memset
-                    htonl, htons, ntohl, ntohs
-                    bzero
-                    catgets
-                    catopen, catclose
-                    ceil
-                    clientlib
-                    clock
-                    closedir
-                    confstr
-                    copysign
-                    cos
-                    cosh
-                    crypt
-                    ctermid
-                    asctime, ctime, gmtime, localtime, mktime
-                    difftime
-                    div
-                    drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48,
-                    seed48, lcong48
-                    drem
-                    ecvt, fcvt
-                    erf, erfc
-                    execl, execlp, execle, exect, execv, execvp
-                    errno
-                    exit
-                    exp, log, log10, pow
-                    expm1, log1p
-                    fabs
-                    fclose
-                    clearerr, feof, ferror, fileno
-                    fflush, fpurge
-                    ffs
-                    fgetgrent
-                    fgetpwent
-                    floor
-                    fmod
-                    fnmatch
-                    fopen, fdopen, freopen
-                    fpathconf, pathconf
-                    fread, fwrite
-                    frexp
-                    fgetpos, fseek, fsetpos, ftell, rewind
-                    ftime
-                    ftok
-                    ftw
-                    gcvt
-                    getcwd, get_current_dir_name, getwd
-                    getdirentries
-                    getenv
-                    getgrent, setgrent, endgrent
-                    getgrnam, getgrgid
-                    getlogin, cuserid
-                    getmntent, setmntent, addmntent, endmntent, hasmntopt
-                    getnetent, getnetbyaddr, getnetbyname, setnetent, endnetent
-                    getopt
-                    getpass
-                    getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent
-                    getpw
-                    getpwent, setpwent, endpwent
-                    getpwnam, getpwuid
-                    fgetc, fgets, getc, getchar, gets, ungetc
-                    getservent, getservbyname, getservbyport, setservent, endservent
-                    getusershell, setusershell, endusershell
-                    getutent, getutid, getutline, pututline, setutent, endutent, utmpname
-                    getw, putw
-                    glob, globfree
-                    hosts_access, hosts_ctl
-                    hcreate, hdestroy, hsearch
-                    hypot
-                    index, rindex
-                    inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof,
-                    inet_netof
-                    infnan
-                    initgroups
-                    inndcomm
-                    insque, remque
-                    isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint,
-                    ispunct, isspace, isupper, isxdigit
-                    isatty
-                    isinf, isnan, finite
-                    j0, j1, jn, y0, y1, yn
-                    killpg
-                    labs
-                    ldexp
-                    ldiv
-                    lgamma
-                    libinn
-                    libpbm
-                    libpgm
-                    libpnm
-                    libppm
-                    localeconv
-                    longjmp
-                    lfind, lsearch
-                    calloc, malloc, free, realloc
-                    mblen
-                    mbstowcs
-                    mbtowc
-                    memccpy
-                    memchr
-                    memcmp
-                    memcpy
-                    memfrob
-                    memmem
-                    memmove
-                    memset
-                    mkfifo
-                    mkstemp
-                    mktemp
-                    modf
-                    asctime, ctime, difftime, gmtime, localtime, mktime
-                    tzset
-                    on_exit
-                    opendir
-                    parsedate
-                    perror
-                    popen, pclose
-                    printf, fprintf, sprintf, snprintf, vprintf, vfprintf, vsprintf, vsnprintf
-                    psignal
-                    putenv
-                    putpwent
-                    fputc, fputs, putc, putchar, puts
-                    qio
-                    qsort
-                    raise
-                    rand, srand
-                    random, srandom, initstate, setstate
-                    readdir
-                    readv, writev
-                    realpath
-                    Re_comp, re_exec
-                    regcomp, regexec, regerror, regfree
-                    remove
-                    res_query, res_search, res_mkquery, res_send, res_init, dn_comp,
-                    dn_expand
-                    rewinddir
-                    rint
-                    rquota
-                    scandir, alphasort
-                    scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf
-                    seekdir
-                    setbuf, setbuffer, setlinebuf, setvbuf
-                    setenv
-                    setjmp
-                    setlocale
-                    siginterrupt
-                    sigemptyset, sigfillset, sigaddset, sigdelset, sigismember
-                    sin
-                    sinh
-                    sleep
-                    snprintf, vsnprintf
-                    sqrt
-                    stdarg
-                    stdio
-                    stpcpy
-                    strcasecmp, strncasecmp
-                    strcat, strncat
-                    strchr, strrchr
-                    strcmp, strncmp
-                    strcoll
-                    strcpy, strncpy
-                    strdup
-                    strerror
-                    strfry
-                    strftime
-                    strcasecmp, strcat, strchr, strcmp, strcoll, strcpy, strcspn, strdup, strfry,
-                    strlen, strncat, strncmp, strncpy, strncasecmp, strpbrk, strrchr, strsep,
-                    strspn, strstr, strtok, strxfrm, index, rindex
-                    strlen
-                    strpbrk
-                    strptime
-                    strsep
-                    strsignal
-                    strspn, strcspn
-                    strstr
-                    strtod
-                    strtok
-                    strtol
-                    strtoul
-                    strxfrm
-                    swab
-                    sysconf
-                    closelog, openlog, syslog
-                    system
-                    tan
-                    tanh
-                    telldir
-                    tempnam
-                    termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw,
-                    cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, tcgetpgrp, tcsetpgrp
-                    tmpfile
-                    tmpnam
-                    toascii
-                    toupper, tolower
-                    tsearch, tfind, tdelete, twalk
-                    ttyname
-                    tzset
-                    none
-                    usleep
-                    wcstombs
-                    wctomb
-                Part IV Special Files ----
-                    charsets
-                    console
-                    console_codes
-                    console ioctls
-                    fd
-                    hd
-                    ispell
-                    lp
-                    mem, kmem, port
-                    mouse
-                    null, zero
-                    ram
-                    sd
-                    st
-                    tty
-                    ttys
-                    vcs, vcsa
-                Part V File Formats ----
-                    active, active.times
-                    adduser.conf
-                    aliases
-                    xxiiixxiv
-                    Linux Complete Command Reference
-                    cfingerd
-                    cfingerd.conf
-                    cfingerd text rules
-                    control.ctl
-                    cvs
-                    DEVINFO
-                    environ
-                    expire.ctl
-                    exports
-                    filesystems
-                    fstab
-                    groff_font
-                    groff_out
-                    group
-                    history
-                    hosts.nntp, hosts.nntp.nolimit
-                    hosts_access
-                    hosts_options
-                    inittab
-                    inn.conf
-                    innwatch.ctl
-                    ipc
-                    issue
-                    lilo.conf
-                    MAKEDEV.cfg
-                    moderators
-                    /etc/modules
-                    motd
-                    mtools
-                    newsfeeds
-                    newslog
-                    nfs
-                    nnrp.access
-                    nntpsend.ctl
-                    nologin
-                    overview.fmt
-                    passwd
-                    passwd.nntp
-                    pbm
-                    pgm
-                    pnm
-                    ppm
-                    /proc
-                    protocols
-                    rcsfile
-                    resolver
-                    securetty
-                    services
-                    shells
-                    syslog.conf
-                    termcap
-                    ttytype
-                    tzfile
-                    utmp, wtmp
-                    uuencode
-                    XF86Config
-                Part VI Games ----
-                    banner
-                    ddate
-                Part VII Miscellaneous ----
-                    ascii
-                    bootparam
-                    groff_me
-                    groff_mm
-                    groff_ms
-                    hier
-                    hostname
-                    iso_8859_1
-                    locale
-                    mailaddr
-                    man
-                    signal
-                    suffixes
-                    tr2tex
-                    Unicode
-                    UTF-8
-                Part VIII Administration and Privileged Commands ----
-                    adduser, addgroup
-                    agetty
-                    archive
-                    arp
-                    badblocks
-                    buffchan
-                    cfdisk
-                    chat
-                    chroot
-                    clock
-                    comsat
-                    crond
-                    ctlinnd
-                    ctrlaltdel
-                    cvsbug
-                    cvtbatch
-                    cytune
-                    debugfs
-                    dip
-                    dmesg
-                    dumpe2fs
-                    e2fsck
-                    edquota
-                    expire
-                    expireover
-                    fastrm
-                    fdformat
-                    fdisk
-                    filechan
-                    fsck
-                    fsck.minix
-                    ftpd
-                    ifconfig
-                    inetd
-                    init, telinit
-                    innd, inndstart
-                    innxmit
-                    ipcrm
-                    ipcs
-                    kbdrate
-                    klogd
-                    lpc
-                    lpd
-                    MAKEDEV
-                    MAKEDEV
-                    mke2fs
-                    mkfs
-                    mkfs
-                    mklost+found
-                    mkswap
-                    mount, umount
-                    mountd
-                    named-xfer
-                    named
-                    named.reload
-                    named.restart
-                    ndc
-                    netstat
-                    makeactive, makehistory, newsrequeue
-                    news.daily
-                    newslog
-                    nfsd
-                    nnrpd
-                    nntpsend
-                    nslookup
-                    overchan
-                    pac
-                    pcnfsd
-                    plipconfig
-                    ping
-                    portmap
-                    powerd
-                    pppd
-                    pppstats
-                    prunehistory
-                    quotacheck
-                    quotaon, quotaoff
-                    rarp
-                    rdev
-                    renice
-                    repquota
-                    rexecd
-                    rlogind
-                    route
-                    routed
-                    rpc.rusersd
-                    rpc.rwalld
-                    rpcinfo
-                    rquotad, rpc.rquotad
-                    rshd
-                    rwhod
-                    sendmail
-                    setfdprm
-                    setserial
-                    setsid
-                    showmount
-                    shutdown
-                    simpleinit
-                    slattach
-                    sliplogin
-                    swapon, swapoff
-                    sync
-                    sysklogd
-                    syslogd
-                    talkd
-                    telnetd
-                    tftpd
-                    timed
-                    timedc
-                    traceroute
-                    tune2fs
-                    tunelp
-                    update_state
-                    uucico
-                    vmstat
-                    vipw
-                    zdump
-                    zic
-                Part IX Kernel Reference Guide ----
-                    add_timer, del_timer, init_timer
-                    adjust_clock
-                    ctrl_alt_del
-                    file_table
-                    file_table_init
-                    filesystems
-                    get_empty_filp
-                    grow_files
-                    in_group_p
-                    insert_file_free
-                    kernel_mktime
-                    proc_sel
-                    put_file_last
-                    remove_file_free
-
-top
-                        Window 1:Def: Cumulative mode Off.  System: Delay 3,0 secs; Secure mode Off.
-                        Z,B,E,e   Global: 'Z' colors; 'B' bold; 'E'/'e' summary/task memory scale
-                    l,t,m,I   Toggle: 'l' load avg; 't' task/cpu; 'm' memory; 'I' Irix mode
-                        0,1,2,3,4 Toggle: '0' zeros; '1/2/3' cpu/numa views; '4' cpus two abreast
-                        f,F,X     Fields: 'f'/'F' add/remove/order/sort; 'X' increase fixed-width
-
-                        L,&,<,> . Locate: 'L'/'&' find/again; Move sort column: '<'/'>' left/right
-                        R,H,J,C . Toggle: 'R' Sort; 'H' Threads; 'J' Num justify; 'C' Coordinates
-                        c,i,S,j . Toggle: 'c' Cmd name/line; 'i' Idle; 'S' Time; 'j' Str justify
-                    x,y     . Toggle highlights: 'x' sort field; 'y' running tasks
-                    z,b     . Toggle: 'z' color/mono; 'b' bold/reverse (only if 'x' or 'y')
-                    u,U,o,O . Filter by: 'u'/'U' effective/any user; 'o'/'O' other criteria
-                        n,#,^O  . Set: 'n'/'#' max tasks displayed; Show: Ctrl+'O' other filter(s)
-                    V,v     . Toggle: 'V' forest view; 'v' hide/show forest view children
-                    k,r       Manipulate tasks: 'k' kill; 'r' renice
-                        .
-                        .
-                        d or s    Set update interval
-                    W,Y,!     Write config file 'W'; Inspect other output 'Y'; Combine Cpus '!'
-                        q         Quit
-                              ( commands shown with '.' require a visible task display window ) 
-                    Press 'h' or '?' for help with Windows,
-                        .
-                        .
-                        Type 'q' or <Esc> to continue 
-ps
-
-Xonsh
+Termux
+SSH
+Tasker
+Vbox
+VeraCrypt
+VNC/Remote Desktop
+WLan
 
 Nu-Shell
 https://www.nushell.sh/cookbook/book/  #or migrate to sysadmin(!!)
@@ -3165,4 +2039,1136 @@ https://www.nushell.sh/cookbook/book/  #or migrate to sysadmin(!!)
             zip	filters
                 Combine a stream with the input.
                 default
+Xonsh
+
+top
+                        Window 1:Def: Cumulative mode Off.  System: Delay 3,0 secs; Secure mode Off.
+                        Z,B,E,e   Global: 'Z' colors; 'B' bold; 'E'/'e' summary/task memory scale
+                    l,t,m,I   Toggle: 'l' load avg; 't' task/cpu; 'm' memory; 'I' Irix mode
+                        0,1,2,3,4 Toggle: '0' zeros; '1/2/3' cpu/numa views; '4' cpus two abreast
+                        f,F,X     Fields: 'f'/'F' add/remove/order/sort; 'X' increase fixed-width
+
+                        L,&,<,> . Locate: 'L'/'&' find/again; Move sort column: '<'/'>' left/right
+                        R,H,J,C . Toggle: 'R' Sort; 'H' Threads; 'J' Num justify; 'C' Coordinates
+                        c,i,S,j . Toggle: 'c' Cmd name/line; 'i' Idle; 'S' Time; 'j' Str justify
+                    x,y     . Toggle highlights: 'x' sort field; 'y' running tasks
+                    z,b     . Toggle: 'z' color/mono; 'b' bold/reverse (only if 'x' or 'y')
+                    u,U,o,O . Filter by: 'u'/'U' effective/any user; 'o'/'O' other criteria
+                        n,#,^O  . Set: 'n'/'#' max tasks displayed; Show: Ctrl+'O' other filter(s)
+                    V,v     . Toggle: 'V' forest view; 'v' hide/show forest view children
+                    k,r       Manipulate tasks: 'k' kill; 'r' renice
+                        .
+                        .
+                        d or s    Set update interval
+                    W,Y,!     Write config file 'W'; Inspect other output 'Y'; Combine Cpus '!'
+                        q         Quit
+                              ( commands shown with '.' require a visible task display window ) 
+                    Press 'h' or '?' for help with Windows,
+                        .
+                        .
+                        Type 'q' or <Esc> to continue 
+ps
+jobs
+
+Man: Index/Categories
+                Part I User Commands ----
+                    addftinfo
+                    afmtodit
+                    ansi2knr
+                    anytopnm
+                    appres
+                    ar
+                    arch
+                    GNU as
+                    asciitopgm
+                    atktopbm
+                    bash
+                    bdftopcf
+                    beforelight
+                    biff
+                    bioradtopgm
+                    bitmap, bmtoa, atobm
+                    bmptoppm
+                    brushtopbm
+                    cal
+                    cat
+                    chattr
+                    chfn
+                    chgrp
+                    chkdupexe
+                    chmod
+                    chown
+                    chsh
+                    ci
+                    cidentd
+                    cksum
+                    clear
+                    cmuwmtopbm
+                    co
+                    col
+                    colcrt
+                    colrm
+                    column
+                    comm
+                    convdate
+                    cp
+                    cccp, cpp
+                    crontab
+                    csplit
+                    ctags
+                    cu
+                    cut
+                    cvs
+                    date
+                    dd
+                    depmod, modprobe
+                    df
+                    dig
+                    dnsquery
+                    domainname
+                    dsplit
+                    du
+                    editres
+                    elvis, ex, vi, view, input
+                    elvprsv
+                    elvrec
+                    emacs
+                    emacstool
+                    etags
+                    expand
+                    find
+                    fitstopnm
+                    fmt
+                    fold
+                    free
+                    fsinfo
+                    fslsfonts
+                    fstobdf
+                    fstopgm
+                    ftp
+                    fuser
+                    g++
+                    g3topbm
+                    gawk
+                    gcal
+                    gcc, g++
+                    gemtopbm
+                    geqn
+                    getlist
+                    getopt
+                    giftopnm
+                    gindxbib
+                    glookbib
+                    gnroff
+                    gouldtoppm
+                    gpic
+                    gprof
+                    grefer
+                    grep, egrep, fgrep
+                    grephistory
+                    grodvi
+                    groff
+                    grog
+                    grops
+                    grotty
+                    gsoelim
+                    gtbl
+                    gtroff
+                    gzip, gunzip, zcatgzip, gunzip, zcat
+                    gzexe
+                    head
+                    hexdump
+                    hipstopgm
+                    host
+                    hostid
+                    hostname
+                    hpcdtoppm v0.3
+                    httpd
+                    icontopbm
+                    ident
+                    ilbmtoppm
+                    imake
+                    imgtoppm
+                    inews
+                    info
+                    innconfval
+                    insmod
+                    install
+                    installit
+                    ispell, buildhash, munchlist, findaffix, tryaffix, icombine, ijoin
+                    join
+                    kill
+                    killall
+                    ksyms
+                    last
+                    lbxproxy
+                    ld
+                    lispmtopgm
+                    lkbib
+                    ln
+                    lndir
+                    locate
+                    logger
+                    login
+                    look
+                    lpq
+                    lpr
+                    lprm
+                    lptest
+                    ls, dir, vdir
+                    lsattr
+                    lsmod
+                    lynx
+                    macptopbm
+                    make
+                    makedepend
+                    makestrs
+                    mattrib
+                    mbadblocks
+                    mcd
+                    mcookie
+                    mcopy
+                    md5sum
+                    mdel
+                    mdeltree
+                    mdir
+                    merge
+                    mesg
+                    mformat
+                    mgrtopbm
+                    mkdir
+                    mkdirhier
+                    mkfifo
+                    mkmanifest
+                    mknod
+                    mlabel
+                    mmd
+                    mmount
+                    mmove
+                    more
+                    mrd
+                    mread
+                    mren
+                    mtest
+                    mtools
+                    mtvtoppm
+                    mtype
+                    mv
+                    mwrite
+                    namei
+                    newaliases
+                    newgrp
+                    nl
+                    nlmconv
+                    nm
+                    nntpget
+                    objcopy
+                    objdump
+                    oclock
+                    od
+                    passwd
+                    paste
+                    pbmclean
+                    pbmfilters
+                    pbmlife
+                    pbmmake
+                    pbmmask
+                    pbmpscale
+                    pbmreduce
+                    pbmtext
+                    pbmto10x
+                    pbmto4425
+                    pbmtoascii
+                    pbmtoatk
+                    pbmtobg
+                    pbmtocmuwm
+                    pbmtoepsi
+                    pbmtoepson
+                    pbmtog3
+                    pbmtogem
+                    pbmtogo
+                    pbmtoicon
+                    pbmtolj
+                    pbmtoln03
+                    pbmtolps
+                    pbmtomacp
+                    pbmtomgr
+                    pbmtopgm
+                    pbmtopi3
+                    pbmtopk
+                    pbmtoplot
+                    pbmtoptx
+                    pbmtox10bm
+                    pbmtoxbm
+                    pgmtoybm
+                    pbmtozinc
+                    pbmupc
+                    pcxtoppm
+                    pfbtops
+                    pgmbentley
+                    pgmcrater
+                    pgmedge
+                    pgmenhance
+                    pgmhist
+                    pgmkernel
+                    pgmnoise
+                    pgmnorm
+                    pgmoil
+                    pgmramp
+                    pgmtexture
+                    pgmtofs
+                    pgmtolispm
+                    pgmtopbm
+                    pgmtoppm
+                    pi1toppm
+                    pi3topbm
+                    picttoppm
+                    pjtoppm
+                    pktopbm
+                    pnmalias
+                    pnmarith
+                    pnmcat
+                    pnmcomp
+                    pnmconvol
+                    pnmcrop
+                    pnmcut
+                    pnmdepth
+                    pnmenlarge
+                    pnmfile
+                    pnmflip
+                    pnmgamma
+                    pnmhistmap
+                    pnmindex
+                    pnminvert
+                    pnmmargin
+                    pnmnlfilt
+                    pnmnoraw
+                    pnmpad
+                    pnmpaste
+                    pnmrotate
+                    pnmscale
+                    pnmshear
+                    pnmsmooth
+                    pnmtile
+                    pnmtoddif
+                    pnmtofits
+                    pnmtops
+                    pnmtorast
+                    pnmtosgi
+                    pnmtosir
+                    pnmtotiff
+                    pnmtoxwd
+                    ppm3d
+                    ppmbrighten
+                    ppmchange
+                    ppmdim
+                    ppmdist
+                    ppmdither
+                    ppmflash
+                    ppmforge
+                    ppmhist
+                    ppmmake
+                    ppmmix
+                    ppmnorm
+                    ppmntsc
+                    ppmpat
+                    ppmquant
+                    ppmquantall
+                    ppmqvga
+                    ppmrelief
+                    ppmshift
+                    ppmspread
+                    ppmtoacad
+                    ppmtobmp
+                    ppmtogif
+                    ppmtoicr
+                    ppmtoilbm
+                    ppmtomap
+                    ppmtomitsu
+                    ppmtopcx
+                    ppmtopgm
+                    ppmtopi1
+                    ppmtopict
+                    ppmtopj
+                    ppmtopjxl
+                    ppmtopuzz
+                    ppmtorgb3
+                    ppmtosixel
+                    ppmtotga
+                    ppmtouil
+                    ppmtoxpm
+                    ppmtoyuv
+                    ppmtoyuvsplit
+                    pr
+                    ps
+                    psbb
+                    psidtopgm
+                    pstopnm
+                    pstree
+                    psupdate
+                    qrttoppm
+                    quota
+                    ranlib
+                    rasttopnm
+                    rawtopgm
+                    rawtoppm
+                    rcp
+                    rcs
+                    rcsclean
+                    rcsdiff
+                    rcsfreeze
+                    rcsintro
+                    rcsmerge
+                    rdist
+                    xixii
+                    reconfig
+                    ref
+                    reset
+                    resize
+                    rev
+                    rgb3toppm
+                    rlog
+                    rlogin
+                    rm
+                    rmdir
+                    rmmod
+                    rnews
+                    rpcgen
+                    rsh
+                    rstart
+                    rstartd
+                    rup
+                    rusers
+                    rwall
+                    rwho
+                    script
+                    sed
+                    sessreg
+                    setterm
+                    sgitopnm
+                    shar
+                    shlock
+                    showrgb
+                    shrinkfile
+                    sirtopnm
+                    size
+                    sldtoppm
+                    smproxy
+                    sort
+                    spctoppm
+                    split
+                    spottopgm
+                    sputoppm
+                    sq
+                    startx
+                    strings
+                    strip
+                    subst
+                    sum
+                    SuperProbe
+                    tac
+                    tail
+                    talk
+                    tcal
+                    telnet
+                    tfmtodit
+                    tftp
+                    tgatoppm
+                    tifftopnm
+                    tin, rtin, cdtin, tind
+                    tload
+                    top
+                    touch
+                    tr
+                    tset, reset
+                    tsort
+                    twm
+                    txt2gcal
+                    ul
+                    unexpand
+                    uniq
+                    unshar
+                    updatedb
+                    uptime
+                    userlist
+                    uucp
+                    uuencode
+                    uustat
+                    uux
+                    uuxqt
+                    w
+                    wall
+                    wc
+                    whereis
+                    write
+                    x11perf
+                    x11perfcomp
+                    xargs
+                    xauth
+                    xbmtopbm
+                    xcmsdb
+                    xclock
+                    xclipboard
+                    xconsole
+                    xcutsel
+                    xdm
+                    xdpyinfo
+                    Xf86_Accel
+                    XF86_Mono
+                    XF86_SVGA
+                    XF86_VGA16
+                    xf86config
+                    xfd
+                    XFree86
+                    xfs
+                    xhost
+                    xieperf
+                    ximtoppm
+                    xinetd
+                    xinit
+                    xkill
+                    xlogo
+                    xlsatoms
+                    xlsclients
+                    xlsfonts
+                    xmag
+                    xmkmf
+                    xmodmap
+                    xon
+                    xpmtoppm
+                    xprop
+                    xrdb
+                    xrefresh
+                    Xserver
+                    xset
+                    xsetroot
+                    xsm
+                    xsmclient
+                    xstdcmap
+                    xterm
+                    Xvfb
+                    xvidtune
+                    xvminitoppm
+                    xwd
+                    xwdtopnm
+                    xwininfo
+                    xwud
+                    ybmtopbm
+                    ytalk
+                    yuvplittoppm
+                    yuvtoppm
+                    zcmp, zdiff
+                    zeisstopnm
+                    zforce
+                    zgrep
+                    zmore
+                    znew
+                Part II System Calls ----
+                    exit
+                    accept
+                    access
+                    acct
+                    adjtimex
+                    alarm
+                    bdflush
+                    bind
+                    brk, sbrk
+                    cacheflush
+                    chdir, fchdir
+                    chmod, fchmod
+                    chown, fchown
+                    chroot
+                    clone
+                    close
+                    connect
+                    dup, dup2
+                    execve
+                    fcntl
+                    fdatasync
+                    flock
+                    fork, vfork
+                    fsync
+                    getdents
+                    getdomainname, setdomainname
+                    getdtablesize
+                    getgid, getegid
+                    getgroups, setgroups
+                    gethostid, sethostid
+                    gethostname, sethostname
+                    getitimer, setitimer
+                    getpagesize
+                    getpeername
+                    getpid, getppid
+                    getpriority, setpriority
+                    getrlimit, getrusage, setrlimit
+                    getsid
+                    getsockname
+                    getsockopt, setsockopt
+                    gettimeofday, settimeofday
+                    getuid, geteuid
+                    idle
+                    ioctl
+                    ioperm
+                    iopl
+                    ipc
+                    kill
+                    killpg
+                    link
+                    listen
+                    llseek
+                    lseek
+                    mkdir
+                    mknod
+                    mlock
+                    mlockall
+                    mmap, munmap
+                    modify_ldt
+                    get_kernel_syms, create_module, init_module, delete_module
+                    mount, umount
+                    mprotect
+                    mremap
+                    msgctl
+                    msgget
+                    msgop
+                    msync
+                    munlock
+                    munlockall
+                    nanosleep
+                    nice
+                    oldfstat, oldlstat, oldstat, oldolduname, olduname
+                    open, creat
+                    outb, outw, outl, outsb, outsw, outsl
+                    pause
+                    personality
+                    phys
+                    pipe
+                    profil
+                    ptrace
+                    quotactl
+                    read
+                    readdir
+                    readlink
+                    readv, writev
+                    reboot
+                    recv, recvfrom, recvmsg
+                    rename
+                    rmdir
+                    sched_get_priority_max, sched_get_priority_min
+                    sched_rr_get_interval
+                    sched_setparam, sched_getparam
+                    sched_setscheduler, sched_getscheduler
+                    sched_yield
+                    select, FD_CLR, FD_ISSET, FD_SET, FD_ZERO
+                    semctl
+                    semget
+                    semop
+                    send, sendto, sendmsg
+                    setfsgid
+                    setfsuid
+                    setgid
+                    setpgid, getpgid, setpgrp, getpgrp
+                    setregid, setegid
+                    setreuid, seteuid
+                    setsid
+                    setuid
+                    setup
+                    shmctl
+                    shmget
+                    shmop
+                    shutdown
+                    sigaction, sigprocmask, sigpending, sigsuspend
+                    signal
+                    sigblock, siggetmask, sigsetmask, sigmask
+                    sigpause
+                    sigreturn
+                    sigvec
+                    socket
+                    socketcall
+                    socketpair
+                    stat, fstat, lstat
+                    statfs, fstatfs
+                    stime
+                    swapon, swapoff
+                    symlink
+                    sync
+                    sysctl
+                    sysfs
+                    sysinfo
+                    syslog
+                    termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfgetospeed,
+                    cfgetispeed, cfsetispeed, cfsetospeed, tcgetpgrp, tcsetpgrp
+                    time
+                    times
+                    truncate, ftruncate
+                    umask
+                    uname
+                    none
+                    afs_syscall, break, gtty, lock, mpx, prof, quotactl, stty, ustat
+                    unlink
+                    uselib
+                    ustat
+                    utime, utimes
+                    vhangup
+                    vm86
+                    wait, waitpid
+                    wait3, wait4
+                    write
+                Part III Library Functions ----
+                    abort
+                    abs
+                    acos
+                    acosh
+                    alloca
+                    asin
+                    asinh
+                    assert
+                    atan
+                    atan2
+                    atanh
+                    atexit
+                    atof
+                    atoi
+                    atol
+                    bcmp
+                    bcopy
+                    bsearch
+                    bcmp, bcopy, bzero, memccpy, memchr, memcmp, memcpy, memfrob, memmem,
+                    memmove, memset
+                    htonl, htons, ntohl, ntohs
+                    bzero
+                    catgets
+                    catopen, catclose
+                    ceil
+                    clientlib
+                    clock
+                    closedir
+                    confstr
+                    copysign
+                    cos
+                    cosh
+                    crypt
+                    ctermid
+                    asctime, ctime, gmtime, localtime, mktime
+                    difftime
+                    div
+                    drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48,
+                    seed48, lcong48
+                    drem
+                    ecvt, fcvt
+                    erf, erfc
+                    execl, execlp, execle, exect, execv, execvp
+                    errno
+                    exit
+                    exp, log, log10, pow
+                    expm1, log1p
+                    fabs
+                    fclose
+                    clearerr, feof, ferror, fileno
+                    fflush, fpurge
+                    ffs
+                    fgetgrent
+                    fgetpwent
+                    floor
+                    fmod
+                    fnmatch
+                    fopen, fdopen, freopen
+                    fpathconf, pathconf
+                    fread, fwrite
+                    frexp
+                    fgetpos, fseek, fsetpos, ftell, rewind
+                    ftime
+                    ftok
+                    ftw
+                    gcvt
+                    getcwd, get_current_dir_name, getwd
+                    getdirentries
+                    getenv
+                    getgrent, setgrent, endgrent
+                    getgrnam, getgrgid
+                    getlogin, cuserid
+                    getmntent, setmntent, addmntent, endmntent, hasmntopt
+                    getnetent, getnetbyaddr, getnetbyname, setnetent, endnetent
+                    getopt
+                    getpass
+                    getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent
+                    getpw
+                    getpwent, setpwent, endpwent
+                    getpwnam, getpwuid
+                    fgetc, fgets, getc, getchar, gets, ungetc
+                    getservent, getservbyname, getservbyport, setservent, endservent
+                    getusershell, setusershell, endusershell
+                    getutent, getutid, getutline, pututline, setutent, endutent, utmpname
+                    getw, putw
+                    glob, globfree
+                    hosts_access, hosts_ctl
+                    hcreate, hdestroy, hsearch
+                    hypot
+                    index, rindex
+                    inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof,
+                    inet_netof
+                    infnan
+                    initgroups
+                    inndcomm
+                    insque, remque
+                    isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint,
+                    ispunct, isspace, isupper, isxdigit
+                    isatty
+                    isinf, isnan, finite
+                    j0, j1, jn, y0, y1, yn
+                    killpg
+                    labs
+                    ldexp
+                    ldiv
+                    lgamma
+                    libinn
+                    libpbm
+                    libpgm
+                    libpnm
+                    libppm
+                    localeconv
+                    longjmp
+                    lfind, lsearch
+                    calloc, malloc, free, realloc
+                    mblen
+                    mbstowcs
+                    mbtowc
+                    memccpy
+                    memchr
+                    memcmp
+                    memcpy
+                    memfrob
+                    memmem
+                    memmove
+                    memset
+                    mkfifo
+                    mkstemp
+                    mktemp
+                    modf
+                    asctime, ctime, difftime, gmtime, localtime, mktime
+                    tzset
+                    on_exit
+                    opendir
+                    parsedate
+                    perror
+                    popen, pclose
+                    printf, fprintf, sprintf, snprintf, vprintf, vfprintf, vsprintf, vsnprintf
+                    psignal
+                    putenv
+                    putpwent
+                    fputc, fputs, putc, putchar, puts
+                    qio
+                    qsort
+                    raise
+                    rand, srand
+                    random, srandom, initstate, setstate
+                    readdir
+                    readv, writev
+                    realpath
+                    Re_comp, re_exec
+                    regcomp, regexec, regerror, regfree
+                    remove
+                    res_query, res_search, res_mkquery, res_send, res_init, dn_comp,
+                    dn_expand
+                    rewinddir
+                    rint
+                    rquota
+                    scandir, alphasort
+                    scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf
+                    seekdir
+                    setbuf, setbuffer, setlinebuf, setvbuf
+                    setenv
+                    setjmp
+                    setlocale
+                    siginterrupt
+                    sigemptyset, sigfillset, sigaddset, sigdelset, sigismember
+                    sin
+                    sinh
+                    sleep
+                    snprintf, vsnprintf
+                    sqrt
+                    stdarg
+                    stdio
+                    stpcpy
+                    strcasecmp, strncasecmp
+                    strcat, strncat
+                    strchr, strrchr
+                    strcmp, strncmp
+                    strcoll
+                    strcpy, strncpy
+                    strdup
+                    strerror
+                    strfry
+                    strftime
+                    strcasecmp, strcat, strchr, strcmp, strcoll, strcpy, strcspn, strdup, strfry,
+                    strlen, strncat, strncmp, strncpy, strncasecmp, strpbrk, strrchr, strsep,
+                    strspn, strstr, strtok, strxfrm, index, rindex
+                    strlen
+                    strpbrk
+                    strptime
+                    strsep
+                    strsignal
+                    strspn, strcspn
+                    strstr
+                    strtod
+                    strtok
+                    strtol
+                    strtoul
+                    strxfrm
+                    swab
+                    sysconf
+                    closelog, openlog, syslog
+                    system
+                    tan
+                    tanh
+                    telldir
+                    tempnam
+                    termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw,
+                    cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, tcgetpgrp, tcsetpgrp
+                    tmpfile
+                    tmpnam
+                    toascii
+                    toupper, tolower
+                    tsearch, tfind, tdelete, twalk
+                    ttyname
+                    tzset
+                    none
+                    usleep
+                    wcstombs
+                    wctomb
+                Part IV Special Files ----
+                    charsets
+                    console
+                    console_codes
+                    console ioctls
+                    fd
+                    hd
+                    ispell
+                    lp
+                    mem, kmem, port
+                    mouse
+                    null, zero
+                    ram
+                    sd
+                    st
+                    tty
+                    ttys
+                    vcs, vcsa
+                Part V File Formats ----
+                    active, active.times
+                    adduser.conf
+                    aliases
+                    xxiiixxiv
+                    Linux Complete Command Reference
+                    cfingerd
+                    cfingerd.conf
+                    cfingerd text rules
+                    control.ctl
+                    cvs
+                    DEVINFO
+                    environ
+                    expire.ctl
+                    exports
+                    filesystems
+                    fstab
+                    groff_font
+                    groff_out
+                    group
+                    history
+                    hosts.nntp, hosts.nntp.nolimit
+                    hosts_access
+                    hosts_options
+                    inittab
+                    inn.conf
+                    innwatch.ctl
+                    ipc
+                    issue
+                    lilo.conf
+                    MAKEDEV.cfg
+                    moderators
+                    /etc/modules
+                    motd
+                    mtools
+                    newsfeeds
+                    newslog
+                    nfs
+                    nnrp.access
+                    nntpsend.ctl
+                    nologin
+                    overview.fmt
+                    passwd
+                    passwd.nntp
+                    pbm
+                    pgm
+                    pnm
+                    ppm
+                    /proc
+                    protocols
+                    rcsfile
+                    resolver
+                    securetty
+                    services
+                    shells
+                    syslog.conf
+                    termcap
+                    ttytype
+                    tzfile
+                    utmp, wtmp
+                    uuencode
+                    XF86Config
+                Part VI Games ----
+                    banner
+                    ddate
+                Part VII Miscellaneous ----
+                    ascii
+                    bootparam
+                    groff_me
+                    groff_mm
+                    groff_ms
+                    hier
+                    hostname
+                    iso_8859_1
+                    locale
+                    mailaddr
+                    man
+                    signal
+                    suffixes
+                    tr2tex
+                    Unicode
+                    UTF-8
+                Part VIII Administration and Privileged Commands ----
+                    adduser, addgroup
+                    agetty
+                    archive
+                    arp
+                    badblocks
+                    buffchan
+                    cfdisk
+                    chat
+                    chroot
+                    clock
+                    comsat
+                    crond
+                    ctlinnd
+                    ctrlaltdel
+                    cvsbug
+                    cvtbatch
+                    cytune
+                    debugfs
+                    dip
+                    dmesg
+                    dumpe2fs
+                    e2fsck
+                    edquota
+                    expire
+                    expireover
+                    fastrm
+                    fdformat
+                    fdisk
+                    filechan
+                    fsck
+                    fsck.minix
+                    ftpd
+                    ifconfig
+                    inetd
+                    init, telinit
+                    innd, inndstart
+                    innxmit
+                    ipcrm
+                    ipcs
+                    kbdrate
+                    klogd
+                    lpc
+                    lpd
+                    MAKEDEV
+                    MAKEDEV
+                    mke2fs
+                    mkfs
+                    mkfs
+                    mklost+found
+                    mkswap
+                    mount, umount
+                    mountd
+                    named-xfer
+                    named
+                    named.reload
+                    named.restart
+                    ndc
+                    netstat
+                    makeactive, makehistory, newsrequeue
+                    news.daily
+                    newslog
+                    nfsd
+                    nnrpd
+                    nntpsend
+                    nslookup
+                    overchan
+                    pac
+                    pcnfsd
+                    plipconfig
+                    ping
+                    portmap
+                    powerd
+                    pppd
+                    pppstats
+                    prunehistory
+                    quotacheck
+                    quotaon, quotaoff
+                    rarp
+                    rdev
+                    renice
+                    repquota
+                    rexecd
+                    rlogind
+                    route
+                    routed
+                    rpc.rusersd
+                    rpc.rwalld
+                    rpcinfo
+                    rquotad, rpc.rquotad
+                    rshd
+                    rwhod
+                    sendmail
+                    setfdprm
+                    setserial
+                    setsid
+                    showmount
+                    shutdown
+                    simpleinit
+                    slattach
+                    sliplogin
+                    swapon, swapoff
+                    sync
+                    sysklogd
+                    syslogd
+                    talkd
+                    telnetd
+                    tftpd
+                    timed
+                    timedc
+                    traceroute
+                    tune2fs
+                    tunelp
+                    update_state
+                    uucico
+                    vmstat
+                    vipw
+                    zdump
+                    zic
+                Part IX Kernel Reference Guide ----
+                    add_timer, del_timer, init_timer
+                    adjust_clock
+                    ctrl_alt_del
+                    file_table
+                    file_table_init
+                    filesystems
+                    get_empty_filp
+                    grow_files
+                    in_group_p
+                    insert_file_free
+                    kernel_mktime
+                    proc_sel
+                    put_file_last
+                    remove_file_free
+~/Empire/Doks/Comp/sysadm/lin/ref/lincmdref.list.pdf
+~/Empire/Doks/Comp/sysadm/lin/ref/lincmds.de.pdf
 

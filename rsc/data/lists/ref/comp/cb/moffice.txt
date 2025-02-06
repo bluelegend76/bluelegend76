@@ -1,5 +1,5 @@
+vim:fdm=indent:fdl=2:
 set foldmethod=indent foldlevel=2
-vim: fdm=indent:fdl=2:
 
 = excel + vba
    (+ ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/_exc/ExcBib_VBA.txt )

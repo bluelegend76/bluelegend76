@@ -4,6 +4,13 @@ vim:fdm=marker:
 @c: :set syntax=CODELANG textwidth=35 nosi ai nojs shiftwidth=2 | colors ron
 ____
 __
+Multimedia, MuRec {{{
+    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
+      MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
+    gvim -p graf/pr/MultiMedia.txt comp/mu/MuRec.txt
+    gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
+
+}}}
 
 Browsers (File, Web, Media, Web) {{{
 media ----
@@ -96,14 +103,21 @@ browse:web-text ----
 browse:(file, web, im, mail) ----
     Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
 }}}
-Multimedia, MuRec {{{
-    gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
-    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
-      MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
-    gvim -p graf/pr/MultiMedia.txt comp/mu/MuRec.txt
+  Note: May want to add Editors (ed, Vim, Emacs, Rider/IntelliJ, NetBeans etc)
+Sysadm(+wm) Redhat, nushell {{{
+  https://www.nushell.sh/cookbook/
 
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
+  gvim -p comp/cb/bcb.index.txt comp/sysadm/cmdl-fu.shell.txt comp/cb/RegexCb.txt comp/cb/regex-vim.txt comp/cb/pshell.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
+
+  regex: (vim, emacs, python/js, grep-posix, find, ag|perl)  + C#
+
+
+  ¤¤ gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
+  ¤¤ gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
+  ¤¤ gvim -p comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
 }}}
-
 m/loffice (excel/calc + basic  +/base etc) {{{
   gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
                                                                    |
@@ -112,31 +126,117 @@ m/loffice (excel/calc + basic  +/base etc) {{{
   gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
 
 }}}
+.          markup: md, wiki, github-md, x-markd {{{
+    TODO: ADD INDEX-FILE[**]  Temp-Solution: Start off list in Loffice.Latex
+    org
+    Markdown
+      markdown extra
+    wiki markup
+    latex, mermaid
+    context, texinfo
+      plantuml
+    xml
+    docbook
+      json, yaml
+
+  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/xml/xml.txt
+  gvim comp/lang/xml/xml.txt
+  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/xml/xml.txt
+  gvim comp/lang/xml/xml.txt
+}}}
 --
 Git + Compile/Build, Deploy/Devops / CI, Testing (, disassembly) {{{
   TODO/ADD: Compile/Build
+TODO: ADD MGIT + PTOOLS (FROM AT.GIT)
   gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{git,compile-build,Testing,deploy-devops,math-progr,algos,probltask-leetrosetta,disassembly}.txt
   gvim -p comp/cb/git.txt comp/cb/compile-build.txt comp/cb/Testing.txt comp/cb/deploy-devops.txt comp/cb/math-progr.txt comp/cb/algos.txt comp/cb/probltask-leetrosetta.txt comp/cb/disassembly.txt
   gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{git,compile-build,Testing,deploy-devops,math-progr,algos,probltask-leetrosetta,disassembly}.txt
 
 }}}
-Sysadm(+wm) Redhat, nushell {{{
-  https://www.nushell.sh/cookbook/
 
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
-  gvim -p comp/cb/bcb.index.txt comp/sysadm/cmdl-fu.shell.txt comp/cb/RegexCb.txt comp/cb/regex-vim.txt comp/cb/pshell.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/{cb/bcb.index,sysadm/cmdl-fu.shell,cb/RegexCb,cb/regex-vim,cb/pshell}.txt
+@@ system {{{
+  __
+  ada/spark
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
+                                                                      +including: go-v
+  gvim -p comp/cb/asm.txt comp/cb/cppcb.txt comp/cb/dlangcb.txt comp/cb/rustcb.txt comp/cb/jcb.txt comp/cb/cscb.txt comp/cb/go-v.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
 
-  regex: (vim, emacs, python/js, grep-posix, find, ag|perl)
+  --
+  ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.txt
+  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-man.check.txt
+  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-methods.scratch.txt
 }}}
-  ¤¤ gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
-  ¤¤ gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
-  ¤¤ gvim -p comp/cb/{ssh,vnc-deskt,vbox,vera,termux,tasker}.txt
+.  asm, wasm {{{
+}}}
+@@ Funct + Lisp {{{
+  ____
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
+                                                  +lfe(??)
+  gvim -p comp/cb/clispcb.txt comp/cb/schemecb.txt comp/cb/clojure.txt comp/cb/haskell.txt comp/cb/sml-ocaml.txt comp/cb/fs.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
+
+elisp  / newlisp {{{
+  https://www.emacswiki.org/emacs/ElispCookbook
+}}}
+}}}
+@@ Db mongo, sql, nosql, graph {{{
+  __
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
+  gvim -p comp/cb/Db.sql.txt comp/cb/db.graph.txt comp/cb/db.nosql.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
+
+}}}
+
+multimedia + media {{{
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
+  gvim -p comp/cb/svganim.txt comp/cb/h5multimedia_canvas.txt comp/cb/imagickcb.txt comp/cb/ffmpegcb.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
+
+  TODO  =CANVAS CHEATSHEETS(??)
+  gamedev
+    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/levelup-gamedevbig.txt
+    --
+    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/threejs03-gamedev.txt
+      ~/Empire/curr-desktop/gameprogr-gems1.pdf
+      ~/Empire/curr-desktop/gameprogr-gems6.pdf
+    ~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/
+
+. {{{
+        svg
+        canvas
+    lilypond (!)
+    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.pdf
+    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.txt
+    #
+
+    aux = programs, media (etc)
+    audacity
+    vlc
+    mplayer
+    blender *
+    inkscape
+}}}
+}}}
+stat datasci || mlearn-ai {{{
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
+  gvim -p comp/cb/stat-datasci.txt comp/cb/mlearn-ai.txt
+  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
+
+  gvim -p comp/cb/
+  comp/cb/stat-datasci.txt
+  comp/cb/mlearn-ai.txt
+  R gnuplot Datasci(!) {{{
+  . {{{
+  ~/Empire/curr-desktop/gnuplotcb.pdf
+      R
+  https://www.scribd.com/book/290055884/Python-Data-Science-Cookbook
+    https://www.scribd.com/book/272080010/Practical-Data-Science-Cookbook
+    https://www.scribd.com/book/253053167/Practical-Data-Analysis
+  }}}
+  }}}
+}}}
 --
-  gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/xml/xml.txt
-  gvim comp/lang/xml/xml.txt
-  gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/xml/xml.txt
-  gvim comp/lang/xml/xml.txt
 @@ scripting / web {{{
 . {{{
 h5, c3  Todo (=at top of scripting**(??))
@@ -204,36 +304,6 @@ TODO !!   ~/Empire/curr-desktop/jsjsoncb.pdf
     ~/Dropbox/rsc/Doks/phone/Comp/lang/elixcb.txt
 }}}
 }}}
-multimedia + media {{{
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
-  gvim -p comp/cb/svganim.txt comp/cb/h5multimedia_canvas.txt comp/cb/imagickcb.txt comp/cb/ffmpegcb.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{svganim,h5multimedia_canvas,imagickcb,ffmpegcb}.txt
-
-  TODO  =CANVAS CHEATSHEETS(??)
-  gamedev
-    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/levelup-gamedevbig.txt
-    --
-    ~/Dropbox/rsc/data/lists/ref/comp/gamedev/threejs03-gamedev.txt
-      ~/Empire/curr-desktop/gameprogr-gems1.pdf
-      ~/Empire/curr-desktop/gameprogr-gems6.pdf
-    ~/Empire/Doks/Comp/lang/webdev/js/mmedia/threejs/
-
-. {{{
-        svg
-        canvas
-    lilypond (!)
-    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.pdf
-    ## ~/legacy/empire-lasttransfer2022/empire-lasttransfer_2022-06/internals.txt
-    #
-
-    aux = programs, media (etc)
-    audacity
-    vlc
-    mplayer
-    blender *
-    inkscape
-}}}
-}}}
 handheld / mobile (=android, ios, etc) {{{
   gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
   gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{androidcb-java,androidcb-kotlin,dart-flutter,ios}.txt
@@ -247,61 +317,7 @@ handheld / mobile (=android, ios, etc) {{{
   dart+flutter  (=FLUTTER COOKBOOK)
 }}}
 }}}
-@@ system {{{
-  __
-  ada/spark
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
-                                                                      +including: go-v
-  gvim -p comp/cb/asm.txt comp/cb/cppcb.txt comp/cb/dlangcb.txt comp/cb/rustcb.txt comp/cb/jcb.txt comp/cb/cscb.txt comp/cb/go-v.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{asm,cppcb,dlangcb,rustcb,jcb,cscb,go-v}.txt
 
-  --
-  ~/Dropbox/rsc/data/lists/ref/comp/cb/go-handson.txt
-  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-man.check.txt
-  ~/Dropbox/rsc/data/lists/ref/comp/lang/vlang/vlang-methods.scratch.txt
-}}}
-.  asm, wasm {{{
-}}}
-@@ Funct + Lisp {{{
-  ____
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
-                                                  +lfe(??)
-  gvim -p comp/cb/clispcb.txt comp/cb/schemecb.txt comp/cb/clojure.txt comp/cb/haskell.txt comp/cb/sml-ocaml.txt comp/cb/fs.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{clispcb,schemecb,clojure,haskell,sml-ocaml,fs}.txt
-
-elisp  / newlisp {{{
-  https://www.emacswiki.org/emacs/ElispCookbook
-}}}
-}}}
--- fsharp / fstar / coq  agda
-  gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
-  gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
-  gvim -p comp/cb/{fsharp,fstar,coq}.txt
-@@ Db mongo, sql, nosql, graph {{{
-  __
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
-  gvim -p comp/cb/Db.sql.txt comp/cb/db.graph.txt comp/cb/db.nosql.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{Db.sql,db.graph,db.nosql}.txt
-
-}}}
-stat datasci || mlearn-ai {{{
-  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
-  gvim -p comp/cb/stat-datasci.txt comp/cb/mlearn-ai.txt
-  gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{stat-datasci,mlearn-ai}.txt
-
-  gvim -p comp/cb/
-  comp/cb/stat-datasci.txt
-  comp/cb/mlearn-ai.txt
-  R gnuplot Datasci(!) {{{
-  . {{{
-  ~/Empire/curr-desktop/gnuplotcb.pdf
-      R
-  https://www.scribd.com/book/290055884/Python-Data-Science-Cookbook
-    https://www.scribd.com/book/272080010/Practical-Data-Science-Cookbook
-    https://www.scribd.com/book/253053167/Practical-Data-Analysis
-  }}}
-  }}}
-}}}
 @@ nyq muHask csound scoll  pd chuck [!!!!] {{{
   __
   gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
@@ -309,6 +325,10 @@ stat datasci || mlearn-ai {{{
   gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{nyq,csound,scoll,hask-euterp,pd,chuck}.txt
 
 }}}
+-- fsharp / fstar / coq  agda
+  gvim -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
+  gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{fsharp,fstar,coq}.txt
+  gvim -p comp/cb/{fsharp,fstar,coq}.txt
 https://docs.scala-lang.org/cheatsheets/
     prolog/mercury {{{
 
@@ -322,19 +342,7 @@ https://docs.scala-lang.org/cheatsheets/
         https://mercurylang.org/information/doc-release/transition_guide.pdf
     }}}
 
-markup: md, wiki, github-md, x-markd {{{
-    TODO: ADD INDEX-FILE[**]
-    org
-    Markdown
-      markdown extra
-    wiki markup
-    latex, mermaid
-    context, texinfo
-      plantuml
-    xml
-    docbook
-      json, yaml
-}}}
+
 ps
   gvim ~/Dropbox/rsc/data/lists/ref/comp/lang/ps/ps.txt
   gvim ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/ps/ps.txt
@@ -352,14 +360,8 @@ solidity etc {{{
 
 
 TODO (Etc) ----
-Files to create:
-    rsc/data/lists/ref/comp/cb/disassembly.txt
-    rsc/data/lists/ref/comp/cb/ssh.txt
-    rsc/data/lists/ref/comp/cb/vnc-deskt.txt
-    rsc/data/lists/ref/comp/cb/vbox.txt
-    rsc/data/lists/ref/comp/cb/vera.txt
-    rsc/data/lists/ref/comp/cb/termux.txt
-    rsc/data/lists/ref/comp/cb/tasker.txt
+Files to create: [Or, Maybe create/move majority to Sysadm]
+    rsc/data/lists/ref/comp/cb/disassembly.txt  # Maybe move to System
     rsc/data/lists/ref/comp/cb/h5c3,jqcb.txt
 
 https://overapi.com/  #php, python, java etc 'all cheatsheet collected'
