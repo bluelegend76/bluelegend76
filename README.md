@@ -13,3 +13,10 @@
 - [ ] Test Thumbdrive (on/for Win)
 -----
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
+
+## lazarus.win.ps1:
+- Adding Apps to Taskbar
+- Adding preferred programs for filetypes (to Windows Registry)
+
+## Playlists.Perform
+- Texts + Startlist 'ShowPieces'
