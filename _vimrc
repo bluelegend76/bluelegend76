@@ -186,7 +186,8 @@ noremap <leader>J <Esc> | inoremap <leader>J <Esc> | cnoremap <leader>J <Esc>
 " Searching / Substitute, Global  __
 " Toggle ignorecase ***
 nnoremap <leader>ic :set ic!<CR>
-noremap <leader>ii / | noremap <leader>uu ?
+noremap <leader>ii /
+noremap <leader>uu ?
 nnoremap <leader>iv /\v | nnoremap <leader>uv ?\V
 noremap <leader>ic /\c | noremap <leader>uc ?\c
 " --
@@ -215,7 +216,7 @@ cnoremap <leader>b \zs
 cnoremap <leader>e \ze
 
 "" 'RUN', Line etc = with Ext.Progr/Ex  ,ex/,ru
-nnoremap <leader>ru ^yg_:!<C-R>"<CR><CR>
+nnoremap <leader>ru ^yg_:!start <C-R>"<CR><CR>
 nnoremap <leader>ex ^yg_:<C-R>"<CR><CR>
 " nnoremap <leader>et mm:normal! H
 " mt:normal! gg
