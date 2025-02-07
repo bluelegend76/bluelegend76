@@ -1,4 +1,5 @@
 set foldmethod=indent foldlevel=2
+vim:fdm=indent:fdl=2:
 
 META.PackMan: apt/aptitude, pacman/yay, choco  pip
                 Install package
@@ -466,6 +467,7 @@ bcb (**(!))
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
 
 Termux
+  TODO: INSERT LINK TO TERMUX-DOCS.TAGS1
 SSH
 Tasker
 Vbox
