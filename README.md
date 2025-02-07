@@ -8,6 +8,8 @@ __
 ~~- [ ] Reformat External Drives to ExFAT~~
 - [ ] **Try-out new Vim-Colors**
 
+- [ ] Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc  __
+
 - [ ] Add proper .gitignore file to project
 - .swp-files
 - .xml-files
@@ -15,23 +17,23 @@ __
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists
-**IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**  __
+**IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**  __=4
 \+ Idioms, Sayings, etc
 - [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
 - [ ] Add C#-style Regex list
 
 ## lazarus.win.ps1:
-- [ ] **Auto-Linking of config-files to Windows-directories**  __
+- [ ] **Auto-Linking of config-files to Windows-directories**  __=2
 - Adding Apps to Taskbar
 - Adding preferred programs for filetypes (to Windows Registry)
 ----
 - [ ] Construct AHotKey Svorak script (+'reverser')
-- Pre: Construct flat list qwerty-keys complete [**]  __
+- Pre: Construct flat list qwerty-keys complete [**]  __=1
 ----
 - [ ] Test Thumbdrive (on/for Win)
  
 ## lazarus.arch.sh:
-- [ ] **Install Android-handling support on Arch (+KDE Connect)**  __
+- [ ] **Install Android-handling support on Arch (+KDE Connect)**  __=3
 - [ ] **Change Xfce window-handling key to Win-key**  __
 
 ## Playlists.Perform

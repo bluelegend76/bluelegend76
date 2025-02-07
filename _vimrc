@@ -165,10 +165,14 @@ nnoremap U <C-R>
 " line refocus
 noremap tt zt | noremap TT zb
 " end/start of line
-noremap L $ | noremap H 0
-onoremap L $ | onoremap H 0
-noremap gL g_ | noremap gH ^
-onoremap gL g_ | onoremap gH ^
+noremap L $
+noremap H 0
+onoremap L $
+onoremap H 0
+noremap gL g_
+noremap gH ^
+onoremap gL g_
+onoremap gH ^
 
 nnoremap <leader><leader>o o<Esc>
 nnoremap <leader><leader>u O<Esc><CR>
