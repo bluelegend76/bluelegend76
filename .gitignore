@@ -1,0 +1,4 @@
+# Exclude Vim swap files
+*.swp
+
+*.xml
