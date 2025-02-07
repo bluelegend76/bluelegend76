@@ -182,8 +182,12 @@ inoremap <leader>. <C-O>:up<CR>
 nnoremap <leader>. :up<CR>
 nnoremap <C-S-A-F1> :windo update<CR>
 " Custom Escape-Mapping  __
-noremap <leader>j <Esc> | inoremap <leader>j <Esc> | cnoremap <leader>j <Esc>
-noremap <leader>J <Esc> | inoremap <leader>J <Esc> | cnoremap <leader>J <Esc>
+noremap <leader>j <Esc>
+inoremap <leader>j <Esc>
+cnoremap <leader>j <Esc>
+noremap <leader>J <Esc>
+inoremap <leader>J <Esc>
+cnoremap <leader>J <Esc>
 " --
 " inoremap <leader>ee <Esc>:up<CR>gi<CR>
 
@@ -192,8 +196,10 @@ noremap <leader>J <Esc> | inoremap <leader>J <Esc> | cnoremap <leader>J <Esc>
 nnoremap <leader>ic :set ic!<CR>
 noremap <leader>ii /
 noremap <leader>uu ?
-nnoremap <leader>iv /\v | nnoremap <leader>uv ?\V
-noremap <leader>ic /\c | noremap <leader>uc ?\c
+nnoremap <leader>iv /\v
+nnoremap <leader>uv ?\V
+noremap <leader>ic /\c
+noremap <leader>uc ?\c
 " --
 " Star and Hash only hlmarks word. Cont. search with 'n'
 " + Reports number of matches
@@ -201,7 +207,8 @@ nnoremap * *N:%s///gn<CR>
 nnoremap # #N:%s///gn<CR>
 " --
 " HACK: Change to nzzb / Nzzb
-nnoremap n nzzh | nnoremap N Nzz
+nnoremap n nzz
+nnoremap N Nzz
 " --
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
