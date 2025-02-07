@@ -38,6 +38,23 @@ Invoke-WebRequest -Uri $downloadUrl -OutFile $installerPath
 Start-Process -FilePath $installerPath -ArgumentList "/S"
 
 
+# Install VeraCrypt ----
+# Define the URL of the VeraCrypt installer
+$veracryptInstallerUrl = "https://www.veracrypt.fr/en/Downloads"
+
+# Download the installer
+try {
+    Invoke-WebRequest -Uri $veracryptInstallerUrl -OutFile "veracrypt_setup.exe"
+    Write-Host "VeraCrypt installer downloaded successfully."
+} catch {
+    Write-Host "Error downloading VeraCrypt installer: $($_.Exception.Message)"
+    exit 1
+}
+
+# Launch the installer (basic example)
+Start-Process -FilePath ".\veracrypt_setup.exe"
+
+
 # - Question: Is there a keyboard shortcut in Windows 10 to move the active app/window to the next desktop? I.e. grabbing and moving it with the mouse is kind of tedious
 # 
 # Unfortunately, there isn't a single, dedicated keyboard shortcut to directly move the active app/window to the next desktop in Windows 10.

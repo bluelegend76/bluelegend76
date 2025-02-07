@@ -1,0 +1,3922 @@
+vim:shiftwidth=2:syntax=sh:
+set shiftwidth=2 | set syntax=sh | colors industry
+
+https://duckduckgo.com/?q=termux+change+repo&t=newext&atb=v332-1&ia=web
+https://stackoverflow.com/questions/67647518/termux-repository-is-under-maintenance-or-down
+
+___toc
+termux-change-repo
+termux-tools
+----
+Package_Management
+Main_Page
+Getting_started
+User_Interface
+Terminal_Settings
+Software
+Development_Environments
+  TermuxPentiPicoLisp
+Differences_from_Linux
+Editors
+Graphical_Environment
+Intents_and_Hooks
+Package_Management
+Package_Tips
+Remote_Access
+Sharing_Data
+Shells
+Hardware
+FAQ
+Termux:API
+Termux:Boot
+Termux:Float
+Termux:Styling
+Termux:Tasker
+Termux:Widget
+
+
+TODO (=EXPORT TO TXT) *****  Termux(!!)
+  https://duckduckgo.com/?q=termux+change+repo&t=newext&atb=v332-1&ia=web
+  https://stackoverflow.com/questions/67647518/termux-repository-is-under-maintenance-or-down
+
+  https://www.termuxhub.com/termux-change-repo
+https://termux.dev/en/
+  https://github.com/topics/termux-tools
+https://www.youtube.com/watch?v=Fn6uam4Je8o
+ass<Esc>
+
+  https://wiki.termux.com/wiki/Package_Management
+
+Package Management
+
+Termux uses apt and dpkg for
+package management, similar to
+Ubuntu or Debian.
+
+
+Limitations
+
+n@Termux does not support use of
+packages from the Debian, Ubuntu
+and other Linux distribution
+repositories. For this reason do
+not attempt put these ones into
+your sources.list or manually
+installing their .deb files. See
+Differences from Linux to learn
+why.
+
+Additional restrictions:
+
+n@- Only single architecture is
+  supported at the moment. You
+  can't have both 64 and 32 bit
+  packages installed at the same
+  time. '
+- Apt usage under root is
+  restricted to prevent messing up
+  ownership and SELinux labels on
+  Android /data partition.
+n@- Downgrading is not supported. In
+  order to reclaim disk space, we
+  do not keep history of package
+  versions.
+
+
+Using the package manager
+
+T@We strongly recommend to use a pkg
+utility instead of apt directly. It
+is a wrapper that performs a number
+of tasks:
+
+- Provides command shortcuts. Use
+  "pkg in" instead of "pkg install"
+  or "apt install".
+n@- Automatically runs "apt update"
+  before installing a package if
+  necessary.
+- Performs some client side
+  repository load-balancing by
+  automatically switching mirrors
+  on a regular basis. That is
+  important to prevent us hitting
+  quota limit on hosting.
+
+Installing a new package:
+
+n@T@T@pkg install package-name
+
+T@T@It is highly recommended to
+upgrade existing packages before
+installing the new one. You can
+install updates by running this
+command:
+
+n@T@pkg upgrade
+
+T@T@Additionally, we suggesting to
+check for updates at least once a
+week. Otherwise there is a certain
+risk that during package
+installation or upgrade you will
+encounter issues.
+
+Removing the installed package:
+
+T@pkg uninstall package-name
+
+This will remove package but
+modified configuration files will
+be left intact. n@T@T@If you want to
+remove them, use apt purge instead.
+
+See below for additional supported
+commands:
+
+T@T@T@T@Command
+  Description
+
+T@pkg autoclean
+  Remove outdated .deb files from
+  the cache.
+
+T@pkg clean
+  Remove all .deb files from the
+  cache.
+
+pkg files <package>
+  List files installed by specified
+  package.
+
+pkg list-all
+  List all available packages.
+
+pkg list-installed
+  List currently installed
+  packages.
+
+pkg reinstall <package>
+  Re-install specified package.
+
+pkg search <query>
+  Search package by query.
+
+pkg show <package>
+  Show information about specific
+  package.
+TTTT@
+
+
+Official repositories
+
+T@The main Termux repository is
+accessible through
+https://packages.termux.org/apt/termux-main/.
+
+n@n@We have some optional
+repositories which provide content
+on specific topic and can be enabled
+by installing packages with name
+ending in -repo.
+
+List of current optional
+repositories:
+
+Repository TT@
+  Command to subscribe to repository
+
+game-packages
+  pkg install game-repo
+
+science-packages
+  pkg install science-repo
+
+termux-root-packages
+  pkg install root-repo
+
+x11-packages (Android 7+ only)
+  pkg install x11-repo
+
+Packages for our official
+repositories are built from scripts
+located in github.com/termux/ and
+are maintained and signed by member
+of the Termux developer team.
+n@Public keys for verifying
+signatures are provided in package
+termux-keyring. For more
+information about how the
+repositories are signed, see
+termux-keyring.
+
+The mirrors of Termux apt
+repositories are available. See
+up-to-date information about them
+on Github.
+
+T@You can pick a mirror by using
+utility termux-change-repo.
+
+
+Community repositories
+
+In addition to the official
+repositories, there are
+repositories hosted by community
+members. You are welcome to host
+own Termux repository too.
+
+n@You can create own repository by
+using termux-apt-repo from the
+command line and Github Pages as
+hosting. Be aware that Github has a
+strict limit of 100 MB per file and
+if your repository exceeds total
+size of 1 GB, you might receive a
+polite email from GitHub Support
+requesting that you reduce the size
+of the repository. So if you have
+really big packages you may want to
+use a different hosting. Choose
+hosting according to filetypes,
+for example, videos can be hosted
+at https://YouTube.com or similar.
+
+
+By its-pointless
+
+Repository of this community member
+includes gcc, gfortran, octave,
+r-cran (R language), scipy and lots
+of games!
+
+To add this repository, execute:
+
+curl -LO https://its-pointless.github.io/setup-pointless-repo.sh
+bash setup-pointless-repo.sh
+
+The script essentially installs
+gnupg on your device, downloads and
+adds a public key to your apt
+keychain ensuring that all
+subsequent downloads are from the
+same source.
+
+
+Package requests
+
+Packages can be requested at
+https://github.com/termux/termux-packages/issues.
+Note that your opened issue with
+request can be moved to another
+repository, like
+termux-root-packages or
+x11-packages if it is not suitable
+for the main repository.
+
+Please ensure that you have read
+our Packaging Policy.
+
+Other package managers
+
+n@Some programming languages have
+their own package managers. We tend
+not to package things installable
+with this ones due to issues when
+cross-compiling them in our build
+environment.
+
+n@- Node.js Package Management (npm)
+- Perl Package Management (cpan)
+- Python Package Management (pip)
+- Ruby Package Management (gem)
+- TeX Live Package Management
+  (tlmgr)
+- Rust Package Manager (Cargo)
+
+See Also
+
+- Backing up Termux
+- Building packages
+
+
+
+  https://wiki.termux.com/wiki/Main_Page
+
+The Termux Wiki
+
+Tips and tricks about using Termux
+application and its packages.
+
+Russian Termux Wiki translation
+variant is available.
+
+
+Introduction
+
+  n@n@[IRC Weechat in Termux]
+
+Termux is an Android terminal
+emulator and Linux environment
+application that works directly with
+no rooting or setup required. n@n@A
+minimal base system is installed
+automatically, additional packages
+are available using the package
+manager.
+
+Getting started
+
+  Collection of informational
+  resources for newbies.
+
+User Interface
+
+  How to use the app.
+
+Terminal Settings
+
+  How to configure the app.
+
+Software
+
+  How you can install more
+  software.
+
+Hardware
+
+  How to use an external keyboard
+  and mouse.
+
+FAQ
+
+  Frequently asked questions and
+  answers to them.
+
+
+Installation
+
+T@T@You can obtain Termux builds
+from F-Droid. Do not install it from
+Google Play.
+
+System requirements:
+
+- Android 5.0 - 12.0 (issues)
+- CPU: AArch64, ARM, i686, x86_64.
+- At least 300 MB of disk space.
+
+Please note that Termux does not
+support ARM devices without NEON
+SIMD, for example on devices based
+on Nvidia Tegra 2 CPUs.
+
+VMOS, F1VM and similar sandbox
+applications are not supported.
+
+
+Addons
+
+T@T@T@Termux has some extra
+features. You can add them by
+installing addons:
+
+Termux:API
+
+  Access Android and Chrome
+  hardware features.
+
+Termux:Boot
+
+  T@Run script(s) when your device
+  boots.
+
+Termux:Float
+
+  Run Termux in a floating window.
+
+Termux:Styling
+
+  Have color schemes and
+  powerline-ready fonts customize
+  the appearance of the Termux
+  terminal.
+
+Termux:Tasker
+
+  T@An easy way to call Termux
+  executables from Tasker and
+  compatible apps.
+
+Termux:Widget
+
+  T@Start small scriptlets from the
+  home screen.
+
+
+Community
+
+Unable to find solution in the
+FAQs?
+
+Just want to get to know us?
+
+Want help Termux developers and
+users out by contributing to the
+project?
+
+Check out the community pages.
+Whether just for fun or serious
+work, please join us.
+
+
+___start2
+
+  https://wiki.termux.com/wiki/Getting_started
+
+Getting started
+
+n@Termux is a terminal emulator
+application enhanced with a large
+set of command line utilities
+ported to Android OS. The main goal
+is to bring the Linux command line
+experience to users of mobile
+devices with no rooting or other
+special setup required.
+
+
+How does it work
+
+T@T@The terminal emulator is
+basically an application that
+launches the command line program by
+using system call execve(2) and
+redirecting standard input, output
+and error streams onto the display.
+
+n@Most terminal applications
+available on Android OS work with a
+very limited set of utilities which
+are usually provided either by the
+operating system or other rooting
+tools such as Magisk. We have
+decided to go further and port
+common software usually available
+on GNU/Linux systems to Android OS.
+
+Termux is neither a virtual machine
+nor any other kind of emulated or
+simulated environment. T@All
+provided packages are cross-compiled
+with Android NDK and only have
+compatibility patches to get them
+working on Android. T@T@The operating
+system does not provide full access
+to its file systems, so Termux
+cannot install package files into
+standard directories such as /bin,
+/etc, /usr or /var. T@Instead, all
+files are installed into the private
+application directory located at
+
+T@/data/data/com.termux/files/usr
+
+T@T@We call that directory "prefix"
+and usually refer to it as
+"$PREFIX", T@which is also an
+exported environment variable in the
+Termux shell. n@n@Note that this
+directory cannot be changed or moved
+to an SD-Card because:
+
+- The file system must have support
+for unix permissions and special
+files such as symlinks or sockets.
+- The prefix path is hardcoded into
+all binaries.
+
+T@In addition to prefix, users can
+store files in the home directory
+(or "$HOME") available at
+/data/data/com.termux/files/home
+
+n@T@However, the file system is not
+the only difference from the
+traditional Linux distributions.
+For more information, read
+Differences from Linux.
+
+
+What can I do with Termux?
+
+n@n@T@T@There are a number of common
+use-cases for the Termux
+application:
+
+- Data processing with Python.
+- Programming in a development
+  environment.
+- Downloading and managing files
+  and pages using time-established
+  tools.
+- Learning the basics of the Linux
+  command line environment.
+- Running an SSH client.
+- Synchronizing and backing up your
+  files.
+
+Of course, usage is not limited to
+the topics listed above. There are
+more than 1000 packages in our
+repositories. T@T@If these packages
+don't have what you're looking for,
+you can compile your own - we have
+a variety of build tools, including
+compilers for languages like C,
+C++, Go, Rust. T@Interpreters for
+common languages like NodeJS,
+Python, Ruby are available too.
+
+Please note that Termux is not a
+rooting tool and will not give you
+root privileges unless you are
+skilled enough to break the Android
+OS security.
+
+
+Is root required
+
+Normally Termux does not require
+device to be rooted. In fact it's
+primarily targeted for non-root
+users.
+
+n@n@You may want to root your device
+to:
+
+- Modify a device's firmware.
+- Manipulate the parameters of the
+  operating system or kernel.
+n@- Non-interactively
+  install/uninstall APKs.
+- Have full R/W access to all file
+  systems on device.
+- Have direct access to hardware
+  devices such as BT/Wi-Fi modules
+  or serial lines (e.g. to access
+  modem).
+n@- Install a Linux distribution on
+  top of Android through chroot
+  (not proot!) or containerization.
+- Generally have "full" control
+  over your device.
+
+Otherwise root isn't necessary and
+is rather bad than good. '
+
+
+Tips
+
+T@Here are basic tips on how to use
+Termux and survive:
+
+T@T@- Learn shell scripting!
+n@T@- Always keep your packages
+  up-to-date! Run command pkg
+  upgrade on regular basis or at
+  least before installing a new
+  package. Not updating packages or
+  downgrading them voids your
+  warranty.
+T@- Do backups, always! Without
+  backups, you will be probably
+  unable to roll back if something
+  goes wrong. n@T@Please note that
+  software developers should pay
+  attention to backing up debfiles
+  of used compilers, interpreters
+  or dependencies because Termux
+  does not provide older package
+  versions and it is a
+  rolling-release. T@Check Backing up
+  Termux for info on how to backup
+  and restore.
+- Do not execute things which you
+  do not know! Review scripts
+  downloaded from the Internet.
+  Always think about what you are
+  typing into the terminal.
+n@- Carefully read everything that
+  has been printed to the terminal!
+  Understanding the informational
+  messages helps resolving issues
+  which may occur.
+
+
+Are there any tutorials
+
+  Note: This section or list is
+  incomplete. Please help to
+  improve it.
+
+We are not capable of maintaining
+the whole documentation about Linux
+commands, shell scripting and other
+general-purpose information so
+links to external resources are
+provided instead.
+
+n@We strongly suggest that you avoid
+YouTube tutorials, especially
+related to hacking. There a lot of
+clickbait targeted at inexperienced
+users. If you decide to follow
+them, ensure that you fully
+understand the executed commands.
+T@Also always check the content of
+downloaded files. n@If the content of
+downloaded scripts is obfuscated,
+that should be an alarm about
+potentially unsafe content. Do not
+complain that Termux has not
+fulfilled your expectations.
+
+
+Commands and Shell Scripting
+
+n@Discover the commands and learn how
+to use shell effectively.
+
+T@- https://linuxjourney.com/
+- http://mywiki.wooledge.org/BashGuide
+- https://www.tldp.org/LDP/Bash-Beginners-Guide/html/
+
+These links may be useful for
+advanced users:
+
+T@-
+https://wiki-dev.bash-hackers.org/
+reference with examples of Bash
+built-in commands use,
+- https://debian-handbook.info/ The
+Debian Administrator's Handbook. '
+
+When following tutorial examples,
+remember that Termux is not a Linux
+distribution. Some commands may not
+work, for example ls /home, due to
+non-existent paths and other
+differences Linux and Android have
+regarding Termux distributions.
+
+
+How can I contribute?
+
+The best ways to contribute are:
+
+- Improving the Termux Wiki pages,
+  i.e. by fleshing out sections
+  that could use additional
+  information or by correcting
+  errors in grammar.
+- Submitting bug reports. Please
+  only submit reports that are
+  about Termux packages or
+  applications. Other errors should
+  be submitted elsewhere.
+- Submitting package updates.
+- Submitting pull requests with bug
+  fixes and improvements.
+
+All of the source code for Termux
+can be found at
+https://github.com/termux.
+
+See also
+
+T@- FAQ
+- Development Environments
+- Editors
+- Differences from Linux
+- Package Management
+- Recover a broken environment
+- Software
+
+
+  https://wiki.termux.com/wiki/User_Interface
+
+User Interface
+
+n@At launch Termux shows a terminal
+interface, whose text size can be
+adjusted by pinch zooming or double
+tapping and pulling the content
+towards or from you.
+
+Besides the terminal (with keyboard
+shortcuts explained below) there
+are three additional interface
+elements available: A context menu,
+navigation drawer and notification.
+
+The context menu can be shown by
+long pressing anywhere on the
+terminal. It provides menu entries
+for:
+
+- Selecting and pasting text.
+- Sharing text from the terminal to
+  other apps (e.g. email or SMS)
+- Resetting the terminal if it gets
+  stuck.
+- Hangup (exiting the current
+  terminal session).
+- Styling the terminal by selecting
+  a font and a color scheme.
+- Showing this help page.
+
+The navigation drawer is revealed
+by swiping inwards from the left
+part of the screen (if you have
+gesture navigation enabled in
+Android, you will need to hold
+briefly on the edge of the screen
+before swiping to bring up the
+navigation drawer instead of going
+back in Android). It has three
+elements:
+
+n@- A list of sessions. T@Clicking
+on a session shows it in the
+terminal while long pressing allows
+you to specify a session title.
+- A button to toggle visibility of
+the touch keyboard.
+T@- A button to create new terminal
+sessions (long press for creating a
+named session or a fail-safe one).
+
+                          for ''
+
+T@n@T@The notification, available
+when a terminal session is running,
+is available by pulling down the
+notification menu. T@Pressing the
+notification leads to the most
+current terminal session. n@T@The
+notification may also be expanded
+(by pinch-zooming or performing a
+single-finger glide) to expose three
+actions:
+
+- Exiting all running terminal
+  sessions.
+- Use a wake lock to avoid entering
+  sleep mode.
+- Use a high performance wifi lock
+  to maximize wifi performance.
+
+T@With a wake lock held the
+notification and Termux background
+processes will be available even if
+no terminal session is running,
+which allows server and other
+background processes to run more
+reliably.
+
+T@T@Graphical interface (via external vncviewer)
+
+Termux also has fairly basic
+graphical user interface support
+based on X11. To enable Graphical
+Environment support see Graphical
+Environment
+
+See Also
+
+- Touch Keyboard
+
+
+  https://wiki.termux.com/wiki/Terminal_Settings
+
+Terminal Settings
+
+n@T@The Termux terminal can be
+configured by editing the
+~/.termux/termux.properties file.
+n@This file uses a simple key=value
+property syntax.
+
+T@Lines beginning with # are comments
+and do not get executed. Most of
+the properties are included as
+comments in the file. n@Uncomment an
+existing line or add a new line to
+configure a property.
+
+T@T@For changes to take effect after
+editing the properties file, either
+execute termux-reload-settings or
+restart Termux by closing all
+sessions and starting the
+application again.
+
+
+Dark theme
+
+Force the application to use dark
+theme for drawer and dialogs with
+
+T@use-black-ui=true
+
+  Note: This is enabled
+  automatically on Android 9+ if
+  the system UI uses a dark theme.
+
+Fullscreen mode
+
+n@Enable fullscreen mode with
+
+fullscreen=true
+
+It is likely that with fullscreen
+enabled, the Extra Keys view may no
+longer be visible. To fix, add
+
+n@T@use-fullscreen-workaround=true
+
+  Note: Fullscreen may not work
+  well for all devices so consider
+  it unstable for now.
+
+
+Handling terminal sessions
+
+T@Use shortcut key combinations to
+handle common session actions.
+n@T@Add shortcuts to open a new
+session, switch between sessions,
+    and rename sessions with
+
+T@T@# Open a new terminal with ctrl + t (volume down + t)
+shortcut.create-session=ctrl + t
+
+# Go one session down with (for example) ctrl + 2
+shortcut.next-session=ctrl + 2
+
+# Go one session up with (for example) ctrl + 1
+shortcut.previous-session=ctrl + 1
+
+# Rename a session with (for example) ctrl + n
+shortcut.rename-session=ctrl + n
+
+
+Handling the bell character
+
+Adjust the behavior of how the bell
+character is received with the
+bell-character property
+
+# Vibrate device (default).
+bell-character=vibrate
+
+# Beep with a sound.
+bell-character=beep
+
+# Ignore bell character.
+bell-character=ignore
+
+
+Handling the back key
+
+Adjust the behavior of how the back
+key is handled with the back-key
+property
+
+T@# Send the Escape key.
+back-key=escape
+
+# Hide keyboard or leave app (default).
+back-key=back
+
+
+Handling the extra keys
+
+  See Touch Keyboard
+
+
+Workaround issues with some keyboards
+
+Some keyboards, e.g. a default one
+on Samsung devices, have issues
+with text input: text appearing
+only after pressing "enter", wrong
+keyboard layout being opened, etc.
+They are not compatible with the
+Termux input method because
+enforcing a word-based input. T@As
+workaround, use
+
+enforce-char-based-input = true
+
+This will tell Termux to use
+
+InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS instead of InputType.TYPE_NULL.
+
+On some devices the combination of
+ctrl + space on hardware keyboards
+does not work (for example in
+emacs) which makes it difficult to
+mark text. As a workaround, use
+
+ctrl-space-workaround = true
+
+  Note: setting this on devices
+  where ctrl + space already works
+  will break the functionality.
+
+
+Adjust Terminal Margin/Padding
+
+Terminal horizontal margin (left
+and right) can be adjuted with
+
+terminal-margin-horizontal=val
+
+And vertical margin (top and
+bottom) with
+
+terminal-margin-vertical=val
+
+Where val is an integer
+(representing dp units) between 0
+and 100.
+
+The default value is 3 for
+horizontal margin and 0 for
+vertical margin.
+
+T@This can be helpful for some
+setups, such as text on screen
+edges not being fully visible due
+to curvature or a screen
+protector/case. A larger horizontal
+margin may also be helpful for
+those having gesture navigation
+enabled on Android 10+ due to not
+being able to touch at exactly the
+edge of the screen.
+
+
+  https://wiki.termux.com/wiki/Software
+
+Software
+
+Software that works in Termux on a
+smartphone and tablet in Android
+and Chrome. Termux offers a wide
+range of software for your device.
+
+Development Environments
+
+  Termux is a great software
+  development environment.
+
+Differences from Linux
+
+  There are several differences
+  between Termux and a regular
+  Linux distribution.
+
+Editors
+
+  Edit, write and manipulate text
+  and data files.
+
+Graphical Environment
+
+  Everything about using X Window
+  System in Termux.
+
+n@T@T@Intents and Hooks
+
+  Use intents and hooks to access
+  Termux from other apps.
+
+Package Management
+
+  Basic and advanced package and
+  module management.
+
+Package Tips
+
+  A list of manuals for packages
+  that are tricky to install.
+
+Remote Access
+
+  Access your remote devices or the
+  Termux itself.
+
+Sharing Data
+
+  T@Accessing files in the $HOME
+  directory in other apps on device
+
+Shells
+
+  A listing of some of the
+  available shells in Termux.
+
+
+  https://wiki.termux.com/wiki/Development_Environments
+
+Development Environments
+
+Termux is often used for software
+development, information science
+education and experimentation. Here
+are some articles and links with
+information on how to make it
+possible with one of the following
+programming environments.
+
+
+APKs
+
+T@T@n@APKs (Android application PacKage)
+can be built in Termux on device
+with openjdk-17 and gradle.
+
+Related Pull Request and Temporary
+Guide:
+https://github.com/termux/termux-packages/pull/7227#issuecomment-893022283
+
+
+C/C++
+
+T@Package: clang
+Description: C language frontend for LLVM
+Homepage: http://clang.llvm.org/
+Related Issues: https://github.com/termux/termux-packages/issues?q=clang
+
+
+T@Common Lisp
+
+Package: ecl
+Description: ECL (Embeddable Common Lisp) interpreter
+Homepage: https://common-lisp.net/project/ecl/
+
+
+T@n@n@D
+
+Package: ldc
+Description: D programming language compiler, built with LLVM
+Homepage: https://dlang.org/
+Instructions: https://wiki.dlang.org/Build_D_for_Android
+
+
+T@Dart
+Package: dart
+Homepage: https://www.dartlang.org/
+
+
+T@Elixir
+Package: elixir
+Description: Programming language compatible with the Erlang platform
+Homepage: https://elixir-lang.org/
+
+
+Erlang
+Package: erlang
+Description: Erlang programming language and runtime environment
+Homepage: https://www.erlang.org/
+
+
+T@Forth
+Package: pforth
+Description: Portable Forth in C
+Homepage: http://www.softsynth.com/pforth/
+
+
+Go
+Package: golang
+Description: Go programming language compiler
+Homepage: https://golang.org/
+Instructions: https://gobyexample.com/hello-world
+
+
+Groovy
+Package: groovy
+Description: A multi-faceted language for the Java platform
+Homepage: https://groovy-lang.org/
+
+
+T@Haskell
+Package: ghc
+Description: Glasgow Haskell Compiler.
+ghc is currently disabled due to build issues. Looking for patches that will fix package.
+Homepage: https://www.haskell.org/ghc/
+Related Issues: https://github.com/termux/termux-packages/issues?q=haskell
+
+
+T@T@Java
+ECJ
+Package: ecj
+Description: Eclipse Compiler for Java
+Homepage: http://www.eclipse.org/jdt/core/
+Related Issues: https://github.com/termux/termux-packages/issues?q=ecj
+
+
+n@T@OpenJDK
+Package: openjdk-17
+Description: Java development kit and runtime
+Related Issues: https://github.com/termux/termux-packages/issues?q=openjdk, https://github.com/termux/termux-packages/issues?q=java
+
+
+n@T@JavaScript
+See packages: quickjs, duktape, nodejs, nodejs-lts
+
+NodeJS
+Main Article: Node.js
+Homepage: https://nodejs.org/
+
+
+T@T@Kotlin
+Package: kotlin
+Homepage: https://kotlinlang.org/
+
+
+T@Lua
+Package: lua52
+Package: lua53
+Package: lua54
+Description: Lightweight embeddable scripting language
+Homepage: https://www.lua.org/
+
+
+Nim
+Package: nim
+Description: Nim programming language compiler
+Homepage: https://nim-lang.org/
+
+
+T@T@OCaml
+
+- Compiling and setting up OCaml (a
+  copy of the article
+  http://ygrek.org.ua/p/ocaml-termux.html)
+
+https://ocaml.org/learn/description.html
+Related Issues: https://github.com/termux/termux-packages/issues?q=ocaml
+
+
+T@Octave
+Octave is available from a community repository. Setup up its-pointless' repository.
+https://github.com/termux/termux-packages/issues?q=octave '
+
+
+Perl
+Package: perl
+Homepage: https://www.perl.org/
+
+
+PHP
+Package: php
+Description: Server-side scripting language
+Homepage: https://php.net
+Related Issues: https://github.com/termux/termux-packages/issues?q=php
+
+
+Picolisp
+
+- The original article:
+  https://picolisp.com/wiki/?TermuxPentiPicoLisp
+
+Related Issues: https://github.com/termux/termux-packages/issues?q=picolisp
+
+
+T@Prolog
+Package: swi-prolog
+Description: Popular prolog implementation
+Homepage: https://swi-prolog.org/
+
+
+T@T@Python
+Main Article: Python
+Package: python
+Description: Python 3 interpreter
+Package: python2
+Description: Python 2 interpreter
+Homepage: http://python.org/
+Related Issues: https://github.com/termux/termux-packages/issues?q=python
+
+
+T@Racket
+Package: racket
+Homepage: https://racket-lang.org
+
+
+Ruby
+Main Article: Ruby
+Package: ruby
+Homepage: https://www.ruby-lang.org/
+Related Issues: https://github.com/termux/termux-packages/issues?q=ruby
+
+
+Rust
+Package: rust
+Description: The Rust compiler and Cargo package manager
+Homepage: https://www.rust-lang.org
+Related Issues: https://github.com/termux/termux-packages/issues?q=rust
+
+
+Scala
+Package: scala
+Homepage: https://www.scala-lang.org
+
+
+T@T@Scheme
+
+T@TinyScheme
+
+Package: tinyscheme
+Description: Very small scheme implementation
+Homepage: http://tinyscheme.sourceforge.net/home.html
+
+T@Guile
+Package: guile
+Homepage: http://www.gnu.org/software/guile/
+
+
+Smalltalk
+Package: smalltalk
+Description: Smalltalk-80 language implementation by GNU
+Homepage: http://smalltalk.gnu.org/
+
+
+T@Swift
+Package: swift
+Description: Swift compiler
+Homepage: https://swift.org/
+
+
+Tcl
+Package: tcl
+Homepage: https://www.tcl.tk/
+
+
+See Also
+
+- Development
+- Editors
+- IDEs
+
+
+  https://wiki.termux.com/wiki/Differences_from_Linux
+
+Differences from Linux
+
+The environment setup in Termux is
+similar to that of a modern Linux
+distribution. However, running on
+Android implies several important
+differences. n@T@Termux is not FHS
+compliant
+
+This is why Termux does not use
+official Debian or Ubuntu packages
+for its environment.
+
+Termux does not follow Filesystem
+Hierarchy Standard unlike majority
+of Linux distributions. You cannot
+find directories like /bin, /etc,
+/usr, /tmp and others at the usual
+locations. T@T@Thus, all programs
+must be patched and recompiled to
+meet requirements of the Termux
+environment otherwise they will not
+be able to find their configuration
+files or other data.
+
+You may have a problem executing
+scripts that have standard shebangs
+(e.g. #!/bin/sh). n@T@T@Use the
+termux-fix-shebang script to modify
+these files before executing.
+T@Recent versions of Termux provide a
+special package (termux-exec) which
+allows usage of standard she-bangs.
+
+n@Most packages have shared library
+dependencies which are installed to
+$PREFIX/lib. On devices before
+Android 7, Termux exports the
+special variable $LD_LIBRARY_PATH
+which tells the linker where to
+find shared library files. n@On
+Android 7 or higher, the DT_RUNPATH
+ELF header attribute is used
+instead of LD_LIBRARY_PATH.
+
+T@n@T@If you still need a classical
+Linux file system layout for some
+reason, you may try to use
+termux-chroot from package 'proot':
+
+$ pkg install proot
+$ termux-chroot
+$ ls /usr
+bin  doc  etc  include	lib  libexec  share  tmp  var
+
+The termux-chroot utility may be
+very helpful if you use custom
+software that requires standard
+paths like /tmp, /etc, /usr to be
+available.
+
+
+Termux uses Bionic libc
+
+  [Shell could seem to be stupid
+  saying that file does not exist
+  but you know it exists. However
+  in this case shell is actually
+  right. The dynamic linker is not
+  available at standard path. T@Use
+  strace to see what's going on.]
+
+n@T@T@T@To have the best
+compatibility with Android OS and to
+remove the need to maintain custom
+toolchains we compile all our
+packages with the Android NDK. The
+resulting binaries are linked
+against the Bionic libc (files
+libc.so, libm.so, libdl.so from
+/system/lib or /system/lib64). '
+
+Use of the libc provided by Android
+and FHS incompatibility make it
+impossible to execute native
+packages copied from Linux
+distributions:
+
+- Dynamically linked programs will
+  not run because the linker is
+  expected in a nonexistent
+  location (/lib) and libc ABI does
+  not match.
+n@- Statically linked programs (only
+  networking ones) will not be able
+  to resolve DNS names. GNU libc
+  normally doesn't allow static
+  linking with resolver. Also, the
+  file /etc/resolv.conf does not
+  exist on Android. '
+n@- On non-rooted Android 8 or newer,
+  statically linked programs will
+  not run due to issues with
+  seccomp filter.
+- See also: Common porting problems
+
+n@T@T@However, these restrictions
+can be bypassed by setting up a
+Linux distribution rootfs with
+PRoot.
+
+
+Root file system is stored as ordinary application data
+
+T@T@The root file system and user home
+directory are located in a private
+application data directory which
+lives on the /data partition. T@Paths
+to these directories are exposed as
+$PREFIX and $HOME respectively.
+
+You cannot move $PREFIX to another
+location because all programs
+expect that $PREFIX will not be
+changed. Additionally, you cannot
+have binaries, symlinks and other
+files from $PREFIX on sdcard
+because that file system does not
+support unix permissions, symlinks,
+sockets, etc...
+
+n@Important: if you uninstall the
+Termux application or wipe its
+data, directories $PREFIX and $HOME
+will be wiped too. Before doing
+this, make sure that all important
+data is backed up.
+
+
+Termux is single-user
+
+n@Android applications are sandboxed
+and have their own Linux user id and
+SELinux label. T@Termux is no
+exception and everything within
+Termux is executed with the same
+user id as the Termux application
+itself. n@n@The username may look
+like u0_a231 and cannot be changed
+as it is derived from the user id by
+Bionic libc.
+
+n@All our packages (except root-only
+ones) are patched to drop any
+multiuser, setuid/setgid and other
+similar functionality. T@T@n@We also
+changed default ports for server
+packages: ftpd, httpd and sshd have
+their default ports set to 8021,
+8080 and 8022 respectively.
+
+T@You have free read-write access to
+all application components
+including $PREFIX. n@Be careful since
+it is very easy to break things by
+accidentally deleting or
+overwriting files in $PREFIX.
+
+
+See Also
+
+- Running Linux operating systems
+  in Termux PRoot
+- Sharing data between Termux and
+  other applications
+- Termux-exec
+- Common porting problems
+
+
+  https://wiki.termux.com/wiki/Editors
+
+Editors
+
+Audio Editors
+
+  Audio editing software is
+  software which allows editing and
+  generating of audio data. T@Audio
+  editing software can be
+  implemented completely or partly
+  as library, as computer
+  application, as Web application
+  or as a loadable kernel module.
+
+Hex Editors
+
+  A hex editor is a type of
+  computer program that allows for
+  manipulation of the fundamental
+  binary data that constitutes a
+  computer file.
+
+Image Editors
+
+  Image editing encompasses the
+  processes of altering images,
+  whether they are digital
+  photographs, traditional
+  photochemical photographs, or
+  illustrations. n@Traditional analog
+  image editing is known as photo
+  retouching, using tools such as
+  an airbrush to modify
+  photographs, or editing
+  illustrations with any
+  traditional art medium. Graphic
+  software programs, which can be
+  broadly grouped into vector
+  graphics editors, raster graphics
+  editors, and 3D modelers, are the
+  primary tools with which a user
+  may manipulate, enhance, and
+  transform images. Many image
+  editing programs are also used to
+  render or create computer art
+  from scratch such as povray.
+
+Stream Editors
+
+  n@A Unix utility that parses and
+  transforms text, using a simple,
+  compact programming language.
+  Options for doing stream editing
+  include awk, node.js, perl and
+  sed.
+
+Text Editors
+
+  A system or program that allows a
+  user to edit text. A text editor
+  is a type of program used for
+  editing plain text files. Text
+  editors are provided with
+  operating systems and software
+  development packages, and can be
+  used to change configuration
+  files, documentation files and
+  programming language source code.
+
+Video Editors
+
+  With video editors various Video
+  manipulation can be done,
+  including: cutting, converting,
+  splitting, joining ...
+
+See Also
+
+- IDEs
+- OCR
+
+
+  https://wiki.termux.com/wiki/Graphical_Environment
+
+Graphical Environment
+
+  n@This article is only applicable
+  only to Termux installations
+  running on Android 7.0 or higher.
+
+T@Termux provides support for
+programs that use X Window System.
+n@However, there no hardware
+acceleration for rendering and user
+will have to install a third party
+application to view graphical
+output. mtPaint
+
+T@T@To use X11-enabled programs,
+please, make sure that at least one
+of the following programs is
+installed:
+
+- VNC Viewer - the best choice for
+  interacting with graphical
+  environment. Requires a running
+  VNC server.
+T@- XServer XSDL - this one may be
+  unstable but it provides a
+  standalone Xorg server so you
+  don't have to setup VNC. '
+T@- Android XServer - Only implements
+  the core X11 protocol. Shares
+  clipboard between android / X11
+  and includes a window manager.
+
+
+Enabling the X11 Repository
+
+T@X11 packages are available in a
+separate APT repository. You can
+enable it by running the following
+command:
+
+pkg install x11-repo
+
+It will automatically add
+appropriate sources.list file and
+PGP key.
+
+To disable this repository, you
+need to uninstall package x11-repo.
+
+
+Setting up VNC
+
+Server
+
+T@T@T@If you decided to use VNC for
+graphical output, follow these
+instructions for properly setting
+up VNC server.
+
+- 1. Install package `tigervnc`:
+
+pkg install tigervnc
+
+- 2. After installation, execute
+  this:
+
+n@T@vncserver -localhost
+
+T@At first time, you will be prompted
+for setting up passwords:
+
+You will require a password to
+access your desktops.
+
+Password:
+Verify:
+Would you like to enter a view-only password (y/n)? n
+
+Note that passwords are not visible
+when you are typing them and
+maximal password length is 8
+characters.
+
+- 3. If everything is okay, you
+  will see this message:
+
+New 'localhost:1 ()' desktop is localhost:1
+
+Creating default startup script /data/data/com.termux/files/home/.vnc/xstartup
+Creating default config /data/data/com.termux/files/home/.vnc/config
+Starting applications specified in /data/data/com.termux/files/home/.vnc/xstartup
+Log file is /data/data/com.termux/files/home/.vnc/localhost:1.log
+
+It means that X (vnc) server is
+available on display 'localhost:1'.
+
+- 4. n@T@Finally, to make programs do
+  graphical output to the display
+  'localhost:1', set environment
+  variable like shown here (yes,
+  without specifying 'localhost'):
+
+export DISPLAY=":1"
+
+n@T@You may even put this variable to
+your bashrc or profile so you don't
+have to always set it manually
+unless display address will be
+changed. '
+
+
+Client
+
+Here will be assumed that you use
+this Android VNC client: VNC Viewer
+(developed by RealVNC Limited).
+
+  [VNC Viewer: new connection]
+
+- 1. Determine port number on which
+  VNC server listens. T@T@It can be
+  calculated like this: 5900 +
+  {display number}. So for display
+  'localhost:1' the port will be
+  5901.
+- 2. T@Now open the VNC Viewer
+  application and create a new
+  connection with the following
+  information (assuming that VNC
+  port is 5901):
+
+Address:
+127.0.0.1:5901
+
+Name:
+Termux
+
+- If you are using VNC client on a
+  computer using the same network
+  as the phone does, make sure you
+  correctly start a VNC session and
+  know the IP address of the
+  device.
+
+- 3. Now launch it. T@You will be
+  prompted for password that you
+  entered on first launch of
+  'vncserver'. Depending on
+  packages you installed, you may
+  see either entirely black screen
+  or terminal prompt (only if
+  'aterm' is installed).
+
+
+Setting up XServer
+
+T@T@Xserver setup is nearly same as
+for VNC. The only differences are
+that you don't have to configure
+authentication and variable
+"DISPLAY" should be set like
+
+export DISPLAY=localhost:0
+
+Note that you don't need to set
+variable "PULSE_SERVER" like
+application suggests because Termux
+uses its own Pulseaudio package.
+
+
+Window Managers
+
+T@When using Android XServer rather
+than Android XSDL these are
+optional.
+
+Fluxbox
+
+  [Fluxbox]
+
+T@T@Simplest way to get a working
+graphical environment is to install
+Fluxbox:
+
+pkg install fluxbox
+
+T@T@It can be started automatically on
+VNC server startup. To do this,
+edit file ~/.vnc/xstartup as shown
+here:
+
+#!/data/data/com.termux/files/usr/bin/sh
+## Fluxbox desktop.
+
+# Generate menu.
+fluxbox-generate_menu
+
+# Start fluxbox.
+fluxbox &
+
+
+Openbox
+
+  [Openbox]
+
+Openbox requires a more complicated
+configuration than Fluxbox. Firstly
+you need to install some packages:
+
+pkg install openbox pypanel xorg-xsetroot
+
+Put the following lines to your
+~/.vnc/xstartup:
+
+#!/data/data/com.termux/files/usr/bin/sh
+
+# Start Openbox.
+openbox-session &
+
+Don't put anything else to file
+~/.vnc/xstartup but only lines
+shown above since Openbox has own
+autostart script. It is located at
+${PREFIX}/etc/xdg/openbox/autostart
+(or alternatively at
+~/.config/openbox/autostart). T@Edit
+this file like here: '
+
+# Make background gray.
+xsetroot -solid gray
+
+# Launch PyPanel.
+pypanel &
+
+
+Desktop environment
+
+T@It is possible to setup a full
+blown desktop environment in
+Termux. T@Only XFCE, LXQt and MATE is
+supported.
+
+XFCE
+
+XFCE + NetSurf + Thunar
+
+
+T@T@Recommended way of installation is
+through metapackage and not the
+separate components:
+
+pkg install xfce4
+
+T@VNC server startup configuration
+(~/.vnc/xstartup) should contain
+only
+
+#!/data/data/com.termux/files/usr/bin/sh
+xfce4-session &
+
+
+n@T@Additional recommended packages for
+installation:
+
+- netsurf - Simple graphical web
+  browser. Javascript is not
+  supported.
+- xfce4-terminal - Terminal
+  emulator for XFCE. It is not
+  included as part of XFCE
+  installation to allow use of
+  aterm or st.
+
+
+LXQt
+
+Recommended way of installation is
+through metapackage and not the
+separate components:
+
+pkg install lxqt
+
+VNC server startup configuration
+(~/.vnc/xstartup) should contain
+only
+
+#!/data/data/com.termux/files/usr/bin/sh
+startlxqt &
+
+Additional recommended packages for
+installation:
+
+- otter-browser - Free and open
+  source web browser that aims to
+  recreate aspects of Opera 12.x
+- qterminal - Terminal emulator for
+  LXQt. It is not included as part
+  of LXQt installation to allow use
+  of aterm or st.
+
+
+MATE
+
+As of right now, there is no MATE
+metapackage. n@T@So, you need to
+install all required MATE
+components seperately
+
+pkg install mate-* marco
+
+VNC server startup configuration
+(~/.vnc/xstartup) should contain
+only
+
+#!/data/data/com.termux/files/usr/bin/sh
+mate-session &
+
+Additional recommended packages for
+installation:
+
+- netsurf - Simple graphical web
+  browser. Javascript is not
+  supported.
+- mate-terminal - Terminal emulator
+  for MATE. It is not included as
+  part of MATE installation to
+  allow use of aterm or st.
+
+Notes
+
+- Currently hardware acceleration
+  is not supported by default.
+
+See also
+
+- Sources for X11 packages
+
+
+  https://wiki.termux.com/wiki/Intents_and_Hooks
+
+Intents and Hooks
+
+n@T@T@T@Termux is able to catch
+several intents and execute shell
+scripts to act upon them:
+
+- Sharing single files with Termux.
+  Following handle will be
+  executed:~/bin/termux-file-editor
+  · Opening in your popular editor
+    by using a symbolic link:
+    ln -s $PREFIX/bin/nvim ~/bin/termux-file-editor
+  · Creating a handle by creating a
+    file and changing the access
+    rights:
+    - 1. nano ~/bin/termux-file-editor)
+    - 2. n@T@chmod +x ~/bin/termux-file-editor)
+- URL sharing available in common
+  apps (e.g. Youtube).
+  Following handle will be
+  executed:
+  ~/bin/termux-url-opener
+  · Sharing a URL to be downloaded.
+    You can handle incoming URL by
+    editing the content.
+    yoursth-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio' --restrict-filenames -o '~/storage/downloads/%(title)s-%(id)s.%(ext)s' $1
+
+
+  https://wiki.termux.com/wiki/Package_Management
+
+Package Management
+
+n@T@T@T@Termux uses apt and dpkg for
+package management, similar to
+Ubuntu or Debian.
+
+
+Limitations
+
+Termux does not support use of
+packages from the Debian, Ubuntu
+and other Linux distribution
+repositories. n@n@n@For this reason do
+not attempt put these ones into
+your sources.list or manually
+installing their .deb files. See
+Differences from Linux to learn
+why.
+
+Additional restrictions:
+
+n@- Only single architecture is
+  supported at the moment. You
+  can't have both 64 and 32 bit
+  packages installed at the same
+  time. '
+n@n@- Apt usage under root is
+  restricted to prevent messing up
+  ownership and SELinux labels on
+  Android /data partition.
+- Downgrading is not supported. In
+  order to reclaim disk space, we
+  do not keep history of package
+  versions.
+
+Using the package manager
+
+We strongly recommend to use a pkg
+utility instead of apt directly. It
+is a wrapper that performs a number
+of tasks:
+
+- Provides command shortcuts. Use
+  "pkg in" instead of "pkg install"
+  or "apt install".
+- Automatically runs "apt update"
+  before installing a package if
+  necessary.
+n@T@- Performs some client side
+  repository load-balancing by
+  automatically switching mirrors
+  on a regular basis. That is
+  important to prevent us hitting
+  quota limit on hosting.
+
+Installing a new package:
+
+n@T@T@T@pkg install package-name
+
+It is highly recommended to upgrade
+existing packages before installing
+the new one. You can install
+updates by running this command:
+
+T@T@pkg upgrade
+
+T@T@Additionally, we suggesting to
+check for updates at least once a
+week. Otherwise there is a certain
+risk that during package
+installation or upgrade you will
+encounter issues.
+
+Removing the installed package:
+
+T@T@pkg uninstall package-name
+
+This will remove package but
+modified configuration files will
+be left intact. T@If you want to
+remove them, use apt purge instead.
+
+See below for additional supported
+commands:
+
+Command
+  Description
+
+T@pkg autoclean
+  Remove outdated .deb files from
+  the cache.
+
+T@pkg clean
+  Remove all .deb files from the
+  cache.
+
+T@pkg files <package>
+  List files installed by specified
+  package.
+
+pkg list-all
+  List all available packages.
+
+pkg list-installed
+  List currently installed
+  packages.
+
+pkg reinstall <package>
+  Re-install specified package.
+
+T@pkg search <query>
+  Search package by query.
+
+pkg show <package>
+  Show information about specific
+  package.
+
+
+Official repositories
+
+n@n@The main Termux repository is
+accessible through
+https://packages.termux.org/apt/termux-main/.
+
+T@We have some optional repositories
+which provide content on specific
+topic and can be enabled by
+installing packages with name
+ending in -repo.
+
+List of current optional
+repositories:
+
+Repository
+  Command to subscribe to repository
+
+game-packages
+  pkg install game-repo
+
+science-packages
+  pkg install science-repo
+
+T@termux-root-packages
+  pkg install root-repo
+
+x11-packages (Android 7+ only)
+  pkg install x11-repo
+
+n@Packages for our official
+repositories are built from scripts
+located in github.com/termux/ and
+are maintained and signed by member
+of the Termux developer team.
+n@Public keys for verifying
+signatures are provided in package
+termux-keyring. For more
+information about how the
+repositories are signed, see
+termux-keyring.
+
+The mirrors of Termux apt
+repositories are available. See
+up-to-date information about them
+on Github.
+
+T@T@You can pick a mirror by using
+utility termux-change-repo.
+
+
+Community repositories
+
+In addition to the official
+repositories, there are repositories
+hosted by community members. You are
+welcome to host your own Termux
+repository too.
+
+T@You can create your own repository
+by using termux-apt-repo from the
+command line and Github Pages as
+hosting. Be aware that Github has a
+strict limit of 100 MB per file and
+if your repository exceeds total
+size of 1 GB, you might receive a
+polite email from GitHub Support
+requesting that you reduce the size
+of the repository. So if you have
+really big packages you may want to
+use a different hosting. n@n@Choose
+hostings according to filetypes, for
+example, videos can be hosted at
+https://YouTube.com or similar.
+
+
+By its-pointless
+
+n@n@T@T@Repository of this community
+member includes gcc, gfortran,
+octave, r-cran (R language), scipy
+and lots of games!
+
+To add this repository, execute:
+
+curl -LO https://its-pointless.github.io/setup-pointless-repo.sh
+bash setup-pointless-repo.sh
+
+T@The script essentially installs
+gnupg on your device, downloads and
+adds a public key to your apt
+keychain ensuring that all
+subsequent downloads are from the
+same source.
+
+
+Package requests
+
+Packages can be requested at
+https://github.com/termux/termux-packages/issues.
+Note that your opened issue with
+request can be moved to another
+repository, like
+termux-root-packages or
+x11-packages if it is not suitable
+for the main repository.
+
+Please ensure that you have read
+our Packaging Policy.
+
+
+Other package managers
+
+T@Some programming languages have
+their own package managers. We tend
+not to package things installable
+with this ones due to issues when
+cross-compiling them in our build
+environment.
+
+- Node.js Package Management (npm)
+- Perl Package Management (cpan)
+- Python Package Management (pip)
+- Ruby Package Management (gem)
+- TeX Live Package Management
+  (tlmgr)
+- Rust Package Manager (Cargo)
+
+See Also
+
+- Backing up Termux
+- Building packages
+
+
+  https://wiki.termux.com/wiki/Package_Tips
+
+Package Tips
+
+n@n@Some packages are troublesome to
+get working or configure in Termux.
+Follow the individual page to get
+installation and configuration
+help.
+
+- mariadb
+- postgresql
+
+If you are interested in resolving
+issues regarding packages, please
+post at
+https://github.com/termux/termux-packages/issues
+and search your topic before posting
+to avoid duplicates, please. You
+might even find your question
+answered before asking.
+
+See Also
+
+Package Management: Other
+PackagenManagers
+
+
+  https://wiki.termux.com/wiki/Remote_Access
+
+Remote Access
+
+n@Termux is capable of accessing
+remote devices by using some common
+tools. It is also possible to turn a
+device running Termux into a remote
+controlled server.
+
+
+FTP
+
+Warning: plain FTP is deprecated
+and insecure anyway. Termux FTP
+server supports only anonymous
+login, there not any authentication
+and everyone on your network can
+access files on your device. T@T@Use
+SFTP (OpenSSH) instead!
+
+Termux FTP server is based on
+busybox and service is managed by
+[Termux-services]. If you decided
+to use FTP server, install these
+packages:
+
+pkg install busybox termux-services
+
+After installation you need to
+restart session or source this
+file:
+
+T@T@source $PREFIX/etc/profile.d/start-services.sh
+
+Now you are ready to enable and
+start the FTP daemon service:
+
+sv-enable ftpd
+sv up ftpd
+
+FTP server will run on port 8021 in
+read-only mode.
+
+If you need to stop server, run sv
+down ftpd.
+
+
+SSH
+
+SSH provides a secure way for
+accessing remote hosts and replaces
+tools such as telnet, rlogin, rsh,
+ftp. T@T@Termux provides SSH via two
+packages: dropbear and openssh. T@If
+you never used these tools before,
+it is recommended to install
+'openssh' as it is more common.
+
+Using the SSH client
+
+n@T@You can obtain an SSH client by
+installing either `openssh` or
+`dropbear`.
+
+Usage example
+
+To login to a remote machine where
+the ssh daemon is running at the
+standard port (22):
+
+T@T@ssh user@hostname_or_ip
+
+Same as above, but if the ssh
+daemon running on different port,
+e.g. 8022:
+
+ssh -p 8022 user@hostname_or_ip
+
+T@Using public key authentication
+with ssh running on the standard
+port and a private key stored in
+the file `id_rsa`:
+
+ssh -i id_rsa user@hostname_or_ip
+
+Note, that if `id_rsa` will be
+stored in `~/.ssh` directory, you
+can omit specifying it in the
+command. n@T@But if you have
+multiple keys, it is necessary to
+pick a specific key with `-i
+{path_to_privkey}`.
+
+
+SSH Agent
+
+Important note: this does not work
+for Dropbear.
+
+T@T@If you wish to use an SSH agent
+to avoid entering passwords, the
+Termux openssh package provides a
+wrapper script named `ssha` (note
+the `a` at the end) for ssh, which:
+
+- Starts the ssh agent if necessary
+  (or connect to it if already
+  running).
+- Runs the `ssh-add` if necessary.
+- Runs the `ssh` with the provided
+  arguments.
+
+T@This means that the agent will
+prompt for a key password at first
+run, but remember the authorization
+for subsequent runs.
+
+
+Using the SSH server
+
+OpenSSH
+
+OpenSSH (also known as OpenBSD
+Secure Shell) is a suite of secure
+networking utilities based on the
+Secure Shell (SSH) protocol, which
+provides a secure channel over an
+unsecured network in a
+client–server architecture.
+
+n@n@T@T@Default SSH port in Termux
+is 8022.
+
+
+Starting and stopping OpenSSH server
+
+T@Since Termux does not use
+initialization system, services are
+started manually from command line.
+
+T@T@To start OpenSSH server, you need
+to execute this command:
+
+sshd
+
+n@T@T@If you need to stop `sshd`,
+just kill it's process: '
+
+pkill sshd
+
+n@T@SSH daemon does logging to
+Android system log, you can view it
+by running logcat -s 'sshd:*'. T@You
+can do that either from Termux or
+ADB.
+
+
+Setting up password authentication
+
+Password authentication is enabled
+by default. This will allow you to
+get started with it much easier.
+T@T@Before proceeding, make sure that
+you understand that password
+authentication is less secure than
+a pubkey-based one.
+
+- 1. Ensure that everything is up
+  to date and package `openssh` is
+  installed:
+
+T@pkg upgrade
+pkg install openssh
+
+
+- 2. Password authentication is
+  enabled by default in
+  configuration file. T@T@But you can
+  still review it
+  ($PREFIX/etc/ssh/sshd_config), it
+  should be like this:
+
+PrintMotd yes
+PasswordAuthentication yes
+Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
+
+- 3. n@T@Set new password. Execute
+  command passwd. T@While program
+  allows minimal password length is
+  1 character, the recommended
+  password length is more than 8-10
+  characters. Passwords are not
+  printed to console.
+
+$ passwd
+New password:
+Retype new password:
+New password was successfully set.
+
+
+Setting up public key authentication
+
+T@T@T@Public key authentication is
+the recommended way for logging in
+using SSH. To use this type of
+authentication, you need to have a
+public/private key pair. T@For
+successful login, the public key
+must exist in the authorized keys
+list on remote machine while private
+key should be kept safe on your
+local host.
+
+In the following example it will be
+assumed that you want to establish
+public key authentication between
+your PC (host) and your Android
+device running Termux (remote). It
+also will be assumed that you
+running Linux distribution on your
+PC.
+
+- 1. If you do not have keys, you
+  can generate them. n@T@In this
+  example we will generate RSA key.
+  On PC, execute this command:
+
+T@T@ssh-keygen -t rsa -b 2048 -f id_rsa
+
+T@The command shown above generates
+private RSA key with 2048 bit key
+length and saves it to file
+`id_rsa`. T@T@In the same directory you
+can find a file `id_rsa.pub` – it
+is a public key.
+
+n@T@Important note: 2048 bit is the
+minimal key length that is
+considered safe. T@You can use higher
+values, but do not use higher than
+4096 as remote server may not
+support big keys.
+
+- 2. T@T@Copy key to the remote machine
+  (Termux). T@Password authentication
+  has to be enabled in order to
+  install pubkey on remote machine.
+  Now do:
+
+T@ssh-copy-id -p 8022 -i id_rsa IP_ADDRESS
+
+T@T@Do not forget to replace
+`IP_ADDRESS` with the actual LAN IP
+address of your device. T@T@It can be
+determined by using command
+ifconfig.
+
+T@- Alternative you can manually copy
+  the content inside
+  "id_rsa.pub"(public key) which is
+  already on PC and looks like
+  ssh-rsa <A LOT OF RANDOM STRINGS>
+  user@host and paste to the Termux
+  file
+  $HOME/.ssh/authorized_keys(remote
+  machine). T@Remember to connect
+  through ssh user@<Phone_IP> -p
+  8022 so you can copy the content
+  of public key using any text
+  editor available on PC and paste
+  inside Termux
+
+If everything was okay, you will
+see a message like this one:
+n@
+Number of key(s) added: 1
+
+T@T@Now try logging into the machine, with: "ssh -p '8022' '192.168.1.4'"
+and check to make sure that only the key(s) you wanted were added.
+
+T@T@- 3. From this point password
+  authentication can be disabled.
+  Edit file
+  $PREFIX/etc/ssh/sshd_config and
+  replace line beginning with
+  "PasswordAuthentication" by
+
+PasswordAuthentication no
+
+T@T@Then execute command pkill sshd;
+sshd in order to restart server
+with updated configuration file.
+
+
+Dropbear
+
+Dropbear is a software package
+written by Matt Johnston that
+provides a Secure Shell-compatible
+server and client. T@It is designed
+as a replacement for standard
+OpenSSH for environments with low
+memory and processor resources,
+such as embedded systems.
+
+Important note: Dropbear does not
+provide SFTP server.
+
+
+Starting and stopping Dropbear server
+
+Same as for OpenSSH, you will need
+to execute it's binary manually.
+n@T@Also, unlike OpenSSH, Dropbear does
+not use a configuration file but
+only command line arguments. '
+
+Server is running in background,
+both password and public key
+authentication available. To
+achieve this, just type in console:
+
+T@dropbear
+
+If you need only public key
+authentication, do this instead:
+
+dropbear -s
+
+T@Also, server can be started in
+foreground. For this purpose use a
+parameter `-F`:
+
+dropbear -F
+
+T@Server started in foreground can be
+stopped by just Ctrl-C key
+combination. If it is in the
+background, then you can use a
+`pkill`:
+
+pkill dropbear
+
+
+Setting up password authentication
+
+Same as for OpenSSH, password
+authentication is enabled by
+default.
+
+Everything you have to do, is:
+
+- 1. Make sure that everything is
+  up to date and dropbear is
+  installed:
+
+pkg upgrade
+pkg install dropbear
+
+- 2. Set password by executing
+  command passwd.
+
+- 3. Start dropbear server. You can
+  execute either just dropbear to
+  start it in background or
+  dropbear -F to start it in the
+  foreground.
+
+
+Setting up public key authentication
+
+Same as for OpenSSH, you can put
+your keys by using ssh-copy-id.
+n@T@But if you consider to setup a
+public key authentication from
+Termux to something else, it is
+worth to mention some important
+differences between OpenSSH and
+Dropbear.
+
+T@- 1. Dropbear uses a different
+  command for generating keys.
+  Example of generating RSA key
+  (2048 bit):
+
+dropbearkey -t rsa -f id_rsa -s 2048
+
+T@- 2. Public key should be obtained
+  manually. To do this, you have to
+  use 'dropbearkey' again, but in
+  different way:
+
+dropbearkey -f id_rsa -y
+
+- 3. Dropbear and OpenSSH uses a
+  different key formats. T@To use a
+  Dropbear's key in OpenSSH, you
+  will have to convert it: '
+
+dropbearconvert dropbear openssh ./id_rsa ./id_rsa_openssh
+
+This procedure can be done vice
+versa to obtain a key in Dropbear's
+format: '
+
+dropbearconvert openssh dropbear ./id_rsa_openssh ./id_rsa_dropbear
+
+
+Using the SFTP
+
+n@T@T@Package OpenSSH provides a tool
+for accessing remote hosts over
+SFTP. This will allow you to work
+with files in same way as via FTP
+but with better security.
+
+n@T@First install openssh-sftp-server
+
+$ pkg install openssh-sftp-server
+
+Connecting to Termux (sshd
+listening on port 8022):
+
+$ sftp -P 8022 192.168.1.20
+
+T@Connecting to somewhere else (sshd
+listening on standard port):
+
+$ sftp sftp.example.com
+
+However, to use command line SFTP
+client you should know some basic
+commands:
+
+- cd PATH - change current
+  directory to `PATH`.
+T@- get REMOTE [LOCAL] - download
+  file `REMOTE` and rename it as
+  `LOCAL` (optional).
+- mkdir PATH - create directory
+  `PATH`.
+- ls [PATH] - list files in
+  directory `PATH`. If no argument,
+  files in current directory will
+  be listed.
+n@T@- put LOCAL [REMOTE] - Upload file
+  `LOCAL` and rename it as `REMOTE`
+  (optional).
+- rm FILE - Delete file `FILE`.
+
+This is not a complete list of SFTP
+commands. T@To view all available
+commands, consider to view man page
+(man sftp) or view short help in
+interactive SFTP session by issuing
+command `help`.
+
+
+MOSH
+
+n@T@Mosh is a remote terminal
+application that allows roaming,
+supports intermittent connectivity,
+and provides intelligent local echo
+and line editing of user
+keystrokes.
+
+Usage example
+
+  T@Important note: Mosh should be
+  installed on both client and
+  server side.
+
+T@Connecting to remote host (sshd
+listening on standard port):
+
+mosh user@ssh.example.com
+
+T@Connecting to Termux (sshd
+listening on port 8022):
+
+mosh --ssh="ssh -p 8022" 192.168.1.25
+
+
+Rsync
+
+Rsync is a tool for synchronizing
+files with remote hosts or local
+directories (or drives). n@T@For
+better experience of using rsync,
+make sure that package `openssh` (or
+`dropbear`) is installed.
+
+Usage example
+
+T@T@Sync your photos with PC:
+
+$ rsync -av /sdcard/DCIM/ user@192.168.1.20:~/Pictures/Android/
+
+T@Get photos from remote Android
+device:
+
+$ rsync -av -e 'ssh -p 8022' 192.168.1.3:/sdcard/DCIM/ /sdcard/DCIM/
+
+T@Sync local directories (e.g. from
+external sdcard to Termux home):
+
+$ rsync -av /storage/0123-4567/myfiles ~/files
+
+T@You may want to see man page (`man
+rsync`) to learn more about it's
+usage. '
+
+See Also
+
+T@T@Accessing Termux from the Internet
+Connecting to Termux with SSH over USB
+
+
+  https://wiki.termux.com/wiki/Sharing_Data
+
+Sharing Data
+
+Files stored in the home directory
+in Termux is not accessible to
+other applications by default. This
+is a limitation of Android itself.
+
+T@T@As a workaround, you can use
+termux-open available in
+termux-tools package to share files
+with read access.
+
+$ termux-open -h
+Usage: termux-open [options] path-or-url
+Open a file or URL in an external app.
+  --send
+    if the file should be shared
+    for sending
+  --view
+    if the file should be shared
+    for viewing (default)
+  --chooser
+    if an app chooser should always
+    be shown
+  --content-type type
+    specify the content type to use
+$ termux-open hello.c
+
+T@For compatibility with standard
+Linux programs, xdg-open is
+symlinked to termux-open.
+
+n@T@T@Sometimes, read access is not
+enough, you need to be able to
+modify files. This can be achieved
+by storing the required files on an
+sdcard. T@Android Lollipop should
+work right out of the box, but,
+Marshmallow and above require the
+Termux app to request permissions
+to Read/Write External Data.
+
+n@T@Run termux-setup-storage and
+grant permissions when the dialog
+pops up. T@This will create a
+$HOME/storage directory with
+symlinks to respective paths of
+sdcard(s).
+
+
+  https://wiki.termux.com/wiki/Shells
+
+Shells
+
+A shell is a command language
+interpreter that executes commands
+from standard input devices (like a
+keyboard) or from a file. T@Shells
+are not a part of the system
+kernel, but use the system kernel
+to execute programs, create files,
+etc.
+
+T@T@Use chsh from termux-tools to
+change your login shell. T@Currently
+Termux supports bash, fish, tcsh,
+zsh and a few other shells.
+
+
+BASH
+
+Homepage: https://www.gnu.org/software/bash/
+
+T@Bash is the default shell after
+installing termux.
+n@T@The BASH shell init files are
+~/.bashrc, $PREFIX/etc/bash.bashrc
+and more. See `man bash` and `info
+bash` for more information.
+
+
+Beanshell
+
+Homepage: https://beanshell.github.io/
+
+T@Installation: pkg install beanshell
+
+Beanshell is a fully Java
+compatible scripting language.
+T@BeanShell is now capable of
+interpreting ordinary Java source
+and loading .java source files from
+the class path. BeanShell scripted
+classes are fully typed and appear
+to outside Java code and via
+reflective inspection as ordinary
+classes. n@However their
+implementation is fully dynamic and
+they may include arbitrary
+BeanShell scripts in their bodies,
+methods, and constructors. Users
+may now freely mix loose,
+unstructured BeanShell scripts,
+method closures, and full scripted
+classes.
+
+
+FISH
+
+Homepage: http://fishshell.com/
+Installation: pkg install fish
+
+n@FISH is a smart and user-friendly
+command line shell for macOS,
+Linux, and the rest of the family.
+The FISH shell init files are
+~/.fish,
+$PREFIX/etc/fish/config.fish and
+more. See `man fish` and `info
+fish` for more information.
+
+More information...
+
+
+IPython
+
+T@T@Homepage: https://ipython.org/
+Installation: pip install ipython
+
+IPython is an advanced interactive
+shell for Python language.
+
+
+TCSH
+
+Homepage: http://www.tcsh.org/
+Installation: pkg install tcsh
+
+n@TCSH is a C shell with file name
+completion and command line
+editing.
+The TCSH shell init files are
+~/.tcshrc, $PREFIX/etc/csh.cshrc
+and more. See `man tcsh` and `info
+tcsh` for more information.
+
+
+Xonsh
+
+Homepage: http://xon.sh/
+Installation: pip install xonsh
+
+T@T@Xonsh is a Python-powered,
+cross-platform, Unix-gazing shell
+language and command prompt. T@The
+language is a superset of Python
+3.4+ with additional shell
+primitives that you are used to
+from Bash and IPython. It works on
+all major systems including Linux,
+Mac OSX, and Windows. Xonsh is
+meant for the daily use of experts
+and novices alike.
+
+
+ZSH
+
+Homepage: https://www.zsh.org/
+Installation: pkg install zsh
+
+Zsh is a shell designed for
+interactive use, although it is
+also a powerful scripting language.
+Many of the useful features of
+bash, ksh, and tcsh were
+incorporated into zsh.
+
+The zsh shell init files are
+~/.zshrc and $PREFIX/etc/zshrc and
+more. See man zsh and info zsh for
+more information.
+
+More information...
+
+
+  https://wiki.termux.com/wiki/Hardware
+
+Hardware
+
+Hardware Keyboard
+  How to control Termux with a
+  hardware keyboard
+
+Hardware Mouse
+  How to control Termux with a
+  hardware mouse
+
+T@Internal and External Storage
+  Accessing Files in shared storage
+  and on SD Card
+
+See Also
+
+- OTG
+
+
+  https://wiki.termux.com/wiki/FAQ
+
+FAQ
+
+It is strongly suggested to start
+from these pages because FAQ does
+not provide tips and tricks about
+Termux usage.
+
+- User Interface - description of
+  available buttons, menus, etc.
+- Package Management - how to
+  install, remove and upgrade
+  packages.
+T@- Touch Keyboard - Touch keyboard
+  shortcuts and extra keys layout
+  configuration.
+n@T@- PRoot - Running Linux
+  distributions inside Termux
+  (userspace chroot mode)
+- Recover a broken environment -
+  Fixing broken Termux
+  installations.
+T@- Special:AllPages - List of the
+  all available Wiki pages.
+
+You may contribute to Termux
+project by making pull requests in
+our Github repositories or by
+improving Termux Wiki.
+
+
+What is Termux
+
+Main Article: Getting started
+
+Termux is a terminal emulator for
+Android OS with its own package
+ecosystem. n@There are more than 1000
+packages for various purposes,
+including code editors, compilers,
+etc.
+
+
+Is Termux an emulator?
+
+Termux is an emulator and is not.
+n@It does not emulate any system;
+Programs are executed natively. On
+the other hand, it is a terminal
+emulator in the same way as many
+common Linux distribution programs
+are; e.g., GNOME terminal, Konsole,
+Xterm and many more.
+
+Terminal is a hardware device
+typically used before traditional
+desktop computers appeared.
+
+Terminal emulator is a software
+that emulates a display (not CPU or
+whole system) with capabilities of
+specific hardware terminal.
+
+
+What are system requirements?
+
+T@Android OS of version 7.0 as
+minimum. Be prepared that Termux
+uses much of internal storage, you
+are dealing with packages ported
+from Linux distributions. That's
+500 MB - 5 GB typically, in some
+cases more... Everything depends on
+your use cases. '
+
+T@Also it is preferable to have AOSP
+Android, to avoid vendor-specific
+quirks with process management and
+power-saving.
+
+
+Will Termux work on Android 11
+
+In short: yes, it works on Android
+11 and 12 beta.
+
+T@Android security improvements in
+new versions often become a subject
+of controversial discussions and
+recent `execve()` system call
+restriction by SELinux
+configuration introduced with
+Android 10 was not the exception.
+There lots of misinformation and
+conspiracy (aka "Google want to
+kill Linux on Android") from people
+claiming themselves "advanced
+users" about what is actually
+happening.
+
+n@T@Applications built with target
+SDK level 29 (means compatibility
+with Android 10) will no longer be
+able to execute data files. T@All
+executables must be packaged within
+the APK file. n@n@That's a
+reasonable restriction. Application
+must not be able to modify itself.
+Updates and new features must come
+within the APK of newer version.
+However there is a problem: Termux
+is technically a bridge between
+Android application and Linux
+environments. '
+
+T@Fortunately, we chose to force use
+compatibility with Android 9 APIs
+(SDK 28) at the cost of ability to
+publish updates on Google Play.
+That is until we will workaround
+the issue. For now do not worry -
+it works perfectly.
+
+n@n@Termux also supports Android 12 but
+running the app on this version of
+Android would kill phantom
+processes and crash the app,
+meaning spawning several processes
+would randomly close the
+application unintentionally. if you
+plan to upgrade your device to
+Android 12, upgrade at your own
+risk!
+
+Related issue:
+https://github.com/termux/termux-app/issues/2366
+
+
+Why does htop or netstat not work on my device
+
+T@In order to stop leaking sensitive
+information via side channels,
+Android has blocked access to
+certain interfaces in /proc. This
+is done for your privacy.
+
+n@T@Specifically:
+
+- /proc/net/*
+- /proc/loadavg
+- /proc/stat
+- /proc/uptime
+- /proc/version
+- /proc/vmstat
+- And few others.
+
+Restrictions vary between Android
+OS versions. Thus Android 7 is less
+restrictive than 8/9/10+. T@You can
+use root to bypass them.
+
+Do not open issues in our
+repositories on this or complain
+how Google is evil. We do not
+support such opinion or other
+Android-specific conspiracy.
+
+
+Why does ps not show Android processes
+
+T@Since Android 7, regular
+applications no longer can explore
+foreign processes in /proc. n@This
+has been implemented via hidepid=2
+mount option.
+
+Termux can list only its own
+processes. You can see more only
+under rooted shell or ADB.
+
+This restriction has weird effect
+on some programs. T@For example, some
+processes like ssh-agent or tor
+daemons will no longer be visible
+through ps and as result can't be
+terminated with pkill <NAME> or
+killall <NAME> but only with kill
+<PID>. '
+
+
+Why my Termux is 32bit while CPU supports 64bit
+
+If Android OS reports support only
+of 32-bit ABIs, Termux will perform
+a 32-bit installation only. Its
+environment is not standalone and
+relies on libraries provided by
+operating system. So if your system
+is 32-bit only, you are out of
+luck. That is common issue with
+some device models where
+manufacturer installed only 32-bit
+OS due to small system partition.
+
+
+Can Termux be installed on the external storage
+
+This can't be done, at least if
+your device is not rooted. '
+
+T@Termux requires a native Linux file
+system such as EXT4 or F2FS for
+supporting special files like
+symbolic links, sockets and Unix
+file attributes. Neither FAT32 or
+exFAT supports them. Furthermore,
+Android applies a special overlay
+to any general purpose file storage
+which turns underlying file system
+into FAT32 or exFAT-like in order
+to solve certain issues and provide
+a better experience for average
+user.
+
+T@If your device is rooted and you
+want to install Termux on external
+storage, please refer to post on
+Android Enthusiasts Stack Exchange.
+
+
+Any tips for using Termux
+
+T@n@T@T@Here are the ones which
+should help you to survive in Termux
+shell:
+
+- Learn shell scripting!
+- Always do pkg upgrade!
+- Do backups, always!
+- Do not execute things which you
+  do not know!
+- Carefully read everything that
+  has been printed to terminal!
+
+
+What do you use Termux for
+
+You can do everything, specifically
+what you are able to do with it.
+That is the case where you are
+limited mostly by your skills. Of
+course, OS and device hardware
+restriction matter too, but they
+are insignificant.
+
+n@T@T@Here are just few ideas for Termux
+usage:
+
+- Device automation with scripting
+  and Termux Tasker add-on.
+- File transfer & synchronization
+  via syncthing, rsync, rclone,
+  etc.
+- SSH client (dropbear, openssh).
+- Programming (clang, python, vim,
+  etc).
+
+
+Are there any Termux tutorials
+
+T@T@Please check page Getting started.
+
+Note that while you can learn shell
+scripting with Termux, it is not
+the best tool for this due to few
+fundamental differences from the
+Linux distributions.
+
+
+What are advantages of root in Termux
+
+Root gains you control over system
+components. T@You will be able to
+access freely all file systems,
+modify device firmware (ROM) as
+well as perform fine tuning of
+kernel configuration, networking,
+etc.
+
+T@Certain tools like cryptsetup,
+mount, nmap (advanced scan modes),
+tcpdump require root access.
+
+
+What is a fake root
+
+Fake root means exactly "fake
+root", i.e., not real root. It does
+not provide any real superuser
+privileges. T@It just changes user ID
+and label to assist in certain
+tasks.
+
+T@T@There 2 ways to get a fake root:
+
+- Package `fakeroot` - useful
+  solely for packagers who need to
+  create archives with files having
+  certain ownership and
+  permissions. Of course, using the
+  real root in this case is
+  overkill.
+- Package `proot` - run a rootless
+  Linux distribution "chroot".
+
+Fake root will not help you to root
+your device. Neither will help you
+to run a software requiring
+superuser privileges.
+
+
+Can I hack a social media with Termux
+
+Main Article: Hacking
+
+As some people say, there nothing
+impossible in the world, and that's
+true in case of Termux and
+specifically this question. However
+we do not provide any help on it -
+you are on your own. '
+
+Hacking and phishing topics are
+discouraged within all official
+Termux communities.
+
+
+Where are Metasploit and Hydra packages
+
+Main Article: Hacking
+
+T@Packages Hashcat, Hydra, Metasploit
+and Sqlmap have been removed from
+Termux repositories. We do not
+accept requests of hacking packages
+and neither provide help for using
+or installing them.
+
+
+Why app from F-Droid cannot be installed
+
+T@T@Open your Android settings -->
+Applications and check whether you
+have applications containing the
+word "Termux" in their name. n@n@If so,
+uninstall all of them: Termux,
+Termux:API, Termux:Styling,
+Termux:Widget, Termux:Boot and
+others. And yes, paid add-dons
+should be uninstalled too.
+
+n@T@After that you should be able to
+install Termux app from F-Droid.
+
+
+Why Termux add-ons on Google Play are paid even though their sources are on GitHub
+
+This has been made as kind of
+donation. If you do not want to
+donate, use application and add-ons
+from F-Droid or custom builds from
+sources.
+
+Remember that open-source or free
+software does not mean that
+software cannot be paid. This is
+not forbidden by licenses of our
+source code. Also "free" means
+"freedom", in context of GNU GPL
+which even explicitly states that
+free software can be paid as soon
+as sources are freely available.
+
+
+How can I keep my data when reinstalling Termux
+
+T@T@Main Article: Backing up Termux
+
+T@T@You need to archive contents of
+these directories:
+
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/home
+
+T@T@You can use utility tar. n@n@Before
+uninstalling the app, ensure that
+archives are placed to safe
+location such as /sdcard.
+
+
+Repositories are down and return 403 404 errors
+
+n@T@T@Switch to a working repository
+with `termux-change-repo`. T@T@You
+will need to select repositories
+which do not work, if unsure what to
+select - select everything.
+
+https://github.com/termux/termux-packages/issues/6726
+
+
+n@T@T@How to open failsafe shell
+
+n@T@There are 2 variants how to do
+that: 1. Open drawer by swiping
+rightwards -> long tap on "new
+session" -> tap "failsafe". 2.
+Close Termux app -> long tap on
+icon -> tap "failsafe".
+
+T@See Recover a broken environment
+for more information on Termux
+recovery topic.
+
+
+How can I access device storage with Termux
+
+T@Main Article: Internal and external storage
+
+T@T@You need to grant a Storage access
+permission to application. We
+recommend to do that through
+command
+
+termux-setup-storage
+
+T@T@n@T@It will ask for permission and once
+it was granted, it will setup a
+symlinks in directory ~/storage to
+standard directories like DCIM,
+Download, etc.
+
+Storage (shared) is usually
+accessible through:
+
+- /storage/emulated/0
+- /storage/self/primary
+- $HOME/storage/shared
+
+External storage is restricted by
+Android OS. You can read files but
+cannot write them, except ones
+located in Termux private directory
+accessible through
+$HOME/storage/external-1. Termux
+cannot have write access to
+external storage like file manager
+applications do.
+
+If you are on Android 11 and
+storage suddenly has become
+inaccessible, then revoke
+permission from Android settings
+and grant again.
+
+
+n@T@How can I hide the extra keys
+
+Tap key combination Volume Up + K.
+
+n@T@Alternate approach is to open
+drawer via swiping rightwards from
+the left screen side and then long
+tap on "Keyboard" button.
+
+
+Why text appears only after hitting space
+
+This is a keyboard-specific known
+issue. T@It happens because keyboard
+has not internally reset input
+method type and tries to use
+unsupported features like
+auto-correction or prediction.
+
+T@In order to solve issue you need to
+use either a different keyboard or
+run these commands:
+
+mkdir -p ~/.termux
+echo "enforce-char-based-input = true" >> ~/.termux/termux.properties
+
+Restart application after making
+changes to "termux.properties"
+file.
+
+
+How do I get help for a specific package
+
+T@T@Usually you can use next commands
+to get a brief usage of the
+utility:
+
+packagename -h
+packagename --help
+
+More advanced information can be
+viewed by using a man tool. It can
+be installed by
+
+T@T@T@pkg install man
+
+Here is an example how to view
+information for utility ls:
+
+man ls
+
+Tips, when reading a man page:
+
+- Use q to quit
+- Use space for next page
+- /search for search
+- n for repeat search
+
+Sometimes utility name may not
+match the package name. n@T@T@If you
+encountered a such package, consult
+its online home page to get a brief
+introduction or use utility
+apt-file to list the available
+files including utilities and
+documentation.
+
+
+Why does a compiled program show warnings
+
+T@Warnings produced by dynamic linker
+about unused sections are safe.
+n@n@n@T@They just notify developer that ELF
+header of executable file has extra
+information which cannot be
+interpreted by current linker
+version. n@In case of DT_FLAGS_1=0x8,
+it warns about RTLD_NODELETE ELF
+section. Besides DT_FLAGS_1=0x8,
+there more types of ELF sections
+which are not handled by Android
+linker.
+
+n@T@To make this warning disappear you
+need to use utility
+"termux-elf-cleaner" binary file
+and probably on all its
+dependencies.
+
+n@n@T@pkg install termux-elf-cleaner
+termux-elf-cleaner ./myprogram
+termux-elf-cleaner ./libmysharedlibrary.so
+
+Number of supported ELF sections
+increases with each Android OS
+version. On Android >7.0 you may
+not get such warnings.
+
+
+Can I use Termux packages in my own project
+
+Yes, as Termux is open-source and
+uses a GNU GPL v3.0 and in some
+components Apache-2.0 license, you
+can freely re-use existing
+components as soon as you met the
+license requirements.
+
+n@However license does not cover
+"free" use of our hosting
+capabilities which are somewhat
+limited. T@You cannot use our package
+repositories in your own
+project(s). Please build packages
+and host them yourself.
+
+Get started with information on
+developer's wiki pages:
+https://github.com/termux/termux-packages/wiki.
+'
+
+
+How to run Termux commands from other application
+
+T@Termux provides optional interface
+for processing command execution
+requests made by third-party
+applications.
+
+n@n@Detailed information with
+examples is available at
+https://github.com/termux/termux-app/wiki/RUN_COMMAND-Intent.
+
+
+Can Termux run some commands automatically right after installation
+
+No, this feature has not been
+implemented. Unconditional
+automated execution of arbitrary
+commands (script on shared storage)
+also implies a security issue.
+
+Worth to note that Termux does not
+have storage access by default and
+we have not re-considered this
+behavior.
+
+Related pull request: https://github.com/termux/termux-app/pull/1455
+
+See Also
+
+- Community
+- Development
+
+
+  https://wiki.termux.com/wiki/Termux:API
+
+T@T@Termux:API
+
+This addon exposes device
+functionality as API to command line
+programs in Termux.
+
+Installation
+
+T@T@Download the Termux:API add-on
+from F-Droid or the Google Play
+Store. It is required for the API
+implementations to function.
+
+Important: Do not mix installations
+of Termux and Addons between Google
+Play and F-Droid. They are
+presented at these portals for your
+convenience. There are
+compatibility issues when mixing
+installations from these Internet
+portals. n@This is because each
+download website uses a specific
+key for keysigning Termux and
+Addons.
+
+
+Installing termux-api package
+
+T@T@To use Termux:API you also need
+to install the termux-api package.
+
+pkg install termux-api
+
+
+Settings
+
+n@On Android 7 you may have to
+"protect" Termux:API by going into
+the settings / protected apps menu
+otherwise calls to the API like
+termux-battery-status will hang
+forever. See issue 334.
+
+n@T@T@Current API implementations
+
+termux-battery-status
+  Get the status of the device
+  battery.
+
+termux-brightness
+  Set the screen brightness between
+  0 and 255.
+
+T@termux-call-log
+  List call log history.
+
+termux-camera-info
+  Get information about device
+  camera(s).
+
+n@n@termux-camera-photo
+  Take a photo and save it to a
+  file in JPEG format.
+
+T@T@termux-clipboard-get
+  Get the system clipboard text.
+
+n@T@termux-clipboard-set
+  Set the system clipboard text.
+
+T@termux-contact-list
+  List all contacts.
+
+T@termux-dialog
+  Show a text entry dialog.
+
+n@termux-download
+  Download a resource using the
+  system download manager.
+
+termux-fingerprint
+  Use fingerprint sensor on device
+  to check for authentication.
+
+termux-infrared-frequencies
+  Query the infrared transmitter's
+  supported carrier frequencies. '
+
+T@termux-infrared-transmit
+  Transmit an infrared pattern.
+
+T@termux-job-scheduler
+  Schedule a Termux script to run
+  later, or periodically.
+
+n@termux-location
+  Get the device location.
+
+T@termux-media-player
+  Play media files.
+
+n@T@termux-media-scan
+  MediaScanner interface, make file
+  changes visible to Android
+  Gallery
+
+T@termux-microphone-record
+  Recording using microphone on
+  your device.
+
+termux-notification
+  Display a system notification.
+
+termux-notification-remove
+  Remove a notification previously
+  shown with termux-notification
+  --id.
+
+T@termux-sensor
+  Get information about types of
+  sensors as well as live data.
+
+T@termux-share
+  Share a file specified as
+  argument or the text received on
+  stdin.
+
+T@termux-sms-list
+  List SMS messages.
+
+T@T@termux-sms-send
+  Send a SMS message to the
+  specified recipient number(s).
+
+T@termux-storage-get
+  Request a file from the system
+  and output it to the specified
+  file.
+
+T@termux-telephony-call
+  Call a telephony number.
+
+termux-telephony-cellinfo
+  Get information about all
+  observed cell information from
+  all radios on the device
+  including the primary and
+  neighboring cells.
+
+termux-telephony-deviceinfo
+  Get information about the
+  telephony device.
+
+T@termux-toast
+  Show a transient popup
+  notification.
+
+termux-torch
+  Toggle LED Torch on device.
+
+T@termux-tts-engines
+  Get information about the
+  available text-to-speech engines.
+
+T@T@termux-tts-speak
+  Speak text with a system
+  text-to-speech engine.
+
+T@termux-usb
+  List or access USB devices.
+
+termux-vibrate
+  Vibrate the device.
+
+termux-volume
+  Change volume of audio stream.
+
+termux-wallpaper
+  Change wallpaper on your device.
+
+termux-wifi-connectioninfo
+  Get information about the current
+  wifi connection.
+
+termux-wifi-enable
+  Toggle Wi-Fi On/Off.
+
+termux-wifi-scaninfo
+  Get information about the last
+  wifi scan.
+
+
+  https://wiki.termux.com/wiki/Termux:Boot
+
+n@T@T@Termux:Boot
+
+This addon will run scripts
+immediately after device was booted.
+
+Installation
+
+Download add-on from F-Droid
+
+Important: Do not mix installations
+of Termux and Addons between Google
+Play and F-Droid. They are
+presented at these portals for your
+convenience. There are
+compatibility issues when mixing
+installations from these Internet
+portals. This is because each
+download website uses a specific
+key for keysigning Termux and
+Addons.
+
+
+Usage
+
+T@T@- 1. Install the Termux:Boot app.
+- 2. Go to Android settings and
+  turn off battery optimizations
+  for Termux and Termux:Boot
+  applications.
+- 3. n@T@Start the Termux:Boot app once
+  by clicking on its launcher icon.
+  This allows the app to be run at
+  boot.
+n@T@- 4. Create the ~/.termux/boot/
+  directory: Put scripts you want
+  to execute inside the
+  ~/.termux/boot/ directory. If
+  there are multiple files, they
+  will be executed in a sorted
+  order.
+n@n@T@T@- 5. It is helpful to run
+  termux-wake-lock as first thing
+  to prevent the device from
+  sleeping.
+
+T@T@Example: to start an sshd server
+and prevent the device from
+sleeping at boot, create the
+following file at
+~/.termux/boot/start-sshd:
+
+T@#!/data/data/com.termux/files/usr/bin/sh
+termux-wake-lock
+sshd
+
+If you want Termux-services to
+start services on boot, you can
+use:
+
+#!/data/data/com.termux/files/usr/bin/sh
+termux-wake-lock
+. $PREFIX/etc/profile
+
+
+  https://wiki.termux.com/wiki/Termux:Float
+
+Termux:Float
+
+This addon provides the Termux
+console in a floating window.
+
+  [Termux float.png]
+
+The usage and installation
+documentation is available at
+https://github.com/termux/termux-float.
+
+
+  https://wiki.termux.com/wiki/Termux:Styling
+
+Termux:Styling
+
+This addon provides color schemes
+and fonts to customize the
+appearance of your Termux terminal.
+
+Installation
+
+Download add-on from F-Droid
+
+Important: Do not mix installations
+of Termux and Addons between Google
+Play and F-Droid. They are
+presented at these portals for your
+convenience. There are
+compatibility issues when mixing
+installations from these Internet
+portals. This is because each
+download website uses a specific
+key for keysigning Termux and
+Addons.
+
+
+How it works
+
+T@Styling add-on is just a package
+with pre-defined color schemes and
+font files. n@T@T@When you use it to
+change terminal style, some files
+are being extracted and placed at
+specific locations in home
+directory.
+
+Color schemes are written to
+
+/data/data/com.termux/files/home/.termux/colors.properties
+
+Fonts are placed at
+
+T@/data/data/com.termux/files/home/.termux/font.ttf
+
+User can place own files to these
+paths, which can be useful if a
+certain font or color scheme is not
+available through the add-on. If
+you wish to do styling
+configuration manually,
+Termux:Styling application is not
+necessary.
+
+
+  https://wiki.termux.com/wiki/Termux:Tasker
+
+T@T@T@Termux:Tasker
+
+This add-on provides a Tasker
+plug-in to execute Termux programs.
+
+Installation
+
+Download add-on from F-Droid
+
+Important: Do not mix installations
+of Termux and Addons between Google
+Play and F-Droid. They are
+presented at these portals for your
+convenience. There are
+compatibility issues when mixing
+installations from these Internet
+portals. This is because each
+download website uses a specific
+key for keysigning Termux and
+Addons.
+
+T@T@T@Usage
+
+Create a new Tasker Action. In the
+resulting 'Select Action' Category
+dialog, select Plugin. In the
+resulting dialog, select
+Termux:Tasker. Edit the
+configuration to specify the
+executable in ~/.termux/tasker/ to
+execute, and if it should be
+executed in the background (the
+default) or in a new terminal
+session.
+
+
+  https://wiki.termux.com/wiki/Termux:Widget
+
+T@Termux:Widget
+
+A Termux plugin app to run scripts
+in Termux with launcher shortcuts
+and widgets.
+
+  [Termux widget.png]
+
+The usage and installation
+documentation is available at
+https://github.com/termux/termux-widget.
+

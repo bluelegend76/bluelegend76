@@ -14,8 +14,10 @@
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists
+**IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**
+\+ Idioms, Sayings, etc
 - [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
-- [ ] TODO: ADD TERMUX.NOTES1.TXT
+- **Important: Add 'Hardware'-lists (e.g. black earbuds)**
 
 ## lazarus.win.ps1:
 - [ ] **Auto-Linking of config-files to Windows-directories**
@@ -28,6 +30,7 @@
  
 ## lazarus.arch.sh:
 - [ ] **Change Xfce window-handling key to Win-key**
+- [ ] **Install Android-handling support on Arch (+KDE Connect)**
 ----
 - [ ] *Set system language to English (US)*
 

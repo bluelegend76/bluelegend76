@@ -123,53 +123,37 @@ XFCE4
               https://stackoverflow.com/questions/42526711/is-there-a-list-of-commands-for-keyboard-shortcuts-in-xfce-4
             ----
             https://tutorialtactic.com/blog/xfce-shortcuts/
-                -- Action  Xfce Shortcut keys --
             Window Manipulation Shortcuts ----
                 Window operations menu
                     Alt + Spacebar
-                Dismiss/cancel dialog
-                    Esc
-                Switch to the next window
-                    Alt + Tab
-                Switch to the previous window
-                    Shift + Alt + Tab
                 Next window of the current application
                     Super + Tab
-                Close window
-                    Alt + F4
-                Move window
-                    Alt + F7
-                Resize window
-                    Alt + F8
+            Move window
+                Alt + F7
+            Resize window
+                Alt + F8
                 Hide window
                     Alt + F9
                 Maximize window
                     Alt + F10
-              Raise/lower window  sa-PgUp/sa-PgDn
+            Raise/lower window  sa-PgUp/sa-PgDn
                 Toggle fullscreen
                     Alt + F11
                 Toggle above
                     Alt + F12
-              Show desktop  Ctrl + Alt + D
+                Show desktop  ca-d
             Move the window to workplace Shortcuts ----
-              Stick window (show in all workspaces)  Alt + F6
+            Stick window (show in all workspaces)  Alt + F6
                 Maximize window horizontally
                     Alt + F5
-                Move window to next workspace
-                    Ctrl + Alt + End
-                Move the window to the previous workspace
-                    Ctrl + Alt + Home
-                Move window to workspace 1
-                    Ctrl + Alt + 1
-                Move window to workspace 2
-                    Ctrl + Alt + 2
+        Move window to next/prev workspace  ca-end / ca-home
+            Move window to workspace 1 (2, etc)
+                ca-1  (ca-2 ...)
             Switching workspace Shortcuts ----
                 Switch to workspace 1-9
-                    Alt + F1… to F9
-                Next workspace
-                    Ctrl + Alt + Left Arrow key
-                Previous workspace
-                    Ctrl + Alt + Right Arrow Key
+                    a-f1 .. a-f9
+                Next / Prev. workspace
+                    ca-right / ca-left
                 Upper workspace
                     Ctrl + Alt + Up Arrow Key
                 Bottom workspace
@@ -178,11 +162,9 @@ XFCE4
                     Ctrl + Alt + Left Arrow key
                 Right workspace
                     Ctrl + Alt + Right Arrow Key
-                Go to workspace 1
-                    Ctrl + F1
-                Go to workspace 2
-                    Ctrl + F2
-            Add a workspace  Alt + Insert
+                Go to workspace 1 (2, etc)
+                    c-f1  (c-f2 ...)
+            Add a workspace  a-Ins
                 Delete last workspace
                     Alt + Delete
                 Lock the screen
@@ -192,7 +174,7 @@ XFCE4
                     Super + F
                 Mail reader
                     Super + M
-            Terminal emulator  Ctrl + Alt + T
+            Terminal emulator  ca-t
                 Web browser
                     Super + W
                 LibreOffice Calc
@@ -203,30 +185,29 @@ XFCE4
                     Super + E
                 Parole
                     Super + 1
-              App Finder
-                    Super + R
+            App Finder  w-r
                 Popup applications menu
                     Alt + F1
-              Whisker menu  Ctrl + Esc
+              Whisker menu  c-Esc
                 xfce4-screenshooter -f
-                    Print Screen key
+                    PrintScreen
                 xfce4-screenshooter -w
                     Alt + Print Screen key
                 Start xflock4
                     Ctrl + Alt + L
                 Start xfrun4
-                    Alt + F2
+                    a-f2
               Start xkill
-                    Ctrl + Alt + Esc
+                    ca-Esc
             Other Shortcuts ----
                 XF86Display xfce4-display-settings –minimal
-                    Super + P
+                    w-p
                 Show context mMenu. xfdesktop –menu
                     Super + P
                 Lock screen. xflock4
                     Super + P
                 Start prompt to run command. xfrun4
-                    Super + P
+                    w-p
 Fluxbox
 
 WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
@@ -402,11 +383,6 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
         quicklink menu(?)
             w-x
 
-            Narrator(*)  *******  !!!!! @@
-                cw-ent  #browser + text documents
-                [+setting: Ease of Access > Narrator
-                 & toggle switch to On]
-
                 (+a-shift_left)
 
             Change Keyboard layout (=x2 *) @
@@ -457,6 +433,42 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 line up/down in outp. history(?)
                 maximize win. left/right
                 stretch/squeeze win. top/bot
+narrator(*)[##]  !! @@
+                cw-ent  #browser + text documents
+                [+setting: Ease of Access > Narrator
+                 & toggle switch to On]
+            Basic Navigation & Interaction ----
+                Narrator Key + Tab: Move to the next focusable item (e.g., button, text box).
+                Narrator Key + Shift + Tab: Move to the previous focusable item.
+                Narrator Key + Enter: Activate the current item (e.g., click a button, select a menu item).
+                Narrator Key + Spacebar: Toggle Scan Mode. In Scan Mode, you can navigate items more granularly.
+                Narrator Key + R: Read the current item.
+                Narrator Key + C: Read the current time and date.
+            Advanced Navigation & Interaction ----
+                Narrator Key + H: Read headings in a document.
+                Narrator Key + L: Read links on a webpage.
+                Narrator Key + F: Read the current focus.
+                Narrator Key + Home: Go to the beginning of the current item (e.g., the beginning of a document).
+                Narrator Key + End: Go to the end of the current item.
+                Narrator Key + Page Up: Move up one page.
+                Narrator Key + Page Down: Move down one page.
+            Reading & Text Manipulation ----
+                Narrator Key + M: Start reading from the current position.
+                Ctrl: Stop reading.
+                Narrator Key + R: Read the current item.
+                Narrator Key + C: Read the current time and date.
+                Narrator Key + X: Repeat the last phrase spoken by Narrator.
+            Scan Mode ----
+            Narrator Key + Spacebar: Toggle Scan Mode on/off.
+            Arrow Keys: Navigate through items in Scan Mode.
+            Enter: Activate the current item in Scan Mode.
+            Customization ----
+                Narrator Key + Windows Key + U: Open Narrator settings.
+            Tips & Tricks ----
+                Learn the Scan Mode commands: Scan Mode provides more precise control over navigation.
+                Customize Narrator settings: Adjust voice speed, volume, and other settings to your preference.
+                Explore Narrator commands: Experiment with different commands to find what works best for you.
+                Use the Narrator help: Access built-in help within Narrator for a comprehensive list of commands and features.
 .    winkeys extras (=picklist)
                 windows 10 vankilist (=for dummies etc) ****
 
@@ -4971,6 +4983,38 @@ dired  @@
                             dired help h
                             dired summary (short help) and error log ?
 Evince
+                    fullscreen              f11
+                    presentation mode **    f5
+                    (sidebar                f9)
+                    caret navigation        f7      #=får pekare m. vilken kan navigera i pdf-en,
+                                                       markera text mm som i vanl. text-dok. ****
+                    select all text         c-a
+
+                    rotera sida med-/
+                      /motsols ****         c-hö/c-vä
+                    zooma in/ut             c-+/c--
+                    zooma 1:1               c-0
+                    ----
+                    fit page                f
+                    fit width               w
+                    (automatic zoom(??)     a)
+
+                    gå till sida n          c-l
+
+                    navigera i sida         j/k//h/l **
+                    nästa/förra sida        n/p
+                    till nästa/förra        a-n/a-p
+                      besökta sida ****
+
+                    search                  c-f
+                    search next/prev. ****  c-g/cs-g
+
+                    bokmärke                c-d
+                    'annotate'              s (+esc)
+
+                    scrolling               c
+                    dual page mode          d
+                    ----
                     evince **(!)  (=cleaned minilist)
 
                     (open) / open copy / save copy  **       (c-o) / c-n / c-s
@@ -5041,6 +5085,55 @@ emacs pdf-tools
                         view
                         virtual
 Okular  @@@
+                start document on certain page + find string in dok ***(!!) ; okular -p 10 --find 'string to find' dok.epub &
+                start in presentation mode * ; the --presentation flag
+
+                 --print  --print-and-exit
+
+                Okular ; kde universal dok-viewer 
+                Supported formats ; pddf, ps, djvu, Odt, epub(**)  etc *
+                Okular can open in Tabs ; =option
+                Reopen Last ; cs-t
+                jk hl ; _  previous/next page 
+                clickdrag with lmb ; tools > browse
+                presentation: next/previous slide ; down/up
+                Auto-Scroll Mode ; s-up/dn   pause (shift)   break out =any other key
+                tip: Layers ; check / uncheck (in Navigation-Panel)
+                Tip Bookmarks ; =simult.(??) for Doks
+                dokument-internal links ; Needs Browse turned on
+                Forward ; space
+                Back from (eg. Bookmark-)Jump ** ;  sa-left/right **!
+                Find (+Next) ** ; c-f(?)  f3/ent//s-f3/s-ent
+                Pres. ; View > Pres. (+pres-def. Doks)
+                play Presentation ; Run until Esc/pause
+                Draw in Presentation-Mode ; Toggle Drawing-Mode  +Clear Drawings  (+Next  clears Drawing) **
+
+                multimonitor in Presentation-mode ; see  p10
+                Jump into LateX Source ; s-Click **(*!)
+                Emb(ed|edded) Files ; file > Emb  p11
+
+                Forms
+                Signatures
+                ANNOTATIONS **!  p13  (+on Many Dok-Types**)
+                Save Annotation(s) * ; Okular Dok.Archive, w/in Dokument, as Separate Pdf *(**)
+                (Drm)
+
+                Move Annotation ; c-drag
+                Make Annotations **! ; Annotation Toolbar  F6   p3-18
+                Add Custom Bookmarks ; --
+                Add Inline LateX * ;   p18
+                Show/Hide Navigation(=Side) Panel ; F7   p20  @@
+                show only bmk.s from Curr dok ;  p21
+                rename bmk.s
+                Cmd-line + to In-dok Ref (**!)
+                zzzz  22
+
+                Go to Page n ; c-g
+                Add Bookmark ; c-b
+                THE TOOLS MENU ** ; p27
+
+                Tools > Speak **!
+                ----
                     Shortcuts for Okular
                     ~/Dropbox/rsc/Doks/Okular.pdf
 

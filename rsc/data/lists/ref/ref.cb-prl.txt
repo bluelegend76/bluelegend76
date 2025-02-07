@@ -4,6 +4,8 @@ vim:fdm=marker:
 @c: :set syntax=CODELANG textwidth=35 nosi ai nojs shiftwidth=2 | colors ron
 ____
 __
+gvim -p at/PROGR.cm.txt comp/lang/PROGRLANG.DB.ref.txt
+
 Multimedia, MuRec {{{
     gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
       MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
@@ -103,7 +105,8 @@ browse:web-text ----
 browse:(file, web, im, mail) ----
     Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
 }}}
-  Note: May want to add Editors (ed, Vim, Emacs, Rider/IntelliJ, NetBeans etc)
+  Note: May want to add Editors (ed, Vim, Emacs, Rider/IntelliJ, NetBeans, online|trying, vscode VStudio)
+  gvim comp/hardw/hardw-devices.txt
 Sysadm(+wm) Redhat, nushell {{{
   https://www.nushell.sh/cookbook/
 
@@ -126,7 +129,7 @@ m/loffice (excel/calc + basic  +/base etc) {{{
   gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{moffice,loffice,latexcb}.txt
 
 }}}
-.          markup: md, wiki, github-md, x-markd {{{
+.   ^-- markup: md, wiki, github-md, x-markd {{{
     TODO: ADD INDEX-FILE[**]  Temp-Solution: Start off list in Loffice.Latex
     org
     Markdown
