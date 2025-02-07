@@ -1,5 +1,5 @@
-vim:shiftwidth=2:syntax=sh:
 set shiftwidth=2 | set syntax=sh | colors industry
+vim:shiftwidth=2:syntax=sh:
 
 https://duckduckgo.com/?q=termux+change+repo&t=newext&atb=v332-1&ia=web
 https://stackoverflow.com/questions/67647518/termux-repository-is-under-maintenance-or-down

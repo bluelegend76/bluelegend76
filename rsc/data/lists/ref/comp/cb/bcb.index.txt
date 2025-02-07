@@ -467,7 +467,7 @@ bcb (**(!))
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
 
 Termux
-  TODO: INSERT LINK TO TERMUX-DOCS.TAGS1
+  start gvim comp/sysadm/Termux.Tags1.txt
 SSH
 Tasker
 Vbox

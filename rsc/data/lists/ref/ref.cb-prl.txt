@@ -105,7 +105,8 @@ browse:web-text ----
 browse:(file, web, im, mail) ----
     Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
 }}}
-  Note: May want to add Editors (ed, Vim, Emacs, Rider/IntelliJ, NetBeans, online|trying, vscode VStudio)
+  NOTE: May want to add Editors (ed, Vim, Emacs, Rider/IntelliJ, NetBeans, online|trying, vscode VStudio)
+    [+add MS Graph Explorer to online|tryit-list]
   gvim comp/hardw/hardw-devices.txt
   start gvim comp/hardw/hardw-devices.txt
 Sysadm(+wm) Redhat, nushell {{{
