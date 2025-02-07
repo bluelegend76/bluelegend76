@@ -1,6 +1,12 @@
 ~/bin/scripts/at/at.PROGR.cm.bash
 vim:fdm=marker:fdl=0:
 
+RIDER GENERATE CLASS DIAGRAMS {{{
+  https://stackoverflow.com/questions/52695800/creating-class-dependency-diagram-in-rider-ide
+  https://www.jetbrains.com/help/rider/Exploring_Type_Dependency_Graph.html  # tools > show type dependency diagram
+    https://blog.jetbrains.com/dotnet/2020/10/06/create-uml-diagrams-using-plantuml/
+}}}
+
 TODO: SORT AND COLLECT/COLLATE CONTENTS (=INTO AREAS)
 Singleton = 'En instans av en klass som alla delar på'
 ____ __
