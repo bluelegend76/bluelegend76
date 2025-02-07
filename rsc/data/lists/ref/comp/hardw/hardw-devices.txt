@@ -1,0 +1,31 @@
+set foldmethod=indent foldlevel=2
+vim:fdm=indent:fdl=2:
+
+Office Headset (Toyota)
+
+Android A20
+Samsung Galaxy S25
+Galaxy Tab S3
+
+Zero TX (**)
+        Pair Device (i.e. which order)
+        Start + Connect Device (i.e. which order)
+            power on | off
+                press buttons 5 secs
+            answer phonecall | hang up
+                press button once
+            re-dial last calling phone-number
+                press button x4
+            decline phonecall
+                presshold button for 1 sec.
+            mute|unmute microphone during phonecall
+                press button x2
+        listening (=music etc.): go to next | prev. track *
+            press x2 | press x3
+            assistant (=google assistant | siri)
+                presshold button for 2 sec.
+            (switch audio-output between phone | earbuds  during phonecall (etc?))
+                presshold button 1 sec.
+
+Sony wh-h900
+
