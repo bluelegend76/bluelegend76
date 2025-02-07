@@ -1,5 +1,5 @@
 set foldmethod=indent foldlevel=2
-vim: fdm=indent:fdl=2:
+vim:fdm=indent:fdl=2:
 
 .  @@@@(@)
                 *pattern.txt*   For Vim version 8.1.  Last change: 2019 May 05
