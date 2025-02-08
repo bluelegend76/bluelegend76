@@ -1,7 +1,7 @@
 set foldmethod=indent foldlevel=2
 vim:fdm=indent:fdl=2:
 
-META.PackMan: apt/aptitude, pacman/yay, choco  pip
+META.PackMan: apt/aptitude/dpkg, pacman/yay, choco, nix  pip
                 Install package
                     sudo apt -y install program
                     pacman -S program
@@ -9,8 +9,11 @@ META.PackMan: apt/aptitude, pacman/yay, choco  pip
                 Remove package
                     pacman -R program
                 Search for package
-                    pacman -Ss program
-                    choco search package
+                    pacman -Ss program|keyword
+                      yay -Ss package
+                    choco search package|keyword
+                    apt-cache search package|keyword
+                    nix search nixpkgs package|keyword
                 fix missing dependencies
 
                 Install Package:
@@ -30,6 +33,9 @@ META.PackMan: apt/aptitude, pacman/yay, choco  pip
                     May include security updates and bug fixes.
                 List Installed Packages:
                     Display a list of all currently installed packages.
+                List directories where package installed files
+                    dpkg -L package
+                List files installed for a package
                 Show Package Information:
                     Display detailed information about a specific package, such as version, description, dependencies, etc.
                 Clean/Purge:

@@ -21,9 +21,23 @@ __
 \+ Idioms, Sayings, etc
 - [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
 - [ ] Add C#-style Regex list
+----
+- [ ] Add FreeCommander accelerator-keys(!)
 
 ## lazarus.win.ps1:
 - [ ] **Auto-Linking of config-files to Windows-directories**  __=2
+- Files to link in:
+  - _vimrc
+  - (.bashrc)
+  - .ideavimrc
+  - qwerty2svorak/svorak2qwerty.ahk
+  - vim/, emacs/
+  - firefox-plug
+  - jetbrains IDE settings
+  - vscode/, vs/
+  - bluelegend.kdbx
+    - .bashrc (etc)
+  - lazarus.win.ps1 (or upcoming .fsx) **
 - Adding Apps to Taskbar
 - Adding preferred programs for filetypes (to Windows Registry)
 ----
