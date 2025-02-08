@@ -8,8 +8,11 @@ Samsung Galaxy S25
 Galaxy Tab S3
 
 Zero TX (**)
-        Pair Device (i.e. which order)
-        Start + Connect Device (i.e. which order)
+        Pair Device (=order)
+            use main (=right) when pairing
+        Start + Connect Device (=which order)
+            use slave (=left) when connecting
+
             power on | off
                 press buttons 5 secs
             answer phonecall | hang up

@@ -3,6 +3,9 @@ __
 
 - ## **START + CONSERTED PUSH TO LEARN FILE/MEDIA-BROWSERS, MEDIA-PROGRAMS (ETC ...)**  __
 
+# INKÖP ----
+- Samsung S25 Galaxy (phone)
+
 - Read TruckCom Docs/Wiki (x2)
   - TODO: Test using Windows Narrator (for speed-reading)
 - EXPLORE SHORTCUTS (+MAKE A GUIDE/CHEAT-SHEET FOR WIN-NARRATOR)
