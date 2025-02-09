@@ -22,7 +22,9 @@ choco install inkscape -y
 
 # Setting up symbolic links to the Config-files in Windows
 # TODO: Replace 'hard-coded' user with 'Select User' to link to
-C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
+# C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
+C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path .winvimrc -Target .\RiderProjects\bluelegend76\_vimrc
+C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path Desktop\LangDb1.txt -Target .\RiderProjects\bluelegend76\rsc\data\db\langdb.legacy.list\langdb.txt
 
 # WSL/Ext4
 # sudo modprobe ext4

@@ -258,68 +258,120 @@ pacman -S tj3 vim-tjp
 
 ## TODO: ADD XFCE DESKTOP KEYBOARD SETTINGS (=directory of xml-files)
 
-pacman -S kdeconnect kdeconnect-indicator
+# sudo pacman -S kdeconnect kdeconnect-indicator
+sudo pacman -S kdeconnect
+# sudo pacman -S libmtp simple-mtpfs android-tools gvfs
+sudo pacman -S android-tools
 #
-# If I would like to have good support for mounting and accessing my Android phone from the computer, are there any recommended packages I can install on my Arch Linux to facilitate that, and preferably even interacting with the phone from the command-line?
+# If I would like to have good support for
+# mounting and accessing my Android phone
+# from the computer, are there any recommended
+# packages I can install on my Arch Linux to
+# facilitate that, and preferably even
+# interacting with the phone from the command-line?
 # 
-# You're looking for a smooth Android-to-Arch Linux integration! Here are some recommended packages to facilitate mounting and accessing your Android phone from the command line:
+# You're looking for a smooth Android-to-Arch
+# Linux integration! Here are some
+# recommended packages to facilitate mounting
+# and accessing your Android phone from the
+# command line:
 # 
 # 1. libmtp:
 # 
-#     This core library provides the necessary functionality for interacting with MTP (Media Transfer Protocol) devices, which is the standard protocol for transferring media files between Android devices and computers.
-#     Installation: sudo pacman -S libmtp
+# This core library provides the necessary
+# functionality for interacting with MTP
+# (Media Transfer Protocol) devices, which
+# is the standard protocol for transferring
+# media files between Android devices and computers.
+#
+# sudo pacman -S libmtp
 # 
 # 2. simple-mtpfs:
 # 
-#     This user-space program uses libmtp to mount your Android device as a filesystem.
-#     Installation: sudo pacman -S simple-mtpfs
+# This user-space program uses libmtp
+# to mount your Android device as a filesystem.
+#
+# sudo pacman -S simple-mtpfs
 # 
 # 3. gvfs:
 # 
-#     GNOME Virtual File System provides a unified interface for accessing various file systems, including MTP devices.
-#     Installation: sudo pacman -S gvfs
+# GNOME Virtual File System provides
+# a unified interface for accessing
+# various file systems, including MTP devices.
+#
+# sudo pacman -S gvfs
 # 
-# Using simple-mtpfs:
+#
+# Using simple-mtpfs:  __
 # 
-#     Connect your Android device: Connect your phone to your computer via USB and enable MTP mode on your phone.
+# Connect your Android device:
+# Connect your phone to your computer
+# via USB and enable MTP mode on your phone.
 # 
-#     Mount the device:
-#         Use the simple-mtpfs command to mount your Android device to a specific directory:
-#         Bash
+# Mount the device:
+#
+# Use the simple-mtpfs command to mount
+# your Android device to a specific
+# directory:
 # 
-#         simple-mtpfs <mount_point> 
+# simple-mtpfs <mount_point> 
 # 
-#             Replace <mount_point> with the desired mount point (e.g., /mnt/android).
+# Replace <mount_point> with the desired
+# mount point (e.g., /mnt/android).
 # 
-#     Access files:
-#         Once mounted, you can use standard file system commands (e.g., ls, cp, mv) to access and manipulate files on your Android device.
+#
+# Access files:
+# Once mounted, you can use standard
+# file system commands (e.g., ls, cp, mv)
+# to access and manipulate files on your
+# Android device.
 # 
 # Example:
-# Bash
 # 
 # simple-mtpfs /mnt/android 
 # ls /mnt/android 
 # cp /path/to/file /mnt/android/Downloads/ 
 # 
+#
 # Using gvfs:
 # 
-#     If you're using a GNOME-based desktop environment, gvfs should automatically mount your Android device when connected.
-#     You can then access it through your file manager (e.g., Nautilus).
+# If you're using a GNOME-based desktop
+# environment, gvfs should automatically
+# mount your Android device when connected.
+#
+# You can then access it through your
+# file manager (e.g., Nautilus).
 # 
 # Additional Tips:
 # 
-#     Udev Rules: For automatic mounting, you can create udev rules to automatically mount your Android device when it's connected.
-#     Android Debug Bridge (ADB): For more advanced interaction with your Android device (e.g., installing apps, running shell commands), you can install the android-tools package, which includes the Android Debug Bridge (ADB).
+# Udev Rules: For automatic mounting, you
+# can create udev rules to automatically
+# mount your Android device when it's connected.
+#
+# Android Debug Bridge (ADB):
+# For more advanced interaction with your
+# Android device (e.g., installing apps,
+# running shell commands), you can
+# install the android-tools package,
+# which includes the Android Debug Bridge (ADB).
 # 
-# By installing these packages and following the instructions, you'll be able to seamlessly mount and interact with your Android phone from your Arch Linux system using the command line.
+# By installing these packages and
+# following the instructions,
+# you'll be able to seamlessly mount
+# and interact with your Android phone
+# from your Arch Linux system using
+# the command line.
 # 
 # Note:
 # 
-#     The specific commands and procedures might vary slightly depending on your Android device and the version of Android you are running.
-#     Always refer to the official documentation for simple-mtpfs and libmtp for the most up-to-date information and advanced usage options.
-# 
-# I hope this helps! Let me know if you have any further questions.
-
+# The specific commands and procedures
+# might vary slightly depending on your
+# Android device and the version of Android
+# you are running.
+#
+# Always refer to the official documentation
+# for simple-mtpfs and libmtp for the most
+# up-to-date information and advanced usage options.
 
 echo "Installing xfce4-terminal"
 #@@__ pacman -S xfce4-terminal
