@@ -2,8 +2,9 @@
 __
 
 - ## **START + CONSERTED PUSH TO LEARN FILE/MEDIA-BROWSERS, MEDIA-PROGRAMS (ETC ...)**  __
+- Prepare + Send THEDOC-NEXT Potpurri-Video to Abe
 
-# INKÖP ----
+# SHOPPING-LIST / BUYS ----
 - Samsung S25 Galaxy (phone)
 
 - Read TruckCom Docs/Wiki (x2)

@@ -3,13 +3,15 @@ let mapleader=","
 "---- __
 colorscheme ron
 set guicursor+=a:blinkon0
-set hlsearch | set incsearch
+set hlsearch
+set incsearch
 " Reset search-highlighting (builds on c-l)
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 set modeline
 set showcmd
-set path+=** | set wildmenu
+set path+=**
+set wildmenu
 set nrformats=
 "" https://stackoverflow.com/questions/1636297/how-to-change-the-folder-path-for-swp-files-in-vim/1636944
 " set directory=~/.vim//
@@ -86,8 +88,11 @@ inoremap <leader>pn <c-p><c-n>
 
 " TODO: Convenience-mappings for 'thorny' characters
 " --
-nnoremap <leader>o <CR> | inoremap <leader>o <Esc>o | cnoremap <leader>o <CR>
-nnoremap <leader><leader>o o<Esc> | nnoremap <leader><leader>u O<Esc><CR>
+nnoremap <leader>o <CR>
+inoremap <leader>o <Esc>o
+cnoremap <leader>o <CR>
+nnoremap <leader><leader>o o<Esc>
+nnoremap <leader><leader>u O<Esc><CR>
 "EXTRA =NEW WIRELESS SLIM KEYBOARD: Temp REMAPPING > AND <
 " noremap Ö >
 " noremap Ä <
@@ -151,11 +156,15 @@ nnoremap DD :%d
 nnoremap <C-S-A-w> :bw<CR>
 
 " ---- Jump in Change-List ----
-nnoremap gg g; | nnoremap gG g,
-nnoremap <A-PageUp> g; | nnoremap <A-PageDown> g,
+nnoremap gg g;
+nnoremap gG g,
+nnoremap <A-PageUp> g;
+nnoremap <A-PageDown> g,
 " ---- Jump between Marks ----
-nnoremap <S-PageUp> [' | nnoremap <S-PageDown> ]'
-nnoremap <PageUp> [` | nnoremap <PageDown> ]`
+nnoremap <S-PageUp> ['
+nnoremap <S-PageDown> ]'
+nnoremap <PageUp> [`
+nnoremap <PageDown> ]`
 nnoremap <leader>gg gg
 
 " logical undo
@@ -163,7 +172,8 @@ nnoremap U <C-R>
 
 " Custom movements  __
 " line refocus
-noremap tt zt | noremap TT zb
+noremap tt zt
+noremap TT zb
 " end/start of line
 noremap L $
 noremap H 0
@@ -266,7 +276,8 @@ nnoremap <leader>ex ^yg_:<C-R>"<CR><CR>
 " 'Vertical Ripple-Split'
 nnoremap <c-w>V <c-w>v<c-w><c-w><c-f>
 " Alt+PgUp/PgDn = Move Tab Left/Right in Tabs-List
-nnoremap <C-S-PageUp> :tabmove -1<CR> | nnoremap <C-S-PageDown> :tabmove +1<CR>
+nnoremap <C-S-PageUp> :tabmove -1<CR>
+nnoremap <C-S-PageDown> :tabmove +1<CR>
 
 " File-System Utilities  __
 "" GENERAL UTILITIES: RENAME

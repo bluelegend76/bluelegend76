@@ -21,6 +21,7 @@ choco install inkscape -y
 
 
 # Setting up symbolic links to the Config-files in Windows
+# TODO: Replace 'hard-coded' user with 'Select User' to link to
 C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
 
 # WSL/Ext4
@@ -37,6 +38,8 @@ Invoke-WebRequest -Uri $downloadUrl -OutFile $installerPath
 # Execute the installer (adjust the arguments as needed)
 Start-Process -FilePath $installerPath -ArgumentList "/S"
 
+
+# Download + Start installer for Dlang/DMD ----
 
 # Install VeraCrypt ----
 # Define the URL of the VeraCrypt installer

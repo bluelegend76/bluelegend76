@@ -9,6 +9,59 @@ Reveal
 Impress
 
 Emacs Org
+Sphinx  <raw|Overview>
+                Sphinx
+
+                Sphinx is a powerful documentation generator primarily used for creating high-quality technical documentation, especially for software projects.
+
+                Key Features:
+
+                    ReStructuredText: Primarily uses reStructuredText as the source markup language, although it also supports Markdown with the MyST extension.
+
+                    Autodoc: Automatically generates documentation for Python objects (classes, functions, modules) by inspecting their docstrings.
+
+                    Cross-referencing:
+                        Easily link between different sections, figures, and code elements within your documentation.
+                        Supports cross-referencing to external documentation.
+
+                    Directives:
+                        Provides a rich set of directives for controlling document structure, including:
+                            .. include::: Include content from other files.
+                            .. figure::: Include images with captions.
+                            .. admonition::: Create attention, note, warning, etc., blocks.
+
+                    Themes:
+                        Offers a variety of themes to customize the look and feel of your generated documentation, such as the popular "Read the Docs" theme.
+
+                    Extensions:
+                        Extensible with numerous extensions that add support for various features, including:
+                            Math equations (using LaTeX)
+                            Support for other programming languages
+                            Integration with various tools and services
+
+                Code Example (Simplified Autodoc):
+                Python
+
+# In your Python module (my_module.py)
+                def my_function(arg1, arg2):
+                    """
+                    This is the docstring for my_function.
+
+                    Args:
+                        arg1: Description of argument 1
+                        arg2: Description of argument 2
+
+                    Returns:
+                        The result of the function.
+                    """
+                    # ... function implementation ... 
+
+                Strengths:
+
+                    Powerful and Feature-Rich: Sphinx offers a comprehensive set of features for creating professional-quality documentation.
+                    Excellent for Technical Documentation: Particularly well-suited for documenting software projects, APIs, and other technical topics.
+                    Large and Active Community: A strong community provides extensive documentation, tutorials, and support.
+                    Customization: Highly customizable through themes, extensions, and configuration options.
 Markdown
                 https://www.markdownguide.org/basic-syntax/
                 header                    #
@@ -749,19 +802,246 @@ Jupyter Markdown
                   UTF-8 Geometric shapes
 
                   &#reference_number;
-GitHub-flavor Markdown
+GitHub-flavor Markdown (GFM)
+                adds: tables, task-lists, user-mentions
+                suited for: writing clear, concise documentation within github ecosystem (readme-files, issue-descriptions (hm_eng), comments
+
+                task-lists --
+                - [x] Task completed
+                - [ ] Task not completed
+                user mentions --  (hm_eng)
+                @username
+                issue- and pull-request references --
+                #123
+                tables --
+                | Header 1 | Header 2 |
+                |---|---|
+                | Cell 1 | Cell 2 |
+                | Cell 3 | Cell 4 |
+                fenced code-blocks --
+                ```python
+                def my_function():
+                    print("Hello, world!")
+                autolinking of urls --
+                emojis --  including shortcodes
+                :smile:
 Mermaid
 PlantUml
 ----
+Pandoc Markdown (*)  #many extensions
+                adds: footnotes/references, definition-lists
+                suited for: academic writing, technical documentation,  cross-platform publishing
+
+                code-blocks --
+                tables --
+
+                footnotes/references --
+                Here is a footnote reference: [^1]
+                [^1]: This is the footnote.
+                definition-lists --
+                Term 1
+                :    Definition 1
+                Term 2
+                :    Definition 2
+                math-equations --
+                $...$  inline math
+                $$...$$  display math (hm_eng)
 markdown extra
+                adds: tables, fenced code blocks(hm_eng), definition-list
+                suited for: readability, using markdown within html-blocks provides flexibility for integrating markdown with existing html-content
+
+                tables --
+                definition-lists --
+                fenced code-blocks --
+                markdown within html-blocks --
+                <div>
+                    This is some text with **bold** formatting.
+                </div>
+                footnotes/references --
+                Attributes for Inline Elements --  ___HM
+                <a href="https://example.com" id="my-link">Link</a>
 MultiMarkdown
-writers markdown
+                adds: footnotes, citations, metadata
+                suited for: smart typography, metadata-support, strong focus on generating various output-formats (html, pdf, etc) due to its focus on semantic markup
+
+                footnotes --
+                definition-lists --
+                id- and class-attributes -
+                # My Heading {#heading-id} 
+                This is a paragraph with a class: {.my-class} 
+                <span id="my-span-id">This is a span with an ID.</span>
+                smart typography --
+                convert " to curly quotes
+                convert -- to em-dashes
+                convert ... to ellipses
+                metadata --
+                ---
+                title: My Document Title
+                author: John Doe
+                date: 2024-11-15
+                ---
+  writers markdown
+Restructured Text  <raw>  #python documentation project
+                Directives: Restructured Text extensively uses directives, which are special commands that control the document's structure and formatting.
+
+                    Example (including a file):
+                    Code snippet
+
+                .. include:: other_file.txt
+
+                Example (creating a section):
+                Code snippet
+
+                    .. section:: My Section Title
+
+                Roles: Roles are inline markers that provide specific formatting or instructions.
+
+                    Example (emphasis):
+                    Code snippet
+
+                This text is :emphasis:`emphasized`.
+
+                Example (code):
+                Code snippet
+
+                    This is :code:`some code`.
+
+                Field Lists:
+
+                    Code snippet
+
+                        :Name: John Doe
+                        :Email: john.doe@example.com
+
+                    Targets:
+                        Create named targets within the document for easy cross-referencing.
+
+                Key Strengths:
+
+                    Versatility: Restructured Text is a powerful markup language with a wide range of features for creating complex documents, including technical documentation, tutorials, and manuals.
+                    Strong Tooling: Supports various tools for document conversion, such as Sphinx, which is widely used for generating documentation for Python projects.
+                    Readability: While the syntax might seem a bit more verbose than some other Markdown flavors, Restructured Text often results in well-structured and readable output.
+Sphinx Markdown (MyST  <raw>)
+                Directives:
+
+                    {directive}: Allows you to use Sphinx directives (like .. include::) directly within your Markdown.
+                    Markdown
+
+                {include} path/to/file.txt
+
+                {role}:  Similarly, you can use Sphinx roles within your Markdown.
+                Markdown
+
+                        This is a :code:`code snippet`.
+
+                    Math Support:
+                        Supports LaTeX-style math using $...$ for inline math and $$...$$ for display math.
+
+                    Cross-referencing:
+                        Allows you to easily create cross-references within your documents using Sphinx's referencing mechanisms.
+
+                    Customizations:
+                        Highly customizable through configuration options, allowing you to tailor the behavior and features to your specific needs.
+
+                Key Strengths:
+
+                    Combines Markdown's Simplicity with Sphinx's Power: MyST Markdown seamlessly integrates the ease of use of Markdown with the advanced features and capabilities of the Sphinx documentation framework.
+                    Strong Support for Technical Documentation: Ideal for creating complex technical documentation, including tutorials, API references, and user guides.
+                    Extensible: Allows you to leverage the full power of Sphinx extensions within your Markdown documents.
+PEG Markdown
+                adds: smart typography, footnotes/references
+                suited for: strong emphasis on correctness, focus on performance, extensibility (designed to be easily extended with custom parsers and output formats)
+  Hugo Markdown  <raw>
+                You got it! Here's Hugo Markdown with a focus on features beyond standard Markdown and including code examples:
+
+                Hugo Markdown
+
+                    Shortcodes:
+                    Markdown
+
+                {{< figure src="/images/myimage.jpg" alt="My Image" caption="A nice image" >}}
+
+                {{< video src="https://www.youtube.com/embed/..." >}}
+
+                Hugo supports custom shortcodes that allow you to easily embed images, videos, and other elements into your content.
+
+                Front Matter:
+                YAML
+
+                ---
+                title: "My Blog Post"
+                date: 2024-11-15
+                tags: ["hugo", "blogging"]
+                ---
+
+                Front Matter allows you to define metadata for your content, such as title, date, author, and tags, which is used by Hugo to organize and display your content.
+
+                Dynamic Content:
+                Markdown
+
+                    {{ .Site.Title }} 
+                    {{ range .Site.Data.myData }} 
+                        {{ .name }} 
+                    {{ end }}
+
+                    Hugo allows you to use templates and data files to dynamically generate content, such as menus, sidebars, and other elements.
+
+                Key Strengths:
+
+                    Designed for Static Site Generation: Hugo Markdown is specifically designed for use with the Hugo static site generator, offering seamless integration with its features and templating engine.
+                    Powerful Features: Shortcodes, front matter, and dynamic content provide powerful tools for creating complex and feature-rich websites.
+                    Performance: Hugo is known for its speed and efficiency, making it a popular choice for building fast and responsive websites.
+  Critic Markup  <raw>  #often used together with e.g. MultiMarkdown
+                Focus: CriticMarkup is not a Markdown flavor itself, but rather a system for annotating and tracking changes within a Markdown document. It's designed for collaborative editing and review.
+
+                Key Features:
+
+                    Additions:
+                    Markdown
+
+                This is {++an addition++}. 
+
+                Deletions:
+                Markdown
+
+                This is {--a deletion--}. 
+
+                Substitutions:
+                Markdown
+
+                This is {~~old text~>new text~~}. 
+
+                Comments:
+                Markdown
+
+                This is a test{>>Comment here<<}. 
+
+                Highlights:
+                Markdown
+
+                        This is a {==highlighted text==}. 
+
+                Key Strengths:
+
+                    Collaboration: Enables clear and concise communication of changes and suggestions during the editing process.
+                    Version Control: Helps track changes effectively and facilitates easier merging of contributions.
+                    Readability: Provides a clear and human-readable way to annotate and review documents.
+
+                Note: CriticMarkup is typically used in conjunction with other Markdown flavors like MultiMarkdown.
+MD Editors (...)
 ----
 Xml
+  DotNet Xml Documentation
 Emacs XML-Mode
 Vim Xml-Tools
 json, yaml  # look at more m.u. formats
 vim json-tools
+                  https://github.com/elzr/vim-json
+                https://github.com/rhysd/vim-fixjson
+                https://vimnotes.com/using-jq-and-other-tools-seamlessly-in-vim/
+                https://dev.to/mfilej/quickly-format-and-manipulate-json-in-vim-using-jq-2963
+                https://rafaelleru.github.io/blog/json-magic-vim/
+                https://gist.github.com/christoomey/880c87192c8f005bcdb5
 Context
 texinfo
 Docbook
@@ -770,14 +1050,9 @@ Wiki
 Gemini-Question: Listing different Markdown flavors 
                 - Standard Markdown:
                 The original and most basic flavor.
-                - GitHub-Flavored Markdown (GFM): Popularized by GitHub, it adds features like tables, task lists, and user mentions.
                 - CommonMark: A standardized and stricter version of Markdown.
-                - Markdown Extra: Extends Standard Markdown with features like tables, fenced code blocks, and definition lists.
-                - MultiMarkdown: A powerful flavor with advanced features like footnotes, citations, and metadata.
-                - Pandoc Markdown: A versatile flavor supported by the Pandoc document converter, offering a wide range of extensions.
                 - Kramdown: A robust Markdown superset used by Jekyll and Ruby on Rails.
                 - Discount: An early and influential Markdown implementation.
-                - PEG Markdown: A modern parser for Markdown based on Parsing Expression Grammars.
                 - Remark: A fast and efficient Markdown parser.
                 - Maruku: Another popular Markdown parser with a focus on simplicity and readability.
                 - Markdown Here: A browser extension that allows you to easily write and preview Markdown. (Not strictly a "flavor" but a significant implementation)
@@ -788,7 +1063,6 @@ Gemini-Question: Listing different Markdown flavors
                 - Mermaid Markdown: While technically a separate language, it's often used within Markdown documents for creating diagrams and flowcharts.
                 - PlantUML Markdown: Similar to Mermaid, allows embedding PlantUML diagrams within Markdown.
                 - Critic Markup: Designed for peer review and collaborative editing of Markdown documents.
-                - Org-mode: While not strictly Markdown, it's a powerful text-based outlining and organization system with some Markdown-like features.
                 Restructured Text (reST):
                     A markup language developed by the Python documentation project.
                     Known for its clear and concise syntax.

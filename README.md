@@ -3,6 +3,7 @@
 __
 
 ## TODO:
+- [ ] **Rename _vimrc to .winvimrc**
 - [ ] May want to split into several repos (config.core, Reflists, aux)
   i.e. to avoid dir-size bloat (=makes it easier to clone down to Android)
 ~~- [ ] Reformat External Drives to ExFAT~~
