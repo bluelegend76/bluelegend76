@@ -28,7 +28,7 @@ __
 ## lazarus.win.ps1:
 - [ ] **Auto-Linking of config-files to Windows-directories**  __=2
 - Files to link in:
-  - _vimrc
+  - .winvimrc -> _vimrc
   - (.bashrc)
   - .ideavimrc
   - qwerty2svorak/svorak2qwerty.ahk
@@ -39,6 +39,9 @@ __
   - bluelegend.kdbx
     - .bashrc (etc)
   - lazarus.win.ps1 (or upcoming .fsx) **
+  - Ref.cb.txt
+  - Words.txt  ('Langs 1' Reflists)
+  - **LangDb.List1.txt**
 - Adding Apps to Taskbar
 - Adding preferred programs for filetypes (to Windows Registry)
 ----
