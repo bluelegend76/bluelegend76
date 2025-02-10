@@ -3,7 +3,7 @@
 __
 
 ## TODO:
-- [ ] **Rename _vimrc to .winvimrc**
+~~- [ ] **Rename _vimrc to .winvimrc**~~
 - [ ] May want to split into several repos (config.core, Reflists, aux)
   i.e. to avoid dir-size bloat (=makes it easier to clone down to Android)
 ~~- [ ] Reformat External Drives to ExFAT~~
@@ -11,14 +11,11 @@ __
 
 - [ ] Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc  __
 
-- [ ] Add proper .gitignore file to project
-- .swp-files
-- .xml-files
 -----
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists
-**IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**  __=4
+**IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**  __=2
 \+ Idioms, Sayings, etc
 - [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
 - [ ] Add C#-style Regex list
@@ -26,7 +23,7 @@ __
 - [ ] Add FreeCommander accelerator-keys(!)
 
 ## lazarus.win.ps1:
-- [ ] **Auto-Linking of config-files to Windows-directories**  __=2
+- [ ] **Auto-Linking of config-files to Windows-directories**  __=1
 - Files to link in:
   - .winvimrc -> _vimrc
   - (.bashrc)
@@ -46,13 +43,13 @@ __
 - Adding preferred programs for filetypes (to Windows Registry)
 ----
 - [ ] Construct AHotKey Svorak script (+'reverser')
-- Pre: Construct flat list qwerty-keys complete [**]  __=1
+  - Pre: Construct flat list qwerty-keys complete [**]
 ----
 - [ ] Test Thumbdrive (on/for Win)
  
 ## lazarus.arch.sh:
-- [ ] **Install Android-handling support on Arch (+KDE Connect)**  __=3
 - [ ] **Change Xfce window-handling key to Win-key**  __
 
 ## Playlists.Perform
+Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]

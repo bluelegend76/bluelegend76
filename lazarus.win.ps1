@@ -1,10 +1,44 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # choco search vim
 
+# General Updating with Chocolatey
+# choco upgrade all -y
+
+# Windows-updates from PowerShell ----
+# Here's a breakdown of the process:
+# 
+# Install the PSWindowsUpdate module:
+# Install-Module -Name PSWindowsUpdate -Force 
+# 
+# Check for Updates:
+# Import-Module PSWindowsUpdate 
+# Get-WindowsUpdate 
+# 
+# Install Updates:
+# Install-WindowsUpdate -AcceptAll 
+# 
+#   -AcceptAll: This parameter automatically accepts all available updates.
+# 
+# (Optional) Reboot (if required):
+# The Install-WindowsUpdate cmdlet can optionally handle the reboot automatically. However, it's often safer to manually reboot after installing updates.
+# 
+# Important Notes:
+# Run as Administrator: You must run PowerShell as administrator to use these cmdlets.
+# Careful with -AcceptAll: This parameter will install all available updates, including optional and driver updates.
+# Consider Scheduling: You can schedule the Install-WindowsUpdate command using Task Scheduler to automate the update process at a convenient time.
+
+choco install azure-cli -y
+# run with 'az'/'az.cmd' in PowerShell
+# refreshenv
 choco upgrade git -y
 choco install vim -y
 choco install neovim -y
 choco install nushell -y
+# choco install python -y
+choco install jupyter python3-virtualenv -y
+# choco install jupyterlab -y
+choco install clojure -y
+choco install lein -y
 # pip install xonsh
 choco install autohotkey -y
 choco install freecommander -y
@@ -19,11 +53,57 @@ choco install discord -y
 choco install gimp -y
 choco install inkscape -y
 
+choco install azure-cli -y
+
+# C# Interactive in PowerShell
+# You can achieve C# interactive within PowerShell using the Add-Type cmdlet. Here's how:
+# 
+# 1. Define your C# code within a script block:
+# PowerShell
+# 
+# $code = @"
+# using System;
+# 
+# public class MyClass {
+#     public static int Add(int a, int b) {
+#         return a + b;
+#     }
+# }
+# "@
+# 
+# Add-Type -TypeDefinition $code
+# 
+# # Now you can call the C# method
+# [MyClass]::Add(5, 3) 
+# 
+# Explanation:
+# 
+#     $code = @" ... @": This creates a multi-line string containing your C# code.
+#     Add-Type -TypeDefinition $code: This cmdlet dynamically compiles the C# code within the script block.
+#     [MyClass]::Add(5, 3): This line calls the Add method of the MyClass that you defined in C#.
+# 
+# Key Points:
+# 
+#     Simple Examples: This method is well-suited for simple C# code snippets and quick testing.
+#     Limitations:
+#         For more complex C# code or larger projects, consider using a dedicated C# IDE or a more robust development environment.
+#         This approach might not be ideal for long-term development or complex scenarios.
+# 
+# Alternative:
+# 
+#     .NET Interactive: This is a more modern approach that provides a richer interactive experience. It can be installed as a global tool using the .NET CLI:
+# 
+#     dotnet tool install --global Microsoft.dotnet-interactive
+# 
+#     After installation, you can use the dotnet-interactive command-line tool to execute C# code interactively.
+# 
+# I hope this helps! Let me know if you have any other questions.
+
 
 # Setting up symbolic links to the Config-files in Windows
 # TODO: Replace 'hard-coded' user with 'Select User' to link to
 # C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
-C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path .winvimrc -Target .\RiderProjects\bluelegend76\_vimrc
+C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
 C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path Desktop\LangDb1.txt -Target .\RiderProjects\bluelegend76\rsc\data\db\langdb.legacy.list\langdb.txt
 
 # WSL/Ext4

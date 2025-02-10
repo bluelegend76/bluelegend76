@@ -1,0 +1,15 @@
+set foldmethod=indent foldlevel=2
+vim:fdm=indent:fdl=2:
+
+TODO: EXPORT ONLINE|TRYING-LIST FROM DROPBOX
+
+ed
+Vim
+Emacs
+Rider/IntelliJ
+NetBeans
+online|trying
+    [+add MS Graph Explorer to online|tryit-list]  + Add list to dir. RiderProjects
+vscode
+Visual Studio)
+

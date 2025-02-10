@@ -392,6 +392,9 @@ echo "Installing some Programming(and media)-related packages: ..."
     #sudo apt-get install youtube-dl
 pacman -S bpython
 pacman -S ipython
+# sudo pacman -S python3-pip jupyter
+sudo pacman -S python3-pip jupyterlab
+sudo pacman -S python3-virtualenv
 pip3
 pip3 install yt-dlp  # __??
 pacman -S qutebrowser
@@ -471,6 +474,8 @@ sudo apt install speech-dispatcher
 # testing that it works:
 # spd-say hi 
 
+
+sudo pacman -S tigervnc
 
 # ____
 # Arch Linux: WAKE ON LAN + SSH {{{
@@ -953,6 +958,8 @@ cmake
 # Python  bpython / ipython
 # ** guile-2.2 guile-3.0
 pacman -S clojure leiningen
+# run with 'lein repl' or 'clj'
+# install further Cloj libraries: clj -Sdeps
 jshell
 # ¤¤ *** Clojure Ubuntu + ====TODO Cljfx[!] {{{
 # https://clojureverse.org/
@@ -1014,6 +1021,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime
 #     https://dotnet.microsoft.com/en-us/download/dotnet/7.0
 # https://ionide.io/
 #   https://dotnet.microsoft.com/en-us/download/dotnet/sdk-for-vs-code
+sudo pacman -S azure-cli
 
 # interactive f# repl(**):
 # dotnet fsi

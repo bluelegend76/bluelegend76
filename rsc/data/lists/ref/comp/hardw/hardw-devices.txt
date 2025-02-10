@@ -3,8 +3,8 @@ vim:fdm=indent:fdl=2:
 
 Office Headset (Toyota)
 
-Android A20
 Samsung Galaxy S25
+Android A20
 Galaxy Tab S3
 
 Zero TX (**)

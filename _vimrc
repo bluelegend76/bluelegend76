@@ -1,5 +1,6 @@
 let mapleader=","
 " TODO: VIM SPELL, VIM COLORS
+" INVESTIGATE: INSTALLING AND USING VUNDLE FOR HANDLING VIM-PLUGINS
 "---- __
 colorscheme ron
 set guicursor+=a:blinkon0

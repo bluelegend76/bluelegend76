@@ -1,0 +1,52 @@
+
+https://learn.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio?view=vs-2022
+https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-9.0
+https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2022
+
+JObject:
+https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm
+
+PowerShell color-themes:
+  https://github.com/janikvonrotz/awesome-powershell?tab=readme-ov-file#themes
+https://github.com/jandedobbeleer/oh-my-posh
+https://stackoverflow.com/questions/50611733/powershell-color-schemes#50612281
+https://github.com/microsoft/terminal/tree/main/src/tools/ColorTool
+https://github.com/mbadolato/iTerm2-Color-Schemes
+
+TightVNC Download:
+  https://www.tightvnc.com/download.php
+
+Try Linux Distros Online
+https://distrosea.com/
+
+connect ext4 windows 10
+  https://github.com/mmmaisel/ext4-browser
+
+windows 10 RegEdit  #regular-expression editor/validator
+
+git-flow
+
+dlang redub
+
+
+sketgubbe/vändtia
+  https://duckduckgo.com/?q=sketgubbe+v%C3%A4ndtia+kortspel&t=newext&atb=v466-1__&ia=web
+  https://kortare.se/vandtia/
+
+        Ua YH:
+        Projektplanering Examensarbete
+          https://classroom.google.com/u/1/c/NjQxOTI2ODY5MjY5/a/MjEyNTYxNDQ0NDFa/details
+          https://docs.google.com/document/d/1IICwzxP-xu89f6eL23J7J20mHIqwui4KHhUpn6e9sCg/edit?tab=t.0
+
+websearch: create a discord bot f#
+  https://brandewinder.com/2021/10/30/fsharp-discord-bot/
+  https://github.com/DSharpPlus/FSharp-Bot
+  https://github.com/yellowsink/fsharp-discord-bot/tree/master/FsharpDiscordBot
+    https://fsharpforfunandprofit.com/why-use-fsharp/
+
+python-can
+  https://github.com/hardbyte/python-can
+  dhu (desktop head-unit?)
+  oom killer linux
+  mcu pipelines
+

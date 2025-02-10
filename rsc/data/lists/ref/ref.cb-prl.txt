@@ -4,6 +4,49 @@ vim:fdm=marker:
 @c: :set syntax=CODELANG textwidth=35 nosi ai nojs shiftwidth=2 | colors ron
 ____
 __
+Controllers often corresponds 1-to-1 to ___
+    .
+    a set/collection of data related to a specific topic of interest
+guid
+/me  #Graph
+ScratchArea:General {{{
+
+Linux to Windows terminology-___  ___Gemini
+
+Linux
+  Windows
+
+Daemon
+  Service
+
+Super User
+  System Account / System User
+
+-F
+  /F
+
+Environment
+  Environment Variables
+
+}}}
+ScratchArea LIA 2/TruckCom Updater {{{
+
+- Own exception-type for Updater (=same as in Core)
+- error-code handling
+
+[Note: When running in Debug-mode through Rider, the program is not System-User - I.e. create/use dummy-exe for testing purposes]
+
+SignalR  #for polling during install/download-process
+
+
+Core: Services (ServiceCollectionExtension.cs)
+TruckComCoreWindowsService
+TruckComCoreWebAPI
+
+}}}
+../weblinks.txt
+
+
 gvim -p ../at/PROGR.cm.txt comp/lang/PROGRLANG.DB.ref.txt
 
 Multimedia, MuRec {{{
@@ -14,12 +57,12 @@ Multimedia, MuRec {{{
 
 }}}
 
+
 Browsers (File, Web, Media, Web) {{{
 media ----
-    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/sysadm/browse/{file,media,web,mail,remote}.txt
-    comp/hardw/hardw-devices.txt
+    gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{sysadm/browse/file,hardw/hardw-devices,sysadm/browse/media,sysadm/browse/web,sysadm/browse/mail,sysadm/browse/remote}.txt
     gvim -p comp/sysadm/browse/file.txt comp/hardw/hardw-devices.txt comp/sysadm/browse/media.txt comp/sysadm/browse/web.txt comp/sysadm/browse/mail.txt comp/sysadm/browse/remote.txt
-    gvim -c '/.*@.*' -p ~/Dropbox/rsc/Doks/phone/comp/sysadm/browse/{file,media,web,mail,remote}.txt
+      gvim -c '/.*@.*' -p ~/Dropbox/rsc/Doks/phone/comp/sysadm/browse/{file,media,web,mail,remote}.txt
 
     ## at.pr.mplayer.bash
 tmp:mpv
@@ -106,8 +149,7 @@ browse:web-text ----
 browse:(file, web, im, mail) ----
     Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
 }}}
-  NOTE: May want to add Editors (ed, Vim, Emacs, Rider/IntelliJ, NetBeans, online|trying, vscode VStudio)
-    [+add MS Graph Explorer to online|tryit-list]
+  gvim comp/Editors.txt
 Sysadm(+wm) Redhat, nushell {{{
   https://www.nushell.sh/cookbook/
 
