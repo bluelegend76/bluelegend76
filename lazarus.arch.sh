@@ -90,6 +90,17 @@ read -p "Start nm-tray(=applet) and make sure Network is up and Connected. +Pres
 #
 # sudo systemctl restart lightdm
 
+# sudo gvim /etc/locale.gen 
+# Uncomment the line for ja_JP.UTF-8
+# sudo locale-gen
+# sudo update-locale LANG=ja_JP.UTF-8
+# .vimrc ----
+# set encoding=utf-8
+# set fileencodings=utf-8,ucs-bom,latin1
+# set fileencoding=utf-8
+sudo pacman -S noto-fonts-cjk
+# sudo pacman -S ttf-liberation ttf-japanese-gothic noto-fonts-cjk
+
 echo "Now linking up bashrc, inputrc: ..."
 rm -f ~/.bashrc ~/.inputrc ~/.profile
 ln -s ~/Dropbox/config/.bashrc

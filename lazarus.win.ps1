@@ -1,4 +1,5 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+# __
 # choco search vim
 
 # General Updating with Chocolatey
@@ -41,7 +42,8 @@ choco install clojure -y
 choco install lein -y
 # pip install xonsh
 choco install autohotkey -y
-choco install freecommander -y
+choco install freecommander -y  __
+choco install keepassx -y
 choco install vlc -y
 # pdf reader (with dark mode)
 choco install foxitreader -y
@@ -103,8 +105,14 @@ choco install azure-cli -y
 # Setting up symbolic links to the Config-files in Windows
 # TODO: Replace 'hard-coded' user with 'Select User' to link to
 # C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
+cd ~
 C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
-C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path Desktop\LangDb1.txt -Target .\RiderProjects\bluelegend76\rsc\data\db\langdb.legacy.list\langdb.txt
+C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path Desktop\LangDb1.txt -Target .\RiderProjects\bluelegend76\rsc\data\db\langdb.legacy.list\langdb.legacy.txt
+LINK-IN VIM/ -> .vim/
+CLONE + ADD VUNDLE
+LINK-IN IDEAVIMRC -> HOME
+LINK-IN vscode-settings
+LINK-IN bluelegend.kdbx -> HOME
 
 # WSL/Ext4
 # sudo modprobe ext4

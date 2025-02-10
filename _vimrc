@@ -272,6 +272,11 @@ nnoremap <leader>ex ^yg_:<C-R>"<CR><CR>
 " nnoremap <leader>tH $F/vBy:!thunar <C-R>" &<CR><CR>
 "SÖK BOKSTAV/TECKEN I WIKTIONARY
 " nnoremap <leader>tk vy:!firefox -new-tab https://en.wiktionary.org/wiki/<C-R>"<CR><CR>
+" TODO: ADD PDFS + CONVERT TO USING FOXIT READER[!!]
+vnoremap <F9> y:!evince -l '<C-R>"' ~/Dropbox/rsc/Doks/Lang/Shorth/sv/rskrift.empire.pdf &<CR><CR>gv
+vnoremap <F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-dictionary.pdf &<CR><CR>gv
+vnoremap <S-F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-phrasebook.pdf &<CR><CR>gv
+
 
 " Windows, Splits, Tabs  __
 " 'Vertical Ripple-Split'
