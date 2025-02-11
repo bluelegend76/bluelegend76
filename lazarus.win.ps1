@@ -11,14 +11,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # Install the PSWindowsUpdate module:
 # Install-Module -Name PSWindowsUpdate -Force 
 # 
-# Check for Updates:
 # Import-Module PSWindowsUpdate 
-# Get-WindowsUpdate 
+# Get-WindowsUpdate  # Check for updates
+# Install-WindowsUpdate -AcceptAll  # Install updates
 # 
-# Install Updates:
-# Install-WindowsUpdate -AcceptAll 
 # 
-#   -AcceptAll: This parameter automatically accepts all available updates.
+# -AcceptAll: This parameter automatically accepts all available updates.
 # 
 # (Optional) Reboot (if required):
 # The Install-WindowsUpdate cmdlet can optionally handle the reboot automatically. However, it's often safer to manually reboot after installing updates.
@@ -34,20 +32,19 @@ choco install azure-cli -y
 choco upgrade git -y
 choco install vim -y
 choco install neovim -y
+choco install autohotkey -y
+# pdf reader (with dark mode)
+choco install foxitreader -y
+choco install mpv -y
+choco install freecommander -y
+choco install keepassx -y
+choco install vlc -y
 choco install nushell -y
 # choco install python -y
 choco install jupyter python3-virtualenv -y
 # choco install jupyterlab -y
-choco install clojure -y
-choco install lein -y
+choco install clojure lein -y
 # pip install xonsh
-choco install autohotkey -y
-choco install freecommander -y  __
-choco install keepassx -y
-choco install vlc -y
-# pdf reader (with dark mode)
-choco install foxitreader -y
-choco install mpv -y
 # wsl --install
 # choco install ImageMagick
 choco install discord -y

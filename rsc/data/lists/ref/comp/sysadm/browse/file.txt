@@ -990,9 +990,11 @@ freecommander
             Edit: Invert selection - only files
                 c-k*
                 Edit: Load selection from file
+                    a_e,o
                 Edit: Paste
                     c-v
-                Edit: Save selection
+                Edit: Save selection in file
+                    a_e,v
                 Edit: Select all
                     c-a
             Edit: Select all files
@@ -1002,6 +1004,7 @@ freecommander
             Edit: Select group...
                 k+
                 Edit: Select same in other pane
+                    a_e,m
                 Edit: Unselect all
                     c_k-
             Edit: Unselect files with same ext.
@@ -1017,9 +1020,9 @@ freecommander
                 a-f2
             Folder: Compare
                 a-v
-                Folder: Compare management
-                Folder: Control panel
-                Folder: Desktop
+                    Folder: Compare management
+                    Folder: Control panel
+                    Folder: Desktop
             Folder: Edit address bar
                 a-g
                 Folder: Edit
@@ -1036,7 +1039,8 @@ freecommander
                 a-left
             Folder: History next
                 a-right
-                Folder: Make folder/file list...
+                Folder: Make folder-set
+                    a_d,m
                 Folder: My documents
             Folder: New
                 f7
@@ -1088,8 +1092,10 @@ freecommander
                 View: Flat view - folders
                     cs-b
                 View: Horizontal
-                View: Large icons
+                View: Large / Small icons
+                    a_w,s/w,a
                 View: Layout restore
+                    a_w,y,r
                 View: Left to right
                     ca-right
                 View: List
@@ -1111,7 +1117,6 @@ freecommander
                 View: Set active pane
                     Tab
                 View: Show/hide hidden and system files
-                View: Small icons
                 View: Split 0/100
                     cs-f1
                 View: Split 100/0
@@ -1162,6 +1167,7 @@ freecommander
             Extras: Connect to network drive...
                 f11
             Extras: Define shortcuts...
+                a_x,k
                 Extras: DOS box...
                     c-d
                 Extras: Favorite tools
@@ -1170,7 +1176,9 @@ freecommander
                 Extras: Font...
                 Extras: Open with...
                 Extras: Run...
+                    a_x,n
                 Extras: Save settings
+                    a_e,a
             Extras: Settings
                 cs-s
                 Extras: Switch language
@@ -1198,7 +1206,8 @@ foxit reader (win)
                 Check the Default Keyboard Shortcuts
 
                 To check the default keyboard shortcuts, click Help menu > Keyboard Mapping. Some particularly important ones are listed here:
-                File Keys
+
+                File Keys ----
                 Action 	Shortcut
                 Open File 	Command + O
                 Close File 	Command + W
@@ -1206,38 +1215,36 @@ foxit reader (win)
                 Print a Document 	Command + P
                 Exit Foxit PDF Reader 	Command + Q
                 Save 	Command + S
-                Document Properties 	Command + D
-
+            Document Properties 	Command + D
                  
-                View Keys
+                View Keys ----
                 Action 	Shortcut
                 Zoom In 	Command + =
                 Zoom Out 	Command + -
-                Zoom To 	Command + M
+            Zoom To 	Command + M
                 Actual Size 	Command + 1
-                Fit Page 	Command + 2
-                Fit Width 	Command + 3
-                Fit Visible 	Command + 4
-                Single Page 	Command + 7
-                Continuous 	Command + 8
+            Fit Page 	Command + 2
+            Fit Width 	Command + 3
+            Fit Visible 	Command + 4
+            Single Page 	Command + 7
+            Continuous 	Command + 8
                 Facing 	Command + 9
                 Continuous Facing 	Command + 0
-                Rotate Right 	Shift + Command + =
-                Rotate Left 	Shift + Command + -
-                Go to Page 	Command + G
-                First Page 	Fn + Left Arrow
-                Last Page 	Fn + Right Arrow
+            Rotate Right 	Shift + Command + =
+            Rotate Left 	Shift + Command + -
+            Go to Page 	Command + G
+            First Page 	Fn + Left Arrow
+            Last Page 	Fn + Right Arrow
                 Previous View 	Command + Left Arrow
                 Next View 	Command + Right Arrow
-                Full Screen 	Command + L
+            Full Screen 	Command + L
                 AutoScroll 	Command + Shift + H
-                Marquee Zoom 	Option + 5
+            Marquee Zoom 	Option + 5
                 Show or Hide Rulers 	Command + Option + R
                 Line Weights 	Control + Command + 5
                 Show or Hide Navigation Panel 	F4 or Fn + F4 (if F4 is assigned to open the Launchpad on your device)
-
                  
-                Edit Keys
+                Edit Keys ----
                 Action 	Shortcut
                 Copy 	Command + C
                 Cut 	Command + X
@@ -1251,9 +1258,8 @@ foxit reader (win)
                 Connect to Digital Rights Management Servers and Get Templates 	Command + Option + G
                 Custom Templates 	Command + Option + T
                 Unrestricted Access 	Command + U
-
                  
-                Tool Keys
+                Tool Keys ----
                 Action 	Shortcut
                 Hand Tool 	Command + 5
                 Select Text and Image 	Command + 6
@@ -1261,9 +1267,8 @@ foxit reader (win)
                 Find 	Command + F
                 Find Previous 	Shift + F3
                 Find Next 	F3
-
                  
-                Comment Keys
+                Comment Keys ----
                 Action 	Shortcut
                 Area Highlight 	Control + I
                 Typewriter 	Control + T
@@ -1290,9 +1295,8 @@ foxit reader (win)
                 Hide All Comments 	Control + H
                 Open All Popups 	Control + K
                 Close All Popups 	Control + M
-
                  
-                Help Keys
+                Help Keys ----
                 Action 	Shortcut
                 User Manual 	F1
                 Single-key Accelerators
@@ -1312,8 +1316,7 @@ foxit reader (win)
                 Audio & Video 	M
                 Cycle through Multimedia commands: Audio & Video, Image Annotation 	Shift + M
 
-                 
-                Keys for Working with Comments
+                Keys for Working with Comments ----
                 Action 	Single-key Accelerator
                 Sticky Note 	S
                 Replace Text 	E
@@ -1330,9 +1333,8 @@ foxit reader (win)
                 Move focus to previous comment or form field 	Shift + Tab
                 Open pop-up note (or text field in Comments List) for comment that has focus 	Enter
                 Close pop-up (or text field in Comments List) for comment that has focus 	Esc
-
                  
-                Keys for Navigating a PDF Document
+                Keys for Navigating a PDF Document ----
                 Action 	Single-key Accelerator
                 Previous screen 	Command + Left Arrow
                 Next screen 	Command + Right Arrow
@@ -1346,13 +1348,11 @@ foxit reader (win)
                 Zoom in 	Command + Equal Sign
                 Zoom out 	Command + Hyphen
 
-                 
-                Keys for Working with Forms
+                Keys for Working with Forms ----
                 Action 	Single-key Accelerator
                 Highlight fields 	Shift + L
-
                  
-                Keys for Working with PDF Portfolios
+                Keys for Working with PDF Portfolios ----
                 Action 	Single-key Accelerator
                 Move focus to the next or previous row when in the body of the file list on the left 	Up Arrow or Down Arrow
                 If pressed in the body of the file list, navigate one level up from within a folder 	Backspace
@@ -1363,15 +1363,13 @@ foxit reader (win)
                 If in the body of the file list, extend the selection by adding the next row above or below the selected row 	Shift + Up Arrow or Shift + Down Arrow
                 Change whether the row with focus is in the selection 	Command + Spacebar
                 Move focus up or down one row without changing the selection 	Command + Up Arrow or Command + Down Arrow
-
                  
-                Keys for Navigating Task Panes
+                Keys for Navigating Task Panes ----
                 Action 	Single-key Accelerator
                 Navigate to the next item in the panel 	Tab
                 Open or close the Task pane 	Shift + F4
-
                  
-                Keys for General Navigating
+                Keys for General Navigating ----
                 Action 	Single-key Accelerator
                 Close current document 	Command + Fn + F4
                 Close all open documents 	Command + Shift + W
@@ -1388,9 +1386,8 @@ foxit reader (win)
                 Search next document (with Search results displaying multiple files) 	Option + Shift + Right Arrow
                 Select text (with Select command selected) 	Shift + Arrow Keys
                 Select next word or deselect previous word (with Select command selected) 	Shift + Command + Right Arrow or Left Arrow
-
                  
-                Keys for Working with Navigation Panels
+                Keys for Working with Navigation Panels ----
                 Action 	Single-key Accelerator
                 Open and move focus to navigation pane 	Command + Shift + Fn + F5
                 Move focus among the document, status bar and navigation panels 	Fn + F6
@@ -1404,9 +1401,8 @@ foxit reader (win)
                 Collapse all bookmarks 	Shift + Forward Slash (/) (keypad)
                 Move focus to next item in a navigation panel 	Down Arrow
                 Move focus to previous item in a navigation panel 	Up Arrow
-
                  
-                Keys for Navigating the Help Window
+                Keys for Navigating the Help Window ----
                 Action 	Single-key Accelerator
                 Open Help window 	F1
 

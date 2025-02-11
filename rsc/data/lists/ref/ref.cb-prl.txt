@@ -1,7 +1,5 @@
 vim:fdm=marker:
 ~/Dropbox/bin/scripts/at/at.ref.cb-prl.bash
-@t: :set syntax= textwidth=35 nosi ai nojs spell shiftwidth=2 | colors ron
-@c: :set syntax=CODELANG textwidth=35 nosi ai nojs shiftwidth=2 | colors ron
 ____
 __
 Controllers often corresponds 1-to-1 to ___
@@ -39,6 +37,14 @@ ScratchArea LIA 2/TruckCom Updater {{{
 SignalR  #for polling during install/download-process
 
 
+Graph [hämta en fil-url] + Hämta 
+
+SharePoint
+Batch (generalla graph-anrop + slå ihop dem)
+PackageSync
+
+Setup HttpClient
+Setup Talk to Sharepoint
 Core: Services (ServiceCollectionExtension.cs)
 TruckComCoreWindowsService
 TruckComCoreWebAPI

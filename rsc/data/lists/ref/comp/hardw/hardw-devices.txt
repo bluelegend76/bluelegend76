@@ -1,7 +1,7 @@
 set foldmethod=indent foldlevel=2
 vim:fdm=indent:fdl=2:
 
-Office Headset (Toyota)
+EPOS Adapt (Toyota)
 
 Samsung Galaxy S25
 Android A20
