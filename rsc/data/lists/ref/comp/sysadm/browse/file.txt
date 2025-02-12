@@ -232,7 +232,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                         w-Enter
                     ----
         Show windows (persistent) + Select with Arrows
-            w-Tab // ca-Tab
+            ahold-Tab // w-Tab // ca-Tab
                 cycle through elements (=in order opened) (*) @
                     a-esc
             task view(?)/cycle through apps in taskbar  #small 'several win.s' icon @@
@@ -241,6 +241,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 move tile in focus (=on start-menu)  **
                     csa-arrows
 
+            media/gamebar, screenrec ----
                 record video screencast *
                     wa-r
                 record video =last 30 sec.s (*)
@@ -257,6 +258,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 paste(alt.)
                     a-ins
 
+            window-managem. ----
                 maxim./minim. win. **
                     w-upp/ner
                 minim./maxim. all win.s
@@ -274,6 +276,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 zoom in/out
                     w-+/-
 
+            virtual desktops ----
                 add virtual deskt. (*) @
                     cw-d (or D(??))  + go to task view (eg. w. 'task view'["small windows"] button)
                 switch virtual deskt.
@@ -282,6 +285,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     cw-f4
                 Create: Send window to other Desktop/V-Desktop
 
+            search, cortana ----
             Open Universal Search @(@)
                 w-s  #=searchbox/cortana, or file explorer?
                 show/activate startmenu (*)
@@ -293,29 +297,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     a-c  #+in edge (=??)
                     (may need to be enabled in settings)
 
-                open file explorer (@)
-                    w-e
-                file expl: activate address-field (@)
-                    a-d
-            file expl: select searchbox @
-                c-e/f
-            Search file in File Explorer @
-                f3
-                explorer: show adress bar list (??) @
-                    f4
-                show/display dir.s above curr/active @
-                    cs-e
-                (manipulate search-tree)
-                    (*, +, - etc)
-            show preview panel (???/*) (@)
-                a-p
-                [directory navigation(*)]
-                    =a-arrows  #=like web browsers etc
-                show/go to last dir  #or dir above(?)
-                    bs / a-upp(?)
-
-                +home, end etc??
-
+            taskbar ----
                 set focus to the taskbar
                     w-t
                 run/change to app N on taskbar (*)
@@ -332,6 +314,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
             show jumplist for app N on taskbar ****** !!!!! @@!
                 wa-num.
 
+            run ----
                 run-dialogue @
                     w-r
                         1. Launching Applications:
@@ -379,6 +362,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
 
             action center(*)  #(right on taskbar) "pratbubblan" (+vol, bluetooth etc(??)) @
                 w-a  #emails, appointments, computer's performance etc
+
         quickshutdown computer
             w-x uu
         ----
@@ -387,6 +371,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
 
                 (+a-shift_left)
 
+        keyb. + layout ----
             Change Keyboard layout (=x2 *) @
                 w-space (+a-lshift)
             change to last sel. keyb. layout (*)
@@ -408,7 +393,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 Select text-Block (*)  ***** (=Test) @
                     a-'selection key'(?)
 
-            focus to notif. area @  #=Might be bluetooth-etc popup-menu (or to the right of)
+            focus to notif. area @  (bluetooth-etc popup-menu)
                 w-b
                 cycle through notif.s @
                     w-v/ws-v
@@ -920,7 +905,29 @@ narrator(*)[##]  !! @@
                 Windows key + Alt + D         Open date and time in the taskbar.
                 Windows key + Period (.) or semicolon (;)         Open emoji panel.
                 Windows key + Pause         Show System Properties dialog box.
-win explorer
+win-explorer
+                open file explorer (@)
+                    w-e
+                file expl: activate address-field (@)
+                    a-d
+            file expl: select searchbox @
+                c-e/f
+            Search file in File Explorer @
+                f3
+                explorer: show adress bar list (??) @
+                    f4
+                show/display dir.s above curr/active @
+                    cs-e
+                (manipulate search-tree)
+                    (*, +, - etc)
+            show preview panel (???/*) (@)
+                a-p
+                [directory navigation(*)]
+                    =a-arrows  #=like web browsers etc
+                show/go to last dir  #or dir above(?)
+                    bs / a-upp(?)
+
+                +home, end etc??
 freecommander
             TODO: Add accelerator-keys too
             File: Attribute/Timestamp... (+properties)
@@ -1190,7 +1197,7 @@ freecommander
                 FTP: Show FTP as drive
 
             Help: Contents
-foxit reader (win)
+foxit reader (win = supports dark-mode)
                 Keyboard Shortcuts and Single-key Accelerators
                 Keyboard Shortcuts
 
@@ -1407,6 +1414,7 @@ foxit reader (win)
                 Keys for Navigating the Help Window ----
                 Action 	Single-key Accelerator
                 Open Help window 	F1
+sumatra pdf (win = supports command-line search, etc)
 
 ----
 man
