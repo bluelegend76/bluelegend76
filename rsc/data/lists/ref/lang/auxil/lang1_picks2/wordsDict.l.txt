@@ -1,0 +1,647 @@
+~/bin/scripts/at/at.wordsDict.l.bash
+    8 karaktärer
+    originellt
+
+    puutin / puttin  Putin
+Och ni... (Åh ni...)  Åh nej...
+- funktionsvarierad -
+- Unga Vuxna -
+Sivr  Saver
+Birut  Beirut  (Pennsylvinia)
+måar  mår
+låagisk  lågisk
+kräavs  krävs
+töusen  tusen
+dis     days
+succéa  succé
+
+Golfströmen, Humanaistisk
+
+barrAge, stamIna
+
+'Yes räcker upp till dubbelt så länge än |andra diskmedel|'
+
+- kind of / sort of
+- almost
+- like
+- in terms of
+  - kind of like
+
+Pu'in  Putin
+nutwork   network
+--
+"behov av samhällets stad"  (=behov av samhällets stöd)
+ata sig matta
+mjal, brad
+a:n  ön
+avbyt  avböjt
+sjunk  sjönk  'båten sjunk' / Att priserna sjunk
+hyrning  höjning
+    måste <==> var tvungna
+    större än jag <==> större än mig
+Meia-Mira Levin
+husin, birut  Hussein, Beirut  #Gilda Hamid-Inia
+Spisi  =Kevin Spacey
+Schwits Schweiz  #Tilde Levin
+Inar  Einar
+Jånntjåping  Jönköping
+flarde  flöde
+'Västafrikanska Niger'  =låter väldigt ras****(!!)
+mil/meal  mail  'skriver i ett meal'
+doks init (=legacy) {{{
+   ~/dropbox-legacy/scripts/ALLTODOIST/dictio-vocab_skrivspråkregl_bigfirstlangs.bash
+   --
+   ~/dropbox-legacy/dictio-vocab_skrivspråkregl_bigfirstlangs.txt
+       ~/dropbox-legacy/svenskaskrivregler.txt
+
+  gvim -O sv.freq.main.txt sv.words.saol11-1991.txt sv.thes.svsyn.txt
+  gvim -O en.freq.main.txt en.words.inet1.txt en.thes.xf.txt -c 'tabedit en.words.wnwdict.txt' -c 'normal gt'
+  gvim -O cmp.en.dict.en2sv-prsm.txt cmp.sv.dict.sv2en-prsm.txt
+}}}
+Doks/Resources {{{
+	~/Dropbox/rsc/data/lists/ref/lang/sv.freq.main.txt					# todo: (input|synchronize w. english (????))
+		~/Dropbox/rsc/data/lists/ref/lang/sv.thes.svsyn.txt				# CORR: (+tags) =ON THE ROAD(!!)
+		~/Dropbox/rsc/data/lists/ref/lang/sv.words.saol11-1991.txt		# TODO: do some corrections
+			~/Empire/Doks/Lang/Sv/saol11.pdf
+		TODO: SYNC. W. 'ON THE ROAD' (+INPUT PDF-REF_NUMS(!!))
+
+	~/Dropbox/rsc/data/lists/ref/lang/en.freq.main.txt
+		~/Dropbox/rsc/data/lists/ref/lang/en.thes.xf.txt				# TODO: INSERT PAGENUMS (=easy(!))
+		~/Dropbox/rsc/data/lists/ref/lang/en.words.inet1.txt
+		 ~/Dropbox/rsc/data/lists/ref/lang/en.words.wnwdict.txt
+
+	'aussie slang'
+         vankideck: l.en.aussieslang.txt   #( ~/Dropbox/rsc/data/lists/learnqna/vanki/ )
+
+	~/Dropbox/rsc/data/lists/ref/lang/freq/freq_lat.txt
+		LAT SV DICT (+THES? )
+		~/Empire/Doks/Lang/Lat/latsvdict.pdf   ( ~/Empire/Doks/Lang/Lat/latsvdict.txt )
+		~/Dropbox/rsc/data/lists/ref/lang/lat.words.svlatdict.txt		# TODO: teckenförklaring o anvisningar (mm)
+	--
+		~/Dropbox/rsc/data/lists/ref/lang/cmp.en.dict.en2sv-prsm.txt	# kolla teckenförklaring o anvisningar
+		~/Dropbox/rsc/data/lists/ref/lang/cmp.sv.dict.sv2en-prsm.txt
+				  ~/Empire/Doks/Lang/En/dictsveng-key.pdf
+				  ~/Empire/Doks/Lang/En/dictsveng-key2019.txt
+
+			_todo.Freq-Words-Dict-Thes--rhyme-slang--RulesUsage-etym--idiom-sayings-Quotes.txt  +kkällan  LITT(!!)
+																										(=start w. Litt + relate back and collect to here etc)
+
+input page-nr:s (no(!) ):
+  (origs in ~/Empire/Doks/Lang/Sv/)
+  ----
+	 ~/Dropbox/rsc/data/lists/ref/lang/aux/svetym.txt  #(=LOOKS LIKE A COMPLETE SOLUTION FOR DICT, FRÄM.ORD ETC (+good 'definitions') **(!!))
+  ~/Dropbox/rsc/data/lists/ref/lang/aux/slangordb.txt		#OOPS (=index for 'linux multimedia hacks' included)
+  ~/Dropbox/rsc/data/lists/ref/lang/aux/beving.txt
+  ~/Dropbox/rsc/data/lists/ref/lang/aux/svskrivr_DEF.txt (p300)		#search ^\d\+  (+insert pdf-ref for existing p-nums)     macro: go forw. n num. of lines
+  ~/Dropbox/rsc/data/lists/ref/lang/aux/sprbygg_DEF.txt (p160)
+input page-nr:s (has ):
+  ~/Dropbox/rsc/data/lists/ref/lang/en.thes.xf.txt				# TODO: INSERT PAGENUMS (=easy(!))
+    ~/Empire/Doks/Lang/Sv/CIT_orred.txt
+  ~/Dropbox/rsc/data/lists/ref/lang/aux/theinstantintell-words.txt
+    ~/Dropbox/rsc/data/lists/ref/lang/främord_pr.txt
+
+		@b[two column book]: /no,ppu					#search next rds pagebreak, insert pagenr-line (saved in reg. p)
+		@b[one column book + cut :s ]: /xO,ppu		#cut next pagebreak-mark, +insert pagenr-line (saved in reg. p)
+  --
+    ~/Empire/Doks/Lang/Sv/praktretor.txt
+    ~/Empire/Doks/Lang/En/speechhistpeng.txt
+~/Empire/Doks/Lang/En/engbusinessdict.pdf
+~/Empire/Doks/Lang/En/engusage-oxf.pdf
+
+todo: Continue Inputting and Correcting SkämtHist BigWhite (!!)
+TODO: +(!!) SkämtHist (=categ.s etc) (**)
+
+
+	~/Dropbox/rsc/data/lists/ref/shorth/rapidskr.txt
+	~/Dropbox/rsc/data/lists/ref/shorth/gregg.txt
+		  ~/Empire/Doks/Lang/Shorth/
+	  ~/Empire/Doks/Lang/Shorth/sv/
+	  ~/Empire/Doks/Lang/Shorth/en/
+
+}}}
+langgroups.outlines {{{
+		CONNECTIONS =LAST STEP(!!):  HOW TO CONNECT (=THE BASIC) EN-DOKS AND SV-DOKS (!!)  (or is it needed??)
+overview|review of the new structure (=kinds of dictionaries etc) {{{
+
+			#GENERAL IDEA(=how to make connections betw. diff. lang.-wordlists etc
+			  =SV|ENG TRANSL. AS MASTER||SEARCH-KEY (=BRIDGE|CONNECTION BETW.|TO OTHER FILES)
+			(+='HOW TO CONNECT FREQ. AND ALL OTHER WORDLISTS OF DIFF. LANGS INTO A CONNECTED WEB
+			   (=before gets next level db-structure up and running =DB PROJ. 1 (end of 2021)) )
+			[eg. connecting spanish and german wordlists (=search via the sv|en(+possib. later +lat etc) translation)]
+			----
+			[[NOTE: may have to use|incorporate agrep (=lest all(!!) posts have to be exactly matching)]]
+	freq
+	words
+	dict
+	thes		#MANAGE SIMPLY W. OPENING REF-FILE AS VIM-SPLIT + SEARCHING (**(!!))  (****)
+	--
+	 rhyme		#manage for now w. simple vim-searches of word-endings
+	 slang
+	--
+	 rulesusage(+=gramm(?))
+	 etym		#TODO: set ref-pdf_links =page-numbers(!!)
+	--
+	Idiom		#NEW!! CROSS-REF.D IDIOMS|SAYINGS-DICTIONARIES/LISTS(!!)
+					## +=german, spanish, french, russian
+	Sayings		#NEW!! CROSS-REF.D IDIOMS|SAYINGS-DICTIONARIES/LISTS(!!)
+					## +=german, spanish, french, russian
+	quotes
+	--
+	 Litt(!)
+	 poetry
+	  +kkällan
+}}}
+		+(??) 'verskonstens abc'  histtal,  retorik(!)
+(TODO: Corr + Input and Sort 'verskonstens abc')
+
+probably:
+	[[for sv|en(|lat?): words||dicts as root-doks; for de, fr, spa (etc etc): freqs as root-doks]]
+
+Dict
+  freq
+  etym
+Syn
+
+    at.wordsDict.l.bash
+sv
+en
+isl
+dan
+ lat
+ --
+    at.lang1-2.bash  #in hold/
+de
+fra
+spa
+ry
+ --
+   at.lang2-1.bash  #in hold/
+ jp
+ kin
+ ar
+  gre
+    it, tur, hin,  pt
+}}}
+TODO {{{
+TODO:  [+Filosophic English]
+~/Empire/Doks/Lang/En/engusage-oxf.pdf
+====== TODO TODO TODO ======
+    Add Idioms[!!!!] and Sayings  [=txt +One pdftotext, one RDS[!!]]
+    . {{{
+      ~/Empire/Doks/Lang/de/tyidiom.txt
+      ~/Empire/Doks/Lang/fr/fridiomordb.txt
+      [ ~/Empire/Doks/Lang/ru-idioms.pdf ]
+        REDO: Spanish Idioms 1[!]
+      ~/Empire/Doks/Lang/es/idioms-bigred_es.pdf
+    }}}
+    idioms/idiomatic expressions // sayings {{{
+    (+=Citat, Ordstäv, Idionom, Fyndigt)
+        dra sitt strå till stacken
+    do an about-face/180 ("göra en helomvändning")
+    dagslända ("flash in the pan"), dans på rosor ("yellow-brick road"), touch and go ("hängde på ett hår"), grandstanding ("publikfrieri"), sticka under stolen med("beat around the bush about"), nagelfarits(="been studied in (excruciating) detail"), trial by fire("eldprov"), even steven("jämnt skägg"), hand to mouth
+    may be all she wrote("kan vara sista andetaget")
+    down the stretch
+    basket case("värdelös")
+    the wheels starts spinning now("börjar tänka nu")
+      --
+    ger råg i ryggen(="stärker en")
+    stämma i bäcken
+    }}}
+============================
+  'Dirty Russian' (etc)
+  ~/Empire/Doks/Lang/es/slang-colloq_es.pdf
+    ~/Empire/Doks/Lang/swearworld.txt
+============================
+
+(WTF: FIND 'ENGLISH ACCENTS' (ETC))
+  https://www.youtube.com/watch?v=MYcrCsg7yOI  #paul hogan - aussie accent
+    https://www.youtube.com/watch?v=YL-SIcB2SuQ
+}}}
+# scrot + 50%-split
+evince -p 20 ~/Empire/Doks/Lang/En-IdiomDict.pdf &
+# (pdftotext)
+evince -p 8 ~/Empire/Doks/Lang/en-idiomdict2.pdf &
+# (pdftotext)
+evince -p 1 ~/Empire/Doks/Lang/en-webstdict-Usage.pdf &
+
+  lufthavet
+idiomatiska uttryck (mm):
+- få sig till livs  bli meddelad
+- torgföra (sitt budskap)  föra ut (sitt budskap)
+frimodig
+ förevarit  (=hänt/förekommit)
+--
+smord om nosen  (=tryckt i ansiktet  gång på gång)
+
+amen typ så här ba liksom
+
+Common Accent Variations/Idioms (etc) {{{
+.sär(!)skrivning {{{
+    Efter Festen (=på två rader)
+}}}
+kanske, broschyr
+boolibompa-svenska {{{
+    Andreas Öbrink, Nike Nylander, Katia Elliot, Gilda Hamid-Inia,  Magdalena Andersson
+    dagisfröknar: Petter _, 
+
+    +Ideologi och (Över)Finkänslighet (Verbala Eksem):
+        - 'Slarvigt uttryckt'   # generaliserande
+
+    +Svenska som andraspråk (=Svenska för Stockholmare)
+        https://www.youtube.com/watch?v=DbRlS7pdTzw
+        [= att man hör rikssvenska på tv etc (!!!!)]
+    Om ni stackars _svenskar förtvivlar (kunna skilja) över/mellan de svåra svenska vokalerna
+    [några ord och uttryck "expressions"]
+            Risksvenska
+       amen gud asså
+    sia ni (till)   säga nej (till)
+    Svt Pli     Svt Play
+    tvåa        två  [Tele tvåa  = tele 2]
+     Svta        Svt
+     fujja       förra
+    mi/mee      mig
+    di (dy)      dig         #frågor 
+    UT          IT
+    ids         Aids
+    övteslövt(a)  uteslut(a)
+    rått        rött
+    rakna       räkna
+    mäa         med
+    Eam         öh/eh
+    lantagare/låntagare    löntagare
+    spis x      Space X
+    bul         bil
+     mujkt       mörkt
+    lugn        lögn
+    raka        röka  (='det är svårt att sluta raka')
+    slyd        slöjd
+    nöligen     nyligen
+    en aktiv rost   en aktiv röst  (Magdalena Andersson)
+    nad         nöd
+    fik(!!)     fake **
+    och ni (å ni)  Åh nej!
+    mean-stream  main stream
+    [mee too]  [mig too]
+    riv         rave
+    mus/mös     mys         #familjemus = familjemys
+    dutt        dött        #Ida Linde
+    pee pal     paypayl
+    ansakning
+    lila (key)   leila k
+    sia (sua)     säga
+    nu kom hut  ni kom hit
+     polytyk     politik
+    riset       racet
+    spis        space
+    rusta       rösta
+    tjöna/tjana  Kina  #Nike Nylander [2022-12-30]
+    nya (sig)   nöja (sig)
+    nyda        nöjda
+    avslya      avslöja
+    tji         tjej
+    lya         löja
+    lan (lån)   lön
+    streak      strejk    #general-streak (Israel 2023)
+    A-berg      Öberg
+    fåll        föll
+    låsning     lösning  #Gina Derawi
+    Haag        hög
+    gransaker   grönsaker
+    grease anatomy  grey's anatomy
+     mobul, moböl
+    blått       blött
+    gran        grön
+    hya         höja
+    hys         höjs
+    aga         öga
+    fa u oss    få i oss
+    till My     till mig
+    bähuffs     behövs
+    glad        glöd
+     grat        grät
+    vudjo       video
+    stad        stöd  ('stadstrumpa')
+    spri        spray
+    ris         race
+    streak      strejk
+    awii        away
+    mil/mul     mail  # =ingen skillnad på 'happy mail' och 'happy meal'
+    drum and bees   drum and base
+      Anni Lav    Annie Lööv
+      Inar        Einar
+    hyda        höjda
+    rya         röja
+      mulitvus    möjligtvis
+    vy          vi
+    haar, maad      här, med
+    mat, mata       möt, möta  #för att mata zelenskij
+    rutt        rött
+    party(partö)   parti   #socialdemokraterna 2022 val: 'Det finns bara ett party'
+    rad, rada        röd, röda
+     ba          bara
+    grafuk/grafök   grafik
+    huden       höjden
+    nye         nio
+    lufte       löfte
+    gi          gay
+    ni          nej  #ni-sidan (i euroomröstningen), att säga(sia) ni
+    fik         fake
+    [gim        game]
+    sak|saker   sök|söker
+    Haga, hagsäsong        höga, högsäsong
+    undersakning    undersökning
+    lasa/låsa   lösa  ('trygga nätverkslåsningar')
+    okii        okej
+     Surien      Syrien
+    aver        över
+    saakert     säkert
+    sakRhet     säkerhet
+    att dumma någon   att döma någon
+    bedumma     bedöma
+    fardumma    fördömma
+    mylihet     möjlighet
+    mylit       möjligt
+    gomoJon     god morgon
+    pennsylvinia    Pennsylvania
+    uppet, uppna    öppet, öppna
+    (av)slya    (av)slöja
+     döu         du
+     nöu         nu
+     höur        hur
+     öut         ut
+     minöut      minut
+     vu/vö/va       vi
+    fyra        fira
+    bahaver     behöver
+    gri         grej
+    party       parti
+    tji         tjej
+     husin       Hussein  #Gilda Hamid-Inia
+    drya        dröja
+    mil/meal    mail
+    avslya        avslöja
+     sonda       söndag
+    blyor       blöjor
+    kraning     kröning
+    milja       miljö
+    undersakning   undersökning
+    besak/basak    besök
+    bemata      bemöta
+    daad        död
+    huxta       högsta
+    tjutt       kött
+    jiims/jyms  James **  (=inte jeans)
+    furste      förste
+    turst       törst
+    sturre      större
+    murk(t)     mörk(t)
+    bursen      börsen
+    sturst(a)   störst(a)
+    hurrni      hörrni
+    bähufs      behövs
+    bäsak       besök
+     ni          nej
+     Theresa Mi   Theresa May  #Jonas Sverin (Sveryyn)
+     Kiit        Kate
+     Wheels      Wales
+     holidi      holiday
+    kåntiiner   container
+
+    lusa        lysa/Lisa
+
+
+    komma till bukt med    få bukt med
+
+
+    öutan       utan
+    låan        lån
+    meaR/mäaR   mer
+    äar/äaR     är
+}}}
+.(mindre intressanta avvikelser) {{{
+  skånska( / halländska)
+    ändån
+  'norrländska'
+    nånstansch
+}}}
+   fyyynt {{{
+       reaksion
+       enesji
+       sjidor
+       sjulet
+        sjit
+       sjicka
+       sjyddad
+       sjillnad
+   }}}
+    'maktuellt' + 'Risksvenska'
+ali-lingo {{{
+    du vet
+    faktiskt
+    förståru?   / fattaru?
+      fett
+    --
+    bror
+    mannen
+    svenne
+      även fast   #även om / fast/trots att
+}}}
+    neolingo {{{
+        typ liksom  ba 'amen liksom' asså ammagadd
+        amen, amen, amen
+        'å ja ba, amen shit liksom'
+        så här
+        --
+        Även Fast, fast att    även om, fast, trots att
+        desto _ desto _
+        vana med  "inte vana med den här hettan"  =vana vid
+        komma till bukt med        få bukt med
+    }}}
+pinnacle  lineage  audacity  adobe  yahoo   knowledge
+slappa direktöversättningar (=från engelska till svenska) {{{
+    area                    ytmått vs område/sektion
+    karaktär                bokstav/tecken vs typ / "roll"
+    paragraf                stycke vs 
+    form                    formulär vs form
+        'adressera'              #sätta/tilldela adress vs vända sig till
+    'jag ska på rally'           #kapplöpning|lopp vs demonstration
+        'att banna någon'        #invektiv vs 'to ban someone'
+        'sippa (på) en drink'    #zip vs smutta på
+        'cis-man'                #'ungdoms-brottsling' vs hetero
+        'den här taggen'         #tagg vs märklapp|etikett|bricka
+        'sanktionera ryssland'   #   vs 
+        'att trolla högern'      #magi vs häckla/egga/få att gå igång
+        'animerat möte'          #tecknat vs livligt/upprört
+        'misslyckats kapitalt'   #pengamässigt vs fullständigt
+        ('paternalistisk')
+        'i slutet av dan'        #senare på dagen vs till syvende och sist
+        'pinna'                  #"pinna på" vs fästa  (=pin a note to the top)
+        --
+        'på slutet'              #sist vs i slutändan
+}}}
+vanliga plattityder {{{
+otroligt många bottnar/lager
+    mångfacetterad
+     problematisk
+  både och / två tankar i huvudet samtidigt
+  'ni har båda rätt på olika sätt (så därför ligger sanningen mittemellan)
+}}}
+___hm_eng  [loose word-coupling =ambiguity] {{{
+    arrest video
+    reform voters
+}}}
+progressive american english {{{
+  like  kind of  you know
+in terms of  a ton of
+
+  n   in
+  tux mux       tex mex
+  Constant Uptalk
+
+
+text next connect yes correct direct left test select request get
+ tuxt nuxt cnuckt yass corruct dairuct luft tust suluct rquast gut
+again
+ agun
+way
+ why
+effect/affect(!)
+ affakt
+work earlier blur True urgent worry  noon  new=Neo
+ wook oolier bloo trio      nyoon
+bin in lift benefit did this if  crew through  hill  with winning  it  thing  admin  jasmin
+ Ben 'n' left benefett dead thus f  crow throw  hell  weth wenneng  et  theng/thong  admen  jazzmen/yesmen
+trick click
+ truck cluck
+different fiction bring asess
+ deferent (a)ffection breng azaz
+antisemitic Philip      weth wenneng quick
+ antisemetec Phelep queck
+
+'and I was like ...'
+
+JEREMY LEE QUINN (=SAN FRANSISCO)
+  longwindedness
+  speech-coach nightmare california version
+  of (such) lovecraftian baroqueness grotesqueness
+coup 'we do' you too knew view
+ cou 'we dough' yo toe no viou
+cult
+ colt
+
+}}}
+}}}
+common misspellings {{{
+sv
+  allmänna
+  allmän
+  allmänt
+en
+}}}
+common personal misspellings(!): {{{
+  receive       recieve
+   whittle       widdle
+}}}
+--
+norsk/nordiskt {{{
+    huske  hugskott
+}}}
+
+shorthand transcribe: {{{
+~/Dropbox/transcr/Shorth/sv/HallaDar-demian_arpi-ugr.txt
+# transcribe
+	at.relScept.fvkun.bash
+	----
+	audacity /media/bluelegend/Verbatim/legacy/närrelblirond_wcopy2021plus.aup &
+Rel, Skept, Free Speech(!) {{{
+  När Religionen Blir Ond(!!)
+~/Dropbox/rsc/data/lists/ref/shorth/relond1-svrsteno.transcribe.txt
+(=at.relScept.fvkun.txt(!!))
+    ~/Dropbox/transcr/Shorth/sv/davidjensen2022-radikalaateister.txt
+    ~/Dropbox/transcr/Shorth/sv/HallaDar-demian_arpi-ugr.txt
+  UG - Tjärna Ängar:
+  UG - Våldtäktsmannen och Skadeståndet: {{{
+sänks, sänkas **  [s'ng's // sgs // 'nk's, s'ga's]
+  }}}
+}}}
+.   SkämtHist-BigWhite(etc)
+.  sällskapet - intervjuer från alltings mittpunkt {{{
+}}}
+.  De Utvalda Barnen  +RECORD AND SAVE VIDEO {{{
+}}}
+    "Hjärntvättad (=en mördares bekännelser)  +RECORD AND SAVE VIDEO
+. politiker-debatt (+nyhetssändningar) {{{
+}}}
+Mail (+mail 2) till Frendberg (****(*)) {{{
+    ~/Dropbox/scratch/secbrev-fredrikjebsen2022.txt
+  mail2 till frendberg {{{
+
+Hallå Mikael.
+Jag såg ditt meddelande.
+
+Min förfrågan gällde först just anställning med tidsmått. Detta frågade jag Mustafa om redan i nov. 2020 +
+enligt Transport 55 (via HR Sec) var det Novenius som DC som skulle meddela mig om detta.
+
+Angående att ni naturligtvis följer fackliga regler (och att du personligen inte känner till något om min historik):
+
+I augusti 2020 sökte jag heltidstjänsten på sjukhuset natt ni hade ute.
+Den tillföll Alex van D, som blev anställd ca två år efter mig.
+Jag ville därför ha en förklaring av Mustafa, och han hänvisade till att det var du som tagit beslutet (=som DC).
+
+När jag pratade med Mustafa i november 2020 (och anmärkte att jag utan rimlig motivering blivit petad av Rolf flera gånger)
+så pratade vi ju dels (redan då) om anställningen med tidsmått (som jag borde varit berättigad till), och
+han lovade mig också muntligen att ligga bra till för sjukhustjänsten under sommaren (och tackade mig för min förfrågan).
+
+Under våren fick jag sen veta att det blivit ändrat (med hänvisning till 'personerna från Strömstad'),
+och därefter att man inte tagit in några från Strömstad där (=motiveringen),
+utan tagit in och lärt upp några helt nya, inklusive t.ex. Linda Myrhill (+spår av nepotism?).
+När jag avkrävde Mustafa en förklaring hänvisade han återigen till 'Det var inte beslut - Det var Frendbergs(!)'
+
+Även om det inte är något jag basunerar ut från hustaken,
+så är det svårt att se det på något annat sätt än att jag blivit undanskuffad ett flertal gånger,
+och det vore det ju klädsamt om vi kunde få till en förbättring i det avseendet,
+och speciellt om ni vill att Sec Ua/Thn är något jag ska rekommendera till andra.
+
+Vänligen D.A.
+
+PS Nu har du min (alternativa) adress också.
+  }}}
+}}}
+.    engtranscribe (eg. weinstein, Peterson, Harris etc) =Gregg(+rskrift?) {{{
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/JBP-Cansenate-c16.shorth.en.transcrib.txt
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/kitzmiller_342.txt
+}}}
+. Can. Senate, Our Cultural Inflection-Point, John Anderson + Greg Lukianoff (!!) {{{
+    Greg Lukianoff: with John Anderson[**]
+    Jonathan Rausch: Kindly Inquisitors, the constitution of knowledge
+}}}
+.  Trigg: Brendan O'Neill 1 {{{
+}}}
+Salk-Institute: "Religion and Science"
+Wolpe vs Sam Harris: =Lecture no 1(!!)
+"I'll intervene... maybe" (=God, if someone gets raped) **
+  Kitzmiller--John E Jones
+Jonathan Rausch: Kindly Inquisitors(!!)
+    +THE GRIEVANCE STUDIES AFFAIRS(!!)
+Facket [!!!!]  (+sjukvården??) {{{
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/fack01_avtal-transport.txt
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/fack02_avtal-bevaknsäk.txt
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/fack003_stadgar-transport.txt
+}}}
+ Juridik(!!) {{{
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/allm-a.Forumsstora-Bilbokenx2x/jur-constit.txt
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/allm-a.Forumsstora-Bilbokenx2x/krish.txt
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/allm-a.Forumsstora-Bilbokenx2x/socframg.txt
+ }}}
+    Hem och Hyra {{{
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/FackHemhyra.shorth.sv.transcrib.txt
+    }}}
+((ant.teknik stenografi)) {{{
+    ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/transcrib.shorth/anttekn-stenografi.txt
+        (=Rensa och Sätt (+studera in) Hela Texten(!!))
+}}}
+    [=diversitet på SVT mm(!!)]
+}}}
+
+nyskerrig   nyfiken
+

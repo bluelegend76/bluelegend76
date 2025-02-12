@@ -15,6 +15,7 @@ __
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists
+  **Add Greggrefs(pdf) + setup for GVim(windows)
 **IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**  __=2
 \+ Idioms, Sayings, etc
 - [ ] TODO: ADD PERLSTYLE REGEX PDF-REF

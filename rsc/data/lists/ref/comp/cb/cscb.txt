@@ -273,6 +273,7 @@ DotNet CLI
                     Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.
                 DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX
                     Disables minor version roll forward. For more information, see Roll forward.
+Azure CLI (??)
 TeamViever (Live Share)  #Vnc
 Rider (JetBrains) Keymap
 ~/Empire/Doks/Comp/editor/Rider-shortc.pdf
@@ -582,6 +583,9 @@ Rider (JetBrains) Keymap
     Step out of  s-f8
   Stop  c-f2
   Run  s-f10
+Rider+GitHub Copilot
+            Trigger inline copilot-box/chat
+                cs-g
 Rider Snippets
                     evince -p 1 ~/Empire/Doks/Comp/editor/Jetbrains/JetbrainsDocs/rider-snippets_orig.pdf &
                 C# ----

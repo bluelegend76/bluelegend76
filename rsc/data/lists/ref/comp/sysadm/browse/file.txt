@@ -3,6 +3,8 @@ vim:fdm=indent:fdl=2:
 ___zzzz
 
 TODO: NEW FILE = WM:s [*****]
+
+Kde Connect
 XFCE4  TODO: SET WINCOMMANDS-TRIGGER TO WIN-KEY
             https://defkey.com/xfce-shortcuts#
                 Window Manipulation ----

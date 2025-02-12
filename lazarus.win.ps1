@@ -29,12 +29,20 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install azure-cli -y
 # run with 'az'/'az.cmd' in PowerShell
 # refreshenv
+choco install doxygen.install Graphviz -y
+choco install pandoc -y
+# choco install miktek -y
+  choco install puppet-server -y
+
 choco upgrade git -y
 choco install vim -y
+# ___Vundle_Windows=install
+
 choco install neovim -y
 choco install autohotkey -y
-# pdf reader (with dark mode)
+# pdf reader (with dark mode / command-line-based search)
 choco install foxitreader -y
+choco install sumatrapdf.install -y
 choco install mpv -y
 choco install freecommander -y
 choco install keepassx -y
@@ -331,3 +339,79 @@ Start-Process -FilePath ".\veracrypt_setup.exe"
 # By combining PowerShell and AutoHotkey, you can create powerful and flexible automation solutions for your post-installation tasks.
 # 
 # I hope this comprehensive guide helps you effectively integrate AutoHotkey into your PowerShell scripts!
+
+
+# ___Vundle_Windows
+# You're absolutely right! My apologies, the process for installing Vundle on Windows is not identical to Linux.
+# 
+# Here's a more accurate guide for Windows:
+# 
+# 1. Install Git
+# 
+# Download and install Git for Windows from the official Git website: https://git-scm.com/
+# Important: During the installation, choose "Use Git from Git Bash only" or similar options. This ensures compatibility with Vim's command-line interface.
+# 
+# 2. Install Vundle
+# 
+#     Download Vundle:
+#         Download the latest version of Vundle from GitHub: https://github.com/VundleVim/Vundle.vim
+#         Extract the contents of the downloaded archive to your ~/.vim/bundle/ directory.
+#             On Windows, ~/.vim/ translates to %USERPROFILE%\vim\.
+#             Create the ~/.vim/ directory if it doesn't exist.
+# 
+# Add Vundle to your vimrc:
+# 
+# Open your vimrc file in a text editor. This file is typically located at %USERPROFILE%\vim\_vimrc on Windows.
+# 
+# Add the following lines to your vimrc file:
+# Vim Script
+# 
+# set nocompatible              " be iMproved, required
+#         filetype plugin indent on     " required
+# " set the runtime path to include Vundle
+#         set rtp+=~/.vim/bundle/Vundle.vim
+#         " required: let Vundle manage Vundle, required
+# call vundle#begin()
+# " All of your Plugins must be added before the following line
+#         call vundle#end()            " required
+# filetype plugin indent on     " required
+# 
+# 3. Install Plugins
+# 
+#     Add Plugins to your vimrc:
+# 
+#         Within the call vundle#begin() and call vundle#end() blocks in your vimrc, add lines like this for each plugin:
+#         Vim Script
+# 
+#     Plugin 'tpope/vim-fugitive'      " Git wrapper
+# Plugin 'vim-airline/vim-airline' " Statusline
+#     Plugin 'scrooloose/nerdtree'    " File explorer
+# 
+# Install Plugins:
+# 
+# Open Vim.
+# 
+# Run the following commands in Vim:
+# Vim Script
+# 
+# :PluginInstall
+# 
+# 4. Update Plugins
+# 
+# Update Plugins:
+# 
+# To update your plugins, run the following command in Vim:
+# Vim Script
+# 
+# :PluginUpdate
+# 
+# 5. Troubleshooting
+# 
+# Check for Errors:
+# If you encounter any errors, check the Vim message window for details.
+# Search online for solutions to specific error messages.
+# 
+# Clear Cache:
+# If you encounter issues with plugins not loading or behaving unexpectedly, try clearing the Vim cache (as described in the previous response).
+# 
+# I apologize for the incorrect information in my previous response. I am still under development and learning to be more accurate.

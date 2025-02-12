@@ -10,9 +10,11 @@ __
 ## Study-List ----
   - MS Graph, Sharepoint,  Swagger
 - MSAL + Identity
-- DotNet Core + Blazor
+- DotNet Core + Blazor; XUnit Patterns
   - Avalonia
+- **FILE-BROWSERS ETC [Reflists Overview]**
 - MLEARNING OVERVIEW
+- (SSH, veracrypt)
 - Py/F# Devops
   - Azure Devops (+CLI) w. Pipelines
   - Jupyter (+Pacman|PACKMAN)  [choco]
