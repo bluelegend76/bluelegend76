@@ -39,6 +39,7 @@ syntax on
 "" nnoremap <C-MouseUp> :silent! let &guifont = substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)-1)', '')<CR>
 "" nnoremap <C-MouseDown> :silent! let &guifont = substitute(&guifont,':h\zs\d\+','\=eval(submatch(0)+1)', '')<CR>
 
+" Tabs/Indentation  __
 " size of a hard tabstop
 set tabstop=4
 " size of an "indent"
@@ -53,11 +54,13 @@ set smartindent
 " Folding  __
 nnoremap <Space> za
 " --
-" fold marked lines
+" marker-fold marked lines
 vnoremap <leader>fm <Esc>o<c-h><Esc>gvjo<Esc>A <Esc>gvzfzc
 " produce fold from a line
 nnoremap <leader>fa A <CR> <c-h><Esc>Vkzfzc
 " --
+
+" Move line(s), visual marker-line
 " Move lines with Alt-Up/Down (Gedit-style)
 nnoremap <A-Up> ddkP
 nnoremap <A-Down> ddjP
@@ -65,6 +68,10 @@ nnoremap <A-Down> ddjP
 " vnoremap <A-Down> dpV`]
 " nnoremap <C-A-Up> ddkPzc
 " nnoremap <C-A-Down> ddjPzc
+" --
+vnoremap <Up> kok$
+vnoremap <Down> joj$
+
 
 nnoremap <leader>co :colors <C-D>
 

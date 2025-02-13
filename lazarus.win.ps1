@@ -40,6 +40,7 @@ choco install vim -y
 
 choco install neovim -y
 choco install autohotkey -y
+choco install powertoys -y
 # pdf reader (with dark mode / command-line-based search)
 choco install foxitreader -y
 choco install sumatrapdf.install -y
@@ -111,8 +112,9 @@ choco install azure-cli -y
 # TODO: Replace 'hard-coded' user with 'Select User' to link to
 # C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
 cd ~
-C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
-C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path Desktop\LangDb1.txt -Target .\RiderProjects\bluelegend76\rsc\data\db\langdb.legacy.list\langdb.legacy.txt
+# C:\Users\SEDAALB2>
+New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
+New-Item -ItemType SymbolicLink -Path Desktop\Dashboard.Empire.txt -Target .\RiderProjects\bluelegend76\rsc\data\lists\at\Dashboard.Empire.txt
 LINK-IN VIM/ -> .vim/
 CLONE + ADD VUNDLE
 LINK-IN IDEAVIMRC -> HOME

@@ -1,5 +1,4 @@
 vim:fdm=marker:
-~/Dropbox/bin/scripts/at/at.ref.cb-prl.bash
 ____
 __
 Controllers often corresponds 1-to-1 to ___

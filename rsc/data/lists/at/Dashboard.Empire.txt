@@ -1,0 +1,19 @@
+
+Forums Stora
+
+at.Ref.Cbs ----
+  gvim ..\ref\ref.cb-prl.txt
+
+PROGR ----
+  gvim PROGR.cm.txt
+Clangs (C, Cpp, CSharp, Dlang) ----
+  TODO: INCLUDE INTO BLUELEGEND76
+
+Langs1 Ref-lists ----
+  gvim ..\ref\lang\Langs1Refs.txt
+LangsDb.legacy ----
+  gvim ..\..\db\langdb.legacy.list\langdb.txt
+  POSSIBLE RENAMING: LangDb1.list.txt
+
+gvim ..\weblinks.txt
+

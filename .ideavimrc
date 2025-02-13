@@ -26,6 +26,10 @@ onoremap gH ^
 nnoremap <leader><leader>o o<Esc>
 nnoremap <leader><leader>u O<Esc><CR>
 
+" visual marker-line
+vnoremap <Up> kok$
+vnoremap <Down> joj$
+
 " Custom Escape  __
 noremap <leader>j <Esc>
 inoremap <leader>j <Esc>

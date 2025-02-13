@@ -1,7 +1,9 @@
 set foldmethod=indent foldlevel=1
 vim: fdm=indent:fdl=2:
 __lang(1-4: de,fr,es,ru)
+
 ___block2(=word-categories)
+___block3(=words)
 ___zzzz
     ## ~/Dropbox/bin/scripts/Alltodoist/hold/at.lang1-2.bash
     ## ~/Dropbox/bin/scripts/Alltodoist/hold/at.lang2-1.bash
@@ -77170,6 +77172,8 @@ pick=startoff   #unless|om (...) inte
   ~/Empire/Doks/Lang/misc/Slav/ukr/ukr-lplan.txt
     ...
 
+___block3(=words)
+set foldmethod=indent foldlevel=0
 Tags
     _c          word category
     _\a\a       language
