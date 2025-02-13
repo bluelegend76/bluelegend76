@@ -1,46 +1,47 @@
 ref/lang/Langs1Refs.txt
+cd ../ref/lang/
 
-../ref/lang/sv.words.saol11-1991.txt
-  ../ref/lang/svetym.txt
-../ref/lang/cmp.en.dict.en2sv-prsm.txt
-../ref/lang/cmp.sv.dict.sv2en-prsm.txt
-  ../ref/lang/en.words.wnwdict.txt
---
-../ref/lang/theinstantintell-words.txt
-../ref/lang/sv.thes.svsyn.txt
-../ref/lang/auxil/lang1_picks2/en.thes.xf.txt
-  ../ref/lang/auxil/lang1_picks2/en.words.inet1.txt
-  ../ref/lang/auxil/lang1_picks2/en.words.wnwdict.txt
-../ref/lang/auxil/lang1_picks2/slangordb.txt
-  ../ref/lang/auxil/lang1_picks2/svenskaord_favoriter
+  sv.words.saol11-1991.txt
+    svetym.txt
+  cmp.en.dict.en2sv-prsm.txt
+  cmp.sv.dict.sv2en-prsm.txt
+    en.words.wnwdict.txt
+  --
+  theinstantintell-words.txt
+  sv.thes.svsyn.txt
+  auxil/lang1_picks2/en.thes.xf.txt
+    auxil/lang1_picks2/en.words.inet1.txt
+    auxil/lang1_picks2/en.words.wnwdict.txt
+  auxil/lang1_picks2/slangordb.txt
+    auxil/lang1_picks2/svenskaord_favoriter
 
-    ../ref/lang/dandict2mini.txt
-        ../ref/lang/auxil/lang1_picks2/wordsDict.l.txt
-    ../ref/lang/auxil/lang1_picks2/svisldict.txt
-    ../ref/lang/auxil/lang1_picks2/lat.words.svlatdict.txt
+      dandict2mini.txt
+          auxil/lang1_picks2/wordsDict.l.txt
+      auxil/lang1_picks2/svisldict.txt
+      auxil/lang1_picks2/lat.words.svlatdict.txt
 
-../ref/lang/En-IdiomDict.txt
-../ref/lang/en-idiomdict2.txt
-../ref/lang/svenska_idiomatiska_uttryck.txt
-  ../ref/lang/fridiomordb.txt
-  ../ref/lang/tyidiom.txt
---
-../ref/lang/at.jokeswit.soc.txt
---
-../ref/lang/beving.txt
-../ref/lang/CIT_orred.txt
-../ref/lang/citat_littlered.txt
-../ref/lang/ordsprsvgreen.txt
-../ref/lang/gulacitatbok-tidens.txt
+  En-IdiomDict.txt
+  en-idiomdict2.txt
+  svenska_idiomatiska_uttryck.txt
+    fridiomordb.txt
+    tyidiom.txt
+  --
+  at.jokeswit.soc.txt
+  --
+  beving.txt
+  CIT_orred.txt
+  citat_littlered.txt
+  ordsprsvgreen.txt
+  gulacitatbok-tidens.txt
 
-../ref/lang/myndigskrivregl2009.sv.txt
-../ref/lang/svskrivr_DEF.txt
---
-../ref/lang/auxil/lang1_picks2/sprbygg_DEF.txt
+  myndigskrivregl2009.sv.txt
+  svskrivr_DEF.txt
+  --
+  auxil/lang1_picks2/sprbygg_DEF.txt
 
 
-___picklist
-../ref/lang/auxil/lang1_picks2/rimlex.txt
-../ref/lang/auxil/lang1_picks2/abc-versk.txt
-../ref/lang/auxil/lang1_picks2/enbusinessdict.txt
+  ___picklist
+  auxil/lang1_picks2/rimlex.txt
+  auxil/lang1_picks2/abc-versk.txt
+  auxil/lang1_picks2/enbusinessdict.txt
 
