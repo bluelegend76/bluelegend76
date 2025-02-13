@@ -1,6 +1,7 @@
 let mapleader=","
 " TODO: VIM SPELL, VIM COLORS
 " INVESTIGATE: INSTALLING AND USING VUNDLE FOR HANDLING VIM-PLUGINS
+" TODO: ADD ,te : go to top + set setting/run ex-line at top
 "---- __
 colorscheme ron
 set guicursor+=a:blinkon0
@@ -257,29 +258,31 @@ nnoremap <leader>ex ^yg_:<C-R>"<CR><CR>
 "" open word in Babel (translate)
 " nnoremap <leader>tr viwy:!firefox -new-tab http://sv.bab.la/lexikon/engelsk-svensk/<C-R>"<CR><CR>
 " nnoremap <leader>et viwy:!firefox -new-tab http://www.etymonline.com/index.php?term=<C-R>"&allowed_in_frame=0<CR><CR>
-" nnoremap <leader>ac viWy:!audacity <C-R>" &<CR><CR>
+nnoremap <leader>ac viWy:!start audacity <C-R>" &<CR><CR>
 "" Image-program
 " nnoremap <leader>ri viWy:!ristretto <C-R>" &<CR><CR>
 "" Pdf-viewer
-" nnoremap <leader>ev viWy:!evince <C-R>" &<CR><CR>
+nnoremap <leader>fo viWy:!start foxit <C-R>" &<CR><CR>
+nnoremap <leader>su viWy:!start sumatra <C-R>" &<CR><CR>
 "" open with Inkscape
-" nnoremap <leader>ik viWy:!inkscape <C-R>" &<CR><CR>
+nnoremap <leader>ik viWy:!start inkscape <C-R>" &<CR><CR>
 "" open with Gimp
-" nnoremap <leader>gi viWy:!gimp <C-R>" &<CR><CR>
+nnoremap <leader>gi viWy:!start gimp <C-R>" &<CR><CR>
 "" open with gvim
-" nnoremap <leader>gm viWy:!gvim <C-R>"<CR><CR>
+nnoremap <leader>gm viWy:!start gvim <C-R>"<CR><CR>
 "" open with timidity**** +TEMPOMARKERING
 " nnoremap <leader>ti ^f/viW"tyWyiw:!timidity -T <C-R>" <C-R>t <CR><CR>
 "" open with timidity** (=enkel)
 " nnoremap <leader>tm yiW:!timidity -ia <C-R>"<CR><CR>
 "" open with audacious***
 " nnoremap <leader>au viWy:!audacious <C-R>" &<CR><CR>
-"" open with file-browser **
+nnoremap <leader>vc viWy:!start vlc <C-R>" &<CR><CR>
+"" open with file-browser (explorer/freecommander)
 " nnoremap <leader>th yiW:!thunar <C-R>" &<CR><CR>
 " nnoremap <leader>tH $F/vBy:!thunar <C-R>" &<CR><CR>
 "SÖK BOKSTAV/TECKEN I WIKTIONARY
 " nnoremap <leader>tk vy:!firefox -new-tab https://en.wiktionary.org/wiki/<C-R>"<CR><CR>
-" TODO: ADD PDFS + CONVERT TO USING FOXIT READER[!!]
+" TODO: ADD PDFS + CONVERT TO USING SUMATRA READER[!!]
 vnoremap <F9> y:!evince -l '<C-R>"' ~/Dropbox/rsc/Doks/Lang/Shorth/sv/rskrift.empire.pdf &<CR><CR>gv
 vnoremap <F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-dictionary.pdf &<CR><CR>gv
 vnoremap <S-F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-phrasebook.pdf &<CR><CR>gv
