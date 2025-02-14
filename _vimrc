@@ -268,8 +268,16 @@ nnoremap <leader>su viWy:!start sumatra <C-R>" &<CR><CR>
 nnoremap <leader>ik viWy:!start inkscape <C-R>" &<CR><CR>
 "" open with Gimp
 nnoremap <leader>gi viWy:!start gimp <C-R>" &<CR><CR>
+"" open with Vlc
+nnoremap <leader>vc viWy:!start vlc <C-R>" &<CR><CR>
+"" open with mpv
+nnoremap <leader>mp viWy:!start mpv <C-R>" &<CR><CR>
+"" open with audacious
+nnoremap <leader>au viWy:!start audacious <C-R>" &<CR><CR>
+
 "" open with gvim
 nnoremap <leader>gm viWy:!start gvim <C-R>"<CR><CR>
+
 "" open with timidity**** +TEMPOMARKERING
 " nnoremap <leader>ti ^f/viW"tyWyiw:!timidity -T <C-R>" <C-R>t <CR><CR>
 "" open with timidity** (=enkel)
@@ -294,6 +302,8 @@ nnoremap <c-w>V <c-w>v<c-w><c-w><c-f>
 " Alt+PgUp/PgDn = Move Tab Left/Right in Tabs-List
 nnoremap <C-S-PageUp> :tabmove -1<CR>
 nnoremap <C-S-PageDown> :tabmove +1<CR>
+nnoremap <leader>gf <C-W>gf
+" Add ,te for opening a new tab on current open buffer
 
 " File-System Utilities  __
 "" GENERAL UTILITIES: RENAME

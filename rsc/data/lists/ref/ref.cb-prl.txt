@@ -31,7 +31,38 @@ kfil {{{
       Baserat på 'mina fältundersökningar genom åren'
   P.N: Jag har träffat och interagerat med många(!) andliga/hippie-typer genom åren, och jag skulle faktiskt säga (baserat på de omfattande fältundersökningarna) att det är mer typiskt än inte = Det räcker med att säga 'Hm, jag undrar om det kan stämma/Har det replikerats?' så blir det/för att det ska bli riktigt(!) dålig stämning. ;) ;) ;)
   Det är regel snarare än undantag.
+
+  Några av mina favoritämnen/_/personer att studera:
+  - Feminister (och liknande aktivister)
+  - Sociologer
+  - Andliga/New Age-personer
+  - Religiösa (+Teologer)
+  - "Vanliga" människor
+
 }}}
+ScratchArea LIA 2/TruckCom Updater {{{
+
+- Own exception-type for Updater (=same as in Core)
+- error-code handling
+
+[Note: When running in Debug-mode through Rider, the program is not System-User - I.e. create/use dummy-exe for testing purposes]
+
+SignalR  #for polling during install/download-process
+
+
+Graph [hämta en fil-url] + Hämta 
+
+SharePoint
+Batch (generalla graph-anrop + slå ihop dem)
+PackageSync
+
+Setup HttpClient
+Setup Talk to Sharepoint
+Core: Services (ServiceCollectionExtension.cs)
+TruckComCoreWindowsService
+TruckComCoreWebAPI
+
+
 TODO:PROGR
     Te: 'General/More specific programming/CS-terms'
 Controllers often corresponds 1-to-1 to ___
@@ -89,27 +120,6 @@ guid
     .
     xxxx
 /me  #Graph
-ScratchArea LIA 2/TruckCom Updater {{{
-
-- Own exception-type for Updater (=same as in Core)
-- error-code handling
-
-[Note: When running in Debug-mode through Rider, the program is not System-User - I.e. create/use dummy-exe for testing purposes]
-
-SignalR  #for polling during install/download-process
-
-
-Graph [hämta en fil-url] + Hämta 
-
-SharePoint
-Batch (generalla graph-anrop + slå ihop dem)
-PackageSync
-
-Setup HttpClient
-Setup Talk to Sharepoint
-Core: Services (ServiceCollectionExtension.cs)
-TruckComCoreWindowsService
-TruckComCoreWebAPI
 
 }}}
 ../weblinks.txt
@@ -126,6 +136,7 @@ Multimedia, MuRec {{{
 }}}
 
 
+____
 Browsers (File, Web, Media, Web) {{{
 media ----
     gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{sysadm/browse/file,hardw/hardw-devices,sysadm/browse/media,sysadm/browse/web,sysadm/browse/mail,sysadm/browse/remote}.txt

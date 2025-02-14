@@ -213,10 +213,7 @@ XFCE4  TODO: SET WINCOMMANDS-TRIGGER TO WIN-KEY
 Fluxbox
 
 WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
-                    Cycle through windows/elements in order opened
-                        .
-                        a-Esc
-                    ---- Taskbar
+            ---- Taskbar
                     Cycle through Apps in Taskbar
                         .
                         w-Tab
@@ -226,21 +223,15 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     Run App in Taskbar as Administrator
                         .
                         cs-Click app-icon
-                    ----
-                    Narrator
-                        .
-                        w-Enter
-                    ----
         Show windows (persistent) + Select with Arrows
             ahold-Tab // w-Tab // ca-Tab
-                cycle through elements (=in order opened) (*) @
+                cycle through windows/elements (=in order opened) (*) @
                     a-esc
             task view(?)/cycle through apps in taskbar  #small 'several win.s' icon @@
                 w-tab  #note: curr. running programs appear as icons on the bottom taskbar + respects virtual desktops as separate workspaces
                 ----
                 move tile in focus (=on start-menu)  **
                     csa-arrows
-
             media/gamebar, screenrec ----
                 record video screencast *
                     wa-r
@@ -257,7 +248,6 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     c-ins
                 paste(alt.)
                     a-ins
-
             window-managem. ----
                 maxim./minim. win. **
                     w-upp/ner
@@ -275,7 +265,6 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     c-r / f5
                 zoom in/out
                     w-+/-
-
             virtual desktops ----
                 add virtual deskt. (*) @
                     cw-d (or D(??))  + go to task view (eg. w. 'task view'["small windows"] button)
@@ -284,7 +273,6 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 close curr. virt. deskt.
                     cw-f4
                 Create: Send window to other Desktop/V-Desktop
-
             search, cortana ----
             Open Universal Search @(@)
                 w-s  #=searchbox/cortana, or file explorer?
@@ -317,40 +305,40 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
             run ----
                 run-dialogue @
                     w-r
-                        1. Launching Applications:
+                    1. Launching Applications:
 
-                        Directly launch programs: Type the program's name (e.g., "notepad," "wordpad," "chrome") and press Enter.
-                        Open files and folders: Type the full or partial path to the file or folder (e.g., "C:\Users\YourName\Documents\MyProject").
+                    Directly launch programs: Type the program's name (e.g., "notepad," "wordpad," "chrome") and press Enter.
+                    Open files and folders: Type the full or partial path to the file or folder (e.g., "C:\Users\YourName\Documents\MyProject").
 
-                        2. Accessing System Tools:
+                    2. Accessing System Tools:
 
-                        Open Control Panel: Type "control" and press Enter.
-                        Launch Device Manager: Type "devmgmt.msc" and press Enter.
-                        Open Task Manager: Type "taskmgr" and press Enter.
-                        Access System Information: Type "msinfo32" and press Enter.
-                        Open Command Prompt: Type "cmd" and press Enter.
-                        Open PowerShell: Type "powershell" and press Enter.
+                    Open Control Panel: Type "control" and press Enter.
+                    Launch Device Manager: Type "devmgmt.msc" and press Enter.
+                    Open Task Manager: Type "taskmgr" and press Enter.
+                    Access System Information: Type "msinfo32" and press Enter.
+                    Open Command Prompt: Type "cmd" and press Enter.
+                    Open PowerShell: Type "powershell" and press Enter.
 
-                        3. Network Commands:
+                    3. Network Commands:
 
-                        Open Network Connections: Type "ncpa.cpl" and press Enter.
-                        Run Command Prompt as Administrator: Type "cmd" and press Ctrl+Shift+Enter.
+                    Open Network Connections: Type "ncpa.cpl" and press Enter.
+                    Run Command Prompt as Administrator: Type "cmd" and press Ctrl+Shift+Enter.
 
-                        4. Special Commands:
+                    4. Special Commands:
 
-                        Open Run dialog as Administrator: Type "runas /user:Administrator" and press Enter. (Requires administrator credentials)
-                        Access hidden system files: Type "explorer shell:::{4234d49b-0246-11d1-9a01-00c048da51dd}" and press Enter.
+                    Open Run dialog as Administrator: Type "runas /user:Administrator" and press Enter. (Requires administrator credentials)
+                    Access hidden system files: Type "explorer shell:::{4234d49b-0246-11d1-9a01-00c048da51dd}" and press Enter.
 
-                        5. Customizing the Run Dialog:
+                    5. Customizing the Run Dialog:
 
-                        Recent Commands: The Run dialog maintains a history of recently used commands. You can use the Up and Down arrow keys to cycle through these commands.
+                    Recent Commands: The Run dialog maintains a history of recently used commands. You can use the Up and Down arrow keys to cycle through these commands.
 
-                        Key Advantages:
+                    Key Advantages:
 
-                        Speed and Efficiency: Significantly faster than navigating through the Start Menu or desktop icons.
-                        Keyboard-centric Workflow: Reduces reliance on the mouse, improving workflow for power users.
-                        Access to Advanced Tools: Provides quick access to system tools and utilities that might be difficult to find otherwise.
-                        Customization: The ability to create and use custom commands further enhances its versatility.
+                    Speed and Efficiency: Significantly faster than navigating through the Start Menu or desktop icons.
+                    Keyboard-centric Workflow: Reduces reliance on the mouse, improving workflow for power users.
+                    Access to Advanced Tools: Provides quick access to system tools and utilities that might be difficult to find otherwise.
+                    Customization: The ability to create and use custom commands further enhances its versatility.
 
             quick connect
                 w-k

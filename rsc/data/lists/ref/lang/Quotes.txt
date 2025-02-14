@@ -6,12 +6,15 @@ Känn dina vänner väl, men/och dina fiender bättre. {{{
   Det är viktigt att förstå hur dina vänner tänker, men ännu viktigare att förstå hur dina fiender tänker.
 }}}
 
+'Effects are real. Perceptions are not.'
+
 Man brukar säga "Personen orkade inte leva". Jag tror det är fel/missvisande. Jag tror en bättre formulering är "Personen orkade inte lida".
 
 Management by Inertia
 
-"The proof is in the pudding, not the word salad."
-    # vad som avgör om pajen smakar bra är när du tar en tugga, inte om någon teolog/sociolog kan lägga fram avancerade argument för att så är fallet, speciellt när du tatt en tugga och det smakar riktigt illa
+"The proof is in the pudding, not the word-salad."
+      om en (ny) hammare fungerar
+    # vad som avgör om pajen smakar bra är när du tar en tugga, inte om någon teolog/sociolog kan lägga fram avancerade argument för att så är fallet (speciellt om du precis tagit en tugga och det smakar riktigt illa)
 
     [A lie repeated enough times...]
 REPETITION (commonly called/labeled as experience), IS THE MOTHER OF BELIEF.  ___Trinity

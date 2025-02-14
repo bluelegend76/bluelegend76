@@ -1,14 +1,18 @@
 ref/lang/Langs1Refs.txt
 cd ../ref/lang/
 
-  sv.words.saol11-1991.txt
-    svetym.txt
+Add Rhetoric and Speeches(!!)
+    Abraham Lincoln
+    John F. Kennedy
+
+  sv.thes.svsyn.txt
+    sv.words.saol11-1991.txt
+  svetym.txt
   cmp.en.dict.en2sv-prsm.txt
   cmp.sv.dict.sv2en-prsm.txt
     en.words.wnwdict.txt
-  --
   theinstantintell-words.txt
-  sv.thes.svsyn.txt
+  --
   auxil/lang1_picks2/en.thes.xf.txt
     auxil/lang1_picks2/en.words.inet1.txt
     auxil/lang1_picks2/en.words.wnwdict.txt

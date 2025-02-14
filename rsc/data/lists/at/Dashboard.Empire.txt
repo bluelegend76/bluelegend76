@@ -1,26 +1,26 @@
 
 Forums Stora
+
 Quotes ----
-  'Effects are real. Perceptions are not.'
-  gvim ..\ref\lang\Quotes.txt
+  ../ref/lang/Quotes.txt
 
 at.Ref.Cbs ----
-  gvim ../ref/ref.cb-prl.txt
+  ../ref/ref.cb-prl.txt
 
 Keyboard Shortcuts.Db1(...) ----
     .
 PROGR ----
-  gvim PROGR.cm.txt
+  PROGR.cm.txt
 Clangs (C, Cpp, CSharp, Dlang) ----
   TODO: INCLUDE INTO BLUELEGEND76
 
+LangsDb.legacy ----
+  ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 Langs1 Ref-lists ----
-  gvim ../ref/lang/Langs1Refs.txt
+  ../ref/lang/Langs1Refs.txt
+  ../../../../samples/lang/hm-eng_english-loose-coupling.report.txt
         [add ___hm_eng=list/log-export 1]
         fetch data | fetch-data
-LangsDb.legacy ----
-  gvim ../../db/langdb.legacy.list/langdb.txt
-  POSSIBLE RENAMING: LangDb1.list.txt
 
-gvim ../weblinks.txt
+../weblinks.txt
 

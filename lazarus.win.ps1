@@ -61,6 +61,9 @@ choco install discord -y
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 choco install gimp -y
 choco install inkscape -y
+choco install obs-studio.install -y
+# choco install digikam -y
+choco install audacity -y
 
 choco install azure-cli -y
 
@@ -114,13 +117,14 @@ choco install azure-cli -y
 # C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
 cd ~
 # C:\Users\SEDAALB2>
-New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
+# New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
+New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
 New-Item -ItemType SymbolicLink -Path Desktop\Dashboard.Empire.txt -Target .\RiderProjects\bluelegend76\rsc\data\lists\at\Dashboard.Empire.txt
 LINK-IN VIM/ -> .vim/
 CLONE + ADD VUNDLE
-LINK-IN IDEAVIMRC -> HOME
+New-Item -ItemType SymbolicLink -Path .ideavimrc -Target .\RiderProjects\bluelegend76\.ideavimrc
 LINK-IN vscode-settings
-LINK-IN bluelegend.kdbx -> HOME
+LINK-IN bluelegend.kdbx -> HOME (=????)
 
 # WSL/Ext4
 # sudo modprobe ext4

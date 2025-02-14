@@ -1,8 +1,11 @@
+Test Plans
 View Components
 searching algorithms.
 change sets
 Snap bar
 Mixing Automation
+Pull Requests (from list)
+pull request template
 Debugging Messages
 Return values
 Commit Message  __
