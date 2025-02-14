@@ -1,3 +1,5 @@
+vim:fdm=marker:
+
 https://en.wikipedia.org/wiki/AFI%27s_100_Years...100_Movie_Quotes
 Känn dina vänner väl, men/och dina fiender bättre. {{{
   Förstå dina vänners tankar/hur dina vänner tänker väl, och/men dina fiender ännu bättre.

@@ -28,6 +28,9 @@ kfil {{{
   Indicators and Predictors
   'Personal/Subjective Validation'
   verification (and theorizing) vs testing/falsification
+      Baserat på 'mina fältundersökningar genom åren'
+  P.N: Jag har träffat och interagerat med många(!) andliga/hippie-typer genom åren, och jag skulle faktiskt säga (baserat på de omfattande fältundersökningarna) att det är mer typiskt än inte = Det räcker med att säga 'Hm, jag undrar om det kan stämma/Har det replikerats?' så blir det/för att det ska bli riktigt(!) dålig stämning. ;) ;) ;)
+  Det är regel snarare än undantag.
 }}}
 TODO:PROGR
     Te: 'General/More specific programming/CS-terms'

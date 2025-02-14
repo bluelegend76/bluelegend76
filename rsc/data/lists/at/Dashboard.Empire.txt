@@ -1,6 +1,8 @@
 
 Forums Stora
 Quotes ----
+  'Effects are real. Perceptions are not.'
+  gvim ..\ref\lang\Quotes.txt
 
 at.Ref.Cbs ----
   gvim ../ref/ref.cb-prl.txt
