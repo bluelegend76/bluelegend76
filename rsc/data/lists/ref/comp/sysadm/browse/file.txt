@@ -366,7 +366,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
         quickshutdown computer
             w-x uu
         ----
-        quicklink menu(?)
+        quicklink-menu(?)
             w-x
 
                 (+a-shift_left)
@@ -420,6 +420,9 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 line up/down in outp. history(?)
                 maximize win. left/right
                 stretch/squeeze win. top/bot
+PowerToys
+                .
+                .
 narrator(*)[##]  !! @@
                 cw-ent  #browser + text documents
                 [+setting: Ease of Access > Narrator
