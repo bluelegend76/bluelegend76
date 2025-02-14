@@ -29,6 +29,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install azure-cli -y
 # run with 'az'/'az.cmd' in PowerShell
 # refreshenv
+# Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 choco install doxygen.install Graphviz -y
 choco install pandoc -y
 # choco install miktek -y

@@ -1,11 +1,6 @@
 vim:fdm=marker:
 ____
 __
-Controllers often corresponds 1-to-1 to ___
-    .
-    a set/collection of data related to a specific topic of interest
-guid
-/me  #Graph
 ScratchArea:General {{{
 
 Linux to Windows terminology-___  ___Gemini
@@ -26,6 +21,71 @@ Environment
   Environment Variables
 
 }}}
+kfil {{{
+  Ska vi köpa den här produkten?
+      when should we buy this product/should we buy this product (at this point)?
+    [vilka/hur många saker accepterar vi genom vårt (vardagliga) beteende/utan att vi tänker på det]
+  Indicators and Predictors
+  'Personal/Subjective Validation'
+  verification (and theorizing) vs testing/falsification
+}}}
+TODO:PROGR
+    Te: 'General/More specific programming/CS-terms'
+Controllers often corresponds 1-to-1 to ___
+    WeatherForecastController
+        +innehåller ofta olika metoder (GetWeatherForecast)
+    .
+    a set/collection of data related to a specific topic of interest
+    an endpoint(?)
+controllers brukar delas upp så att ____
+    de har ett begränsat ansvarsområder
+        för klassen user
+        = user-controller
+    en egen controller för en entitet i en databas
+    gruppera + validera indata (mm)
+man anropar aldrig en controller från en annan controller, utan istället från/via ___
+    .
+    en service (som plockar ut + omformaterar data för att sen kunna användas av en controll)
+services är ansvariga för att ____
+    leverera data till en controller
+services kan injiceras
+en endpoint är eg. en metod + controllern (=hela pathen)
+Index|Install|Download-endpoints  =3 metoder i en controller / ...
+    vad är indata + vad ska returneras (=i omvänd ordning när skapar metoden)  +definiera t.ex. HttpGet("index")
+Alla controllers ärver (som standard) från ___
+    .
+    ControllerBase
+    exempel ...<ActionBase>
+HTTP status codes are easily used with ____
+    named methods, e.g. this.Ok(@"hejsan")
+        BadRequest(), NotFound()
+Använda templates för WebAPI, Controllers etc (i Rider)
+breakpoints
+    vet inte hur en metod funkar
+        .
+        =sätt en breakpoint i början av metoden
+    step over vs step into
+        .
+        oftast step over, om inte t.ex. 
+fördelen med unit testing
+    .
+    =du kan speca upp och köra en precis grej i koden
+    [Fact]
+    public void newmethod() {
+*     var s = this.sut.ToString();
+    }
+
+Exempel C# INLINE TESTING: Testa och se hur Math.Pow funkar
+    [Fact]
+    public void newmethod() {
+*     var pow = Math.Pow(3,5);
+    }
+    [+run debug + step over]
+guid
+'handler'
+    .
+    xxxx
+/me  #Graph
 ScratchArea LIA 2/TruckCom Updater {{{
 
 - Own exception-type for Updater (=same as in Core)
@@ -154,7 +214,7 @@ browse:web-text ----
 browse:(file, web, im, mail) ----
     Firefox/chrome(+Devtools), Evince, Okular, Thunar/Dolphin, Mutt, Shotwell,   exwm/im-viewer/pdftools-em
 }}}
-  gvim comp/Editors.txt
+  gvim ../ref/comp/Editors.txt
 Sysadm(+wm) Redhat, nushell {{{
   https://www.nushell.sh/cookbook/
 

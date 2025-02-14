@@ -1,9 +1,12 @@
 
 Forums Stora
+Quotes ----
 
 at.Ref.Cbs ----
   gvim ../ref/ref.cb-prl.txt
 
+Keyboard Shortcuts.Db1(...) ----
+    .
 PROGR ----
   gvim PROGR.cm.txt
 Clangs (C, Cpp, CSharp, Dlang) ----
@@ -11,6 +14,8 @@ Clangs (C, Cpp, CSharp, Dlang) ----
 
 Langs1 Ref-lists ----
   gvim ../ref/lang/Langs1Refs.txt
+        [add ___hm_eng=list/log-export 1]
+        fetch data | fetch-data
 LangsDb.legacy ----
   gvim ../../db/langdb.legacy.list/langdb.txt
   POSSIBLE RENAMING: LangDb1.list.txt
