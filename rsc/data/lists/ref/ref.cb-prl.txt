@@ -42,6 +42,349 @@ kfil {{{
 }}}
 ScratchArea LIA 2/TruckCom Updater {{{
 
+MSAL, Graph, Sharepoint = Examples + Code {{{
+
+Great great. So the first step included (and you're free to show at least the outline of some code to clarify, that would be very helpful) is getting a Microsoft Identity (or MSAL) ID token, to be used to see if the user is authorized to access a Sharpoint (via MS Graph) to retrieve some information.
+
+Okay, getting an access token using the Microsoft Authentication Library (MSAL) is the crucial first step for authenticating with Microsoft Graph and accessing SharePoint data.
+
+Here's a basic outline of how you can acquire an access token using MSAL in a C# application:
+
+1. Install the MSAL.NET NuGet Package:
+Bash
+
+dotnet add package Microsoft.Identity.Client
+
+2. Acquire an Access Token:
+Code snippet
+
+using Microsoft.Identity.Client;
+
+public async Task<string> GetAccessTokenAsync()
+{
+    // Configure your application
+    string[] scopes = new string[] { "https://graph.microsoft.com/.default" }; // Request the necessary permissions
+    string clientId = "YOUR_CLIENT_ID"; // Replace with your application's client ID
+    string tenantId = "YOUR_TENANT_ID"; // Replace with your tenant ID (e.g., your organization's Azure AD tenant ID)
+
+    // Create an instance of the IConfidentialClientApplication
+    IConfidentialClientApplication app = ConfidentialClientApplicationBuilder
+        .Create(clientId)
+        .WithClientSecret("YOUR_CLIENT_SECRET") // Replace with your client secret
+        .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
+        .Build();
+
+    // Acquire an access token
+    AuthenticationResult result = await app.AcquireTokenForClient(scopes)
+        .ExecuteAsync();
+
+    return result.AccessToken;
+}
+
+Explanation:
+
+    IConfidentialClientApplication: This class represents your application and is the main entry point for authentication operations.
+    clientId and clientSecret: These are application credentials that you register in the Azure portal.
+    tenantId: This identifies your Azure AD tenant.
+    scopes: The requested permissions. In this case, https://graph.microsoft.com/.default requests the default set of permissions for Microsoft Graph.
+
+Important Notes:
+
+    Replace placeholders: Replace the placeholders (YOUR_CLIENT_ID, YOUR_CLIENT_SECRET, YOUR_TENANT_ID) with your actual application credentials.
+    Error Handling: Implement proper error handling (e.g., handle exceptions like MsalServiceException) to gracefully handle authentication failures.
+    Security: Store your client secret securely. Avoid hardcoding it directly in your application. Consider using Azure Key Vault or other secure storage mechanisms.
+
+This code provides a basic framework for acquiring an access token. You can then use this token to make authenticated requests to the Microsoft Graph API.
+
+In the next step, we can explore how to use this access token to interact with SharePoint data.
+
+Do you have any questions about this initial code snippet or would you like to proceed to the next step?
+
+- Yes, I think that's a good exposition as far as that goes, and we should go on to looking at how to retrieve information from the Sharepoint using MS Graph now
+
+Okay, let's dive into retrieving information from SharePoint using Microsoft Graph and the access token we obtained.
+
+1. Install the Microsoft Graph Client Library:
+Bash
+
+dotnet add package Microsoft.Graph
+
+2. Make a GraphServiceClient instance:
+Code snippet
+
+using Microsoft.Graph;
+
+// ... (GetAccessTokenAsync method as shown previously) ...
+
+public async Task<IGraphServiceClient> GetGraphServiceClientAsync()
+{
+    string accessToken = await GetAccessTokenAsync();
+    return new GraphServiceClient(new DelegateAuthenticationProvider(
+        requestMessage => 
+        {
+            requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+            return Task.CompletedTask;
+        }));
+}
+
+3. Retrieve SharePoint List Items:
+Code snippet
+
+public async Task<IList<ListItem>> GetSharePointListItemsAsync(string listId)
+{
+    IGraphServiceClient graphClient = await GetGraphServiceClientAsync();
+
+    var listItems = await graphClient.Sites["<your_site_id>"].Lists[listId].Items
+        .Request()
+        .GetAsync();
+
+    return listItems.ToList(); 
+}
+
+    Replace placeholders:
+        Replace <your_site_id> with the ID of your SharePoint site.
+        You can find the site ID in the SharePoint site URL.
+
+Explanation:
+
+    GraphServiceClient: This class provides methods for interacting with the Microsoft Graph API.
+    DelegateAuthenticationProvider: This allows you to provide a custom authentication handler. We use it to attach the access token to the HTTP requests.
+    Sites["<your_site_id>"].Lists[listId].Items: This represents the endpoint for retrieving list items from a specific list within a SharePoint site.
+    Request(): This method allows you to configure the request (e.g., filtering, sorting, expanding).
+    GetAsync(): This method executes the request and returns a collection of ListItem objects.
+
+Further Considerations:
+
+    Error Handling: Implement robust error handling to gracefully handle potential issues such as network errors, invalid access tokens, or API rate limits.
+    Pagination: If a list contains a large number of items, use the skip and top parameters in the Request() method to paginate through the results.
+    Filtering and Sorting: Use the $filter, $orderby, and $expand query parameters to filter, sort, and expand related data in your requests.
+
+This example demonstrates a basic approach to retrieving SharePoint list items using the Microsoft Graph API and MSAL.NET. You can adapt and extend this code to perform various operations on SharePoint data, such as creating new items, updating existing items, and working with files.
+
+Do you have any specific questions about this code or would you like to explore other SharePoint operations?
+
+Maybe you could show me (and list the names of) some common MS Graph and Sharepoint operations (with at least small snippets of code) so I can get the feel for it and an overview?
+
+Certainly! Here are some common Microsoft Graph operations for interacting with SharePoint, along with code snippets to illustrate each:
+
+1. Create a new list item
+Code snippet
+
+// Assuming you have the GraphServiceClient (as shown in the previous example)
+
+var newItem = new ListItem
+{
+    Title = "New Item Title"
+};
+
+var createdItem = await graphClient.Sites["<your_site_id>"].Lists[listId].Items
+    .Request()
+    .AddAsync(newItem);
+
+2. Update an existing list item
+Code snippet
+
+// Assuming you have the list item ID
+string itemId = "1"; 
+
+var updatedItem = new ListItem
+{
+    Title = "Updated Item Title"
+};
+
+await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
+    .Request()
+    .UpdateAsync(updatedItem);
+
+3. Delete a list item
+Code snippet
+
+await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
+    .Request()
+    .DeleteAsync();
+
+4. Upload a file to a document library
+Code snippet
+
+// Assuming you have the file path and library ID
+string filePath = @"C:\path\to\your\file.docx";
+string libraryId = "your_library_id";
+
+using (var stream = new FileStream(filePath, FileMode.Open))
+{
+    await graphClient.Sites["<your_site_id>"].Drive.Root
+        .ItemWithPath($"/{libraryId}/{Path.GetFileName(filePath)}")
+        .Content
+        .Request()
+        .PutAsync<DriveItem>(stream);
+}
+
+5. Download a file from a document library
+Code snippet
+
+// Assuming you have the file path in SharePoint
+string filePathInSharePoint = "/Documents/your_file.docx";
+
+using (var stream = new MemoryStream())
+{
+    await graphClient.Sites["<your_site_id>"].Drive.Root
+        .ItemWithPath(filePathInSharePoint)
+        .Content
+        .Request()
+        .GetAsync(stream);
+
+    // Save the downloaded file to your local disk
+    using (var fileStream = new FileStream(@"C:\path\to\save\file.docx", FileMode.Create, FileAccess.Write))
+    {
+        stream.Position = 0;
+        await stream.CopyToAsync(fileStream);
+    }
+}
+
+6. Get list properties
+Code snippet
+
+var list = await graphClient.Sites["<your_site_id>"].Lists[listId]
+    .Request()
+    .GetAsync();
+
+Console.WriteLine($"List Title: {list.Title}");
+Console.WriteLine($"List Description: {list.Description}");
+// ... other list properties
+
+These examples provide a basic overview of some common SharePoint operations using the Microsoft Graph API. You can further explore and customize these operations based on your specific requirements.
+
+I hope these code snippets give you a better understanding of how to interact with SharePoint using Microsoft Graph and C#.
+
+Do you have any specific scenarios in mind that you'd like to explore further? I'm happy to provide more tailored examples and guidance.
+
+I think I'll come back to it when I have digested and properly looked at what you have showed me so far. One question I would maybe like to ask is if I would like to send a Teams message to a certain user that their installation has been completed or something like that.
+
+You're right, sending a Teams message using the Microsoft Graph API requires a few more steps and considerations.
+
+Here's a basic outline of how you can send a message to a user in Teams:
+
+1. Acquire an Access Token (with appropriate permissions):
+
+    You'll need to acquire an access token with the ChatMessage.Send permission.
+    Important: Ensure that the user granting the permissions has the necessary permissions within their organization to send messages in Teams.
+
+2. Identify the Recipient:
+
+    You'll need to identify the recipient of the message. This could be:
+        A user's ID
+        A group ID
+        A channel ID
+
+3. Construct the Message Payload:
+
+    Create a JSON object representing the chat message, including the message content, recipient information, and any other desired properties (e.g., importance).
+
+4. Send the Message:
+
+    Use the GraphServiceClient to make a POST request to the appropriate Teams API endpoint to send the message.
+
+Example Code Snippet (Conceptual):
+Code snippet
+
+using Microsoft.Graph;
+
+// ... (Acquire Access Token with ChatMessage.Send permission) ...
+
+// Example: Send a message to a user 
+string userId = "user_id"; // Replace with the user's ID
+string messageContent = "Hello from your C# application!";
+
+var chatMessage = new ChatMessage
+{
+    Body = new ItemBody
+    {
+        Content = messageContent,
+        ContentType = BodyType.Text 
+    }
+};
+
+await graphClient.Users[userId].Chats 
+    .Request()
+    .PostAsync(chatMessage); 
+
+Important Notes:
+
+    Permissions: Ensure that your application has the necessary permissions to send messages in Teams. This typically requires user consent.
+    Error Handling: Implement robust error handling to catch potential issues (e.g., invalid user ID, insufficient permissions, network errors).
+    Rate Limits: Be mindful of Microsoft Graph API rate limits to avoid throttling.
+    Teams API Documentation: Refer to the official Microsoft Graph documentation for the latest information on Teams APIs, including detailed information on message properties, available endpoints, and best practices.
+
+This provides a basic framework for sending Teams messages using the Microsoft Graph API.
+
+I recommend exploring the Microsoft Graph documentation thoroughly to understand the available options and customize the message content and delivery according to your specific requirements.
+
+Do you have any further questions about sending Teams messages or would you like to explore other aspects of Microsoft Graph and SharePoint?
+
+One quick follow-up: Could Rx.Net or some library like that be used to good effect in these kind of applications and simplify some code and workflow?
+
+You're absolutely right! Rx.NET can be incredibly beneficial when working with asynchronous operations and streams of data, like those often encountered when interacting with APIs like Microsoft Graph.  
+
+Here are some potential use cases for Rx.NET in your SharePoint integration:
+
+    Handling asynchronous API calls: Rx.NET provides operators like FromAsync and ObserveOn that can help you manage asynchronous operations efficiently, such as making multiple API calls concurrently or handling potential delays.
+    Processing streams of data: If you're dealing with large datasets from SharePoint (e.g., retrieving a large number of list items), Rx.NET can help you process the data stream in a more efficient and reactive manner. You can use operators like Buffer, Window, and Scan to process data in chunks or perform aggregations.   
+
+    Handling events: If you need to react to changes in SharePoint data (e.g., new items added to a list), Rx.NET can be used to create event streams and subscribe to notifications.
+    Error handling and retries: Rx.NET provides powerful operators for handling errors, such as Retry, RetryWhen, and Catch. This can be invaluable when dealing with potential network issues or transient errors when interacting with the Microsoft Graph API.
+
+Example (Conceptual - Handling a stream of list items):
+Code snippet
+
+// Assuming you have a method to fetch pages of list items asynchronously
+public async Task<IEnumerable<ListItem>> GetListItemsAsync(string listId, int skip = 0, int top = 100) 
+{ 
+    // ... (Your existing logic to fetch a page of list items) ... 
+}
+
+// Create an observable sequence to fetch all list items
+IObservable<ListItem> listItemsObservable = Observable.Create<ListItem>(async observer => 
+{
+    int skip = 0;
+    const int pageSize = 100;
+
+    while (true) 
+    {
+        var page = await GetListItemsAsync(listId, skip, pageSize); 
+        foreach (var item in page) 
+        {
+            observer.OnNext(item); 
+        }
+
+        if (page.Count < pageSize) 
+        { 
+            break; 
+        }
+
+        skip += pageSize; 
+    }
+
+    observer.OnCompleted(); 
+    return Disposable.Empty; 
+});
+
+// Subscribe to the observable and process the list items
+listItemsObservable
+    .SubscribeOn(Scheduler.Default) 
+    .ObserveOn(SynchronizationContext.Current) 
+    .Subscribe(item => 
+    {
+        // Process each list item 
+    });
+
+This example demonstrates how to create an observable sequence to fetch all list items from a SharePoint list, allowing you to process the items asynchronously and handle the stream of data more effectively.
+
+I encourage you to explore the Rx.NET library and experiment with its operators to see how it can improve the efficiency, maintainability, and responsiveness of your SharePoint integration applications.
+
+Do you have any specific scenarios in mind where you think Rx.NET could be particularly beneficial for your SharePoint integration? I'd be happy to discuss those in more detail.
+
+}}}
+
 - Own exception-type for Updater (=same as in Core)
 - error-code handling
 
@@ -120,6 +463,89 @@ guid
     .
     xxxx
 /me  #Graph
+
+}}}
+install + use C#/F# in Jupyter(++)/Polyglot Notebooks {{{
+
+- Great! I have asked the same question before, but it was in a different thread or conversation so I'll have to ask it again (the answer was very good by the way, but I didn't have a chance to write it down that time):
+
+- What if I wanted the interactive experience of a Jupyter Notebook (i.e. being able to mix markup, text and documentation, and code) but I wanted to use F# (and sometimes maybe also C#). I think Notebook is such a good experience for testing out programming code. How could I accomplish that in Jupyter Notebook or something giving me a Notebook-like experience?
+
+You're right, using Jupyter Notebooks with F# is a fantastic way to experiment, learn, and document your code.
+
+Here's how you can achieve this:
+
+1. Install Necessary Components:
+
+    Install .NET SDK: Ensure you have the .NET SDK installed on your system. You can download it from the official .NET website.
+
+    Install Jupyter:
+        You can install Jupyter using pip:
+        Bash
+
+pip install jupyter
+
+Or through Anaconda (if you have it installed):
+Bash
+
+    conda install -c conda-forge jupyter
+
+Install the F# kernel for Jupyter:
+
+    Install the dotnet-interactive package:
+    Bash
+
+dotnet tool install -g dotnet-interactive 
+
+Register the F# kernel with Jupyter:
+Bash
+
+        dotnet try jupyter install 
+
+2. Launch Jupyter Notebook:
+
+    Open a terminal or command prompt and run:
+    Bash
+
+    jupyter notebook
+
+3. Create a new F# notebook:
+
+    In the Jupyter Notebook interface, click "New" and select "F#".
+
+4. Start coding!
+
+    You can now start writing and executing F# code within the notebook cells.
+    Jupyter Notebook provides a rich environment for interactive coding, including:
+        Code execution and output display
+        Markdown cells for documentation, notes, and explanations
+        Rich output formatting (e.g., tables, plots)
+        Code completion and other helpful features
+
+Key Advantages:
+
+    Interactive Environment: The Jupyter Notebook environment is highly interactive, allowing you to experiment with code, see immediate results, and easily modify and rerun code cells.
+    Documentation and Visualization: You can seamlessly integrate code with Markdown cells to document your work, add explanations, and include visualizations.
+    Code Organization: Notebooks provide a structured way to organize your code, making it easier to read, understand, and share.
+
+I hope this guide helps you get started with using F# in Jupyter Notebooks. If you have any further questions or encounter any issues during the setup or usage, feel free to ask!
+
+I'm ready for your next question. 😊
+
+Great. A quick follow-up: I remember from the answer I got when I asked the question previously also mentioned a community-driven version of Notebook, but I cannot quite remember the name of it. Do you know which one I'm talking about?
+----
+Great. A quick follow-up (concerning using F# in Notebooks): I remember from the answer I got when I asked the question previously also mentioned a community-driven version of Notebook, but I cannot quite remember the name of it. Do you know which one I'm talking about? Also there is something called 'Multilang Notebooks' or something similar for the DotNet platform, am I correct?
+
+You're right, there is a community-driven alternative to Jupyter Notebooks called nteract.
+
+    nteract is a cross-platform, open-source interactive computing environment that supports multiple languages, including F#.
+    It focuses on a more user-friendly and modern interface compared to the classic Jupyter Notebook.
+
+Regarding "Multilang Notebooks" or similar concepts:
+
+    .NET Interactive: This is a core component within the .NET ecosystem. It allows you to create interactive notebooks and scripts that can execute .NET code (including C# and F#) within various environments, including Jupyter Notebooks.   
+
+Visual Studio Code with the Jupyter extension: VS Code provides excellent support for Jupyter Notebooks, including the ability to run and debug F# code within the notebook environment.
 
 }}}
 ../weblinks.txt
