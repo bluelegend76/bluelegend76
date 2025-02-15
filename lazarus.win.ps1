@@ -53,6 +53,12 @@ choco install nushell -y
 # choco install python -y
 choco install jupyter python3-virtualenv -y
 # choco install jupyterlab -y
+
+# Install DotNet Interactive
+dotnet tool install -g Microsoft.DotNet.Interactive
+# Register the DotNet Interactive kernel with Jupyter
+dotnet try jupyter install
+
 choco install clojure lein -y
 # pip install xonsh
 # wsl --install
