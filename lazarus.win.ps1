@@ -65,6 +65,24 @@ choco install obs-studio.install -y
 # choco install digikam -y
 choco install audacity -y
 
+# Find executable path for program 'gimp' in PowerShell
+# $files = Get-ChildItem -Path "C:\Program Files" -Recurse
+# $gimpFiles = $files | Where-Object {$_.Name -match "gimp"}
+# $gimpExe = $gimpFiles | Where-Object {$_.Extension -eq ".exe"}
+# Write-Host "GIMP Executable Path: " $gimpExe.FullName
+#    //
+# Get-ChildItem -Path "C:\Program Files" -Recurse |
+#         Where-Object {$_.Name -match "gimp\.exe"} |
+#         Select-Object -First 1 |
+#         Resolve-Path
+#
+# Set-Alias -Name vlc "C:\Program Files\VideoLAN\VLC\vlc.exe"
+# Set-Alias -Name gimp "C:\Program Files\GIMP 2\bin\gimp-2.10.exe"
+
+# Enable better tab-completion in PowerShell
+Install-Package -Name PSReadLine -Scope CurrentUser
+Import-Module PSReadLine
+
 choco install azure-cli -y
 
 # C# Interactive in PowerShell
@@ -120,6 +138,7 @@ cd ~
 # New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
 New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
 New-Item -ItemType SymbolicLink -Path Desktop\Dashboard.Empire.txt -Target .\RiderProjects\bluelegend76\rsc\data\lists\at\Dashboard.Empire.txt
+New-Item -ItemType SymbolicLink -Path Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Target .\RiderProjects\bluelegend76\Microsoft.PowerShell_profile.ps1
 LINK-IN VIM/ -> .vim/
 CLONE + ADD VUNDLE
 New-Item -ItemType SymbolicLink -Path .ideavimrc -Target .\RiderProjects\bluelegend76\.ideavimrc

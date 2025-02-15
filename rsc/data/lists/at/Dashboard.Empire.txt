@@ -13,6 +13,8 @@ PROGR ----
   PROGR.cm.txt
 Clangs (C, Cpp, CSharp, Dlang) ----
   TODO: INCLUDE INTO BLUELEGEND76
+Web/Mobile/Cloud ----
+  TODO --"--
 
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt

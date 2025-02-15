@@ -225,7 +225,6 @@ noremap <leader>uc ?\c
 nnoremap * *N:%s///gn<CR>
 nnoremap # #N:%s///gn<CR>
 " --
-" HACK: Change to nzzb / Nzzb
 nnoremap n nzz
 nnoremap N Nzz
 " --
@@ -304,6 +303,7 @@ nnoremap <C-S-PageUp> :tabmove -1<CR>
 nnoremap <C-S-PageDown> :tabmove +1<CR>
 nnoremap <leader>gf <C-W>gf
 " Add ,te for opening a new tab on current open buffer
+" TODO: MAXIMIZING + RESIZING WINDOWS/SPLITS
 
 " File-System Utilities  __
 "" GENERAL UTILITIES: RENAME
