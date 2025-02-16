@@ -213,7 +213,11 @@ XFCE4  TODO: SET WINCOMMANDS-TRIGGER TO WIN-KEY
 Fluxbox
 
 WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
-            ---- Taskbar
+        Launch PowerShell (with Admin. privileges)  __
+            w-x a
+                    Task-Explorer
+                        w-x t
+        Taskbar ----
                     Cycle through Apps in Taskbar
                         .
                         w-Tab
@@ -223,6 +227,21 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     Run App in Taskbar as Administrator
                         .
                         cs-Click app-icon
+                set focus to the taskbar
+                    w-t
+                run/change to app N on taskbar (*)
+                    w-num.
+                new instance app N on taskbar (*) @
+                    s-clicka apps taskbar-button
+            Run app (on taskb.(??)) as administrator (*) @
+                cs-click taskb-app
+            SHOW WIN-MENU FOR TASKBAR-APP/GROUP (*) @@
+                s-rmbclick taskb-app
+                go through(??) win. taskb.app's group (??/*) !!!!
+                    c-click grouped app's button
+                change to latest instance app N on taskbar / new instance app N on taskb. / run app N on taskb.
+            show jumplist for app N on taskbar ****** !!!!! @@!
+                wa-num.
         Show windows (persistent) + Select with Arrows
             ahold-Tab // w-Tab // ca-Tab
                 cycle through windows/elements (=in order opened) (*) @
@@ -232,7 +251,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 ----
                 move tile in focus (=on start-menu)  **
                     csa-arrows
-            media/gamebar, screenrec ----
+        media/gamebar, screenrec ----
                 record video screencast *
                     wa-r
                 record video =last 30 sec.s (*)
@@ -248,7 +267,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     c-ins
                 paste(alt.)
                     a-ins
-            window-managem. ----
+        window-managem. ----
                 maxim./minim. win. **
                     w-upp/ner
                 minim./maxim. all win.s
@@ -265,7 +284,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                     c-r / f5
                 zoom in/out
                     w-+/-
-            virtual desktops ----
+        virtual desktops ----
                 add virtual deskt. (*) @
                     cw-d (or D(??))  + go to task view (eg. w. 'task view'["small windows"] button)
                 switch virtual deskt.
@@ -273,7 +292,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 close curr. virt. deskt.
                     cw-f4
                 Create: Send window to other Desktop/V-Desktop
-            search, cortana ----
+        search, cortana ----
             Open Universal Search @(@)
                 w-s  #=searchbox/cortana, or file explorer?
                 show/activate startmenu (*)
@@ -284,25 +303,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 open cortana
                     a-c  #+in edge (=??)
                     (may need to be enabled in settings)
-
-            taskbar ----
-                set focus to the taskbar
-                    w-t
-                run/change to app N on taskbar (*)
-                    w-num.
-                new instance app N on taskbar (*) @
-                    s-clicka apps taskbar-button
-            Run app (on taskb.(??)) as administrator (*) @
-                cs-click taskb-app
-            SHOW WIN-MENU FOR TASKBAR-APP/GROUP (*) @@
-                s-rmbclick taskb-app
-                go through(??) win. taskb.app's group (??/*) !!!!
-                    c-click grouped app's button
-                change to latest instance app N on taskbar / new instance app N on taskb. / run app N on taskb.
-            show jumplist for app N on taskbar ****** !!!!! @@!
-                wa-num.
-
-            run ----
+        run ----
                 run-dialogue @
                     w-r
                     1. Launching Applications:
@@ -350,15 +351,14 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
 
             action center(*)  #(right on taskbar) "pratbubblan" (+vol, bluetooth etc(??)) @
                 w-a  #emails, appointments, computer's performance etc
-
         quickshutdown computer
             w-x uu
+        [+power-options, network-connections, disk-management (etc ...)]
         ----
         quicklink-menu(?)
             w-x
 
                 (+a-shift_left)
-
         keyb. + layout ----
             Change Keyboard layout (=x2 *) @
                 w-space (+a-lshift)
@@ -367,7 +367,7 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 Chin. ime on/off (@)  ___Hm
                     c-space(??)
                     [=with chinese language pack installed]
-
+        ----
             lock computer/switch account @
                 w-l
 
@@ -388,6 +388,8 @@ WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
                 ----
                 system properties dialog @ @@
                     w-pause/break
+            show system stats and specs
+                w-x y
 
             choose presentation display
                 w-p
@@ -415,14 +417,14 @@ narrator(*)[##]  !! @@
                 cw-ent  #browser + text documents
                 [+setting: Ease of Access > Narrator
                  & toggle switch to On]
-            Basic Navigation & Interaction ----
+        Basic Navigation & Interaction ----
                 Narrator Key + Tab: Move to the next focusable item (e.g., button, text box).
                 Narrator Key + Shift + Tab: Move to the previous focusable item.
                 Narrator Key + Enter: Activate the current item (e.g., click a button, select a menu item).
                 Narrator Key + Spacebar: Toggle Scan Mode. In Scan Mode, you can navigate items more granularly.
                 Narrator Key + R: Read the current item.
                 Narrator Key + C: Read the current time and date.
-            Advanced Navigation & Interaction ----
+        Advanced Navigation & Interaction ----
                 Narrator Key + H: Read headings in a document.
                 Narrator Key + L: Read links on a webpage.
                 Narrator Key + F: Read the current focus.
@@ -430,19 +432,19 @@ narrator(*)[##]  !! @@
                 Narrator Key + End: Go to the end of the current item.
                 Narrator Key + Page Up: Move up one page.
                 Narrator Key + Page Down: Move down one page.
-            Reading & Text Manipulation ----
+        Reading & Text Manipulation ----
                 Narrator Key + M: Start reading from the current position.
                 Ctrl: Stop reading.
                 Narrator Key + R: Read the current item.
                 Narrator Key + C: Read the current time and date.
                 Narrator Key + X: Repeat the last phrase spoken by Narrator.
-            Scan Mode ----
+        Scan Mode ----
             Narrator Key + Spacebar: Toggle Scan Mode on/off.
             Arrow Keys: Navigate through items in Scan Mode.
             Enter: Activate the current item in Scan Mode.
-            Customization ----
+        Customization ----
                 Narrator Key + Windows Key + U: Open Narrator settings.
-            Tips & Tricks ----
+        Tips & Tricks ----
                 Learn the Scan Mode commands: Scan Mode provides more precise control over navigation.
                 Customize Narrator settings: Adjust voice speed, volume, and other settings to your preference.
                 Explore Narrator commands: Experiment with different commands to find what works best for you.
@@ -1207,7 +1209,7 @@ foxit reader (win = supports dark-mode)
 
                 To check the default keyboard shortcuts, click Help menu > Keyboard Mapping. Some particularly important ones are listed here:
 
-                File Keys ----
+        File Keys ----
                 Action 	Shortcut
                 Open File 	Command + O
                 Close File 	Command + W

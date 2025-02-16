@@ -2,8 +2,8 @@ ref/lang/Langs1Refs.txt
 cd ../ref/lang/
 
 Add Rhetoric and Speeches(!!)
-    Abraham Lincoln
-    John F. Kennedy
+    A. Lincoln
+    J.F. Kennedy
 
   sv.thes.svsyn.txt
     sv.words.saol11-1991.txt

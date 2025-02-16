@@ -145,9 +145,8 @@ most popular libraries and tools.
 
 Some of the biggest Python libraries
 included in Anaconda are Numpy,
-         pandas, and Matplotlib,
-         though the full 1000+ list
-         is exhaustive.
+pandas, and Matplotlib, though
+the full 1000+ list is exhaustive.
 
 Anaconda thus lets us hit the ground
 running with a fully stocked data
