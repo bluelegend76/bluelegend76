@@ -295,7 +295,7 @@ vnoremap <F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-dic
 vnoremap <S-F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-phrasebook.pdf &<CR><CR>gv
 
 
-" TODO: Add 'Add file-path under cursor to buffer-list'
+" TODO: Add 'Add file-path under cursor to buffer-list' 
 " Windows, Splits, Tabs  __
 " 'Vertical Ripple-Split'
 nnoremap <C-W>V <C-W>v<C-W><C-W><C-F>
