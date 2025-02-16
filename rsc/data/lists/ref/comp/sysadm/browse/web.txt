@@ -69,8 +69,7 @@ Firefox  @
                     save open tabs as bookmarks (=in directory)  cs-d
                     bookmark-toolbar  -b
                     organize bookmarks  cs-o
-
-                    ----Tabs-Navigation--- **
+        ----Tabs-Navigation--- **
                     Search in open Tabs ***(*)      % search
                     Flip between current/last
                       Tab // list recent Tabs ****  c-tab(=tap) // t-cab(Hold*)
@@ -96,9 +95,7 @@ Firefox  @
                         --
                         in tagged               +
                         in suggestions(??/*)    ?
-                    
                     download-manager                cs-y
-
                     next/previous 'frame'           f6
 ffox devtools
 gsearch webtricks  [@@(@)]

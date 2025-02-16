@@ -67,9 +67,9 @@ choco install discord -y
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 choco install gimp -y
 choco install inkscape -y
-choco install obs-studio.install -y
-# choco install digikam -y
 choco install audacity -y
+choco install obs-studio.install -y
+# choco install digiKam -y
 
 # Find executable path for program 'gimp' in PowerShell
 # $files = Get-ChildItem -Path "C:\Program Files" -Recurse

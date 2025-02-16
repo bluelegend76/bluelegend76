@@ -6,8 +6,7 @@ Microsoft Teams  @
                   Feature
                   Desktop App
                   Web App
-
-                General ----
+        General ----
                 Show keyboard shortcuts
                     c-.
                 Go to Search
@@ -32,8 +31,7 @@ Microsoft Teams  @
                     c-= (cs-0) / c_-
                 Reset zoom level
                     c-0
-
-                Navigation ----
+        Navigation ----
                 Open Activity
                     c-1  cs-1
                 Open Chat
@@ -54,8 +52,7 @@ Microsoft Teams  @
                   cs-h  cs-f6
                 Go to prev. / next section
                   cs-f6
-
-                Messaging ----
+        Messaging ----
                 Start a new conversation
                     c-n  a-n
                 Go to compose box
@@ -72,8 +69,7 @@ Microsoft Teams  @
                     cs-i
                 Search current chat or channel messages
                     c-f
-
-                Meetings and calls ----
+        Meetings and calls ----
                 Accept video call
                     cs-a
                 Accept audio call
@@ -130,8 +126,7 @@ Microsoft Teams  @
                     sa-j
                 Go to suggested time
                     sa-s
-
-                Debug ---
+        Debug ---
                 Download diagnostic logs
                     csa-1
 Jitsi
@@ -158,13 +153,10 @@ Jitsi
                 0 - Focus on your video
                 1-9 - Focus on another person's video
 discord
-                ~/Dropbox/rsc/data/lists/ref/comp/discord-shortckeys.pdf
-
-                ---- Default Keybinds ----
-
-                Show Keyboard Shortcuts List  cs-7  # c-/
-
-                Messages ---- These shortcuts work when focused on a message.
+        ~/Dropbox/rsc/data/lists/ref/comp/discord-shortckeys.pdf
+        ---- Default Keybinds ----
+        Show Keyboard Shortcuts List  cs-7  # c-/
+        Messages ---- These shortcuts work when focused on a message.
         Edit Last Message  up  __
                 Edit Message  e
                 Delete Message  bs
@@ -174,8 +166,7 @@ discord
                 Copy Text  c-c
                 Mark Unread  a-Enter
                 Focus text area  Esc
-
-                Navigation ----
+        Navigation ----
                 Navigate between servers  ca-up / ca-down
                 Navigate between channels  a-up / a-down
                 Navigate forward and backward in page history  a-left / a-right
@@ -186,14 +177,12 @@ discord
                 Toggle QuickSwitcher  c-k
                   Create or join a server  cs-n
                 Start share of current window  cs-n  #In Linux
-
-                Drag And Drop ---- These shortcuts work when focused on a draggable item
+        Drag And Drop ---- These shortcuts work when focused on a draggable item
                 Start Drag and Drop  c-d
                 Move  up / down
                 Drop item  Space / Enter
                 Cancel  Esc
-
-                Chat ----
+        Chat ----
                 Mark server read  s-Esc
                 Mark channel as read  Esc
                 Create a private group  cs-t
@@ -208,15 +197,13 @@ discord
                 Jump to oldest unread message  s-PgUp
                 Focus text area  any key
                 Upload a file  cs-u
-
-                Voice And Video ----
+        Voice And Video ----
                 Toggle mute  cs-m
                 Toggle deafen  cs-d
                 Answer incoming call  c-Enter
                 Decline incoming call  Esc
                 Start call in private message or group  csg-b  # c-'
-
-                Miscellaneous ----
+        Miscellaneous ----
                 Get help  cs-h
                 Search  c-f
 Google Meet
@@ -502,6 +489,9 @@ Shotwell  @@
                     ----
 
                 The library directory (**(!)) ; Where Sh.w. stores|looks for y. Images (=is usually the Pictures directory in your home directory,,  Set in Pref.s)
+digikam
+        .
+        .
 emacs im-viewer  @
                 . "L =" rotate, move around, resize, image(??) html gallery
                 - Run Imag.(dired?) on im. fr. w. in Em. (*(??))
@@ -758,7 +748,7 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
 
                                             playlist-jump `playlist-filter "filename$.mp4"`
                                             By experimenting with different patterns, you can create powerful filters to find specific files in your playlist.
-                    mpv console
+        mpv console
                                             Could you give me a list of commands that can be run in the mpv console?
 
 
@@ -808,7 +798,7 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                                             load-script <script>: Loads a Lua script.
                                             set property <property> <value>: Sets a specific property.
                                             This is just a partial list of the available commands. For more detailed information and a complete list, you can refer to the mpv documentation or use the help command within the mpv console itself.
-                    Mpv Lua
+        Mpv Lua
                                             Could you give me an example of a Lua script that could be run with load-script (i.e. showing me some code), and give me some interesting ideas of things that could be done? It seems like an interesting and powerful feature.
 
 
@@ -930,8 +920,8 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                                             Use a linter: A linter can help you identify errors and improve code quality.
                                             Experiment and explore: Don't be afraid to try different approaches and experiment with the features of Lua Teal or Fennel.
                                             By leveraging the power of Lua Teal or Fennel, you can create even more sophisticated and efficient mpv scripts.
-                    ======
-                    Player Controls ----  ____
+        ======
+        Player Controls ----  ____
                             .
                             play previous / next in playlist  < / > | Ent  next/prev(multimedia)
                             pause/play  p | Space  play(multimedia)
@@ -948,7 +938,7 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                             go back / forw. 10 seconds  mwh-roll up/down
                             go back / forw. 1 minute  down / up
                             go back / forw. 10 minutes  s-PgUp / s-PgDn
-                    Subtitle Manipulation ----
+        Subtitle Manipulation ----
                             .
                             go to next / previous frame with subtitles  c-right / c-left
                             display / hide subtitles for curr. playing media  v
@@ -964,7 +954,7 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                             s-r
                                 Shift the subtitle placement in the video downwards.
                                     U   Switch the currently active subtitle to a compatible SubStation Alpha format.
-                    Playback Controls ----
+        Playback Controls ----
                             .
                             volume up / down  * / '/'  0 / 9  mwheel right / left
                                 audio mute  m
@@ -988,7 +978,7 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                                     Take a screenshot of the current player window.
                                 c_+ / c_-
                                     Increase / Decrease audio delay by 100 milliseconds.
-                    Picture Controls ----
+        Picture Controls ----
                             .
                                     Shift + A   Force a different aspect ratio for the currently playing media.
                                     D   Toggle the realtime video deinterlacer.
@@ -1011,7 +1001,7 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                                     Alt +   Zoom into the currently playing media.
                                     Alt -   Zoom out of the currently playing media.
                                     Alt + Backspace Restore the original position and zoom of the picture.
-                    Mouse-Specific Controls ----
+        Mouse-Specific Controls ----
                                 .
                             Right Click
                                 Toggle the pause function.
@@ -1111,11 +1101,11 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
 
                             a-BACKSPACE
                                    Reset the pan/zoom settings.
-                    ---- ****
-                    F8     Show the playlist and the current position in it (useful only if a UI window is used,  broken  on the terminal).
-                    F9      Show the  list of audio and subtitle streams (useful only if a UI window  is used, broken on the terminal).
+        ---- ****
+        F8     Show the playlist and the current position in it (useful only if a UI window is used,  broken  on the terminal).
+                F9      Show the  list of audio and subtitle streams (useful only if a UI window  is used, broken on the terminal).
                     del    Cycle OSC visibility between never / auto (mouse-move) / always
-                    `      Show the console. (ESC closes it again. See CONSOLE.)
+        `      Show the console. (ESC closes it again. See CONSOLE.)
                         i and I
                                Show/toggle an overlay displaying statistics about the currently  playing  file  such  as  codec,
                                framerate, number of dropped frames and so on. See STATS for more information.
