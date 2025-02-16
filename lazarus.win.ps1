@@ -136,17 +136,18 @@ choco install azure-cli -y
 # I hope this helps! Let me know if you have any other questions.
 
 
-# Setting up symbolic links to the Config-files in Windows
+### Setting up symbolic links to the Config-files in Windows ###
 # TODO: Replace 'hard-coded' user with 'Select User' to link to
-# C:\Users\SEDAALB2> New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
-cd ~
 # C:\Users\SEDAALB2>
-# New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
+cd ~
 New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
+  # New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
 New-Item -ItemType SymbolicLink -Path Desktop\Dashboard.Empire.txt -Target .\RiderProjects\bluelegend76\rsc\data\lists\at\Dashboard.Empire.txt
+# PowerShell profile (setting custom functions, aliases, etc.)
 New-Item -ItemType SymbolicLink -Path Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Target .\RiderProjects\bluelegend76\Microsoft.PowerShell_profile.ps1
-LINK-IN VIM/ -> .vim/
-CLONE + ADD VUNDLE
+# Link in .vim directory (spell, colors, etc.)
+New-Item -ItemType SymbolicLink -Path .vim -Target .\RiderProjects\bluelegend76\vim
+# TODO: CLONE + ADD VUNDLE
 New-Item -ItemType SymbolicLink -Path .ideavimrc -Target .\RiderProjects\bluelegend76\.ideavimrc
 LINK-IN vscode-settings
 LINK-IN bluelegend.kdbx -> HOME (=????)

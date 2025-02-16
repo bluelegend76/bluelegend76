@@ -295,17 +295,26 @@ vnoremap <F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-dic
 vnoremap <S-F12> y:!evince -l '<C-R>"' ~/Empire/Doks/Lang/Shorth/en/stenogregg-phrasebook.pdf &<CR><CR>gv
 
 
+" TODO: Add 'Add file-path under cursor to buffer-list'
 " Windows, Splits, Tabs  __
 " 'Vertical Ripple-Split'
-nnoremap <c-w>V <c-w>v<c-w><c-w><c-f>
+nnoremap <C-W>V <C-W>v<C-W><C-W><C-F>
 " Alt+PgUp/PgDn = Move Tab Left/Right in Tabs-List
 nnoremap <C-S-PageUp> :tabmove -1<CR>
 nnoremap <C-S-PageDown> :tabmove +1<CR>
 nnoremap <leader>gf <C-W>gf
-" Add ,te for opening a new tab on current open buffer
-" TODO: MAXIMIZING + RESIZING WINDOWS/SPLITS
+" Open (+activate) new tab with current file
+nnoremap <leader>te :tabedit %<CR><C-L>
+" Maximize Curr. Split (hor. and vert.)
+nnoremap <A-M> <C-W>\|<C-W>_
+" Equalize size of all splits
+nnoremap <A-n> <C-w>=
+" Move to next split + maximize
+nnoremap <S-A-M> <C-W>w<C-W>\|<C-W>_
+
 
 " File-System Utilities  __
+" TODO: CONVERT TO PSHELL EQIVALENTS
 "" GENERAL UTILITIES: RENAME
 " nnoremap <leader>mv :!mv <C-R><C-A> <C-R><C-A>
 "" GENERAL UTILITIES: REMOVE
@@ -318,13 +327,12 @@ nnoremap <leader>gf <C-W>gf
 
 " Cutting/Pasting (from/to system clipboards)  __
 inoremap <leader>ii <C-R>+<CR>
-
 nnoremap <leader>ia "*p
 inoremap <leader>ia <C-R>*
 " inoremap <leader>ia <C-R><C-R>*
 
 " Macros/Actions  __
-" Run latest run macro **
+" Run latest run macro/ex-command **
 noremap Q @@
 " Run latest command/action, jump to next search-match + center
 nnoremap ö .nzz
