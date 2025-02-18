@@ -7,19 +7,21 @@ __
 # SHOPPING-LIST / BUYS ----
 - Samsung S25 Galaxy (phone)
 
+## PUSH FILES (ETC)
+- [ ] **PyDatawrangling**
+
 ## Study-List ----
+- [ ] **BROWSE CORE + UPDATER**
   - MS Graph, Sharepoint,  Swagger
 - MSAL + Identity
 - DotNet Core + Blazor; XUnit Patterns
   - Avalonia
-- **FILE-BROWSERS ETC [Reflists Overview]**
 - MLEARNING OVERVIEW
 - (SSH, veracrypt)
 - Py/F# Devops
   - Azure Devops (+CLI) w. Pipelines
   - Jupyter (+Pacman|PACKMAN)  [choco]
 - F#-Dev / bot, CodeScout
-  - PyDatawrangling
 - AndroidProgr (x2?)
 ----
 - XUnit Patterns

@@ -279,13 +279,10 @@ NEW: Highlight mouse-pointer  dclick left control
                 zoom in/out
                     w-+/-
         virtual desktops ----
-                add virtual deskt. (*) @
-                    cw-d (or D(??))  + go to task view (eg. w. 'task view'["small windows"] button)
-                switch virtual deskt.
-                    cw-left/right
-                close curr. virt. deskt.
-                    cw-f4
-                Create: Send window to other Desktop/V-Desktop
+                add virtual deskt.  cw-d  + go to task view (eg. w. 'task view'["small windows"] button)
+                switch virtual deskt.  cw-left/cw-right
+                close curr. virt. deskt.  cw-f4
+                CREATE: Send window to other Desktop/V-Desktop
         search, cortana ----
         Open Universal Search @(@)  w-s
                 show/activate startmenu (*)  w / c-esc
@@ -336,8 +333,7 @@ NEW: Highlight mouse-pointer  dclick left control
                 [=easily connect to external screens, bluetooth etc]
                 ('ease of access'-center =??)
                     w-u
-            action center(*)  #(right on taskbar) "pratbubblan" (+vol, bluetooth etc(??)) @
-                w-a  #emails, appointments, computer's performance etc
+            action center (right-side flyout)  w-a  #emails, appointments, computer's performance etc
         ----
         keyb. + layout ----
             Change Keyboard layout (=x2 *) @

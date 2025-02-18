@@ -79,7 +79,6 @@ nnoremap <leader>co :colors <C-D>
 
 " Input-Completion Shortcuts  __
 inoremap <leader><leader> <c-n>
-" Eller =BYT TILL CTRL+LEADER ***** !!!!!
 inoremap <a-up> <c-p>
 inoremap <a-down> <c-n>
 " --

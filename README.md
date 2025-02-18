@@ -1,7 +1,6 @@
 # -- bluelegend76 dotfiles and portable config --
 (including Empire Reflists system/structure)
-__
-# TODO1: Knick WinVim Color-files
+- [ ] **Add new Vim9 color-files to Vim-config**
 
 ## TODO:
 ~~- [ ] **Rename _vimrc to .winvimrc**~~
