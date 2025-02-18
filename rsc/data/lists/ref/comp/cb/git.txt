@@ -2635,6 +2635,7 @@ set foldmethod=indent foldlevel=2
             .
         checkout
             cherry
+            .
         cherry-pick
             citool
             clean
@@ -2662,8 +2663,10 @@ set foldmethod=indent foldlevel=2
         pull
         push
             range-diff
+            .
         rebase
             reflog  @
+            .
         remote
             repack
             replace

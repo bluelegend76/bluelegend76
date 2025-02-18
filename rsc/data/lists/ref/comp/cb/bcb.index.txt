@@ -1,9 +1,6 @@
 set foldmethod=indent foldlevel=2
 vim:fdm=indent:fdl=2:
 
-Bash2PShell
-            .
-            .
 META.PackMan: apt/aptitude/dpkg, pacman/yay, choco, nix  pip,  yum, yast, bsd
                 Install package
                     sudo apt -y install program
@@ -110,6 +107,7 @@ META.PackMan: apt/aptitude/dpkg, pacman/yay, choco, nix  pip,  yum, yast, bsd
                 Security Best Practices:
                     Learn about security best practices for package management.
                     This includes using trusted repositories, verifying package signatures, and keeping the package manager and system up-to-date.
+Bash2PShell
 META.Shell: bash, dash, termux, pshell, xonsh, nushell
 
 bcb (**(!))
