@@ -42,6 +42,7 @@ read -p "Start nm-tray(=applet) and make sure Network is up and Connected. +Pres
 
 echo "Now linking up bashrc, inputrc: ..."
 rm -f ~/.bashrc ~/.inputrc ~/.profile
+# TODO: CHANGE MAJOR CONFIG-PATH TO GITHUB/BLUELEGEND76
 ln -s ~/Dropbox/config/.bashrc
 ln -s ~/Dropbox/config/.inputrc
 ln -s ~/Dropbox/config/.profile

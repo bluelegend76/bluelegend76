@@ -8,7 +8,6 @@ __
 - Samsung S25 Galaxy (phone)
 
 ## PUSH FILES (ETC)
-- [ ] **PyDatawrangling**
 
 ## Study-List ----
 - [ ] **BROWSE CORE + UPDATER**

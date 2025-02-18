@@ -21,10 +21,9 @@
 
 ----
   **Add Greggrefs(pdf) + setup for GVim(windows)
-**IMPORTANT: SET UP LANGREFS 1 (EN, SV, Dan|Isl|Lat |Gre)**  __=2
-\+ Idioms, Sayings, etc
-- [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
+**LANGREFS (en, sv, dan|isl|Lat |Gre)**  __=2
 - [ ] Add C#-style Regex list
+- [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
 ----
 - [ ] Add FreeCommander accelerator-keys(!)
 
@@ -53,3 +52,5 @@
 ## Playlists.Perform
 Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]
+  - Every Breath You Take
+  - Incestvisan, Stjärnan och Karriären
