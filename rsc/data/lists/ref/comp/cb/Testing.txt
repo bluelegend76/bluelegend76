@@ -3,4 +3,490 @@ vim: fdm=indent:fdl=2:
 
 xunit cheatsheets
 ~/Empire/Doks/Comp/PROGR/test/framew/xunit/XunitPatts.txt
+                ----
+                https://gist.github.com/jonesandy/f622874e78d9d9f356896c4ac63c0ac3
+                ----
+                /*
+                    STRINGS
+                */
+                Assert.Equal(expectedString, actualString);
+                Assert.StartsWith(expectedString, stringToCheck);
+                Assert.EndsWith(expectedString, stringToCheck);
 
+                // Some can also take optional params
+                Assert.Equal(expectedString, actualString, ignoreCase: true);
+                Assert.StartsWith(expectedString, stringToCheck, StringComparison.OrdinalIgnoreCase);
+
+                /*
+                    COLLECTIONS
+                */
+                Assert.Contains(expectedThing, collection);
+                // Overload method for contains
+                Assert.Contains(collection, item => item.Contains(thingToCheck));
+                Assert.DoesNotContain(expectedThing, collection);
+                Assert.Empty(collection);
+                Assert.All(collection, item => Assert.False(string.IsNullOrWhiteSpace(item)));
+
+                /*
+                    NUMBERS
+                */
+                Assert.InRange(thingToCheck, lowRange, highRange);
+
+                /*
+                    EXCEPTIONS
+                */
+                Assert.Throws<T>(() => sut.Method());
+
+                /*
+                    TYPES
+                */
+                Assert.IsType<T>(thing);
+                Assert.IsAssignableFrom<T>(thing);
+                Assert.Same(obj1, obj2);
+                Assert.NotSame(obj1, obj2);
+
+                /*
+                    COOL XUNIT STUFF
+                */
+
+                // Inherit from the DataAttribute from xunit.sdk
+                public class CustomData : DataAttribute
+                {
+                        // Needs a method that returns an IEnumerable<object[]>
+                        public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+                        {
+                                yield return new object[] { data1, data2, data3 };
+                                yield return new object[] { data4, data5, data6 };
+                        }
+                }
+
+                public class TestClass
+                {
+                        [Theory]
+                        [CustomData]
+                        public void TestMethod(param1, param2, param3)
+                        {
+                            // Test using the 3 params
+                        }
+                }
+
+                // Create the fixture to share
+                public class TestSetup : IDisposable
+                {
+                        // Some stuff here
+                }
+
+                public class TestClass : IClassFixture<TestSetup>
+                {
+                        public TestClass(TestSetup setup)
+                        {
+                            // Initialise setup to share across test methods
+                        }
+                }
+
+                // Create collection to share across test classes
+                [CollectionDefinition("Name of Collection")]
+                public class TestCollection : ICollectionFixture<TestSetup>
+                {
+                }
+
+                [Collection("Name of Collection")]
+                public class TestClass2
+                {
+                        public TestClass2(TestSetup setup)
+                        {
+                            // Initialise setup
+                        }
+                }
+                ----
+                https://improveandrepeat.com/2018/03/xunit-net-cheat-sheet-for-nunit-users/
+                ----
+                xUnit.net Cheat Sheet for NUnit Users
+
+                I am currently learning the xUnit.net framework as part of a new project I work on. For the last years I used NUnit for my unit and integration tests. Conceptually those two libraries aren't that different. However, the naming of attributes and what is possible in sharing setup & clean-up code makes it worth to take a deeper look.
+                Installation
+
+                Create a class library project, right-click on References and select “Manage NuGet Packages...” to open the NuGet packages dialog. Search for xUnit and install this package:
+
+                We need the xunit package
+
+                To integrate xUnit.net into the Visual Studio Test runner you can install the package xunit.runner.visualstudio:
+
+                and we need the xunit.runner.visualstudio package
+
+                Check the extensive documentation and a list of all the xUnit.net NuGet packages to see how you can customize your installation.
+                Fact replaces Test
+
+                Every method annotated with Fact will be marked as a test and run by xUnit.net:
+
+                using Xunit;
+
+                public class FirstSteps
+                {
+                    [Fact]
+                    public void Add_1and2_gives3()
+                    {
+                        var result = Add(1, 2);
+                        Assert.Equal(3, result);
+                    }
+                }
+
+                This isn't a big change from the Test attribute you use in NUnit.
+
+                The class containing your tests must be public, but you don't need any attributes on them (like TestFixture for NUnit).
+                Ignoring Tests
+
+                If you don't want to execute a unit test you can skip it by providing a reason:
+
+                [Fact(Skip = "Thats how you ignore a test")]
+                public void ToIgnore()
+                {
+                    Assert.False(true);
+                }
+
+                Again, only a small change to the Ignore attribute you know from NUnit.
+                Theories instead of TestCases
+
+                One of the reasons I use NUnit is the possibility to reuse tests by using the TestCase attribute and change only the parameters to a method. xUnit.net offers the same functionality with Theory and InlineData:
+
+                [Theory]
+                [InlineData(0, 0, 0)]
+                [InlineData(1, 0, 1)]
+                public void Add_with_values(int first, int second, int expectedResult)
+                {
+                    var result = Add(first, second);
+
+                    Assert.Equal(expectedResult, result);
+                }
+
+                Asserts
+
+                The Assert class offers most of the features you know from the classic approach used by NUnit:
+
+                [Fact]
+                public void Asert_Examples()
+                {
+                    Assert.Equal(1, 1);
+                    Assert.Equal("London", "London");
+
+                    Assert.StartsWith("Lon", "London");
+                    Assert.EndsWith("on", "London");
+
+                    Assert.Contains("Lon", "London");
+                    Assert.DoesNotContain("Bern", "London");
+
+                    Assert.Empty(new List<int>());
+                    Assert.NotEmpty(new List<int>(){1,2,3});
+
+                    Assert.True(1 == 1);
+                    Assert.False(1 == 2);
+
+                    Assert.Null(null);
+                    Assert.NotNull("a");
+
+                    Exception ex = Assert.Throws<ArgumentNullException>(
+                                          () => MyMethod());
+
+                    Assert.InRange(5, 1, 10);
+                    Assert.NotInRange(-1, 0, 10);
+                }
+
+                [Fact]
+                public async Task Assert_Example_Async()
+                {
+                    await Assert.ThrowsAsync<Exception>(
+                                 () => throw new Exception("name"));
+                }
+
+                NUnit offers in addition the constraint model for assertions, which I find more readable. As far as I know there is no direct replacement in xUnit.net.
+                Setup & Clean-up
+
+                The biggest difference between xUnit.net and NUnit is in my opinion in the setup and clean-up code.
+                For every test: Constructor and Dispose
+
+                xUnit.net creates a new instance of the test class for every test it contains. This allows you to put the setup code you need in the constructor of your test class:
+
+                public class SetupBeforeEachTest
+                {
+                    public SetupBeforeEachTest()
+                    {
+                        // constructor for setup code
+                    }
+
+                    [Fact]
+                    public void MyTest1()
+                    {
+                        Assert.True(true);
+                    }
+                }
+
+                To clean-up after every test you use another basic functionality of .Net by implementing the IDisposable interface and putting your code in the Dispose() method:
+
+                public class CleanupAfterTest : IDisposable
+                {
+                    public CleanupAfterTest()
+                    {
+                        // constructor for setup code
+                    }
+
+                    public void Dispose()
+                    {
+                        // dispose for cleanup code
+                    }
+
+                    [Fact]
+                    public void MyTest1()
+                    {
+                        Assert.True(true);
+                    }
+                }
+
+                Once for a test class: ClassFixture
+
+                What can be done in NUnit with a simple OneTimeSetUp needs a lot more work in xUnit.net. To have a setup and clean-up method per test class, you need to create a fixture class to place your code and implement the IClassFixture<> interface on your test class:
+
+                public class MyDbSetupCode : IDisposable
+                {
+                    public MyDbSetupCode()
+                    {
+                        // setup code
+                    }
+
+                    public void Dispose()
+                    {
+                        // clean-up code
+                    }
+                }
+
+                public class MyTestClass : IClassFixture<MyDbSetupCode>
+                {
+                    private MyDbSetupCode classwideFixture;
+
+                    public MyTestClass(MyDbSetupCode fixture)
+                    {
+                        this.classwideFixture = fixture;
+                    }
+
+
+                    [Fact]
+                    public void MyTest1()
+                    {
+                        Assert.True(true);
+                    }
+                }
+
+                You only need to use your fixture class as a parameter in the constructor when you want to use it inside your test class. One benefit of this approach is that you can reuse your fixture class with other test classes – when a setup and clean-up after every class is working for you.
+                Once for multiple test classes: Collection Fixtures
+
+                Expensive setup or clean-up code may be run only once for a group of test classes. We can reuse the fixture class, create a class without code for the collection definition and then add the Collection attribute on all test classes that should use it:
+
+                [CollectionDefinition("Database collection")]
+                public class DatabaseCollection : ICollectionFixture<MyDbSetupCode>
+                {
+                    // A class with no code, only used to define the collection
+                }
+
+                [Collection("Database collection")]
+                public class CleanupAfterCollection
+                {
+                    MyDbSetupCode fixture;
+
+                    public CleanupAfterCollection(MyDbSetupCode fixture)
+                    {
+                        this.fixture = fixture;
+                    }
+
+                    [Fact]
+                    public void A() { }
+
+                    [Fact]
+                    public void B() { }
+                }
+
+                [Collection("Database collection")]
+                public class MoreTestsWithDatabase
+                {
+                    [Fact]
+                    public void C() { }
+                }
+
+                Conclusion
+
+                xUnit.net offers more or less the same functionality I know and use in NUnit. The biggest difference is the more flexible way to reuse the same setup and clean-up code, even when this comes with an increased complexity. The traditional way of Assert.* is nearly the same and lets you quickly write tests.
+
+                So far, I don’t have a reason to switch to xUnit.net, but this may change depending on how well it works with SpecFlow on .Net Core.
+                ----
+                https://github.com/cloudacademy/cheatsheet-xunit-assertions
+                ----
+                Cheatsheet - xUnit Assertions
+
+                using System;
+                using System.Collections.Generic;
+                using Xunit;
+                using Moq;
+
+                namespace CloudAcademy.Xunit.Cheatsheet.Tests
+                {
+                    public class ExampleTests : 
+                        IClassFixture<ExampleTests.TestSetUpClass>, // setup via injected class
+                        IDisposable // tearDown via Dispose()
+                    {
+                 
+                        public ExampleTests()
+                        {
+                            // TestFixture Setup code here
+                            Console.WriteLine("ExampleTests() constructor called");
+                        }
+
+                        public void SetFixture(TestSetUpClass setupClass)
+                        {
+                            // Setup via injected class
+                            setupClass.AnyFunction();
+                        }
+
+                        public void Dispose()
+                        {
+                            // Teardown
+                            Console.WriteLine("ExampleTests.Dispose() called...");
+                        }        
+
+                        /// <summary>
+                        /// Basic example.
+                        /// </summary>
+                        [Fact]
+                        public void BasicExample()
+                        {
+                            Assert.True(true);
+                        }
+
+                        /// <summary>
+                        /// Multiple asserts (common)
+                        /// </summary>
+                        [Fact]
+                        public void AssertionExamples()
+                        {
+                            Assert.Equal(1, 1);
+                            Assert.Equal("CloudAcademy", "CloudAcademy");
+                            Assert.Equal(1.95, 1.99, 1);
+                            Assert.Equal(new List<String> { "cloud", "academy" }, 
+                                         new List<String> { "CLOUD", "ACADEMY" }, 
+                                         StringComparer.CurrentCultureIgnoreCase);
+                 
+                            Assert.NotEqual("Cloud", "Academy");
+                            Assert.NotEqual(1, 2);
+                            Assert.NotEqual(new List<String> { "A", "B" }, 
+                                            new List<String> { "1", "2" });
+                 
+                            Assert.Contains("cloud", 
+                                            "CloudAcademy", 
+                                            StringComparison.CurrentCultureIgnoreCase);
+
+                            Assert.Contains("cloud", 
+                                            new List<String> { "Cloud", "Academy" }, 
+                                            StringComparer.CurrentCultureIgnoreCase);
+
+                            Assert.Empty(new List<String>());
+                            Assert.NotEmpty(new List<String> { "Cloud", "Academy" });
+                 
+                            Assert.True(true);
+                            Assert.False(false);
+                            Assert.Null(null);
+                            Assert.NotNull(new String("blah"));
+                 
+                            Assert.InRange(1, 0, 10);
+                            Assert.NotInRange(-1, 0, 10);
+                 
+                            Assert.IsType(Type.GetType("System.Int32"), 1);
+                            Assert.IsNotType(Type.GetType("System.Double"), 1);
+                  
+                            Assert.ThrowsAsync<Exception>(() => { throw new Exception(); });
+                            Assert.ThrowsAsync<ArgumentException>(() => { throw new ArgumentException(); });
+
+                            var obj1 = new object();
+                            var obj2 = new object();
+                 
+                            Assert.Same(obj1, obj1);
+                            Assert.NotSame(obj1, obj2);
+                        }        
+                 
+                        /// <summary>
+                        /// Parameterized test
+                        /// </summary>
+                        /// <param name="number"></param>
+                        /// <param name="expectedResult"></param>
+                        [Theory]
+                        [InlineData(1, true)]
+                        [InlineData(2, true)]
+                        [InlineData(3, false)]
+                        public void InlineDataExample(int number, bool expectedResult)
+                        {
+                            Assert.Equal(number < 3, expectedResult);
+                        }
+                 
+                        /// <summary>
+                        /// Properties returning IEnumerable can be used instead of InLineData.
+                        /// </summary>
+                        public static IEnumerable<object[]> SamplePropertyDataProperty
+                        {
+                            get
+                            {
+                                yield return new object[] { 1, true };
+                                yield return new object[] { 2, true };
+                                yield return new object[] { 3, false };
+                            }
+                        }
+                 
+                        /// <summary>
+                        /// PropertyData allow multiple calls of a test function with parameters defined in a property usign yield
+                        /// </summary>
+                        /// <param name="number">Test data</param>
+                        /// <param name="expectedResult">Expected Result</param>
+                        [Theory]
+                        [MemberData(nameof(SamplePropertyDataProperty))]
+                        public void PropertyDataExample(int number, bool expectedResult)
+                        {
+                            Assert.Equal(number < 3, expectedResult);
+                        }
+
+                        [Fact]
+                        /// <summary>
+                        /// Mocking example
+                        /// </summary>
+                        public void MoqExample()
+                        {
+                            var mock = new Mock<IMockTarget>();
+
+                            // Configure the mock to do something
+                            mock.SetupGet(x => x.PropertyToMock).Returns("CloudAcademy");
+
+                            // Demonstrate that the configuration works
+                            Assert.Equal("CloudAcademy", mock.Object.PropertyToMock);
+
+                            // Verify that the mock was invoked
+                            mock.VerifyGet(x => x.PropertyToMock);
+                 
+                        }
+                  
+                        # region Internal Classes
+                        public class TestSetUpClass
+                        {
+                            public void AnyFunction()
+                            {
+                                Console.WriteLine("TestSetUpClass.AnyFunction()");
+                            }
+                        }
+                        #endregion
+
+                        # region Internal Interfaces
+                        public interface IMockTarget
+                        {
+                            // Property declaration:
+                            string PropertyToMock
+                            {
+                                get;
+                                set;
+                            }            
+                        }
+                        #endregion
+                    }
+                }

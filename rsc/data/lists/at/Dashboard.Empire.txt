@@ -20,9 +20,6 @@ LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 Langs1 Ref-lists ----
   ../ref/lang/Langs1Refs.txt
-  ../../../../samples/lang/hm-eng_english-loose-coupling.report.txt
-        [add ___hm_eng=list/log-export 1]
-        fetch data | fetch-data
 
 ../weblinks.txt
 

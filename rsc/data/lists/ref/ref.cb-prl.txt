@@ -41,19 +41,33 @@ ScratchArea LIA 2/TruckCom Updater {{{
 
 MSAL, Graph, Sharepoint = Examples + Code {{{
 
-Great great. So the first step included (and you're free to show at least the outline of some code to clarify, that would be very helpful) is getting a Microsoft Identity (or MSAL) ID token, to be used to see if the user is authorized to access a Sharpoint (via MS Graph) to retrieve some information.
+- Great great. So the first step
+  included (and you're free to show
+  at least the outline of some code
+  to clarify, that would be very
+  helpful) is getting a Microsoft
+  Identity (or MSAL) ID token, to
+  be used to see if the user is
+  authorized to access a Sharepoint
+  (via MS Graph) to retrieve some
+  information.
 
-Okay, getting an access token using the Microsoft Authentication Library (MSAL) is the crucial first step for authenticating with Microsoft Graph and accessing SharePoint data.
+Okay, getting an access token using
+the Microsoft Authentication
+Library (MSAL) is the crucial first
+step for authenticating with
+Microsoft Graph and accessing
+SharePoint data.
 
-Here's a basic outline of how you can acquire an access token using MSAL in a C# application:
+Here's a basic outline of how you
+can acquire an access token using
+MSAL in a C# application:
 
-1. Install the MSAL.NET NuGet Package:
-Bash
+- 1. Install the MSAL.NET NuGet Package:
 
 dotnet add package Microsoft.Identity.Client
 
-2. Acquire an Access Token:
-Code snippet
+- 2. Acquire an Access Token:
 
 using Microsoft.Identity.Client;
 
@@ -80,34 +94,74 @@ public async Task<string> GetAccessTokenAsync()
 
 Explanation:
 
-    IConfidentialClientApplication: This class represents your application and is the main entry point for authentication operations.
-    clientId and clientSecret: These are application credentials that you register in the Azure portal.
-    tenantId: This identifies your Azure AD tenant.
-    scopes: The requested permissions. In this case, https://graph.microsoft.com/.default requests the default set of permissions for Microsoft Graph.
+- IConfidentialClientApplication:
+  This class represents your
+  application and is the main entry
+  point for authentication
+  operations.
+- clientId and clientSecret: These
+  are application credentials that
+  you register in the Azure portal.
+- tenantId: This identifies your
+  Azure AD tenant.
+- scopes: The requested
+  permissions. In this case,
+  https://graph.microsoft.com/.default
+  requests the default set of
+  permissions for Microsoft Graph.
 
 Important Notes:
 
-    Replace placeholders: Replace the placeholders (YOUR_CLIENT_ID, YOUR_CLIENT_SECRET, YOUR_TENANT_ID) with your actual application credentials.
-    Error Handling: Implement proper error handling (e.g., handle exceptions like MsalServiceException) to gracefully handle authentication failures.
-    Security: Store your client secret securely. Avoid hardcoding it directly in your application. Consider using Azure Key Vault or other secure storage mechanisms.
+- Replace placeholders: Replace the
+  placeholders (YOUR_CLIENT_ID,
+  YOUR_CLIENT_SECRET,
+  YOUR_TENANT_ID) with your actual
+  application credentials.
+- Error Handling: Implement proper
+  error handling (e.g., handle
+  exceptions like
+  MsalServiceException) to
+  gracefully handle authentication
+  failures.
+- Security: Store your client
+  secret securely. Avoid hardcoding
+  it directly in your application.
+  Consider using Azure Key Vault or
+  other secure storage mechanisms.
 
-This code provides a basic framework for acquiring an access token. You can then use this token to make authenticated requests to the Microsoft Graph API.
+This code provides a basic
+framework for acquiring an access
+token. You can then use this token
+to make authenticated requests to
+the Microsoft Graph API.
 
-In the next step, we can explore how to use this access token to interact with SharePoint data.
+In the next step, we can explore
+how to use this access token to
+interact with SharePoint data.
 
-Do you have any questions about this initial code snippet or would you like to proceed to the next step?
+Do you have any questions about
+this initial code snippet or would
+you like to proceed to the next
+step?
 
-- Yes, I think that's a good exposition as far as that goes, and we should go on to looking at how to retrieve information from the Sharepoint using MS Graph now
 
-Okay, let's dive into retrieving information from SharePoint using Microsoft Graph and the access token we obtained.
+- Yes, I think that's a good
+  exposition as far as that goes,
+  and we should go on to looking at
+  how to retrieve information from
+  the Sharepoint using MS Graph now
 
-1. Install the Microsoft Graph Client Library:
-Bash
+Okay, let's dive into retrieving
+information from SharePoint using
+Microsoft Graph and the access
+token we obtained.
+
+1. Install the Microsoft Graph
+Client Library:
 
 dotnet add package Microsoft.Graph
 
 2. Make a GraphServiceClient instance:
-Code snippet
 
 using Microsoft.Graph;
 
@@ -125,7 +179,6 @@ public async Task<IGraphServiceClient> GetGraphServiceClientAsync()
 }
 
 3. Retrieve SharePoint List Items:
-Code snippet
 
 public async Task<IList<ListItem>> GetSharePointListItemsAsync(string listId)
 {
@@ -138,37 +191,87 @@ public async Task<IList<ListItem>> GetSharePointListItemsAsync(string listId)
     return listItems.ToList(); 
 }
 
-    Replace placeholders:
-        Replace <your_site_id> with the ID of your SharePoint site.
-        You can find the site ID in the SharePoint site URL.
+Replace placeholders:
+
+- Replace <your_site_id> with the
+  ID of your SharePoint site.
+- You can find the site ID in the
+  SharePoint site URL.
+
 
 Explanation:
 
-    GraphServiceClient: This class provides methods for interacting with the Microsoft Graph API.
-    DelegateAuthenticationProvider: This allows you to provide a custom authentication handler. We use it to attach the access token to the HTTP requests.
-    Sites["<your_site_id>"].Lists[listId].Items: This represents the endpoint for retrieving list items from a specific list within a SharePoint site.
-    Request(): This method allows you to configure the request (e.g., filtering, sorting, expanding).
-    GetAsync(): This method executes the request and returns a collection of ListItem objects.
+- GraphServiceClient: This class
+  provides methods for interacting
+  with the Microsoft Graph API.
+- DelegateAuthenticationProvider:
+  This allows you to provide a
+  custom authentication handler. We
+  use it to attach the access token
+  to the HTTP requests.
+- Sites["<your_site_id>"].Lists[listId].Items:
+  This represents the endpoint for
+  retrieving list items from a
+  specific list within a SharePoint
+  site.
+- Request(): This method allows you
+  to configure the request (e.g.,
+  filtering, sorting, expanding).
+- GetAsync(): This method executes
+  the request and returns a
+  collection of ListItem objects.
+
 
 Further Considerations:
 
-    Error Handling: Implement robust error handling to gracefully handle potential issues such as network errors, invalid access tokens, or API rate limits.
-    Pagination: If a list contains a large number of items, use the skip and top parameters in the Request() method to paginate through the results.
-    Filtering and Sorting: Use the $filter, $orderby, and $expand query parameters to filter, sort, and expand related data in your requests.
+- Error Handling: Implement robust
+  error handling to gracefully
+  handle potential issues such as
+  network errors, invalid access
+  tokens, or API rate limits.
+- Pagination: If a list contains a
+  large number of items, use the
+  skip and top parameters in the
+  Request() method to paginate
+  through the results.
+- Filtering and Sorting: Use the
+  $filter, $orderby, and $expand
+  query parameters to filter, sort,
+  and expand related data in your
+  requests.
 
-This example demonstrates a basic approach to retrieving SharePoint list items using the Microsoft Graph API and MSAL.NET. You can adapt and extend this code to perform various operations on SharePoint data, such as creating new items, updating existing items, and working with files.
+This example demonstrates a basic
+approach to retrieving SharePoint
+list items using the Microsoft
+Graph API and MSAL.NET. You can
+adapt and extend this code to
+perform various operations on
+SharePoint data, such as creating
+new items, updating existing items,
+and working with files.
 
-Do you have any specific questions about this code or would you like to explore other SharePoint operations?
+Do you have any specific questions
+about this code or would you like
+to explore other SharePoint
+operations?
 
-Maybe you could show me (and list the names of) some common MS Graph and Sharepoint operations (with at least small snippets of code) so I can get the feel for it and an overview?
 
-Certainly! Here are some common Microsoft Graph operations for interacting with SharePoint, along with code snippets to illustrate each:
+- Maybe you could show me (and list
+  the names of) some common MS
+  Graph and Sharepoint operations
+  (with at least small snippets of
+  code) so I can get the feel for
+  it and an overview?
 
-1. Create a new list item
-Code snippet
+Certainly! Here are some common
+Microsoft Graph operations for
+interacting with SharePoint, along
+with code snippets to illustrate
+each:
+
+- 1. Create a new list item
 
 // Assuming you have the GraphServiceClient (as shown in the previous example)
-
 var newItem = new ListItem
 {
     Title = "New Item Title"
@@ -178,8 +281,7 @@ var createdItem = await graphClient.Sites["<your_site_id>"].Lists[listId].Items
     .Request()
     .AddAsync(newItem);
 
-2. Update an existing list item
-Code snippet
+- 2. Update an existing list item
 
 // Assuming you have the list item ID
 string itemId = "1"; 
@@ -193,15 +295,14 @@ await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
     .Request()
     .UpdateAsync(updatedItem);
 
-3. Delete a list item
-Code snippet
+- 3. Delete a list item
 
 await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
     .Request()
     .DeleteAsync();
 
-4. Upload a file to a document library
-Code snippet
+- 4. Upload a file to a document
+  library
 
 // Assuming you have the file path and library ID
 string filePath = @"C:\path\to\your\file.docx";
@@ -216,8 +317,8 @@ using (var stream = new FileStream(filePath, FileMode.Open))
         .PutAsync<DriveItem>(stream);
 }
 
-5. Download a file from a document library
-Code snippet
+- 5. Download a file from a
+  document library
 
 // Assuming you have the file path in SharePoint
 string filePathInSharePoint = "/Documents/your_file.docx";
@@ -238,8 +339,7 @@ using (var stream = new MemoryStream())
     }
 }
 
-6. Get list properties
-Code snippet
+- 6. Get list properties
 
 var list = await graphClient.Sites["<your_site_id>"].Lists[listId]
     .Request()
@@ -249,22 +349,53 @@ Console.WriteLine($"List Title: {list.Title}");
 Console.WriteLine($"List Description: {list.Description}");
 // ... other list properties
 
-These examples provide a basic overview of some common SharePoint operations using the Microsoft Graph API. You can further explore and customize these operations based on your specific requirements.
+These examples provide a basic
+overview of some common SharePoint
+operations using the Microsoft
+Graph API. You can further explore
+and customize these operations
+based on your specific
+requirements.
 
-I hope these code snippets give you a better understanding of how to interact with SharePoint using Microsoft Graph and C#.
+I hope these code snippets give you
+a better understanding of how to
+interact with SharePoint using
+Microsoft Graph and C#.
 
-Do you have any specific scenarios in mind that you'd like to explore further? I'm happy to provide more tailored examples and guidance.
+Do you have any specific scenarios
+in mind that you'd like to explore
+further? I'm happy to provide more
+tailored examples and guidance.
 
-I think I'll come back to it when I have digested and properly looked at what you have showed me so far. One question I would maybe like to ask is if I would like to send a Teams message to a certain user that their installation has been completed or something like that.
 
-You're right, sending a Teams message using the Microsoft Graph API requires a few more steps and considerations.
+- I think I'll come back to it when
+  I have digested and properly
+  looked at what you have showed me
+  so far. One question I would
+  maybe like to ask is if I would
+  like to send a Teams message to a
+  certain user that their
+  installation has been completed
+  or something like that.
 
-Here's a basic outline of how you can send a message to a user in Teams:
+You're right, sending a Teams
+message using the Microsoft Graph
+API requires a few more steps and
+considerations.
 
-1. Acquire an Access Token (with appropriate permissions):
+Here's a basic outline of how you
+can send a message to a user in
+Teams:
 
-    You'll need to acquire an access token with the ChatMessage.Send permission.
-    Important: Ensure that the user granting the permissions has the necessary permissions within their organization to send messages in Teams.
+- 1. Acquire an Access Token (with
+  appropriate permissions):
+
+- You'll need to acquire an access token with the ChatMessage.Send permission.
+- Important: Ensure that the user
+  granting the permissions has the
+  necessary permissions within
+  their organization to send
+  messages in Teams.
 
 2. Identify the Recipient:
 
@@ -382,19 +513,26 @@ Do you have any specific scenarios in mind where you think Rx.NET could be parti
 
 }}}
 
-- Own exception-type for Updater (=same as in Core)
+- Own exception-type for Updater (=same as in TCCore)
 - error-code handling
 
 [Note: When running in Debug-mode through Rider, the program is not System-User - I.e. create/use dummy-exe for testing purposes]
 
 SignalR  #for polling during install/download-process
 
-
 Graph [hämta en fil-url] + Hämta 
+    /me  #Graph
+
+Identity/Graph+Sharepoint--inspiration: TCCore klasss: SharePointHandler
+    create BatchRequest-Object
+    får url
+    + skickar in url 
+    SharePoint-client (+GetFileStream)
+      (och då kör vi en http-client)
 
 SharePoint
 Batch (generalla graph-anrop + slå ihop dem)
-PackageSync
+PackageSync  ___hm
 
 Setup HttpClient
 Setup Talk to Sharepoint
@@ -402,80 +540,84 @@ Core: Services (ServiceCollectionExtension.cs)
 TruckComCoreWindowsService
 TruckComCoreWebAPI
 
-
 TODO:PROGR
-    Te: 'General/More specific programming/CS-terms'
+.    Te: 'General/More specific programming/CS-terms' {{{
+guid
+  telematics
+}}}
+'handler'
 
-Controllers often corresponds 1-to-1 to ___
-    WeatherForecastController
-        +innehåller ofta olika metoder (GetWeatherForecast)
-    .
+Controllers often corresponds 1-to-1 to ___ {{{
     a set/collection of data related to a specific topic of interest
-    an endpoint(?)
+        an endpoint(??)
 
-controllers brukar delas upp så att ____
-    de har ett begränsat ansvarsområder
-        för klassen user
-        = user-controller
+    e.g. WeatherForecastController
+        +innehåller ofta olika metoder (GetWeatherForecast)
+}}}
+controllers brukar delas upp så att ____ {{{
+    de har ett begränsat ansvarsområde
+        t.ex. för en klass user => user-controller
     en egen controller för en entitet i en databas
     gruppera + validera indata (mm)
-
-man anropar aldrig en controller från en annan controller, utan istället från/via ___
-    .
-    en service (som plockar ut + omformaterar data för att sen kunna användas av en controll)
-
-services är ansvariga för att ____
+}}}
+man anropar aldrig en controller från en annan controller, utan istället från/via ___ {{{
+    en service (som plockar ut + omformaterar data för att sen kunna användas av en controller)
+}}}
+services är ansvariga för att ____ {{{
     leverera data till en controller
+}}}
+services kan läggas till 'automatiskt'/laddas till controllers genom att ___ (=anges hur) {{{
+    injiceras (dependency injection)
 
-services kan injiceras
+    specificeras/läggs till i konstruktorn
+}}}
+en endpoint är egentligen ___ {{{
+    en metod + controllern (=hela pathen)
 
-en endpoint är eg. en metod + controllern (=hela pathen)
+    en unik URL på en server  # 'sett från utsidan'
+    ung.= varje unik publik metod i controllers är en endpoint
+}}}
 
-Index|Install|Download-endpoints  =3 metoder i en controller / ...
-    vad är indata + vad ska returneras (=i omvänd ordning när skapar metoden)  +definiera t.ex. HttpGet("index")
+Index|Install|Download--endpoints  =3 metoder i en controller / ...
+    vad är indata + vad ska returneras (obs: i omvänd ordning när skapar metoden)  +definiera t.ex. HttpGet("index")
 
-Alla controllers ärver (som standard) från ___
-    .
+Alla controllers ärver (som standard) från ___ {{{
     ControllerBase
     exempel ...<ActionBase>
-
-HTTP status codes are easily used with ____
+                  ^
+                  +---------
+    skicka ut sträng, ActionBase (=standard, Ok är standard)
+}}}
+HTTP status codes are easily used/included with ____ {{{
     named methods, e.g. this.Ok(@"hejsan")
-        BadRequest(), NotFound()
-
-Använda templates för WebAPI, Controllers etc (i Rider)
-
-breakpoints
+    BadRequest(), NotFound(), ...
+}}}
+Using templates for WebAPI, Controllers etc (in Rider)
+tips on breakpoints (when/how to use) {{{
     vet inte hur en metod funkar
-        .
         =sätt en breakpoint i början av metoden
-    step over vs step into
-        .
-        oftast step over, om inte t.ex. 
 
-fördelen med unit testing
-    .
-    =du kan speca upp och köra en precis grej i koden
+    step over vs step into
+        oftast step over, om inte t.ex. 
+}}}
+fördelen med unit testing {{{
+    =du kan speca upp och köra precis en grej i koden
 
     [Fact]
     public void newmethod() {
 *     var s = this.sut.ToString();
     }
+}}}
 
-Exempel C# INLINE TESTING: Testa och se hur Math.Pow funkar
+Exempel C# 'INLINE TESTING': Testa och se hur Math.Pow funkar {{{
     [Fact]
     public void newmethod() {
 *     var pow = Math.Pow(3,5);
     }
+
     [+run debug + step over]
-
-guid
-
-'handler'
-    .
-    xxxx
-
-/me  #Graph
+    I så fall: Se till att referens till testramverket är inkluderat/angivet (+ta bort innan pushar upp)
+}}}
 
 }}}
 install + use C#/F# in Jupyter(++)/Polyglot Notebooks {{{

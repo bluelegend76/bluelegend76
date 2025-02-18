@@ -1,4 +1,25 @@
 
+https://dev.azure.com/tmhe/TMHMS-Development/_workitems/edit/256553  # First Work-Items
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater/pullrequest/91206
+    https://dev.azure.com/tmhe/_usersSettings/tokens
+
+# SW6 Backlog: 'Installer background service: First iteration'
+https://dev.azure.com/tmhe/TMHMS-Development/_backlogs/backlog/RnD-SW-6/Features
+
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Package-syncing.md&version=GBmain&_a=preview  # Syncing Sequence-Diagram + Markdown-code
+----
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing  # Pong(=Sequence)-diagram - Rendered
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Installer-Service.md&_a=preview  # more broken down overview
+    https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_search?text=mermaid&type=wiki&pageSize=25&filters=Project%7BTMHMS_TruckCom_Platform%7D  truckcom mermaid diagrams
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Package-syncing.md&version=GBmain&_a=preview
+----
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/TruckCom%20Project%20Wiki/10796/Production-computer-management
+https://dev.azure.com/tmhe/TMHMS-Development/_backlogs/backlog/RnD-SW-6/Features  # sw6 backlogs
+    https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing
+
+
+
 https://learn.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio?view=vs-2022
 https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-9.0
 https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2022
@@ -28,6 +49,35 @@ git-flow
 
 dlang redub
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.NET Interactive / Polyglot Notebooks: Docs ----
+https://github.com/dotnet/interactive
+https://github.com/dotnet/interactive/tree/main/docs
+
+https://tenor.com/search/ducks-lips-gifs?format=gifs
+
+https://www.amazon.com/OCaml-Very-Beginning-John-Whitington-ebook/dp/B00DJF1ZBQ/ref=books_storefront_desktop_mfs_ga_nc_rt2_01_7?_encoding=UTF8&pd_rd_w=caqy2&content-id=amzn1.sym.15e32121-0641-47c8-bf7e-6c80f0b78d63&pf_rd_p=15e32121-0641-47c8-bf7e-6c80f0b78d63&pf_rd_r=1GFGQBDBMWMGAXYTTVQD&pd_rd_wg=7RS9v&pd_rd_r=35566112-944b-4b12-affb-58ec1aced7a3
+
+Makes You Fluent
 
 sketgubbe/vändtia
   https://duckduckgo.com/?q=sketgubbe+v%C3%A4ndtia+kortspel&t=newext&atb=v466-1__&ia=web

@@ -7,125 +7,67 @@ Microsoft Teams  @
                   Desktop App
                   Web App
         General ----
-                Show keyboard shortcuts
-                    c-.
-                Go to Search
-                    c-e  ca-e
-                Show commands
-                    c-/  # cs-7
-                Open filter
-                    cs-f
-                Go to a specific team or channel
-                    c-g  cs-g
-                Open apps flyout
-                    c-' / c-`
-                Start a new chat
-                    c-n
-                Open Settings
-                    c-,  cs-,
-                Open Help
-                    F1  c-F1
-                Close
-                    Esc
-                Zoom in
-                    c-= (cs-0) / c_-
-                Reset zoom level
-                    c-0
+                Show keyboard shortcuts  c-.
+                Go to Search  c-e  ca-e
+                Show commands  c-/  # cs-7
+                Open filter  cs-f
+                Go to a specific team or channel  c-g  cs-g
+                Open apps flyout  c-' / c-`
+                Start a new chat  c-n
+                Open Settings  c-,  cs-,
+                Open Help  F1  c-F1
+                Close  Esc
+                Zoom in  c-= (cs-0) / c_-
+                Reset zoom level  c-0
         Navigation ----
-                Open Activity
-                    c-1  cs-1
-                Open Chat
-                    c-2  cs-2
-                Open Teams
-                    c-3  cs-3
-                Open Calendar  __
-                    c-4  cs-4
-                Open Calls
-                    c-5  cs-5
-                Open Files
-                    c-6  cs-6
-                Prev./Next list item
-                    a-up / a-down
-                Move selected team up / down
-                  cs-up / cs-down
-                Open the History menu
-                  cs-h  cs-f6
-                Go to prev. / next section
-                  cs-f6
+                Open Activity  c-1  cs-1
+                Open Chat  c-2  cs-2
+                Open Teams  c-3  cs-3
+                Open Calendar  __  c-4  cs-4
+                Open Calls  c-5  cs-5
+                Open Files  c-6  cs-6
+                Prev./Next list item  a-up / a-down
+                Move selected team up / down  cs-up / cs-down
+                Open the History menu  cs-h  cs-f6
+                Go to prev. / next section  cs-f6
         Messaging ----
-                Start a new conversation
-                    c-n  a-n
-                Go to compose box
-                    sa-c  sa-c
-                Expand compose box
-                    cs-x  cs-x
-                Send a message
-                    c-Enter
-                Start a new line
-                    s-Enter
-                Reply to a thread
-                    sa-r
-                Mark a message as important
-                    cs-i
-                Search current chat or channel messages
-                    c-f
+                Start a new conversation  c-n  a-n
+                Go to compose box  sa-c  sa-c
+                Expand compose box  cs-x  cs-x
+                Send a message  c-Enter
+                Start a new line  s-Enter
+                Reply to a thread  sa-r
+                Mark a message as important  cs-i
+                Search current chat or channel messages  c-f
         Meetings and calls ----
-                Accept video call
-                    cs-a
-                Accept audio call
-                    cs-s
-                Decline call
-                    cs-d
-                Start audio call
-                    cs-c
-                Start video call
-                    cs-u
-                End call
-                    cs-h
-                Toggle mute
-                    cs-m
-                Temporarily unmute
-                    c-Space
-                Announce raised hands (screen reader)
-                    cs-l
-                Raise or lower your hand.
-                    cs-k
-                Start screen share session
-                    cs-e
-                Toggle video
-                    cs-o
-                High motion screen share
-                    csa-t
-                Filter current list
-                    cs-f
-                Go to sharing toolbar
-                    cs-Space
-                Decline screen share
-                    cs-d
-                Accept screen share
-                    cs-a
-                Admit people from lobby notification
-                    cs-y
-                Open the Background settings menu
-                    cs-p
-                Schedule a meeting
-                    sa-n
-                Go to current time
-                    a-.
-                Go to prev. / next day/week
-                    ca-left / ca-right
-                View day
-                    ca-1
-                View workweek
-                    ca-2
-                View week
-                    ca-3
-                Save or send meeting request
-                    c-s
-                Join from meeting details
-                    sa-j
-                Go to suggested time
-                    sa-s
+                Accept video call  cs-a
+                Accept audio call  cs-s
+                Decline call  cs-d
+                Start audio call  cs-c
+                Start video call  cs-u
+                End call  cs-h
+                Toggle mute  cs-m
+                Temporarily unmute  c-Space
+                Announce raised hands (screen reader)  cs-l
+                Raise or lower your hand.   cs-k
+                Start screen share session  cs-e
+                Toggle video  cs-o
+                High motion screen share  csa-t
+                Filter current list  cs-f
+                Go to sharing toolbar  cs-Space
+                Decline screen share  cs-d
+                Accept screen share  cs-a
+                Admit people from lobby notification  cs-y
+                Open the Background settings menu  cs-p
+                Schedule a meeting  sa-n
+                Go to current time  a-.
+                Go to prev. / next day/week  ca-left / ca-right
+                View day  ca-1
+                View workweek  ca-2
+                View week  ca-3
+                Save or send meeting request  c-s
+                Join from meeting details  sa-j
+                Go to suggested time  sa-s
         Debug ---
                 Download diagnostic logs
                     csa-1

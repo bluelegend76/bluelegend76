@@ -38,6 +38,10 @@ Add Rhetoric and Speeches(!!)
   ordsprsvgreen.txt
   gulacitatbok-tidens.txt
 
+../../../../samples/lang/hm-eng_english-loose-coupling.report.txt
+      [add ___hm_eng=list/log-export 1]
+      fetch data | fetch-data
+----
   myndigskrivregl2009.sv.txt
   svskrivr_DEF.txt
   --
