@@ -7,6 +7,7 @@ https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater/pullrequ
 https://dev.azure.com/tmhe/TMHMS-Development/_backlogs/backlog/RnD-SW-6/Features
 
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Package-syncing.md&version=GBmain&_a=preview  # Syncing Sequence-Diagram + Markdown-code
+    https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25684/Installer-Service  # Sync-client overview +/= requirements-wiki
 ----
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing  # Pong(=Sequence)-diagram - Rendered
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Installer-Service.md&_a=preview  # more broken down overview

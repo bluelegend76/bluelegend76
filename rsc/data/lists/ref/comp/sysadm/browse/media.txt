@@ -59,7 +59,7 @@ Microsoft Teams  @
                 Accept screen share  cs-a
                 Admit people from lobby notification  cs-y
                 Open the Background settings menu  cs-p
-                Schedule a meeting  sa-n
+            Schedule a meeting  sa-n
                 Go to current time  a-.
                 Go to prev. / next day/week  ca-left / ca-right
                 View day  ca-1

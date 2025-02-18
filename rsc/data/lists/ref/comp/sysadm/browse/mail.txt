@@ -7,11 +7,11 @@ Outlook
         Write email ----
                 N / Ctrl N 	Create a new email
                 a-. 	Show address book
+                Alt + 	Show address book
                 Alt S / Ctrl Enter 	Send an email
                 R 	Reply to an email
                 Shift R 	Reply all to an email
                 Shift F 	Forward an email
-                Alt + 	Show address book
                 F7 	Check spelling
                 Ctrl Y 	Insert an Emoji
                 Ctrl S 	Save draft
@@ -47,10 +47,8 @@ Outlook
                 Ctrl , / ↑ 	Move selection upwards
             M / F9 	Refresh 
                 -----
-                Frequently used shortcuts
+            Frequently used shortcuts ----
                 This table lists the most frequently used shortcuts in new Outlook
-                To do this
-                Press
                 Create a new message or calendar event.
                 Ctrl+N
                 Open the selected message in a new window.

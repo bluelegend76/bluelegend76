@@ -1,6 +1,7 @@
 # -- bluelegend76 dotfiles and portable config --
 (including Empire Reflists system/structure)
 __
+# TODO1: Knick WinVim Color-files
 
 ## TODO:
 ~~- [ ] **Rename _vimrc to .winvimrc**~~
@@ -9,15 +10,15 @@ __
 ~~- [ ] Reformat External Drives to ExFAT~~
 - [ ] **Try-out new Vim-Colors**
 
-- [ ] Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc  __
+- [ ] *Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc*  __
 
 -----
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists
 - **To Add**:
-# - [ ] **at.Git to Git-refs**
 ## - [ ] **cppDlang to refs(etc)-Dashboard**
+# WebDev / Mobile
 
 ----
   **Add Greggrefs(pdf) + setup for GVim(windows)
@@ -31,20 +32,14 @@ __
 ## lazarus.win.ps1:
 - [ ] **Auto-Linking of config-files to Windows-directories**  __=1
 - Files to link in:
-  - .winvimrc -> _vimrc
   - (.bashrc)
-  - .ideavimrc
   - qwerty2svorak/svorak2qwerty.ahk
   - vim/, emacs/
   - firefox-plug
   - jetbrains IDE settings
   - vscode/, vs/
   - bluelegend.kdbx
-    - .bashrc (etc)
   - lazarus.win.ps1 (or upcoming .fsx) **
-  - Ref.cb.txt
-  - Words.txt  ('Langs 1' Reflists)
-  - **LangDb.List1.txt**
 - Adding Apps to Taskbar
 - Adding preferred programs for filetypes (to Windows Registry)
 ----

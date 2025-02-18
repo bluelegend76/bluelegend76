@@ -584,8 +584,12 @@ Rider (JetBrains) Keymap
   Stop  c-f2
   Run  s-f10
 Rider+GitHub Copilot
-            Trigger inline copilot-box/chat
-                cs-g
+            Trigger inline copilot-box/chat  cs-g
+            Open copilot chat  cs-c
+            show completions  a-\  # ga-å
+            apply next line of completion  ca-right
+            apply next word of completion  c-right
+            show next / prev. completions  c-. / c-,
 Rider Snippets
                     evince -p 1 ~/Empire/Doks/Comp/editor/Jetbrains/JetbrainsDocs/rider-snippets_orig.pdf &
                 C# ----
