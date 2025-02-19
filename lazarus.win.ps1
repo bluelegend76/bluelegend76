@@ -135,7 +135,6 @@ choco install azure-cli -y
 # 
 # I hope this helps! Let me know if you have any other questions.
 
-
 ### Setting up symbolic links to the Config-files in Windows ###
 # TODO: Replace 'hard-coded' user with 'Select User' to link to
 # C:\Users\SEDAALB2>

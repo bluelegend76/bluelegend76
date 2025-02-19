@@ -1,6 +1,12 @@
 ref/lang/Langs1Refs.txt
 cd ../ref/lang/
 
+Shorth ----
+  shorth/sv/rskrift.empire.pdf
+  shorth/sv/rskrift.empire.greykeys1.pdf
+  shorth/en/stenogregg-dictionary.pdf
+  shorth/en/stenogregg-phrasebook.pdf
+
 Add Rhetoric and Speeches(!!)
     A. Lincoln
     J.F. Kennedy

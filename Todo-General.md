@@ -15,7 +15,7 @@ __
 - MSAL + Identity
 - DotNet Core + Blazor; XUnit Patterns
   - Avalonia
-- MLEARNING OVERVIEW
+- MLEARNING OVERVIEW (+Obsidian: MD, Formulas, SVG, Animations, Videos)
 - (SSH, veracrypt)
 - Py/F# Devops
   - Azure Devops (+CLI) w. Pipelines

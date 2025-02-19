@@ -39,6 +39,8 @@ kfil {{{
 }}}
 ScratchArea LIA 2/TruckCom Updater {{{
 
+= Parallel: TruckCom Linter
+
 MSAL, Graph, Sharepoint = Examples + Code {{{
 
 - Great great. So the first step
@@ -71,25 +73,28 @@ dotnet add package Microsoft.Identity.Client
 
 using Microsoft.Identity.Client;
 
-public async Task<string> GetAccessTokenAsync()
-{
-    // Configure your application
-    string[] scopes = new string[] { "https://graph.microsoft.com/.default" }; // Request the necessary permissions
-    string clientId = "YOUR_CLIENT_ID"; // Replace with your application's client ID
-    string tenantId = "YOUR_TENANT_ID"; // Replace with your tenant ID (e.g., your organization's Azure AD tenant ID)
+public async Task<string> GetAccessTokenAsync() {
+  // Configure your application
+  string[] scopes = new string[] { "https://graph.microsoft.com/.default" };
+    // Request the necessary permissions
+  string clientId = "YOUR_CLIENT_ID";
+    // Replace with your application's client ID
+  string tenantId = "YOUR_TENANT_ID";
+    // Replace with your tenant ID (e.g., your organization's Azure AD tenant ID)
 
-    // Create an instance of the IConfidentialClientApplication
-    IConfidentialClientApplication app = ConfidentialClientApplicationBuilder
-        .Create(clientId)
-        .WithClientSecret("YOUR_CLIENT_SECRET") // Replace with your client secret
-        .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
-        .Build();
+  // Create an instance of the IConfidentialClientApplication
+  IConfidentialClientApplication app = ConfidentialClientApplicationBuilder
+    .Create(clientId)
+    .WithClientSecret("YOUR_CLIENT_SECRET")
+      // Replace with your client secret
+    .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
+    .Build();
 
-    // Acquire an access token
-    AuthenticationResult result = await app.AcquireTokenForClient(scopes)
-        .ExecuteAsync();
+  // Acquire an access token
+  AuthenticationResult result = await app.AcquireTokenForClient(scopes)
+    .ExecuteAsync();
 
-    return result.AccessToken;
+  return result.AccessToken;
 }
 
 Explanation:
@@ -167,28 +172,25 @@ using Microsoft.Graph;
 
 // ... (GetAccessTokenAsync method as shown previously) ...
 
-public async Task<IGraphServiceClient> GetGraphServiceClientAsync()
-{
-    string accessToken = await GetAccessTokenAsync();
-    return new GraphServiceClient(new DelegateAuthenticationProvider(
-        requestMessage => 
-        {
-            requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-            return Task.CompletedTask;
-        }));
+public async Task<IGraphServiceClient> GetGraphServiceClientAsync() {
+  string accessToken = await GetAccessTokenAsync();
+  return new GraphServiceClient(new DelegateAuthenticationProvider(
+    requestMessage => {
+      requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+      return Task.CompletedTask;
+    }));
 }
 
 3. Retrieve SharePoint List Items:
 
-public async Task<IList<ListItem>> GetSharePointListItemsAsync(string listId)
-{
-    IGraphServiceClient graphClient = await GetGraphServiceClientAsync();
+public async Task<IList<ListItem>> GetSharePointListItemsAsync(string listId) {
+  IGraphServiceClient graphClient = await GetGraphServiceClientAsync();
 
-    var listItems = await graphClient.Sites["<your_site_id>"].Lists[listId].Items
-        .Request()
-        .GetAsync();
+  var listItems = await graphClient.Sites["<your_site_id>"].Lists[listId].Items
+    .Request()
+    .GetAsync();
 
-    return listItems.ToList(); 
+  return listItems.ToList(); 
 }
 
 Replace placeholders:
@@ -272,34 +274,32 @@ each:
 - 1. Create a new list item
 
 // Assuming you have the GraphServiceClient (as shown in the previous example)
-var newItem = new ListItem
-{
-    Title = "New Item Title"
+var newItem = new ListItem {
+  Title = "New Item Title"
 };
 
 var createdItem = await graphClient.Sites["<your_site_id>"].Lists[listId].Items
-    .Request()
-    .AddAsync(newItem);
+  .Request()
+  .AddAsync(newItem);
 
 - 2. Update an existing list item
 
 // Assuming you have the list item ID
 string itemId = "1"; 
 
-var updatedItem = new ListItem
-{
-    Title = "Updated Item Title"
+var updatedItem = new ListItem {
+  Title = "Updated Item Title"
 };
 
 await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
-    .Request()
-    .UpdateAsync(updatedItem);
+  .Request()
+  .UpdateAsync(updatedItem);
 
 - 3. Delete a list item
 
 await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
-    .Request()
-    .DeleteAsync();
+  .Request()
+  .DeleteAsync();
 
 - 4. Upload a file to a document
   library
@@ -308,13 +308,12 @@ await graphClient.Sites["<your_site_id>"].Lists[listId].Items[itemId]
 string filePath = @"C:\path\to\your\file.docx";
 string libraryId = "your_library_id";
 
-using (var stream = new FileStream(filePath, FileMode.Open))
-{
-    await graphClient.Sites["<your_site_id>"].Drive.Root
-        .ItemWithPath($"/{libraryId}/{Path.GetFileName(filePath)}")
-        .Content
-        .Request()
-        .PutAsync<DriveItem>(stream);
+using (var stream = new FileStream(filePath, FileMode.Open)) {
+  await graphClient.Sites["<your_site_id>"].Drive.Root
+    .ItemWithPath($"/{libraryId}/{Path.GetFileName(filePath)}")
+    .Content
+    .Request()
+    .PutAsync<DriveItem>(stream);
 }
 
 - 5. Download a file from a
@@ -323,27 +322,25 @@ using (var stream = new FileStream(filePath, FileMode.Open))
 // Assuming you have the file path in SharePoint
 string filePathInSharePoint = "/Documents/your_file.docx";
 
-using (var stream = new MemoryStream())
-{
-    await graphClient.Sites["<your_site_id>"].Drive.Root
-        .ItemWithPath(filePathInSharePoint)
-        .Content
-        .Request()
-        .GetAsync(stream);
+using (var stream = new MemoryStream()) {
+  await graphClient.Sites["<your_site_id>"].Drive.Root
+    .ItemWithPath(filePathInSharePoint)
+    .Content
+    .Request()
+    .GetAsync(stream);
 
-    // Save the downloaded file to your local disk
-    using (var fileStream = new FileStream(@"C:\path\to\save\file.docx", FileMode.Create, FileAccess.Write))
-    {
-        stream.Position = 0;
-        await stream.CopyToAsync(fileStream);
-    }
+  // Save the downloaded file to your local disk
+  using (var fileStream = new FileStream(@"C:\path\to\save\file.docx", FileMode.Create, FileAccess.Write)) {
+    stream.Position = 0;
+    await stream.CopyToAsync(fileStream);
+  }
 }
 
 - 6. Get list properties
 
 var list = await graphClient.Sites["<your_site_id>"].Lists[listId]
-    .Request()
-    .GetAsync();
+  .Request()
+  .GetAsync();
 
 Console.WriteLine($"List Title: {list.Title}");
 Console.WriteLine($"List Description: {list.Description}");
@@ -420,21 +417,20 @@ using Microsoft.Graph;
 // ... (Acquire Access Token with ChatMessage.Send permission) ...
 
 // Example: Send a message to a user 
-string userId = "user_id"; // Replace with the user's ID
+string userId = "user_id";
+  // Replace with the user's ID
 string messageContent = "Hello from your C# application!";
 
-var chatMessage = new ChatMessage
-{
-    Body = new ItemBody
-    {
-        Content = messageContent,
-        ContentType = BodyType.Text 
-    }
+var chatMessage = new ChatMessage {
+  Body = new ItemBody {
+    Content = messageContent,
+    ContentType = BodyType.Text 
+  }
 };
 
 await graphClient.Users[userId].Chats 
-    .Request()
-    .PostAsync(chatMessage); 
+  .Request()
+  .PostAsync(chatMessage); 
 
 Important Notes:
 
@@ -465,45 +461,39 @@ Example (Conceptual - Handling a stream of list items):
 Code snippet
 
 // Assuming you have a method to fetch pages of list items asynchronously
-public async Task<IEnumerable<ListItem>> GetListItemsAsync(string listId, int skip = 0, int top = 100) 
-{ 
-    // ... (Your existing logic to fetch a page of list items) ... 
+public async Task<IEnumerable<ListItem>> GetListItemsAsync(string listId, int skip = 0, int top = 100) { 
+  // ... (Your existing logic to fetch a page of list items) ... 
 }
 
 // Create an observable sequence to fetch all list items
-IObservable<ListItem> listItemsObservable = Observable.Create<ListItem>(async observer => 
-{
-    int skip = 0;
-    const int pageSize = 100;
+IObservable<ListItem> listItemsObservable = Observable.Create<ListItem>(async observer => {
+  int skip = 0;
+  const int pageSize = 100;
 
-    while (true) 
-    {
-        var page = await GetListItemsAsync(listId, skip, pageSize); 
-        foreach (var item in page) 
-        {
-            observer.OnNext(item); 
-        }
-
-        if (page.Count < pageSize) 
-        { 
-            break; 
-        }
-
-        skip += pageSize; 
+  while (true) {
+    var page = await GetListItemsAsync(listId, skip, pageSize); 
+    foreach (var item in page) {
+      observer.OnNext(item); 
     }
 
-    observer.OnCompleted(); 
-    return Disposable.Empty; 
+    if (page.Count < pageSize) { 
+      break; 
+    }
+
+    skip += pageSize; 
+  }
+
+  observer.OnCompleted(); 
+  return Disposable.Empty; 
 });
 
 // Subscribe to the observable and process the list items
 listItemsObservable
-    .SubscribeOn(Scheduler.Default) 
-    .ObserveOn(SynchronizationContext.Current) 
-    .Subscribe(item => 
-    {
-        // Process each list item 
-    });
+  .SubscribeOn(Scheduler.Default) 
+  .ObserveOn(SynchronizationContext.Current) 
+  .Subscribe(item => {
+    // Process each list item 
+  });
 
 This example demonstrates how to create an observable sequence to fetch all list items from a SharePoint list, allowing you to process the items asynchronously and handle the stream of data more effectively.
 
@@ -513,12 +503,93 @@ Do you have any specific scenarios in mind where you think Rx.NET could be parti
 
 }}}
 
-- Own exception-type for Updater (=same as in TCCore)
+- Own exception-type for Updater (=same as in TCCore)  // Förslag|För framtida =från Erik J.
 - error-code handling
 
 [Note: When running in Debug-mode through Rider, the program is not System-User - I.e. create/use dummy-exe for testing purposes]
 
-SignalR  #for polling during install/download-process
+SignalR  #for polling/direct feedback(=without the need for polling) during install/download-process {{{
+
+Let's illustrate the difference between polling and SignalR with a simplified example of updating a counter on a webpage.
+
+1. Polling (Traditional Approach):
+JavaScript
+
+// Client-side (JavaScript)
+function updateCounter() {
+  fetch('/counter') // Make a request to the server
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('counter').innerText = data.count;
+    });
+}
+
+setInterval(updateCounter, 5000); // Poll every 5 seconds
+
+// Server-side (C# - Example using ASP.NET Core)
+[HttpGet("/counter")]
+public IActionResult GetCounter()
+{
+    return Json(new { count = _counterValue }); // _counterValue is your counter variable
+}
+
+In this approach, the client repeatedly asks the server for the counter value every 5 seconds.  This is inefficient because the server might not have any updates to provide most of the time.
+
+2. SignalR (Real-time Approach):
+JavaScript
+
+// Client-side (JavaScript)
+const connection = new signalR.HubConnectionBuilder()
+  .withUrl("/counterHub") // URL of your SignalR Hub
+  .build();
+
+connection.on("CounterUpdated", (count) => { // Listen for updates
+  document.getElementById('counter').innerText = count;
+});
+
+connection.start().then(() => {
+    // Optionally, you could send a request to the hub to get the initial value
+    connection.invoke("GetCurrentCount").then(count => {
+        document.getElementById('counter').innerText = count;
+    });
+}).catch(err => console.error(err));
+
+
+// Server-side (C# - ASP.NET Core)
+public class CounterHub : Hub
+{
+    private int _counterValue = 0;
+
+    public async Task UpdateCounter()
+    {
+        _counterValue++;
+        await Clients.All.SendAsync("CounterUpdated", _counterValue); // Push update to all clients
+    }
+
+    public int GetCurrentCount() {
+        return _counterValue;
+    }
+}
+
+// In Startup.cs (ASP.NET Core):
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<CounterHub>("/counterHub");
+    // ... other endpoints
+});
+
+With SignalR, the server pushes the updated counter value to all connected clients as soon as it changes.  The client doesn't need to constantly poll.  This is much more efficient and provides a real-time experience.
+
+Key Differences and Improvements:
+
+    Reduced Network Traffic: SignalR sends only the necessary updates, while polling sends requests even when there's no change.
+    Improved Responsiveness: Updates are displayed instantly with SignalR, whereas polling introduces a delay.
+    Simplified Code: The client-side code is cleaner and easier to understand with SignalR.
+
+This is a very basic example, but it illustrates the core concept of how SignalR simplifies real-time communication.  Remember that this is a simplified example and error handling and more complex scenarios would add further code.  However, this should give you a good starting point to feel the difference.
+
+}}}
+- Testing/Using RxDotnet to simplify event-handling
 
 Graph [hämta en fil-url] + Hämta 
     /me  #Graph

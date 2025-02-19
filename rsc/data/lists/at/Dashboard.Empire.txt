@@ -16,10 +16,10 @@ Clangs (C, Cpp, CSharp, Dlang) ----
 Web/Mobile/Cloud ----
   TODO --"--
 
-LangsDb.legacy ----
-  ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 Langs1 Ref-lists ----
   ../ref/lang/Langs1Refs.txt
+LangsDb.legacy ----
+  ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 
 c:/Users/SEDAALB2/Desktop/Scratch.txt
 ../weblinks.txt
