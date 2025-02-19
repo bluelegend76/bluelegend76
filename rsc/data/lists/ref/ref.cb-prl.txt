@@ -590,6 +590,131 @@ This is a very basic example, but it illustrates the core concept of how SignalR
 
 }}}
 - Testing/Using RxDotnet to simplify event-handling
+- TC LinterUtil (inline interactive wiki) {{{
+
+Nice. I have another little interesting task for us: We are discussing in our team about how many cores to use when running parallel tasks and the solution the team came up with (a bit reluctantly) was that the best temporary solution was to put a note about it in the team's wiki.
+
+I'm thinking a better solution would be to construct some small sort of 'linter' utility that in a similar way to StyleCop could flag up the code with some highlight or color if one sets the options wrong or not in the preferred way, and gives a message with a recommendation if one hovers over the highlight. Would that be a very involved or difficult task do you think? By the way, the most used language and framework in the team is C# and DotNet Core, but the linter could as far as I'm concerned be written in a language like F# or the like.
+
+Creating a "linter" utility to enforce coding standards related to parallel task core usage is a very interesting and valuable idea! It's definitely a better approach than relying on wiki notes.  While it's not a trivial task, it's also not overwhelmingly difficult, especially if you focus on a specific set of rules and integrate it appropriately.
+
+Here's a breakdown of the challenges and potential approaches:
+
+Challenges:
+
+    Static Analysis Limitations:  Determining the optimal number of cores for parallel tasks is often highly context-dependent.  It depends on factors like the nature of the tasks, the hardware, and the overall system load.  A static analysis tool (like a linter) can only provide guidelines and flag potential issues, not definitively say "this is wrong."
+
+    Language/Framework Integration: Integrating the linter seamlessly into your development workflow is important.  You'd want it to run during development (perhaps as part of the build process) and ideally provide feedback directly in the IDE (Visual Studio).
+
+    Rule Definition:  You'll need to carefully define the rules your linter will enforce.  What constitutes a "bad" or "suboptimal" core usage?  Some examples:
+        Using a fixed number of cores that's too high for most scenarios.
+        Not considering the number of available cores.
+        Using hardcoded magic numbers instead of configuration.
+        Not providing a way to configure the number of cores (making it hard to override in specific cases).
+
+    False Positives:  Any linter will inevitably produce some false positives (flagging code that's actually okay).  You need to design the rules and the output messages to minimize these and provide ways to suppress warnings when necessary.
+
+Potential Approaches:
+
+    Roslyn Analyzer (C#):  Since you're using C# and .NET Core, a Roslyn analyzer is the most natural and powerful approach.  Roslyn analyzers are integrated directly into Visual Studio and can provide real-time feedback as you write code.  This is the best option for tight integration.
+
+    Custom Code Analysis Tool: You could create a separate tool (perhaps in F# or another language) that performs static analysis on your C# code.  This would be more complex to integrate into the development process but could be more flexible if you need to analyze other languages or file types.
+
+    Regular Expressions/Text Parsing (Simplest, but Limited):  For very basic rules (e.g., just checking for specific keywords or patterns), you could use regular expressions or simple text parsing.  This would be the quickest to implement but also the most limited.
+
+Example Roslyn Analyzer Concept (C#):
+C#
+
+// Example (Conceptual) Roslyn Analyzer
+[DiagnosticAnalyzer(LanguageNames.CSharp)]
+public class ParallelCoreUsageAnalyzer : DiagnosticAnalyzer
+{
+    // ... Rule definition (DiagnosticDescriptor) ...
+
+    public override void Analyze(AnalysisContext context)
+    {
+        // ... Syntax analysis to find parallel code ...
+
+        // ... Check core usage (e.g., number of cores used) ...
+
+        if (/* Core usage is not optimal */)
+        {
+            // ... Report a diagnostic (warning or error) with a message ...
+        }
+    }
+}
+
+Implementation Steps (Roslyn Analyzer):
+
+    Create a Roslyn Analyzer Project:  Visual Studio has templates for creating Roslyn analyzers.
+
+    Define Rules:  Create DiagnosticDescriptor objects to define the rules your analyzer will enforce, including the severity (warning, error), message, and help link.
+
+    Implement Analysis Logic:  Use the Roslyn API to analyze the code's syntax tree and identify places where the rules are violated.
+
+    Report Diagnostics:  Use the AnalysisContext to report diagnostics (warnings or errors) with informative messages and code highlights.
+
+    Test and Refine:  Test your analyzer thoroughly and refine the rules and messages to minimize false positives and provide helpful guidance.
+
+Recommendation:
+
+For your situation, I strongly recommend going with a Roslyn analyzer. While it requires some learning, it's the best way to achieve tight integration with Visual Studio and provide real-time feedback to your team.  Start with a small set of well-defined rules and gradually expand the analyzer as you gain experience.  This will give your team a much more effective way to manage parallel core usage than wiki notes.
+
+What I'm thinking is that Roslyn would be a valuable tool to make use of, and the rules and suggestions do not necessarily have to be overly complex, but more based on a few rules that the team comes up with for suggestions; In that way the suggestions when hovering over highlight would be more like a builtin tooltip-version of the Wiki, and would contain suggestions from the team 'inline' rather than having to browse around in the Wiki to find the correct page and such overhead. Also (as a short side-note), if it's not overkill I would like to use F# in some part of the process as it tends to shorten down code and it's a language I'm eager to learn more of.
+
+You're on the right track! Focusing on a few well-defined rules and using Roslyn to provide inline suggestions (like a built-in tooltip version of your wiki) is an excellent strategy. It makes the linter practical, manageable, and directly addresses your team's needs. And yes, incorporating F# where it makes sense is a great way to leverage its strengths and learn more.
+
+Here's a refined approach, combining Roslyn for the core analysis and potentially F# for parts of the process:
+
+1. Define the Rules (Team Effort):
+
+    This is the most crucial step. Get your team together and brainstorm the most important guidelines for parallel task core usage. Focus on common mistakes or areas where you've seen issues.
+    Keep the initial set of rules small and specific. You can always add more later.
+    Examples:
+        "Avoid hardcoding the number of cores. Use Environment.ProcessorCount or a configurable setting."
+        "For I/O-bound tasks, consider using fewer cores or asynchronous operations instead of parallel loops."
+        "When using Parallel.For, ensure the workload is sufficiently CPU-intensive to justify the overhead."
+        "If the degree of parallelism needs to be configurable, use a settings file or environment variable rather than a magic number."
+
+2. Roslyn Analyzer (C#):
+
+    This is where the core analysis happens. You'll use C# and the Roslyn API to examine the code's syntax tree and identify violations of your rules.
+    The Roslyn analyzer will generate diagnostics (warnings or errors) with helpful messages that appear directly in Visual Studio. These messages are the "inline tooltips" you envisioned.
+    Example Roslyn Diagnostic Message: "Consider using Environment.ProcessorCount instead of hardcoding the number of cores. This makes your code more adaptable to different environments."
+
+3. F# (Optional, but Potentially Useful):
+
+    Rule Definition/Management: You could use F# to define or manage your rules. F#'s type system and functional approach might be well-suited for representing complex rules or creating a domain-specific language (DSL) for defining them. The Roslyn analyzer itself would still be in C#, but the rules could be stored and managed in F#. This is probably only worth it if you anticipate your rules becoming quite complex.
+    Testing: F# can be great for writing unit tests for your Roslyn analyzer. Its functional nature can make it easier to write concise and expressive tests.
+    External Tooling: If you decide to create a separate code analysis tool (in addition to the Roslyn analyzer), F# would be a good choice for that tool.
+
+4. Integration:
+
+    The Roslyn analyzer integrates directly into Visual Studio. As developers write code, the analyzer runs in the background and provides real-time feedback.
+    If you create a separate tool, you'll need to integrate it into your build process (e.g., as a pre-build step) or provide a way for developers to run it manually.
+
+Example Workflow:
+
+    Team defines a rule: "Avoid hardcoding core counts."
+
+    You implement this rule in a Roslyn analyzer (C#).
+
+    A developer writes code: Parallel.For(0, 8, i => { ... }); (8 is hardcoded).
+
+    The Roslyn analyzer detects this and displays a warning in Visual Studio: "Consider using Environment.ProcessorCount instead of hardcoding '8' as the number of cores."
+
+    The developer hovers over the warning and sees a more detailed explanation (from your rule description) with a link to your team's wiki page (if you have one) for more information.
+
+Key Advantages of this Approach:
+
+    Direct Feedback: Developers get immediate feedback in their IDE, making it easy to correct issues.
+    Consistent Enforcement: The linter ensures that the rules are consistently applied across the codebase.
+    Centralized Knowledge: The rules and suggestions are stored in code, making them easier to update and maintain than wiki pages.
+    Improved Code Quality: By enforcing best practices, the linter helps improve the overall quality and maintainability of your code.
+
+Starting with a small set of rules and gradually expanding your linter will make the project more manageable and allow you to get quick wins.  The combination of Roslyn's power and F#'s expressiveness (if you choose to use it) will provide a very effective solution for your team.
+
+}}}
 
 Graph [hämta en fil-url] + Hämta 
     /me  #Graph
@@ -792,6 +917,7 @@ ____
 Browsers (File, Web, Media, Web) {{{
 media ----
     gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/{sysadm/browse/file,hardw/hardw-devices,sysadm/browse/media,sysadm/browse/web,sysadm/browse/mail,sysadm/browse/remote}.txt
+cd at
     gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
       gvim -c '/.*@.*' -p ~/Dropbox/rsc/Doks/phone/comp/sysadm/browse/{file,media,web,mail,remote}.txt
 

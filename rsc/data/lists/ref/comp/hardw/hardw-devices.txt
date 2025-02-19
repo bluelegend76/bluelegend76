@@ -1,8 +1,6 @@
 set foldmethod=indent foldlevel=2
 vim:fdm=indent:fdl=2:
 
-EPOS Adapt (Toyota)
-
 Samsung Galaxy S25
 Android A20
 Galaxy Tab S3
@@ -12,6 +10,8 @@ Zero TX (**)
             use main (=right) when pairing
         Start + Connect Device (=which order)
             use slave (=left) when connecting
+        listening (=music etc.): go to next | prev. track *
+            press x2 | press x3
 
             power on | off
                 press buttons 5 secs
@@ -23,12 +23,11 @@ Zero TX (**)
                 presshold button for 1 sec.
             mute|unmute microphone during phonecall
                 press button x2
-        listening (=music etc.): go to next | prev. track *
-            press x2 | press x3
+
             assistant (=google assistant | siri)
                 presshold button for 2 sec.
             (switch audio-output between phone | earbuds  during phonecall (etc?))
                 presshold button 1 sec.
-
 Sony wh-h900
+EPOS Adapt (Toyota)
 

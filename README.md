@@ -3,6 +3,7 @@
 - [ ] **Add new Vim9 color-files to Vim-config**
 
 ## TODO:
+## **Emacs-config basic drs to bluelegend76/GitHub**  __=
 ~~- [ ] **Rename _vimrc to .winvimrc**~~
 - [ ] May want to split into several repos (config.core, Reflists, aux)
   i.e. to avoid dir-size bloat (=makes it easier to clone down to Android)
@@ -18,6 +19,7 @@
 - **To Add**:
 ## - [ ] **cppDlang to refs(etc)-Dashboard**
 # WebDev / Mobile
+## Char-Alfa to Refs  __3
 
 ----
   **Add Greggrefs(pdf) + setup for GVim(windows)
@@ -29,6 +31,7 @@
 
 ## lazarus.win.ps1:
 - [ ] **Auto-Linking of config-files to Windows-directories**  __=1
+## Vim on Windows (colors, spell, etc)
 - Files to link in:
   - (.bashrc)
   - qwerty2svorak/svorak2qwerty.ahk
@@ -47,9 +50,10 @@
 - [ ] Test Thumbdrive (on/for Win)
  
 ## lazarus.arch.sh:
+- CHANGE CONFIGS (ETC) TO USE GITHUB/BLUELEGEND76  __=
 - [ ] **Change Xfce window-handling key to Win-key**  __
 
-## Playlists.Perform
+## Playlists.Perform  __=
 Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]
   - Every Breath You Take

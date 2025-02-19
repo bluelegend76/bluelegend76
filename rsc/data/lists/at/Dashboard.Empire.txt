@@ -18,7 +18,7 @@ Web/Mobile/Cloud ----
   TODO --"--
 
 Langs1 Ref-lists ----
-  ../ref/lang/Langs1Refs.txt
+  ../ref/lang/ Langs1Refs.txt
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 
@@ -615,14 +615,15 @@ MLEARN: FIRST DOKS
 JuPyter Notebooks (etc)
 Bash/Dash-Mans
 F# - TOCs + Concepts
-  XUnit Patts
+XUnit Patts
+Roslyn + Analysis/CodeGen
   Nix Master
    SSH   + Puppet
-  Docker + Kubernetes + AzDevops + GithubActions
-    Devops + Python (+iPy/Xonsh)
+Docker + Kubernetes + AzDevops + GithubActions
+  Devops + Python (+iPy/Xonsh)
   Gremlin (+Neptune)
-  FuncPy
-   Choco (+Puppet) + PowerShell (+SharpKeys)
+FuncPy  [___Renskriv]
+   Choco (+Puppet) + PowerShell (+AutoHotKeys)
                    (GVim Win + 'Run Apps(=PShell?) from GVim')
   ----  Anki Redone
   Arch Linux
@@ -638,7 +639,7 @@ office.Overview [2] {{{
 
   iPython(*)
   Xonsh
-  Android-Scripting + Termux
+Android-Scripting + Termux
 F# [Overview and Concepts]  +Cloj.
 
   FuncPy **
@@ -657,6 +658,7 @@ ____ __
 Reduce down rectangular file-block to gvim one-liner
   @r: }-$F/c,}-$F.i}-V{:s/\.txt{A{VipJgv:s/[^ ],b ,e[^ ]//g
 }}}
+Vtouch-Vanki  '1.0-Refactor' (+Docs)
 
 ~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
 
@@ -892,12 +894,11 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 Jupyter
 Termux
 
-
   C# DotNet Core MVC + Blazor  [+Avalonia]
     PowerShell[!]  WSL ____
   AndroidProgr (+Kotlin??)
   ----
-  AnkiMan (+Renskriv ___office)
+AnkiMan (+Renskriv ___office)
 
     MAUI (=Office)  [Kotlin + Funct.] {{{
       https://dotnet.microsoft.com/en-us/apps/maui

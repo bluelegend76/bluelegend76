@@ -11,10 +11,10 @@ Add Rhetoric and Speeches(!!)
     A. Lincoln
     J.F. Kennedy
 
-  sv.thes.svsyn.txt
     sv.words.saol11-1991.txt
   svetym.txt
-  cmp.en.dict.en2sv-prsm.txt
+  cmp.en.dict.en2sv-prsm.txt  ____
+    sv.thes.svsyn.txt ____
   cmp.sv.dict.sv2en-prsm.txt
     en.words.wnwdict.txt
   theinstantintell-words.txt
