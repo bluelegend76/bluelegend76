@@ -1,3 +1,4 @@
+vim:fdm=marker:
 
 Forums Stora
 
@@ -23,4 +24,1138 @@ LangsDb.legacy ----
 
 c:/Users/SEDAALB2/Desktop/Scratch.txt
 ../weblinks.txt
+
+
+    ---- 'MINIS|DAILIES' ---- ___index=0 {{{
+    LEETCODE ETC(+SCRIPT-FU) CODE-PROBLEMS __ ****
+        KAPA FILER/MAPPAR I LEGACY (=5 per dag) !!(! *****)
+    Saol 1/Bevingat/Ordspr. =Clean  @ +Idioms/Litt  arlang 1  +LangDb Prios 1-100(!) →
+        Bevingat (Quotes, etc)
+    . {{{
+      - vta-apps Docs: Dualist
+    }}}
+    - Gregg Snippets [=10 per day]   [+images to refssection]
+    - dan-words;  kanji-2000  -de | fr | spa | ru  +jp,  @ ita (!)  (incl. set jp-dicts.ref(!!))   - lat [ 2-4 words etc (??)]
+        - Some Sv-En words|phrases (+one quote|joke(quip)) + Write w. Shorth(!!) {{{
+            ( =sjukv|samhinfo|facket mm(!) 2-4  Rel.Ond: 5 meningar
+                - Doyle FSpeech (=gregg++):  Plocka 10-20(-50) mest grundl. eng-ord(!!)
+            . {{{
+                https://www.youtube.com/watch?v=j6IufYLMrqM&t=300s
+                        wokebusters (w. j.linds. and wokal)
+            }}}
+        }}}
+    - fun jokes stories (+quotes)  @  =DO+SET CATEGORIES [!![!!]]  [+Welsh etc(!)]
+
+    UNIVERSITY VIDEOS: STANFORD[!!]
+      + QUINCY LARSON-LINKS [!!!!]  @@!(!)
+    C (modern + hardw.)  +Sys.Archit.
+    Htdp (+refact, beaut, legacy)  (+Lfe Sicp(+Sicp Clojure)?)  py-sicp  @
+    JsCb-Notes 1 + jscb 2(!!), +PyCb, ClojCb  KotlFunct [**]  @@
+      Dlang[!! Ali, Mike P, Cookbook  etc]
+    Org, Vimscript första koden (+↓↓), Elisp Startw.[!!]
+    - vimscrhardw (first cmds custom!!), - lpy(x2)-ref, bash 1cmd   (+vimcasts etc)
+    - FREEC-WEB (3-5 st!  +ExamProjects)  @@   - vlang
+
+        --  @@@@@@@  ---VV  @
+    - Fstyle: 'Doc is here' + Dft-Prios(!!)(**** =incl. Blues-Improv. acoustic) {{{
+dft curr 2023 {{{
+
+  Bohemian rhapsody {{{
+    ~/Dropbox/rsc/media/scores/i.guitar/ac/dftproj/BohemianRhapsody/bohemian_rhapsody.dft.tg  #Set final fingerings
+    ~/Dropbox/rsc/media/scores/i.guitar/ac/dftproj/BohemianRhapsody/bohemian_rhapsodyRAW.drsfingerstyle.pdf
+    et1(+solo1): 74  @
+    et2("I see"): 144
+    et3: 138(ca)  @
+    et4(outro): 72
+  }}}
+  Catch me if I fall {{{
+  ~/Dropbox/rsc/media/scores/i.guitar/ac/dftproj/Own/TheDoctorIsHere/02_catchmeifyoufall.pdf
+    _st:
+    _et: 66
+  }}}
+  Pluck me sideways {{{
+  ~/Dropbox/rsc/media/scores/i.guitar/ac/dftproj/Own/TheDoctorIsHere/05_yourekiddingmrholmes.pdf  #Pluck me sideways
+    _st:
+    _et: 118(ev. lite lägre)
+  }}}
+  Birdman {{{
+  }}}
+--
+  live and let die {{{
+  ~/Dropbox/rsc/media/scores/i.guitar/ac/dftproj/.blue/live_and_let_die.pdf
+  }}}
+
+}}}
+            : - sweet dreams  - mrs robinson  - browneyed g.
+              - sweet child of. mine  - nytt arr: holy diver
+                - kashmir
+        +KOLLA CHECKLIST DFT-VIDPRES. 1--REMAKE(=2020-2021(!!)) (****(!!!!)) @@
+        +Recreate 'Juha+Yerba'++ 2014**** (=Satellit, Under Pressure, etc(!!))
+            [[ = in at.muTeach.bash ]]
+        }}}
+    - drs 'Hallå Där!' + karaoke-pres(=videos)
+    - listen|document: Genres, 2 songs + its lyrics(!)      pre: 'Lathund'(!|??)
+      - dfs sångövn.programmet =in office + 'mobile'(!!)
+
+    'piecemeal':
+       - bash (blue, unpow, orange, bcb, TLCL, [2xclassic],  ABSG, Rute, debbib1,  yellow-vids, lsag) {{{
+         + 2x_script-bible, linCb, hacks, sam24, sob, wicked
+       }}}
+    - svganimDrasn
+       - pshell (forsysadms, )
+       - LinInterface + LinProgr Advanced
+       - c hardw. + c modern
+    - calc(etc)
+    - ffmpeg [tasks  + Mans]
+    }}}
+
+-- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
+\v\@([^ ]?)+
+
+    Gremlin + Neptune
+
+        'MuLäroplans-Träden' **(!!)
+        ----
+        netrw (**)
+        JavaScript Functional
+        Elixir, Ocaml, F# DomainModeling
+    Abe Kotlin
+        [Dlang-proj + PhobosNext|Per Nordl.]
+        vlang, Go, Ring
+        Cloj. + Java
+        datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
+              (+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
+    ----
+    LINSYS:  debbib
+        Blue + Scoll.  +Analog Synth.
+        lynx  pyweb,  @Greasmonk
+        Nsplitdiff
+    Nushell
+        Git, Github Projects  @GithubDocs @GitActions
+    Datasci@ + @Webscrape / @GoogleHacks
+        Xml (+xaml, faml, etc)
+        'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
+    refact, legacycode, TDD(etc) @  +C-CppFunct
+    @c#funct, C# Docs Avanc.
+            flux, xmonad, openb, ice, awes
+        sed (+py/dlang etc)
+    --
+    Aws(+dynamo), Docker, Kubernetes  CyberSec  @
+    börja kolla quincy l-länkar @  +Stanford etc
+        Pluralsight, w3school, w3resources
+        kotlin/jetpack progr-videos(!!)
+        (gimp etc) Py (!!)
+        @xsane, font(forge)/Scribus
+          HTML, HTTP/TCPIP + 'The Web'
+    Mojo
+        Devops, CI @
+            PHP + funct.
+            algos
+        Scribus
+    CSS + Compass
+        pyfunct(!) 1+2
+        Bash(+vim-bash) (etc)
+    Linux (etc) + Sys-Structure, Sysprogr
+    Cypher, SparQL
+    Pshell + Choco
+            Audacity
+            @AnlSynthesis + Midi@ + Keyb.Synths
+            [+Nyq (etc)]
+    pyramid
+    Csound(Qt + Blue), Scollider
+
+='Topics/Areas'   ~/Dropbox/rsc/aubooks/data.WISHLIST
+    Bcb Etc (+Find/Xargs, etc), UNIX POW-TOOLS  @
+    PyAut3** +PyFunct, Gimp Python, +  @
+      webscrape, cv/mmedia, au-transcribe,
+    5 w3resources C# datetime-övningar
+        Datasci, text-natlang  #to at.Python.bash
+    WebSearch/GoogleTricks  #+grease/violent/tamper-monkey  @
+    . {{{
+      ~/Empire/Doks/Comp/gui-wtoolkits/hack.greasemonk.txt
+        ~/Empire/Doks/Comp/gui-wtoolkits/greasemonkey.txt  #kin
+      ~/Empire/Doks/Comp/lang/webdev/js/ffox/ffox-hacking.txt
+      ~/Empire/Doks/Comp/lang/webdev/js/ffox/programming_firefox.pdf
+    }}}
+    Samsung Notes [!(!)]
+      Hardw: Phone + Tablet
+    ~/Empire/Doks/Comp/lang/webdev/Aux/youtube/
+    --- Kotlin: Test Projects 1 (***!!)  @
+
+    - MOODLE  @@ (=Indexes[?|!])   | Wordpress |
+    - ORG (=emacs) ** @   ___minis_dailies
+    --
+      Inkscape (+Rita och skriva för Online-Undervisning  @@
+    - websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
+        ~/Dropbox/rsc/data/lists/learnqna/vanki/lynx.txt
+     HCJP-5e  
+    C (modern, hardway, etc) + Lin(etc) sysArchit. **  @@
+    Dlang [Ali, +Learning, Cb]
+    Flutter+Dart    @
+    Elixir(**!)     @
+    C# + 'ciss' (etc)     F#(??)
+    WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
+        wappdev.js eloquent.js
+        +h5g / three.js (w.gamedev)
+    Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
+    Nyq, Csound, Scoll  muHask*(*), Midi  @  Chuck
+    SICP (etc, ...)   @
+      JFx(!)   @
+    --
+
+    --
+    mc
+    'Debian.Cb 1'
+    --
+                vlang
+
+    ----
+                - Dft: bohemian rhaps. etc
+                - Freec. Webdev (+svganim, wappdev1, h5g  ,JS-Cbs+h5c3-1)  typescript  = Done by 4 may  (+ap-a/ap-i)
+                . {{{
+                - Dlang Restart (+doks x3,5 +vibe-new)  #+clean up all vankis 1(!!) {{{
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/dlang/dcookb.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/dlang/dlearn.tagged.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/dlang/dwebdev.txt
+                }}}
+                ar, dan-dict, +fr/de, spa, ry
+                kanjilist 2000: ~/processdir/kanjilist2000/
+                @ MuTe-list (!!)
+                Android Java-Dev 1(!)
+                - Mail till Mikael Frendberg {{{
+                Hej Mikael.
+
+                det var sagt/satt att
+                Andreas N skulle höra av sig 
+                att höra av sig till mig om en anställning med tidsmått
+                efter en anmodan från Transport i slutet av 2021
+                men trots att jag sökt honom (ibland flera gånger i veckan) sedan årsskiftet 2022, har han inte återkommit till  mig
+                med tid för möte med ett erbjudande.
+                .
+                Jag ber dig därför höra av dig till mig snarast möjligt
+                senast någon gång under kommande veckan
+                så vi kan ordna detta  skyndsamt
+                Vänliga hälsningar D. Albertsson
+                i annat fall måste jag vid det här laget
+                gå vidare
+                till HR centralt på Securitas
+                }}}
+                Städ(!)
+                        [Andreina (et al)(**!)]
+                tommy skaresund (m.fl. =spelutveckl.)
+                @ - Bluesbooks, Improv, arr + harm
+                - Börja Klippa: hallå där, Speln.videos, doctor is here(!)
+                - Minilist Inlärn. 1  = till Alex + Freddan (+ Vim Abe)
+                - brev till jakob fransson {{{
+                Hej Jakob.
+                P.g.a. av en miss har jag fått boka om undersökningstiden för lungröntgen (jag har varit i kontakt med enheten på Ua sjukhus)
+                Det funkar som sagt något bättre med smärtjusteringen via Duloxetinet (PS Finns det något man därigenom kan säga angående vad orsaken till smärtorna skulle kunna vara? (=att just den medicinen har hjälpt, åtminstone något))
+                Däremot får jag oftast 1-3 (el. likn) gånger per dag eftermiddagar
+                svåra hugg av smärta  som gör att jag får pausa arbete och uppgifter och vila mig,
+                har svårt att böja mig för att ta på byxor, knyta ett par skor
+                har svårt att vrida mig mm
+                50 % eller mer(!) av dagarna är jag också så trött och susig, att jag oftast inte kommer igång med något förrän några få timmar framåt sen eftermiddag/kväll, och många dagar försover jag mig med 1-6 timmar, trots att jag sätter larm.
+                Jag tar också nästan varje kväll en oxynorm, och en eller två alvedon, för att kunna sova (=p.g.a. smärtan); Vid några tillfällen har jag också fått dubbel d.v.s maxdos (=2 oxynorm och 2-4 alvedon). Vid några enstaka tillfällen (t.ex. ti 12/14) får jag också upprepa oxynorm+alvedon mitt på dagen.
+                .
+                Jag har nu fått en tid för möte
+                om utvärdering/utredning
+                med F-kassan och AF angående min arbetsförmåga
+                och hur vi kan hitta ett arbete
+                som passar mina kompetenser  och min sj-problematik.
+                Mötestiden för en första utredningskontakt är satt till
+                4 maj.
+                Utredaren gjorde mig också uppmärksam på
+                att min sjukskrivning gick ut den 4 april.
+                .
+                Jag ringde därför för att boka en telefontid med dig
+                så vi kan lösa ärendet så sjukskrivningen inte löpt ut (=då kan 
+                Jag fick prata med Susanne (som du ju vet att jag framfört kritik mot).
+                Hon var dock trevlig, och framförde att någon skulle ringa upp mig dagen efter samtalet.
+                Denna person hörde dock inte av sig under tisdagen, eller onsdagen.
+                }}}
+                - sed + Deb
+                }}}
+                scheme + Ly-Snippets (+Lilypond @)
+                - rsteno: hallå där (+facket + breven som skickas)
+                BlendPy
+                inks + webgrafik(!)  +Tuts(!)
+            MAPPING, GEO-MAPPING, Gis(*(*)): ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/openlayers3-start_plusgis-geoinfo.txt
+                --
+                Philto/Verktl. + Gilje|Univ.(!!):
+              2022-04-19 ti - 20.15: Vaccin-dos 2 (!!)
+                Bollen + Sty.trän.
+                Samsung Notes(!(!))
+                NextCloud(!! Puh)   (Obsidian??)
+                PROGRAMMING 'Concepts of Prl' + Algos + HTDP/SICP + Softw.Design + 'Beaut./Pragm/Clean-x3' + 'Mozart'-book
+                GameDev(*) (=agk++ (**)) (Unity, React 4, agk(), Godot, ..)
+                - PyAux (=PyProgr + Lib  +  blendpy, stats, datasci, (etc etc))  @@
+                Stat/'Data Science'
+                - Allm.A-doks [Forums stora, Bildoks(x3)]  #+ocr hemohyra|hyresg.fören.
+                - vidauprocess + grafik 4, Ffmpeg(!), Heros(!)
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/Manuals/GoPro_Hero-Texgear4kaction.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/graf/g/digbildbeh_4.orig.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/graf/g/digbildbeh_4.txt
+                - v3+1 {{{
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/_v3_plus-ssh/ssh-defguide.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/_v3_plus-ssh/vbox_uman.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/_v3_plus-ssh/veracrypt-userguide.txt
+                ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/_v3_plus-ssh/vnc-uguide.txt
+                }}}
+                ----
+                - Vim: Uman, RefMan, vimlang  @@
+                - Evil, EmacsQ 1 (+refc. long--index), Org(*), im-dired|pdf-tools(*)        -->  (Elisp)
+                Scribus(!): ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/graf/scribusmandef.txt
+                YouTube(?? +)  =Learn
+                fontforge {{{
+                https://fontforge.org/en-US/documentation/
+                --
+                https://archive.flossmanuals.net/_booki/fontforge/fontforge.pdf
+                http://designwithfontforge.com/ebook/design-with-fontforge_en-US.pdf
+                http://designwithfontforge.com/en-US/index.html
+                https://englishonline.info/fontforge-manual-17/
+                --
+                https://fontforge.org/docs/scripting/python.html
+                https://fontforge.org/docs/scripting/scripting.html
+                }}}
+                --
+                Litt (+biografier)
+                Anki (=relearn 2022+(!!))
+                . diff+patch, dolphin,  ed, id3||Easytag,  Audacity(!) {{{
+                - Install LightTable + Clojure (**)
+                ----
+                - thunar, dolphin, audacious, mutt, markdown
+                - diff + patch,  ed   Vim,  vbox,  Easytag++,  id3
+                . {{{
+                search: bash diff and patch examples
+                https://www.man7.org/linux/man-pages/man1/diff.1.html
+                https://linux.die.net/man/1/patch
+                ----
+                https://acloudguru.com/blog/engineering/introduction-using-diff-and-patch
+                https://www.pair.com/support/kb/paircloud-diff-and-patch/
+                https://www.thegeekstuff.com/2014/12/patch-command-examples/
+                https://www.systutorials.com/diff-and-patch-generating-and-applying-patches/
+                }}}
+                --
+                - fontforge + Scribus
+                - Festival,  Ub.Studio-Man
+                --
+                - Audacity(!!)
+                - LPY 3(++ !!)
+                }}}
+                http://potrace.sourceforge.net/  http://potrace.sourceforge.net/faq.html
+            Audacity   @@@@
+                Blender X  @
+                - Keyb.s, "Csounds", an.ljudyntes (**(!)) {{{
+                - Keyboard Magazine 1, Korg Dw-6000 man,  casio-privia-piano-man
+                - yourock-guitar(**)
+                - An.Ljudsyntes(**):  - SynthCookbook(**(*)), - Log.Effects
+                - NordKeyboards(??)
+                - Csound, SuperCollider etc
+                - Analyze|Visualize w. SuperCollider (**!)
+                - Clam Framework + clam chordata (**)
+                - 
+                ----
+                - Blue Improv. (jazz-rock)
+                - Coker(!!)
+                - 
+                - Jazz-Improv (brown+blackwhite) **
+                ----
+                - GuitarEffects  (+as Pedals / Software)
+                - Gitarr =Lagning + Underhåll (!!!!(**))
+                }}}
+                - (Mu: ARRAN, HARM,      ) {{{
+                - Ingelf (x2)
+                - rock-arr
+                -  tradi-arr
+                -
+                ----
+                - Directing-books
+                - Arr w Midi-Book(****)
+                - ARRBOOKS: COMPOSING + FULL ORCH. SCORES (Wagner, Williams etc etc) (*******(!!!!))
+                }}}
+                ----
+                - SVG  @@
+                - erlang   Elixir
+                - C# ('ciss.txt')
+                - BASH (orange[de], blue(**), purple('Bcb')) {{{
+                (Rute=7, lcert-orange=1, yell-vids=8, Blue-Bash=2, BashCb=4, PTools(x2)=3, lsag, DebCb, DEBBIB(x2)=6,  LCmds.org=5, CLine-Fu"Db"(!!(**)), BigGreyList,  Elbot-Lin)
+                }}}
+                PostScript()
+                - PShell 5         ar(!), it(!), Fra, (Stranna Dushy(++)), 
+                rlang  julia
+                netrw
+                - anim-foto-video-graf(**)  {{{
+                - fstd, digbildbeh. 4, 'Rip-Books', 
+                - 'Anim-Books', 12 Principles of Animation, filmbooks + 'Filma med Foto-kamera'
+                - DRAWING/RITA(**), CARTOON-DRAWING   # + Olle Johansson(+inspir-grafik)
+                - 'tidnings-design, undervisn.grafik'
+                - 'Typografi', Fonts(!!)
+                - "Imag" (**)
+                - Graf.Kokb.(*)
+                }}}
+                . AuVid-compression
+                . . SvSynDb, svskrivregl, Eng-WORDS (etc) {{{
+                Zen of Filesystems
+                Idioms (eng|sv)
+                Beving | CITAT  #+Citat-tags/kateg.(*!)
+                SvSynDb(!!!!(!!))
+                Sv.Skrivregl.(x2), Eng-WORDS(*), Eng-App_Words 1, Eng Learned Words (memrize 2),
+                (instant-intellectual), 
+                Hist-Speeches
+                .
+                Hist
+                JUR
+                PR, Markn.F
+                Ekon (etc) (**!)
+                Proj.Manag
+                taskjuggler(!)
+                Allm.B[Encycl.s(**), TP:s(*!)] + Sci(eg. Fogtdals, WIK(!)) / McGraw(**!)
+                }}}
+                - MAPPING
+                ----
+                readline =emacs|vim
+                ed, mc, etc etc(=Bash(!))   ~/Dropbox/rsc/aubooks/data/bash/ {{{
+                +Grey Commands-List as Ref|Master-list (**)
+                bind_macros.txt
+                dirs.txt
+                ed.txt
+                mc.txt
+                readline.txt
+                history-fc.txt
+                find-xargs.txt
+                grep-ag.txt
+                grub.txt
+                man-info.txt
+                less.txt
+                printf.txt
+                test.txt
+                Sed-Awk.txt
+                TODO
+                extras/Apt-Aptitude.txt
+                extras/ps-top.txt
+                extras/wakeonlan.txt
+                extras/cron-anacron.txt
+                }}}
+                - GIT
+                .   XCode {{{
+                search: install mac and xcode in ubuntu vm
+                https://izziswift.com/can-i-install-xcode-in-ubuntu/
+                https://hkdb.medium.com/running-macos-in-virtualbox-with-ubuntu-31ec745f21ae
+                https://www.raywenderlich.com/8325890-a-complete-guide-to-swift-development-on-linux
+                }}}
+                . . . Fluxbox, Vivaldi, Logic, Hydrog/Roseg  markdown(+rtf, wiki etc) {{{
+                Fluxbox, Openbox, IceWm, Awesome, Xmonad
+                blendpy(-*)
+                .
+                scheme-guile, gambit, racket, minischeme(?)
+                .
+                impress.js
+                Thunar {{{
+                https://askubuntu.com/questions/446458/thunar-command-line-options
+                http://freesoftwaremagazine.com/articles/tips_tricks_and_scripts_thunar_file_browser/
+                }}}
+                .   audacious {{{
+                https://pkgs.org/download/audacious-skins
+                https://www.gnome-look.org/browse/cat/129/order/latest
+                https://store.kde.org/browse/cat/129/order/latest
+                http://www.xmms.org/
+                --
+                https://help.ubuntu.com/community/Audacious
+                https://wiki.archlinux.org/title/Audacious
+                https://audacious-media-player.org/
+                }}}
+                Vivaldi
+                mutt
+                gentoo (fman)
+                vim-bash | em.bash
+
+                Burge.txt
+                Logic X + Eff.
+                zoom ps-04 ministudio(!)
+                UbuntuStudio-Man(**(!))
+                Ardour(*)
+                Hydrogen, Rosegarden*
+                MIDI
+                --
+                MacX + safari + ForDummies(*!)
+                Win 10 + MS Keyb.Creator  #+seccopy mskb files 1(!)
+
+                markdown
+                wiki + wiki-like {{{
+                mediawiki syntax
+                https://www.mediawiki.org/wiki/Help:Formatting
+                wiki markup syntax
+                https://en.wikipedia.org/wiki/Help:Wikitext
+
+                wiki-like desktop software
+                https://en.wikipedia.org/wiki/Comparison_of_wiki_software
+                https://en.wikipedia.org/wiki/List_of_wiki_software
+                https://en.wikipedia.org/wiki/Personal_wiki
+                https://vimwiki.github.io/
+                }}}
+
+
+                Elixir | Erlang (*)
+                lua (*)
+                Haskell (-lys, -Music(**))
+                qpython()
+
+                Java Fx
+                Jdir14(+swing)
+                Android-Tut
+                JVE-langs
+                Groovy
+                Clojure + clojurescript
+                lighttable
+                jakarta ee
+
+                Okular
+                Eclipse
+                Netbeans
+                VS Code (*)
+                lynx
+                yourock
+                mplayer
+                vbox
+                vnc* | wakeonlan | anacron
+                vera
+                tor / openvpn(!)
+                }}}
+                data.WISHLIST (Samsung Notes, julia, Dired, ffmpeg, Synfig, Imag, Chocolatey {{{
+                Samsung Notes *(*)      ___dataWISHL
+                em:image-viewer
+                iimage
+                em:pdf-tools
+                em:dired
+                emms
+                Amarok  #+more KDE docs
+                em:w3m
+                gentoo filebrowser
+                kdenlive, openshot
+                mt(??) video framework  #python etc
+                pitivi
+                ffmpeg
+                (Imag)
+                Vala
+                Festival (festvox*)
+                Julia **(!)
+                Glade
+                Krita
+                praat
+                Clam++, clam chordata
+                Synfig, anigen
+                vivaldi: quick-commands
+                Fluxbox, icewm, openbox,  awesome, xmonad
+                solaris
+                readline emacs/vi *
+                Nix/NixOS
+                apt, debian-alternatives
+                chocolatey
+                markdown, ubuntu forum/github markdown
+                SnapCraft
+                search: Lin. Package-Managers (flatpak, snaps, appimage, packages)
+                eric, PyCharm
+                google/duckduckgo search tips/tricks
+                EasyTag, id3tags
+                cinepaint, rawtherapee, lightzone, fspot
+                ((shortcutfu))
+                FS-H  #un, win, andr (etc)
+                azure
+                puppy linux
+                }}}
+                (Pandoc etc--listblock(!!))
+                - FS-Hier. + lsag {{{
+                - Lin
+                - bsd(/solaris)
+                - MacOsX
+                - Win 10
+                - ios
+                - Andr
+                }}}
+                Writer/Calc + Starb.       #Excel, gnum.
+                ----
+                (.more)  Nix/NixOS|GUIX, LFS,  gentoo, sabayon ... {{{
+                snap(craft)
+                nix + nixos *
+                lfs / dsl / pocket lin
+                gentoo lin.
+                portable linux distros(slax etc)
+                .
+                wxwidgets
+                }}}
+                ====
+                C# (**)
+                F#
+                Stat.
+                Welding
+                Electronics (*)  #+soldering
+                Julia
+                . . {{{
+                SocFramgång (**(!!))
+                NevSplit
+                Sec/Väkt ((****(!!)))  #+Sec./Bya Online Learning-Platforms(!!)
+                STRAT/Vjud (etc)
+                Python Bioinformatics
+                'Engineering'
+                Passage/Security-Systems
+                Lock-Picking(*)
+                }}}
+                . . . . . . .
+                |evince|
+                ||shotwell||
+}}}
+
+---- Win-Overview =x3 ----
+Office.Rush [1] {{{
+  #Rush/Listen through dok to get overview(!)
+
+  Puppet Patterns(etc)
+Mlearn 1 formulas + Obsidian w. Latex[!!]
+MLEARN: FIRST DOKS
+JuPyter Notebooks (etc)
+Bash/Dash-Mans
+F# - TOCs + Concepts
+  XUnit Patts
+  Nix Master
+   SSH   + Puppet
+  Docker + Kubernetes + AzDevops + GithubActions
+    Devops + Python (+iPy/Xonsh)
+  Gremlin (+Neptune)
+  FuncPy
+   Choco (+Puppet) + PowerShell (+SharpKeys)
+                   (GVim Win + 'Run Apps(=PShell?) from GVim')
+  ----  Anki Redone
+  Arch Linux
+    Nushell
+Buckey's Godot
+Music With JavaScript *
+  ~/Empire/Doks/learn/speedread.txt
+
+  Reason + PureScript  ___onroad=mabye
+
+}}}
+office.Overview [2] {{{
+
+  iPython(*)
+  Xonsh
+  Android-Scripting + Termux
+F# [Overview and Concepts]  +Cloj.
+
+  FuncPy **
+
+  Anki
+  ----
+    Py Webscraping
+  Avalonia
+    [CsFunct 3]
+    CsRx 3
+
+}}}
+    -- office.Slog ___index=3 [3] {{{
+____ __
+.     . {{{
+Reduce down rectangular file-block to gvim one-liner
+  @r: }-$F/c,}-$F.i}-V{:s/\.txt{A{VipJgv:s/[^ ],b ,e[^ ]//g
+}}}
+
+~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
+
+gvim `find ~/gdrive/rsc/Doks/taskuj/ -type f -name '*.txt' 2>/dev/null`
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
+
+~/Empire/Doks/Comp/lang/webdev/js/jsjsoncb_2015.txt
+gvim ~/Empire/Doks/Comp/mu/au/csound/{CsoundBook,csoundqt,csound-virtualsoundprocess_2000}.txt
++Blue
+Set up def. .vimrc Linux (+test _vimrc for Win)
+  ----
+gvim ~/Empire/Doks/Comp/lang/clangs/csharp/codegen/{cs-roslyncb_2017,roslyn-codegen_2017}.txt
+
+
+  MSAL / Microsoft Identity
+      gvim ~/Empire/Doks/Comp/lang/clangs/csharp/webmob/maui/{NET_MAUI_in_Action_2023,maui-enterprisepatts_2022}.txt
+  Graph API
+      ~/Empire/Doks/Comp/lang/webdev/js/jsjsoncb_2015.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/msoft-graph/MsoftDocs-GraphAPI.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/_newtonsoft-json/jsjsoncb_2015.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/sharepoint/Msoft365-Progr_2016.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/sharepoint/MsoftDocs-Sharepoint.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/sharepoint/sharepoint-tut.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/swagger-api/swagger.pres.txt
+      ~/Empire/Doks/Downl/exjobb-exempel/msal-msidentity/MsDocs-MsalMSIdentity.txt
+  Win 10 Remote Desktop
+  ANDROID PROGRAMMING
+
+
+Bash-Man / YT-DL Cleaning
+  Ocaml Master
+
+  Restart THE DOC(+DrSträng)-Publishing(!!)
+    Prompt Engineering
+    CSound, SuperCollider (etc +Recording)
+    Dlang + Vlang
+      REF.CB-LISTS[!!]
+  Emacs-Install + Setup (Per N++)
+    --
+  TODO - UPDATE LIST: ____ REFACT[!!], DEBUG  = TODO {{{
+    gvim ~/Empire/Doks/Comp/PROGR/refact/{refact-2e_2019,efflegcode,refct,legacycode-beyond_2016,refact-divein_2019,refact-designsmells_2015,refact-despatts_2012,refact-topatts_2005,db-refact_2006}.txt
+    + LLDB
+    gvim ~/Empire/Doks/Comp/debug/{debugeff-66_2017,Cgdb_2022,debugart-gdbddd_2008,debugit_2009,debug-optim-legacycode_2003,gdb-debuggingwith_2022}.txt
+    gvim ~/Empire/Doks/Comp/PROGR/revengineer/{AsmUnderstand-revengin_2019,datamine-revengin_1997,x86disassembly_2013,ghidra-revengineer_2020,revengineer-forbeg_2014}.txt
+  }}}
+          ~/Empire/Doks/Comp/PROGR/refact/db-refact_2006.txt
+      ~/Empire/Doks/Comp/wman/fluxbox/fluxbox-book_2016.txt
+
+      gvim ~/Empire/Doks/Comp/mu/au/{midi/modernmidi-sequencing_2020,auprogr-book_2011}.txt
+  gvim ~/Empire/Doks/Mu/arr/{MidOrch,ProOrch1.shared,arrpoprock,MuComp,OrchInstr,tradarrroine}.txt
+    SCOLL, CSOUND, (ETC) {{{
+      gvim ~/Empire/Doks/Comp/mu/au/{csound/csound-virtualsoundprocess_2000,scoll/scoll-book,scoll/ScollLogicpro,scoll/ScollBook,scoll/overtone/overtone-uguide,csound/man-tut/csound-flossman_2011,csound/man-tut/tutorial_5.07,csound/man-tut/1_masteringcsound,csound/man-tut/csound_editingbasics,csound/man-tut/super_mikelson_csound_primer,csound/man-tut/vercoe_a_beginner_tutorial,csound/man-tut/singer_an_introduction_to_csound,csound/man-tut/steven_yi_scanned_tutorial,csound/midi/2_real-time_synthesis_in_csound_with_midi_control,csound/midi/3_midi_instrument_designs_for_real-time_performance}.txt
+    }}}
+
+  ~/Empire/Doks/Comp/lang/webdev/db/nosql/graphdb/gremlin/GraphData.txt
+
+  ???????
+
+     ~/Empire/Doks/Comp/sysadm/lin/fhs/fhsstandard_2004.txt
+     ~/Empire/Doks/Comp/sysadm/lin/fhs/lsag_2005.txt
+     ~/Empire/Doks/Comp/sysadm/lin/fhs/UnixFhs_2003.txt
+  ~/Empire/Doks/Comp/sysadm/lin/101linhacks-3e.txt
+  ~/Empire/Doks/Comp/sysadm/lin/101bashhacks.txt
+  ~/Dropbox/rsc/Doks/Comp/debbib.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002.Tags1.txt
+    /home/bluelegend/Empire/Doks/Comp/sysadm/lin/unixworkbench_2017.txt
+    [Unix PowerTools]
+  gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
+  ----
+  Termux
+
+    gvim ~/Empire/Doks/Comp/{lang/webdev/js/ffox/ffox-hacking_2005,lang/webdev/js/ffox/ffox-progr_2007,gui-wtoolkits/jsmonkey/hack.greasemonk_2006,gui-wtoolkits/jsmonkey/greasemonkey_2005}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/webdev/c3/sass/sass*.txt
+
+    ~/Empire/Doks/Comp/lang/webdev/db/relational/sqlite/sqlite-mobdev_2015.txt
+    ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/
+
+    gvim ~/Empire/Doks/Comp/lang/java/build/gradle/{gradle-androidrecip_2016,gradle-buildautomhandb_2016,gradle-buildtest_2011,gradle-effimplem_2012,gradle-succinctly_2017,gradle-uguide2,gradle-uman56_2018}.txt
+
+Hask {{{
+    gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/haskell/{haskpract-2_2019,algebradriven-design_2020,datanalys/hask-datanalys_2015,datanalys/haskell-dataanalysiscb_2014,webdev/hask-practwebdev_2018,webdev/hask-yesodwebapps-2e_2015}.txt
+}}}
+    gvim ~/Empire/Doks/Comp/lang/haskell/datanalys/{hask-datanalys_2015,haskell-dataanalysiscb_2014}.txt
+
+    ~/Empire/Doks/Downl/  = CLEAN UP DOKS ____
+        /home/bluelegend/Empire/Doks/Comp/mu/au/midi/modernmidi-sequencing_2020.txt
+        /home/bluelegend/Empire/Doks/Comp/mu/au/auprogr-book_2011.txt
+
+    Fs / F# {{{
+        gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
+    }}}
+    Flutter {{{
+        gvim ~/Empire/Doks/Comp/lang/dart-flutter/flutter/{flutter-apprentice_2021,flutterapprentice_2020,flutter-beg_2019,flutter-gamedev,flutter-layouts,fluttermob-qsguide_2019,flutterpragm_2022,flutter-progr_2020,flutterprojs_2020,flutter-recip_2019,flutter-uis_2022}.txt
+    }}}
+    ~/Empire/Doks/Comp/lang/dart-flutter/dartlearn_2013.txt  ___Functional
+      [+New Functional]
+
+        :args `cat files.txt`
+        gvim -c "args `cat ~/RiderProjects/Acme/files.txt`"
+MlearnApps-Intro ** {{{
+    gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
+}}}
+Elix** {{{
+  Phoenix LiveProgramming
+
+  gvim ~/Empire/Doks/Comp/lang/erlang-elix/{web/phoenix-inact,web/phoenix-realtime-channels,elix-concurrdataprocess_2021,elix-action_2019,elix-adopt_2018,elixmast_2018,elixgraphqlapis-absinthe_2018,ElixGenetic,functwebdev_2018,elixotp-systdesign_2019,elixfunct-newworldfounds_2018,domaindrivendesign_2006,elixir-succinctly_2019,ElixCb_2015,elix-ectodatabaseapps_2019,elix-functprogr_2018}.txt
+
+  ~/Empire/Doks/Comp/lang/erlang-elix/elix-introd_2e_2017.txt
+  ~/Empire/Doks/Comp/lang/erlang-elix/elixir-language_2017.txt
+  ~/Empire/Doks/Comp/lang/erlang-elix/ElixirSchool.txt
+  ~/Empire/Doks/Comp/lang/erlang-elix/elix-learnfunctprogr_2018.txt
+  ~/Empire/Doks/Comp/lang/erlang-elix/elixprogr-16_2018.txt
+  ~/Empire/Doks/Comp/lang/erlang-elix/elx-littleotp_2017.txt
+}}}
+Xml W3Shools {{{
+    ~/Empire/Doks/Comp/lang/xml/xml-w3schools.ToClean.tags1.txt
+}}}
+XunitPatts ** {{{
+    gvim ~/Empire/Doks/Comp/PROGR/test/framew/{xunit/XunitPatts,selenium/selen-datadriventest_2018,selenium/selen-tipstrickspract_2021,selenium/selen-webdriver3-practguide_2018}.txt
+}}}
+DotNet Core (+EF Core) {{{
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/webmob/dotnet-core/{aspdotnetcore5_2020,cs7-dotnetcore2-crossplatfdev_2017,cs7-dotnetcore-cb_2017,dotnetcore2-byex_2018,dotnetcore-inact_2018}.txt
+}}}
+____ Cs DesignPatterns {{{
+    gvim -c 'colors molokai_dark' ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/{cs-despatts_2018,designpatts.cs.Tags1,effective-cs-with-scottm_2017,cscb_2022.Tags1,cs-codeconventions,csharptips-2014,cshconceptsavanc,functional-cs.Tags1}.txt
+}}}
+EF Core {{{
+    gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/clangs/csharp/db/entity/{entityframewcore6-2e_2022,pract-entity-framework_2020,entitydev-codefirst_2015,cs8-dotnetcore3-entity-vscode-4e_2019,entity-framework-core-2-aspnet-core-mvc_2019.ru,entitycore2-asp-coremvc_2018,entitycore-inaction_2018,cs7-dotnetcore_2017.ru}.txt
+}}}
+.  (nix(guix) + nix-os) {{{
+    gvim ~/Empire/Doks/Comp/sysadm/lin/distro/NixGuix/{NixRefman,NixpkgsRefman,NixOSMan,guix-cookbook,GuixMan,guix-refcard}.txt
+}}}
+    gvim ~/Empire/Doks/Comp/lang/java/cloj/{cloj-bravtrue_2015,clscript/clojworkshop-clojscript,datasci/clojdatanalyscb,clojrecip,clojurecb,clojure-realworld_2012,cloj-workshop,getting-clojure2_2018,microservices-with-clojure_2018,practical_clojure_2010}.txt
+__ __ CLOJURE + Clscript {{{
+    gvim -c 'colors industry' ~/Empire/Doks/Comp/lang/java/cloj/{clojcb_2014,sicp.clojure,clojprof_2016,cloj-progr-2e_2012,clojrecip,clojurecb,cloj-workshop,jcloj-2e_2014,microservices-with-clojure_2018,practical_clojure_2010,clojquick_2017,clojure-realworld_2012,getting-clojure2_2018,programming-clojure_2018,clojelems_2019,cloj-hiperf,clojliving_2015,cloj-pract_2010}.txt
+      webdev
+    gvim -c 'colors industry' ~/Empire/Doks/Comp/lang/java/cloj/clscript/{clojscript-studies_2016,clojscrlearn2,clojscrlearn_2016,clojscr-rxwebfunct_2017,clojworkshop-clojscript,lclojurescript}.txt
+    patts/algos + Rx + Datasci ----
+    gvim -c 'colors industry' ~/Empire/Doks/Comp/lang/java/cloj/{datasci/cloj-datanalys_2014,datasci/clojdatanalyscb,datasci/cloj-datasci_2015,datasci/clojmlearn_2014,patts-algos/clojalgodatastruct,patts-algos/clojscala-functprogrpatts_2013,patts-algos/clojscalfunct-datastructalgos,rx/cloj-hiperform--asynchchannels-logicrx_2017,rx/cloj-rx_2015,rx/cloj-rxhandson_2019}.txt
+}}}
+        clojure-sicp
+    gvim ~/Empire/Doks/Comp/lang/webdev/Aux/Aws/{AwsCb_2022,awslambda-progr_2020,go-serverless-awslambda_2018}.txt
+    gvim ~/Empire/Doks/Comp/PROGR/git/{githubactions_2021,githubactions-workflowautom_2021,gittools-building_2016}.txt
+____ Docker (+Aws/Azure, kubernetes)  vagrant, ansible  AUX {{{
+
+    gvim ~/Empire/Doks/Comp/network/networksec-nmap_2017.txt
+
+    gvim ~/Empire/Doks/Comp/lang/webdev/deploy/{openshift-dockerdeploy_2018,kubernetes/kubernetes-essentials,kubernetes/kub-completedev_2020,kubernetes/kubern-bestpract_2020,kubernetes/kubernetes-admin_2022,kubernetes/kubernetesguide_2019,kubernetes/kubern-progr_2019}.txt
+
+    ____
+    gvim ~/Empire/Doks/Comp/PROGR/devops/{ci/cipipeline-jenkinskubernterraform_2021,aiml-devops_2019,devopsautom-cb_2015,devopscareer-handb_2022,PyDevops-ansibdockeraws_2019,py-fordevops_2020,serverlessops_2017}.txt
+
+    gvim ~/Empire/Doks/Comp/PROGR/projman/azdevops/{azuredev-guide_2019,azuredevops-agileprojman_2019,azuredevops-begguide.mini,azuredevops-solutimplem_2020,azure-prodaccel}.txt
+
+        gvim ~/Empire/Doks/Comp/{PROGR/devops/vagrant/sharepointdevops-packerterraformansibvagrant_2018,PROGR/devops/vagrant/vagrant-devops_2018,PROGR/devops/vagrant/vagrantcb_2015,PROGR/devops/vagrant/vagrant_2013,cybersec/ansible/secautom-ansib2cb_2018,cybersec/ansible/secautom-ansib2_2017}.txt
+
+}}}
+Functional Algos/Design-Patterns {{{
+    gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/funct-reactive/{functreact-domainmodel_2017,purefunct-datastructs_1998,reactive-despatts_2017}.txt
+}}}
+SEMANTIC WEB + Elastic Search {{{
+    gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/{azure-cosmosdb-mongo_2018,elastsearch-action_2022,dynamo-book_2020,dynamodb_2016.tutspoint,dynamo-mast_2014,semweb/intellsemwebsyst-epistemof_2016,semweb/knowlgraphs-linkeddata-largeorgs_2017,semweb/semanticweb-clojjava_2010,semweb/semweb-datamanage-qprocess_2011,semweb/semwebRDFSPARQL,semweb/semweb-structdata_2015,semweb/semweb-webscience_2013,semweb/sparql-learn,semweb/sparql-learn_2011,semweb/webdataapi-forknowlgraphs_2021}.txt
+}}}
+        ~/Empire/Doks/Comp/lang/scm/kawa/kawa-docs.txt
+Coq, Isabelle, Agda {{{
+    ~/Empire/Doks/Comp/lang/{
+      misc-lang/coq-isabelle/Coq-8-19-2-Refman_2024
+      misc-lang/coq-isabelle/coq-certifprogrwdeptypes_2019
+      misc-lang/agda/agda-verifiedfunctional_2016
+      + Owl, Ontology(Isabelle,Vampire)
+      webdev/db/semweb/ontology/isabelle-part1.txt
+      webdev/db/semweb/ontology/vampire-prover_2012.txt
+      webdev/db/semweb/ontology/ontology101.txt
+    }.txt
+}}}
+
+    Misc Datasci: (AI/MLEARN ETC) {{{
+        gvim ~/Empire/Doks/Comp/{mlearn-ai/mlops/pymlearn-mlopsengineer_2021,mlearn-ai/cloud/aipragm-cloudmlearn.ru,mlearn-ai/Js/jsmlearn-pract_2021,mlearn-ai/Js/jsmlearn-handson_2018,lang/go-v/go-serverless_,datasci/cmdline-datasci_2015,lang/py/datasci/py-complexnetwanalys_2018}.txt
+    }}}
+
+    - Study TPope Vimrc[!!] (+Dotfiles)
+    - START MODULARIZING VIMRC|EMACSINIT.EMPIRE(!)  @@
+
+
+        UNIX POW.TOOLS (*!)       @@
+    - mutt, Graphdbs(?)
+        - Blender Py Getstarted 1  @
+    - Termux: new tagged list  @@
+        grep/sed/awk w. Python **(!)
+
+                - Bluebash 1 ****  @@
+    --
+    to Txt-Manuals(!!): PyPyramid, 'AudacityMans'*
+gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/PyramidFrawew-Docs_2023,flask/pywebdev-flask-2013,py3webdev_2011,pyreact}.txt
+      ~/Dropbox/rsc/data/lists/ref/comp/lang/kotlin/Kotlin-Refdocs.txt
+      RevealJs-Doks,
+      - ~/Dropbox/rsc/Doks/phone/Comp/lang/py/hylang.txt
+          (+install vim syntax plugin)
+
+    - Start Cut: Hallå Där + Dft-Vids(+ Magnus B Födelsedagsfest(!))  @
+      - LÄR/ÖVA IN DFT + THE DOC-MUSIC @
+    - 4K Gear / Hero Manuals[!] @@ *** [+filma (+publ.) DFT-PIECES]
+    --
+    VimRefman Review 2022(!!)  #+make flat list of topics|bests|pickouts
+    --
+    - Anki-Man
+      kde connect (!!) (+PHONES, TABLET S3)
+    --
+    - Clean out NatureImages 1 (+set new Shotwell-architecture)
+      - Clean DrStr-Images 1 [!]
+    - LÄROPLANSTRÄDET MU-UNDERVISN. (**/!!)  @(!!)
+    - Bö. planka trum:'timeagent'(****)  #+Allt(!!) i gamla Elevfiler (=w. the|a new more flexible scheme(**/!!))   ((********))
+    --
+    - RESET THIS INDEX TO FOLDMETHOD=INDENT(???)
+    --
+      - ps typefacelib 1 'pickout-lists'(!!)
+      - Blender: Prepare - Real Blenderwork (+Ss-Books/Tuts(!!))  [[=3 Books]]
+        - Digest Bildoks
+        --renskriv föret:paulaw-petraa-andreasanacka_Notes/Sammanst.(*!!)
+        LAT
+        ~/Dropbox/rsc/lists/ref/Lang/Lat/vivlinglat.txt
+        ~/Dropbox/rsc/Doks/phone.fmt35/todo/suitecrm.txt
+    }}}
+--------------------------
+
+-- ontheroad.store ---- ___index=4 [4] {{{
+
+Jupyter
+Termux
+
+
+  C# DotNet Core MVC + Blazor  [+Avalonia]
+    PowerShell[!]  WSL ____
+  AndroidProgr (+Kotlin??)
+  ----
+  AnkiMan (+Renskriv ___office)
+
+    MAUI (=Office)  [Kotlin + Funct.] {{{
+      https://dotnet.microsoft.com/en-us/apps/maui
+          https://github.com/dotnet/maui
+
+      https://app.pluralsight.com/search/?q=maui&type=conference%2Cvideo-course%2Cinteractive-course%2Clab%2Cpath%2Cproject%2Cskilliq&m_sort=relevance&query_id=4b3da816-f267-4168-ad9d-93702ef2f151&source=user_typed
+      https://app.pluralsight.com/library/courses/dot-net-maui-big-picture/table-of-contents
+      https://app.pluralsight.com/library/courses/dot-net-maui-fundamentals/table-of-contents
+      https://app.pluralsight.com/library/courses/building-dot-net-maui-applications-mvvm/table-of-contents
+      https://app.pluralsight.com/skilliq/dot-net-maui/intro
+
+      https://app.pluralsight.com/library/courses/blazor-hybrid-apps-building/table-of-contents
+
+      https://app.pluralsight.com/search/?q=javascript%20functional&type=conference%2Cvideo-course%2Cinteractive-course%2Clab%2Cpath%2Cproject%2Cskilliq&m_sort=relevance&query_id=600873c0-ec10-413b-8707-92fdca418845&source=user_typed
+
+      https://app.pluralsight.com/library/courses/asp-dot-net-core-mvc-deep-dive/table-of-contents
+      https://app.pluralsight.com/library/courses/aspdotnet-core-mvc-enterprise-application/table-of-contents
+      https://app.pluralsight.com/library/courses/asp-dot-net-core-6-fundamentals/table-of-contents
+      https://app.pluralsight.com/library/courses/aspdotnet-core-6-entity-framework-6-tailwindcss-vue-3-building-web-app/table-of-contents
+      https://app.pluralsight.com/library/courses/asp-dot-net-core-6-crash-course/table-of-contents
+      https://app.pluralsight.com/library/courses/architecting-aspnet-core-mvc-unit-testability/table-of-contents
+
+      https://app.pluralsight.com/search/?q=dotnet%20core%20mvc&type=conference%2Cvideo-course%2Cinteractive-course%2Clab%2Cpath%2Cproject%2Cskilliq&m_sort=relevance&query_id=939e25e0-c3de-4c12-bc26-79e62831d81b&source=user_typed
+      https://app.pluralsight.com/library/courses/dotnet-ecosystem-big-picture/table-of-contents
+    }}}
+    festival
+            Samsung Notes (+Phone/Tablet)
+            Nyxt (+qutebrowser/'hackers browser')
+        Learn/Memory(+pomodoro)
+      F#/Elix/Cloj/OCaml(etc) Datastructs[!!]
+    jsCb 1, 
+    Datomic *!  (+Datalog | Prolog)
+    PureScript (x2.5)
+        Bluebash **  @@
+        Jseloq|JsFunct[!] + (h5g 2) @ - Wappdevex 1  SASS + Compass, TScript  UrWeb
+          FreeC [!!]
+    AnkiDef =2024++
+    NuShell
+    NetRW: =new minilist   vim-bashmode, vim-outliner
+    VimscrHardw
+        ClojWebdev,  clojurescript [!!]
+    Pyfunct (1+2?)
+        FreecRedone2 (+js-wappdev2)
+    Emacs, Org + Elisp
+      webscraping[!]
+    - Termux: new tagged list  @@
+    - Vnc (+remote desktop)  @
+      - Ssh  @
+    Dlang**,   Vlang
+      Sass/Compass, Elm
+      Docker/Kubern, AWS
+      SemWeb =Knowl.Graphs, Ontologies: SUMO/Kif
+      cypher (+gremlin), GraphQL
+      julia[!]
+    wine
+    Funct C# / Cpp  + C# Avanc[!!(!)]  +UNITTESTING[!!!!]
+      F#, Elixir[**] +Domain-Modeling
+        Clojure[!!]  + LightTable
+        reveal.js, impress.js
+      Datasci + Stat + MLearn/AI [!!!**]
+      blockchain + solidity(!)
+    Asm[!!]
+     C[!!]
+     Haskell, Flutter[!]
+    Tasker + Scripting Android(!!)  @
+        Java with EE[!!]
+        F* [=Need Cleaning +Setting Code]
+        vera    @
+    - Debian-bib  @(!)
+    [+start Lang|Words|Litt]
+    --
+    rskrift | Gregg-snippets
+    ---- Shop 1 {{{
+        Lisp/Scheme/Elisp
+      FunctReactive [+Datastructs]
+     pygimp
+    C + Datastructs
+        gradle( +maven)
+     DataSci + Stats[!], MLearn + NLTK/OpenCv
+     microserv.
+     blockch. + Go[V]
+    Aux[comp]
+    Archit.Comp/.Sys [*]
+     netw.
+     Testing + Cybersec.
+    Ssh, vnc, Docker, Puppet,  Ansible
+     Haskell + Liquid
+    Idris
+    debug
+    webcomponents
+    Rust
+    gradle
+    }}}
+
+    
+        BASH/UNIX
+    - Ardour
+    - socframg.[++]
+    - Bevingat    @
+        Saol.run1
+      encyclstart (+hist)  Mini
+        - 'greps' / Regex[!]
+        cpp1+
+    ('py boring')
+        - Vidau-compress[!]  @
+        @  teal, (fennel)   nvim-lua (+lua4)
+            DUMMIES-start (**)
+    --
+      Writer|VimLatex
+        ProGit(=relisten) + VankilistGit 1 =Rewrite (****(!!)) - + derekbanas + Tim Pope / SysCrafters(!)
+     --
+     - forts. planka 'rel.ond'(=rsteno)  +nystart Gregg +A.Doyle(**)
+                 svsyndb(start  (=??))
+     - JUR, Grundlagar, etc
+       .
+       .
+    ----
+
+    ---- körn./ute sommar 2021 (**(!)) ----
+    - 'Strat'/ VÄKT** (+Sec Online**)
+        # +pre(??): Ny Lägenhet, Allm.A(Städ, recept/näring, Hemskötsel, Bil(**))
+    ----------
+     - three.js (+=Games with __)
+    - SvSynTotal(??)
+    - Csounds (etc  ??)   #=keyb, Scoll, 
+       - Algo (etc), PROGR****(??),  'Data Science' + Math(!!(**))
+            + Grafik/Video mm (??/**)
+         - Allm-A | JUR(+), Hist(!)
+     - LITT(??/*)  - Bevingat
+     - BASH(!!!!)
+    - grep / Regex (etc)
+    ----
+    - haskell-mu(**!)  - haskell-lyself(**!)
+                               (+klar m. vankiutils framework(!!)  +  more tagging/making vankinote(etc)-scripts (**!!))
+                                            (HM!!!!! (=TAKING NOTES AS STENONOTES?????//////) )
+     - 'Strat'/ VÄKT** (+Sec Online**)
+                    # +pre(??): Ny Lägenhet, Allm.A(Städ, recept/näring, Hemskötsel, Bil(**))
+    ----------
+    - SvSynTotal(??)
+    - Csounds (etc  ??)
+     - 'More Python?? // Dlang(***(!!))   (=PyStdLib **(!!))
+        - Algo (etc), PROGR****(??),  'Data Science' + Math(!!(**))
+            + Grafik/Video mm (??/**)
+     - LITT(??/*)  - Bevingat
+                - Skämt|Hist // Citat(!(/??))
+    - grep / Regex (etc)
+    ----
+    - haskell-mu(**!)  - haskell-lyself(**!)
+}}}
+
+
+script oneliners(='nuggets'), 'reusing scripts.legacy[!]'  [+bashr|vimrc to ~/Dropbox/config-dirs  + xkbmap-aliases (+document all in lazarus.txt)] {{{
+__area=1
+    ~/dropbox-legacy/scripts/./wallpapers.bash
+
+    (vim)utilscript-ideas 2021+  - charsperminute.el  - fontlarger.vim  **
+
+new(!)
+    Rider Vim 0.1 ----
+
+    evince -p 4 -l uncheck /home/bluelegend/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/mscore3.man.pdf &
+        #start dok w. evince, go to page, search for 'word' [*****]
+        # (=redo Greggref-system + Rskriftref-system2(!) w. this mechanism[!!])
+
+    ls | grep DirnamePart | zip ZipName -r -@
+
+    find -type f -iname '*.txt' 2>/dev/null | gvim -; ding
+    find -type f -mtime -3 -name '*.txt' 2>/dev/null
+        # search below =for all txtfiles modf.d last three days[!!]
+
+    "copy + mkdir -p"
+        install -D ~/path/to/source.txt ~/path/to/destin/dir/destin.txt
+
+    bashrc-aliases: keyq(w) keyd(v)   k-qw k-dv
+        setxkbmap -layout se                    #qwerty   keys.qwer
+        setxkbmap -layout se -variant dvorak    #svdvor.  keys.sdvor
+
+    bash list-of-commands.txt
+
+
+-- 'nuggets' (format-strings, mini-hacks, commands) ------
+    00H:02m:31s                 # vlc time
+    %Y%m%d_%NNNNNN              # shutter
+    %s:\v(/\*|\*/)::g           # remove '/* */'
+    set syntax=svg              # list lang-names:
+                                #   ls /usr/share/vim/vim81/syntax
+                                #   (python, java, bash, clojure, tex, etc)
+    screenshot: csa-s  #gimp: take screenshot
+    manual duplex               # [print last odd+ ]
+                                #   even, odd+reversed
+    man manpage | col -b | gvim -   # export unix manpage to .txt
+
+rename links automatically prepended by 'link to ' by thunar:
+    for f in link\ to\ *; do mv "$f" "${f#link to }"; done
+    for f in zlib*; do mv $f ${f#zlib.pub_}; done
+
+    xclock -update 10 &
+    gnome-clocks                # world time
+    curl wttr.in/uddevalla      # cmd-line weather
+    ----
+    ncal -w -A 2                # show weeks, curr. month, + two months ahead
+    ncal -w -A 2 -b
+    ncal -bw
+    ncal -bw -m 6; ncal -bw -m 7; ncal -bw -m 8
+                                # show three months - vertically
+
+    find(+list) largest dirs|files
+    compare dirs (+recurs)      # diff, mc
+    ----
+    apt, dpkg  etc
+    sudo apt -y update && sudo apt -y upgrade
+      sudo dpkg -i install-file.deb     # install deb-file fr. commandline
+
+    ---- [reusing legacy scripts]
+    legacy.runscript.bash `legacy.atgrep.bash ocr`
+
+
+guix pull
+guix package -u
+hash guix
+
+
+Remove stale or missing PPA (Ubuntu)
+  # e.g. https://ppa.launchpadcontent.net/me-davidsansome/clementine/ubuntu
+sudo apt-add-repository --remove ppa:me-davidsansome/clementine
+
+}}}
+legacy scripts {{{
+__area=2
+    ~/dropbox-legacy/scripts/./export_steno2pdf.bash DoneStenodok.svg
+        .
+    ~/dropbox-legacy/scripts/./GALAXYJPG2TXT_FLEX-norotation_notextcleaner.bash  #use legacyscript for ocr:ing (**)
+~/dropbox-legacy/scripts/ALLTODOIST/./zz_OCRPROC-OCRPROJ.bash {{{
+
+Signs|Chars to replace:
+        “ ” ‘ ’
+               ((+add more char.s, like <4656>-style spec|ctrl-char.s(!!)))
+        –  (+w. ' ' around)
+        •  (espec. at start of line)
+Adjust lines ending in '-' | Words w. embedded '- '
+Insert line after:
+        lines ending in  \.)\=  :  ?  !
+        lines end w. \l, next starts w. \u
+Generate incremental bulletlists (1. 2. ..., a. b. ...)
+  temp: oImmo0`ov0"my  #pre: set reg. 'm' to '1. '  +  macro sets marker 'o'
+
+@i(nterweave)  #pull and merge lines fr. next textblock  to end of lines of curr. textblock
+@block-split   #separate line-ending textparts in curr. textblock  down to separ. textblock below(!!)
+@n: }dd
+
+}}}
+      ~/dropbox-legacy/scripts/./mid2mp3
+      ~/dropbox-legacy/scripts/./wav2mp3
+    ==== Note: ** Pic/Media-scripts migrated to at.transcribe.bash ** ====
+    ~/dropbox-legacy/scripts/./frecord.bash  #crap(!! =inte ljud; bara brus)
+      ~/dropbox-legacy/scripts/frecord.bash
+      ~/dropbox-legacy/bla/frecord.bash
+    ~/dropbox-legacy/scripts/ALLTODOIST/./ALLM-STÄD_dataadmin_RENSAFILERLAGRINGHÅRDDISKAR.bash
+        ~/dropbox-legacy/scripts/ALLTODOIST/ALLM-STÄD_dataadmin_RENSAFILERLAGRINGHÅRDDISKAR.bash
+}}}
 
