@@ -2,7 +2,130 @@ set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
 xunit cheatsheets
-~/Empire/Doks/Comp/PROGR/test/framew/xunit/XunitPatts.txt
+                ----
+                http://dontcodetired.com/blog/post/xUnitnet-2-Cheat-Sheet
+                assert methods (e.g. Assert.Equal(1,2)) ====
+                Simple Equality ----
+                Equal(1, 2);  // fail
+                Equal("hello", "hello");  // pass
+                NotEqual(1, 2);  // pass
+                NotEqual("hello", "hello");  // fail
+                Ranges (var actual=10) ----
+                InRange(actual, 10, 20);  // pass
+                InRange(actual, 1, 9);  // fail
+                NotInRange(actual, 1, 9);  // pass
+                Reference Equality ----
+                Same(obj, obj);  // fail
+                NotSame(obj, obj);  // pass
+                Boolean ----
+                True(true);  // pass
+                True(false);  // fail
+                False(false);  // pass
+                False(true);  // fail
+                Nulls ----
+                Null(null);  // pass
+                NotNull("hello");  // pass
+                NotNull(null);  // fail
+                IEnumarable ----
+                Empty(new List<string>());  // pass
+                NotEmpty(daysOfWeek);  // pass
+                Contains("Monday", daysOfWeek);  // pass
+                Contains("Sausage", daysOfWeek);  // fail
+                DoesNotContain("Sausage", daysOfWeek);  // pass
+                Assert.All(daysOfWeek, s => Assert.EndsWith("day", s));
+                Specific Type ----
+                IsType<string>("hello");  // pass
+                IsNotType<int>("hello");  // pass
+                Specific Type ----
+                IsType<string>("hello");  // pass
+                IsNotType<int>("hello");  // fail
+                Exceptions ----
+                Assert.Throws<DivideByZeroException>(() => 1 / zero);
+
+                attributes ====
+                test-method
+                [Fact]
+
+                skipped test-method
+                [Fact(Skip="This test sucks...")]
+
+                inline-data driven
+                [Theory]
+                [InlineData(9, true)]
+
+                static-member-data driven
+                [Theory]
+                [MemberData("TestData")]
+
+                custom-data driven attributes
+                Derive from DataAttribute
+
+                custom test-execution ordering
+                [TestCaseOrderer(...)]
+                [TestCollectionOrderer(...)]
+
+                http://dontcodetired.com/blog/post/xUnitnet-Cheat-Sheet
+                ----
+                assert methods (e.g. Assert.Equal(1,2)) ====
+                Simple Equality ----
+                Equal(1, 2);  // fail
+                Equal("hello", "hello");  // pass
+                NotEqual(1, 2);  // pass
+                NotEqual("hello", "hello");  // fail
+                Ranges ----
+                InRange(value, 21, 100);  // pass
+                InRange(value, 22, 100);  // pass
+                NotInRange(value, 999, 99999);  // pass
+                InRange(value, 23, 100);  // fail
+                Reference Equality ----
+                Same(objectA, objectB);  // fail
+                NotSame(objectA, objectB);  // pass
+                IEnumarable Emptiness ----
+                Empty(new List<string>());  // pass
+                NotEmpty(daysOfWeek);  // pass
+                Boolean ----
+                True(true);  // pass
+                True(false);  // fail
+                False(false);  // pass
+                False(true);  // fail
+                Nulls ----
+                Null(null);  // pass
+                NotNull("hello");  // pass
+                NotNull(null);  // fail
+                IEnumarable Contains Item ----
+                Contains("Monday", daysOfWeek);  // pass
+                Contains("Sausage", daysOfWeek);  // fail
+                DoesNotContain("Sausage", daysOfWeek);  // pass
+                Specific Type ----
+                IsType<string>("hello");  // pass
+                IsNotType<int>("hello");  // pass
+                IsType<int>("hello");  // fail
+
+                attributes ====
+                test-method
+                [Fact]
+
+                skipped test-method
+                [Fact(Skip="This test sucks...")]
+
+                max run-time (ms)
+                [Fact(Timeout=50)]
+
+                inline-data driven
+                [Theory]
+                [InlineData(9, true)]
+
+                property-data driven
+                [Theory]
+                [PropertyData("TestData", PropertyType=typeof(PropertyTestDataSource))]
+
+                excel-data driven
+                [Theory]
+                [ExcelData("SampleData.xls", "Select * from TestData")]
+
+                SQL-data driven
+                [SqlServerData(@".\SQLEXPRESS", ...]
+
                 ----
                 https://gist.github.com/jonesandy/f622874e78d9d9f356896c4ac63c0ac3
                 ----
@@ -490,3 +613,5 @@ xunit cheatsheets
                         #endregion
                     }
                 }
+~/Empire/Doks/Comp/PROGR/test/framew/xunit/XunitPatts.txt
+

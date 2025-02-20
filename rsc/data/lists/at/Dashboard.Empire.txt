@@ -18,7 +18,7 @@ Web/Mobile/Cloud ----
   TODO --"--
 
 Langs1 Ref-lists ----
-  ../ref/lang/ Langs1Refs.txt
+  ../ref/lang/Langs1Refs.txt
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 
@@ -606,50 +606,44 @@ dft curr 2023 {{{
 }}}
 
 ---- Win-Overview =x3 ----
-Office.Rush [1] {{{
-  #Rush/Listen through dok to get overview(!)
-
-  Puppet Patterns(etc)
-Mlearn 1 formulas + Obsidian w. Latex[!!]
-MLEARN: FIRST DOKS
-JuPyter Notebooks (etc)
+Office.Rush [1]  # rush through + take review/notes {{{
+C# DotNet Core MVC + Blazor  [+Avalonia]
+    Puppet Patterns(etc)
+MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]
+    JuPyter/Polyglot(?) Notebooks (etc)
+F# - TOCs + Concepts,  Fabulous
 Bash/Dash-Mans
-F# - TOCs + Concepts
 XUnit Patts
 Roslyn + Analysis/CodeGen
-  Nix Master
+   Nix Master
    SSH   + Puppet
 Docker + Kubernetes + AzDevops + GithubActions
   Devops + Python (+iPy/Xonsh)
   Gremlin (+Neptune)
 FuncPy  [___Renskriv]
-   Choco (+Puppet) + PowerShell (+AutoHotKeys)
-                   (GVim Win + 'Run Apps(=PShell?) from GVim')
+  Choco (+Puppet) + PowerShell (+AutoHotKeys)
   ----  Anki Redone
   Arch Linux
     Nushell
 Buckey's Godot
 Music With JavaScript *
-  ~/Empire/Doks/learn/speedread.txt
+        ~/Empire/Doks/learn/speedread.txt
 
   Reason + PureScript  ___onroad=mabye
 
 }}}
-office.Overview [2] {{{
-
+office.Overview [2]  # write summary|overview {{{
   iPython(*)
   Xonsh
+  CsRx 3
 Android-Scripting + Termux
 F# [Overview and Concepts]  +Cloj.
-
   FuncPy **
-
   Anki
   ----
     Py Webscraping
   Avalonia
     [CsFunct 3]
-    CsRx 3
 
 }}}
     -- office.Slog ___index=3 [3] {{{
@@ -890,11 +884,7 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 --------------------------
 
 -- ontheroad.store ---- ___index=4 [4] {{{
-
-Jupyter
 Termux
-
-  C# DotNet Core MVC + Blazor  [+Avalonia]
     PowerShell[!]  WSL ____
   AndroidProgr (+Kotlin??)
   ----
@@ -928,7 +918,7 @@ AnkiMan (+Renskriv ___office)
             Samsung Notes (+Phone/Tablet)
             Nyxt (+qutebrowser/'hackers browser')
         Learn/Memory(+pomodoro)
-      F#/Elix/Cloj/OCaml(etc) Datastructs[!!]
+    F#/Elix/Cloj/OCaml(etc) Datastructs[!!]
     jsCb 1, 
     Datomic *!  (+Datalog | Prolog)
     PureScript (x2.5)

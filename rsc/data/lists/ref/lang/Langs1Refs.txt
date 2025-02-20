@@ -1,10 +1,11 @@
 ref/lang/Langs1Refs.txt
 cd ../ref/lang/
+____
 
 Shorth ----
   shorth/sv/rskrift.empire.pdf
   shorth/sv/rskrift.empire.greykeys1.pdf
-  shorth/en/stenogregg-dictionary.pdf
+  foxitpdf shorth/en/stenogregg-dictionary.pdf
   shorth/en/stenogregg-phrasebook.pdf
 
 Add Rhetoric and Speeches(!!)

@@ -255,6 +255,70 @@ evince -p 1 ~/Dropbox/rsc/Doks/gitbitb.cheetsh.pdf &
                 --all flag. The --tags flag sends all of your local tags to the remote repo.
 git-Commands.list.txt
     https://git-scm.com/docs/git#_git_commands
+            add
+            am
+            apply
+                archive
+                bisect
+            blame
+            branch
+                bundle
+                .
+            checkout
+                cherry
+                .
+            cherry-pick
+                citool
+                clean
+            clone
+                commit
+                config
+                describe
+            diff
+                difftool
+                fetch
+                format-patch
+                fsck
+                gc
+                gitk
+            grep
+                gui
+                help
+            init
+                instaweb
+                log
+            merge
+                mergetool
+                mv
+                notes
+            pull
+            push
+                range-diff
+                .
+            rebase
+                reflog  @
+                .
+            remote
+                repack
+                replace
+                request-pull
+                reset
+            restore
+                revert
+                rm
+                send-email
+                shortlog
+                show
+                show-branch
+                sparse-checkout
+            stage
+            stash
+            status  @
+                submodule
+                switch
+            tag
+                whatchanged
+                worktree
 Git -- distributed-is-the-new-centralized
             ......
                 About
@@ -2624,70 +2688,6 @@ clone with ssh: git@github.com:bluelegend76/komvux2023-cpp.git
 }}}
 [@@@] git basic commands {{{
 set foldmethod=indent foldlevel=2
-        add
-        am
-        apply
-            archive
-            bisect
-        blame
-        branch
-            bundle
-            .
-        checkout
-            cherry
-            .
-        cherry-pick
-            citool
-            clean
-        clone
-            commit
-            config
-            describe
-        diff
-            difftool
-            fetch
-            format-patch
-            fsck
-            gc
-            gitk
-        grep
-            gui
-            help
-        init
-            instaweb
-            log
-        merge
-            mergetool
-            mv
-            notes
-        pull
-        push
-            range-diff
-            .
-        rebase
-            reflog  @
-            .
-        remote
-            repack
-            replace
-            request-pull
-            reset
-        restore
-            revert
-            rm
-            send-email
-            shortlog
-            show
-            show-branch
-            sparse-checkout
-        stage
-        stash
-        status  @
-            submodule
-            switch
-        tag
-            whatchanged
-            worktree
 }}}
 GIT AM PATCH MERGE [**!!] {{{
 

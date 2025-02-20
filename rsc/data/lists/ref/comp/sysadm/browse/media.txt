@@ -1,4 +1,5 @@
 set foldmethod=indent foldlevel=2
+set foldmethod=indent foldlevel=3
 vim: fdm=indent:fdl=2:
 __
 
@@ -6,19 +7,43 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
                   Feature
                   Desktop App
                   Web App
+        picklist (from Teams-docs) ----
+                chatlist:navigation ----
+            go to editing field  c-r
+                go to message-contents  c-m / Space  #
+                chatlist:interaction ----
+                    see all chats  ca-c
+                see meeting-chats  ca-m
+            see unread chats  ca-u
+                message-list ----
+                go to chatlist  c-l / Esc
+                go to editing field  c-r
+                go to message-contents  c-m
+                message-list:interaction ----
+                react to message (e.g. with emoji)  Enter, select with arrows, Enter
+                message-box:navigation ----
+                show this conversation  c-o
+                change view (in information-window)  a-p
+                message-box:interaction ----
+                append file  sa-o # / Tab, right until 'Append', Enter
+            record video  sa-e
+            schedule message  sa-n  #
+                Loop-features ----
         General ----
                 Show keyboard shortcuts  c-.
                 Go to Search  c-e  ca-e
-                Show commands  c-/  # cs-7
-                Open filter  cs-f
-                Go to a specific team or channel  c-g  cs-g
+            Show commands  c-/  # cs-7  (e.g. set status, Azure Boards, ...)
                 Open apps flyout  c-' / c-`
+                .
+            Open filter  cs-f
+                Go to a specific team or channel  c-g  cs-g
                 Start a new chat  c-n
-                Open Settings  c-,  cs-,
+            Open Settings  c-,  cs-,
                 Open Help  F1  c-F1
                 Close  Esc
-                Zoom in  c-= (cs-0) / c_-
+            Zoom in  c-= (cs-0) / c_-
                 Reset zoom level  c-0
+                .
         Navigation ----
                 Open Activity  c-1  cs-1
                 Open Chat  c-2  cs-2
@@ -34,11 +59,12 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
                 Start a new conversation  c-n  a-n
                 Go to compose box  sa-c  sa-c
                 Expand compose box  cs-x  cs-x
-                Send a message  c-Enter
-                Start a new line  s-Enter
-                Reply to a thread  sa-r
-                Mark a message as important  cs-i
+            Send a message  c-Enter
+            Start a new line  s-Enter
+            Reply to a thread  sa-r
+            Mark a message as important  cs-i
                 Search current chat or channel messages  c-f
+                .
         Meetings and calls ----
                 Accept video call  cs-a
                 Accept audio call  cs-s
@@ -46,28 +72,32 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
                 Start audio call  cs-c
                 Start video call  cs-u
                 End call  cs-h
-                Toggle mute  cs-m
+            Toggle mute  cs-m
                 Temporarily unmute  c-Space
                 Announce raised hands (screen reader)  cs-l
-                Raise or lower your hand.   cs-k
-                Start screen share session  cs-e
-                Toggle video  cs-o
+            Raise or lower your hand.   cs-k
+            Start screen share session  cs-e  __
+            Toggle video  cs-o
                 High motion screen share  csa-t
                 Filter current list  cs-f
-                Go to sharing toolbar  cs-Space
+            Go to sharing toolbar  cs-Space
                 Decline screen share  cs-d
-                Accept screen share  cs-a
-                Admit people from lobby notification  cs-y
+                .
+            Accept screen share  cs-a
+            Admit people from lobby notification  cs-y
                 Open the Background settings menu  cs-p
+                .
             Schedule a meeting  sa-n
                 Go to current time  a-.
                 Go to prev. / next day/week  ca-left / ca-right
-                View day  ca-1
-                View workweek  ca-2
-                View week  ca-3
+            View day  ca-1
+            View workweek  ca-2
+            View week  ca-3
                 Save or send meeting request  c-s
-                Join from meeting details  sa-j
+                .
+            Join from meeting details  sa-j
                 Go to suggested time  sa-s
+                .
         Debug ---
                 Download diagnostic logs
                     csa-1
