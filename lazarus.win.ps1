@@ -141,6 +141,8 @@ choco install azure-cli -y
 cd ~
 New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
   # New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
+# TODO: CHECK IF CAN SYMLINK TO DIRECTORIES
+New-Item -ItemType SymbolicLink -Path init.el -Target .\RiderProjects\bluelegend76\emacs
 New-Item -ItemType SymbolicLink -Path Desktop\Dashboard.Empire.txt -Target .\RiderProjects\bluelegend76\rsc\data\lists\at\Dashboard.Empire.txt
 # PowerShell profile (setting custom functions, aliases, etc.)
 New-Item -ItemType SymbolicLink -Path Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Target .\RiderProjects\bluelegend76\Microsoft.PowerShell_profile.ps1
