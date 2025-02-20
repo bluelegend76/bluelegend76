@@ -37,6 +37,11 @@ kfil {{{
   - "Vanliga" människor
 
 }}}
+colschemes {{{
+  blue dolphin
+  chalk
+    chill
+}}}
 ScratchArea LIA 2/TruckCom Updater {{{
 
 = Parallel: TruckCom Linter
