@@ -259,7 +259,7 @@ pacman -S a2ps okular xchm
 pacman -S calibre
 #@@__ sudo apt-get install djvulibre-bin
 # wget https://0x2a.at/site/projects/djvu2pdf/djvu2pdf_0.9.2-1_all.deb
-pacman -S nyxt
+pacman -S extra/nyxt
 teams (aur)
 pacman -S pandoc enscript
 pacman -S festival

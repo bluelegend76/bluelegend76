@@ -1,6 +1,7 @@
 ref/lang/Langs1Refs.txt
 cd ../ref/lang/
-____
+____ __
+    TODO[?]: ARRANGE BY USE + TOPICS AS TAGS[??]
 
 CharAlfa
   charalpha.txt
@@ -21,7 +22,7 @@ Add Rhetoric and Speeches(!!)
     sv.thes.svsyn.txt ____
   cmp.sv.dict.sv2en-prsm.txt
     en.words.wnwdict.txt
-  theinstantintell-words.txt
+  theinstantintell-words.txt  [__]
   --
   auxil/lang1_picks2/en.thes.xf.txt
     auxil/lang1_picks2/en.words.inet1.txt
@@ -43,7 +44,7 @@ Add Rhetoric and Speeches(!!)
   at.jokeswit.soc.txt
   TODO: MALLGRODOR
   --
-  beving.txt
+  beving.txt                __
   CIT_orred.txt
   citat_littlered.txt
   ordsprsvgreen.txt

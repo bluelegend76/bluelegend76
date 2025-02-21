@@ -607,6 +607,8 @@ dft curr 2023 {{{
 
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
+TC CORE READTHROUGH + THE WIKI[!!]
+CLEAN UP NEW DOTNETCORE-DOKS
 C# DotNet Core MVC + Blazor  [+Avalonia]
     Puppet Patterns(etc)
 MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]
@@ -615,27 +617,25 @@ F# - TOCs + Concepts,  Fabulous
 Bash/Dash-Mans
 XUnit Patts
 Roslyn + Analysis/CodeGen
-   Nix Master
-   SSH   + Puppet
+    Nix Master
+SSH   + Puppet
 Docker + Kubernetes + AzDevops + GithubActions
-  Devops + Python (+iPy/Xonsh)
-  Gremlin (+Neptune)
+    Devops + Python (+iPy/Xonsh)
+    Gremlin (+Neptune)
 FuncPy  [___Renskriv]
-  Choco (+Puppet) + PowerShell (+AutoHotKeys)
+    Choco (+Puppet) + PowerShell (+AutoHotKeys)
   ----  Anki Redone
-  Arch Linux
+    Arch Linux
     Nushell
-Buckey's Godot
 Music With JavaScript *
+Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
-
   Reason + PureScript  ___onroad=mabye
-
 }}}
 office.Overview [2]  # write summary|overview {{{
   iPython(*)
   Xonsh
-  CsRx 3
+  CsRx 3, Rx.Net
 Android-Scripting + Termux
 F# [Overview and Concepts]  +Cloj.
   FuncPy **

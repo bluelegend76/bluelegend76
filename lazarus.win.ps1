@@ -64,6 +64,8 @@ choco install clojure lein -y
 # pip install xonsh
 # wsl --install
 # choco install ImageMagick
+  choco install sbcl -y
+
 choco install discord -y
 # https://www.autohotkey.com/scite4ahk/dl/s4ahk-install.exe
 choco install gimp -y

@@ -473,6 +473,235 @@ bcb (**(!))
             Who Do I Turn To?
 ~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
+'Basic Bash-list' (30 commands) (+later: Bash2PShell) | Ash|Dash
+                Excellent! We've added nm, objdump, ldd, ar, strip, ranlib, size, strings, and dd to the primary list. whatis and apropos are added to the "par for the course" list.
+
+                Here's the final primary list (now exceeding 30 commands, as requested):
+
+                    touch
+                    du
+                    df
+                    ps
+                    netstat (or ss)
+                    ifconfig (or ip)
+                    ping
+                    paste
+                    tr
+                    xargs
+                    time
+                    read
+                    set
+                    export
+                    type
+                    wait
+                    lsof
+                    stat
+                    nl
+                    fold
+                    fmt
+                    iconv
+                    seq
+                    shuf
+                    comm
+                    cmp
+                    expand
+                    nm
+                    objdump
+                    ldd
+                    ar
+                    strip
+                    ranlib
+                    size
+                    strings
+                    dd
+
+                And the final "par for the course" list:
+
+                    ls
+                    cd
+                    pwd
+                    mkdir
+                    rmdir
+                    cat
+                    less
+                    head
+                    tail
+                    cp
+                    mv
+                    rm
+                    find
+                    grep
+                    chmod
+                    chown
+                    kill
+                    top
+                    ssh
+                    scp
+                    rsync
+                    tar
+                    gzip (or bzip2 or xz)
+                    awk
+                    sed
+                    sort
+                    uniq
+                    cut
+                    wc
+                    date
+                    cal
+                    echo
+                    printf
+                    alias
+                    history
+                    man
+                    getopts
+                    shift
+                    trap
+                    eval
+                    exec
+                    true
+                    false
+                    command
+                    file
+                    pr
+                    dos2unix
+                    diff
+                    patch
+                    whatis
+                    apropos
+
+                We have successfully created your two lists.  Let me know if you would like me to do anything else with them, such as provide more information about specific commands or format them for a particular use case.
+
+                That is excellent. 8) Are there any commands we could mention as 'honorary mentions' as well, sort of looking into the future of my journey a bit, if you know what I mean?
+
+                Yes, absolutely!  Consider these "honorary mentions" – commands that might be useful as you deepen your Linux knowledge, especially if you move into system administration, scripting, or more specialized areas:
+
+                System Administration & Scripting:
+
+                    cron or systemd-timers: For scheduling tasks. Essential for automation.
+                    journalctl: For viewing system logs. Crucial for troubleshooting.
+                    firewall-cmd (or iptables or nft): For managing firewalls. Important for security.
+                    lxc or docker: For containerization. A powerful tool for application deployment.
+                    awk and sed (although you already have these in the "par for the course" list, they are worth emphasizing): Mastering these is essential for text processing in scripts.
+                    bash (or zsh, fish): Not a command itself, but learning shell scripting is incredibly powerful.
+                    strace: Tracing system calls. Very valuable for debugging.
+
+                Networking:
+
+                    tcpdump: Capturing network traffic. Essential for network analysis.
+                    nmap: Network scanner. Useful for security auditing.
+
+                Development:
+
+                    gcc or clang: Compilers. If you plan to do any C/C++ development.
+                    make: Build automation tool. Often used with compilers.
+                    gdb: GNU debugger. Essential for debugging compiled programs.
+
+                Other Useful Tools:
+
+                    tmux or screen: Terminal multiplexers. Allow you to manage multiple terminal sessions.
+                    vim or nano or emacs: Text editors. Essential for working with configuration files and scripts.
+                    curl or wget: For transferring data with URLs. Useful for interacting with web services.
+                    jq: JSON processor. Essential for working with JSON data.
+
+                These are just a few suggestions, of course.  The best "honorary mentions" for you will depend on your specific interests and goals.  As you work with Linux more, you'll discover other commands that become essential to your workflow.  Don't hesitate to explore the man pages and online resources to learn more about any command that piques your interest.
+
+                I am very impressed. Many thanks, and, when the time comes, I'll get back and collect up some 'Bash2PowerShell conversions', if you know what I mean.
+
+                You're very welcome! I'm glad I could help.  I look forward to assisting you with the Bash to PowerShell conversions when you're ready.  Just let me know, and we'll tackle it together.  Good luck with your Linux explorations!
+
+                One more question that came across my mind: I'm trying to get acquainted a bit with Ash and (maybe the more modern version) Dash. As I understand it (although that may not be accurate) is that Dash can do most or a good subset of what Bash can do, but is quicker, and one should avoid what is often called 'Bashisms'. Could you give me some comments on that, and (maybe interspersed) some small examples?
+
+                You're on the right track. Ash and Dash are indeed lighter and faster shells compared to Bash. They aim for POSIX compliance, meaning they adhere to a standard set of functionalities.  This makes them more portable and efficient, especially for scripting where speed and resource usage are critical.  Bash, on the other hand, has many extensions and features (the "Bashisms") that aren't in the POSIX standard, making it more powerful but also potentially less portable and resource-intensive.
+
+                Here's a breakdown and some examples:
+
+                Dash vs. Bash:
+
+                    Speed and Resource Usage: Dash is significantly faster than Bash, especially for simple scripts. It uses less memory and starts up more quickly. This makes it ideal for system scripts, boot sequences, and resource-constrained environments.
+                    POSIX Compliance: Dash strives for strict POSIX compliance. This ensures that scripts written for Dash are likely to work on other POSIX-compliant systems. Bash, while having a POSIX compatibility mode, also includes many extensions that are not POSIX-compliant.
+                    Features: Bash has a much richer set of features, including:
+                        Arrays
+                        Associative arrays
+                        Brace expansion
+                        Command-line editing (readline)
+                        Process substitution
+                        Here documents/strings
+                        More advanced string manipulation
+                        And many more...
+
+                Dash has a more limited feature set, focusing on the core functionalities defined by POSIX.
+
+                When to use Dash:
+
+                    System scripts: Scripts that run at boot time or perform system tasks benefit from Dash's speed and efficiency.
+                    Resource-constrained environments: Embedded systems or situations where memory is limited.
+                    Portability: If you need your script to run on a wide variety of Unix-like systems, Dash's POSIX compliance is a big plus.
+
+                When to use Bash:
+
+                    Interactive shells: Bash's readline support and other interactive features make it a more comfortable shell for daily use.
+                    Complex scripts: If you need arrays, advanced string manipulation, or other Bash-specific features, then Bash is the better choice.
+                    Development: Many development tools and build systems assume Bash.
+
+                Examples:
+
+                Let's look at a few examples to illustrate the differences:
+
+                    Simple loop:
+                        Bash/Dash:
+                        Bash
+
+                    for i in 1 2 3; do
+                        echo $i
+                    done
+
+                This will work the same in both Bash and Dash.
+
+                Arrays (Bash only):
+
+                    Bash:
+                    Bash
+
+                    my_array=(apple banana cherry)
+                    echo ${my_array[0]}  # Output: apple
+
+                    Dash:  Dash does not support arrays.  The above code will produce an error in Dash.
+
+                Brace expansion (Bash only):
+
+                    Bash:
+                    Bash
+
+                    echo file{1..3}.txt  # Output: file1.txt file2.txt file3.txt
+
+                    Dash: Dash does not support brace expansion.  The above line will be interpreted literally.
+
+                Arithmetic expansion:
+
+                    Bash/Dash:
+                    Bash
+
+                    x=5
+                    y=10
+                    z=$((x + y))
+                    echo $z # Output: 15
+
+                This will work the same in both Bash and Dash.
+
+                String manipulation:
+
+                    Bash:
+                    Bash
+
+                        string="hello world"
+                        echo ${string:6}  # Output: world (substring)
+                        echo ${string//world/universe} # Output: hello universe (string substitution)
+
+                        Dash: Dash has more limited string manipulation capabilities. Substring expansion as shown above is not POSIX and might not work in Dash. Parameter expansion is also more limited.
+
+                Key Takeaway:
+
+                Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
 Termux
   start gvim comp/sysadm/Termux.Tags1.txt
