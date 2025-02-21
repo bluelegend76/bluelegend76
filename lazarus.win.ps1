@@ -37,6 +37,7 @@ choco install pandoc -y
 
 choco upgrade git -y
 choco install vim -y
+choco install emacs.install -y
 # ___Vundle_Windows=install
 
 choco install neovim -y
@@ -141,8 +142,12 @@ choco install azure-cli -y
 cd ~
 New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
   # New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
-# TODO: CHECK IF CAN SYMLINK TO DIRECTORIES
-New-Item -ItemType SymbolicLink -Path init.el -Target .\RiderProjects\bluelegend76\emacs
+# DONE: CHECK IF CAN SYMLINK TO DIRECTORIES
+# TODO: May want to use 'mklink /D linkname targetname'
+New-Item -ItemType SymbolicLink -Path AppData\Roaming\.emacs.d -Target .\RiderProjects\bluelegend76\.emacs.d
+# TODO: May want to link in Contents of .emacs.d (on GitHub) into AppData\Roaming\.emacs.d
+# (which is created by the Emacs installer)
+# + NEEDS QUICKLISP INSTALLED IN .emacs.d FOR SLIME TO WORK
 New-Item -ItemType SymbolicLink -Path Desktop\Dashboard.Empire.txt -Target .\RiderProjects\bluelegend76\rsc\data\lists\at\Dashboard.Empire.txt
 # PowerShell profile (setting custom functions, aliases, etc.)
 New-Item -ItemType SymbolicLink -Path Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Target .\RiderProjects\bluelegend76\Microsoft.PowerShell_profile.ps1

@@ -270,8 +270,7 @@ NEW: Highlight mouse-pointer  dclick left control
                 minim./restore windows (=except active win.) ** @
                     w-home
                 ----
-                show/hide desktop
-                    w-d
+        show/hide desktop  w-d
                 peek desktop ((*)) @
                     w-,
                 refresh (=win. etc)

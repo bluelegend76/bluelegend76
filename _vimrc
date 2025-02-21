@@ -60,9 +60,11 @@ vnoremap <leader>fm <Esc>o<c-h><Esc>gvjo<Esc>A <Esc>gvzfzc
 " produce fold from a line
 nnoremap <leader>fa A <CR> <c-h><Esc>Vkzfzc
 " --
+" TODO/MAY BE SUPERFLUOUS: ADD A-RIGHT/LEFT = INCREASE/DECREASE FOLD-LEVEL
 
 " Move line(s), visual marker-line
 " Move lines with Alt-Up/Down (Gedit-style)
+" TODO: May want to add 'Highlight Next/Prev. Sentence'
 nnoremap <A-Up> ddkP
 nnoremap <A-Down> ddjP
 " vnoremap <A-Up> dkkpV`]
