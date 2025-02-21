@@ -255,68 +255,120 @@ evince -p 1 ~/Dropbox/rsc/Doks/gitbitb.cheetsh.pdf &
                 --all flag. The --tags flag sends all of your local tags to the remote repo.
 git-Commands.list.txt
     https://git-scm.com/docs/git#_git_commands
-            add
-            am
-            apply
-                archive
-                bisect
-            blame
-            branch
-                bundle
-                .
-            checkout
-                cherry
-                .
-            cherry-pick
-                citool
-                clean
-            clone
-                commit
                 config
-                describe
-            diff
-                difftool
-                fetch
-                format-patch
-                fsck
-                gc
-                gitk
-            grep
-                gui
-                help
             init
-                instaweb
-                log
-            merge
-                mergetool
-                mv
-                notes
+            add
+            stage
+                commit
+            clone
             pull
+                fetch  [__]
             push
-                range-diff
-                .
+            merge
             rebase
-                reflog  @
-                .
-            remote
+                =integrate changes from one branch into another;
+                similar to git merge, but(!) it rewrites the commit-history
+                [cleaning up feature-branch history (e.g. squashing together unnecessary commits)]
+                git rebase -i  'interactive rebase'
+                revert
+            help
+            status  @
+                shortlog
+                log
+                show
+            blame
+                understand the history of a file
+                = who made each change, and when
+                bisect
+                    finding the commit that introduced a bug/change in behavior
+                    (=mark the known good + known bad commits, (etc ...))
+            branch
+            switch
+                more modern replacement for 'checkout'
+                (has multiple uses - switching branches, checking out files, etc.)
+            checkout
+                sparse-checkout
+
+            stash
+            cherry-pick
+                [picking small features or just single commits]
+                cherry
+            ----
+            am
+                apply patches created with git format-patch
+                (=applies the patches + re-creates the commits)
+                archive
+                    create archive of a Git repo (like a zip/tarball, without the .git etc)
+                    (e.g. creating release-packages)
+                bundle
+                    =for transferring Git-repos (or parts of them) as a single file
+            apply
+                apply patches created with git format-patch
+                (=applies the patches + not re-creating the commits
+                 = staging and commiting has to be managed by oneself)
+
+            diff
+                clean
+
+                difftool
+                mergetool
+                gui
+
+                citool
+                    (launch graphical tool for interactive committing - instead of git add + git commit)
+                gitk
+                    =lanches a graphical Git repository browser
+                    [shows: history, branches, tags, commits]
+                    (+inspecting the 'git graph', file-changes, etc]
+                instaweb
+                    starts a simple web server that lets you browse your Git repository using a web browser
+                    (related to Gitweb, but for quicker, temporary access)
+
+                fsck
+                    checks the integrity of your repository's objects and references.  It can help you identify corrupted objects or other problems in your Git database
+                gc ('garbage-collection')
+                    cleans up unnecessary files and objects in your Git repository
                 repack
+                    packs loose Git objects into pack files.
+                    It's similar to 
+                    git gc in that it improves repository efficiency and reduces disk space usage
+                    (like a subset of gc)
+
+            remote
+            grep
+            reset
+                format-patch
+                range-diff
+                reflog  @
+                    shows a log of where your branch pointers have been pointing.
+                    It's a very useful recovery tool.
+                    If you accidentally delete a branch, overwrite a commit, or make some other mistake, 
+                    git reflog can help you find the lost commit or branch and restore it
+                    (=essential tool for undoing mistakes in Git)
                 replace
                 request-pull
-                reset
+                    generates a summary of changes that you want to be pulled into another repository.
+                    It's typically used in collaborative workflows where developers submit pull requests to maintainers.
+                    git request-pull creates a message that describes the changes, the branch to merge, and the repository to pull from.
+                    It's a way to formally request that your changes be integrated into another branch.
+                    It's often used in conjunction with platforms like GitHub, GitLab, or Bitbucket
             restore
-                revert
                 rm
+                mv
                 send-email
-                shortlog
-                show
                 show-branch
-                sparse-checkout
-            stage
-            stash
-            status  @
                 submodule
-                switch
+                    allows you to embed another Git repository as a subdirectory within your main repository.
+                    This is useful when your project depends on external libraries or components that are managed in separate Git repositories. 
+                    git submodule keeps track of the specific commit from the external repository that's used in your project.
+                    It's helpful for managing dependencies and ensuring that you're using the correct versions of external code
             tag
+                notes
+                    allows you to attach arbitrary notes/meta-data to Git objects (commits, blobs, trees, etc.).
+                    These notes are stored separately from the main Git data and can be used for things like adding annotations, reminders, or other metadata to specific commits without altering the commit itself
+                describe
+                    shows the closest tag to the current commit.
+                    It's useful for quickly identifying the version of your code based on tags in your repository
                 whatchanged
                 worktree
 Git -- distributed-is-the-new-centralized
