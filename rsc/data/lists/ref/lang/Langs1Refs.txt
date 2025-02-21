@@ -2,6 +2,9 @@ ref/lang/Langs1Refs.txt
 cd ../ref/lang/
 ____
 
+CharAlfa
+  charalpha.txt
+
 Shorth ----
   shorth/sv/rskrift.empire.pdf
   shorth/sv/rskrift.empire.greykeys1.pdf
@@ -38,6 +41,7 @@ Add Rhetoric and Speeches(!!)
     tyidiom.txt
   --
   at.jokeswit.soc.txt
+  TODO: MALLGRODOR
   --
   beving.txt
   CIT_orred.txt
