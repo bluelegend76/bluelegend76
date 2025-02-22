@@ -26,16 +26,12 @@ __
 - XUnit Patterns
 - C# Funct. 3 (+50 Tips/Cookb. etc)
 ----
-  - Obsidian (+Latex etc)
 - Termux,  Nushell
 - DFunctional (Garden) + Cookbook (etc)
 ----
 
 - Read TruckCom Docs/Wiki (x2)
-  - TODO: Test using Windows Narrator (for speed-reading)
-- EXPLORE SHORTCUTS (+MAKE A GUIDE/CHEAT-SHEET FOR WIN-NARRATOR)
  
-  - Load and take notes from Core Updater Overview
 - REAL/PROFESSIONAL PROFILE PICTURE TO TEAMS (TOYOTA MHE)
   (May want to use the USB-stick for transfer)
 ----

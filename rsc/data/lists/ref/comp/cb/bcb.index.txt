@@ -477,7 +477,6 @@ bcb (**(!))
                 Excellent! We've added nm, objdump, ldd, ar, strip, ranlib, size, strings, and dd to the primary list. whatis and apropos are added to the "par for the course" list.
 
                 Here's the final primary list (now exceeding 30 commands, as requested):
-
                     touch
                     du
                     df
@@ -516,7 +515,6 @@ bcb (**(!))
                     dd
 
                 And the final "par for the course" list:
-
                     ls
                     cd
                     pwd
@@ -571,12 +569,9 @@ bcb (**(!))
 
                 We have successfully created your two lists.  Let me know if you would like me to do anything else with them, such as provide more information about specific commands or format them for a particular use case.
 
-                That is excellent. 8) Are there any commands we could mention as 'honorary mentions' as well, sort of looking into the future of my journey a bit, if you know what I mean?
-
-                Yes, absolutely!  Consider these "honorary mentions" – commands that might be useful as you deepen your Linux knowledge, especially if you move into system administration, scripting, or more specialized areas:
+                + Consider these "honorary mentions" – commands that might be useful as you deepen your Linux knowledge, especially if you move into system administration, scripting, or more specialized areas:
 
                 System Administration & Scripting:
-
                     cron or systemd-timers: For scheduling tasks. Essential for automation.
                     journalctl: For viewing system logs. Crucial for troubleshooting.
                     firewall-cmd (or iptables or nft): For managing firewalls. Important for security.
@@ -584,20 +579,14 @@ bcb (**(!))
                     awk and sed (although you already have these in the "par for the course" list, they are worth emphasizing): Mastering these is essential for text processing in scripts.
                     bash (or zsh, fish): Not a command itself, but learning shell scripting is incredibly powerful.
                     strace: Tracing system calls. Very valuable for debugging.
-
                 Networking:
-
                     tcpdump: Capturing network traffic. Essential for network analysis.
                     nmap: Network scanner. Useful for security auditing.
-
                 Development:
-
                     gcc or clang: Compilers. If you plan to do any C/C++ development.
                     make: Build automation tool. Often used with compilers.
                     gdb: GNU debugger. Essential for debugging compiled programs.
-
                 Other Useful Tools:
-
                     tmux or screen: Terminal multiplexers. Allow you to manage multiple terminal sessions.
                     vim or nano or emacs: Text editors. Essential for working with configuration files and scripts.
                     curl or wget: For transferring data with URLs. Useful for interacting with web services.

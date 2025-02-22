@@ -1,26 +1,22 @@
 # -- bluelegend76 dotfiles and portable config --
 (including Empire Reflists system/structure)
-- [ ] **Add new Vim9 color-files to Vim-config**
 
 ## TODO:
-## **Emacs-config basic drs to bluelegend76/GitHub**  __=
 ~~- [ ] **Rename _vimrc to .winvimrc**~~
 - [ ] May want to split into several repos (config.core, Reflists, aux)
   i.e. to avoid dir-size bloat (=makes it easier to clone down to Android)
 ~~- [ ] Reformat External Drives to ExFAT~~
 - [ ] **Try-out new Vim-Colors**
-
 - [ ] *Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc*  __
-
 -----
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists
+### **Trinity/Gordian Knot-Suite to Empire-Refs(??)**  __=
+  - [ ] "Can you tell/transmit to me why this/X is bunk?"
 - **To Add**:
 ## - [ ] **cppDlang to refs(etc)-Dashboard**
-## - **cppDlang to refs(etc)-Dashboard**
 # WebDev / Mobile
-## Char-Alfa to Refs  __3
 
 ----
   **Add Greggrefs(pdf) + setup for GVim(windows)
@@ -40,7 +36,7 @@
   - firefox-plug
   - jetbrains IDE settings
   - vscode/, vs/
-  - bluelegend.kdbx
+  - bluelegend.kdbx (=??)
   - lazarus.win.ps1 (or upcoming .fsx) **
 - Adding Apps to Taskbar
 - Adding preferred programs for filetypes (to Windows Registry)
@@ -57,5 +53,5 @@
 ## Playlists.Perform  __=
 Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]
-  - Every Breath You Take
+  - Every Breath You Take, Smoke on the Water
   - Incestvisan, Stjärnan och Karriären
