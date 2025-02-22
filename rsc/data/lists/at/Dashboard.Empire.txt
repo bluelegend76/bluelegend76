@@ -622,6 +622,7 @@ SSH (Veracrypt)  + Puppet
     Nix Master
 Devops + Python (+iPy/Xonsh) ; F# Devops
 
+Bcb, Bluebash + PShell,  ASM 1 (+binalys)
 Docker + Kubernetes + AzDevops + GithubActions
     Gremlin (+Neptune)
     Nushell
