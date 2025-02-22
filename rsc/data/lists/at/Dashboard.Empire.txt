@@ -22,6 +22,7 @@ Langs1 Ref-lists ----
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 
+../todo/MasterlistDownload-onedeepmans-online.txt
 c:/Users/SEDAALB2/Desktop/Scratch.txt
 ../weblinks.txt
 
