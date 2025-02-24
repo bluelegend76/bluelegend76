@@ -16,6 +16,8 @@ Super User
   /F
 Environment
   Environment Variables
+${VIM-RUNTIME}/file.x
+  %AppData%/file.x
 
 }}}
 kfil {{{
@@ -507,6 +509,172 @@ I encourage you to explore the Rx.NET library and experiment with its operators 
 Do you have any specific scenarios in mind where you think Rx.NET could be particularly beneficial for your SharePoint integration? I'd be happy to discuss those in more detail.
 
 }}}
+SharePoint: Add A New Column {{{
+
+- Question: A colleague gave me a
+  task to construct an app that
+  obtains information from a
+  Microsoft Sharepoint, and I was
+  instructed to 'add a new column
+  in the Sharepoint, to select
+  application-type' (i.e. for the
+  file I'm supposed to download
+  from/using Sharepoint). Could you
+  explain a bit what he might mean,
+  especially when it comes to
+  'adding a new column in the
+  Sharepoint'? My suspicion is that
+  it might be somewhat analogous to
+  adding one more column in a
+  database-table. Am I on the right
+  track?
+
+Yes, you are absolutely on the
+right track! Your colleague's
+request to "add a new column" in
+SharePoint is indeed very analogous
+to adding a new column in a
+database table.
+
+Here's a breakdown of what that
+means in the context of SharePoint:
+
+
+SharePoint Lists and Libraries:
+
+- SharePoint uses lists and
+  libraries to store data.
+  - Lists are used for structured
+    data, like tasks, contacts, or
+    custom data.
+  - Libraries are used for storing
+    files, like documents, images,
+    or videos.
+- Both lists and libraries are
+  essentially tabular structures,
+  similar to database tables.
+- Each row in a list or library
+  represents an item (in a list) or
+  a file (in a library).
+- Each column represents a piece of
+  metadata associated with the item
+  or file.
+
+
+Adding a New Column:
+
+- When your colleague asks you to
+  add a new column, they mean
+  adding a new metadata field to
+  the SharePoint list or library.
+- This new column will allow you to
+  store additional information
+  about each item or file.
+- In your case, the new column will
+  be used to store the
+  "application-type" of the files
+  you're downloading.
+- Sharepoint has a lot of different
+  column types, such as:
+  - Text
+  - Number
+  - Date and Time
+  - Choice (drop-down list)
+  - Yes/No
+  - Lookup (referencing another
+    list or library)
+  - And many more...
+
+
+"Application-Type" Column:
+
+- For your "application-type"
+  column, a "Choice" column would
+  likely be the most appropriate.
+- This would allow you to create a
+  drop-down list of predefined
+  application types (e.g., "Word
+  Document," "Excel Spreadsheet,"
+  "PDF," "CustomApp1", etc.).
+- This will provide a consistent
+  and controlled way to categorize
+  your files.
+
+
+How to Add a Column in SharePoint:
+
+The exact steps might vary slightly
+depending on your SharePoint
+version, but here's a general
+outline:
+
+- 1. Navigate to the List or Library:
+
+- Open the SharePoint site and go
+  to the list or library where
+  you want to add the column.
+
+- 2. Access List/Library Settings:
+
+- Look for a "Settings" or "Gear"
+  icon.
+- Select "List settings" or
+  "Library settings."
+
+- 3. Create a Column:
+
+- Find the "Columns" section.
+- Click "Create column."
+
+- 4. Configure the Column:
+
+- Enter a column name (e.g.,
+  "Application Type").
+- Select the column type (e.g.,
+  "Choice").
+- Enter the choices for the
+  drop-down list.
+- Configure any other settings as
+  needed (e.g., whether the
+  column is required).
+- Click "OK" or "Save."
+
+
+Why This Is Useful:
+
+- Filtering and Sorting: The
+  "application-type" column will
+  allow you to easily filter and
+  sort the files in the library
+  based on their type.
+- Automation: You can use the
+  column in your app to automate
+  the download process. For
+  example, you could filter the
+  library to download only files of
+  a specific application type.
+- Data Integrity: A "Choice" column
+  helps ensure data consistency and
+  prevents users from entering
+  arbitrary values.
+- Searching: Sharepoint search can
+  use the content of the column to
+  find files.
+
+
+In Summary:
+
+Your colleague's instruction to
+"add a new column" is about adding
+a new metadata field to your
+SharePoint library, much like
+adding a column to a database
+table. Using a "Choice" column for
+"application-type" will provide a
+structured and efficient way to
+manage your files.
+
+}}}
 
 - Own exception-type for Updater (=same as in TCCore)  // Förslag|För framtida =från Erik J.
 - error-code handling
@@ -595,7 +763,7 @@ This is a very basic example, but it illustrates the core concept of how SignalR
 
 }}}
 - Testing/Using RxDotnet to simplify event-handling
-- TC LinterUtil (inline interactive wiki) {{{
+.   - TC LinterUtil (inline interactive wiki) {{{
 
 Nice. I have another little interesting task for us: We are discussing in our team about how many cores to use when running parallel tasks and the solution the team came up with (a bit reluctantly) was that the best temporary solution was to put a note about it in the team's wiki.
 
@@ -718,6 +886,188 @@ Key Advantages of this Approach:
     Improved Code Quality: By enforcing best practices, the linter helps improve the overall quality and maintainability of your code.
 
 Starting with a small set of rules and gradually expanding your linter will make the project more manageable and allow you to get quick wins.  The combination of Roslyn's power and F#'s expressiveness (if you choose to use it) will provide a very effective solution for your team.
+
+}}}
+Installing an msi (Microsoft Installer) file {{{
+
+Could you tell me a bit about the
+.msi file format, i.e. mostly
+focusing on how I install it
+programmatically from a program
+written in C#?
+
+Absolutely. The .msi (Microsoft
+Installer) file format is a
+database-driven package format used
+by Windows Installer for
+installing, maintaining, and
+removing software. It's a
+fundamental part of Windows
+software deployment.
+
+Key Characteristics of MSI Files:
+
+- Database-Driven: MSI files
+  contain a relational database
+  that describes the software
+  components, installation process,
+  and dependencies.   
+- Transactional: Windows Installer
+  uses a transactional approach,
+  meaning that if an installation
+  fails, it can roll back changes
+  to the system.  
+- Declarative: The installation
+  process is defined declaratively,
+  specifying what should be
+  installed rather than how.
+- Component-Based: Software is
+  divided into components, which
+  are the smallest units of
+  installation.
+- Features: MSI supports features,
+  which are logical groupings of
+  components.  
+- Properties: MSI uses properties
+  to store information about the
+  installation.  
+
+
+Programmatic Installation from C#:
+
+To install an MSI file
+programmatically from a C# program,
+you can use the Process class to
+execute the msiexec.exe
+command-line utility.
+
+Here's a breakdown of the process
+and some code examples:
+
+- 1. Using msiexec.exe:
+
+msiexec.exe is the command-line
+installer for MSI files. It
+provides various command-line
+options for controlling the
+installation process.  
+
+- 2. Basic Installation:
+
+using System.Diagnostics;
+
+public static void InstallMsi(string msiFilePath)
+{
+    Process process = new Process();
+    process.StartInfo.FileName = "msiexec.exe";
+    process.StartInfo.Arguments = $"/i \"{msiFilePath}\" /qn"; // /i for install, /qn for quiet (no UI)
+    process.StartInfo.UseShellExecute = false;
+    process.StartInfo.CreateNoWindow = true; // Prevents a console window from appearing
+    process.Start();
+    process.WaitForExit();
+
+    if (process.ExitCode == 0)
+    {
+        Console.WriteLine("MSI installation successful.");
+    }
+    else
+    {
+        Console.WriteLine($"MSI installation failed with exit code: {process.ExitCode}");
+    }
+}
+
+Explanation:
+
+- /i: Specifies that an
+  installation should be performed.
+- /qn: Runs the installation in
+  quiet mode, with no user
+  interface.
+- \"{msiFilePath}\": The path to
+  the MSI file, enclosed in quotes
+  to handle paths with spaces.
+- process.WaitForExit(): Waits for
+  the msiexec.exe process to
+  finish.
+- process.ExitCode: Gets the exit
+  code of the process, which
+  indicates success or failure.
+
+3. Common msiexec.exe Options:
+
+- /i: Install an MSI package.
+- /x: Uninstall an MSI package.
+- /f: Repair an MSI package.
+- /p: Apply a patch (MSP file).
+- /qn: Quiet mode (no UI).
+- /qb: Basic UI.
+- /qb!: Basic UI with no cancel
+  button.
+- /qr: Reduced UI.
+- /qf: Full UI.
+- /l*v <log_file>: Log installation
+  details to a file.
+- PROPERTY=VALUE: Set MSI
+  properties.
+
+- 4. Setting MSI Properties:
+
+You can pass properties to the MSI
+installer using the PROPERTY=VALUE
+syntax.
+
+public static void InstallMsiWithProperties(string msiFilePath, string properties)
+{
+    Process process = new Process();
+    process.StartInfo.FileName = "msiexec.exe";
+    process.StartInfo.Arguments = $"/i \"{msiFilePath}\" {properties} /qn";
+    process.StartInfo.UseShellExecute = false;
+    process.StartInfo.CreateNoWindow = true;
+    process.Start();
+    process.WaitForExit();
+}
+
+Example usage:
+
+InstallMsiWithProperties("MyInstaller.msi", "INSTALLDIR=\"C:\\MyProgram\" LICENSEKEY=\"12345\"");
+
+- 5. Logging:
+
+Logging is crucial for debugging
+installation issues.  
+
+public static void InstallMsiWithLogging(string msiFilePath, string logFilePath)
+{
+    Process process = new Process();
+    process.StartInfo.FileName = "msiexec.exe";
+    process.StartInfo.Arguments = $"/i \"{msiFilePath}\" /qn /l*v \"{logFilePath}\"";
+    process.StartInfo.UseShellExecute = false;
+    process.StartInfo.CreateNoWindow = true;
+    process.Start();
+    process.WaitForExit();
+}
+
+6. Elevated Privileges:
+
+If the MSI requires administrator
+privileges, you'll need to run your
+C# program with elevated
+privileges.
+
+Important Considerations:
+
+- Error Handling: Always check the process.ExitCode to handle installation failures.
+- Logging: Use logging to diagnose
+  problems.   
+- Security: Be cautious when
+  running external processes,
+  especially with elevated
+  privileges.
+
+By using the Process class and
+msiexec.exe, you can effectively
+install MSI files from your C#
+applications.
 
 }}}
 

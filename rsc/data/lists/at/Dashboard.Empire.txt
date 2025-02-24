@@ -1050,6 +1050,11 @@ __area=1
 
     (vim)utilscript-ideas 2021+  - charsperminute.el  - fontlarger.vim  **
 
+    vim:fdm=marker:
+    vim:syntax=cs:shiftwidth=2:
+    set syntax=cs shiftwidth=2 | colors molokai_dark | set guifont=*
+
+
 new(!)
     Rider Vim 0.1 ----
 
@@ -1078,7 +1083,7 @@ new(!)
     %Y%m%d_%NNNNNN              # shutter
     %s:\v(/\*|\*/)::g           # remove '/* */'
     set syntax=svg              # list lang-names:
-                                #   ls /usr/share/vim/vim81/syntax
+                                #   ls /usr/share/vim/vim81/syntax | c:\tools\vim\vimNUM\syntax
                                 #   (python, java, bash, clojure, tex, etc)
     screenshot: csa-s  #gimp: take screenshot
     manual duplex               # [print last odd+ ]

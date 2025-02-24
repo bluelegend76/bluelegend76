@@ -16,6 +16,9 @@ https://tryclojure.org/
 ReplIt
   https://replit.com/
   https://replit.com/signup
+MS GRAPH API {{{
+  https://developer.microsoft.com/en-us/graph/graph-explorer
+}}}
 
 Godbolt {{{
   moz-extension://90487007-7c93-4adf-a934-56eb44472a1d/options.html#nav=new-user-script+editor
