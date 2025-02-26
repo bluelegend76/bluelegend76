@@ -865,6 +865,21 @@ imagick
 ffmpeg  (from Blender at-index (etc))  @(@!)
                 ----
                 .
+yt-dlp
+                Now that yt-dlp is installed, you can use it from the command line. Here are a few basic examples:
+
+                Download a YouTube video:
+                    yt-dlp <YouTube_URL>
+                Download the best audio-only version:
+                    yt-dlp -x --audio-format mp3 <YouTube_URL>
+                    yt-dlp -x --audio-format mp3 "https://www.youtube.com/watch?v=QjB3qextZbQ&list=OLAK5uy_kkL5jD6ELJzI6o9x3eJO2x87d-PzELkVY&index=22"
+                Download a specific audio clip:
+                    Find the start and end times of the clip you want.
+                    use the following command, replacing the times and URL appropriately.
+                    yt-dlp --download-sections "*[00:01:00-00:01:30]" -x --audio-format mp3 <YouTube_URL>
+                test 1 - Blade Runner (Blade Runner 2049) ----
+                    yt-dlp --download-sections "*00:00:20-00:02:00" -x --audio-format mp3 "https://www.youtube.com/watch?v=QjB3qextZbQ&list=OLAK5uy_kkL5jD6ELJzI6o9x3eJO2x87d-PzELkVY&index=22"
+                    This example downloads the audio between 1 minute and 1 minute and 30 seconds.
 fontforge
                 ----
                 .
@@ -873,6 +888,10 @@ Reveal.js  (@@)
                 .
 impress.js
                 ----
+                .
+
+Obs Studio (Win)
+                .
                 .
 
 

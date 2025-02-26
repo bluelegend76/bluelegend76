@@ -1170,6 +1170,9 @@ Exempel C# 'INLINE TESTING': Testa och se hur Math.Pow funkar {{{
     I så fall: Se till att referens till testramverket är inkluderat/angivet (+ta bort innan pushar upp)
 }}}
 
+
+tror _ tycker jag är seg, långsam och jobbar konstigt
+
 }}}
 install + use C#/F# in Jupyter(++)/Polyglot Notebooks {{{
 
@@ -1263,7 +1266,7 @@ Multimedia, MuRec {{{
     gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
       MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
     gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
-    gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
+      gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
 
 }}}
 

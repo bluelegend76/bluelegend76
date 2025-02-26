@@ -1,9 +1,9 @@
 vim:fdm=marker:
 
 Forums Stora
+  TODO: ADD REF
 
 Quotes ----
-  ../ref/lang/Quotes.txt
 
 at.Ref.Cbs ----
   ../ref/ref.cb-prl.txt
@@ -18,7 +18,7 @@ Web/Mobile/Cloud ----
   TODO --"--
 
 Langs1 Ref-lists ----
-  ../ref/lang/Langs1Refs.txt
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/Quotes.txt
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 
@@ -658,7 +658,13 @@ Reduce down rectangular file-block to gvim one-liner
 }}}
 Vtouch-Vanki  '1.0-Refactor' (+Docs)
 
+cd ~/gdrive
+rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
+rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
+rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
+
 ~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
+../todo/MasterlistDownload-onedeepmans-online.txt  # Win
 
 gvim `find ~/gdrive/rsc/Doks/taskuj/ -type f -name '*.txt' 2>/dev/null`
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
