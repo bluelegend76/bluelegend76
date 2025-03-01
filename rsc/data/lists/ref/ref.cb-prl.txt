@@ -1262,6 +1262,8 @@ Visual Studio Code with the Jupyter extension: VS Code provides excellent suppor
 
 gvim -p ../at/PROGR.cm.txt comp/lang/PROGRLANG.DB.ref.txt
 
+
+
 Multimedia, MuRec {{{
     gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
       MultiMedia: Scribus, Inkscape, Gimp, imagick, fontforge, Blender, ... ffmpeg
@@ -1269,8 +1271,7 @@ Multimedia, MuRec {{{
       gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/{graf/pr/MultiMedia,comp/mu/MuRec}.txt
 
 }}}
-
-
+TODO: Add ffmpeg from at.Blender (etc)
 ____
 Browsers (File, Web, Media, Web) {{{
 media ----
@@ -1439,6 +1440,7 @@ elisp  / newlisp {{{
   https://www.emacswiki.org/emacs/ElispCookbook
 }}}
 }}}
+
 
 
 .     asm, wasm {{{

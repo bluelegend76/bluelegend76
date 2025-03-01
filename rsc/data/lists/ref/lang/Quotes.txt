@@ -6,6 +6,8 @@ Känn dina vänner väl, men/och dina fiender bättre. {{{
   Det är viktigt att förstå hur dina vänner tänker, men ännu viktigare att förstå hur dina fiender tänker.
 }}}
 
+The tragedy of science: A beautiful theory destroyed by an ugly fact.
+
 'Effects are real. Perceptions are not.'
 
 Man brukar säga "Personen orkade inte leva". Jag tror det är fel/missvisande. Jag tror en bättre formulering är "Personen orkade inte lida".
@@ -17,6 +19,7 @@ Management by Inertia
     # vad som avgör om pajen smakar bra är när du tar en tugga, inte om någon teolog/sociolog kan lägga fram avancerade argument för att så är fallet (speciellt om du precis tagit en tugga och det smakar riktigt illa)
 
     [A lie repeated enough times...]
+PERSISTANCE OF EXPERIENCE
 REPETITION (commonly called/labeled as experience), IS THE MOTHER OF BELIEF.  ___Trinity
   PERSISTANCE OF BELIEF IS THE MOTHER OF ACTION.
 

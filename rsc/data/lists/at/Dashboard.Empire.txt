@@ -1,9 +1,11 @@
 vim:fdm=marker:
+    Queen
+    'För att bättre förstå om vad som influerat flera klassiska kompositörer'
+    You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
+        N-teatern/Nationalsånger 2
 
 Forums Stora
-  TODO: ADD REF
-
-Quotes ----
+  ../ref/allm-a/forumsstoraprakthandb.txt
 
 at.Ref.Cbs ----
   ../ref/ref.cb-prl.txt
@@ -17,10 +19,15 @@ Clangs (C, Cpp, CSharp, Dlang) ----
 Web/Mobile/Cloud ----
   TODO --"--
 
-Langs1 Ref-lists ----
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/Quotes.txt
+  ## injunction
+Langs1 Ref-lists ----  __
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  // maybe add 'främord' etc
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
+
+## 'Trinity Suite'
+##   (belief and morality, theory, knowledge (and soundness))
 
 ../todo/MasterlistDownload-onedeepmans-online.txt
 c:/Users/SEDAALB2/Desktop/Scratch.txt
@@ -624,7 +631,7 @@ SSH (Veracrypt)  + Puppet
 Devops + Python (+iPy/Xonsh) ; F# Devops
 
 Bcb, Bluebash + PShell,  ASM 1 (+binalys)
-Docker + Kubernetes + AzDevops + GithubActions
+Docker + Kubernetes + Azure Devops + GithubActions
     Gremlin (+Neptune)
     Nushell
 FuncPy  [___Renskriv]

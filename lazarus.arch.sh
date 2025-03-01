@@ -119,12 +119,12 @@ ln -s ~/Dropbox/config/fluxbox/keys ~/.fluxbox/keys
 
 echo "(Installing some dockapps): ..."
 # pacman -S wmmoonclock wmnd wmcpuload wmtime wmbattery
-pacman -S gnome-clocks
+sudo pacman -S gnome-clocks
 # --
 read -p "Tip: Now try Refreshing Fluxbox: "
 
 echo "Installing Git ... "
-pacman -S meld diffuse
+sudo pacman -S meld diffuse
 # yay -S gitkraken
 # git-gui
 # git
@@ -147,7 +147,7 @@ mkdir ~/git && \
 
 echo "Installing Vims + linking up vim settings: ..."
 mkdir -p ~/.vim/bundle
-pacman -S gvim neovim
+sudo pacman -S gvim neovim
 # sudo apt-get install neovim-qt
 ## emacs
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -189,55 +189,55 @@ yay -S insync
 clear
 echo "Installing some utilities (curl, rename, tree, ag/agrep, scrot, tesseract): ..."
 ## pacman -S curl
-pacman -S mc
-pacman -S cmake cgdb
-pacman -S renameutils
+sudo pacman -S mc
+sudo pacman -S cmake cgdb
+sudo pacman -S renameutils
 # pacman -S ncal  =??
 #acpi rar
-pacman -S unrar
-pacman -S scrot tree
-pacman -S tre
+sudo pacman -S unrar
+sudo pacman -S scrot tree
+sudo pacman -S tre
   # i.e. includes agrep
 silversearcher-ag
 # pacman -S tracker  #='tracker3 --help'
 # localsearch tinysparql
-pacman -S ripgrep-all
-pacman -S tesseract
+sudo pacman -S ripgrep-all
+sudo pacman -S tesseract
 ## 30 = Eng
-pacman -S translate-shell
+sudo pacman -S translate-shell
 
 # TODO
 sudo gvim -c '/rights="\zsnone\ze.*pattern="PDF"' /etc/ImageMagick-6/policy.xml
 clear
 read -p "Opening Imagick policy.xml, +Change 'rights' to 'read|write' [+Comment out 6 Policymap lines (=restricting memory-usage)]. Press 'Enter' when done: "
 
-pacman -S blueman
+sudo pacman -S blueman
 # +On startup: sudo systemctl start bluetooth
 
 echo "Installing some Mu and Media packages/utils: ..."
-pacman -S keepassxc
+sudo pacman -S keepassxc
   # gydl (??)
 # sudo apt-get install anki
 # pavucontrol  Already Installed (+Extra Music-Mixer)
-pacman -S mpv audacious
+sudo pacman -S mpv audacious
 # +python-mpv
 # +playerctl ?
 gtick
-pacman -S lilypond
-pacman -S ardour
-pacman -S rosegarden
+sudo pacman -S lilypond
+sudo pacman -S ardour
+sudo pacman -S rosegarden
 # + python-ly
 # ____
 tuxguitar tuxguitar-jsa
-pacman -S evince fontforge
-pacman -S pdftk xsane
-pacman -S timidity-interfaces-extra midish
-pacman -S shotwell
+sudo pacman -S evince fontforge
+sudo pacman -S pdftk xsane
+sudo pacman -S timidity-interfaces-extra midish
+sudo pacman -S shotwell
 #--
-pacman -S seq24
-pacman -S soundstretch mma
-pacman -S csound
-pacman -S csoundqt
+sudo pacman -S seq24
+sudo pacman -S soundstretch mma
+sudo pacman -S csound
+sudo pacman -S csoundqt
 # csound-plugins
 yay -S csound-blue
 # https://github.com/kunstmusik/blue/releases/download/2.9.1/blue-linux-2.9.1.zip
@@ -249,24 +249,25 @@ yay -S csound-blue
   #start w. 'timidity -ia {files}' ***
 
 echo "Installing some media-utils, Dok/Pdf-readers, etc: ..."
-pacman -S gimp inkscape
+sudo pacman -S gimp gimp-plugin-gmic inkscape
+sudo pacman -S 
 #--
-pacman -S scribus
-pacman -S qrencode
-pacman -S thunar ristretto
-pacman -S a2ps okular xchm
+sudo pacman -S scribus
+sudo pacman -S qrencode
+sudo pacman -S thunar ristretto
+sudo pacman -S a2ps okular xchm
 # TODO: Add installation for Obsidian
-pacman -S calibre
+sudo pacman -S calibre
 #@@__ sudo apt-get install djvulibre-bin
 # wget https://0x2a.at/site/projects/djvu2pdf/djvu2pdf_0.9.2-1_all.deb
-pacman -S extra/nyxt
+sudo pacman -S extra/nyxt
 teams (aur)
-pacman -S pandoc enscript
-pacman -S festival
+sudo pacman -S pandoc enscript
+sudo pacman -S festival
 # Chrome
-pacman -S chromium-browser  #maybe not needed with official install
-pacman -S freeplane
-pacman -S tj3 vim-tjp
+sudo pacman -S chromium-browser  #maybe not needed with official install
+sudo pacman -S freeplane
+sudo pacman -S tj3 vim-tjp
 
 ## TODO: ADD XFCE DESKTOP KEYBOARD SETTINGS (=directory of xml-files)
 
@@ -402,21 +403,21 @@ echo "Installing some Programming(and media)-related packages: ..."
     # https://github.com/Kitware/CMake/releases/download/v3.26.1/cmake-3.26.1.tar.gz
 # sudo apt install spyder (??)
     #sudo apt-get install youtube-dl
-pacman -S bpython
-pacman -S ipython
+sudo pacman -S bpython
+sudo pacman -S ipython
 # sudo pacman -S python3-pip jupyter
 sudo pacman -S python3-pip jupyterlab
 sudo pacman -S python3-virtualenv
 pip3
 pip3 install yt-dlp  # __??
-pacman -S qutebrowser
+sudo pacman -S qutebrowser
 ln -s ~/Dropbox/config/qutebrowser/config.py ~/.config/qutebrowser/config.py
 # ln -s ~/Dropbox/config/fluxbox/startup ~/.fluxbox/startup
 # tip: Test running with 'bpython3'
-pacman -S npm  #+Perhaps replace with Newer Pmanager[!!]
-pacman -S lua5.4 luarocks
-pacman -S guix
-pacman -S nix
+sudo pacman -S npm  #+Perhaps replace with Newer Pmanager[!!]
+sudo pacman -S lua5.4 luarocks
+sudo pacman -S guix
+sudo pacman -S nix
 brew
 # Firefox Tampermonkey [**]
 # Ada/Gnat/Spark ----
@@ -424,7 +425,7 @@ brew
 #  set Vim as external editor (in preferences(!))
 
 echo "(Installing some games etc: ...)"
-pacman -S fceux
+sudo pacman -S fceux
 read -p "Fceux Tip: gamepad config -- a,b = u,e"
 freesweep
 read -p "(Tip Freesweep Board: 50x50, 350 mines)"
@@ -442,10 +443,10 @@ read -p "Post-install Tip 3: Install 'dark reader', 'DuckduckGo' and 'dwhelper' 
 read -p "Continuing with Full Media install? (ie. Rosegarden, MScore 4 (etc)): "
 read -p "Again, only continue for full Music/Media install. Continue?: "
 
-pacman -S rosegarden
+sudo pacman -S rosegarden
 # Audacity __
 muse
-pacman -S musescore
+sudo pacman -S musescore
 # TODO: MUSESCORE 4 (+MScore4 Hub)
 wget https://musescore.org/en/download/musescore-x86_64.AppImage \
   # TODO: MAY HAVE TO USE GLOB FOR RENAMING MS4 RELIABLY(!!)
@@ -473,13 +474,13 @@ read -p "[+Open 'Muse Hub' and select/install 'Muse Sounds': "
 #  gstreamer1.0-plugins-ugly
 #  gstreamer1.0-doc
 # }}}
-pacman -S csoundqt nyquist
+sudo pacman -S csoundqt nyquist
 echo "(Nyquist is started with 'ny': )"
 # TODO: Add installation for Csound Blue
 
 echo "(Installing some media Extras)"
 #@@__ pacman -S discord
-pacman -S pidgin
+sudo pacman -S pidgin
 
 echo "Installing speech-dispatcher (=for Firefox speech synthesis): "
 sudo apt install speech-dispatcher
@@ -570,7 +571,7 @@ sudo pacman -S tigervnc
 # }}}
 # Xonshell  python3 -m pip install 'xonsh[full]'
 sudo pacman -S nushell
-pacman -S virtualbox
+sudo pacman -S virtualbox
 # install windows 10 in linux virtualbox:
 # https://www.youtube.com/watch?v=2oO9CeZXjTY
 # ytdlp
@@ -690,7 +691,7 @@ pacman -S virtualbox
       ### wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/myrepo.asc
 #@@__ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-pacman -S code
+sudo pacman -S code
 
 # Extensions:
 # https://marketplace.visualstudio.com/
@@ -938,10 +939,10 @@ texlive-basic texlive-context
 
 # idris2 
 # }}}
-pacman -S idris
+sudo pacman -S idris
 # ¤¤ Hy Python: [sudo] pip3 install --user hy
 
-pacman -S xmlstarlet
+sudo pacman -S xmlstarlet
 # ¤¤ Xml {{{
 # in Vim:
 # xmlstarlet
@@ -969,7 +970,7 @@ cmake
  # cmake [=installed by default]
 # Python  bpython / ipython
 # ** guile-2.2 guile-3.0
-pacman -S clojure leiningen
+sudo pacman -S clojure leiningen
 # run with 'lein repl' or 'clj'
 # install further Cloj libraries: clj -Sdeps
 jshell
@@ -1085,7 +1086,7 @@ yay -S flutter
 # TODO: https://docs.flutter.dev/development/platform-integration/linux/building
 # TODO: https://docs.flutter.dev/get-started/install/linux
 # }}}
-pacman -S sbcl
+sudo pacman -S sbcl
 # *(*)? install CLisp (+slime) Ubuntu(!) [@@@@ TODO] {{{
 # sudo apt-get install sbcl
 # shell:
@@ -1196,7 +1197,7 @@ luarocks
 # sudo npm install -g sass
 # ( sudo dpkg -i koala_2.3.0_x86_64.deb )
 # ( koala & )
-pacman -S elixir
+sudo pacman -S elixir
 # ¤¤ *** Elixir {{{
 # sudo apt-get install elixir
 #   https://elixir-lang.org/install.html
@@ -1252,7 +1253,7 @@ pacman -S elixir
 #   csi           interactive/repl
 #   chicken//csc  compiler
 # }}}
-pacman -S racket
+sudo pacman -S racket
 # ¤ **[!] Racket Scheme {{{
 # https://racket-lang.org/download/
 #
@@ -1288,7 +1289,7 @@ ocaml dune opam
 # (**) Install Golang Ubuntu {{{
 #   https://go.dev/doc/install
 # }}}
-pacman -S supercollider sc3-plugins
+sudo pacman -S supercollider sc3-plugins
 # ¤[¤] ==== TODO: (**) Csound vim, Supercollider, ChucK {{{
 # CSOUND:
 # https://github.com/luisjure/csound-vim
@@ -1352,7 +1353,7 @@ pacman -S supercollider sc3-plugins
 
 # sudo apt-get install dub
 # }}}
-pacman -S smlnj
+sudo pacman -S smlnj
 # (¤¤) Install Standard ML {{{
 #  https://riptutorial.com/sml/example/23479/installation
 #  https://en.wikipedia.org/wiki/Standard_ML
@@ -1581,7 +1582,7 @@ pacman -S smlnj
 #  https://doc.qt.io/qt-6/gettingstarted.html
 #  https://doc.qt.io/qtdesignstudio/studio-installation.html
 # }}}
-pacman -S haxe
+sudo pacman -S haxe
 # ((¤¤)) install haxe + neko ubuntu {{{
 # ! sudo add-apt-repository ppa:haxe/releases -y
 # ! sudo apt-get update
@@ -1661,7 +1662,7 @@ pacman -S haxe
 #
 # }}}
 # ** install octave ubuntu
-pacman -S swi-prolog
+sudo pacman -S swi-prolog
 # (¤¤) (??) install prolog ubuntu {{{
 # sudo apt-add-repository ppa:swi-prolog/stable
 # sudo apt-get update

@@ -1,6 +1,13 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
+Gimp
+            ---- Gimp Regular
+                .
+            ---- Gimp Scripting (tinyscheme, python)  -->  Pil(low)
+                .
+            ---- G'Mic
+                .
 Inkscape
                 ----
                 select/view  #+zoom
@@ -25,9 +32,6 @@ Inkscape
                 'grad. mesh'
                 CommandLine
                 clean svg
-Gimp
-                ----
-                .
 Scribus
                     ----
                     scribus-man: (keyb-shortc.s) {{{
@@ -852,6 +856,9 @@ Audacity  @@(!)
                 About Audacity...
 Blender
                 ----
+                .
+Kdenlive  TODO: IMPORT 
+                .
                 .
 pdftk  @@[@] [**]  (from Transcribe)
                 .

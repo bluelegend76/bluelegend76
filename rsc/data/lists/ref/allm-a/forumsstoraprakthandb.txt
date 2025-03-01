@@ -2,6 +2,34 @@
 
 ___zzzz (=first set evince pdf-link to "p)
 
+Hair-Trimmer Maintenance
+
+- 1. The Comb Attachments should be
+  cleaned in runnng water. Ensure
+  they are completely dry before
+  using them.
+
+- 2. Clean the blades with the
+  Cleaning Brush provided to remove
+  remaning loos hair-clippings.
+- 3. Clean the housing of the
+  hair-clipper with a soft, dry
+  cloth.
+- 4. The cutting blades should be
+  lightly oiled with the oil
+  provided once every few haircuts.
+
+Do not use any harsh detergents,
+abrasives, solvents or cleaners.
+Never immerse in water to clean.
+Dry thoroughly before use.
+The appliance should never be
+stored whilst hot or whilst still
+connected to the mains. Always
+ensure the appliance is switched
+off, unplugged from the mains and
+has cooled downbefore storing.
+
 set spell! spelllang=sv
 
 Stryka
@@ -19,7 +47,7 @@ blus eller skjorta.
 - 2. Ställ in termostaten enligt
   skötselrådet på plagget.
 - 3. Stryk kragen, först på
-  avigsidan sedan på rätsidan.
+  avigsidan, sedan på rätsidan.
   Sträck ut kragen under tiden du
   stryker.
 - 4. Stryk manschetten på båda

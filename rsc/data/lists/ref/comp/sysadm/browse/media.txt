@@ -20,7 +20,7 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
                 go to editing field  c-r
                 go to message-contents  c-m
                 message-list:interaction ----
-                react to message (e.g. with emoji)  Enter, select with arrows, Enter
+            react to message (e.g. with emoji)  Enter, select with arrows, Enter
                 message-box:navigation ----
                 show this conversation  c-o
                 change view (in information-window)  a-p
@@ -28,7 +28,7 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
                 append file  sa-o # / Tab, right until 'Append', Enter
             record video  sa-e
             schedule message  sa-n  #
-                Loop-features ----
+            Loop-features ----
         General ----
                 Show keyboard shortcuts  c-.
                 Go to Search  c-e  ca-e
@@ -75,7 +75,7 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
             Toggle mute  cs-m
                 Temporarily unmute  c-Space
                 Announce raised hands (screen reader)  cs-l
-            Raise or lower your hand.   cs-k
+        Raise or lower your hand.   cs-k
             Start screen share session  cs-e  __
             Toggle video  cs-o
                 High motion screen share  csa-t
@@ -85,7 +85,7 @@ Microsoft Teams  @  TODO: SEE BUILTIN LIST
                 .
             Accept screen share  cs-a
             Admit people from lobby notification  cs-y
-                Open the Background settings menu  cs-p
+        Open the Background settings menu  cs-p
                 .
             Schedule a meeting  sa-n
                 Go to current time  a-.
@@ -180,22 +180,22 @@ discord
                 Search  c-f
 Google Meet
         mute/unmute  c-d
-            Announce who is currently speaking 	Ctrl + ⌘ + s 	Ctrl + Alt + s
+        Announce who is currently speaking 	Ctrl + ⌘ + s 	Ctrl + Alt + s
             Announce current information about the room 	Ctrl + ⌘ + i 	Ctrl + Alt + i
             Announce recently received reactions 	Ctrl + ⌘ + x 	Ctrl + Alt + x
-            Meeting controls 	Mac 	Windows/Chrome OS
+        Meeting controls 	Mac 	Windows/Chrome OS
             Show or hide captions 	c 	c
             Open picture-in-picture mode 	Shift + m 	Shift + m
             Turn on or off camera 	⌘ + e 	Ctrl + e
-            Mute or unmute your microphone 	⌘ + d 	Ctrl + d
+        Mute or unmute your microphone 	⌘ + d 	Ctrl + d
             Increase the number of participant tiles 	Ctrl + ⌘ + k 	Ctrl + Alt + k
             Decrease the number of participant tiles 	Ctrl + ⌘ + j 	Ctrl + Alt + j
             Show or hide meeting chat window 	Ctrl + ⌘ + c 	Ctrl + Alt + c
-            Show or hide participants 	Ctrl + ⌘ + p 	Ctrl + Alt + p
-            Raise or lower your hand 	Ctrl + ⌘ + h 	Ctrl + Alt + h
+        Show or hide participants 	Ctrl + ⌘ + p 	Ctrl + Alt + p
+        Raise or lower your hand 	Ctrl + ⌘ + h 	Ctrl + Alt + h
             Minimize or expand your video 	Ctrl + ⌘ + m 	Ctrl + Alt + m
             Push to Talk*
-            *Enable "Push to Talk" in settings to use this shortcut. 	Press and hold spacebar 	Press and hold spacebar
+        *Enable "Push to Talk" in settings to use this shortcut. 	Press and hold spacebar 	Press and hold spacebar
 
 Shotwell  @@
                 ----
