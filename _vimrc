@@ -35,6 +35,17 @@ syntax on
 "   endif
 " endif
 "     " ----
+
+"### function! ResizeFont(increment)
+"###   let current_font = substitute(string(&guifont), '.*:h', '', '')
+"###   execute "set guifont=".substitute(&guifont, ':h.*', ':h'.(current_font + a:increment), '')
+"### endfunction
+"### 
+"### nnoremap <C-WheelUp> :call ResizeFont(2)<CR>
+"### nnoremap <C-WheelDown> :call ResizeFont(-2)<CR>
+
+" nnoremap <C-MouseUp> :silent! let current_font = substitute(string(&guifont), '.*:h', '', '')\| execute "set guifont=" . substitute(&guifont, ':h.*', ':h' . (current_font+2), '')<CR>
+" nnoremap <C-MouseDown> :silent! let current_font = substitute(string(&guifont), '.*:h', '', '')\| execute "set guifont=" . substitute(&guifont, ':h.*', ':h' . (current_font-2), '')<CR>
 " nnoremap <C-MouseUp> :silent! let &guifont = substitute(&guifont, ':h\zs\d+', '=eval(submatch(0)-1)', '')<CR>
 " nnoremap <C-MouseDown> :silent! let &guifont = substitute(&guifont,':h\zs\d+','=eval(submatch(0)+1)', '')<CR>
 "" nnoremap <C-MouseUp> :silent! let &guifont = substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)-1)', '')<CR>
