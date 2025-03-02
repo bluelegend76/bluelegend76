@@ -9,6 +9,11 @@ Forums Stora
 
 at.Ref.Cbs ----
   ../ref/ref.cb-prl.txt
+.vids Lia2 {{{
+
+mpv ~/Video/Peter-L-20250227_102445.mp4 ~/Video/Peter-L-20250227_111046.mp4 ~/Video/Peter-L-20250227_132732.mp4 &
+
+}}}
 
 Keyboard Shortcuts.Db1(...) ----
     .
@@ -19,7 +24,6 @@ Clangs (C, Cpp, CSharp, Dlang) ----
 Web/Mobile/Cloud ----
   TODO --"--
 
-  ## injunction
 Langs1 Ref-lists ----  __
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
   // maybe add 'främord' etc
@@ -27,7 +31,7 @@ LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
 
 ## 'Trinity Suite'
-##   (belief and morality, theory, knowledge (and soundness))
+##   (belief and morality, models and theory, knowledge (and soundness))
 
 ../todo/MasterlistDownload-onedeepmans-online.txt
 c:/Users/SEDAALB2/Desktop/Scratch.txt

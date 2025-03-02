@@ -1,5 +1,6 @@
 # General Todo/Scratchlist ----
 __
+- [ ] **Add Impress.js/Reveal.js to (already present) Ref-List Markup**  __
 
 - ## **START + CONSERTED PUSH TO LEARN FILE/MEDIA-BROWSERS, MEDIA-PROGRAMS (ETC ...)**  __
 - Prepare + Send THEDOC-NEXT Potpurri-Video to Abe

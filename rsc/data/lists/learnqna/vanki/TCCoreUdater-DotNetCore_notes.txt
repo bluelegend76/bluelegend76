@@ -1,0 +1,25 @@
+vim:fdm=marker:sw=2:syn=:
+
+@b(ump):   3yyp}ddzc3-   #copy last q&a-post + bump i-number 1
+@s(plit):  o----yypO         #split (=put ---- + blank line + ----)
+
+put several files in playlist + start off (at specific time) in video no 'n':
+    mpv 1.mp4 --start=00:10:30 2.mp4 3.mp4 --playlist-start=2
+
+video 1 (00:30:00)
+    mpv --start=00:13:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+----
+video 1 (00:35:00)
+    mpv --start=00:01:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+
+video 1 (01:00:00)
+    mpv --start=00:02:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+
+----
+1
+{{{
+    
+    --
+    refdokid-p1
+    }}}
+

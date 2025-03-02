@@ -1,6 +1,6 @@
+vim: fdm=indent:fdl=2:
 set foldmethod=indent foldlevel=2
 set foldmethod=indent foldlevel=3
-vim: fdm=indent:fdl=2:
 __
 
 Microsoft Teams  @  TODO: SEE BUILTIN LIST
@@ -611,7 +611,8 @@ bluetooth-ctl
                 admin.:
                     allow		Allow service UUIDs and block rest of them
 
-mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
+mpv (curr. >-levels: 5/6)  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
+set foldmethod=indent foldlevel=5
                     https://github.com/mpv-player/mpv/blob/master/DOCS/man/console.rst  [including keyb-shortcuts**]  @@
                     https://github.com/mpv-player/mpv/blob/master/DOCS/man/lua.rst  @
                     Mpv Console(!!!!) + Scripting with Lua (+Moonscript, Teal, Fennel)
@@ -720,338 +721,279 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
 
                                             playlist-jump `playlist-filter "filename$.mp4"`
                                             By experimenting with different patterns, you can create powerful filters to find specific files in your playlist.
-        mpv console
-                                            Could you give me a list of commands that can be run in the mpv console?
+        mpv console ----
+                            - Could you give me a list of commands that can be run in the mpv console?
 
 
-                                            A Comprehensive List of mpv Console Commands
-                                            The mpv console offers a wide range of commands to control various aspects of media playback. Here's a comprehensive list, categorized by functionality:
+                            A Comprehensive List of mpv Console Commands
+                            The mpv console offers a wide range of commands to control various aspects of media playback. Here's a comprehensive list, categorized by functionality:
+                    General Commands ----
+                            help: Displays help information.
+                            quit: Exits mpv.
+                            toggle-fullscreen: Toggles fullscreen mode.
+                        toggle-osd: Toggles the on-screen display (OSD).
+                    Playback Control ----
+                            play: Resumes playback.
+                            pause: Pauses playback.
+                            stop: Stops playback.
+                        seek <position>: Seeks to a specific position in the media (e.g., seek 120 to seek to 2 minutes).
+                        step <seconds>: Steps forward or backward by a specified number of seconds (e.g., step 10 to step forward 10 seconds).
+                        set speed <value>: Sets the playback speed (e.g., set speed 2 to double the speed).
+                            cycle-audio: Cycles through the available audio tracks.
+                            cycle-video: Cycles through the available video tracks (if any).
+                    Playlist Management ----
+                        add <file>: Adds a file to the playlist.
+                        delete <index>: Deletes a file from the playlist.
+                        clear: Clears the playlist.
+                        shuffle: Shuffles the playlist.
+                        playlist-jump <index>: Jumps to a specific position in the playlist.
+                        playlist-filter <filter>: Filters the playlist based on a pattern or regex.
+                    Video Settings ----
+                            set brightness <value>: Sets the brightness.
+                            set contrast <value>: Sets the contrast.
+                            set gamma <value>: Sets the gamma.
+                            set hue <value>: Sets the hue.
+                            set saturation <value>: Sets the saturation.
+                            set aspect <aspect>: Sets the aspect ratio.
+                    Audio Settings ----
+                            set volume <value>: Sets the volume.
+                        set audio-device <device>: Sets the audio output device.
+                            set audio-params <params>: Sets audio parameters (e.g., sample rate, channels).
+                    Subtitles and Chapters ----
+                            sub on: Turns subtitles on.
+                            sub off: Turns subtitles off.
+                            sub <index>: Selects a specific subtitle track.
+                        chapter <index>: Jumps to a specific chapter.
+                    Advanced Features ----
+                        osd-level <level>: Sets the OSD level (opacity).
+                        show-text <text>: Displays a text message on the screen.
+                        load-script <script>: Loads a Lua script.
+                        set property <property> <value>: Sets a specific property.
 
-                                            General Commands
-                                            help: Displays help information.
-                                            quit: Exits mpv.
-                                            toggle-fullscreen: Toggles fullscreen mode.
-                                            toggle-osd: Toggles the on-screen display (OSD).
-                                            Playback Control
-                                            play: Resumes playback.
-                                            pause: Pauses playback.
-                                            stop: Stops playback.
-                                            seek <position>: Seeks to a specific position in the media (e.g., seek 120 to seek to 2 minutes).
-                                            step <seconds>: Steps forward or backward by a specified number of seconds (e.g., step 10 to step forward 10 seconds).
-                                            set speed <value>: Sets the playback speed (e.g., set speed 2 to double the speed).
-                                            cycle-audio: Cycles through the available audio tracks.
-                                            cycle-video: Cycles through the available video tracks (if any).
-                                            Playlist Management
-                                            add <file>: Adds a file to the playlist.
-                                            delete <index>: Deletes a file from the playlist.
-                                            clear: Clears the playlist.
-                                            shuffle: Shuffles the playlist.
-                                            playlist-jump <index>: Jumps to a specific position in the playlist.
-                                            playlist-filter <filter>: Filters the playlist based on a pattern or regex.
-                                            Video Settings
-                                            set brightness <value>: Sets the brightness.
-                                            set contrast <value>: Sets the contrast.
-                                            set gamma <value>: Sets the gamma.
-                                            set hue <value>: Sets the hue.
-                                            set saturation <value>: Sets the saturation.
-                                            set aspect <aspect>: Sets the aspect ratio.
-                                            Audio Settings
-                                            set volume <value>: Sets the volume.
-                                            set audio-device <device>: Sets the audio output device.
-                                            set audio-params <params>: Sets audio parameters (e.g., sample rate, channels).
-                                            Subtitles and Chapters
-                                            sub on: Turns subtitles on.
-                                            sub off: Turns subtitles off.
-                                            sub <index>: Selects a specific subtitle track.
-                                            chapter <index>: Jumps to a specific chapter.
-                                            Advanced Features
-                                            osd-level <level>: Sets the OSD level (opacity).
-                                            show-text <text>: Displays a text message on the screen.
-                                            load-script <script>: Loads a Lua script.
-                                            set property <property> <value>: Sets a specific property.
-                                            This is just a partial list of the available commands. For more detailed information and a complete list, you can refer to the mpv documentation or use the help command within the mpv console itself.
-        Mpv Lua
-                                            Could you give me an example of a Lua script that could be run with load-script (i.e. showing me some code), and give me some interesting ideas of things that could be done? It seems like an interesting and powerful feature.
-
-
-                                            Creating a Custom Lua Script for mpv
-                                            Understanding Lua Scripts in mpv:
-
-                                            Lua scripts in mpv provide a powerful way to customize and extend its functionality. You can create scripts to automate tasks, add new features, or integrate mpv with other applications.
-
-                                            Example: A Simple Script to Change Playback Speed
-
-                                            Here's a basic Lua script that changes the playback speed to 2x when you press the + key:
-
-                                            Lua
-                                            function mp.event.keypress(event)
-                                              if event.key == "+" then
-                                                mp.set_property("speed", 2)
-                                              end
-                                            end
-
-                                            Explanation:
-
-                                            mp.event.keypress(event): This function is called whenever a key is pressed.
-                                            event.key == "+": Checks if the pressed key is the + key.
-                                            mp.set_property("speed", 2): Sets the playback speed to 2.
-                                            Loading the Script:
-
-                                            To load this script in mpv, use the load-script command:
-
-                                            load-script my_script.lua
-                                            Replace my_script.lua with the actual filename of your script.
-
-                                            More Interesting Ideas for Lua Scripts:
-
-                                            Custom hotkeys: Create custom keybindings for various actions, such as toggling subtitles, adjusting volume, or jumping to specific points in a video.
-                                            Automating tasks: Automate repetitive tasks, such as renaming files based on metadata or creating playlists from specific directories.
-                                            Integrating with other applications: Interact with other applications using Lua's capabilities. For example, you could control mpv from a custom GUI or integrate it with a music streaming service.
-                                            Customizing the interface: Create custom overlays, skins, or themes to personalize your mpv experience.
-                                            Adding new features: Implement new features that aren't built into mpv by default, such as advanced subtitle options or custom video filters.
-                                            Additional Tips:
-
-                                            Explore the mpv API: The mpv API provides a wide range of functions and properties that you can use in your scripts.
-                                            Use a linter: A Lua linter can help you identify errors and improve your code quality.
-                                            Test your scripts thoroughly: Make sure your scripts work as expected before using them regularly.
-                                            By experimenting with Lua scripts, you can unlock the full potential of mpv and create a customized media player experience that suits your needs.
+                            This is just a partial list of the available commands. For more detailed information and a complete list, you can refer to the 'mpv documentation' or use the 'help-command' within the mpv console itself.
+        Mpv Lua ----
+                            Could you give me an example of a Lua script that could be run with load-script (i.e. showing me some code), and give me some interesting ideas of things that could be done? It seems like an interesting and powerful feature.
 
 
-                                            Let's say I wanted to play a certain video file cropped to certain dimensions.
+                            Creating a Custom Lua Script for mpv ----
+
+                            Understanding Lua Scripts in mpv:
+
+                            Lua scripts in mpv provide a powerful way to customize and extend its functionality. You can create scripts to automate tasks, add new features, or integrate mpv with other applications.
+
+                            - Example: A Simple Script to Change Playback Speed
+
+                            Here's a basic Lua script that changes the playback speed to 2x when you press the + key:
+
+                            function mp.event.keypress(event)
+                              if event.key == "+" then
+                                mp.set_property("speed", 2)
+                              end
+                            end
+
+                            Explanation:
+
+                            mp.event.keypress(event): This function is called whenever a key is pressed.
+
+                            event.key == "+": Checks if the pressed key is the + key.
+                            mp.set_property("speed", 2): Sets the playback speed to 2.
+                            Loading the Script:
+
+                    To load this script in mpv, use the load-script command:
+
+                    load-script my_script.lua
+
+                            Replace my_script.lua with the actual filename of your script.
+
+                    More Interesting Ideas for Lua Scripts ----
+
+                            - Custom hotkeys: Create custom keybindings for various actions, such as toggling subtitles, adjusting volume, or jumping to specific points in a video.
+                            - Automating tasks: Automate repetitive tasks, such as renaming files based on metadata or creating playlists from specific directories.
+                        - Integrating with other applications: Interact with other applications using Lua's capabilities. For example, you could control mpv from a custom GUI or integrate it with a music streaming service.
+                        - Customizing the interface: Create custom overlays, skins, or themes to personalize your mpv experience.
+                        - Adding new features: Implement new features that aren't built into mpv by default, such as advanced subtitle options or custom video filters.
+
+                    Additional Tips ----
+
+                            - Explore the mpv API: The mpv API provides a wide range of functions and properties that you can use in your scripts.
+                            - Use a linter: A Lua linter can help you identify errors and improve your code quality.
+                            - Test your scripts thoroughly: Make sure your scripts work as expected before using them regularly.
+                            - By experimenting with Lua scripts, you can unlock the full potential of mpv and create a customized media player experience that suits your needs.
+
+                    - Let's say I wanted to play a certain video file cropped to certain dimensions.
+
+                            There are a few ways to crop a video file in mpv:
+
+                            1. Using the crop option:
+
+                            You can use the crop option to specify the desired dimensions for the cropped video. For example, to crop a video to 800x600 pixels, you would use:
+
+                            mpv --crop=800:600 file.mp4
+
+                            You can also specify the starting position for the crop using the x and y parameters. For example, to crop a video starting from the top-left corner:
+
+                            mpv --crop=800:600:0:0 file.mp4
+
+                            - 2. Using the geometry option:
+
+                            The geometry option allows you to specify the size and position of the video within the display window. You can use it to crop the video by setting the width and height to the desired dimensions and adjusting the x and y coordinates to position the cropped area.
+
+                            For example, to crop a video to 800x600 pixels starting from the top-left corner:
+
+                    mpv --geometry=800x600+0+0 file.mp4
+
+                            - 3. Using the scale option:
+
+                            The scale option can be used to scale the video to a specific size. While it doesn't directly crop the video, you can use it in conjunction with the geometry option to achieve a similar effect.
+
+                            For example, to scale the video to 800x600 pixels and then crop it to fit the display:
+
+                            mpv --scale=800:600 --geometry=800x600+0+0 file.mp4
+                            Additional notes:
+
+                            - The crop and geometry options can be combined to achieve more complex cropping effects.
+                            - You can use the --video-out-aspect option to specify the aspect ratio of the output video. This can be useful for maintaining the original aspect ratio when cropping.
+
+                            By experimenting with these options, you can find the best way to crop your video files to your desired specifications.
 
 
-                                            There are a few ways to crop a video file in mpv:
+                    - Could I use teal and fennel when I develop my Lua-scripts for mpv?
 
-                                            1. Using the crop option:
+                            Yes, you can definitely use Lua Teal and Fennel to develop mpv scripts. Both languages offer unique advantages and can be a great choice for writing mpv scripts.
 
-                                            You can use the crop option to specify the desired dimensions for the cropped video. For example, to crop a video to 800x600 pixels, you would use:
+                            - Lua Teal:
 
-                                            mpv --crop=800:600 file.mp4
-                                            You can also specify the starting position for the crop using the x and y parameters. For example, to crop a video starting from the top-left corner:
+                            - Strong typing: Provides static type checking, which can help catch errors early in the development process.
+                            - Improved performance: Can potentially offer better performance than standard Lua, especially for large or complex scripts.
+                            - Interoperability: Can be used seamlessly with existing Lua code.
 
-                                            mpv --crop=800:600:0:0 file.mp4
-                                            2. Using the geometry option:
+                            - Fennel:
 
-                                            The geometry option allows you to specify the size and position of the video within the display window. You can use it to crop the video by setting the width and height to the desired dimensions and adjusting the x and y coordinates to position the cropped area.
+                            - Lisp syntax: Offers a functional programming paradigm with a Lisp-like syntax, which can be appealing to developers familiar with Lisp or other functional languages.
+                            - Macros: Provides powerful macro capabilities for code generation and metaprogramming.
+                            - Interoperability: Can be used seamlessly with existing Lua code.
+                            To use Lua Teal or Fennel with mpv ----
 
-                                            For example, to crop a video to 800x600 pixels starting from the top-left corner:
+                            - Install the necessary tools: Ensure you have Lua Teal or Fennel installed on your system, along with any required dependencies.
+                            - Write your script: Create your mpv script using Lua Teal or Fennel syntax.
+                            - Load the script: Use the load-script command in the mpv console to load your script.
 
-                                            mpv --geometry=800x600+0+0 file.mp4
-                                            3. Using the scale option:
+                            Additional tips:
 
-                                            The scale option can be used to scale the video to a specific size. While it doesn't directly crop the video, you can use it in conjunction with the geometry option to achieve a similar effect.
+                            - Refer to the documentation: Consult the documentation for Lua Teal or Fennel to learn about specific syntax, features, and best practices.
+                            - Use a linter: A linter can help you identify errors and improve code quality.
+                            - Experiment and explore: Don't be afraid to try different approaches and experiment with the features of Lua Teal or Fennel. '
 
-                                            For example, to scale the video to 800x600 pixels and then crop it to fit the display:
-
-                                            mpv --scale=800:600 --geometry=800x600+0+0 file.mp4
-                                            Additional notes:
-
-                                            The crop and geometry options can be combined to achieve more complex cropping effects.
-                                            You can use the --video-out-aspect option to specify the aspect ratio of the output video. This can be useful for maintaining the original aspect ratio when cropping.
-                                            By experimenting with these options, you can find the best way to crop your video files to your desired specifications.
-
-
-                                            Could I use teal and fennel when I develop my Lua-scripts for mpv?
-
-
-                                            Absolutely! You can use any color scheme you prefer when developing your Lua scripts for mpv. Teal and fennel would be a great combination, especially if they provide good contrast and readability.
-
-                                            Here are a few tips for choosing a color scheme:
-
-                                            Consider your preferences: Choose colors that you find comfortable and aesthetically pleasing.
-                                            Prioritize readability: Make sure the colors you choose provide good contrast and are easy to read.
-                                            Use a color scheme editor: There are many online tools and applications that can help you create and customize color schemes.
-                                            Ultimately, the best color scheme for you will depend on your personal preferences and the specific needs of your project.
-
-
-                                            Ah, no I meant Lua teal - the typed version of Lua, and Fennel - the Lisp syntax for Lua.
-
-
-                                            Ah, I see! You're asking about using Lua Teal and Fennel for mpv scripts.
-
-                                            Yes, you can definitely use Lua Teal and Fennel to develop mpv scripts. Both languages offer unique advantages and can be a great choice for writing mpv scripts.
-
-                                            Lua Teal:
-
-                                            Strong typing: Provides static type checking, which can help catch errors early in the development process.
-                                            Improved performance: Can potentially offer better performance than standard Lua, especially for large or complex scripts.
-                                            Interoperability: Can be used seamlessly with existing Lua code.
-                                            Fennel:
-
-                                            Lisp syntax: Offers a functional programming paradigm with a Lisp-like syntax, which can be appealing to developers familiar with Lisp or other functional languages.
-                                            Macros: Provides powerful macro capabilities for code generation and metaprogramming.
-                                            Interoperability: Can be used seamlessly with existing Lua code.
-                                            To use Lua Teal or Fennel with mpv:
-
-                                            Install the necessary tools: Ensure you have Lua Teal or Fennel installed on your system, along with any required dependencies.
-                                            Write your script: Create your mpv script using Lua Teal or Fennel syntax.
-                                            Load the script: Use the load-script command in the mpv console to load your script.
-                                            Additional tips:
-
-                                            Refer to the documentation: Consult the documentation for Lua Teal or Fennel to learn about specific syntax, features, and best practices.
-                                            Use a linter: A linter can help you identify errors and improve code quality.
-                                            Experiment and explore: Don't be afraid to try different approaches and experiment with the features of Lua Teal or Fennel.
-                                            By leveraging the power of Lua Teal or Fennel, you can create even more sophisticated and efficient mpv scripts.
+                            By leveraging the power of Lua Teal or Fennel, you can create even more sophisticated and efficient mpv scripts.
         ======
         Player Controls ----  ____
                             .
-                            play previous / next in playlist  < / > | Ent  next/prev(multimedia)
+                play next/prev. in playlist  Ent / <  next/prev(multimedia)
                             pause/play  p | Space  play(multimedia)
                             pause + go to next / prev. frame  . / ,  ` (gs-v)
-                            fullscreen / exit fullscreen  f / Esc
+                fullscreen / exit fullscreen  f / Esc
                                 force mpv-win. on top of other win.s  T
-                            display progress-bar  o | P
-                            print info/details of current file  i | I
+                                .
+                    display progress-bar  o | P
+                    print info/details of current file  i | I
                             stop file + exit player  q
-                            stop file, save playback position + exit player  Q
+                            .
+                    stop file, save playback-pos. + exit player  Q
                             --
-                            go to beg. of next / prev. chapter  pgup / pgdn
-                            go back / forw. 5 seconds  left / right
-                            go back / forw. 10 seconds  mwh-roll up/down
-                            go back / forw. 1 minute  down / up
-                            go back / forw. 10 minutes  s-PgUp / s-PgDn
-        Subtitle Manipulation ----
+                            go to beg. of next/prev. chapter  pgup/pgdn
+        Subtitle-Manipulation ----
                             .
-                            go to next / previous frame with subtitles  c-right / c-left
-                            display / hide subtitles for curr. playing media  v
-                                Shift + j   Select the previous subtitle file available.
-                                j   Select the next subtitle file available.
-                                Ctrl + Shift + Left  Synchronize the subtitle with the previous frame.
-                                Ctrl + Shift + Right    Synchronize the subtitle with the next frame.
-                                z   Increase the subtitle delay by 100 milliseconds.
-                                Shift + Z   Decrease the subtitle delay by 100 milliseconds.
-                                Shift + G   Increase the subtitle font by 10%.
-                                Shift + F   Decrease the subtitle font by 10%.
-                                r   Shift the subtitle placement in the video upwards.
-                            s-r
-                                Shift the subtitle placement in the video downwards.
-                                    U   Switch the currently active subtitle to a compatible SubStation Alpha format.
+                        go to next/prev. frame with subtitles  c-right / c-left
+                    display / hide subtitles for curr. playing media  v
+                                j / J   Select next/prev. avail. subtitle-file
+                                cs-right / cs-left    Synchronize subtitle with next/prev. frame
+                                z / Z   Increase/Decrease subtitle delay (100 ms)
+                                G / F   Increase/Decrease subtitle font (10%)
+                                r / R   Shift subtitle placement upwards/downwards
+                                    U   Switch currently active subtitle to a compatible SubStation Alpha format.
+                                    .
         Playback Controls ----
+                    vol. up/down  * | /  0 | 9  mwheel right | left
+                            audio mute  m
                             .
-                            volume up / down  * / '/'  0 / 9  mwheel right / left
-                                audio mute  m
-                            slow / speed up media playback by 10%  [ / ]
-                            halve / double current playback speed  { / }
-                            return media playback speed to 100%  Bs
+                slow / speed up playback by 10%  [ / ]
+                halve / double curr. playback-speed  { / }
+                playback-speed to 100%  Bs
                                 Shift + [   Drop the playback speed by 50%.
-                                        Shift + ]   Increase the playback speed by 50%.
-                                l
-                                    Mark the current position as a playback loop.
-                                s-l
+                                Shift + ]   Increase the playback speed by 50%.
+                    mark curr. pos. as playback loop  l
+                                Infinite Looping (file/playlist)  L
                                 s-`
-                                    Go through the available video tracks in the media file.
-                                        Shift + 3   Go through the available audio tracks in the media file.
-                                        .
-                                s
-                                    Take the current video frame and save it as a screenshot.
-                                S
-                                    Take a screenshot of the current frame and remove all subtitles.
-                                c-s
-                                    Take a screenshot of the current player window.
-                                c_+ / c_-
-                                    Increase / Decrease audio delay by 100 milliseconds.
+                                    Go through avail. video tracks in the media-file
+                                        Shift + 3   Go through avail. audio-tracks in the media file
+                                s  Take the current video frame and save it as a screenshot.
+                                S  Take screenshot of curr. frame and remove all subtitles.
+                                c-s  Take screenshot of curr. player-window
+                                c_+ / c_-  Increase / Decrease audio-delay by 100 ms
         Picture Controls ----
                             .
-                                    Shift + A   Force a different aspect ratio for the currently playing media.
+                        A   Force different aspect-ratio for curr. playing media.
                                     D   Toggle the realtime video deinterlacer.
-                                    1   Decrease the contrast of the video.
-                                    2   Increase the contrast of the video.
-                                    3   Decrease the brightness of the video.
-                                    4   Increase the brightness of the video.
-                                    5   Decrease the gamma of the video.
-                                    6   Increase the gamma of the video.
-                                    7   Decrease the saturation of the video.
-                                    8   Increase the saturation of the video.
-                                    Ctrl + H    Enable Hardware Decoding Support.
-                            s-w
-                                Increase the picture cropping for the currently playing media.
-                                    W   Decrease the picture cropping for the currently playing media.
-                                    Alt + Up Arrow  Move the picture in the window upwards.
-                                    Alt + Down Arrow    Move the picture in the window downwards.
-                                    Alt + Left Arrow    Move the picture in the window leftwards.
-                                    Alt + Right Arrow   Move the picture in the window rightwards.
-                                    Alt +   Zoom into the currently playing media.
-                                    Alt -   Zoom out of the currently playing media.
-                                    Alt + Backspace Restore the original position and zoom of the picture.
+                                    .
+                        Contrast: increase/decrease  2 / 1
+                        Brightness: increase/decrease  4 / 3
+                        Gamma: increase/decrease  6 / 5
+                        Saturation: increase/decrease  8 / 7
+                                    H    Enable Hardware-Decoding Support.
+                                    .
+                    Increase / Decrease picture-cropping for currently playing media  W / w
+                    Pan up/down/left/right  a-arrows  # Move picture in the window (=in direction)
+                    Zoom in/out  a-plus/a-minus
+                    Reset Zoom  a-Bs
         Mouse-Specific Controls ----
                                 .
                             Right Click
                                 Toggle the pause function.
                                     Double Left Click   Turn the player into a fullscreen window.
-                                    Scroll Up   Go forward 10 seconds in the media.
-                                    Scroll Down Go backwards 10 seconds in the media.
                                 LEFT and RIGHT
                                        Seek backward/forward 5 seconds. Shift+arrow does a 1 second exact seek (see --hr-seek).
-
                                 UP and DOWN
                                        Seek forward/backward 1 minute. Shift+arrow does a 5 second exact seek (see --hr-seek).
-
                                 c-LEFT and c-RIGHT
                                        Seek  to  the previous/next subtitle. Subject to some restrictions and might not always work; see
                                        sub-seek command.
 
-                                cs-Left and cs-Right
-                                       Adjust subtitle delay so that the next or previous subtitle is displayed now. This is  especially
-                                       useful to sync subtitles to audio.
-                                Shift+BACKSPACE
-                                       Undo  the  last seek. This works only if the playlist entry was not changed.  Hitting it a second
-                                       time will go back to the original position.  See revert-seek command for details.
+                    cs-left / cs-right  Adjust subtitle delay so that the next/prev. subtitle is displayed now
+                        (very useful for syncing subtitles to audio)
+                        .
+                    MARK CURRENT POSITION  C Bs
+                            =will be used by Shift+BACKSPACE as revert position (once you seek back, the marker will be reset).
+                            You can use this to seek around in the file and then return to the exact position where you left off.
+                    UNDO LAST SEEK / "GO BACK TO LAST-MARK-POSITION"  s-Bs
+                        works only if the playlist entry was not changed.
+                        Hitting it a second time will go back to the original position. See revert-seek command for details.
 
-                                Shift+c-BACKSPACE
-                                       Mark the current position. This will then be used by Shift+BACKSPACE as revert position (once you
-                                       seek back, the marker will be reset). You can use this to seek around in the file and then return
-                                       to the exact position where you left off.
 
                                 q      Stop playing and quit.
+                    Q      Like q, but store the current playback position. Playing the same file later will resume at the old playback position if possible.
 
-                                Q      Like q, but store the current playback position. Playing the same file later will resume  at  the
-                                       old playback position if possible.
-
-                                _      Cycle through the available video tracks.
-
-                                #      Cycle through the available audio tracks.
-
-                                ESC    Exit fullscreen mode.
-
+                        _      Cycle through the available video tracks.
+                        #      Cycle through the available audio tracks.
                                 T      Toggle stay-on-top (see also --ontop).
-
-                                w and W
-                                       Decrease/increase pan-and-scan range. The e key does the same as W currently, but use is discour‐
-                                       aged.
-
-                                o (also P)
-                                       Show progression bar, elapsed time and total duration on the OSD.
-
-                                O      Toggle OSD states between normal and playback time/duration.
-
+                    o / P  Show progression bar, elapsed time and total duration on the OSD.
+                    O  Toggle OSD states between normal and playback time/duration.
                                 j and J
                                        Cycle through the available subtitles.
-
                                 z and Z
-                                       Adjust subtitle delay by +/- 0.1 seconds. The x key does the same as Z currently, but use is dis‐
-                                       couraged.
-
+                                       Adjust subtitle delay by +/- 0.1 seconds. The x key does the same as Z currently, but use is discouraged.
                                 l      Set/clear A-B loop points. See ab-loop command for details.
 
-                                L      Toggle infinite looping.
-                        c_+ / c_-
-                               Adjust audio delay (A/V sync) by +/- 0.1 seconds.
-                            G / F
-                                   Adjust subtitle font size by +/- 10%.
-
+                    L  Toggle infinite looping (for one file or playlists)
+                        c_+ / c_-  Adjust audio delay (A/V sync) by +/- 0.1 seconds.
+                            G / F  Adjust subtitle font size by +/- 10%.
                             u      Switch  between applying no style overrides to SSA/ASS subtitles, and overriding them almost completely with the normal subtitle style. See --sub-ass-override for more info.
 
                             V      Toggle subtitle VSFilter aspect compatibility mode. See --sub-ass-vsfilter-aspect-compat for more
                                    info.
-
-                            r and R
-                                   Move subtitles up/down. The t key does the same as R currently, but use is discouraged.
-
+                    r / R  Move subtitles up/down. The t key does the same as R currently, but use is discouraged.
                             s      Take a screenshot.
-
                             S      Take a screenshot, without subtitles. (Whether this works depends on VO driver support.)
-
-                            c-s  Take a screenshot, as the window shows it (with subtitles, OSD, and scaled video).
+                    c-s  Take a screenshot, as the window shows it (with subtitles, OSD, and scaled video).
 
                             PGUP and PGDWN
                                    Seek to the beginning of the previous/next chapter. In most cases, "previous" will actually go to the beginning of the current chapter; see --chapter-seek-threshold.
@@ -1060,76 +1002,40 @@ mpv  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
                                    Seek backward or forward by 10 minutes. (This used to be mapped to PGUP/PGDWN without Shift.)
 
                             d      Activate/deactivate deinterlacer.
-
-                            A      Cycle aspect ratio override.
-
-                            Ctrl h Toggle hardware video decoding on/off.
-
-                            a-LEFT, a-RIGHT, a-UP, a-DOWN
-                                   Move the video rectangle (panning).
-
-                            Alt + and Alt -
-                                   Combining Alt with the + or - keys changes video zoom.
-
-                            a-BACKSPACE
-                                   Reset the pan/zoom settings.
+                    A      Cycle aspect ratio override.
+                            Ctrl h  Toggle hardware video decoding on/off.
+                            .
         ---- ****
-        F8     Show the playlist and the current position in it (useful only if a UI window is used,  broken  on the terminal).
-                F9      Show the  list of audio and subtitle streams (useful only if a UI window  is used, broken on the terminal).
-                    del    Cycle OSC visibility between never / auto (mouse-move) / always
-        `      Show the console. (ESC closes it again. See CONSOLE.)
-                        i and I
-                               Show/toggle an overlay displaying statistics about the currently  playing  file  such  as  codec,
-                               framerate, number of dropped frames and so on. See STATS for more information.
+        F8  Show playlist + curr. position in it (only in UI-window)
+                F9  Show list of audio and subtitle streams (only in UI-window)
+                .
+        del  Cycle OSC visibility between never / auto (mouse-move) / always
+        SHOW/CLOSE CONSOLE  ` / Esc  (+See 'CONSOLE')
+                i / I  Show/toggle overlay displaying statistics about curr. playing file
+                    (codec, framerate, number of dropped frames etc. +See STATS for more information)
                             (The  following  keys  are  valid only when using a video output that supports the corresponding adjustment.)
+                            .
+                    a-0  Resize video window to half orig. size
+                    a-2  Resize video window to double orig. size
+                    a-1  Resize video window to orig. size
 
-                            1 and 2
-                                   Adjust contrast.
-
-                            3 and 4
-                                   Adjust brightness.
-
-                            5 and 6
-                                   Adjust gamma.
-
-                            7 and 8
-                                   Adjust saturation.
-                        a-0 (and command+0 on macOS)
-                               Resize video window to half its original size.
-                        a-1 (and command+1 on macOS)
-                               Resize video window to its original size.
-                        a-2 (and command+2 on macOS)
-                               Resize video window to double its original size.
-
-                            command + f (macOS only)
-                                   Toggle fullscreen (see also --fs).
-
-                            (The following keys are valid if you have a keyboard with multimedia keys.)
-
-                            PAUSE  Pause.
-
+                Multimedia-Keys ----
+                    Pause  # i.e. Sony wh-h900 Headphones 'play' **
                             STOP   Stop playing and quit.
-
-                            PREVIOUS and NEXT
+                            .
+                    PREVIOUS and NEXT  go to next video
                                    Seek backward/forward 1 minute.
-
-                            If you miss some older key bindings, look at etc/restore-old-bindings.conf in the mpv git repository.
+                        . If you miss some older key bindings, look at etc/restore-old-bindings.conf in the mpv git repository.
 
                             Mouse Control
                                 Left double click
                                        Toggle fullscreen on/off.
-
                                 Right click
                                        Toggle pause on/off.
 vlc
                 Action  Hotkey  Global
                 ----
-                Fullscreen
-                    f
-                Exit fullscreen
-                    Esc
-                Play/Pause
-                    Space...
+                fullscreen on/off  f
                 Pause only
                     Browser Stop
                 Play only

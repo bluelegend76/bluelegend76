@@ -14,9 +14,11 @@
 ## Reflists
 ### **Trinity/Gordian Knot-Suite to Empire-Refs(??)**  __=
   - [ ] "Can you tell/transmit to me why this/X is bunk?"
+## **TODO: Add ALL(!) Relevant At-Reflists to GitHub Config Repo**
 - **To Add**:
 ## - [ ] **cppDlang to refs(etc)-Dashboard**
 # WebDev / Mobile
+- [ ] Basic Sectioning-Up of 'Forums Stora' (=vim jumpmarks for the major sections of the book)
 
 ----
   **Add Greggrefs(pdf) + setup for GVim(windows)
@@ -27,7 +29,7 @@
 - [ ] Add FreeCommander accelerator-keys(!)
 
 ## lazarus.win.ps1:
-- [ ] **Auto-Linking of config-files to Windows-directories**  __=1
+- [ ] **Auto-Linking of config-files to Windows-directories**  __=2
 ## Vim on Windows (colors, spell, etc)
 - Files to link in:
   - (.bashrc)
@@ -50,7 +52,7 @@
 - CHANGE CONFIGS (ETC) TO USE GITHUB/BLUELEGEND76  __=
 - [ ] **Change Xfce window-handling key to Win-key**  __
 
-## Playlists.Perform  __=
+## Playlists.Perform  __=1
 Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]
   - Every Breath You Take, Smoke on the Water
