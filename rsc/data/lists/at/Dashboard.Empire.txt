@@ -4,6 +4,12 @@ vim:fdm=marker:
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
         N-teatern/Nationalsånger 2
 
+TODO ADD 1: STARTUPS 1 {{{
+  CBREFS 1(+)
+  LANG1-REFS 1 (+maybe LangDb1)
+  Scratch 1
+}}}
+
 Vanki LearnQna ----
   ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
 
