@@ -722,55 +722,55 @@ set foldmethod=indent foldlevel=5
                                             playlist-jump `playlist-filter "filename$.mp4"`
                                             By experimenting with different patterns, you can create powerful filters to find specific files in your playlist.
         mpv console ----
-                            - Could you give me a list of commands that can be run in the mpv console?
+                        - Could you give me a list of commands that can be run in the mpv console?
 
 
-                            A Comprehensive List of mpv Console Commands
-                            The mpv console offers a wide range of commands to control various aspects of media playback. Here's a comprehensive list, categorized by functionality:
-                    General Commands ----
-                            help: Displays help information.
-                            quit: Exits mpv.
-                            toggle-fullscreen: Toggles fullscreen mode.
-                        toggle-osd: Toggles the on-screen display (OSD).
-                    Playback Control ----
-                            play: Resumes playback.
-                            pause: Pauses playback.
-                            stop: Stops playback.
-                        seek <position>: Seeks to a specific position in the media (e.g., seek 120 to seek to 2 minutes).
-                        step <seconds>: Steps forward or backward by a specified number of seconds (e.g., step 10 to step forward 10 seconds).
-                        set speed <value>: Sets the playback speed (e.g., set speed 2 to double the speed).
-                            cycle-audio: Cycles through the available audio tracks.
-                            cycle-video: Cycles through the available video tracks (if any).
-                    Playlist Management ----
-                        add <file>: Adds a file to the playlist.
-                        delete <index>: Deletes a file from the playlist.
-                        clear: Clears the playlist.
-                        shuffle: Shuffles the playlist.
-                        playlist-jump <index>: Jumps to a specific position in the playlist.
-                        playlist-filter <filter>: Filters the playlist based on a pattern or regex.
-                    Video Settings ----
-                            set brightness <value>: Sets the brightness.
-                            set contrast <value>: Sets the contrast.
-                            set gamma <value>: Sets the gamma.
-                            set hue <value>: Sets the hue.
-                            set saturation <value>: Sets the saturation.
-                            set aspect <aspect>: Sets the aspect ratio.
-                    Audio Settings ----
-                            set volume <value>: Sets the volume.
-                        set audio-device <device>: Sets the audio output device.
-                            set audio-params <params>: Sets audio parameters (e.g., sample rate, channels).
-                    Subtitles and Chapters ----
-                            sub on: Turns subtitles on.
-                            sub off: Turns subtitles off.
-                            sub <index>: Selects a specific subtitle track.
-                        chapter <index>: Jumps to a specific chapter.
-                    Advanced Features ----
-                        osd-level <level>: Sets the OSD level (opacity).
-                        show-text <text>: Displays a text message on the screen.
-                        load-script <script>: Loads a Lua script.
-                        set property <property> <value>: Sets a specific property.
+                        A Comprehensive List of mpv Console Commands
+                        The mpv console offers a wide range of commands to control various aspects of media playback. Here's a comprehensive list, categorized by functionality:
+                General Commands ----
+                        help: Displays help information.
+                        quit: Exits mpv.
+                        toggle-fullscreen: Toggles fullscreen mode.
+                    toggle-osd: Toggles the on-screen display (OSD).
+                Playback Control ----
+                        play: Resumes playback.
+                        pause: Pauses playback.
+                        stop: Stops playback.
+                    seek <position>: Seeks to a specific position in the media (e.g., seek 120 to seek to 2 minutes).
+                    step <seconds>: Steps forward or backward by a specified number of seconds (e.g., step 10 to step forward 10 seconds).
+                    set speed <value>: Sets the playback speed (e.g., set speed 2 to double the speed).
+                        cycle-audio: Cycles through the available audio tracks.
+                        cycle-video: Cycles through the available video tracks (if any).
+                Playlist Management ----
+                    add <file>: Adds a file to the playlist.
+                    delete <index>: Deletes a file from the playlist.
+                    clear: Clears the playlist.
+                    shuffle: Shuffles the playlist.
+                    playlist-jump <index>: Jumps to a specific position in the playlist.
+                    playlist-filter <filter>: Filters the playlist based on a pattern or regex.
+                Video Settings ----
+                        set brightness <value>: Sets the brightness.
+                        set contrast <value>: Sets the contrast.
+                        set gamma <value>: Sets the gamma.
+                        set hue <value>: Sets the hue.
+                        set saturation <value>: Sets the saturation.
+                        set aspect <aspect>: Sets the aspect ratio.
+                Audio Settings ----
+                        set volume <value>: Sets the volume.
+                    set audio-device <device>: Sets the audio output device.
+                        set audio-params <params>: Sets audio parameters (e.g., sample rate, channels).
+                Subtitles and Chapters ----
+                        sub on: Turns subtitles on.
+                        sub off: Turns subtitles off.
+                        sub <index>: Selects a specific subtitle track.
+                    chapter <index>: Jumps to a specific chapter.
+                Advanced Features ----
+                    osd-level <level>: Sets the OSD level (opacity).
+                    show-text <text>: Displays a text message on the screen.
+                    load-script <script>: Loads a Lua script.
+                    set property <property> <value>: Sets a specific property.
 
-                            This is just a partial list of the available commands. For more detailed information and a complete list, you can refer to the 'mpv documentation' or use the 'help-command' within the mpv console itself.
+                        This is just a partial list of the available commands. For more detailed information and a complete list, you can refer to the 'mpv documentation' or use the 'help-command' within the mpv console itself.
         Mpv Lua ----
                             Could you give me an example of a Lua script that could be run with load-script (i.e. showing me some code), and give me some interesting ideas of things that could be done? It seems like an interesting and powerful feature.
 
@@ -857,7 +857,7 @@ set foldmethod=indent foldlevel=5
                             By experimenting with these options, you can find the best way to crop your video files to your desired specifications.
 
 
-                    - Could I use teal and fennel when I develop my Lua-scripts for mpv?
+                    - Could I use teal and fennel when I develop my Lua-scripts for mpv?  # +Moonscript[!!]
 
                             Yes, you can definitely use Lua Teal and Fennel to develop mpv scripts. Both languages offer unique advantages and can be a great choice for writing mpv scripts.
 
