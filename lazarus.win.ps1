@@ -34,6 +34,19 @@ choco install doxygen.install Graphviz -y
 choco install pandoc -y
 # choco install miktek -y
   choco install puppet-server -y
+# Start with 'wt'
+choco install microsoft-windows-terminal -y
+# https://windowsterminalthemes.dev/
+# Abernathy
+# Andromeda
+# Firefly Traditional
+# FishTank
+# Grey-green
+# TokyoNight
+# Twilight
+# UltraDark
+# UltraViolent
+# UnderTheSea
 
 choco upgrade git -y
 choco install vim -y

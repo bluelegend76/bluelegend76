@@ -4,6 +4,15 @@ __lang(1-4: de,fr,es,ru)
 ___block2(=word-categories)
 ___block3(=words)
 
+duolingo (etc):
+jp
+de, fr, (es), nl
+  kin, ar
+ukr, ru
+  welsh, irl
+  navajo
+    hindi, indon/malay, hawaii
+
 ___zzzz
     ## ~/Dropbox/bin/scripts/Alltodoist/hold/at.lang1-2.bash
     ## ~/Dropbox/bin/scripts/Alltodoist/hold/at.lang2-1.bash
