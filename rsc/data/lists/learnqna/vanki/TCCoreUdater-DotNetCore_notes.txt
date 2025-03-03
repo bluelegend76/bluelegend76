@@ -1,5 +1,7 @@
 vim:fdm=marker:sw=2:syn=:
 __
+___ZZZZ
+___Gemini
 
 @b(ump):   3yyp}ddzc3-   #copy last q&a-post + bump i-number 1
 @s(plit):  o----yypO         #split (=put ---- + blank line + ----)
@@ -62,12 +64,14 @@ Installing Spectre Console into C# project
     (för då har jag specat och vet vad den ska göra, även om den inte gör det just nu)
     --
     mpv --start=00:13:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:13:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     }}}
 API-metoderna(?), specifikt Install: "Vi har en installer-fil nånstans på vår dator. Vi ska få programmet att hämta filen, och starta den." Att göra detta + starta och köra filen gör vi inte i Controllern, för att ___
 {{{
-    i Controllern gör vi bara (t.ex.) validering mm
+    i Controllern gör vi bara (t.ex.) validering o.likn.
     --
     mpv --start=00:15:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:15:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     [och next point|mark: ca 30s +]
     }}}
 Ang. valideringen i API-controllern(??)
@@ -76,6 +80,7 @@ Ang. valideringen i API-controllern(??)
     Får uppenbarligen inte vara tomma strängar (t.ex.)
     --
     mpv --start=00:16:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:16:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     }}}
 Skriva kod för om strängarna är tomma
 {{{
@@ -86,8 +91,9 @@ Skriva kod för om strängarna är tomma
       return this.BadRequest();
     --
     mpv --start=00:17:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:17:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     }}}
-TIPS: FÅ FÖRSLAG FÖR ATT ÄNDRA FELAKTIG SIGNATUR ETC (=METODEN SATT TILL VOID, MEN SKA UPPENBARLIGEN RETURNERA NÅGOT
+TIPS: FÅ FÖRSLAG FÖR ATT ÄNDRA FELAKTIG SIGNATUR ETC (=METODEN SATT TILL VOID, MEN SKA UPPENBARLIGEN RETURNERA NÅGOT)
 {{{
     if (appId = string.Empty | appVersion = string.Empty) {
       return this.BadRequest();
@@ -97,6 +103,7 @@ TIPS: FÅ FÖRSLAG FÖR ATT ÄNDRA FELAKTIG SIGNATUR ETC (=METODEN SATT TILL VOI
     + a-Enter  (=får förslag på ändringar)
     --
     mpv --start=00:21:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:21:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     }}}
 Tips hur testa skapad kod steg för steg
 {{{
@@ -109,12 +116,14 @@ Tips hur testa skapad kod steg för steg
     proj. UpdaterWebAPI
     --
     mpv --start=00:24:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:24:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     }}}
 resultat (=retur-typ) att skicka ut för (åtminstone vissa) controller-funktioner
 {{{
     = ActionResult
     --
     mpv --start=00:27:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
+    mpv --start=00:27:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
     }}}
     ----
 
@@ -126,12 +135,14 @@ resultat (=retur-typ) att skicka ut för (åtminstone vissa) controller-funktion
     .vs
     --
     mpv --start=00:10:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:10:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
 tips kommando att köra för att kolla portar mm (=om någon är upptagen/blockerad)
 {{{
     netstat -a
     --
     mpv --start=00:14:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:14:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
 Testa saker i Swagger (=i WebUI:t)
 {{{
@@ -141,6 +152,7 @@ Testa saker i Swagger (=i WebUI:t)
     + Execute
     --
     mpv --start=00:15:55 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:15:55 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
 'Just nu gör 'InstallSelectedPackage' inte något, så vi ska anropa den underliggande klassen = "InstallerHelpern"'
 {{{
@@ -151,16 +163,17 @@ Testa saker i Swagger (=i WebUI:t)
     - ta hand om resultatet som skickas tillbaka
     + returnera ut resultatet i 'InstallSelectedPackage'
 
-    = Vi behöver skapa en instans högst upp i moderklassen
+    = Vi behöver skapa en instans högst upp i moder/inneslutande klassen
     (och lägga den i en privat medlems-variabel)
 
-    + Måste lägga till referenser med 'Add project-references'
+    + Måste lägga till referenser med 'Add project-references'  __ __
     = Högerklicka på UpdaterWebAPI > dependencies + välj
     + lägg till Services
 
     [[ = BEHÖVER GÖRAS NÄR DELAR I SOLUTION ÄR UPPDELADE I SEPARATA PROJEKT ]]
     --
     mpv --start=00:20:50 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:20:50 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
 Återställa saker som blivit fel i filer (!)
 {{{
@@ -169,6 +182,7 @@ Testa saker i Swagger (=i WebUI:t)
     [ tryck 'r' ]
     --
     mpv --start=00:35:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:35:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
 TIPS: 'Skrivit in variabel man ännu inte skapat' (='applicationInformation' som this.installationHandler.Install() vill ha) ****
 {{{
@@ -177,9 +191,10 @@ TIPS: 'Skrivit in variabel man ännu inte skapat' (='applicationInformation' som
 
     = Ställ pekaren på ännu ej skapade variabeln + a-Ent
     + 'Create local variable 'applicationInformation''
-    [+ kan behöva köra a-Enter igen (eftersom variabeln inte är instantierad]
+    [+ kan behöva köra a-Enter igen (eftersom variabeln inte är instantierad)]
     --
     mpv --start=00:43:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:43:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
 'Vad vi vill returnera från InstallSelectedPackage' (=installationResult etc) ****
 {{{
@@ -187,17 +202,22 @@ TIPS: 'Skrivit in variabel man ännu inte skapat' (='applicationInformation' som
     = för att indikera hur det har gått
 
     return this.NotFound(installationResult);
-    (= har vi hittat filen, gick nåt fel när vi försökte köra den, osv)
+    (= har vi hittat filen?, gick nåt fel när vi försökte köra den?, (osv))
     --
     mpv --start=00:51:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:51:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
-Gå tillbaks från 'Go to definition' / 'Go to implementation'  [=Rider etc]
+'Go to definition' / 'Go to implementation'  //  'Go back from ...' [=Rider etc]  __ __
 {{{
-    backbutton (mouse)
+    gd / a-End
 
-    gD / ????
+    gD / a-Home
+        # backbutton (mouse)
+
+    c-t  [vim: Pop Stack]
     --
     mpv --start=00:54:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
+    mpv --start=00:54:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
     }}}
     ----
 
@@ -205,14 +225,22 @@ Gå tillbaks från 'Go to definition' / 'Go to implementation'  [=Rider etc]
 Tips 'klicka runt och upptäcka' etc
 {{{
     (=kan även) Klicka på en typ (=för att komma till den och kunna inspektera vad som finns/ska finnas, etc)
+
+    [gd]
     --
     mpv --start=00:04:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:04:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 Generate Constructor (etc)  __ __
 {{{
     I Visual Studio  a-Ins
+
+    In Rider (as in VS) =Brings up the 'Generate'-menu
+
+    Targetting/Narrowing down alternatives:  Start writing/inputting text
     --
     mpv --start=00:05:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:05:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 Lägga till i konstruktorn mm  __
 {{{
@@ -221,13 +249,18 @@ Lägga till i konstruktorn mm  __
     ( = ?? throw new ArgumentNullException (....))
     --
     mpv --start=00:06:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:06:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
-GO TO INTERFACE ETC (???? =In Visual Studio)  [__ __]
+GO TO INTERFACE ETC ( =In Visual Studio)  [__ __]
 {{{
+    gd / c-t  # same as for classes etc
+
     Klicka lilla gröna pilen/symbolen längst ut till vänster i marginalen (=????)
     --
     mpv --start=00:08:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:08:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
+___ZZZZ
 'Istället för en installationHandler ska vi ha en InstallationService'
 {{{
     Lägg till ett interface
@@ -235,25 +268,30 @@ GO TO INTERFACE ETC (???? =In Visual Studio)  [__ __]
     + en publik klass InstallationService  (????)
     --
     mpv --start=00:14:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:14:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 6  [Lägga till logger + den ska ha samma typ som klassen den är i ....]
 {{{
     
     --
     mpv --start=00:20:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:20:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 7  Nu har vi skapat klassen och vill använda den
 {{{
     
     --
     mpv --start=00:24:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:24:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
-8  Name Refactoring
+8  Name Refactoring  ___Gemini
 {{{
     = Ändra namn på ett ställe
+
     + 'Pyramiden' = Apply name-refactoring
     --
     mpv --start=00:37:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:37:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
     ----
 
@@ -263,6 +301,7 @@ GO TO INTERFACE ETC (???? =In Visual Studio)  [__ __]
     
     --
     mpv --start=00:41:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:41:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 2  = 'Detta behöver göras även för andra Endpoints'
 {{{
@@ -270,33 +309,38 @@ GO TO INTERFACE ETC (???? =In Visual Studio)  [__ __]
     + Ev. ha PackageService (etc)
     --
     mpv --start=00:42:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:42:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 3  'Vi behöver göra detta. Är du med på vad vi ska göra?'  __ __ __
 {{{
     
     --
     mpv --start=00:53:40 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:53:40 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 4  'Vi behöver göra om _ till rätt typ'  __ __
 {{{
     
     --
     mpv --start=00:58:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=00:58:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 5  parse:a om _ till sträng  (__ __)  01:06:50 (ca)
 {{{
     
     --
     mpv --start=01:00:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=01:00:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 6
 {{{
     
     --
     mpv --start=01:00:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+    mpv --start=01:00:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     }}}
 
-01:06:00  'Use object initializer'
+01:06:00  'Use object initializer...'
 remove VS scrollbars
 skillnaden på 'init' och 'set' för properties (!!)
 01:12:00  Skifta över parsing till Controllern  (=är ju del av valideringen)

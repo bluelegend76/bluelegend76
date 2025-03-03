@@ -40,7 +40,7 @@ LangsDb.legacy ----
     mada, wareware (no), sore de
   }}}
 
-## 'Trinity Suite'
+## 'Gordian Knot/Trinity-Suite'
 ##   (belief and morality, models and theory, knowledge (and soundness))
 
 ../todo/MasterlistDownload-onedeepmans-online.txt
@@ -655,7 +655,7 @@ Docker + Kubernetes + Azure Devops + GithubActions
 Music With JavaScript *
 Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
-  Reason + PureScript  ___onroad=mabye
+  Reason + PureScript  ___onroad=maybye
 }}}
 office.Overview [2]  # write summary|overview {{{
   iPython(*)

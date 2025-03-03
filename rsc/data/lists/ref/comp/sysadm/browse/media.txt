@@ -887,7 +887,6 @@ set foldmethod=indent foldlevel=5
                             By leveraging the power of Lua Teal or Fennel, you can create even more sophisticated and efficient mpv scripts.
         ======
         Player Controls ----  ____
-                            .
                 play next/prev. in playlist  Ent / <  next/prev(multimedia)
                             pause/play  p | Space  play(multimedia)
                             pause + go to next / prev. frame  . / ,  ` (gs-v)

@@ -7,6 +7,7 @@ out  = tar inget invärde, ger bara ett utvärde
 namespace  = i den här _ måste alla klass- och typ-namn vara unika
    [+using  = slippa kvalificera med namnrymd.aaaaa.function()]
 
+
 DotNet CLI
             ~/Empire/Doks/Comp/lang/clangs/csharp/dotnet/dotnetcli.cheatsh.pdf
             sheatsh1 ----
@@ -274,7 +275,10 @@ DotNet CLI
                 DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX
                     Disables minor version roll forward. For more information, see Roll forward.
 Azure CLI (??)
-TeamViever (Live Share)  #Vnc
+                .
+                .
+  TeamViever (Live Share)  #Vnc
+Spectre Console
 Rider (JetBrains) Keymap
 ~/Empire/Doks/Comp/editor/Rider-shortc.pdf
                 Build solution  a_b Ent
@@ -570,20 +574,21 @@ Rider (JetBrains) Keymap
                         ca-l
   set bracing (K&R style)  = settings  (+indent style 2 2)
   braces style
-  new project in solution  = right-click solution (+select)
+  new project in solution  right-click solution (+select)
   cursor blinking off  Settings: editor > general > [ ] caret blinking
-  Reformat Code  vim-mode '=' / ca-l  ****
+  Reformat Code  (vim-mode) = / ca-l  ****
   Toggle Inlay Hints  a-h  #custom
-  sticky lines --> off
+  sticky lines  --> off
   --
   Set breakpoint
-  Run with Debug  s-f9
+  Run with Debug  s-f9  # TODO: REWORK FOR VS KEYB.SHORTCUT-SETTINGS[!]
     Step over  f8
   Step into  f7
     Step out of  s-f8
   Stop  c-f2
   Run  s-f10
 https://cheatography.com/franklioty/cheat-sheets/jetbrains-rider-keyboard-shortcuts/#downloads
+TODO: IMPORT DONE LIST RIDER KEYB.SHORTCUTS  __ __
 Rider Docs TOC
                     evince -p 1 ~/Empire/Doks/Comp/editor/Jetbrains/JetbrainsDocs/RiderToc.pdf &
                 Get started
