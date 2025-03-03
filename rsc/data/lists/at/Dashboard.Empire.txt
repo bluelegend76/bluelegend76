@@ -36,6 +36,9 @@ Langs1 Ref-lists ----  __
   // maybe add 'främord' etc
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
+  . {{{
+    mada, wareware (no), sore de
+  }}}
 
 ## 'Trinity Suite'
 ##   (belief and morality, models and theory, knowledge (and soundness))
@@ -631,6 +634,7 @@ TC CORE READTHROUGH + THE WIKI[!!]
 CLEAN UP NEW DOTNETCORE-DOKS
 C# DotNet Core MVC + Blazor  [+Avalonia]  Cs Funct 3
     Puppet Patterns(etc)
+    FuncPy  [___Renskriv]
 MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]
     JuPyter/Polyglot(?) Notebooks (etc)
 F# - TOCs + Concepts,  Fabulous
@@ -645,7 +649,6 @@ Bcb, Bluebash + PShell,  ASM 1 (+binalys)
 Docker + Kubernetes + Azure Devops + GithubActions
     Gremlin (+Neptune)
     Nushell
-FuncPy  [___Renskriv]
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
   ----  Anki Redone
     Arch Linux
@@ -672,7 +675,12 @@ F# [Overview and Concepts]  +Cloj.
 ____ __
 .     . {{{
 Reduce down rectangular file-block to gvim one-liner
-  @r: }-$F/c,}-$F.i}-V{:s/\.txt{A{VipJgv:s/[^ ],b ,e[^ ]//g
+  @r: 
+}-$F/c,}-$F.i}
+-V{
+:s/\.txt
+{
+A{VipJgv:s/[^ ],b ,e[^ ]//g
 }}}
 Vtouch-Vanki  '1.0-Refactor' (+Docs)
 
@@ -683,6 +691,7 @@ rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
 
 ~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
 ../todo/MasterlistDownload-onedeepmans-online.txt  # Win
+  # GitExtensions:  https://git-extensions-documentation.readthedocs.io/en/release-5.1/
 
 gvim `find ~/gdrive/rsc/Doks/taskuj/ -type f -name '*.txt' 2>/dev/null`
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
@@ -1166,7 +1175,8 @@ Insert line after:
         lines ending in  \.)\=  :  ?  !
         lines end w. \l, next starts w. \u
 Generate incremental bulletlists (1. 2. ..., a. b. ...)
-  temp: oImmo0`ov0"my  #pre: set reg. 'm' to '1. '  +  macro sets marker 'o'
+  temp: o
+Immo0`ov0"my  #pre: set reg. 'm' to '1. '  +  macro sets marker 'o'
 
 @i(nterweave)  #pull and merge lines fr. next textblock  to end of lines of curr. textblock
 @block-split   #separate line-ending textparts in curr. textblock  down to separ. textblock below(!!)

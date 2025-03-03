@@ -900,8 +900,7 @@ freecommander
                     c-k
             File: Delete
                 f8
-                File: Delete without basket
-                    s-f8
+        File: Delete without basket  s-f8
             File: Edit
                 f4
                 File: Edit new
@@ -1008,8 +1007,7 @@ freecommander
                 Folder: Make folder-set
                     a_d,m
                 Folder: My documents
-            Folder: New
-                f7
+        Folder: New  f7
             Folder: Open folder in other pane
                 Folder: Open folder in same pane
             Folder: Open left folder on the right
