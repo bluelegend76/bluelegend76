@@ -32,6 +32,7 @@ choco install azure-cli -y
 # Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 choco install doxygen.install Graphviz -y
 choco install pandoc -y
+# TODO: INCLUDE LINK FOR DOWNLOADING/INSTALLING MSKEYBCREATOR
 # choco install miktek -y
   choco install puppet-server -y
 # Start with 'wt'
