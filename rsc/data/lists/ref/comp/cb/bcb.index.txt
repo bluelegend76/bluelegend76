@@ -1,5 +1,5 @@
-set foldmethod=indent foldlevel=2
 vim:fdm=indent:fdl=2:
+set syn= fdm=indent fdl=2 guifont=* | colors ron
 
 META.PackMan: apt/aptitude/dpkg, pacman/yay, choco, nix  pip,  yum, yast, bsd
                 Install package
@@ -110,6 +110,11 @@ META.PackMan: apt/aptitude/dpkg, pacman/yay, choco, nix  pip,  yum, yast, bsd
 Bash2PShell
 META.Shell: bash, dash, termux, pshell, xonsh, nushell
 
+MS Windows Terminal
+___WindowsTerminal_Themes
+    ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+PShell
+----
 bcb (**(!))
             1. Beginning Bash
             1.1 Decoding the Prompt
@@ -692,8 +697,9 @@ bcb (**(!))
 
                 Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
+MS Windows Terminal ----
 Termux
-  start gvim comp/sysadm/Termux.Tags1.txt
+  ../ref/comp/sysadm/Termux.Tags1.txt
 SSH
 Tasker
 Vbox
@@ -3398,4 +3404,243 @@ Man: Index/Categories
                     remove_file_free
 ~/Empire/Doks/Comp/sysadm/lin/ref/lincmdref.list.pdf
 ~/Empire/Doks/Comp/sysadm/lin/ref/lincmds.de.pdf
+
+___WindowsTerminal_Themes
+{
+  "name": "Abernathy",
+  "black": "#000000",
+  "red": "#cd0000",
+  "green": "#00cd00",
+  "yellow": "#cdcd00",
+  "blue": "#1093f5",
+  "purple": "#cd00cd",
+  "cyan": "#00cdcd",
+  "white": "#faebd7",
+  "brightBlack": "#404040",
+  "brightRed": "#ff0000",
+  "brightGreen": "#00ff00",
+  "brightYellow": "#ffff00",
+  "brightBlue": "#11b5f6",
+  "brightPurple": "#ff00ff",
+  "brightCyan": "#00ffff",
+  "brightWhite": "#ffffff",
+  "background": "#111416",
+  "foreground": "#eeeeec",
+  "selectionBackground": "#eeeeec",
+  "cursorColor": "#bbbbbb"
+}
+
+{
+  "name": "Andromeda",
+  "black": "#000000",
+  "red": "#cd3131",
+  "green": "#05bc79",
+  "yellow": "#e5e512",
+  "blue": "#2472c8",
+  "purple": "#bc3fbc",
+  "cyan": "#0fa8cd",
+  "white": "#e5e5e5",
+  "brightBlack": "#666666",
+  "brightRed": "#cd3131",
+  "brightGreen": "#05bc79",
+  "brightYellow": "#e5e512",
+  "brightBlue": "#2472c8",
+  "brightPurple": "#bc3fbc",
+  "brightCyan": "#0fa8cd",
+  "brightWhite": "#e5e5e5",
+  "background": "#262a33",
+  "foreground": "#e5e5e5",
+  "selectionBackground": "#5a5c62",
+  "cursorColor": "#f8f8f0"
+}
+
+{
+  "name": "Firefly Traditional",
+  "black": "#000000",
+  "red": "#c23720",
+  "green": "#33bc26",
+  "yellow": "#afad24",
+  "blue": "#5a63ff",
+  "purple": "#d53ad2",
+  "cyan": "#33bbc7",
+  "white": "#cccccc",
+  "brightBlack": "#828282",
+  "brightRed": "#ff3b1e",
+  "brightGreen": "#2ee720",
+  "brightYellow": "#ecec16",
+  "brightBlue": "#838dff",
+  "brightPurple": "#ff5cfe",
+  "brightCyan": "#29f0f0",
+  "brightWhite": "#ebebeb",
+  "background": "#000000",
+  "foreground": "#f5f5f5",
+  "selectionBackground": "#cfeac6",
+  "cursorColor": "#00f900"
+}
+
+{
+  "name": "FishTank",
+  "black": "#03073c",
+  "red": "#c6004a",
+  "green": "#acf157",
+  "yellow": "#fecd5e",
+  "blue": "#525fb8",
+  "purple": "#986f82",
+  "cyan": "#968763",
+  "white": "#ecf0fc",
+  "brightBlack": "#6c5b30",
+  "brightRed": "#da4b8a",
+  "brightGreen": "#dbffa9",
+  "brightYellow": "#fee6a9",
+  "brightBlue": "#b2befa",
+  "brightPurple": "#fda5cd",
+  "brightCyan": "#a5bd86",
+  "brightWhite": "#f6ffec",
+  "background": "#232537",
+  "foreground": "#ecf0fe",
+  "selectionBackground": "#fcf7e9",
+  "cursorColor": "#fecd5e"
+}
+
+{
+  "name": "Grey-green",
+  "black": "#000000",
+  "red": "#fe1414",
+  "green": "#74ff00",
+  "yellow": "#f1ff01",
+  "blue": "#00deff",
+  "purple": "#ff00f0",
+  "cyan": "#00ffbc",
+  "white": "#ffffff",
+  "brightBlack": "#666666",
+  "brightRed": "#ff3939",
+  "brightGreen": "#00ff44",
+  "brightYellow": "#ffd100",
+  "brightBlue": "#00afff",
+  "brightPurple": "#ff008a",
+  "brightCyan": "#00ffd3",
+  "brightWhite": "#f5ecec",
+  "background": "#002a1a",
+  "foreground": "#ffffff",
+  "selectionBackground": "#517e50",
+  "cursorColor": "#fff400"
+}
+
+{
+  "name": "TokyoNight",
+  "black": "#363b54",
+  "red": "#f7768e",
+  "green": "#41a6b5",
+  "yellow": "#e0af68",
+  "blue": "#7aa2f7",
+  "purple": "#bb9af7",
+  "cyan": "#7dcfff",
+  "white": "#787c99",
+  "brightBlack": "#363b54",
+  "brightRed": "#f7768e",
+  "brightGreen": "#41a6b5",
+  "brightYellow": "#e0af68",
+  "brightBlue": "#7aa2f7",
+  "brightPurple": "#bb9af7",
+  "brightCyan": "#7dcfff",
+  "brightWhite": "#acb0d0",
+  "background": "#16161e",
+  "foreground": "#787c99"
+}
+
+{
+  "name": "Twilight",
+  "black": "#141414",
+  "red": "#c06d44",
+  "green": "#afb97a",
+  "yellow": "#c2a86c",
+  "blue": "#44474a",
+  "purple": "#b4be7c",
+  "cyan": "#778385",
+  "white": "#ffffd4",
+  "brightBlack": "#262626",
+  "brightRed": "#de7c4c",
+  "brightGreen": "#ccd88c",
+  "brightYellow": "#e2c47e",
+  "brightBlue": "#5a5e62",
+  "brightPurple": "#d0dc8e",
+  "brightCyan": "#8a989b",
+  "brightWhite": "#ffffd4",
+  "background": "#141414",
+  "foreground": "#ffffd4",
+  "selectionBackground": "#313131",
+  "cursorColor": "#ffffff"
+}
+
+{
+  "name": "UltraDark",
+  "black": "#000000",
+  "red": "#f07178",
+  "green": "#c3e88d",
+  "yellow": "#ffcb6b",
+  "blue": "#82aaff",
+  "purple": "#c792ea",
+  "cyan": "#89ddff",
+  "white": "#cccccc",
+  "brightBlack": "#333333",
+  "brightRed": "#f6a9ae",
+  "brightGreen": "#dbf1ba",
+  "brightYellow": "#ffdfa6",
+  "brightBlue": "#b4ccff",
+  "brightPurple": "#ddbdf2",
+  "brightCyan": "#b8eaff",
+  "brightWhite": "#ffffff",
+  "background": "#000000",
+  "foreground": "#ffffff",
+  "selectionBackground": "#222222",
+  "cursorColor": "#fefefe"
+}
+
+{
+  "name": "UltraViolent",
+  "black": "#242728",
+  "red": "#ff0090",
+  "green": "#b6ff00",
+  "yellow": "#fff727",
+  "blue": "#47e0fb",
+  "purple": "#d731ff",
+  "cyan": "#0effbb",
+  "white": "#e1e1e1",
+  "brightBlack": "#636667",
+  "brightRed": "#fb58b4",
+  "brightGreen": "#deff8c",
+  "brightYellow": "#ebe087",
+  "brightBlue": "#7fecff",
+  "brightPurple": "#e681ff",
+  "brightCyan": "#69fcd3",
+  "brightWhite": "#f9f9f5",
+  "background": "#242728",
+  "foreground": "#c1c1c1",
+  "selectionBackground": "#574c49",
+  "cursorColor": "#c1c1c1"
+}
+
+{
+  "name": "UnderTheSea",
+  "black": "#022026",
+  "red": "#b2302d",
+  "green": "#00a941",
+  "yellow": "#59819c",
+  "blue": "#459a86",
+  "purple": "#00599d",
+  "cyan": "#5d7e19",
+  "white": "#405555",
+  "brightBlack": "#384451",
+  "brightRed": "#ff4242",
+  "brightGreen": "#2aea5e",
+  "brightYellow": "#8ed4fd",
+  "brightBlue": "#61d5ba",
+  "brightPurple": "#1298ff",
+  "brightCyan": "#98d028",
+  "brightWhite": "#58fbd6",
+  "background": "#011116",
+  "foreground": "#ffffff",
+  "selectionBackground": "#415555",
+  "cursorColor": "#4afcd6"
+}
 

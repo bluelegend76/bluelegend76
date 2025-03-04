@@ -1,5 +1,8 @@
-set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
+set foldmethod=indent foldlevel=2
+set fdm=indent fdl=2 syn=cs guifont=* | colors ron
+set syn=
+set syn=cs
 ___zzzz
 
 ref  = skicka inte värdet, utan adressen
@@ -279,6 +282,7 @@ Azure CLI (??)
                 .
   TeamViever (Live Share)  #Vnc
 Spectre Console
+    ~/gdrive/SpectreConsole.tags1.txt
 Rider (JetBrains) Keymap
 ~/Empire/Doks/Comp/editor/Rider-shortc.pdf
                 Build solution  a_b Ent
@@ -589,7 +593,7 @@ Rider (JetBrains) Keymap
   Run  s-f10
 https://cheatography.com/franklioty/cheat-sheets/jetbrains-rider-keyboard-shortcuts/#downloads
 TODO: IMPORT DONE LIST RIDER KEYB.SHORTCUTS  __ __
-Rider Docs TOC
+Rider Docs TOC  https://www.jetbrains.com/help/rider/Introduction.html
                     evince -p 1 ~/Empire/Doks/Comp/editor/Jetbrains/JetbrainsDocs/RiderToc.pdf &
                 Get started
                   Installation guide
@@ -2167,7 +2171,7 @@ Rider Docs TOC
                       JetBrains Rider's network activity
 Rider+GitHub Copilot
             Trigger inline copilot-box/chat  cs-g
-            Open copilot chat  cs-c
+            ## Open copilot chat  cs-c
             show completions  a-\  # ga-å
             apply next line of completion  ca-right
             apply next word of completion  c-right

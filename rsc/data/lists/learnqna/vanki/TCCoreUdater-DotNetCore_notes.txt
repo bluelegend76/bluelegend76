@@ -1,4 +1,5 @@
 vim:fdm=marker:sw=2:syn=:
+set guifont=*
 __
 ___ZZZZ
 ___Gemini
@@ -297,6 +298,7 @@ mpv --start=00:16:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-2025022
     }}}
     ----
 
+mpv --start=01:30:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     ----
 1  'Så här ser en Controller ut (generellt)'  __ __
 {{{
@@ -341,6 +343,7 @@ mpv --start=00:16:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-2025022
     mpv --start=01:00:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     mpv --start=01:00:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
     }}}
+
 
 01:06:00  'Use object initializer...'
 remove VS scrollbars

@@ -1,5 +1,6 @@
-set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
+set foldmethod=indent foldlevel=2
+set fdm=indent fdl=2 syn=cs guifont=* | colors ron
 
 Godbolt
                 Scroll to source

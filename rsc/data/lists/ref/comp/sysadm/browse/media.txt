@@ -1,6 +1,6 @@
 vim: fdm=indent:fdl=2:
-set foldmethod=indent foldlevel=2
-set foldmethod=indent foldlevel=3
+set fdm=indent fdl=2
+set fdm=indent fdl=3
 __
 
 Microsoft Teams  @  TODO: SEE BUILTIN LIST
@@ -612,7 +612,7 @@ bluetooth-ctl
                     allow		Allow service UUIDs and block rest of them
 
 mpv (curr. >-levels: 5/6)  https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/  @@@(@)
-set foldmethod=indent foldlevel=5
+set fdm=indent fdl=5
                     https://github.com/mpv-player/mpv/blob/master/DOCS/man/console.rst  [including keyb-shortcuts**]  @@
                     https://github.com/mpv-player/mpv/blob/master/DOCS/man/lua.rst  @
                     Mpv Console(!!!!) + Scripting with Lua (+Moonscript, Teal, Fennel)

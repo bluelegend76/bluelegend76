@@ -1,4 +1,5 @@
 vim:fdm=marker:
+set fdm=marker guifont=* | colors ron
 ____
 __
 ScratchArea:General {{{
@@ -1114,7 +1115,11 @@ controllers brukar delas upp så att ____ {{{
 man anropar aldrig en controller från en annan controller, utan istället från/via ___ {{{
     en service (som plockar ut + omformaterar data för att sen kunna användas av en controller)
 }}}
+controllers utför ofta ___ {{{
+  validering (mm)
+}}}
 services är ansvariga för att ____ {{{
+    hämta data (=från databaser och andra källor)
     leverera data till en controller
 }}}
 services kan läggas till 'automatiskt'/laddas till controllers genom att ___ (=anges hur) {{{
@@ -1134,6 +1139,7 @@ Index|Install|Download--endpoints  =3 metoder i en controller / ...
 
 Alla controllers ärver (som standard) från ___ {{{
     ControllerBase
+
     exempel ...<ActionBase>
                   ^
                   +---------
@@ -1169,9 +1175,6 @@ Exempel C# 'INLINE TESTING': Testa och se hur Math.Pow funkar {{{
     [+run debug + step over]
     I så fall: Se till att referens till testramverket är inkluderat/angivet (+ta bort innan pushar upp)
 }}}
-
-
-tror _ tycker jag är seg, långsam och jobbar konstigt
 
 }}}
 install + use C#/F# in Jupyter(++)/Polyglot Notebooks {{{
@@ -1258,7 +1261,6 @@ Visual Studio Code with the Jupyter extension: VS Code provides excellent suppor
 
 }}}
 ../weblinks.txt
-
 
 gvim -p ../at/PROGR.cm.txt comp/lang/PROGRLANG.DB.ref.txt
 

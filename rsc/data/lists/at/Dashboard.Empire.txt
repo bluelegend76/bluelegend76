@@ -1,15 +1,29 @@
 vim:fdm=marker:
+set fdm=marker syn= guifont=* | colors ron
     Queen
     'För att bättre förstå om vad som influerat flera klassiska kompositörer'
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
         N-teatern/Nationalsånger 2
 
-TODO ADD 1: STARTUPS 1 {{{
-  CBREFS 1(+)
-  LANG1-REFS 1 (+maybe LangDb1)
-  Scratch 1
-}}}
+TODO ADD 1 = STARTUPS 1 {{{
+file/media:
+    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
+sysadm:  TODO: ADD WIN-TERMINAL
+    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
+markdown etc:
+    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
+[git, test/deploy]:
+    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
 
+System (incl. C#):
+    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
+
+LANG1-REFS 1: (+maybe LangDb1)
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+
+
+Scratch 1
+}}}
 Vanki LearnQna ----
   ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
 
@@ -42,6 +56,7 @@ Langs1 Ref-lists ----  __
   // maybe add 'främord' etc
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
+  [+charAlfa]
   . {{{
     mada, wareware (no), sore de
   }}}
@@ -1197,5 +1212,10 @@ Immo0`ov0"my  #pre: set reg. 'm' to '1. '  +  macro sets marker 'o'
       ~/dropbox-legacy/bla/frecord.bash
     ~/dropbox-legacy/scripts/ALLTODOIST/./ALLM-STÄD_dataadmin_RENSAFILERLAGRINGHÅRDDISKAR.bash
         ~/dropbox-legacy/scripts/ALLTODOIST/ALLM-STÄD_dataadmin_RENSAFILERLAGRINGHÅRDDISKAR.bash
+}}}
+
+
+Ant. Ch.J BUV {{{
+
 }}}
 
