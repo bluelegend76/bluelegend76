@@ -2,6 +2,7 @@ vim:fdm=marker:sw=2:syn=:
 set guifont=*
 __
 ___ZZZZ
+  mpv --start=00:14:50 ~/Videos/Peter-L-20250227_{102445,111046,132732}.mp4 &
 ___Gemini
 
 @b(ump):   3yyp}ddzc3-   #copy last q&a-post + bump i-number 1
@@ -372,5 +373,10 @@ Man pratar ofta om olika lager, vilket är generellt för alla API-calls. Det f�
 [+ En service ansvarar oftast för att tillhandahålla data (t.ex. hämta från en databas]
 
 Förfarande/Tillvägagångssätt: 'Utveckla i Lanes'
+    = följa ett API-anrop igenom alla lager
     mpv --start=00:12:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
+
+Förfarande/Tillvägagångssätt: 'Jobba per lager'
+    = Skissa ut t.ex. alla Controllers först
+    mpv --start=00:12:12 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
 

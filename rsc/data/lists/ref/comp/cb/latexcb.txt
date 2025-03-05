@@ -5,8 +5,88 @@ PowerPoint
 LOffice Impress
 
 Pandoc
-Reveal
-Impress
+Reveal.js
+                    .
+                    Absolutely! Here's a list of 15-20 Reveal.js features that can help you create visually engaging presentations, going beyond the basics:
+                    Core Features & Transitions ----
+                        Horizontal and Vertical Slides: Create complex layouts with nested slides.
+                        Slide Transitions: Use various transitions like fade, slide, convex, concave, and zoom.
+                        Background Transitions: Smoothly change backgrounds between slides.
+                        Fragments: Gradually reveal elements on a slide (e.g., bullet points, images).
+                    Visual Enhancements:
+                        Background Images and Videos: Use media to create immersive backgrounds.
+                        Parallax Backgrounds: Add depth and movement with parallax effects.
+                        Custom CSS Styling: Tailor the look and feel to match your branding.
+                        Themes: Use pre-built themes or create your own.
+                        Syntax Highlighting: Display code snippets with proper formatting.
+                        Interactive Elements: Embed iframes, videos, and interactive charts.
+                    Advanced Features & Interactivity:
+                        Speaker Notes: Add notes for yourself that are visible only in the speaker view.
+                        Markdown Support: Write content in Markdown for faster slide creation.
+                        Auto-Animate: Create smooth transitions between slides with matching elements.
+                        PDF Export: Generate a PDF version of your presentation.
+                        Remote Control: Control your presentation from a smartphone or tablet.
+                        Plugins: Extend functionality with plugins for features like charts, diagrams, and more.
+                        MathJax Support: Display mathematical formulas using LaTeX.
+                        Embedded HTML: You can embed any html into a slide.
+                        Slide numbering: Show the slide number.
+                        Animated gifs: Add animated gifs.
+                    These features can help you create presentations that are not only informative but also visually appealing and engaging. Remember to use these features thoughtfully and avoid overwhelming your audience with too many effects.
+                Markdown + Pandoc = Reveal
+                    Yes, absolutely! Using Markdown with Pandoc to create Reveal.js presentations is an excellent and highly recommended workflow. Here's why and how it benefits you:
+
+                    Advantages of Markdown + Pandoc:
+
+                        Content Focus:
+                            Markdown lets you concentrate on writing your content without getting bogged down in HTML markup.
+                            This is particularly useful for text-heavy presentations.
+                        Rapid Prototyping:
+                            You can quickly create a basic structure and outline of your presentation in Markdown.
+                            Pandoc handles the conversion to Reveal.js, saving you significant time.
+                        Clean and Readable Source:
+                            Markdown files are easy to read and maintain, even for complex presentations.
+                        Version Control Friendly:
+                            Markdown files are plain text, making them ideal for version control systems like Git.
+                            Tracking changes and collaborating becomes much easier.
+                        Flexibility:
+                            Pandoc is incredibly versatile and supports a wide range of input and output formats.
+                            This means you can easily convert your Markdown presentations to other formats if needed (e.g., PDF, HTML).
+                        Separation of Concerns:
+                            You separate content creation (Markdown) from presentation styling and layout (Reveal.js).
+                            This makes it easier to update content without affecting the presentation's design.
+
+                    Workflow Outline:
+
+                        Write in Markdown:
+                            Use Markdown syntax to create your slides, headings, lists, images, and other content.
+                            Use horizontal rules (---) to separate slides.
+                        Pandoc Conversion:
+                            Use the Pandoc command-line tool to convert your Markdown file to a Reveal.js HTML file.
+                            You can specify Reveal.js options and themes in the Pandoc command.
+                        Reveal.js Customization:
+                            Open the generated HTML file in WebStorm or your preferred editor.
+                            Add custom CSS, JavaScript, and Reveal.js features to enhance the presentation.
+                            Fine-tune transitions, backgrounds, and other visual elements.
+                        Iterate and Refine:
+                            Continue to refine your Markdown content and Reveal.js customizations until you're satisfied.
+
+                    Example Pandoc Command:
+                    Bash
+
+                    pandoc -t revealjs -s input.md -o output.html --variable revealjs-url=reveal.js
+
+                        input.md: Your Markdown file.
+                        output.html: The generated Reveal.js HTML file.
+                        --variable revealjs-url=reveal.js: This is important, it tells pandoc where to find the reveal.js files. You will have to download reveal.js, and place it in a location that pandoc can access, relative to the output.html file.
+
+                    Tips:
+
+                        Explore Pandoc's Reveal.js options to customize the conversion process.
+                        Use CSS to create a consistent and visually appealing theme.
+                        Leverage Reveal.js plugins to add advanced features.
+
+                    In conclusion, using Markdown with Pandoc provides a solid foundation for creating Reveal.js presentations. It streamlines the content creation process and allows you to focus on delivering a compelling message.
+Impress.js
 
 Emacs Org
   TODO: MAY WANT TO CONVERT LIST TO FEATURES

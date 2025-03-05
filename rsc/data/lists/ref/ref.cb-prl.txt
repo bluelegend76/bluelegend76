@@ -1071,6 +1071,461 @@ install MSI files from your C#
 applications.
 
 }}}
+Find file-info through reflection {{{
+
+Question: I was told by a colleague that there several, but especially one simple way of getting information about a file using C#. Specifically what I was looking for is if there's a standard way of getting the version number or name for a program. He mentioned something about 'using System.Assembly' or something like that. Could you give me some help on that one?
+
+Yes, your colleague was on the right track!  The System.Reflection namespace (which is part of the System namespace, so you'd use using System; and using System.Reflection;) provides the tools you need to get information about a file, including version numbers and other metadata.  Here's how you can do it, along with explanations and best practices:
+C#
+
+using System;
+using System.Diagnostics;
+using System.Reflection;
+
+public class FileInfoExample
+{
+    public static void Main(string[] args)
+    {
+        string filePath = @"C:\Path\To\Your\Executable.exe"; // Replace with your file path
+
+        try
+        {
+            // 1. Using FileVersionInfo (Recommended for executables):
+            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(filePath);
+
+            // Get version information
+            string version = fileVersionInfo.FileVersion; // Or fileVersionInfo.ProductVersion
+            string productName = fileVersionInfo.ProductName;
+            string companyName = fileVersionInfo.CompanyName;
+            string fileDescription = fileVersionInfo.FileDescription;
+
+            Console.WriteLine($"File Version: {version}");
+            Console.WriteLine($"Product Name: {productName}");
+            Console.WriteLine($"Company Name: {companyName}");
+            Console.WriteLine($"File Description: {fileDescription}");
+
+
+            // 2. Using Assembly (More general, for DLLs and EXEs):
+            Assembly assembly = Assembly.LoadFrom(filePath); // Or Assembly.LoadFile for more control
+            AssemblyName assemblyName = assembly.GetName();
+
+            //Get version information
+            Version assemblyVersion = assemblyName.Version;
+            string assemblyFullName = assembly.FullName;
+
+            Console.WriteLine($"Assembly Version: {assemblyVersion}");
+            Console.WriteLine($"Assembly Full Name: {assemblyFullName}");
+
+
+            // 3. Alternative: Using Assembly with GetEntryAssembly (for your *own* executable):
+            // If you want to get the version of the currently running application:
+            Assembly entryAssembly = Assembly.GetEntryAssembly();  // Only works for your own EXE
+            if (entryAssembly != null) // Check if it's not null (e.g., in a DLL loaded by another process, it would be null)
+            {
+                Version entryAssemblyVersion = entryAssembly.GetName().Version;
+                Console.WriteLine($"Entry Assembly Version: {entryAssemblyVersion}");
+            }
+
+
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+
+Explanation and Key Improvements:
+
+    FileVersionInfo (Recommended): For executable files (.exe), the FileVersionInfo class is the most reliable way to get version information. It reads the version resources embedded in the EXE. The FileVersion property is usually what you want, but ProductVersion might be more user-friendly in some cases.
+    Assembly (More General): The Assembly class is more general and can be used for both executables (.exe) and libraries (.dll). It loads the assembly (which contains the compiled code and metadata). You get version information from the AssemblyName property.
+    Assembly.LoadFrom vs. Assembly.LoadFile: LoadFrom is usually sufficient. LoadFile gives you more control over the loading context (useful in more complex scenarios).
+    Assembly.GetEntryAssembly(): This is a shortcut if you want the version of the currently running application. It won't work if your code is in a DLL loaded by another application. The example includes a check for null to handle this.
+    Error Handling: The try-catch block is crucial. File access can fail (file not found, permissions issues, etc.), and you should handle those gracefully.
+    Clearer Variable Names: Using names like fileVersionInfo and assemblyVersion makes the code more readable.
+    Using using statements: The using statements at the top make the code cleaner and avoid the need to fully qualify class names (e.g., System.Reflection.Assembly).
+
+Which method should you use?
+
+    For executables (.exe files), always prefer FileVersionInfo. It's designed specifically for this purpose and is more likely to give you the correct version information embedded in the file.
+    If you need to work with DLLs (.dll files) or if you need other assembly metadata (like the full name, public key, etc.), use the Assembly class.
+    If you need the version of your own running executable, Assembly.GetEntryAssembly() is convenient, but remember to check for null.
+
+This improved example provides a robust and clear way to get file information in C#.  Remember to replace the placeholder file path with the actual path to your file.
+
+}}}
+Avalonia {{{
+
+Absolutely. Let's contrast WinUI 3 with Avalonia, focusing on code snippets, using statements, NuGet packages, and .NET CLI commands.
+
+Avalonia Example:
+
+1. Code-Behind (C#):
+C#
+
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
+
+namespace MyAvaloniaApp
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+#if DEBUG
+            this.AttachDevTools();
+#endif
+            MyButton.Click += MyButton_Click; // Register click event
+        }
+
+        private void InitializeComponent()
+        {
+            AvaloniaXamlLoader.Load(this);
+        }
+
+        private void MyButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            MyTextBlock.Text = "Button clicked!";
+        }
+
+        // Example of data binding (in your code-behind or a ViewModel)
+        public string MyText { get; set; } = "Initial Text";
+    }
+}
+
+2. XAML (Avalonia XAML):
+XML
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.avaloniaui.net/design/2019/10"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MyAvaloniaApp.MainWindow"
+        Title="MyAvaloniaApp">
+
+    <StackPanel>
+        <Button x:Name="MyButton" Content="Click Me" />
+        <TextBlock x:Name="MyTextBlock" Text="{Binding MyText}" />
+    </StackPanel>
+</Window>
+
+3. NuGet Packages:
+
+    Avalonia: The core Avalonia package.
+    Avalonia.Desktop: For desktop support (Windows, macOS, Linux).
+    Avalonia.Diagnostics: For debugging tools (optional).
+    Avalonia.ReactiveUI (if you are using ReactiveUI)
+
+4. .NET CLI Commands:
+
+    Create a new Avalonia project:
+    Bash
+
+dotnet new avalonia.app --name MyAvaloniaApp --output MyAvaloniaApp
+
+Build the project:
+Bash
+
+dotnet build MyAvaloniaApp.sln
+dotnet build MyAvaloniaApp.csproj
+
+Clean the project:
+Bash
+
+dotnet clean MyAvaloniaApp.sln
+
+Run the project:
+Bash
+
+dotnet run --project MyAvaloniaApp
+
+Add a NuGet package:
+Bash
+
+dotnet add package Avalonia.ReactiveUI
+
+List installed NuGet packages:
+Bash
+
+dotnet list package
+
+Update NuGet packages:
+Bash
+
+dotnet update package
+
+Restore NuGet packages:
+Bash
+
+    dotnet restore MyAvaloniaApp.sln
+
+Comparison:
+
+    Cross-Platform:
+        Avalonia: Truly cross-platform, targeting Windows, macOS, Linux, and even web (via WebAssembly).
+        WinUI 3: Primarily Windows-focused, with some experimental support for other platforms.
+    XAML:
+        Avalonia: Uses its own XAML dialect, which is similar to WPF/UWP XAML but with some differences.
+        WinUI 3: Uses a more direct evolution of UWP XAML.
+    Development Experience:
+        Avalonia: Has a growing ecosystem and community. Hot reload and preview support are generally good.
+        WinUI 3: Heavily reliant on Visual Studio for the best development experience.
+    Performance:
+        Avalonia: Very performant, using a retained mode rendering engine.
+        WinUI 3: Native Windows performance, very fast on Windows.
+    NuGet Packages:
+        Avalonia: Uses standard NuGet packages.
+        WinUI 3: Uses standard NuGet packages, but also relies heavily on the Windows App SDK.
+    .NET CLI: Both use the standard .NET CLI commands.
+    Community:
+        Avalonia: Smaller but active community.
+        WinUI 3: Backed by Microsoft, with a large existing .NET community.
+    Learning Curve:
+        Avalonia: Relatively easy to learn for WPF/UWP developers.
+        WinUI 3: Also relatively easy for WPF/UWP developers, but requires familiarity with the Windows App SDK.
+
+Key Takeaways:
+
+    If cross-platform is your priority, Avalonia is a strong contender.
+    If you're exclusively targeting Windows and want native performance and tight integration with the Windows ecosystem, WinUI 3 is the better choice.
+    Avalonia is a good choice if you want to avoid heavy reliance on Visual Studio, while WinUI 3 is best developed inside of Visual Studio.
+    Avalonia's XAML is very similar to WPF/UWP XAML, so the transition is smooth.
+
+}}}
+'run as a service' {{{
+Could you explain to me 'run as a service' particularly when it comes to a Windows context? I think it may refer to having a program I create be run as a service, but I'm not completely sure on that last one. I would be pretty happy for you to add if there are any certain steps I would need to take to be able to run a program/utility I create (using C# and DotNet Core) to be run as a service on Windows?
+
+You're absolutely right! "Run as a service" in a Windows context means running a program in the background, independent of any user interaction or logged-in user session. This is essential for applications that need to perform tasks continuously or at scheduled intervals, without requiring a user to manually start them.
+
+Here's a breakdown:
+
+What "Run as a Service" Means:
+
+    Background Execution: Services run in the background, even when no user is logged in.
+    Automatic Startup: Services can be configured to start automatically when the operating system boots.
+    User Independence: Services operate independently of user sessions.
+    Privileged Access: Services can be configured to run with specific user accounts and permissions, allowing them to access system resources.
+    Service Control Manager (SCM): Windows manages services through the Service Control Manager. This system allows you to start, stop, pause, and configure services.
+
+Why Run a Program as a Service?
+
+    Continuous Tasks: Applications that need to monitor systems, process data, or perform other ongoing tasks.
+    Scheduled Tasks: Applications that need to execute tasks at specific times or intervals.
+    Server Applications: Web servers, database servers, and other server applications.
+    System Utilities: Applications that provide system-level functionality, such as logging, monitoring, or network management.
+
+Running a C# .NET Core Application as a Windows Service:
+
+Here's how you can create and run a C# .NET Core application as a Windows service:
+
+1. Create a Worker Service Project:
+
+    Use the .NET CLI or Visual Studio to create a Worker Service project.
+        .NET CLI:
+    Bash
+
+    dotnet new worker --name MyService
+
+        Visual Studio: Create a new project, select "Worker Service," and choose your desired options.
+
+2. Modify the Program.cs File:
+
+    The Program.cs file is where you configure the service.
+    Make sure you have the Microsoft.Extensions.Hosting.WindowsServices NuGet package installed.
+
+C#
+
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace MyService
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .UseWindowsService() // Enables running as a Windows service
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddHostedService<Worker>(); // Registers your worker class
+                })
+                .ConfigureLogging(logging =>
+                {
+                    logging.AddEventLog(); // adds event log logging.
+                });
+    }
+}
+
+3. Implement the Worker Class:
+
+    The Worker class contains the logic that your service will execute.
+
+C#
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace MyService
+{
+    public class Worker : BackgroundService
+    {
+        private readonly ILogger<Worker> _logger;
+
+        public Worker(ILogger<Worker> logger)
+        {
+            _logger = logger;
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                // Your service logic goes here.
+                await Task.Delay(1000, stoppingToken); // Example: Delay for 1 second
+            }
+        }
+    }
+}
+
+4. Publish and Install the Service:
+
+    Publish your application.
+        dotnet publish -c Release -r win-x64
+    Open an administrator command prompt.
+    Use the sc.exe command to create the service.
+        sc.exe create MyServiceName binPath="C:\path\to\MyService.exe"
+        Replace MyServiceName with your desired service name and C:\path\to\MyService.exe with the path to your published executable.
+    Start the service:
+        sc.exe start MyServiceName
+    Stop the service:
+        sc.exe stop MyServiceName
+    Delete the service:
+        sc.exe delete MyServiceName
+
+Key Points:
+
+    The UseWindowsService() method in Program.cs is crucial for enabling Windows service functionality.
+    The BackgroundService class provides a base class for long-running background tasks.
+    Use the ILogger interface for logging messages to the Windows Event Log or other logging providers.
+    Always test your service thoroughly in a development environment before deploying it to production.
+    Consider using installers like WiX for a better deployment experience.
+
+By following these steps, you can create and run your C# .NET Core applications as Windows services.
+}}}
+Verify files (C#) with Checksums {{{
+
+If I want/need to work with validating and/or generating checksums for files, and (as we have talked about before, in a C# environment, what libraries, classes and methods would be most apt or pertinent for this?
+
+You're right, let's delve into checksum validation and generation in C#. The .NET framework provides excellent built-in support for this, and you also have options for external libraries if needed.
+
+Built-in .NET Framework Options:
+
+The System.Security.Cryptography namespace is your primary resource for checksum operations.
+
+    Hash Algorithms:
+        The core of checksum generation is hash algorithms. These algorithms take input data and produce a fixed-size "hash" (the checksum).
+        Commonly used algorithms include:
+            MD5: MD5CryptoServiceProvider (Though considered cryptographically weak, it's still used for non-security-critical checksums).
+            SHA1: SHA1CryptoServiceProvider (Also considered weak for security, but may be used for legacy systems).
+            SHA256: SHA256CryptoServiceProvider or SHA256.Create() (Recommended for most cases).
+            SHA384: SHA384CryptoServiceProvider or SHA384.Create().
+            SHA512: SHA512CryptoServiceProvider or SHA512.Create().
+
+    Classes and Methods:
+        Each hash algorithm has a corresponding class (e.g., SHA256CryptoServiceProvider).
+        The general pattern is:
+            Create an instance of the hash algorithm class.
+            Use the ComputeHash() method to generate the hash from a byte array or stream.
+            Convert the resulting byte array to a hexadecimal string for easy representation.
+
+Example (SHA256 Checksum):
+C#
+
+using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+
+public class ChecksumHelper
+{
+    public static string CalculateSHA256(string filePath)
+    {
+        using (var sha256 = SHA256.Create())
+        {
+            using (var fileStream = File.OpenRead(filePath))
+            {
+                byte[] hashBytes = sha256.ComputeHash(fileStream);
+                return ByteArrayToHexString(hashBytes);
+            }
+        }
+    }
+
+    private static string ByteArrayToHexString(byte[] bytes)
+    {
+        StringBuilder stringBuilder = new StringBuilder(bytes.Length * 2);
+        foreach (byte b in bytes)
+        {
+            stringBuilder.AppendFormat("{0:x2}", b);
+        }
+        return stringBuilder.ToString();
+    }
+
+    public static bool ValidateSHA256(string filePath, string expectedChecksum)
+    {
+        string actualChecksum = CalculateSHA256(filePath);
+        return actualChecksum.Equals(expectedChecksum, StringComparison.OrdinalIgnoreCase);
+    }
+}
+
+Explanation:
+
+    CalculateSHA256(string filePath):
+        Creates an SHA256 instance.
+        Opens the file as a FileStream.
+        Computes the hash using sha256.ComputeHash(fileStream).
+        Converts the byte array hash to a hexadecimal string.
+    ByteArrayToHexString(byte[] bytes):
+        Helper method to format the byte array as a hexadecimal string.
+    ValidateSHA256(string filePath, string expectedChecksum):
+        Calculates the checksum of the file.
+        Compares the calculated checksum to the expected checksum.
+
+External Libraries (Less Common, but Useful in Specific Cases):
+
+    Bouncy Castle:
+        A powerful cryptography library that provides a wide range of algorithms, including those not available in the .NET framework.
+        Useful if you need specific or less common hash algorithms.
+    HashLibPlus:
+        Another external library that extends the hashing capabilities of .Net. It contains many different hashing algorithms.
+
+Choosing the Right Algorithm:
+
+    For general file integrity checks, SHA256 is a good balance of security and performance.
+    If you're dealing with very large files and performance is critical, consider SHA512.
+    If you are working with legacy systems, you may encounter MD5 or SHA1. But for new systems, avoid these.
+
+Important Considerations:
+
+    File Size: For very large files, consider reading the file in chunks to avoid loading the entire file into memory.
+    Error Handling: Implement robust error handling to handle file I/O exceptions and other potential issues.
+    Hexadecimal Representation: Always use a consistent hexadecimal representation for checksums (e.g., lowercase or uppercase).
+    Security: If you're using checksums for security purposes (e.g., verifying software downloads), ensure that you're using a strong hash algorithm and that the checksums are stored and transmitted securely.
+
+}}}
 
 Graph [hämta en fil-url] + Hämta 
     /me  #Graph
@@ -1758,4 +2213,577 @@ Note: This is just a small sample of Elixir data structures. I encourage you to 
 Remember, while syntax might differ slightly between languages, the core concepts of data structures often translate well. Use this overview as a stepping stone to further exploration and practical application!
 
 }}}
+
+
+ahotkey: smiley-codes (e.g. in Teams) {{{
+
+Quick question about Teams-chats: Is there a way (similarly as in Discord) to be able to write Emojis with shortcodes as in :smile: or the like, i.e. instead of having to click on the emoji-icon and selecting the emoji by hand?
+
+Unfortunately, Microsoft Teams doesn't natively support emoji shortcodes like :smile: in the same way Discord does.  You have to use the emoji picker (clicking the emoji icon) or copy and paste emojis.
+
+There's no built-in setting or configuration to enable shortcodes.  It's a frequently requested feature, but Microsoft hasn't implemented it yet.
+
+Workarounds (Not Ideal):
+
+    Copy and Paste: You can copy emojis from other sources (like a website or emoji keyboard) and paste them into Teams. This isn't as convenient as shortcodes but is a workaround.
+
+    Third-party Apps (Use with Caution):  There might be some third-party apps or bots that claim to add this functionality. However, exercise extreme caution when using third-party apps with Teams, especially those that interact with your messages. Ensure they are reputable and from a trusted source, as they could potentially pose a security risk.  I can't recommend any specific ones as their availability and reliability can change.
+
+    Auto-correct (Limited): Teams' auto-correct feature might sometimes replace certain text combinations with emojis. For example, typing :) often turns into a smiley face.  However, this is very limited and doesn't cover a wide range of emojis.
+
+In short:  While shortcodes are a popular request, they are not currently a standard feature in Microsoft Teams.  The workarounds are not ideal, and using third-party apps should be done with caution.
+
+Is there a website or small service I can use for writing the shortcode/name for an emoji-character and get it translated to the emoji which can then be pasted into Teams? I.e. I could have an instance of Discord open, but that would mean I would receive notifications in the background.
+
+You're looking for a simple emoji shortcode-to-emoji translator that you can use without the overhead of a full application like Discord.  Here are a few options and approaches you could take:
+
+    Online Emoji Keyboard with Search: Many websites provide searchable emoji keyboards.  You can type in a keyword (like "smile" or "thumbs up") and find the emoji you want.  Then, just copy and paste it into Teams.  A quick search for "emoji keyboard" will give you lots of options.  This is probably the quickest and easiest approach.
+
+    Text Replacement Tool/Script (Advanced): If you're comfortable with a little bit of setup, you could create a simple text replacement tool or script.  This would allow you to type shortcodes and have them automatically replaced with emojis.  Here's a basic idea:
+
+        JavaScript (Browser-based): You could create a small HTML page with a text area.  As you type, JavaScript could listen for specific shortcodes and replace them with the corresponding emoji.  This would only work in the browser where you have the page open.
+
+        AutoHotkey (Windows): If you're on Windows, AutoHotkey is a powerful scripting tool that can automate text replacement.  You could define hotkeys or text triggers that would replace your shortcodes with emojis system-wide.
+
+        Other scripting languages: Similar tools exist for other operating systems.
+
+    Dedicated Emoji Shortcode Website (Ideal but Rare):  While I couldn't find a readily available, dedicated website specifically for emoji shortcode translation, this would be the ideal solution.  It would be a simple webpage with a text input where you type the shortcode and it instantly displays the emoji.  If you have some web development skills, this could be a fun little project to create!
+
+Example (Conceptual JavaScript):
+JavaScript
+
+const shortcodes = {
+  ":smile:": "😊",
+  ":thumbsup:": "👍",
+  ":heart:": "❤️"
+};
+
+const textarea = document.getElementById("myTextarea");
+
+textarea.addEventListener("input", function() {
+  let text = textarea.value;
+  for (const code in shortcodes) {
+    text = text.replace(code, shortcodes[code]);
+  }
+  textarea.value = text;
+});
+
+This is a very basic example, but it shows the general idea.  You would need to expand it to handle more shortcodes and potentially improve the replacement logic.
+
+For most users, using an online emoji keyboard with search will probably be the most practical solution.  If you need something more automated, a text replacement tool or script might be worth exploring.
+
+The autohotkey solution seems attractive to me, especially if it can replace the shortcode names for me system-wide with the emoji, i.e. if I had that script running or installed, it seems like (at least from your description) that I could actually use that to simulate that Teams had a emoji shortcodes-parser installed.
+
+You're absolutely right. AutoHotkey is a great choice for this because it can work system-wide.  With a well-crafted AutoHotkey script, you can indeed simulate emoji shortcodes in almost any application, including Microsoft Teams.
+
+Here's a basic AutoHotkey script to get you started:
+AutoHotkey
+
+::smile::😊
+::thumbsup::👍
+::heart::❤️
+::joy::😂
+::winking::😉
+::blush::😊
+::unamused::😒
+::angry::😠
+::cry::😢
+::sleepy::😴
+; Add more shortcodes as needed
+
+How to Use:
+
+    Install AutoHotkey: If you don't have it already, download and install AutoHotkey from https://www.autohotkey.com/.
+
+    Create a Script: Save the code above as a .ahk file (e.g., emoji_shortcodes.ahk).
+
+    Run the Script: Double-click the .ahk file to run the script.  You should see a small green "H" icon in your system tray (notification area).
+
+    Test: Open Microsoft Teams (or any other application) and type :smile:.  As soon as you type the closing colon, AutoHotkey should replace it with the 😊 emoji.
+
+Explanation:
+
+    ::shortcode::emoji: This is the basic syntax for AutoHotkey's text replacement.  When you type the shortcode (e.g., :smile:), AutoHotkey automatically replaces it with the emoji.
+
+    Adding More Emojis: Just add more lines to the script following the same format.  You can find lists of emoji shortcodes online or create your own.  Make sure the shortcodes don't conflict with anything else you type regularly.
+
+    Unicode Support: AutoHotkey handles Unicode characters well, so you can directly use emojis in your script.
+
+    Running on Startup: To have the script run automatically when you start your computer, you can create a shortcut to the .ahk file and place it in your Startup folder.
+
+Important Considerations:
+
+    Shortcode Collisions: Be mindful of potential conflicts.  If you use a shortcode that's also used in regular text, it will be replaced with the emoji.  Using longer or more unique shortcodes (e.g., ::my_smile:: instead of ::smile::) can help avoid this.
+
+    Finding Emoji Unicode: You can find the Unicode for emojis on websites like https://emojipedia.org/. Copy the emoji and paste it directly into your AutoHotkey script.
+
+    Script Organization: As your list of shortcodes grows, consider organizing your script into sections or using a more structured approach for easier management.
+
+This AutoHotkey solution is probably the closest you'll get to having native emoji shortcode support in Teams without relying on external services or risky third-party apps.  It's a powerful and flexible way to customize your typing experience.
+
+Would there also be a way of only running or starting that autohotkey-script only for certain apps like Teams, thereby obviating the need to be constantly vigilant about using the particular hotcodes in other apps?
+
+Yes, absolutely! You can configure your AutoHotkey script to only activate in specific applications, like Microsoft Teams. This is a crucial step to avoid unintended emoji replacements in other programs. Here's how you can do it:
+AutoHotkey
+
+#IfWinActive ahk_exe Teams.exe  ; Or the window title, see below
+
+::smile::😊
+::thumbsup::👍
+::heart::❤️
+; ... other shortcodes
+
+#IfWinNotActive ahk_exe Teams.exe ; Deactivates the above hotkeys when Teams is not active
+
+; You can have other hotkeys that are always active here
+
+^+n:: ; Example: Ctrl+Shift+N always opens a new note
+    SendInput, ^n
+return
+
+Explanation:
+
+    #IfWinActive ahk_exe Teams.exe: This directive tells AutoHotkey to only apply the subsequent hotkeys (the emoji shortcodes) when a window with the executable name Teams.exe is active.  This is the most reliable way to target a specific application.
+
+    #IfWinNotActive ahk_exe Teams.exe: This deactivates the hotkeys when the specified window is not active.  It's very important to include this, otherwise your shortcodes will work everywhere.
+
+    Finding the Executable Name (Teams.exe): The easiest way to find the executable name is:
+        Run the application (Teams in this case).
+        Right-click the AutoHotkey icon in the system tray (the green "H").
+        Select "Window Spy".
+        The Window Spy tool will show you information about the active window, including the "ahk_exe" value. This is what you need to put in the #IfWinActive directive.
+
+    Alternative: Using Window Title:  If for some reason the ahk_exe method doesn't work reliably, you can use the window title.  However, window titles can change, so this is generally less reliable.  You would use #IfWinActive Microsoft Teams (or whatever the exact window title is).  Use Window Spy to get the exact title.
+
+    Hotkeys outside the conditional block: Hotkeys defined outside the #IfWinActive block will be always active.  This is useful for general hotkeys that you want to work in all applications.  The example above shows Ctrl+Shift+N opening a new note regardless of which window is active.
+
+How it Works:
+
+AutoHotkey constantly monitors the active window. When it detects that the specified application (Teams.exe) is active, it enables the hotkeys defined within the #IfWinActive block.  When a different window becomes active, it disables those hotkeys.
+
+Example with Window Title (Less Reliable):
+AutoHotkey
+
+#IfWinActive Microsoft Teams ; Less reliable, as window titles can change
+
+::smile::😊
+; ... other shortcodes
+
+#IfWinNotActive Microsoft Teams
+
+; Always active hotkeys
+
+By using the #IfWinActive directive with the correct executable name, you can ensure that your emoji shortcodes only work within Microsoft Teams, preventing them from interfering with other applications.  This is a much cleaner and more practical solution.
+
+Is there a simple way to run the script from the PShell command-line, i.e. instead of having to click on it to activate it, and, is there also a way to shut the script down from PShell?
+
+Yes, you can absolutely control your AutoHotkey scripts from the PowerShell command line. This allows you to start and stop them programmatically, which is very useful for automation or integration with other scripts.
+
+Starting the Script from PowerShell:
+PowerShell
+
+& "C:\Program Files\AutoHotkey\AutoHotkey.exe" "C:\path\to\your\script.ahk"
+
+    Replace "C:\Program Files\AutoHotkey\AutoHotkey.exe" with the actual path to your AutoHotkey executable if it's different.
+    Replace "C:\path\to\your\script.ahk" with the full path to your AutoHotkey script file.
+
+Example:
+PowerShell
+
+& "C:\Program Files\AutoHotkey\AutoHotkey.exe" "C:\Users\YourName\Documents\emoji_shortcodes.ahk"
+
+Stopping the Script from PowerShell:
+
+This is a little more involved because you need to identify the process ID (PID) of the running AutoHotkey script.  Here's how you can do it:
+PowerShell
+
+# Get the PID of the AutoHotkey script
+$pid = Get-Process -Name "AutoHotkey" | Where-Object {$_.MainWindowTitle -like "*emoji_shortcodes.ahk*"} | Select-Object -ExpandProperty Id
+
+# Stop the process
+if ($pid) {
+  Stop-Process -Id $pid -Force
+  Write-Host "AutoHotkey script stopped."
+} else {
+  Write-Host "AutoHotkey script not found."
+}
+
+Explanation:
+
+    Get-Process -Name "AutoHotkey": This gets all running processes with the name "AutoHotkey".
+
+    Where-Object {$_.MainWindowTitle -like "*emoji_shortcodes.ahk*"}: This filters the processes to find the one whose window title contains the name of your script file.  This is how we identify the specific script we want to stop.  Important: Make sure your script's file name is unique enough to avoid accidentally stopping other AutoHotkey scripts.
+
+    Select-Object -ExpandProperty Id: This extracts the process ID (PID) of the matching process.
+
+    Stop-Process -Id $pid -Force: This stops the process with the given PID. The -Force parameter ensures the process is stopped even if it's unresponsive.
+
+    Error Handling: The if ($pid) block ensures that the script only tries to stop the process if it was found.  This prevents errors if the script is not running.
+
+Combining Start and Stop:
+
+You can easily combine these commands into a PowerShell script to start and stop your AutoHotkey script as needed.
+
+Example PowerShell Script (start_stop_emoji.ps1):
+PowerShell
+
+# Start the script
+& "C:\Program Files\AutoHotkey\AutoHotkey.exe" "C:\Users\YourName\Documents\emoji_shortcodes.ahk"
+
+# ... do something ...
+
+# Stop the script (later in your PowerShell script)
+$pid = Get-Process -Name "AutoHotkey" | Where-Object {$_.MainWindowTitle -like "*emoji_shortcodes.ahk*"} | Select-Object -ExpandProperty Id
+if ($pid) {
+  Stop-Process -Id $pid -Force
+  Write-Host "AutoHotkey script stopped."
+} else {
+  Write-Host "AutoHotkey script not found."
+}
+
+Now you can run this PowerShell script to start and stop your AutoHotkey script without manually clicking on the .ahk file.  This is much more flexible and allows you to integrate your emoji shortcodes into automated workflows.
+
+}}}
+Browserextension Search: blinking highlight {{{
+
+Quick question for an interesting little task I'd like to solve: Some times when I search on a web-page (using c-f, and possibly thereafter using c-g / cs-g to go to the next/previous match) the highlight can sometimes be tricky to see. The task that I would like to accomplish is to be able to push some other key-combination or running a script or something that makes the highlighted part blink, thereby making it easier to find. Are you with me so far?
+
+Yes, I understand perfectly! You want to create a way to make the currently highlighted search result on a webpage blink, to make it more visually prominent. This is a clever idea for improving the visibility of search results.
+
+Here's a breakdown of how you could approach this, along with potential solutions:
+
+Conceptual Approaches:
+
+    Browser Extension (Most Powerful and Flexible):
+        A browser extension would have the most direct access to the page's DOM (Document Object Model) and CSS.
+        You could listen for a specific key combination (e.g., Ctrl+Shift+B) and then:
+            Identify the currently highlighted element (this can be a bit tricky, as the exact method depends on the browser's search implementation).
+            Add a CSS class to the highlighted element that makes it blink (e.g., by toggling its opacity or background-color rapidly).
+            Remove the blinking class after a short period.
+
+    User Script (Tampermonkey/Greasemonkey):
+        Similar to a browser extension, user scripts can modify the behavior of webpages.
+        They are generally easier to create than full browser extensions but have slightly more limited access.
+        You could use a user script to inject JavaScript into the page that listens for your key combination and performs the blinking effect.
+
+    AutoHotkey (Windows-Specific, Less Direct):
+        AutoHotkey can automate keyboard and mouse actions, but it has limited direct access to the webpage's DOM.
+        You could potentially use AutoHotkey to:
+            Simulate pressing Ctrl+F to activate the browser's search.
+            Use image recognition or coordinate-based mouse clicks to try to identify the highlighted element (this is very unreliable and fragile).
+            Simulate pressing Tab or other keys to try to move the focus to the highlighted element.
+            Then try and change the color of the element with an external tool.
+        This approach is the most difficult and least reliable, but it might be possible for very specific scenarios.
+
+    External Javascript Injection (Developer tools):
+        If you have the dev tools open, you can paste javascript directly into the console, and then run it. This would be a very temporary solution, and not very user friendly.
+
+Implementation Details (Browser Extension/User Script):
+
+    Identifying the Highlighted Element:
+        This is the trickiest part. Browsers don't have a standard API for accessing the currently highlighted search result.
+        You might need to use heuristics or inspect the DOM to find elements that have a specific CSS class or style applied by the browser's search.
+        For example, you could try to find elements with a background-color that's different from the default page background or that have a specific class name.
+
+    Creating the Blinking Effect:
+        Use CSS animation or JavaScript's setInterval to toggle the element's opacity or background-color rapidly.
+        Example CSS:
+    CSS
+
+    .blinking {
+        animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+        to {
+            visibility: hidden;
+        }
+    }
+
+    Key Combination Handling:
+        Use JavaScript's addEventListener to listen for your key combination (e.g., Ctrl+Shift+B).
+        When the key combination is pressed, trigger the blinking effect.
+
+Recommendation:
+
+For the best results, I recommend creating a browser extension or a user script. These approaches provide the necessary access to the webpage's DOM and allow you to implement the blinking effect reliably.
+
+If you are not comfortable with creating a browser extension, then using the developer tools to inject some javascript that does the blinking effect would be the next best option.
+
+Remember that identifying the highlighted element is the most challenging part, and you might need to experiment with different approaches depending on the browser and the website you're working with.
+Your saved info
+Info you asked Gemini to save
+
+A browser extension sounds like a really fun and neat project, although I'd be happy to explore the greasemonkey/tampermonkey frameworks as well, at least further down the line. I've been keen to look at those, and I know they can do some quite interesting things when it comes to automation and such.
+
+Excellent! A browser extension is indeed a fun and rewarding project. Let's focus on that for now, and we can definitely explore Tampermonkey/Greasemonkey later.
+
+Here's a step-by-step guide to get you started with creating a simple browser extension that implements the blinking highlight feature:
+
+1. Set up your Development Environment:
+
+    Choose a Browser: Chrome, Firefox, or Edge are good choices. For this example, I'll use Chrome, but the concepts are similar for other browsers.
+    Create a Project Folder: Create a new folder on your computer to store your extension files (e.g., blinking-highlight-extension).
+
+2. Create the Manifest File (manifest.json):
+
+    Inside your project folder, create a file named manifest.json.
+    Paste the following code into manifest.json:
+
+JSON
+
+{
+  "manifest_version": 3,
+  "name": "Blinking Highlight",
+  "version": "1.0",
+  "description": "Makes the current search highlight blink.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "toggle-blink": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B"
+      },
+      "description": "Toggle blinking highlight"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+
+    Explanation:
+        manifest_version: Specifies the version of the manifest format.
+        name, version, description: Basic information about your extension.
+        permissions: Declares the permissions your extension needs. activeTab allows the extension to access the currently active tab, and scripting allows injecting JavaScript.
+        action: Specifies the popup HTML file (we'll create this later).
+        commands: Defines the keyboard shortcut (Ctrl+Shift+B) to trigger the blinking.
+        background: specifies the background worker.
+
+3. Create the Background Script (background.js):
+
+    Inside your project folder, create a file named background.js.
+    Paste the following code into background.js:
+
+JavaScript
+
+chrome.commands.onCommand.addListener((command, tab) => {
+  if (command === "toggle-blink") {
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: toggleBlink
+    });
+  }
+});
+
+function toggleBlink() {
+  let highlightedElement = document.querySelector(".highlighted"); // You might need to change this selector
+
+  if (!highlightedElement) {
+    // Attempt to find the highlighted element using other methods if the above fails
+    const searchResultElements = document.querySelectorAll('*:not(script):not(style):not(link)');
+    for(const element of searchResultElements){
+        const bgColor = window.getComputedStyle(element).backgroundColor;
+        if(bgColor === 'rgb(255, 255, 0)'){ // common highlight color
+            highlightedElement = element;
+            highlightedElement.classList.add('highlighted');
+            break;
+        }
+    }
+  }
+
+  if (highlightedElement) {
+    highlightedElement.classList.toggle("blinking");
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = `
+      .blinking {
+        animation: blink 1s steps(2, start) infinite;
+      }
+
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+  } else {
+    alert("No highlighted element found.");
+  }
+}
+
+    Explanation:
+        chrome.commands.onCommand: Listens for the keyboard shortcut.
+        chrome.scripting.executeScript: Injects the toggleBlink function into the active tab.
+        toggleBlink:
+            Tries to find the highlighted element (you might need to adjust the CSS selector).
+            Adds or removes the blinking class.
+            Adds the CSS animation to the page.
+            Displays an alert if no highlighted element is found.
+
+4. Load the Extension:
+
+    Open Chrome and go to chrome://extensions/.
+    Enable "Developer mode" (toggle switch in the top right corner).
+    Click "Load unpacked".
+    Select your project folder.
+
+5. Test the Extension:
+
+    Open a webpage and perform a search (Ctrl+F).
+    Press Ctrl+Shift+B.
+    The highlighted element should start blinking.
+
+Important Notes:
+
+    Finding the Highlighted Element: The code uses .highlighted as a class name, and also tries to find a yellow background color. Browsers and websites use different methods for highlighting search results. You might need to inspect the DOM of the websites you use to find the correct CSS selector or attributes.
+    Error Handling: The code includes basic error handling (alert if no element is found). You can improve this further.
+    Popup (Optional): The manifest.json includes popup.html, but you can remove that if you don't need a popup.
+
+This is a basic implementation to get you started. You can enhance it with more features and refine the logic to work on more websites.
+
+Superb. A follow-up question: Would there be a way of making some extensions, amendments, or maybe use something like code-generation and conditional compilation with languages like Dlang (that I'm at least superficially versed in, and know some people in the community really well)?
+
+Yes, absolutely! You can definitely explore ways to enhance your browser extension using techniques like code generation and conditional compilation. Dlang, with its powerful metaprogramming capabilities, could play a significant role in this. Here's how you can approach it:
+
+1. Code Generation (Dlang):
+
+    Generating CSS Selectors: As we discussed, finding the highlighted element is the most challenging part. You could create a Dlang script that generates a configuration file (e.g., JSON or a Dlang module) containing CSS selectors for different websites. This script could:
+        Read website-specific configurations from a file or database.
+        Use Dlang's string manipulation and templating features to generate the appropriate CSS selectors.
+        Output the generated configuration in a format that your JavaScript extension can use.
+    Generating JavaScript Code: You could also use Dlang to generate parts of your JavaScript code, especially if you have repetitive patterns or logic.
+        For example, you could generate code to handle different highlighting styles or to adapt to variations in website layouts.
+    Generating Manifest Data: For more complex extensions, you could generate parts of the manifest file based on configuration or build settings.
+
+2. Conditional Compilation (Dlang):
+
+    Platform-Specific Code: If you plan to support multiple browsers (Chrome, Firefox, Edge), you can use Dlang's conditional compilation features to generate platform-specific code.
+        For example, you might need to use different APIs or CSS selectors for different browsers.
+    Feature Flags: You can use conditional compilation to enable or disable features based on build settings or user preferences.
+        For example, you could have a "debug mode" that enables extra logging or visualization.
+    Generating Different Extension Versions: If you plan to distribute different versions of your extension (e.g., a free version with limited features and a paid version with more features), you can use conditional compilation to generate the different versions from a single codebase.
+
+3. Integration with JavaScript Extension:
+
+    Build Process: You'll need to set up a build process that:
+        Runs your Dlang code generation scripts.
+        Compiles your Dlang code (if necessary).
+        Copies the generated files (JavaScript, CSS, configuration) into your extension's project folder.
+        Packages the extension for distribution.
+    Communication: Your Dlang-generated code (e.g., configuration files) will need to be accessible to your JavaScript extension.
+        You can use JSON files, Dlang modules, or other data formats to exchange information.
+
+Example (Conceptual Dlang Code Generation):
+Code snippet
+
+import std.stdio;
+import std.json;
+import std.string;
+
+void main() {
+    // Example website configurations
+    auto websites = [
+        ["www.example.com", ".example-highlight"],
+        ["www.another.com", "#search-result"]
+    ];
+
+    // Generate JSON configuration
+    auto config = JSONValue.object;
+    foreach (website; websites) {
+        config[website[0]] = JSONValue(website[1]);
+    }
+
+    // Write to file
+    File("website_selectors.json", "w").writeln(config.toString());
+}
+
+Example (Conceptual JavaScript Extension):
+JavaScript
+
+// Load the generated configuration
+fetch("website_selectors.json")
+    .then(response => response.json())
+    .then(selectors => {
+        // Use the selectors to find the highlighted element
+        const selector = selectors[window.location.hostname];
+        if (selector) {
+            const highlightedElement = document.querySelector(selector);
+            // ... rest of the blinking logic ...
+        }
+    });
+
+Benefits of Using Dlang:
+
+    Metaprogramming: Dlang's metaprogramming features allow you to generate code at compile time, reducing runtime overhead and improving performance.
+    String Manipulation: Dlang has excellent string manipulation capabilities, which are useful for generating code and configuration files.
+    Cross-Platform: Dlang can be compiled to run on multiple platforms, making it suitable for generating code for different browsers.
+    Performance: Dlang is a compiled language, which can provide better performance than interpreted languages like JavaScript for complex code generation tasks.
+
+By combining Dlang's metaprogramming capabilities with JavaScript's browser integration, you can create powerful and flexible browser extensions that adapt to different websites and platforms.
+
+Even though this is a very small example, would I be able to explore and use languages like ReasonML and PureScript? I.e. I know that it might be overkill for this type of simple tasks, but I'm really keen on exploring and learning about them, and small projects would be great to start with. Or (just maybe) one (or even both) of these languages might contain features that can be beneficial, even for a small task like this.
+
+Yes, absolutely! You can definitely explore and use languages like ReasonML and PureScript for your browser extension project, even though it might seem like overkill for a simple task. In fact, using them for smaller projects is a fantastic way to learn and get comfortable with their unique features.
+
+Here's how you can approach using ReasonML and PureScript in your browser extension, along with potential benefits:
+
+1. ReasonML (Now Rescript):
+
+    Benefits:
+        Strong Type System: ReasonML (now Rescript) has a robust type system that can help you catch errors early in development. This is especially useful for ensuring that your code correctly manipulates the DOM and handles different website structures.
+        JavaScript Interoperability: ReasonML compiles to clean, readable JavaScript, making it easy to integrate with your extension's logic.
+        React Integration (Optional): If you plan to add a more complex UI to your extension (e.g., a popup with settings), ReasonML's React bindings can be very helpful.
+        Performance: ReasonML's compiled JavaScript is often performant.
+
+    How to Use:
+        You can use the ReasonML compiler (Rescript compiler) to compile your ReasonML code to JavaScript.
+        Integrate the generated JavaScript files into your extension's project.
+        Use ReasonML to implement the logic for finding the highlighted element and applying the blinking effect.
+
+2. PureScript:
+
+    Benefits:
+        Functional Programming: PureScript is a purely functional language, which can lead to more predictable and maintainable code.
+        Strong Type System: PureScript's type system is even more powerful than ReasonML's, providing advanced features like type classes and higher-kinded types.
+        JavaScript Interoperability: PureScript compiles to clean, readable JavaScript.
+        Excellent Libraries: PureScript has a growing ecosystem of libraries for common tasks, including DOM manipulation.
+
+    How to Use:
+        Use the PureScript compiler (pulp) to compile your PureScript code to JavaScript.
+        Integrate the generated JavaScript files into your extension's project.
+        Use PureScript to implement the logic for your extension.
+
+Potential Benefits for a Small Task:
+
+    Learning Experience: Using these languages for a small project provides a low-pressure environment to learn their syntax, features, and tooling.
+    Type Safety: Even for a simple task, type safety can help prevent subtle errors that might be difficult to catch with JavaScript alone.
+    Code Maintainability: Functional programming and strong type systems can lead to more maintainable code, even for small projects.
+    Exploration of Advanced Features: You can explore advanced features like type classes (PureScript) or React bindings (ReasonML) even in a small project.
+
+Integration:
+
+    For both languages, you will compile the code to javascript, and then include the javascript in your extension.
+    You will need to setup a build process, that can compile your code to javascript. This can be done with npm scripts, or other build tools.
+
+Considerations:
+
+    Learning Curve: ReasonML and PureScript have steeper learning curves than JavaScript.
+    Tooling: You'll need to set up the necessary tooling for compiling and integrating your code.
+    Bundle Size: Depending on the libraries you use, the generated JavaScript code might be slightly larger than hand-written JavaScript.
+
+Recommendation:
+
+If you're eager to learn functional programming and strong type systems, using ReasonML or PureScript for your browser extension is a great idea. Start with a small part of the extension's logic and gradually expand your use of these languages.
+
+Even though it might be considered overkill, the experience you gain from using these languages will be invaluable for future projects.
+
+}}}
+
 

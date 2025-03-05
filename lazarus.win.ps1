@@ -158,6 +158,7 @@ choco install azure-cli -y
 # C:\Users\SEDAALB2>
 # TODO: LINK IN VIM COLOR-SCHEMES (AND SPELLING DICTIONARIES ETC)
 cd ~
+New-Item -ItemType SymbolicLink -Path .\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Target .\RiderProjects\bluelegend76\ms-winterminal\settings.json
 New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
   # New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc
 # DONE: CHECK IF CAN SYMLINK TO DIRECTORIES
@@ -472,3 +473,142 @@ Start-Process -FilePath ".\veracrypt_setup.exe"
 # If you encounter issues with plugins not loading or behaving unexpectedly, try clearing the Vim cache (as described in the previous response).
 # 
 # I apologize for the incorrect information in my previous response. I am still under development and learning to be more accurate.
+
+
+# ___vim-plug_Windows
+# # For Unix-like systems (Linux, macOS, etc.):
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+# https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# 
+# # For Windows (PowerShell):
+# iwr -useb -outf $PROFILE\vim-plug.vim \
+# https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# 
+# 2.  Configuring your init.vim or vimrc:
+# 
+# Open your init.vim (usually ~/.config/nvim/init.vim for Neovim, or ~/.vimrc for Vim) and add the following block:
+# Vim Script
+# 
+# call plug#begin('~/.vim/plugged') " Or any other directory you prefer
+# 
+# " List your plugins here
+# Plug 'tpope/vim-fugitive'  " Example: Git integration
+# Plug 'nvim-lua/popup.nvim' " Example: Neovim popup library (Neovim only)
+# Plug 'neoclide/coc.nvim'   " Example: Completion framework
+# 
+# " ... more plugins ...
+# 
+# call plug#end() " This must come *after* your plugin list
+# 
+# " Optional: Add commands to re-source your init.vim after installing/updating
+# " autocmd VimEnter * if !exists('g:loaded_plugins') | source $MYVIMRC | endif
+# 
+#     call plug#begin('~/.vim/plugged'): This starts the plugin management block. The argument is the directory where plugins will be installed. ~/.vim/plugged is a common choice.
+#     Plug 'plugin-name': This is how you specify a plugin. The format is usually username/repository. You can also specify a branch, tag, or commit: Plug 'user/repo', { 'branch': 'develop' } or Plug 'user/repo', { 'tag': 'v1.0.0' }
+#     call plug#end(): This marks the end of the plugin list. It's crucial to have this.
+#     The optional autocmd helps with automatically sourcing your vimrc after installing plugins, so changes take effect immediately.
+# 
+# 3. Installing Plugins:
+# 
+# Inside Vim or Neovim, after saving your init.vim or vimrc with the plugin list, run the following command:
+# Vim Script
+# 
+# :PlugInstall
+# 
+# This will download and install all the plugins listed between plug#begin() and plug#end().
+# 
+# 4. Other Useful Commands:
+# 
+#     PlugUpdate: Updates all plugins to their latest versions.
+#     PlugClean: Removes plugins that are no longer listed in your init.vim.
+#     PlugUpgrade: Upgrades vim-plug itself.
+#     PlugStatus: Shows the status of your plugins.
+# 
+# 5.  Key Differences and Advantages over Vundle:
+# 
+#     Simpler Installation: No need to clone a separate repository for the plugin manager itself.
+#     Faster: vim-plug is generally considered faster than Vundle, especially for installation and updates.
+#     Single-file: The entire plugin manager is contained in a single file, making it easy to manage.
+#     Direct Git Integration: vim-plug uses Git directly, so there's no intermediate layer.
+#     Supports Branches/Tags/Commits: You can easily specify which version of a plugin to install.
+#     Minimalistic: vim-plug focuses on core plugin management functionality without unnecessary extras.
+# 
+# 6. Making the Decision:
+# 
+# Now that you've seen how easy it is to set up and use vim-plug, the decision to switch is up to you.  If you value simplicity, speed, and direct Git integration, vim-plug is an excellent choice.  Try it out for a while and see if it fits your workflow better than Vundle.  If you're happy with Vundle and it's working well for you, there's no compulsion to switch.  However, many users have found vim-plug to be a more efficient and streamlined experience.
+
+
+## Emacs Slime (+=SBCL)
+# Quick question: If I wanted to be able to use Slime in Emacs (and particularly on Windows) I guess I would have to install Common Lisp (using something like QuickLisp). Could you give me some advice there, and particularly when it comes to if I could use Chocolatey or the like for any (or maybe even all) of the process?
+# 
+# You're on the right track!  Using Slime with Emacs on Windows does require a Common Lisp implementation, and Quicklisp is a great way to manage libraries. Chocolatey can indeed help streamline the process. Here's a breakdown of how you can approach this:
+# 
+# 1. Installing a Common Lisp Implementation:
+# 
+# Chocolatey: Yes, Chocolatey can be used! Several Common Lisp implementations are available as Chocolatey packages. The most common and recommended one is sbcl. You can install it like this:
+# 
+# <!-- end list -->
+# PowerShell
+# 
+# choco install sbcl
+# 
+# This will install Steel Bank Common Lisp (SBCL), a high-performance and widely used implementation.
+# 
+# Manual Installation (Alternative): If, for some reason, you prefer not to use Chocolatey, you can download SBCL directly from their website (http://www.sbcl.org/) and install it manually. However, Chocolatey makes updates much easier.
+# 
+# 2. Setting up Quicklisp:
+# 
+# Quicklisp is typically installed within your chosen Lisp implementation.  Here's how to do it with SBCL (which is what I recommend you install via Chocolatey):
+# 
+#     Start SBCL:  After installing SBCL (via Chocolatey or manually), you should be able to start it from the command line.  Just type sbcl and press Enter.
+# 
+#     Install Quicklisp:  Inside the SBCL REPL (Read-Eval-Print Loop), paste the following code:
+# 
+# <!-- end list -->
+# Lisp
+# 
+# (quicklisp-client:install)
+# 
+# This will download and install Quicklisp.  It will ask you where you want to install it.  The default location is usually fine.
+# 
+#     Adding Quicklisp to your Lisp initialization: You'll want Quicklisp to be available every time you start SBCL. Quicklisp provides instructions on how to add this to your init file. It will usually involve adding a line similar to this to your ~/.sbclrc file (create it if it doesn't exist):
+# 
+# <!-- end list -->
+# Lisp
+# 
+# (load "path/to/quicklisp/setup.lisp")  ; Replace with the actual path
+# 
+# Quicklisp will tell you the appropriate path.  You can find your home directory using (user-homedir) inside the REPL.
+# 
+# 3. Installing Slime:
+# 
+# Slime itself is an Emacs package.  You can install it using your preferred Emacs package manager (e.g., package.el, use-package).  Here's a common approach using package.el:
+# Code snippet
+# 
+# (require 'package)
+# (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)  ; Add MELPA if you haven't already
+# (package-initialize)
+# (package-install 'slime)
+# 
+# 4. Configuring Slime:
+# 
+# You'll need to tell Slime where your Lisp implementation is.  Add the following to your Emacs initialization file (~/.emacs or ~/.emacs.d/init.el):
+# Code snippet
+# 
+# (setq inferior-lisp-program "sbcl")  ; Or the path to your sbcl executable if needed
+# 
+# 5. Running Slime:
+# 
+# Start Emacs.  You can then start Slime by typing M-x slime.  Slime will then connect to your SBCL instance.
+# 
+# Chocolatey Summary:
+# 
+# Chocolatey simplifies the installation of SBCL.  The rest of the setup (Quicklisp and Slime) is typically done within the Lisp environment and Emacs, respectively.
+# 
+# Key Recommendations:
+# 
+# SBCL via Chocolatey: This is the easiest and most recommended way to get a Common Lisp implementation on Windows.
+# Quicklisp: Essential for managing Lisp libraries.
+# Package.el (or use-package): Use these for managing Emacs packages, including Slime.
+# 
+# If you run into any specific errors, please provide the error messages, and I'll do my best to help you troubleshoot.
