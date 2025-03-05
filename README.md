@@ -11,7 +11,8 @@
 -----
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
-## Reflists
+## Reflists ----
+## INCLUDE CORRECT PDF-REFS FOR GREGG SHORTHAND[!!!!]
 ### **Trinity/Gordian Knot-Suite to Empire-Refs(??)**  __=
   - [ ] "Can you tell/transmit to me why this/X is bunk?"
 ## **TODO: Add ALL(!) Relevant At-Reflists to GitHub Config Repo**
