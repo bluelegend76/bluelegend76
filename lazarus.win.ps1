@@ -612,3 +612,30 @@ Start-Process -FilePath ".\veracrypt_setup.exe"
 # Package.el (or use-package): Use these for managing Emacs packages, including Slime.
 # 
 # If you run into any specific errors, please provide the error messages, and I'll do my best to help you troubleshoot.
+
+
+# Getting Windows Accessible to WSL ----
+# Restart WSL Service:
+# 
+# Open PowerShell as administrator and run: Restart-Service LxssManager
+# 
+# Shutdown and Restart WSL:
+# 
+# In PowerShell, run: wsl --shutdown
+# Wait a few seconds, then open your WSL distribution again.
+# 
+# Check WSL Configuration:
+# 
+# Open your WSL distribution.
+# 
+# Edit the /etc/wsl.conf file (create it if it doesn't exist): sudo nano /etc/wsl.conf
+# 
+# Add the following lines:
+# Ini, TOML
+# 
+# [automount]
+# root = /mnt/
+# options = "metadata,umask=22,fmask=11"
+# 
+# Save the file and restart WSL.
+#
