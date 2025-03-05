@@ -481,7 +481,7 @@ bcb (**(!))
 'Basic Bash-list' (30 commands) (+later: Bash2PShell) | Ash|Dash
                 Excellent! We've added nm, objdump, ldd, ar, strip, ranlib, size, strings, and dd to the primary list. whatis and apropos are added to the "par for the course" list.
 
-                Here's the final primary list (now exceeding 30 commands, as requested):
+                Here's the final primary list (now exceeding 30 commands, as requested) ----
                     touch
                     du
                     df
@@ -518,8 +518,7 @@ bcb (**(!))
                     size
                     strings
                     dd
-
-                And the final "par for the course" list:
+                And the final "par for the course" list ----
                     ls
                     cd
                     pwd

@@ -7,6 +7,9 @@ ___Gemini
 @b(ump):   3yyp}ddzc3-   #copy last q&a-post + bump i-number 1
 @s(plit):  o----yypO         #split (=put ---- + blank line + ----)
 
+mpv c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+mpv ~/Empire/video/instructional/LIA2/Peter-L-20250227_{102445,111046,132732}.mp4 &
+
 video 1 (00:30:00)
     mpv --start=00:13:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
 ----
@@ -26,6 +29,7 @@ Installing Spectre Console into C# project
 
     Add using to C#-file:
     using Spectre.Console;
+
 
     public class SpectreExample {
       public static void Main(string[] args) {
@@ -354,4 +358,19 @@ skillnaden på 'init' och 'set' för properties (!!)
 01:29:00  ='FLER SAKER SOM SKA IMPLEMENTERAS'
 
 mpv --start=00:24:30 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
+
+mpv --start=00:24:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
+c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
+c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Man pratar ofta om olika lager, vilket är generellt för alla API-calls. Det första lagret är Controllern, och det är där man definierar upp endpointen.
+    mpv --start=00:10:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
++ Sen från den controllern brukar man anropa en klass som ligger nån annanstans, och det brukar då vara en service.
+    mpv --start=00:10:45 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
++ Sen gör den saker och ev. anropar andra klasser som har annat ansvarsområde
+    mpv --start=00:10:58 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
+[+ En service ansvarar oftast för att tillhandahålla data (t.ex. hämta från en databas]
+
+Förfarande/Tillvägagångssätt: 'Utveckla i Lanes'
+    mpv --start=00:12:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
 

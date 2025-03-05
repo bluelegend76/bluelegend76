@@ -6,6 +6,14 @@ set fdm=marker syn= guifont=* | colors ron
         N-teatern/Nationalsånger 2
 
 TODO ADD 1 = STARTUPS 1 {{{
+
+Vanki LearnQna ----
+  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
+
+~/Desktop/Scratch.txt
+
+
+
 file/media:
     gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
 sysadm:  TODO: ADD WIN-TERMINAL
@@ -20,12 +28,7 @@ System (incl. C#):
 
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-
-
-Scratch 1
 }}}
-Vanki LearnQna ----
-  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
 
 
 Forums Stora

@@ -213,7 +213,7 @@ XFCE4  TODO: SET WINCOMMANDS-TRIGGER TO WIN-KEY
 Fluxbox
 
 WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
-NEW: Highlight mouse-pointer  dclick left control
+          highlight mouse-pointer  dclick left control
         quicklink-menu  w-x ----
         Launch PowerShell (with Admin. privileges)  w-x a  __
         task manager  w-x t

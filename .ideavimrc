@@ -53,10 +53,14 @@ nnoremap n nzzh | nnoremap N Nzz
 
 " Cutting/Pasting (from two system clipboards)  __
 inoremap <leader>ii +
-
+" ----
 nnoremap <leader>ia "*p
 inoremap <leader>ia *
 " inoremap <leader>ia *
+
+" Window-Actions/Buffers (etc)  __
+" TODO: Close File/Tab  cT,  Close All Tabs but present
+" TODO: PIN TAB
 
 " Macros/Actions  __
 " Run latest run macro **

@@ -3,6 +3,8 @@ set foldmethod=indent foldlevel=2
 set fdm=indent fdl=2 syn=cs guifont=* | colors ron
 set syn=
 set syn=cs
+__
+____
 ___zzzz
 
 ref  = skicka inte värdet, utan adressen
@@ -11,11 +13,10 @@ namespace  = i den här _ måste alla klass- och typ-namn vara unika
    [+using  = slippa kvalificera med namnrymd.aaaaa.function()]
 
 
-DotNet CLI
-        ~/Empire/Doks/Comp/lang/clangs/csharp/dotnet/dotnetcli.cheatsh.pdf
-        sheatsh1 ----
+DotNet CLI:
+            ~/Empire/Doks/Comp/lang/clangs/csharp/dotnet/dotnetcli.cheatsh.pdf
+            SHEATSH1 ----
             Create a New Project ----
-
                 Create a new project in the current folder
                 dotnet new [TEMPLATE]
                 dotnet new web
@@ -32,7 +33,6 @@ DotNet CLI
                 Get the list of installed templates
                 dotnet new
             Manage Solutions Files (.sln) ----
-
                 Create a new .sln file
                 dotnet new sln
 
@@ -54,7 +54,6 @@ DotNet CLI
                 dotnet run  Run an application
             dotnet run -nowarn:*  run app w.out showing warnings
             Manage Project Dependencies ----
-
                 Add a reference to another project
                 dotnet add reference [PROJECT_PATH]
                 dotnet add reference ../MyLib/MyLib.csproj
@@ -85,14 +84,12 @@ DotNet CLI
                 dotnet build [PROJECT/SOLUTION]
                 dotnet build MySolution.sln
             NuGet ----
-
                 Create a nuget package
                 dotnet pack
 
                 Publish a nuget package
                 dotnet nuget push
             Test ----
-
                 Run the tests
                 dotnet test
 
@@ -108,7 +105,6 @@ DotNet CLI
                 dotnet test --filter "TestCategory!=Slow"
                 dotnet test --filter "Unit&(TestCategory=Cat1)"
             Publish ----
-
                 Publish the project or solution from the current folder
                 dotnet publish
 
@@ -122,7 +118,6 @@ DotNet CLI
                 Build a self-contained executable for Linux
                 dotnet publish -c Release -r linux-x64 -f netcoreapp2.2
             Global Tools ----
-
                 Install a global tool
                 dotnet tool install -g [TOOLNAME]
 
@@ -131,8 +126,8 @@ DotNet CLI
 
                 List all globally installed tools
                 dotnet tool list -g
-        ~/Empire/Doks/Comp/lang/clangs/csharp/dotnet/dotnetcli2.cheatsh.pdf
-        sheatsh2 ----
+            ~/Empire/Doks/Comp/lang/clangs/csharp/dotnet/dotnetcli2.cheatsh.pdf
+            SHEATSH2 ----
             dotnet new ----
                 dotnet new sln
                     Solution file
@@ -259,10 +254,17 @@ Azure CLI (??)
                 .
                 .
   TeamViever (Live Share)  #Vnc
-Spectre Console
+Spectre Console:
     ~/gdrive/SpectreConsole.tags1.txt
 Rider (JetBrains) Keymap
 ~/Empire/Doks/Comp/editor/Rider-shortc.pdf
+  Set breakpoint
+  Run with Debug  s-f9  # TODO = REWORK FOR VS KEYB.SHORTCUT-SETTINGS[!]
+  Run  s-f10
+    Step over  f8
+  Step into  f7
+    Step out of  s-f8
+  Stop  c-f2
                 Build solution  a_b Ent
                 Create And Edit ----
                     Expand/Collapse Code Block  @
@@ -274,7 +276,7 @@ Rider (JetBrains) Keymap
                         c-Space
                     Smart Code Completion
                         cs-Space
-                    Type Name Completion
+                    Type Name Completion  ___hm_eng
                         ca-Space
                     Complete Statement
                         cs-Enter
@@ -554,24 +556,17 @@ Rider (JetBrains) Keymap
                         ca-p
                     Reformat Code  @@[!!]
                         ca-l
-  set bracing (K&R style)  = settings  (+indent style 2 2)
-  braces style
+https://cheatography.com/franklioty/cheat-sheets/jetbrains-rider-keyboard-shortcuts/#downloads
+  TODO: IMPORT DONE LIST RIDER KEYB.SHORTCUTS  __ __
+Rider Docs TOC:  https://www.jetbrains.com/help/rider/Introduction.html
+  set bracing (BSD vs K&R style)  = settings  (+indent style 2 2)
+  braces-style
   new project in solution  right-click solution (+select)
-  cursor blinking off  Settings: editor > general > [ ] caret blinking
+  cursor blinking off  Settings >> editor > general > [ ] caret blinking
   Reformat Code  (vim-mode) = / ca-l  ****
   Toggle Inlay Hints  a-h  #custom
   sticky lines  --> off
   --
-  Set breakpoint
-  Run with Debug  s-f9  # TODO: REWORK FOR VS KEYB.SHORTCUT-SETTINGS[!]
-    Step over  f8
-  Step into  f7
-    Step out of  s-f8
-  Stop  c-f2
-  Run  s-f10
-https://cheatography.com/franklioty/cheat-sheets/jetbrains-rider-keyboard-shortcuts/#downloads
-TODO: IMPORT DONE LIST RIDER KEYB.SHORTCUTS  __ __
-Rider Docs TOC  https://www.jetbrains.com/help/rider/Introduction.html
                     evince -p 1 ~/Empire/Doks/Comp/editor/Jetbrains/JetbrainsDocs/RiderToc.pdf &
                 Get started
                   Installation guide
@@ -2147,7 +2142,7 @@ Rider Docs TOC  https://www.jetbrains.com/help/rider/Introduction.html
                       Built-in IDE macros
                       Regular expression syntax reference
                       JetBrains Rider's network activity
-Rider+GitHub Copilot
+Rider+GitHub Copilot:
             Trigger inline copilot-box/chat  cs-g
             ## Open copilot chat  cs-c
             show completions  a-\  # ga-å
@@ -3629,7 +3624,185 @@ Rider Snippets
                         xsl
                         xsl:when (<xsl:when test="...">...</xsl:when>)
 ReSharper/R#
-Avalonia  ____
+                    https://resources.jetbrains.com/storage/products/resharper/docs/ReSharper_DefaultKeymap_IDEAscheme.pdf
+                    EXPLORE
+                    Go to everything Ctrl+N
+                    Go to type Ctrl+N (second hit)
+                    Go to symbol Ctrl+Shift+Alt+N
+                    Go to word Ctrl+N+N+N
+                    Go to file Ctrl+Shift+N
+                    Go to file member Ctrl+F12
+                    Find usages Alt+F7
+                    Find usages (advanced) Shift+Alt+F7
+                    Find Results window Ctrl+Alt+U
+                    Highlight usages in file Ctrl+Shift+F7
+                    Go to previous usage Ctrl+Alt+ ↑
+                    Go to next usage Ctrl+Alt+ ↓
+                    Analyze References window Ctrl+Alt+Y
+                    Navigate to Ctrl+Shift+G
+                    Go to declaration Ctrl+B
+                    Go to type of symbol Ctrl+Shift+T
+                    Go to implementation Ctrl+Shift+Alt+B
+                    Go to base symbols Ctrl+U
+                    Go to derived symbols Ctrl+Alt+B
+                    Go to usage Ctrl+Alt+F7
+                    File structure Ctrl+ F11
+                    Go to next member/tag Alt+ ↓
+                    Go to previous member/tag Alt+ ↑
+                    Go to containing declaration Ctrl+[
+                    To-do items Ctrl+Alt+.
+                    Explore stack trace Ctrl+Shift+E
+                    Locate in Solution Explorer Shift+Alt+L
+                    Structural navigation Tab / Shift+Tab
+                    CREATE
+                    Symbol code completion Ctrl+Space
+                    Smart code completion Ctrl+Shift+Space
+                    Import symbol completion Ctrl+Alt+Space
+                    Complete statement Ctrl+Shift+Enter
+                    Parameter info Ctrl+P
+                    Go to previous signature
+                    (in parameter info) Ctrl+Shift+P
+                    Quick documentation Ctrl+Q
+                    Move code up / down / left / right Ctrl+Shift+Alt+ ↑ / ↓ / ← / →
+                    Extend selection Ctrl+W
+                    Shrink selection Ctrl+Shift+W
+                    Duplicate a line or selection Ctrl+D
+                    Select containing declaration Ctrl+Shift+[
+                    Comment/uncomment line Ctrl+/
+                    Comment/uncomment block Ctrl+Shift+/
+                    Generate code (constructors,
+                    properties, implementing/overriding
+                    members, etc)
+                    Alt+Ins
+                    Insert live template Ctrl+J
+                    Surround with template Ctrl+Alt+J
+                    Create file from template Alt+Ins in Solution Explorer
+                    or Ctrl + Alt + Ins
+                    Go to last edit location Ctrl+Shift+Backspace
+                    View recent files Ctrl+E
+                    View recent edits Ctrl+Shift+Alt+Backspace
+                    Go to related files Ctrl+Shift+Alt+G
+                    View bookmarks Ctrl+`
+                    Go to bookmark Ctrl+[0...9]
+                    Set/remove bookmark Ctrl+Shift+[0...9]
+                    IMPROVE
+                    Show available quick-fixes and
+                    context actions Alt+Enter
+                    Inspect this Ctrl+Shift+Alt+A
+                    View type hierarchy Ctrl+Alt+H
+                    Go to next highlight
+                    (error, warning or suggestion) F12
+                    Go to previous highlight
+                    (error, warning or suggestion) Shift +F12
+                    Go to next error Alt+F12
+                    Go to previous error Shift+Alt+F12
+                    Refactor this Ctrl+Shift+R
+                    Rename F2 or Shift+R
+                    Move type or static member F6
+                    Safe delete Alt+Del
+                    Extract method Ctrl+Alt+M
+                    Introduce variable Ctrl+Alt+V
+                    Introduce field Ctrl+Alt+D
+                    Introduce parameter Ctrl+Alt+P
+                    Inline Ctrl+Alt+N
+                    Change signature Ctrl+F6
+                    Code cleanup Ctrl+Alt+F
+                    Apply code style Ctrl+Alt+S
+                    Reformat code Ctrl+Alt+L
+                    Run unit tests Ctrl+T, R
+                    Debug unit tests Ctrl+T, D
+                    Run all tests from solution Ctrl+T, L
+                    Run current session Ctrl+T, Y
+                    Repeat previous run Ctrl+T, T
+                    Unit Test Explorer Ctrl+Alt+T
+                    Unit Test Sessions Ctrl+Alt+R
+                    ----
+                    https://duckduckgo.com/?q=resharper+shortcuts&t=newext&atb=v466-1&ia=cheatsheet&iax=cheatsheet
+                    Resharper
+                    Resharper 10 Keyboard Shortcuts
+                    Create
+                    Ctrl Space 	Symbol code completion
+                    Ctrl Shift Space 	Smart code completion
+                    Ctrl Alt Space 	Import symbol completion
+                    Ctrl Shift Enter 	Complete statement
+                    Ctrl P 	Parameter info
+                    Ctrl Shift P 	Go to previous signature
+                    Ctrl Q 	Quick documentation
+                    Ctrl W 	Extend selection
+                    Ctrl Shift W 	Shrink selection
+                    Ctrl D 	Duplicate a line or selection
+                    Ctrl Shift [ 	Select containing declaration
+                    Ctrl / 	Comment/uncomment line
+                    Ctrl Shift / 	Comment/uncomment block
+                    Generate
+                    Ctrl J 	Insert live template
+                    Ctrl Alt J 	Surround with template
+                    Ctrl Alt Insert 	Create file from template
+                    Ctrl Shift Backspace 	Go to last edit location
+                    Ctrl E 	View recent files
+                    Ctrl Shift Alt Backspace 	View recent edits
+                    Ctrl Shift Alt G 	Go to related files
+                    Ctrl ` 	View bookmarks
+                    Ctrl Numeric key 	Go to bookmark
+                    Ctrl Shift Numeric Key 	Set/remove bookmark
+                    Explore
+                    Ctrl N 	Go to everything
+                    Ctrl Shift Alt N 	Go to symbol
+                    Ctrl Shift N 	Go to file
+                    Ctrl F12 	Go to file member
+                    Find
+                    Alt F7 	Find usages
+                    Shift Alt F7 	Find usages (advanced)
+                    Ctrl Alt U 	Find Results window
+                    Ctrl Shift F7 	Highlight usages in file
+                    Ctrl Alt ↑ 	Go to previous usage
+                    Ctrl Alt ↓ 	Go to next usage
+                    Ctrl Alt Y 	Analyze References window
+                    Navigation
+                    Ctrl Shift G 	Navigate to
+                    Ctrl B 	Go to declaration
+                    Ctrl Shift T 	Go to type of symbol
+                    Ctrl Shift Alt B 	Go to implementation
+                    Ctrl U 	Go to base symbols
+                    Ctrl Alt B 	Go to derived symbols
+                    Ctrl Alt F7 	Go to usage
+                    File Structure
+                    Alt F11 	File Structure
+                    Alt ↑ 	Go to next member/tag
+                    Alt ↓ 	Go to previous member/tag
+                    Ctrl [ 	Go to containing declaration
+                    Ctrl Shift E 	Explore stack trace
+                    Ctrl Alt L 	Locate in Solution Explorer
+                    Improvement
+                    Alt Enter 	Show available quick-fixes and context actions
+                    Ctrl Shift Alt A 	Inspect this
+                    Ctrl E, H 	View type hierarchy
+                    F12 	Go to next highlight
+                    Shift F12 	Go to previous highlight
+                    Alt F12 	Go to next error
+                    Shift Alt F12 	Go to previous error
+                    Refactoring
+                    Ctrl Shift R 	Refactor this
+                    F2 	Rename
+                    F6 	Move type or static member
+                    Alt Delete 	Safe delete
+                    Ctrl Alt M 	Extract method
+                    Ctrl Alt V 	Introduce variable
+                    Ctrl Alt D 	Introduce field
+                    Ctrl Alt P 	Introduce parameter
+                    Ctrl Alt N 	Inline
+                    Ctrl F6 	Change signature
+                    Unit Test
+                    Ctrl T, R 	Run unit tests
+                    Ctrl T, D 	Debug unit tests
+                    Ctrl T, L 	Run all tests from solution
+                    Ctrl T, Y 	Run current session
+                    Ctrl T, T 	Repeat previous run
+                    Ctrl Alt T 	Unit Test Explorer
+                    Ctrl Alt R 	Unit Test Sessions
+                    Miscellaneous
+                    Ctrl Alt F 	Code Cleanup 
+Avalonia:  ____
             CREATE AND EDIT
             Show context actions
                 
@@ -3856,7 +4029,7 @@ Avalonia  ____
                 
             ca-B
 unit testing
-Rx.Net, R3, System.Reactive  # handle and combine asynchronous data-streams well
+Rx.Net, R3, System.Reactive:  # handle and combine asynchronous data-streams well
         Key Considerations / Choices ----
         The choice of library or framework depends on your specific needs.
           ----
@@ -3864,7 +4037,7 @@ Rx.Net, R3, System.Reactive  # handle and combine asynchronous data-streams well
         - If you're building large-scale, distributed systems that require high concurrency and fault tolerance, Akka.NET is worth considering.
         - TPL Dataflow is very useful for data-processing pipelines.
 ----
-Visual Studio
+Visual Studio:
                 Microsoft Visual Studio
                 Default keyboard shortcuts for Microsoft Visual Studio
 
@@ -4347,97 +4520,97 @@ Common Exceptions + Exception Hierarchy
 
             Console.WriteLine("Summan av alla talen är: " + n);
 complete list of c# exceptions  https://www.completecsharptutorial.com/basic/complete-system-exception.php
-            System Exception
-            Exception 	Condition
-            AccessViolationException 	It is thrown when try to read or write protected memory.
-            AggregateException 	Represents one or more errors that occur during application execution.
-            AppDomainUnloadedException 	It is thrown when try to access an unloaded application domain.
-            ApplicationException 	It is base class for application-defined exceptions.
-            ArgumentException 	It is thrown when invalid argument provided to a method.
-            ArgumentNullException 	It is thrown when a method requires argument but no argument is provided.
-            ArgumentOutOfRangeException 	It is thrown when value of an argument is outside the allowable range.
-            ArithmeticException 	It is thrown when doing arithmetic, casting, or conversion operation.
-            ArrayTypeMismatchException 	It is thrown when try to store an element of the wrong type within an array.
-            BadImageFormatException 	It is thrown when file image, dll or exe program is invalid.
-            CannotUnloadAppDomainException 	It is thrown when try to unload an application domain fails.
-            ContextMarshalException 	The exception that is thrown when an attempt to marshal an object across a context boundary fails.
-             
-            DataMisalignedException 	It is thrown thrown when a unit of data is read from or written to an address that is not a multiple of the data size.
-            DivideByZeroException 	It is thrown when there is an attempt to divide an integral or decimal value by zero.
-            DllNotFoundException 	It is thrown when a DLL specified in a DLL import cannot be found.
-            DuplicateWaitObjectException 	The exception that is thrown when an object appears more than once in an array of synchronization objects.
-            EntryPointNotFoundException 	The exception that is thrown when an attempt to load a class fails due to the absence of an entry method.
-            ExecutionEngineException 	The exception that is thrown when there is an internal error in the execution engine of the common language runtime.
-            FieldAccessException 	It is thrown when there is an invalid attempt to access a private or protected field inside a class.
-            FormatException 	The exception that is thrown when the format of an argument is invalid, or when a composite format string is not well formed.
-            IndexOutOfRangeException 	The exception that is thrown when an attempt is made to access an element of an array or collection with an index that is outside its bounds.
-            InsufficientMemoryException 	The exception that is thrown when a check for sufficient available memory fails. This class cannot be inherited.
-            InvalidCastException 	The exception that is thrown for invalid casting or explicit conversion.
-            InvalidOperationException 	The exception that is thrown when a method call is invalid for the object's current state.
-            InvalidProgramException 	The exception that is thrown when a program contains invalid Microsoft intermediate language (MSIL) or metadata.
-            InvalidTimeZoneException 	The exception that is thrown when time zone information is invalid.
-            MemberAccessException 	The exception that is thrown when an attempt to access a class member fails.
-            MethodAccessException 	The exception that is thrown when there is an invalid attempt to access a method, such as accessing a private method from partially trusted code.
-            MissingFieldException 	The exception that is thrown when there is an attempt to dynamically access a field that does not exist.
-            MissingMemberException 	The exception that is thrown when there is an attempt to dynamically access a class member that does not exist.
-            MissingMethodException 	The exception that is thrown when there is an attempt to dynamically access a method that does not exist.
-            MulticastNotSupportedException 	The exception that is thrown when there is an attempt to combine two delegates based on the Delegate type instead of the MulticastDelegate type.
-            NotCancelableException 	It is thrown when an attempt is made to cancel an operation that is not cancelable.
-            NotFiniteNumberException 	The exception that is thrown when a floating-point value is positive infinity, negative infinity, or Not-a-Number (NaN).
-            NotImplementedException 	The exception that is thrown when a requested method or operation is not implemented.
-            NotSupportedException 	The exception that is thrown when an invoked method is not supported, or when there is an attempt to read, seek, or write to a stream that does not support the invoked functionality.
-            NullReferenceException 	The exception that is thrown when there is an attempt to dereference a null object reference.
-            ObjectDisposedException 	The exception that is thrown when an operation is performed on a disposed object.
-            OperationCanceledException 	The exception that is thrown in a thread upon cancellation of an operation that the thread was executing.
-            OutOfMemoryException 	The exception that is thrown when there is not enough memory to continue the execution of a program.
-            OverflowException 	The exception that is thrown when an arithmetic, casting, or conversion operation in a checked context results in an overflow.
-            PlatformNotSupportedException 	The exception that is thrown when a feature does not run on a particular platform.
-            RankException 	The exception that is thrown when an array with the wrong number of dimensions is passed to a method.
-            StackOverflowException 	The exception that is thrown when the execution stack overflows because it contains too many nested method calls.
-            SystemException 	Serves as the base class for system exceptions namespace.
-            TimeoutException 	The exception that is thrown when the time allotted for a process or operation has expired.
-            TimeZoneNotFoundException 	The exception that is thrown when a time zone cannot be found.
-            TypeAccessException 	The exception that is thrown when a method attempts to use a type that it does not have access to.
-            TypeInitializationException 	The exception that is thrown as a wrapper around the exception thrown by the class initializer. This class cannot be inherited.
-            TypeLoadException 	The exception that is thrown when type-loading failures occur.
-            TypeUnloadedException 	The exception that is thrown when there is an attempt to access an unloaded class.
-            UnauthorizedAccessException 	The exception that is thrown when the operating system denies access because of an I/O error or a specific type of security error.
-            UriFormatException 	The exception that is thrown when an invalid Uniform Resource Identifier (URI) is detected.
+                System Exception
+                Exception 	Condition
+                AccessViolationException 	It is thrown when try to read or write protected memory.
+                AggregateException 	Represents one or more errors that occur during application execution.
+                AppDomainUnloadedException 	It is thrown when try to access an unloaded application domain.
+                ApplicationException 	It is base class for application-defined exceptions.
+                ArgumentException 	It is thrown when invalid argument provided to a method.
+                ArgumentNullException 	It is thrown when a method requires argument but no argument is provided.
+                ArgumentOutOfRangeException 	It is thrown when value of an argument is outside the allowable range.
+                ArithmeticException 	It is thrown when doing arithmetic, casting, or conversion operation.
+                ArrayTypeMismatchException 	It is thrown when try to store an element of the wrong type within an array.
+                BadImageFormatException 	It is thrown when file image, dll or exe program is invalid.
+                CannotUnloadAppDomainException 	It is thrown when try to unload an application domain fails.
+                ContextMarshalException 	The exception that is thrown when an attempt to marshal an object across a context boundary fails.
+                 
+                DataMisalignedException 	It is thrown thrown when a unit of data is read from or written to an address that is not a multiple of the data size.
+                DivideByZeroException 	It is thrown when there is an attempt to divide an integral or decimal value by zero.
+                DllNotFoundException 	It is thrown when a DLL specified in a DLL import cannot be found.
+                DuplicateWaitObjectException 	The exception that is thrown when an object appears more than once in an array of synchronization objects.
+                EntryPointNotFoundException 	The exception that is thrown when an attempt to load a class fails due to the absence of an entry method.
+                ExecutionEngineException 	The exception that is thrown when there is an internal error in the execution engine of the common language runtime.
+                FieldAccessException 	It is thrown when there is an invalid attempt to access a private or protected field inside a class.
+                FormatException 	The exception that is thrown when the format of an argument is invalid, or when a composite format string is not well formed.
+                IndexOutOfRangeException 	The exception that is thrown when an attempt is made to access an element of an array or collection with an index that is outside its bounds.
+                InsufficientMemoryException 	The exception that is thrown when a check for sufficient available memory fails. This class cannot be inherited.
+                InvalidCastException 	The exception that is thrown for invalid casting or explicit conversion.
+                InvalidOperationException 	The exception that is thrown when a method call is invalid for the object's current state.
+                InvalidProgramException 	The exception that is thrown when a program contains invalid Microsoft intermediate language (MSIL) or metadata.
+                InvalidTimeZoneException 	The exception that is thrown when time zone information is invalid.
+                MemberAccessException 	The exception that is thrown when an attempt to access a class member fails.
+                MethodAccessException 	The exception that is thrown when there is an invalid attempt to access a method, such as accessing a private method from partially trusted code.
+                MissingFieldException 	The exception that is thrown when there is an attempt to dynamically access a field that does not exist.
+                MissingMemberException 	The exception that is thrown when there is an attempt to dynamically access a class member that does not exist.
+                MissingMethodException 	The exception that is thrown when there is an attempt to dynamically access a method that does not exist.
+                MulticastNotSupportedException 	The exception that is thrown when there is an attempt to combine two delegates based on the Delegate type instead of the MulticastDelegate type.
+                NotCancelableException 	It is thrown when an attempt is made to cancel an operation that is not cancelable.
+                NotFiniteNumberException 	The exception that is thrown when a floating-point value is positive infinity, negative infinity, or Not-a-Number (NaN).
+                NotImplementedException 	The exception that is thrown when a requested method or operation is not implemented.
+                NotSupportedException 	The exception that is thrown when an invoked method is not supported, or when there is an attempt to read, seek, or write to a stream that does not support the invoked functionality.
+                NullReferenceException 	The exception that is thrown when there is an attempt to dereference a null object reference.
+                ObjectDisposedException 	The exception that is thrown when an operation is performed on a disposed object.
+                OperationCanceledException 	The exception that is thrown in a thread upon cancellation of an operation that the thread was executing.
+                OutOfMemoryException 	The exception that is thrown when there is not enough memory to continue the execution of a program.
+                OverflowException 	The exception that is thrown when an arithmetic, casting, or conversion operation in a checked context results in an overflow.
+                PlatformNotSupportedException 	The exception that is thrown when a feature does not run on a particular platform.
+                RankException 	The exception that is thrown when an array with the wrong number of dimensions is passed to a method.
+                StackOverflowException 	The exception that is thrown when the execution stack overflows because it contains too many nested method calls.
+                SystemException 	Serves as the base class for system exceptions namespace.
+                TimeoutException 	The exception that is thrown when the time allotted for a process or operation has expired.
+                TimeZoneNotFoundException 	The exception that is thrown when a time zone cannot be found.
+                TypeAccessException 	The exception that is thrown when a method attempts to use a type that it does not have access to.
+                TypeInitializationException 	The exception that is thrown as a wrapper around the exception thrown by the class initializer. This class cannot be inherited.
+                TypeLoadException 	The exception that is thrown when type-loading failures occur.
+                TypeUnloadedException 	The exception that is thrown when there is an attempt to access an unloaded class.
+                UnauthorizedAccessException 	The exception that is thrown when the operating system denies access because of an I/O error or a specific type of security error.
+                UriFormatException 	The exception that is thrown when an invalid Uniform Resource Identifier (URI) is detected.
 
-            System.Data Exception
-            Exception 	Condition
-            ConstraintException 	Represents the exception that is thrown when attempting an action that violates a constraint.
-            DataException 	Represents the exception that is thrown when attempting an action that violates a constraint.
-            DBConcurrencyException 	Gets or sets the value of the DataRow that generated the DBConcurrencyException.
-            DeleteRowInaccessibleException 	Represents the exception that is thrown when an action is tried on a DataRow that has been deleted.
-            DuplicateNameException 	Represents the exception that is thrown when a duplicate database object name is encountered during an add operation in a DataSet -related object.
-            EvaluateException 	Represents the exception that is thrown when the Expression property of a DataColumn cannot be evaluated.
-            InRowChangingEventException 	Represents the exception that is thrown when you call the EndEdit method within the RowChanging event.
-            InvalidConstraintException 	Represents the exception that is thrown when incorrectly trying to create or access a relation.
-            InvalidExpressionException 	Represents the exception that is thrown when you try to add a DataColumn that contains an invalid Expression to a DataColumnCollection.
-            MissingPrimaryKeyException 	Represents the exception that is thrown when you try to access a row in a table that has no primary key.
-            NoNullAllowedException 	Represents the exception that is thrown when you try to insert a null value into a column where AllowDBNull is set tofalse.
-            OperationAbortedException 	This exception is thrown when an ongoing operation is aborted by the user.
-            ReadOnlyException 	Represents the exception that is thrown when you try to change the value of a read-only column.
-            RowNotInTableException 	Represents the exception that is thrown when you try to perform an operation on a DataRow that is not in a DataTable.
-            StrongTypingException 	The exception that is thrown by a strongly typed DataSet when the user accesses a DBNull value.
-            SyntaxErrorException 	Represents the exception that is thrown when the Expression property of a DataColumn contains a syntax error.
-            TypedDataSetGeneratorException 	The exception that is thrown when a name conflict occurs while generating a strongly typed DataSet.
-            VersionNotFoundException 	Represents the exception that is thrown when you try to return a version of a DataRow that has been deleted.
-             
-            System.IO Exception
-            Exception 	Condition
-            DirectoryNotFoundException 	The exception that is thrown when part of a file or directory cannot be found.
-            DriveNotFoundException 	The exception that is thrown when a drive that is referenced by an operation could not be found.
-            EndOfStreamException 	An EndOfStreamException exception is thrown when there is an attempt to read past the end of a stream.
-            FileFormatException 	The exception that is thrown when an input file or a data stream that is supposed to conform to a certain file format specification is malformed.
-            FileLoadException 	The exception that is thrown when a managed assembly is found but cannot be loaded.
-            FileNotFoundException 	The exception that is thrown when an attempt to access a file that does not exist on disk fails.
-            InternalBufferOverflowException 	The exception thrown when the internal buffer overflows.
-            InvalidDataException 	The exception that is thrown when a data stream is in an invalid format.
-            IOException 	The exception that is thrown when an I/O error occurs.
-            PathTooLongException 	The exception that is thrown when a path or file name is longer than the system-defined maximum length.
-            PipeException 	Thrown when an error occurs within a named pipe.
+                System.Data Exception
+                Exception 	Condition
+                ConstraintException 	Represents the exception that is thrown when attempting an action that violates a constraint.
+                DataException 	Represents the exception that is thrown when attempting an action that violates a constraint.
+                DBConcurrencyException 	Gets or sets the value of the DataRow that generated the DBConcurrencyException.
+                DeleteRowInaccessibleException 	Represents the exception that is thrown when an action is tried on a DataRow that has been deleted.
+                DuplicateNameException 	Represents the exception that is thrown when a duplicate database object name is encountered during an add operation in a DataSet -related object.
+                EvaluateException 	Represents the exception that is thrown when the Expression property of a DataColumn cannot be evaluated.
+                InRowChangingEventException 	Represents the exception that is thrown when you call the EndEdit method within the RowChanging event.
+                InvalidConstraintException 	Represents the exception that is thrown when incorrectly trying to create or access a relation.
+                InvalidExpressionException 	Represents the exception that is thrown when you try to add a DataColumn that contains an invalid Expression to a DataColumnCollection.
+                MissingPrimaryKeyException 	Represents the exception that is thrown when you try to access a row in a table that has no primary key.
+                NoNullAllowedException 	Represents the exception that is thrown when you try to insert a null value into a column where AllowDBNull is set tofalse.
+                OperationAbortedException 	This exception is thrown when an ongoing operation is aborted by the user.
+                ReadOnlyException 	Represents the exception that is thrown when you try to change the value of a read-only column.
+                RowNotInTableException 	Represents the exception that is thrown when you try to perform an operation on a DataRow that is not in a DataTable.
+                StrongTypingException 	The exception that is thrown by a strongly typed DataSet when the user accesses a DBNull value.
+                SyntaxErrorException 	Represents the exception that is thrown when the Expression property of a DataColumn contains a syntax error.
+                TypedDataSetGeneratorException 	The exception that is thrown when a name conflict occurs while generating a strongly typed DataSet.
+                VersionNotFoundException 	Represents the exception that is thrown when you try to return a version of a DataRow that has been deleted.
+                 
+                System.IO Exception
+                Exception 	Condition
+                DirectoryNotFoundException 	The exception that is thrown when part of a file or directory cannot be found.
+                DriveNotFoundException 	The exception that is thrown when a drive that is referenced by an operation could not be found.
+                EndOfStreamException 	An EndOfStreamException exception is thrown when there is an attempt to read past the end of a stream.
+                FileFormatException 	The exception that is thrown when an input file or a data stream that is supposed to conform to a certain file format specification is malformed.
+                FileLoadException 	The exception that is thrown when a managed assembly is found but cannot be loaded.
+                FileNotFoundException 	The exception that is thrown when an attempt to access a file that does not exist on disk fails.
+                InternalBufferOverflowException 	The exception thrown when the internal buffer overflows.
+                InvalidDataException 	The exception that is thrown when a data stream is in an invalid format.
+                IOException 	The exception that is thrown when an I/O error occurs.
+                PathTooLongException 	The exception that is thrown when a path or file name is longer than the system-defined maximum length.
+                PipeException 	Thrown when an error occurs within a named pipe.
 
 ~/Empire/Doks/Comp/lang/clangs/csharp/cheatsh-qref/csharp1.cheatsh.pdf
                 Visual C# 2005 Express Edition
@@ -23873,4 +24046,345 @@ Rad2
 Rad3
 
 
+- Question: I've used Vim a fair
+  bit in the past, but now I'm
+  using JetBrains Rider (and also
+  Visual Studio at least a bit) at
+  work. One thing that tends to
+  screw up my workflow (a fair bit
+  actually) is that whenever I 'Go
+  to implementation' and any of the
+  related functionalities (i.e. Go
+  to interface, Go to usages, etc),
+  at least Rider, but I think also
+  Visual Studio - at least as a
+  matter of default - wants to open
+  up all the files I'm visiting
+  along the way, which quickly
+  clutters up the file-list
+  enormously. I suspect there has
+  to be some setting in Rider where
+  one can turn off this behavior?
+
+You're absolutely right, this is a
+very common frustration for
+developers transitioning from Vim's
+more minimalist approach to modern
+IDEs like Rider and Visual Studio.
+They tend to aggressively open
+files, cluttering the tab bar and
+making it difficult to navigate.
+
+Rider Settings to Address This:
+
+Rider provides a few key settings
+to control this behavior:
+
+- "Preview Tab" (or "Preview in Single Tab"):
+
+This is the most crucial setting.
+It allows you to preview files in a
+single tab instead of opening a new
+tab for each.
+
+How to Enable:  ____
+
+- Go to Settings/Preferences ->
+  Editor -> Tabs.
+- Check the box for Enable preview
+  tab.
+- You can also configure if
+  double-clicking a file should
+  open it permanently.
+
+- "Scroll Tabs If Possible":
+
+This setting helps with the tab
+clutter by allowing the tab bar to
+scroll horizontally instead of
+shrinking the tabs.
+
+How to Enable:
+
+- Go to Settings/Preferences ->
+  Editor -> Tabs.
+- Check the box for Scroll tabs if
+  possible.
+
+- "Close Unmodified Files":
+
+Rider has an option to
+automatically close unmodified
+files after a certain period of
+inactivity.
+
+How to Enable:
+
+- Go to Settings/Preferences ->
+  Editor -> Tabs.
+- Check the box for Close
+  unmodified files after.
+- Set the inactivity time.
+
+- "Navigation History":
+
+While not directly preventing tab
+clutter, Rider's navigation history
+(Ctrl+Alt+Left/Right) is very
+helpful for quickly jumping back
+and forth between locations.
+
+Use this to quickly go back to the
+code you were working on.
+
+- "Find Usages" Settings:
+
+Rider's "Find Usages" has settings
+that can help control how results
+are displayed.
+
+- Right click on the find usages
+  results window, and explore the
+  different settings.
+
+Visual Studio Settings (Similar Concepts):
+
+Visual Studio has similar concepts,
+though the exact wording might
+differ:
+
+- "Preview Tab" (or "Preview Selected Files"):
+
+Visual Studio also has a preview
+tab feature.
+
+Click the "Preview Selected Files"
+button in the Solution Explorer
+toolbar.
+
+- "Navigation History":
+
+Visual Studio's navigation history
+(Ctrl+-/Ctrl+Shift+-) works
+similarly to Rider's.
+
+- "Find All References" Settings:
+
+Visual studio also has settings to
+configure the results window for
+find all references.
+
+Workflow Recommendations:
+
+- Embrace Preview Tabs: This is the
+  most effective way to address the
+  tab clutter issue.
+- Use Navigation History: Get
+  comfortable with the navigation
+  history shortcuts.
+- Close Tabs Regularly: Don't be
+  afraid to close tabs that you're
+  no longer using.
+- Utilize "Find Usages" Settings:
+  Customize the Find Usages window
+  to suit your needs.
+- Use Bookmarks: Bookmarks
+  (Ctrl+Shift+Number) can be
+  helpful for marking important
+  locations.
+
+____
+TODO: TEST GLOBAL MARKS = WORKS
+
+By adjusting these settings and
+adopting these workflow practices,
+you can significantly reduce tab
+clutter and improve your navigation
+experience in Rider and Visual
+Studio.
+
+
+- Great. And, on the other hand,
+  Vim is (in another and very good
+  respect) not a very minimalist
+  editor, in that it has a separate
+  buffer-list, and a separate
+  args-list (as well as quicklist
+  (or something similar) and
+  location-list. Being used to and
+  using those different features to
+  good effect can make even Rider
+  seem quite primitive. Is there
+  functionality in Rider that
+  emulates or can replace at least
+  parts of the functionality of
+  those features in Vim=
+
+You've hit on a core difference in
+philosophy between Vim and modern
+IDEs like Rider. Vim's buffer,
+argument, quickfix, and location
+lists provide a level of
+fine-grained control that, at
+first, seems absent in IDEs.
+However, Rider does offer features
+that can emulate or replace much of
+that functionality, albeit in a
+different way.
+
+Let's break down each Vim feature
+and its Rider equivalent:
+
+- 1. Vim Buffers vs. Rider Tabs and Navigation:
+
+- Vim Buffers: Vim's buffers are
+  independent entities that hold
+  file content. You can have many
+  buffers open without them being
+  visible in the window.
+- Rider Tabs: Rider uses tabs to
+  represent open files. As
+  discussed earlier, you can
+  control tab behavior with
+  preview-tabs and scrolling.
+- Rider Navigation: Rider's
+  navigation-features are powerful
+  replacements for Vim's
+  buffer-management:
+
+- "Recent Files" (Ctrl+E): Quickly
+  switch between recently opened
+  files.
+- "Recent Locations"
+  (Ctrl+Shift+E): Jump to recently
+  edited locations.
+- "Go to File" (Ctrl+Shift+N):
+  Search for files by name.
+- "Go to Symbol"  ____
+  (Ctrl+Alt+Shift+N): Search for
+  symbols (classes, methods, etc.).
+- "Navigation History"
+  (Ctrl+Alt+Left/Right): Navigate
+  backward and forward in your
+  editing history.
+- "Bookmarks" (Ctrl+Shift+Number):
+  Quickly navigate to specific
+  parts of code.
+
+Rider Solution Explorer: The
+solution explorer also provides a
+good overview of all the files in
+your project.
+
+- 2. Vim Argument List vs. Rider
+  Solution Explorer and Scopes:
+
+Vim Argument List: The argument
+list allows you to specify a list
+of files to work with, often using
+wildcards.
+
+- Rider Solution Explorer: The
+  solution explorer effectively
+  replaces the argument list by
+  providing a hierarchical view of
+  your project files.
+
+____
+- Rider Scopes: Rider's scopes
+  allow you to define custom sets
+  of files for searching,
+  refactoring, and other
+  operations. This is a more
+  powerful and flexible version of
+  Vim's argument list.
+
+  - You can define scopes based on
+    file paths, patterns, or other
+    criteria.
+  - Scopes are used in "Find
+    Usages," "Refactor This," and
+    other features.
+
+Search Everywhere: Rider's "Search
+Everywhere" (Double Shift) with
+file filters can also be used to
+search in a set of files that match
+a specific pattern.
+
+- 3. Vim Quickfix/Location Lists
+  vs. Rider "Find Usages," "Find in
+  Files," and "Problems" Tool
+  Windows:
+
+Vim Quickfix/Location Lists: These
+lists store the results of commands
+like grep, compiler errors, and
+search results.
+
+____
+- Rider "Find Usages" (Alt+F7):
+  This provides a powerful way to
+  find all usages of a symbol. The
+  results are displayed in a tool
+  window that you can navigate.
+- Rider "Find in Files"
+  (Ctrl+Shift+F): This allows you
+  to search for text in your
+  project files. The results are
+  displayed in a similar tool
+  window.
+- Rider "Problems" Tool Window:
+  This window displays compiler
+  errors, warnings, and other
+  issues.
+  - It's a more integrated and
+    user-friendly version of Vim's
+    quickfix list.
+
+Rider "Search Everywhere" (Double
+Shift): This can also be used to
+search for text and symbols across
+your project.
+
+Emulation Strategies:
+
+- Keyboard Shortcuts: Learn and use
+  Rider's keyboard shortcuts
+  extensively. This will
+  significantly improve your
+  navigation speed.
+- Tool Windows: Get comfortable
+  with Rider's tool windows
+  (Solution Explorer, Find Usages,
+  Problems, etc.). These are
+  essential for navigating and
+  managing your code.
+- Scopes: Explore and use Rider's
+  scopes to define custom file
+  sets.
+- Search Everywhere: Use "Search
+  Everywhere" to quickly find
+  files, symbols, and text.
+- Live Templates: Rider's live
+  templates can be used to generate
+  code snippets, similar to Vim's
+  abbreviations and mappings.
+
+Key Differences:
+
+Integrated vs. Separate: Rider's functionality is more integrated into the IDE, while Vim's features are more separate and command-line driven.
+GUI vs. Text-Based: Rider is a GUI-based IDE, while Vim is a text-based editor.
+
+While Rider doesn't perfectly
+replicate Vim's buffer and list
+management, it provides powerful
+and flexible alternatives that can
+significantly improve your
+workflow. By embracing Rider's
+features and adapting your
+workflow, you can leverage the
+power of a modern IDE while
+maintaining the efficiency you're
+accustomed to in Vim.
 
