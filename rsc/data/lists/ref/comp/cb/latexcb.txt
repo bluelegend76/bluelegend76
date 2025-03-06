@@ -1,5 +1,5 @@
 vim:fdm=indent:fdl=2:
-set foldmethod=indent foldlevel=2
+set fdm=indent fdl=2 guifont=*
 
 PowerPoint
 LOffice Impress

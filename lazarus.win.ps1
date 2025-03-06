@@ -614,20 +614,19 @@ Start-Process -FilePath ".\veracrypt_setup.exe"
 # If you run into any specific errors, please provide the error messages, and I'll do my best to help you troubleshoot.
 
 
-# Getting Windows Accessible to WSL ----
-# Restart WSL Service:
-# 
-# Open PowerShell as administrator and run: Restart-Service LxssManager
-# 
-# Shutdown and Restart WSL:
-# 
-# In PowerShell, run: wsl --shutdown
-# Wait a few seconds, then open your WSL distribution again.
-# 
-# Check WSL Configuration:
-# 
-# Open your WSL distribution.
-# 
+### Getting Windows Accessible to WSL ----
+### Restart WSL Service:
+### 
+### Open PowerShell as administrator and run: Restart-Service LxssManager
+### 
+### Shutdown and Restart WSL:
+### 
+### In PowerShell, run: wsl --shutdown
+### Wait a few seconds, then open your WSL distribution again.
+### 
+### Check WSL Configuration:
+### 
+### Open your WSL distribution.
 # Edit the /etc/wsl.conf file (create it if it doesn't exist): sudo nano /etc/wsl.conf
 # 
 # Add the following lines:

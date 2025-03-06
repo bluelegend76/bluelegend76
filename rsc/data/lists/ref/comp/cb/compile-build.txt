@@ -4,12 +4,12 @@ __
 
 gcc
 cmake
+Dotnet
+    https://learn.microsoft.com/en-us/dotnet/core/tools/ __ __
 Dune
 Clj|Deps
     https://clojure.org/guides/deps_and_cli
 leiningen
     https://leiningen.org/
     https://leiningen.org/tutorial.html
-Dotnet
-    https://learn.microsoft.com/en-us/dotnet/core/tools/ __ __
 

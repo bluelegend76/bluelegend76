@@ -798,30 +798,21 @@ set fdm=indent fdl=5
                             event.key == "+": Checks if the pressed key is the + key.
                             mp.set_property("speed", 2): Sets the playback speed to 2.
                             Loading the Script:
-
                     To load this script in mpv, use the load-script command:
-
                     load-script my_script.lua
-
                             Replace my_script.lua with the actual filename of your script.
-
                     More Interesting Ideas for Lua Scripts ----
-
                             - Custom hotkeys: Create custom keybindings for various actions, such as toggling subtitles, adjusting volume, or jumping to specific points in a video.
                             - Automating tasks: Automate repetitive tasks, such as renaming files based on metadata or creating playlists from specific directories.
                         - Integrating with other applications: Interact with other applications using Lua's capabilities. For example, you could control mpv from a custom GUI or integrate it with a music streaming service.
                         - Customizing the interface: Create custom overlays, skins, or themes to personalize your mpv experience.
                         - Adding new features: Implement new features that aren't built into mpv by default, such as advanced subtitle options or custom video filters.
-
                     Additional Tips ----
-
                             - Explore the mpv API: The mpv API provides a wide range of functions and properties that you can use in your scripts.
                             - Use a linter: A Lua linter can help you identify errors and improve your code quality.
                             - Test your scripts thoroughly: Make sure your scripts work as expected before using them regularly.
                             - By experimenting with Lua scripts, you can unlock the full potential of mpv and create a customized media player experience that suits your needs.
-
                     - Let's say I wanted to play a certain video file cropped to certain dimensions.
-
                             There are a few ways to crop a video file in mpv:
 
                             1. Using the crop option:
@@ -839,9 +830,7 @@ set fdm=indent fdl=5
                             The geometry option allows you to specify the size and position of the video within the display window. You can use it to crop the video by setting the width and height to the desired dimensions and adjusting the x and y coordinates to position the cropped area.
 
                             For example, to crop a video to 800x600 pixels starting from the top-left corner:
-
                     mpv --geometry=800x600+0+0 file.mp4
-
                             - 3. Using the scale option:
 
                             The scale option can be used to scale the video to a specific size. While it doesn't directly crop the video, you can use it in conjunction with the geometry option to achieve a similar effect.
@@ -855,10 +844,7 @@ set fdm=indent fdl=5
                             - You can use the --video-out-aspect option to specify the aspect ratio of the output video. This can be useful for maintaining the original aspect ratio when cropping.
 
                             By experimenting with these options, you can find the best way to crop your video files to your desired specifications.
-
-
                     - Could I use teal and fennel when I develop my Lua-scripts for mpv?  # +Moonscript[!!]
-
                             Yes, you can definitely use Lua Teal and Fennel to develop mpv scripts. Both languages offer unique advantages and can be a great choice for writing mpv scripts.
 
                             - Lua Teal:

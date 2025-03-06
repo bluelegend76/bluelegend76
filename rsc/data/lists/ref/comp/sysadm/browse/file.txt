@@ -1,5 +1,5 @@
 vim:fdm=indent:fdl=2:
-set fdm=indent syn= fdl=2 guifont=* | colors solarized8_dark_high
+set fdm=indent syn= fdl=2 guifont=* | colors ron
 ___zzzz
 
 TODO: NEW FILE = WM:s [*****]
