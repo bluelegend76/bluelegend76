@@ -213,10 +213,11 @@ XFCE4  TODO: SET WINCOMMANDS-TRIGGER TO WIN-KEY
 Fluxbox
 
 WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
-          highlight mouse-pointer  dclick left control
+        highlight mouse-pointer  dclick left control
         quicklink-menu  w-x ----
         Launch PowerShell (with Admin. privileges)  w-x a  __
-        task manager  w-x t
+        START WINTERMINAL AS ADMINISTRATOR  w/w-r wt + cs-Enter  __ __
+        task manager  w-x t / ca-del
         quickshutdown computer  w-x u u
           restart computer  w-x u r
         [+system, power-options, network-connections, disk-management (etc ...)]

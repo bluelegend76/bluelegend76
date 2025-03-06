@@ -377,6 +377,10 @@ Förfarande/Tillvägagångssätt: 'Utveckla i Lanes'
     mpv --start=00:12:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
 
 Förfarande/Tillvägagångssätt: 'Jobba per lager'
-    = Skissa ut t.ex. alla Controllers först
+    = Skissa ut t.ex. alla Controllers först (=parallellt)
     mpv --start=00:12:12 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
+
+
+___Gemini
+A very quick question: I have a directory packed with different vim color-schemes 
 

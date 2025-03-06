@@ -6,32 +6,29 @@
 - [ ] May want to split into several repos (config.core, Reflists, aux)
   i.e. to avoid dir-size bloat (=makes it easier to clone down to Android)
 ~~- [ ] Reformat External Drives to ExFAT~~
-- [ ] **Try-out new Vim-Colors**
-- [ ] *Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc*  __
+- [ ] **Try-out new Vim-Colors  [Solution: Point Color-Option to Pack2-Dir]**
+- [ ] *Add searching for Empire-style mark-tags (\a@) to _vimrc/.vimrc*  _
 -----
 - [ ] Reactivate "Connect Ext4-Drives" in Windows 11
 
 ## Reflists ----
-## INCLUDE CORRECT PDF-REFS FOR GREGG SHORTHAND[!!!!]
 ### **Trinity/Gordian Knot-Suite to Empire-Refs(??)**  __=
   - [ ] "Can you tell/transmit to me why this/X is bunk?"
-## **TODO: Add ALL(!) Relevant At-Reflists to GitHub Config Repo**
+## **TODO: Add ALL(!) Relevant At-Reflists to GitHub Config Repo**  __ __
 - **To Add**:
-## - [ ] **cppDlang to refs(etc)-Dashboard**
+## - [ ] **cppDlang to refs(etc)-Dashboard**  __
 # WebDev / Mobile
-- [ ] Basic Sectioning-Up of 'Forums Stora' (=vim jumpmarks for the major sections of the book)
+- [ ] Basic Sectioning-Up of 'Forums Stora' (=vim jumpmarks for the major sections of the book)  _
 
 ----
-  **Add Greggrefs(pdf) + setup for GVim(windows)
 **LANGREFS (en, sv, dan|isl|Lat |Gre)**  __=2
 - [ ] Add C#-style Regex list
 - [ ] TODO: ADD PERLSTYLE REGEX PDF-REF
 ----
-- [ ] Add FreeCommander accelerator-keys(!)
 
 ## lazarus.win.ps1:
 - [ ] **Auto-Linking of config-files to Windows-directories**  __=2
-## Vim on Windows (colors, spell, etc)
+## Vim on Windows (colors, spell, etc)  __
 - Files to link in:
   - (.bashrc)
   - qwerty2svorak/svorak2qwerty.ahk
@@ -45,16 +42,15 @@
 - Adding preferred programs for filetypes (to Windows Registry)
 ----
 - [ ] Construct AHotKey Svorak script (+'reverser')
+- [ ] ahk: Freely Resize Windows-window  _
   - Pre: Construct flat list qwerty-keys complete [**]
 ----
-- [ ] Test Thumbdrive (on/for Win)
  
 ## lazarus.arch.sh:
-- CHANGE CONFIGS (ETC) TO USE GITHUB/BLUELEGEND76  __=
-- [ ] **Change Xfce window-handling key to Win-key**  __
+- CHANGE CONFIGS (ETC) TO USE GITHUB/BLUELEGEND76  _=
+- [ ] **Change Xfce window-handling key to Win-key**  _
 
 ## Playlists.Perform  __=1
 Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]
-  - Every Breath You Take, Smoke on the Water
-  - Incestvisan, Stjärnan och Karriären
+  - More SimplePieces (+quicklinks to Dashboard)
