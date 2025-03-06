@@ -653,30 +653,34 @@ dft curr 2023 {{{
 
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
-TC CORE READTHROUGH + THE WIKI[!!]
-  CLEAN UP TC UPDATER TASK-NOTES
-CLEAN UP NEW DOTNETCORE-DOKS
+TC CORE READTHROUGH + THE WIKI[!!]  __
+          CLEAN UP TC UPDATER TASK-NOTES
+CLEAN UP NEW DOTNETCORE-DOKS  __
 C# DotNet Core MVC + Blazor  [+Avalonia]  Cs Funct 3
-    Puppet Patterns(etc)
-    FuncPy  [___Renskriv]
-MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]
-    JuPyter/Polyglot(?) Notebooks (etc)
-F# - TOCs + Concepts,  Fabulous
+    Puppet Lang + Patterns(etc)
+    FuncPy  [_Renskriv_]  __  Py SystemAdmin
+    Nushell  _
+    Choco (+Puppet) + PowerShell (+AutoHotKeys)
+'linuxcommands core' [=Gemini-Q]
+MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _
+    JuPyter/Polyglot(?) Notebooks (etc)  __
+F# - TOCs + Concepts,  Fabulous  _
 Bash/Dash-Mans
-XUnit Patts
-Roslyn + Analysis/CodeGen
-SSH (Veracrypt)  + Puppet
+XUnit Patts  __
+Roslyn + Analysis/CodeGen  __
+SSH (Veracrypt)  + Puppet  __
     Nix Master
-Devops + Python (+iPy/Xonsh) ; F# Devops
+Devops + Python (+iPy/Xonsh) ; F# Devops  _
+  Vim PyPlugins  __ | Vimscript (x2)
+LEARN REACT  [__]
 
 Bcb, Bluebash + PShell,  ASM 1 (+binalys)
-Docker + Kubernetes + Azure Devops + GithubActions
-    Gremlin (+Neptune)
-    Nushell
-    Choco (+Puppet) + PowerShell (+AutoHotKeys)
+Docker + Kubernetes + Azure Devops + GithubActions  __
+    Gremlin (+Neptune)  _
   ----  Anki Redone
     Arch Linux
-Music With JavaScript *
+
+Music With JavaScript *  __
 Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
   Reason + PureScript  ___onroad=maybye
@@ -709,16 +713,22 @@ A{VipJgv:s/[^ ],b ,e[^ ]//g
 Vtouch-Vanki  '1.0-Refactor' (+Docs)
 
 cd ~/gdrive
-rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
-rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
-rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
+----
+gvim rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
+rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.txt
+    rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
+    rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
+    rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
+CHANGE TO GDRIVE: gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
+  ----
+  Termux
 
 ~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
 ../todo/MasterlistDownload-onedeepmans-online.txt  # Win
   # GitExtensions:  https://git-extensions-documentation.readthedocs.io/en/release-5.1/
 
 gvim `find ~/gdrive/rsc/Doks/taskuj/ -type f -name '*.txt' 2>/dev/null`
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
 
 ~/Empire/Doks/Comp/lang/webdev/js/jsjsoncb_2015.txt
 gvim ~/Empire/Doks/Comp/mu/au/csound/{CsoundBook,csoundqt,csound-virtualsoundprocess_2000}.txt
@@ -783,9 +793,6 @@ Bash-Man / YT-DL Cleaning
   ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002.Tags1.txt
     /home/bluelegend/Empire/Doks/Comp/sysadm/lin/unixworkbench_2017.txt
     [Unix PowerTools]
-  gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
-  ----
-  Termux
 
     gvim ~/Empire/Doks/Comp/{lang/webdev/js/ffox/ffox-hacking_2005,lang/webdev/js/ffox/ffox-progr_2007,gui-wtoolkits/jsmonkey/hack.greasemonk_2006,gui-wtoolkits/jsmonkey/greasemonkey_2005}.txt
 
