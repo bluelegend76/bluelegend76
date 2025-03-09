@@ -658,13 +658,13 @@ TC CORE READTHROUGH + THE WIKI[!!]  __
 CLEAN UP NEW DOTNETCORE-DOKS  __
 C# DotNet Core MVC + Blazor  [+Avalonia]  Cs Funct 3
     Puppet Lang + Patterns(etc)
-    FuncPy  [_Renskriv_]  __  Py SystemAdmin
+    FuncPy  [_Renskriv_]  __  Py/F# SysAdmin
     Nushell  _
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
 'linuxcommands core' [=Gemini-Q]
 MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _
     JuPyter/Polyglot(?) Notebooks (etc)  __
-F# - TOCs + Concepts,  Fabulous  _
+F# - TOCs + Concepts,  Fabulous (Fable, Suave)  _
 Bash/Dash-Mans
 XUnit Patts  __
 Roslyn + Analysis/CodeGen  __
