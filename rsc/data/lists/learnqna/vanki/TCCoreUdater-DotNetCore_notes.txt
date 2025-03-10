@@ -14,10 +14,10 @@ mpv ~/Empire/video/instructional/LIA2/Peter-L-20250227_{102445,111046,132732}.mp
 video 1 (00:30:00)
     mpv --start=00:13:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_102445.mp4 &
 ----
-video 1 (00:55:00)
+video 2 (00:55:00)
     mpv --start=00:01:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_111046.mp4 &
 
-video 1 (01:35:00)
+video 3 (01:35:00)
     mpv --start=00:02:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
 
 TODO: INSTALL GITHUB COPILOT FOR VISUAL STUDIO[!!]
@@ -380,7 +380,8 @@ Förfarande/Tillvägagångssätt: 'Jobba per lager'
     = Skissa ut t.ex. alla Controllers först (=parallellt)
     mpv --start=00:12:12 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
 
+'Du behöver inte skapa nya grejer = Du säger bara att du vill ha dem'
+    mpv --start=00:01:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4 &
 
-___Gemini
-A very quick question: I have a directory packed with different vim color-schemes 
+    mpv --start=00:02:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4 &
 
