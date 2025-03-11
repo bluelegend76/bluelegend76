@@ -4,13 +4,14 @@ set fdm=marker syn= guifont=* | colors ron
     'För att bättre förstå om vad som influerat flera klassiska kompositörer'
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
         N-teatern/Nationalsånger 2
-
 TODO ADD 1 = STARTUPS 1 {{{
 
 Vanki LearnQna ----
   ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
 
 ~/Desktop/Scratch.txt
+
+^[^:]\+:
 
 
 
@@ -28,6 +29,38 @@ System (incl. C#):
 
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+}}}
+Scratch-Area {{{
+  Could you help me generate XML-comment documentation for this interface?
+  Could you help me generate XML-comment documentation for the piece of code I have highlighted?
+
+to weblinks {{{
+
+    https://tmhe.omniacloud.net/_/tmhms/sv-se/news/att-bemastra-konsten-att-skapa-ai-promptar-fem-viktiga-tips-for-framgang
+
+Att bemästra konsten att skapa AI-promptar: Fem viktiga tips för att lyckas
+Även om TMHE ännu inte använder Microsoft 365 Copilot i alla Microsoft Office-appar, utnyttjar vi Microsoft Copilot Chat i Edge (webbläsare) till fullo.
+Detta tillvägagångssätt gör att vi kan träna vår TMHE AI säkert med företagsinformation. Även om resultaten måste kopieras och klistras in manuellt från där du arbetar, säkerställer detta att våra interaktioner förblir säkra. Genom att fokusera på robusta säkerhetsåtgärder lägger vi grunden för en framtida utrullning av Microsoft 365 Copilot. 
+
+Att låsa upp AI:s fulla potential börjar med att bemästra konsten att skapa promptar. Oavsett om du är ny på AI eller vill finslipa dina färdigheter, kommer tipsen nedan att guida dig i att skapa promptar som är specifika, har kontext och är öppna, vilket leder till mer meningsfulla interaktioner. Utforska och upptäck hur du kan iterera, finslipa och hålla dina promptar koncisa för bästa resultat.
+
+Var specifik: Definiera tydligt vad du frågar efter. Ju mer detaljerad din prompt är, desto bättre blir svaret. 
+Använd kontext: Ge bakgrundsinformation för att hjälpa till att styra svaret. 
+Ställ öppna frågor: Uppmuntra detaljerade svar genom att formulera dina promptar som öppna frågor.
+Iterera och finslipa: Experimentera med olika formuleringar och justera baserat på den feedback du får. 
+Håll det kortfattat: Håll dina promptar fokuserade och till punkt för att undvika förvirring.
+Här är några exempel som följer tipsen ovan:
+
+Enkel prompt: “Berätta om truckar.”
+
+Lägg till specificitet: "Förklara fördelarna med att använda gaffeltruckar i tillverkning."  
+Ge kontext: “Förklara fördelarna med att använda truckar i tillverkning och deras påverkan på effektivitet.
+Ställ öppna frågor: “Kan du beskriva fördelarna med att använda truckar i tillverkning, deras påverkan på effektivitet och hur de bidrar till hållbarhet?” 
+Iterera och finslipa: “Kan du beskriva fördelarna med att använda truckar i tillverkning, deras påverkan på effektivitet, hur de bidrar till hållbarhet och föreslå sätt att förbättra gaffeltruckstekniken?”
+Håll det kortfattat: “Beskriv fördelarna med truckar i tillverkning, deras påverkan på effektivitet och hållbarhet, och möjliga förbättringar.”
+Håll utkik efter vår serie om hur du får ut det mesta av Microsoft 365!
+}}}
+
 }}}
 
 

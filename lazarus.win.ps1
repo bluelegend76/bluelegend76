@@ -158,7 +158,6 @@ choco install azure-cli -y
 # C:\Users\SEDAALB2>
 # TODO: LINK IN VIM COLOR-SCHEMES (AND SPELLING DICTIONARIES ETC)
 cd ~
-
 New-Item -ItemType SymbolicLink -Path .\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Target .\RiderProjects\bluelegend76\ms-winterminal\settings.json
 New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\_vimrc
   # New-Item -ItemType SymbolicLink -Path _vimrc -Target .\RiderProjects\bluelegend76\.winvimrc

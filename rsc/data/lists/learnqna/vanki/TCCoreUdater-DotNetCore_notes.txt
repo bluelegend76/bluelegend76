@@ -296,7 +296,7 @@ mpv --start=00:16:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-2025022
 {{{
     = Ändra namn på ett ställe
 
-    + 'Pyramiden' = Apply name-refactoring
+    +'Pyramiden' = Apply name-refactoring
     --
     mpv --start=00:37:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
     mpv --start=00:37:00 --speed=1.65 ~/Empire/video/instructional/LIA2/Peter-L-20250227_132732.mp4 &
@@ -384,4 +384,90 @@ Förfarande/Tillvägagångssätt: 'Jobba per lager'
     mpv --start=00:01:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4 &
 
     mpv --start=00:02:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4 &
+
+Returvärdet (av typen ActionResult) = returnera en model  + Alla Http-requests ska inkludera en Http-status-kod (för att indikera hur det har gått)
+    mpv --start=00:51:40 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4 &
+
+    mpv --start=00:02:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4 &
+
+
+Testing the InstallSelectedPackage in UpdaterWebAPI.Controllers
+    Run (will/should activate the Swagger site/page)
+    [http if https not working; +remove bin, obj, .vs and maybe extra backupfiles, if not working]
+    (??) mpv --start=00:12:12 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4
+        + Testproj.Console
+___ERIK_TISDAG
+
+I this.BadRequest() kommer vi kunna stoppa in felmeddelanden mm
+    mpv --start=00:20:45 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
+
+"Just nu gör InstallSelectedPackage ingenting, så vi ska anropa 'den underliggande klassen' =InstallerHelper (=InstallationHandler?)  @
+    mpv --start=00:20:45 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4
+----
+= Helpern/Handlern ska:
+- hitta filen
+- öppna filen
+- köra filen
+- vänta på att filen blir färdig
+- ta hand om resultatet som kommer tillbaka
++ returnera resultatet tillbaks till Helper/Handler
+
+
+'Två ytterligare abstraktionslager'
+Tack vare DI behöver vi inte uttryckligen skapa instanser av ol. services vi vill kunna använda/ha tillgång till  @
++ 'Jag tror vi behöver stoppa in ytterligare ett lager mellan Controller och Handler
+(=eftersom: Controllern inte ska behöva hämta saker, t.ex. plocka fram filnamn mm åt oss)  ___Hm
+    mpv --start=00:00:20 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Nu behöver vi instantiera Helpern/'Handlern' (+ i.o.m. att vi anv. DI så görs detta i konstruktorn)  @)
+    mpv --start=00:01:45 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Ref för saker som behöver tas med i konstruktorn (=null-check mm)  !!?
+    mpv --start=00:10:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Istället för att ha en InstallationHandler ska vi ha en InstallationService  ('som kan ta ____') =????
+    mpv --start=00:13:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Vi stoppar in InstallationHandler i InstallationService istället
+Klassen InstallationService (som implementerar IInstallationService) ska vara public
+  + privata medlemsvariabeln installationHandler ska ha IInstallationHandler som typ
+++Lägga till logger (som privat medlemsvariabel)
+typ = ILogger<InstallationService>
+    mpv --start=00:16:25 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Skapa konstruktor (=med DI) för InstallationService
+    mpv --start=00:22:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+ApplicationsController (=Luddigt/Oklart namn?)
+  turn off 'scrollbars' in visual studio
+
+'Då behöver vi (för InstallSelectedPackage i ApplicationsController)'  ___Hm
+    mpv --start=00:32:45 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+För GetRemotePackagesIndex + GetInstalledPackagesIndex
+    PackageService el. liknande
+    mpv --start=00:43:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+"Det viktiga är inte att bygga dem fullt ut, utan att skapa dem, och att de har vettiga in-parametrar med sig"
+
+Bygga Install (i klassen InstallationService)
+    mpv --start=00:53:40 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+SAKER SOM BEHÖVER GÖRAS MED APPLICATION-INFORMATION I INSTALL-METODEN
+    mpv --start=00:57:35 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+[VI BEHÖVER GÖRA NÅN TYP AV ARBETE MED KLASSER  SOM KAN RETURNERA FILNAMN ÅT InstallationService-METODEN]  ___Hm
+    mpv --start=00:57:35 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+(tanken är att) 'Vi kommer ha en klass som är ansvarig för filerna som ska installeras = Att de laddas ner, var de sparas nånstans, har hand om hur filnamnen hanteras' (och från den klassen kommer vi be att få filnamnet)  [+där kommer finnas logik för vilka filer som finns, vilken är den senaste versionen  + den klassen kommer ha en metod som returnerar ett filnamn]
+    mpv --start=00:59:40 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+????
+    mpv --start=01:01:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Att utföra Parse (med TryParse) = Ska göras/Bättre att lägga i Controllern
+    mpv --start=01:12:00 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
+
+Lägg till Xml-kommentarer på allt  + i ApplicationsController  (****!!)
+    mpv --start=01:28:30 --speed=1.65 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
 
