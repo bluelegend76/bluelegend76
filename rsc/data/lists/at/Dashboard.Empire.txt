@@ -98,7 +98,10 @@ LangsDb.legacy ----
   }}}
 
 ## 'Gordian Knot/Trinity-Suite'
-##   (belief and morality, models and theory, knowledge (and soundness))
+    . {{{
+##   (belief and morality; models and theory; knowledge, action (and soundness))
+        they don't say they know; they say they believe(=gotcha)
+    }}}
 
 ../todo/MasterlistDownload-onedeepmans-online.txt
 c:/Users/SEDAALB2/Desktop/Scratch.txt
@@ -686,13 +689,14 @@ dft curr 2023 {{{
 
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
+    ANDROID SCRIPTING/PROGRAMMING
 TC CORE READTHROUGH + THE WIKI[!!]  __
           CLEAN UP TC UPDATER TASK-NOTES
 CLEAN UP NEW DOTNETCORE-DOKS  __
 C# DotNet Core MVC + Blazor  [+Avalonia]  Cs Funct 3
     Puppet Lang + Patterns(etc)
     FuncPy  [_Renskriv_]  __  Py/F# SysAdmin
-    Nushell  _
+    Nushell, Xonsh  _
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
 'linuxcommands core' [=Gemini-Q]
 MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _
@@ -705,6 +709,7 @@ SSH (Veracrypt)  + Puppet  __
     Nix Master
 Devops + Python (+iPy/Xonsh) ; F# Devops  _
   Vim PyPlugins  __ | Vimscript (x2)
+Reason + PureScript  ___onroad=maybye
 LEARN REACT  [__]
 
 Bcb, Bluebash + PShell,  ASM 1 (+binalys)
@@ -716,7 +721,6 @@ Docker + Kubernetes + Azure Devops + GithubActions  __
 Music With JavaScript *  __
 Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
-  Reason + PureScript  ___onroad=maybye
 }}}
 office.Overview [2]  # write summary|overview {{{
   iPython(*)
@@ -746,8 +750,33 @@ A{VipJgv:s/[^ ],b ,e[^ ]//g
     ~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
     ../todo/MasterlistDownload-onedeepmans-online.txt  # Win
 Rush/Overview Doks-List[!!] {{{
+    Reveal, Impress
+    . {{{
+      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
+      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
+
+      ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt
+      --
+      ~/Empire/graf/imprjs.txt
+      ~/Empire/graf/pr/imprjs.txt
+      ~/Empire/Comp/lang/webdev/imprjs_aux.txt
+      ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
+    }}}
+  Spectre Console
+  . {{{
+    ~/gdrive/SpectreConsole.tags1.txt
+  }}}
   ASP.NET CORE MVC (++Web APIs)
+  . {{{
+    gvim rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
+        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
+        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
+        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
+  }}}
   ...tagged... {{{
+
+## ~/gdrive/rsc/Doks/scratch/pshell/Win10keysdef.tags.txt
+~/gdrive/gambitscm-smallefficientnativeapps.tags1.txt
 
 ~/Dropbox/rsc/aubooks/comp/shotwell-man.tags.txt
 ~/Dropbox/rsc/aubooks/comp/thunar-man.tags.txt
@@ -755,7 +784,6 @@ Rush/Overview Doks-List[!!] {{{
 ~/Dropbox/rsc/aubooks/comp/id3_easytag-vim-id3t-eyeD3.tags.txt
 ~/Dropbox/rsc/aubooks/comp/dolphin-man.tags.txt
 ~/Dropbox/rsc/Doks/PRIO/graphdbs.tags1.txt
-~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/scm/lydoc03-extend.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/py3aut.Tags2.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/py3aut.tags1.txt
@@ -823,28 +851,26 @@ Rush/Overview Doks-List[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
   FuncPy
+  . {{{
+    ~/gdrive/FuncPy.binder.Tags1.txt
+  }}}
   JupNotebooks
     datawrangl {{{
         ~/gdrive/rsc/Doks/taskuj/Misc/datasci/pydatawrangl-clean_2022.txt
         ~/gdrive/rsc/Doks/phone/Comp/datasci/py/pydatawrangl-clean_2022.txt
     }}}
   MLEARN(+)
+  CHANGE TO GDRIVE: gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
     vim pyplugins
-}}}
+  Termux
+      Graph, MSAL
 
-Vtouch-Vanki  '1.0-Refactor' (+Docs)
+rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.txt
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
+}}}
 
 cd ~/gdrive
 ----
-gvim rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
-rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.txt
-    rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
-    rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
-    rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
-CHANGE TO GDRIVE: gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
-  ----
-  Termux
 
   # GitExtensions:  https://git-extensions-documentation.readthedocs.io/en/release-5.1/
 
