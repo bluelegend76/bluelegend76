@@ -3,6 +3,9 @@ set fdm=marker syn= guifont=* | colors ron
     Queen
     'För att bättre förstå om vad som influerat flera klassiska kompositörer'
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
+.'MIN TAGGIGA STOL' {{{
+  Vad som hänt är att jag har blivit - misshandlad, rånad, utnyttjad och förnedrad (av - skolan, klassen, utb.företaget)  (+Varför håller du på och ältar det där? Bara släpp det.)
+}}}
         N-teatern/Nationalsånger 2
 TODO ADD 1 = STARTUPS 1 {{{
 
@@ -723,6 +726,7 @@ Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
 }}}
 office.Overview [2]  # write summary|overview {{{
+Spectre Console
   iPython(*)
   Xonsh
   CsRx 3, Rx.Net;  Csharp Tips (etc)
