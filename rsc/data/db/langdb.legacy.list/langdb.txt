@@ -5,6 +5,16 @@ ___block3(=words)
 __lang(1-4: de,fr,es,ru)
 ___block2(=word-categories)
 
+GDRIVE: TY|RY, jp, Fra
+--------
+EN, SV
+  lat(+gre), da, isl,  nl 
+#de, #ry, es, #fra, #jp, kin, ar
+#ukr, irl, malay  [tur]
+    fars, hin, 
+    copt, maor, nyung
+        navajo, cree, lakota
+
 duolingo (etc):
 jp
 de, fr, (es), nl

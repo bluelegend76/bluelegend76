@@ -87,6 +87,90 @@ Reveal.js
 
                     In conclusion, using Markdown with Pandoc provides a solid foundation for creating Reveal.js presentations. It streamlines the content creation process and allows you to focus on delivering a compelling message.
 Impress.js
+                Could you help me outline some of the most interesting as well as basic and necessary commands or 'concepts' (i.e. like a shopping-list) for Impress.js?
+
+                Absolutely! Impress.js is a powerful tool for creating dynamic, non-linear presentations using HTML, CSS, and JavaScript. Here's a "shopping list" of essential commands and concepts, broken down for clarity:
+
+                Core Concepts:
+
+                    Steps:
+                        These are the individual slides or sections of your presentation. Each step is a <div> element with the class step.
+                        Think of steps as the fundamental building blocks of your presentation.
+                    Camera Position:
+                        Impress.js uses 3D transformations, so the "camera" view is crucial.
+                        You control the camera's position and orientation to navigate between steps.
+                    Transformations:
+                        This is where the magic happens! Impress.js leverages CSS 3D transforms to move, rotate, and scale steps.
+                        Key properties: translate, rotate, scale.
+
+                Essential Attributes (Within Step <div> Elements):
+
+                    id:
+                        Each step should have a unique id. This is used for navigation and linking.
+                        Example: <div id="step-1" class="step">...</div>
+                    data-x, data-y, data-z:
+                        These attributes define the position of the step in 3D space.
+                        Values are in pixels.
+                        data-x (horizontal), data-y (vertical), data-z (depth).
+                        Example: <div id="step-2" class="step" data-x="1000" data-y="0" data-z="-1000">...</div>
+                    data-rotate-x, data-rotate-y, data-rotate-z:
+                        These attributes define the rotation of the step around the X, Y, and Z axes, respectively.
+                        Values are in degrees.
+                        Example: <div id="step-3" class="step" data-rotate-y="90">...</div>
+                    data-scale:
+                        This attribute defines the scaling factor of the step.
+                        A value of 1 means no scaling.
+                        A value of 2 means twice the size.
+                        Example: <div id="step-4" class="step" data-scale="0.5">...</div>
+                    data-rotate:
+                        This attribute is equivalent to data-rotate-z.
+                    data-transition-duration:
+                        Allows for overriding the default transition duration for individual steps.
+                        Example: <div id="step-5" class="step" data-transition-duration="2000">...</div>
+
+                JavaScript and Initialization:
+
+                    impress().init():
+                        This JavaScript function initializes Impress.js.
+                        It must be called after the HTML document has loaded.
+                    Navigation:
+                        Impress.js automatically handles navigation using the spacebar, arrow keys, and page up/down keys.
+                        You can also navigate programmatically using javascript.
+
+                CSS Considerations:
+
+                    CSS 3D Transforms:
+                        Understand the basics of CSS 3D transforms to effectively control the movement of your steps.
+                        Use transform-style: preserve-3d; on parent elements if you want to apply 3D transforms to nested elements.
+                    Styling Steps:
+                        Use CSS to style the content within each step.
+                        You can apply backgrounds, fonts, colors, etc.
+
+                Advanced Concepts:
+
+                    Nested Steps:
+                        You can nest steps within other steps to create more complex animations and transitions.
+                    Event Handling:
+                        Impress.js provides JavaScript events that you can use to trigger custom actions during the presentation.
+                        Example: impress:stepenter, impress:stepleave.
+                    Plugins:
+                        Impress.js has plugins that extend its functionality, for example to add bar progress indicators, or to add autoplay functionality.
+
+                "Shopping List" Summary:
+
+                    Steps (<div class="step">)
+                    id Attribute
+                    data-x, data-y, data-z Attributes
+                    data-rotate-x, data-rotate-y, data-rotate-z (or data-rotate) Attributes
+                    data-scale Attribute
+                    impress().init() JavaScript Function
+                    CSS 3D Transforms (especially translate, rotate, scale)
+                    CSS Styling of Steps
+                    data-transition-duration
+                    Event handling (impress:stepenter, etc.)
+                    Plugins
+
+                By understanding these concepts and attributes, you'll be well on your way to creating engaging and dynamic presentations with Impress.js.
 
 Emacs Org
   TODO: MAY WANT TO CONVERT LIST TO FEATURES
