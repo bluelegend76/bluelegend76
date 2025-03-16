@@ -847,14 +847,14 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     Reveal, Impress
     . {{{
       ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
-      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
+            ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
 
       ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt
       --
       ~/Empire/graf/imprjs.txt
       ~/Empire/graf/pr/imprjs.txt
-      ~/Empire/Comp/lang/webdev/imprjs_aux.txt
-      ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
+            ~/Empire/Comp/lang/webdev/imprjs_aux.txt
+            ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
     }}}
   Spectre Console
   . {{{
@@ -866,12 +866,12 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   ASP.NET CORE MVC (++Web APIs)
   . {{{
+    gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+
     gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
-
-    gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
   }}}
   FuncPy
   . {{{
@@ -1067,7 +1067,7 @@ Hask {{{
         /home/bluelegend/Empire/Doks/Comp/mu/au/midi/modernmidi-sequencing_2020.txt
         /home/bluelegend/Empire/Doks/Comp/mu/au/auprogr-book_2011.txt
 
-    Fs / F# {{{
+    .   Fs / F# {{{
         gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
 
     gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
