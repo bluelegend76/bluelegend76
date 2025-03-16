@@ -38,6 +38,9 @@ https://www.noongarboodjar.com.au/wp-content/uploads/2017/
 
 
 ___start
+KIVY [PYTHON]
+    https://docs.micropython.org/en/latest/  __
+
 PipeWire
   https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home
   https://wiki.archlinux.org/title/PipeWire
@@ -265,7 +268,6 @@ https://www.clojerl.io/  [____]
     https://github.com/clojerl/clojerl/tree/master/scripts/examples
 https://www.learnreframe.com/  Clojure
   https://day8.github.io/re-frame/
-  https://docs.micropython.org/en/latest/  __
 
 https://github.com/dlang-community/Pegged/wiki/Pegged-Tutorial  ____
     https://github.com/eBay/tsv-utils

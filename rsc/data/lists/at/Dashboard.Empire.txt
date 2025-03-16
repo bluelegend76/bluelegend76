@@ -1,12 +1,16 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
-    Queen
+
+../todo/MasterlistDownload-onedeepmans-online.txt
+c:/Users/SEDAALB2/Desktop/Scratch.txt
+../weblinks.txt
+    Queen  [YÄTT VA ZÅATN OEN XYVCC (B YHFGVTN VAYÄTT)]
     'För att bättre förstå om vad som influerat flera klassiska kompositörer'
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
 .'MIN TAGGIGA STOL' {{{
   Vad som hänt är att jag har blivit - misshandlad, rånad, utnyttjad och förnedrad (av - skolan, klassen, utb.företaget)  (+Varför håller du på och ältar det där? Bara släpp det.)
 }}}
-        N-teatern/Nationalsånger 2
+        N-teatern/Nationalsånger 2  YOUTUBE
 TODO ADD 1 = STARTUPS 1 {{{
 
 Vanki LearnQna ----
@@ -67,6 +71,7 @@ Håll utkik efter vår serie om hur du får ut det mesta av Microsoft 365!
 }}}
 
 
+
 Forums Stora
   ../ref/allm-a/forumsstoraprakthandb.txt
 
@@ -100,15 +105,18 @@ LangsDb.legacy ----
     mada, wareware (no), sore de
   }}}
 
-## 'Gordian Knot/Trinity-Suite'
+~/gdrive/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
+
+## 'Trinity-Suite'
     . {{{
-##   (belief and morality; models and theory; knowledge, action (and soundness))
-        they don't say they know; they say they believe(=gotcha)
+##   (belief and morality; models and theory; knowledge, action, and 'does it work' (soundness))
+        They don't say they know; They say they believe(=gotcha)
+
+Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda misstaget andliga/new age-iga personer gör, är att förväxla 'Detta känns bra'(=subjektivt för mig just/här och nu) med 'Detta är bra'(=för mig och andra i längden/=bortom just (här och) nu)
+
+    som pratar så mycket om värme, kärlek och mjukhet/mjuka värden, som är så arga, och passiv-agressiva
     }}}
 
-../todo/MasterlistDownload-onedeepmans-online.txt
-c:/Users/SEDAALB2/Desktop/Scratch.txt
-../weblinks.txt
 
 
     ---- 'MINIS|DAILIES' ---- ___index=0 {{{
@@ -692,15 +700,17 @@ dft curr 2023 {{{
 
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
-    ANDROID SCRIPTING/PROGRAMMING
+            Pegged, Tsv-Utils, Perlstyle-Regex
+    ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
 TC CORE READTHROUGH + THE WIKI[!!]  __
-          CLEAN UP TC UPDATER TASK-NOTES
-CLEAN UP NEW DOTNETCORE-DOKS  __
+  CLEAN UP NEW DOTNETCORE-DOKS  __
+----
 C# DotNet Core MVC + Blazor  [+Avalonia]  Cs Funct 3
     Puppet Lang + Patterns(etc)
     FuncPy  [_Renskriv_]  __  Py/F# SysAdmin
     Nushell, Xonsh  _
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
+            Mpv-Docs
 'linuxcommands core' [=Gemini-Q]
 MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _
     JuPyter/Polyglot(?) Notebooks (etc)  __
@@ -713,7 +723,7 @@ SSH (Veracrypt)  + Puppet  __
 Devops + Python (+iPy/Xonsh) ; F# Devops  _
   Vim PyPlugins  __ | Vimscript (x2)
 Reason + PureScript  ___onroad=maybye
-LEARN REACT  [__]
+ LEARN REACT  [__]  [+=OldNotes 1]
 
 Bcb, Bluebash + PShell,  ASM 1 (+binalys)
 Docker + Kubernetes + Azure Devops + GithubActions  __
@@ -726,17 +736,18 @@ Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
 }}}
 office.Overview [2]  # write summary|overview {{{
-Spectre Console
+Reveal.js|Impress.js  __
+Spectre Console  __
   iPython(*)
   Xonsh
   CsRx 3, Rx.Net;  Csharp Tips (etc)
-Android-Scripting + Termux
+Android-Scripting + Termux  __
 F# [Overview and Concepts]  +Cloj.
   FuncPy **
   Anki
   ----
     Py Webscraping
-  Avalonia
+  Avalonia  __
     [CsFunct 3]
 
 }}}
@@ -753,30 +764,7 @@ A{VipJgv:s/[^ ],b ,e[^ ]//g
 }}}
     ~/Dropbox/rsc/data/lists/todo/MasterlistDownload-onedeepmans-online.txt
     ../todo/MasterlistDownload-onedeepmans-online.txt  # Win
-Rush/Overview Doks-List[!!] {{{
-    Reveal, Impress
-    . {{{
-      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
-      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
-
-      ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt
-      --
-      ~/Empire/graf/imprjs.txt
-      ~/Empire/graf/pr/imprjs.txt
-      ~/Empire/Comp/lang/webdev/imprjs_aux.txt
-      ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
-    }}}
-  Spectre Console
-  . {{{
-    ~/gdrive/SpectreConsole.tags1.txt
-  }}}
-  ASP.NET CORE MVC (++Web APIs)
-  . {{{
-    gvim rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
-        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
-        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
-        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
-  }}}
+RUSH/OVERVIEW DOKS-LIST[!!] {{{
   ...tagged... {{{
 
 ## ~/gdrive/rsc/Doks/scratch/pshell/Win10keysdef.tags.txt
@@ -813,10 +801,8 @@ Rush/Overview Doks-List[!!] {{{
 ~/Dropbox/rsc/Doks/phone/Comp/loffice/starbasic/calc2011.fmt35.tags2.txt
 ~/Dropbox/rsc/Doks/phone/Comp/loffice/starbasic/calc2011.fmt35.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/datasci/ai-mlearn/py/mlearnapps-ideatoprod_2020.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/Termux.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/bluebash.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/mutt-man.tagged1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002_1.Tags1.txt
@@ -854,23 +840,136 @@ Rush/Overview Doks-List[!!] {{{
 ~/Dropbox/scratch/Math2_Komvux-mars2023-v3.Tags1.txt
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
+
+    Reveal, Impress
+    . {{{
+      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
+      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
+
+      ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt
+      --
+      ~/Empire/graf/imprjs.txt
+      ~/Empire/graf/pr/imprjs.txt
+      ~/Empire/Comp/lang/webdev/imprjs_aux.txt
+      ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
+    }}}
+  Spectre Console
+  . {{{
+    ~/gdrive/SpectreConsole.tags1.txt
+  }}}
+  android scripting
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
+  }}}
+  ASP.NET CORE MVC (++Web APIs)
+  . {{{
+    gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
+        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
+        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
+        rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
+
+    gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+  }}}
   FuncPy
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
   }}}
-  JupNotebooks
+  py/f# sysadm
+  JupNotebooks, polyglot notebooks, Pandas(etc)
+  . {{{
+      ~/gdrive/JupNoteb.binder.Tags1.txt
+
+        https://learn.microsoft.com/en-us/training/modules/polyglot-notebooks/
+        https://code.visualstudio.com/docs/languages/polyglot
+  }}}
     datawrangl {{{
         ~/gdrive/rsc/Doks/taskuj/Misc/datasci/pydatawrangl-clean_2022.txt
+
         ~/gdrive/rsc/Doks/phone/Comp/datasci/py/pydatawrangl-clean_2022.txt
     }}}
-  MLEARN(+)
-  CHANGE TO GDRIVE: gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
-    vim pyplugins
-  Termux
-      Graph, MSAL
+  MLEARN**(+), Obsidian
+  . {{{
+    gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
 
-rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt
+    ~/Empire/lang/markup/MD/md-obsidian.txt
+  }}}
+    vim pyplugins
+    . {{{
+      [Video-transcription + Taylor's Wiki]
+    }}}
+  Xonshell
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
+  }}}
+  Termux
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/Termux.Tags1.txt
+  }}}
+  Mpv-Docs
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
+  }}}
+  Avalonia
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
+
+    ~/gdrive/rsc/Doks/taskuj/LIA2/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
+    ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
+  }}}
+  NuShell
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_docs-book.txt
+    ~/Empire/Doks/Comp/lang/webdev/db/relational/mysql-maria/mysql-nushell_2009.txt
+  }}}
+  Wsl
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/WSL/*.txt
+
+    gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
+  }}}
+      Graph, MSAL
+  winterminal
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
+  }}}
+  ----
+  Rx.Net
+    Bash|Dash-Mans
+  Puppet
+  Mojo,  Devops
+  F# + Webframeworks (Fabulous, Fable, Suave)
+  . {{{
+    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
+      https://suave.io/
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
+  }}}
+  Roslyn (+Analysis|CodeGen)
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
+  }}}
+  Reason + PureScript
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/ReasonRescriptBuckle-Docs.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/bucklescript-cb.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml-qsguide_2019.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml2.txt
+
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-functweb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-lenses_2018.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-functweb_2017.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
+  }}}
+
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
 }}}
 
 cd ~/gdrive
@@ -903,6 +1002,8 @@ gvim ~/Empire/Doks/Comp/lang/clangs/csharp/codegen/{cs-roslyncb_2017,roslyn-code
   ANDROID PROGRAMMING
 
 
+
+
 Bash-Man / YT-DL Cleaning
   Ocaml Master
 
@@ -922,7 +1023,8 @@ Bash-Man / YT-DL Cleaning
           ~/Empire/Doks/Comp/PROGR/refact/db-refact_2006.txt
       ~/Empire/Doks/Comp/wman/fluxbox/fluxbox-book_2016.txt
 
-      gvim ~/Empire/Doks/Comp/mu/au/{midi/modernmidi-sequencing_2020,auprogr-book_2011}.txt
+gvim ~/Empire/Doks/Comp/mu/au/{midi/modernmidi-sequencing_2020,auprogr-book_2011}.txt
+
   gvim ~/Empire/Doks/Mu/arr/{MidOrch,ProOrch1.shared,arrpoprock,MuComp,OrchInstr,tradarrroine}.txt
     SCOLL, CSOUND, (ETC) {{{
       gvim ~/Empire/Doks/Comp/mu/au/{csound/csound-virtualsoundprocess_2000,scoll/scoll-book,scoll/ScollLogicpro,scoll/ScollBook,scoll/overtone/overtone-uguide,csound/man-tut/csound-flossman_2011,csound/man-tut/tutorial_5.07,csound/man-tut/1_masteringcsound,csound/man-tut/csound_editingbasics,csound/man-tut/super_mikelson_csound_primer,csound/man-tut/vercoe_a_beginner_tutorial,csound/man-tut/singer_an_introduction_to_csound,csound/man-tut/steven_yi_scanned_tutorial,csound/midi/2_real-time_synthesis_in_csound_with_midi_control,csound/midi/3_midi_instrument_designs_for_real-time_performance}.txt
@@ -975,9 +1077,10 @@ Hask {{{
 
         :args `cat files.txt`
         gvim -c "args `cat ~/RiderProjects/Acme/files.txt`"
-MlearnApps-Intro ** {{{
+MLEARNAPPS-INTRO ** {{{
     gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
 }}}
+
 Elix** {{{
   Phoenix LiveProgramming
 
