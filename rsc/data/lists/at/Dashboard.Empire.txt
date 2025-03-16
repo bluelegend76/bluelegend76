@@ -726,7 +726,7 @@ SSH (Veracrypt)  + Puppet  __
 Devops + Python (+iPy/Xonsh) ; F# Devops  _
   Vim PyPlugins  __ | Vimscript (x2)
 Reason + PureScript  ___onroad=maybye
- LEARN REACT  [__]  [+=OldNotes 1]
+ LEARN REACT  [__]  [+=OldNotes 1]    Sass
 
 Bcb, Bluebash + PShell,  ASM 1 (+binalys)
 Docker + Kubernetes + Azure Devops + GithubActions  __
