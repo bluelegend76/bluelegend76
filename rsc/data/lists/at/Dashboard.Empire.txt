@@ -36,6 +36,9 @@ System (incl. C#):
 
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+
+LANG-DB 1
+  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
 }}}
 Scratch-Area {{{
   Could you help me generate XML-comment documentation for this interface?

@@ -1,8 +1,9 @@
 set foldmethod=indent foldlevel=1
 vim: fdm=indent:fdl=2:
+___block3(=words)
+
 __lang(1-4: de,fr,es,ru)
 ___block2(=word-categories)
-___block3(=words)
 
 duolingo (etc):
 jp
@@ -34266,20 +34267,25 @@ LISTS (=freqs phrases books)
                                 https://vi.stackexchange.com/questions/3109/insert-an-incrementing-number-to-each-line-in-either-a-selection-or-a-match
                     batch of Char.Corrections (=lat.alpha 2 cyr.alpha)
                         @e, @o  m.fl. (**)
-                nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]        #=sök (+markera) alla cyrill. tecken (=ej punct. ***)
+                nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
+        #=sök (+markera) alla cyrill. tecken (=ej punct. ***)
                     'Various Cuts' (='rensa slut/resten efter ry. ordet mm/olikn) (*)
 
                 sätta 'é'-accenter på betonade vokaltecknen (=görs senare):
                     i e ja a o y (ju)
-                @i: /\vи|йrи́/[\u0401\u0410-\u044f\u0451]
-                @e: /\vе|ёrе́/[\u0401\u0410-\u044f\u0451]
+                @i: /\vи|й
+rи́/[\u0401\u0410-\u044f\u0451]
+                @e: /\vе|ё
+rе́/[\u0401\u0410-\u044f\u0451]
                  ja
                 @a: fаrа́/[\u0401\u0410-\u044f\u0451]
-                @o: /\vб|оrо́/[\u0401\u0410-\u044f\u0451]
+                @o: /\vб|о
+rо́/[\u0401\u0410-\u044f\u0451]
                 @u: fуrу́/[\u0401\u0410-\u044f\u0451]
                 @j: fюrю́/[\u0401\u0410-\u044f\u0451]
                 @y: fыrы́/[\u0401\u0410-\u044f\u0451]
-                @f: /\vэ|Эrэ́/[\u0401\u0410-\u044f\u0451]
+                @f: /\vэ|Э
+rэ́/[\u0401\u0410-\u044f\u0451]
 
                 @e: fеrё
 
@@ -34287,7 +34293,9 @@ LISTS (=freqs phrases books)
                 ___STARTLAST2020
                     @n: /^"
                     @a: O,ppu
-                nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]:
+                nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
+
+:
 
 
                 NEXT/LAST OCR(***)(apr2020):
@@ -34300,12 +34308,19 @@ LISTS (=freqs phrases books)
                 2 ST. MAKRONA: KLIPP ENG-ORDS_RAD + NÄSTA RAD
                     +EN =STANNA PÅ RADEN (=om flera eng-ord)(**)
 
-                @a: A ; zjzmzoddp-Jzt
-                @b: zjzmzoddp-Jzt
-                @c: A ; zjzmzoddp-Jzt
+                @a: A ; zjzmzo
+
+ddp-Jzt
+                @b: zjzmzo
+
+ddp-Jzt
+                @c: A ; zjzmzo
+
+ddp-Jzt
 
                 (Numrering klar: =till ca s 50(**))
-                 @n: "zyaWP00
+                 @n: "zyaW
+P00
                 Klipp "+ + Fånga som Block(**!)
                  @y: "+pG$d"_dGgt
 
@@ -45766,20 +45781,25 @@ LISTS (=freqs phrases books)
                                     https://vi.stackexchange.com/questions/3109/insert-an-incrementing-number-to-each-line-in-either-a-selection-or-a-match
                         batch of Char.Corrections (=lat.alpha 2 cyr.alpha)
                             @e, @o  m.fl. (**)
-                    nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]		#=sök (+markera) alla cyrill. tecken (=ej punct. ***)
+                    nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
+		#=sök (+markera) alla cyrill. tecken (=ej punct. ***)
                         'Various Cuts' (='rensa slut/resten efter ry. ordet mm/olikn) (*)
 
                     sätta 'é'-accenter på betonade vokaltecknen (=görs senare):
                         i e ja a o y (ju)
-                @i: /\vи|йrи́/[\u0401\u0410-\u044f\u0451]
-                @e: /\vе|ёrе́/[\u0401\u0410-\u044f\u0451]
+                @i: /\vи|й
+rи́/[\u0401\u0410-\u044f\u0451]
+                @e: /\vе|ё
+rе́/[\u0401\u0410-\u044f\u0451]
                  ja
                 @a: fаrа́/[\u0401\u0410-\u044f\u0451]
-                @o: /\vб|оrо́/[\u0401\u0410-\u044f\u0451]
+                @o: /\vб|о
+rо́/[\u0401\u0410-\u044f\u0451]
                 @u: fуrу́/[\u0401\u0410-\u044f\u0451]
                 @j: fюrю́/[\u0401\u0410-\u044f\u0451]
                 @y: fыrы́/[\u0401\u0410-\u044f\u0451]
-                @f: /\vэ|Эrэ́/[\u0401\u0410-\u044f\u0451]
+                @f: /\vэ|Э
+rэ́/[\u0401\u0410-\u044f\u0451]
 
                     @e: fеrё
 
@@ -45787,7 +45807,9 @@ LISTS (=freqs phrases books)
                 ___STARTLAST2020
                         @n: /^"
                         @a: O,ppu
-                    nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]:
+                    nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
+
+:
 
 
                     NEXT/LAST OCR(***)(apr2020):
@@ -45800,12 +45822,19 @@ LISTS (=freqs phrases books)
                     2 ST. MAKRONA: KLIPP ENG-ORDS_RAD + NÄSTA RAD
                         +EN =STANNA PÅ RADEN (=om flera eng-ord)(**)
 
-                    @a: A ; zjzmzoddp-Jzt
-                    @b: zjzmzoddp-Jzt
-                    @c: A ; zjzmzoddp-Jzt
+                    @a: A ; zjzmzo
+
+ddp-Jzt
+                    @b: zjzmzo
+
+ddp-Jzt
+                    @c: A ; zjzmzo
+
+ddp-Jzt
 
                     (Numrering klar: =till ca s 50(**))
-                     @n: "zyaWP00
+                     @n: "zyaW
+P00
                     Klipp "+ + Fånga som Block(**!)
                      @y: "+pG$d"_dGgt
 

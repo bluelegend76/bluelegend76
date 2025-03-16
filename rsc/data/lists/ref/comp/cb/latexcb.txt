@@ -884,6 +884,7 @@ Jupyter Markdown
                   UTF-8 Geometric shapes
 
                   &#reference_number;
+polyglot notebooks(????)
 GitHub-flavor Markdown (GFM)
                 adds: tables, task-lists, user-mentions
                 suited for: writing clear, concise documentation within github ecosystem (readme-files, issue-descriptions (hm_eng), comments

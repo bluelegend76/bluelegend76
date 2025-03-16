@@ -699,111 +699,262 @@ bcb (**(!))
 MS Windows Terminal ----
 Termux
   ../ref/comp/sysadm/Termux.Tags1.txt
-                    Great. A quick question about using Termux on Android: I was very happy that I could install NeoVim on Termux (and I've researched a bit about being able to access and edit text-files stored in Dropbox or Google Drive from my phone using Vim), but, one thing I found both hard to understand and solve was that my Vim-installations on Termux were difficult to work with because it was difficult to figure out how to access the general drive on Android (i.e. /storage and such) from the Termux and NeoVim folders. What I mean is, that if I can't figure out how to locate and access the folder NeoVim and/or Termux by default stores their files in and vice versa (i.e. not being able to figure out how to reach the broader file system from NeoVim and Termux), then it becomes quite hard to do anything useful, if you know what I mean?
+                    - Great. A quick question about using
+                      Termux on Android: I was very happy
+                      that I could install NeoVim on Termux
+                      (and I've researched a bit about being
+                      able to access and edit text-files
+                      stored in Dropbox or Google Drive from
+                      my phone using Vim), but, one thing I
+                      found both hard to understand and
+                      solve was that my Vim-installations on
+                      Termux were difficult to work with
+                      because it was difficult to figure out
+                      how to access the general drive on
+                      Android (i.e. /storage and such) from
+                      the Termux and NeoVim folders. What I
+                      mean is, that if I can't figure out
+                      how to locate and access the folder
+                      NeoVim and/or Termux by default stores
+                      their files in and vice versa (i.e.
+                      not being able to figure out how to
+                      reach the broader file system from
+                      NeoVim and Termux), then it becomes
+                      quite hard to do anything useful, if
+                      you know what I mean?
 
-                    You've hit upon a common hurdle for many Termux users! Accessing the broader Android file system from Termux and NeoVim can be a bit tricky due to Android's security model. Here's a breakdown of the challenges and solutions:
+                    You've hit upon a common hurdle for many
+                    Termux users! Accessing the broader
+                    Android file system from Termux and
+                    NeoVim can be a bit tricky due to
+                    Android's security model. Here's a
+                    breakdown of the challenges and
+                    solutions:
 
                     Understanding the Challenges:
 
-                        Android's Sandboxing: Android isolates apps for security reasons. Termux, by default, operates within its own isolated environment. This means it has limited access to the rest of your device's storage.
-                        Permissions: You need to grant Termux the necessary permissions to access external storage.
-                        Storage Locations: The way Android exposes storage has changed over time, making it a bit confusing.
+                    - Android's Sandboxing: Android isolates
+                      apps for security reasons. Termux, by
+                      default, operates within its own
+                      isolated environment. This means it
+                      has limited access to the rest of your
+                      device's storage.
+                    __ __ [__]
+                    - Permissions: You need to grant Termux
+                      the necessary permissions to access
+                      external storage.
+                    - Storage-Locations: The way Android
+                      exposes storage has changed over time,
+                      making it a bit confusing.
 
                     Solutions:
 
-                        Grant Storage Permissions:
-                            This is the most crucial step. You need to explicitly grant Termux permission to access your device's storage.
-                            Open the Termux app.
-                            Run the command: termux-setup-storage
-                            A permission dialog will appear. Grant Termux access to your storage.
-                            This creates a storage directory within your Termux home directory (~).
+                    ____ ____
+                    - Grant Storage Permissions:
 
-                        Navigating the storage Directory:
+                    This is the most crucial step. You need
+                    to explicitly grant Termux permission to
+                    access your device's storage.
 
-                            After granting permissions, you can navigate to your device's storage using the storage directory.
+                    - Open the Termux app.
+                    - Run the command: termux-setup-storage
+                    - A permission dialog will appear. Grant
+                      Termux access to your storage.
 
-                            Inside storage, you'll find:
-                                dcim: For photos and videos.
-                                downloads: For downloaded files.
-                                movies: For movies.
-                                pictures: For pictures.
-                                shared: This is the most important one. It points to your device's main "internal storage" or "shared storage".
+                    This creates a storage directory within
+                    your Termux home directory (~).
 
-                            Therefore, to access your general drive, you will have to cd storage/shared
+                    Navigating the storage Directory:
 
-                        Accessing NeoVim Files:
-                            By default, NeoVim's configuration files (like init.vim or init.lua) are typically located in ~/.config/nvim.
-                            You can use cd ~/.config/nvim to navigate to this directory.
-                            To be able to edit files in your general android storage, you will have to navigate from your home directory, into the storage folder, and then further into the shared folder, using cd storage/shared
+                    After granting permissions, you can
+                    navigate to your device's storage using
+                    the storage-directory.
 
-                        Symlinks (Optional):
-                            If you find navigating through storage/shared cumbersome, you can create symbolic links to commonly used directories.
-                            For example, to create a symlink to your Downloads folder:
-                                ln -s ~/storage/shared/Download ~/Downloads
-                                Then, you can simply use cd ~/Downloads to access your Downloads folder.
+                    Inside storage, you'll find:
 
-                        Using termux-open:
-                            termux-open is a Termux utility that allows you to open files with the appropriate Android app.
-                            For example, to open a PDF file in your Downloads folder:
-                                termux-open ~/storage/shared/Download/my_document.pdf
+                    - dcim: For photos and videos.
+                    - downloads: For downloaded files.
+                    - movies: For movies.
+                    - pictures: For pictures.
+                    ____
+                    - shared: This is the most important
+                      one. It points to your device's main
+                      "internal storage" or "shared
+                      storage".
 
-                        Cloud Storage (Dropbox, Google Drive):
-                            For cloud storage, you'll likely need to use third-party tools or scripts.
-                            There are ways to mount cloud storage using rclone or other tools, but this can be more complex.
-                            For simpler usage, you may want to download files from your cloud storage to your local storage, edit them with NeoVim, and then upload them back.
+                    Therefore, to access your general drive,
+                    you will have to cd storage/shared
+
+                    Accessing NeoVim Files:
+
+                    ____
+                    - By default, NeoVim's configuration
+                      files (like init.vim or init.lua) are
+                      typically located in ~/.config/nvim.
+                    - You can use cd ~/.config/nvim to
+                      navigate to this directory.
+
+                    ____
+                    - To be able to edit files in your
+                      general android storage, you will have
+                      to navigate from your home directory,
+                      into the storage folder, and then
+                      further into the shared folder, using
+                      cd storage/shared
+
+                    Symlinks (Optional):
+
+                    - If you find navigating through
+                      storage/shared cumbersome, you can
+                      create symbolic links to commonly used
+                      directories.
+
+                    ____
+                    For example, to create a symlink to your
+                    Downloads folder:
+
+                    ln -s ~/storage/shared/Download ~/Downloads
+
+                    Then, you can simply use cd ~/Downloads
+                    to access your Downloads folder.
+
+                    Using termux-open:
+
+                    ____ ____ ____
+                    termux-open is a Termux utility that
+                    allows you to open files with the
+                    appropriate Android app.
+
+                    For example, to open a PDF file in your
+                    Downloads folder:
+
+                    termux-open ~/storage/shared/Download/my_document.pdf
+
+                    Cloud Storage (Dropbox, Google Drive):
+
+                    For cloud storage, you'll likely need to
+                    use third-party tools or scripts.
+
+                    There are ways to mount cloud storage
+                    using rclone or other tools, but this
+                    can be more complex.
+
+                    For simpler usage, you may want to
+                    download files from your cloud storage
+                    to your local storage, edit them with
+                    NeoVim, and then upload them back.
 
                     Example Workflow:
 
-                        Grant Termux storage permissions: termux-setup-storage
-                        Navigate to your Downloads folder: cd ~/storage/shared/Download
-                        Open a text file with NeoVim: nvim my_text_file.txt
-                        Edit the file.
-                        Save and exit NeoVim.
-                        (Optional) Upload the file back to your cloud storage.
+                    - Grant Termux storage permissions:
+                      termux-setup-storage
+                    - Navigate to your Downloads folder:
+                      cd ~/storage/shared/Download
+                    - Open a text file with NeoVim: nvim
+                      my_text_file.txt
+                    - Edit the file.
+                    - Save and exit NeoVim.
+                    - (Optional) Upload the file back to
+                      your cloud storage.
 
-                    By following these steps, you should be able to effectively access and manage your files within Termux and NeoVim.
+                    By following these steps, you should be
+                    able to effectively access and manage
+                    your files within Termux and NeoVim.
 
-                    That is absolutely awesome! For quite a long time I've labored under the impression that this was a bit of an unsolvable problem. What I would really like to do (and it has become a big part of my everyday workflow) is being able to access and edit different text-files (that I have stored in Dropbox or Google Drive) from my Android device using Vim and/or NeoVim. Being able to do so and being able to sync directly (without having to go through the rigamarole of downloading the files to the device, and then send them up separately) would be an absolute game-changer as far as I'm concerned.
+                    - That is absolutely awesome! For quite
+                      a long time I've labored under the
+                      impression that this was a bit of an
+                      unsolvable problem. What I would
+                      really like to do (and it has become a
+                      big part of my everyday workflow) is
+                      being able to access and edit
+                      different text-files (that I have
+                      stored in Dropbox or Google Drive)
+                      from my Android device using Vim
+                      and/or NeoVim. Being able to do so and
+                      being able to sync directly (without
+                      having to go through the rigamarole of
+                      downloading the files to the device,
+                      and then send them up separately)
+                      would be an absolute game-changer as
+                      far as I'm concerned.
 
-                    I understand completely! Seamlessly editing cloud-stored text files with Vim/NeoVim on Android is a highly desirable workflow. While direct, real-time syncing like a desktop environment isn't quite as straightforward on Android, here's a breakdown of methods and tools that can get you very close, minimizing the "rigmarole" you mentioned:
+                    I understand completely! Seamlessly
+                    editing cloud-stored text files with
+                    Vim/NeoVim on Android is a highly
+                    desirable workflow. While direct,
+                    real-time syncing like a desktop
+                    environment isn't quite as
+                    straightforward on Android, here's a
+                    breakdown of methods and tools that can
+                    get you very close, minimizing the
+                    "rigmarole" you mentioned:
 
-                    1. Rclone (Recommended for Robust Syncing):
+                    - 1. Rclone (Recommended for Robust Syncing):
 
-                        What it is: rclone is a command-line program to manage files on cloud storage. It supports a vast array of cloud services, including Dropbox and Google Drive.
-                        How it helps: You can use rclone to:
-                            Mount cloud storage as a local directory: This is the closest you'll get to real-time syncing. Changes made in NeoVim are immediately reflected in the cloud.
-                            Sync files and folders: You can manually or automatically sync changes between your Termux storage and cloud storage.
-                        Setup:
-                            Install rclone in Termux: pkg install rclone
-                            Configure rclone for your cloud service: rclone config. This will guide you through authenticating with Dropbox or Google Drive.
-                            Mount your cloud storage: rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes (replace my_dropbox with your configured remote name).
-                            Now, you can access your Dropbox files in ~/dropbox.
-                        Advantages:
-                            Real-time syncing (when mounted).
-                            Reliable and powerful.
-                            Supports many cloud services.
-                        Disadvantages:
-                            Requires some command-line knowledge.
-                            Mounting can be resource-intensive.
+                    What it is: rclone is a command-line
+                    program to manage files on cloud
+                    storage. It supports a vast array of
+                    cloud services, including Dropbox and
+                    Google Drive.
+
+                    How it helps: You can use rclone to:
+
+                    - Mount cloud storage as a local
+                      directory: This is the closest you'll
+                      get to real-time syncing. Changes made
+                      in NeoVim are immediately reflected in
+                      the cloud.
+                    - Sync files and folders: You can
+                      manually or automatically sync changes
+                      between your Termux storage and cloud
+                      storage.
+
+                    Setup:
+
+                    Install rclone in Termux: pkg install rclone
+
+                    Configure rclone for your cloud service:
+                    rclone config. This will guide you
+                    through authenticating with Dropbox or
+                    Google Drive.
+
+                    Mount your cloud storage:
+                    rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+                    (replace my_dropbox with your configured remote name).
+
+                    Now, you can access your Dropbox files in ~/dropbox.
+
+                    Advantages:
+
+                    - Real-time syncing (when mounted).
+                    - Reliable and powerful.
+                    - Supports many cloud services.
+
+                    Disadvantages:
+
+                    - Requires some command-line knowledge.
+                    - Mounting can be resource-intensive.
 
                     2. Termux-API and Cloud Storage Apps:
 
-                        What it is: Termux-API allows you to interact with Android's system features.
-                        How it helps: You can use it to:
-                            Trigger file downloads from cloud apps (Dropbox, Google Drive) using intents.
-                            Trigger file uploads back to cloud apps.
-                        Setup:
-                            Install Termux-API: pkg install termux-api
-                            Install the Dropbox or Google Drive app on your Android device.
-                            Use termux-open with intents to download or upload files.
-                        Advantages:
-                            Leverages existing cloud app functionality.
-                            Simpler than rclone for basic file operations.
-                        Disadvantages:
-                            Not real-time syncing.
-                            Requires manual triggering of downloads and uploads.
-                            Limited control over syncing.
+                    What it is: Termux-API allows you to interact with Android's system features.
+                    How it helps: You can use it to:
+                    Trigger file downloads from cloud apps (Dropbox, Google Drive) using intents.
+                    Trigger file uploads back to cloud apps.
+                    Setup:
+                    Install Termux-API: pkg install termux-api
+                    Install the Dropbox or Google Drive app on your Android device.
+                    Use termux-open with intents to download or upload files.
+                    Advantages:
+                    Leverages existing cloud app functionality.
+                    Simpler than rclone for basic file operations.
+                    Disadvantages:
+                    Not real-time syncing.
+                    Requires manual triggering of downloads and uploads.
+                    Limited control over syncing.
 
+                    ____ ____ ____ ____
                     3. Git (for Text Files):
 
                         How it helps: If your text files are code or configuration files, you can use Git to manage them.
@@ -839,7 +990,8 @@ Termux
 
                     Recommended Workflow (Rclone):
 
-                    For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
+                  ____ ____ ____ ____
+                  For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
 
                         Install and Configure rclone.
                         Mount your cloud storage: rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
@@ -855,153 +1007,235 @@ Termux
 
                     Excellent! If you're comfortable with the command line and mounting file systems, rclone will be your best friend for syncing cloud files with Termux. Here's a more detailed guide to get you set up and working efficiently:
 
-                    1. Installing and Configuring Rclone:
+                    - 1. Installing and Configuring Rclone:
 
-                        Install:
-                        Bash
+                    Install:
 
+                    ____ ____ ____ [____]
                     pkg update && pkg install rclone
 
                     Configure:
-                    Bash
 
-                        rclone config
+                    rclone config
 
-                            This will walk you through the process of setting up a new remote.
-                            Choose the cloud service you want to use (e.g., Dropbox, Google Drive).
-                            You'll need to authenticate with your cloud account. rclone will guide you through this.
-                            Give your remote a name (e.g., mydropbox, mygoogledrive).
-                            When finished, verify that your remote is configured correctly with rclone listremotes.
+                    This will walk you through the process
+                    of setting up a new remote.
 
-                    2. Mounting Cloud Storage:
+                    - Choose the cloud service you want to
+                      use (e.g., Dropbox, Google Drive).
+                    - You'll need to authenticate with your
+                      cloud account. rclone will guide you
+                      through this.
+                    - Give your remote a name (e.g.,
+                      mydropbox, mygoogledrive).
+                    - When finished, verify that your remote
+                      is configured correctly with rclone
+                      listremotes.
 
-                        Create a mount point:
-                        Bash
+                    - 2. Mounting Cloud Storage:
+
+                    Create a mount point:
 
                     mkdir ~/cloud
 
-                        This creates a directory in your home folder where you'll mount your cloud storage.
+                    This creates a directory in your home
+                    folder where you'll mount your cloud
+                    storage.
 
                     Mount the remote:
-                    Bash
 
                     rclone mount mydropbox: ~/cloud --vfs-cache-mode writes
 
-                        Replace mydropbox with the name of your configured remote.
-                        --vfs-cache-mode writes is important. It enables caching and allows you to write changes directly to the mounted directory.
-                        If you have issues with the mount, consider adding --daemon to run it in the background.
+                    Replace mydropbox with the name of your configured remote.
+
+                    --vfs-cache-mode writes is important. It enables caching and allows you to write changes directly to the mounted directory.
+
+                    If you have issues with the mount, consider adding --daemon to run it in the background.
 
                     Unmounting:
-                    Bash
 
-                        fusermount -u ~/cloud
+                    fusermount -u ~/cloud
 
-                            Use this command when you're finished using the mount.
+                    Use this command when you're finished
+                    using the mount.
 
-                    3. Automating the Mount (Optional):
+                    ____ ____ ____ ____
+                    - 3. Automating the Mount (Optional):
 
-                        Termux Boot Script: You can create a script that automatically mounts your cloud storage when Termux starts.
-                            Create a script (e.g., mount_cloud.sh) in your home directory:
-                            Bash
+                    Termux Boot Script: You can create a
+                    script that automatically mounts your
+                    cloud storage when Termux starts.
 
-#!/bin/bash
+                    Create a script (e.g., mount_cloud.sh)
+                    in your home directory:
+
+                    #!/bin/bash
                     rclone mount mydropbox: ~/cloud --vfs-cache-mode writes --daemon
 
                     Make the script executable:
-                    Bash
 
                     chmod +x mount_cloud.sh
 
-                    Add the script to your Termux .bashrc or .zshrc file:
-                    Bash
+                    Add the script to your Termux .bashrc or
+                    .zshrc file:
 
-                            echo "~/mount_cloud.sh" >> ~/.bashrc
+                    echo "~/mount_cloud.sh" >> ~/.bashrc
 
-                            Now, your cloud storage should mount automatically when you open Termux.
+                    Now, your cloud storage should mount
+                    automatically when you open Termux.
 
-                    4. NeoVim Workflow:
+                    - 4. NeoVim Workflow:
 
-                        Navigate to your mounted directory:
-                        Bash
+                    Navigate to your mounted directory:
 
                     cd ~/cloud/path/to/your/files
 
                     Open files with NeoVim:
-                    Bash
 
-                        nvim my_file.txt
+                    nvim my_file.txt
 
-                        Save and exit:
-                            Changes are automatically synced to your cloud storage.
+                    Save and exit:
 
-                    5. Tips and Best Practices:
+                    Changes are automatically synced to your
+                    cloud storage.
 
-                        Background Mounting: Use the --daemon option with rclone mount to run the mount in the background. This allows you to close the terminal window without unmounting.
-                        Caching: The --vfs-cache-mode writes option is essential for a smooth experience. It caches files locally, reducing network latency.
-                        Network Stability: A stable internet connection is crucial for reliable syncing.
-                        Error Handling: If you encounter errors, check the rclone logs for more information.
-                        Resource Usage: Mounting cloud storage can consume system resources. Monitor your device's performance and adjust settings if necessary.
+                    - 5. Tips and Best Practices:
 
-                    By using rclone and mounting your cloud storage, you can create a seamless and efficient workflow for editing your cloud-stored text files with NeoVim on Termux.
+                    - Background Mounting: Use the --daemon
+                      option with rclone mount to run the
+                      mount in the background. This allows
+                      you to close the terminal window
+                      without unmounting.
+                    - Caching: The --vfs-cache-mode writes
+                      option is essential for a smooth
+                      experience. It caches files locally,
+                      reducing network latency.
+                    - Network Stability: A stable internet
+                      connection is crucial for reliable
+                      syncing.
+                    - Error Handling: If you encounter
+                      errors, check the rclone logs for more
+                      information.
+                    - Resource Usage: Mounting cloud storage
+                      can consume system resources. Monitor
+                      your device's performance and adjust
+                      settings if necessary.
 
-                    Also, I guess I could use both Vim and NeoVim from the Termux command-line and run Termux-commands from the two editors' respective command-lines directly too, right?
+                    By using rclone and mounting your cloud
+                    storage, you can create a seamless and
+                    efficient workflow for editing your
+                    cloud-stored text files with NeoVim on
+                    Termux.
 
-                    Yes, absolutely! You can indeed use both Vim and NeoVim from the Termux command line, and you can also execute Termux commands directly from within those editors. This is a powerful feature that allows you to integrate your editing workflow with the rest of your Termux environment.  
+                    - Also, I guess I could use both Vim and
+                      NeoVim from the Termux command-line
+                      and run Termux-commands from the two
+                      editors' respective command-lines
+                      directly too, right?
+
+                    Yes, absolutely! You can indeed use both
+                    Vim and NeoVim from the Termux command
+                    line, and you can also execute Termux
+                    commands directly from within those
+                    editors. This is a powerful feature that
+                    allows you to integrate your editing
+                    workflow with the rest of your Termux
+                    environment.  
 
                     Here's how it works:
 
-                    1. Running Vim/NeoVim from the Termux Command Line:
+                    - 1. Running Vim/NeoVim from the Termux
+                      Command Line:
 
-                        This is straightforward. Just type vim or nvim followed by the filename (if you want to open a specific file) and press Enter.
-                            vim my_file.txt
-                            nvim my_script.py
-                            vim (to open Vim without a specific file)
-                            nvim (to open NeoVim without a specific file)
+                    This is straightforward. Just type vim
+                    or nvim followed by the filename (if you
+                    want to open a specific file) and press
+                    Enter.
 
-                    2. Running Termux Commands from Vim/NeoVim:
+                    vim my_file.txt
+                    nvim my_script.py
 
-                        Both Vim and NeoVim have a command mode where you can execute shell commands.   
+                    vim (to open Vim without a specific file)
+                    nvim (to open NeoVim without a specific file)
 
-                        To run a Termux command, use the :! prefix followed by the command.
+                    - 2. Running Termux Commands from Vim/NeoVim:
 
-                            Example: Listing directory contents:
-                                In Vim/NeoVim command mode, type :!ls and press Enter.
-                                The output of the ls command will be displayed in a temporary window.
+                    Both Vim and NeoVim have a command mode
+                    where you can execute shell commands.   
 
-                            Example: Running a Python script:
-                                :!python my_script.py
+                    To run a Termux command, use the :!
+                    prefix followed by the command.
 
-                            Example: Compiling a C program:
-                                :!gcc my_program.c -o my_program
+                    Example: Listing directory contents:
 
-                            Example: Checking the date:
-                                :!date
+                    In Vim/NeoVim command mode, type :!ls
+                    and press Enter.
 
-                    3. Using termux-open from Vim/NeoVim:
+                    The output of the ls command will be
+                    displayed in a temporary window.
 
-                        You can also use termux-open to open files with the appropriate Android app from within Vim/NeoVim.
-                            :!termux-open my_document.pdf (opens the PDF in your default PDF viewer)
+                    Example: Running a Python script:
 
-                    4. Using the output of Termux commands in Vim/NeoVim:
+                    :!python my_script.py
 
-                        You can capture the output of a Termux command and insert it into your Vim/NeoVim buffer.
-                            :r !date (inserts the current date and time at the cursor position)
-                            :r !ls (inserts the directory listing at the cursor position)
+                    Example: Compiling a C program:
 
-                    5. Using Pipes:
+                    :!gcc my_program.c -o my_program
 
-                        You can combine Termux commands with pipes to perform more complex operations.
-                            :!grep "pattern" my_file.txt | sort (searches for a pattern in a file and sorts the results)
+                    Example: Checking the date:
+
+                    :!date
+
+                    - 3. Using termux-open from Vim/NeoVim:
+
+                    You can also use termux-open to open
+                    files with the appropriate Android app
+                    from within Vim/NeoVim.
+
+                    :!termux-open my_document.pdf
+                    (=opens the PDF in your default PDF viewer)
+
+                    - 4. Using the output of Termux commands
+                      in Vim/NeoVim:
+
+                    You can capture the output of a Termux
+                    command and insert it into your
+                    Vim/NeoVim buffer.
+
+                    :r !date
+                      (inserts the current date and time at the cursor position)
+                    :r !ls
+                      (inserts the directory listing at the cursor position)
+
+                    - 5. Using Pipes:
+
+                    You can combine Termux commands with
+                    pipes to perform more complex
+                    operations.
+
+                    :!grep "pattern" my_file.txt | sort
+                      (searches for a pattern in a file and sorts the results)
 
                     Why this is useful:
 
-                        Integrated Workflow: You can seamlessly switch between editing and running commands without leaving your editor.
-                        Automation: You can create custom mappings or functions in Vim/NeoVim to automate common tasks.   
+                    - Integrated Workflow: You can
+                      seamlessly switch between editing and
+                      running commands without leaving your
+                      editor.
+                    - Automation: You can create custom
+                      mappings or functions in Vim/NeoVim to
+                      automate common tasks.   
 
-                        Development: It's particularly useful for software development, where you often need to compile, run, and test code.
-                        System Administration: You can perform system administration tasks directly from your editor.
+                    - Development: It's particularly useful
+                      for software development, where you
+                      often need to compile, run, and test
+                      code.
+                    - System Administration: You can perform
+                      system administration tasks directly
+                      from your editor.
 
-                    This integration makes Vim/NeoVim even more powerful in the Termux environment.
+                    This integration makes Vim/NeoVim even
+                    more powerful in the Termux environment.
 SSH
 Tasker
 Vbox
