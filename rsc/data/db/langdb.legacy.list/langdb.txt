@@ -2,6 +2,23 @@ set foldmethod=indent foldlevel=1
 vim: fdm=indent:fdl=2:
 ___block3(=words)
 
+
+___PToolkit
+    RESOURCES (text, audio)----
+    TOOLS (I.E. TECHNICAL) (transl-shell, keyb-input, etc)----
+- freq-lists  #w. example uses
+- apps: memrise, influent, makesyoufluent
+- phraseb. *
+- Courses: Rosetta, Routledge, ...
+     \
+       -a
+- NewsCasts / Programs, ...  Newspapers
+- subtitles:
+- (stt | tts)
+
+  'keys'  [handwr.string, steno(+shortcut), steno-string, pronounc.string, pronounc-soundfile]
+
+
 __lang(1-4: de,fr,es,ru)
 ___block2(=word-categories)
 

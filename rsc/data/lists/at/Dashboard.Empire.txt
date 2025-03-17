@@ -124,7 +124,7 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
 
     ---- 'MINIS|DAILIES' ---- ___index=0 {{{
     LEETCODE ETC(+SCRIPT-FU) CODE-PROBLEMS __ ****
-        KAPA FILER/MAPPAR I LEGACY (=5 per dag) !!(! *****)
+            KAPA FILER/MAPPAR I LEGACY (=5 per dag) !!(! *****)
     Saol 1/Bevingat/Ordspr. =Clean  @ +Idioms/Litt  arlang 1  +LangDb Prios 1-100(!) →
         Bevingat (Quotes, etc)
     . {{{
@@ -209,63 +209,67 @@ dft curr 2023 {{{
 \v\@([^ ]?)+
 
     Gremlin + Neptune
-
         'MuLäroplans-Träden' **(!!)
         ----
         netrw (**)
         JavaScript Functional
         Elixir, Ocaml, F# DomainModeling
     Abe Kotlin
-        [Dlang-proj + PhobosNext|Per Nordl.]
+Py/F# Sysadm. + Devops[!!]
+      [Dlang-proj + PhobosNext|Per Nordl.]
         vlang, Go, Ring
         Cloj. + Java
-        datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
+  datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
               (+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
     ----
-    LINSYS:  debbib
-        Blue + Scoll.  +Analog Synth.
+LINSYS:  debbib
+Blue + Scoll.  +Analog Synth.
         lynx  pyweb,  @Greasmonk
-        Nsplitdiff
-    Nushell
+    Nsplitdiff (+Soc.Framg)
+Nushell
         Git, Github Projects  @GithubDocs @GitActions
-    Datasci@ + @Webscrape / @GoogleHacks
-        Xml (+xaml, faml, etc)
-        'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
-    refact, legacycode, TDD(etc) @  +C-CppFunct
-    @c#funct, C# Docs Avanc.
+Datasci@ + MLEARN[!!!!] @Webscrape / @GoogleHacks
+    Xml (+xaml, faml, etc)
+  'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
+  refact, legacycode, TDD(etc) @  +C-CppFunct
+  @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips
             flux, xmonad, openb, ice, awes
         sed (+py/dlang etc)
     --
     Aws(+dynamo), Docker, Kubernetes  CyberSec  @
-    börja kolla quincy l-länkar @  +Stanford etc
+  börja kolla quincy l-länkar @  +Stanford etc
+React (FreeCodeCamp)
         Pluralsight, w3school, w3resources
         kotlin/jetpack progr-videos(!!)
         (gimp etc) Py (!!)
-        @xsane, font(forge)/Scribus
-          HTML, HTTP/TCPIP + 'The Web'
+@xsane, font(forge)/Scribus
+    HTML, HTTP/TCPIP + 'The Web'
     Mojo
-        Devops, CI @
+    Devops, CI @
             PHP + funct.
-            algos
+algos
         Scribus
     CSS + Compass
         pyfunct(!) 1+2
-        Bash(+vim-bash) (etc)
-    Linux (etc) + Sys-Structure, Sysprogr
-    Cypher, SparQL
+        Bash + Termux (+vim-bash) (etc)
+Linux (Android etc) + Sys-Structure, Sysprogr
+    Cypher,
+SparQL
     Pshell + Choco
-            Audacity
-            @AnlSynthesis + Midi@ + Keyb.Synths
+Inkscape (+Rita och skriva för Online-Undervisning  @@
+- websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
+        Audacity
+@AnlSynthesis + Midi@ + Keyb.Synths
             [+Nyq (etc)]
-    pyramid
-    Csound(Qt + Blue), Scollider
+    Pyramid
+Csound(Qt + Blue), Scollider
 
 ='Topics/Areas'   ~/Dropbox/rsc/aubooks/data.WISHLIST
     Bcb Etc (+Find/Xargs, etc), UNIX POW-TOOLS  @
-    PyAut3** +PyFunct, Gimp Python, +  @
+PyAut3** +PyFunct, Gimp Python, +  @
       webscrape, cv/mmedia, au-transcribe,
     5 w3resources C# datetime-övningar
-        Datasci, text-natlang  #to at.Python.bash
+    Datasci, text-natlang  #to at.Python.bash
     WebSearch/GoogleTricks  #+grease/violent/tamper-monkey  @
     . {{{
       ~/Empire/Doks/Comp/gui-wtoolkits/hack.greasemonk.txt
@@ -273,30 +277,28 @@ dft curr 2023 {{{
       ~/Empire/Doks/Comp/lang/webdev/js/ffox/ffox-hacking.txt
       ~/Empire/Doks/Comp/lang/webdev/js/ffox/programming_firefox.pdf
     }}}
-    Samsung Notes [!(!)]
-      Hardw: Phone + Tablet
+Samsung Notes [!(!)]
+    Hardw: Phone + Tablet
     ~/Empire/Doks/Comp/lang/webdev/Aux/youtube/
     --- Kotlin: Test Projects 1 (***!!)  @
 
     - MOODLE  @@ (=Indexes[?|!])   | Wordpress |
-    - ORG (=emacs) ** @   ___minis_dailies
+- ORG (=emacs) ** @   ___minis_dailies
     --
-      Inkscape (+Rita och skriva för Online-Undervisning  @@
-    - websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
         ~/Dropbox/rsc/data/lists/learnqna/vanki/lynx.txt
-     HCJP-5e  
-    C (modern, hardway, etc) + Lin(etc) sysArchit. **  @@
+  HCJP-5e  
+  C (modern, hardway, etc) + Lin(etc) sysArchit. **  @@
     Dlang [Ali, +Learning, Cb]
     Flutter+Dart    @
     Elixir(**!)     @
     C# + 'ciss' (etc)     F#(??)
     WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
-        wappdev.js eloquent.js
-        +h5g / three.js (w.gamedev)
+  wappdev.js eloquent.js
+  +h5g / three.js (w.gamedev)
     Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
     Nyq, Csound, Scoll  muHask*(*), Midi  @  Chuck
     SICP (etc, ...)   @
-      JFx(!)   @
+  JFx(!) + Clj   @
     --
 
     --
@@ -724,7 +726,7 @@ Roslyn + Analysis/CodeGen  __
 SSH (Veracrypt)  + Puppet  __
     Nix Master
 Devops + Python (+iPy/Xonsh) ; F# Devops  _
-  Vim PyPlugins  __ | Vimscript (x2)
+  Vim PyPlugins  __ | VIMSCRIPT (x4)  _
 Reason + PureScript  ___onroad=maybye
  LEARN REACT  [__]  [+=OldNotes 1]    Sass
 
@@ -844,6 +846,11 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
 
+  winterminal
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
+  }}}
+  ----
     Reveal, Impress
     . {{{
       ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
@@ -878,6 +885,11 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
   }}}
   py/f# sysadm
+  . {{{
+      PyProgr
+    ~/Empire/Doks/Comp/lang/py/sysadm/py-unlin-sysadm.txt
+      ~/Empire/Doks/Comp/lang/py/sysadm/propysysadmin.txt
+  }}}
   JupNotebooks, polyglot notebooks, Pandas(etc)
   . {{{
       ~/gdrive/JupNoteb.binder.Tags1.txt
@@ -933,10 +945,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
   }}}
       Graph, MSAL
-  winterminal
-  . {{{
-    ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
-  }}}
   ----
   Rx.Net
     Bash|Dash-Mans
@@ -970,6 +978,10 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-functweb_2017.txt
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
+  }}}
+  AzDevops
+  Java|Cloj Semantic-Web
+  . {{{
   }}}
 
   ~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt

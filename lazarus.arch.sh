@@ -228,7 +228,7 @@ sudo pacman -S ardour
 sudo pacman -S rosegarden
 # + python-ly
 # ____
-tuxguitar tuxguitar-jsa
+yay -S tuxguitar
 sudo pacman -S evince fontforge
 sudo pacman -S pdftk xsane
 sudo pacman -S timidity-interfaces-extra midish
