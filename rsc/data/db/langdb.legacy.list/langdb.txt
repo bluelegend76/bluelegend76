@@ -28,7 +28,7 @@ EN, SV
   lat(+gre), da, isl,  nl 
 #de, #ry, es, #fra, #jp, kin, ar
 #ukr, irl, malay  [tur]
-    fars, hin, 
+    fars, hin,  yucatec
     copt, maor, nyung
         navajo, cree, lakota
 
