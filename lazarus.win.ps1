@@ -65,6 +65,9 @@ choco install mpv -y
 choco install freecommander -y
 choco install keepassx -y
 choco install vlc -y
+
+choco install nodejs-lts
+choco install yarn
 choco install nushell -y
 # choco install python -y
 choco install jupyter python3-virtualenv -y
