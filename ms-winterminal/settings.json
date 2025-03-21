@@ -40,8 +40,8 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
-                "acrylicOpacity": 0.5,
-                "useAcrylic": true
+                "acrylicOpacity": 0.9,
+                "useAcrylic": false
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
