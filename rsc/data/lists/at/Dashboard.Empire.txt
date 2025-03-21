@@ -1497,8 +1497,2107 @@ Immo0`ov0"my  #pre: set reg. 'm' to '1. '  +  macro sets marker 'o'
 }}}
 
 
-Ant. Ch.J BUV {{{
+GEMINI NEWEST  [Termux PKG, ] {{{
+
+Drs LangDb Empire {{{
+
+I have a small personal language-database I would like to implement, and I have looked a bit into MongoDB, Semantic Web using technologies like Jena/AllegroGraph/Sesame, exploring AWS Neptune and Gremlin, and using Cosmos DB or Dynamo DB, and lastly Datalog. Could you comment on these different choices of technologies?
+
+What I'm looking for is a technology that is not insanely difficult to implement, not having to specify all manner of schemas and pre-specified relations that come with relational-database solutions, and (which could make an otherwise difficult technology a viable option) exploring some interesting options/technologies.
+
+Absolutely. Let's break down those technology choices for your personal language database, keeping in mind your desire for ease of implementation, schema flexibility, and exploration of interesting options.
+
+1. MongoDB (Document Database)
+
+    Pros:
+        Extremely flexible schema (or lack thereof). You can store language data in JSON-like documents, which is very natural for representing linguistic information.   
+
+Relatively easy to learn and implement.
+Large community and abundant resources.
+Good for handling semi-structured data, which is common in language data.  
+
+    Cons:
+        Less ideal for complex, deeply interconnected relationships. While you can model relationships, it might require more manual work compared to graph databases.
+        Querying for complex relationships can become cumbersome.
+        Does not provide native semantic reasoning.
+
+2. Semantic Web Technologies (Jena/AllegroGraph/Sesame)
+
+    Pros:
+        Excellent for representing and querying complex relationships using RDF (Resource Description Framework).
+        Supports semantic reasoning, allowing you to infer new knowledge from existing data.   
+
+Can handle ontologies and controlled vocabularies, which are valuable for linguistic analysis.
+These technologies support SPARQL, a query language designed for working with RDF data.  
+
+Cons:
+
+    Steeper learning curve, especially if you're new to RDF and SPARQL.
+    Requires careful design of your ontology (schema), although it's more flexible than relational schemas.
+    Can be more complex to set up and manage compared to simpler databases.
+    AllegroGraph is a commercial product, while Jena and Sesame are open source.   
+
+3. AWS Neptune and Gremlin (Graph Database)
+
+    Pros:
+        Designed specifically for handling highly connected data, making it ideal for representing relationships between words, concepts, and languages.
+        Gremlin is a powerful graph traversal language.   
+
+        Scalable and managed service on AWS.
+    Cons:
+        Requires understanding graph data models and Gremlin.
+        While flexible, designing your graph schema is still important.
+        You will be locked into the AWS ecosystem.
+
+4. Cosmos DB or DynamoDB (NoSQL Key-Value or Document Databases)
+
+    Pros:
+        Highly scalable and performant.
+        Flexible schema (similar to MongoDB).
+        Managed services, reducing operational overhead.
+    Cons:
+        Similar to MongoDB, less ideal for complex relationship queries compared to graph databases.
+        DynamoDB is key-value based, so document based cosmosDB would be a better fit.   
+
+        You will be locked into the Azure or AWS ecosystems respectively.
+
+5. Datalog (Logic Programming)
+
+    Pros:
+        Excellent for expressing complex rules and relationships declaratively.
+        Powerful for reasoning and inference.
+        Very flexible and expressive.
+        It's a very interesting technology.
+    Cons:
+        Can be challenging to learn if you're not familiar with logic programming.
+        May require more effort to implement a full-fledged database system.
+        Less mainstream than other options, so community support might be limited.
+        Performance can be a concern for very large datasets.
+
+Recommendations:
+
+    For Ease of Implementation and Flexibility:
+        MongoDB: If you prioritize getting started quickly and having maximum schema flexibility, MongoDB is a strong choice. Its document-based model is well-suited for language data.
+        CosmosDB: If you are already within the Azure ecosystem, CosmosDB would be a good option.
+    For Exploring Relationships and Semantic Reasoning:
+        Semantic Web Technologies (Jena/Sesame): If you're interested in exploring the semantic aspects of language and don't mind a steeper learning curve, these technologies are excellent.
+        AWS Neptune: If you want a managed graph database and are comfortable with AWS, Neptune is a good option.
+        Datalog: If you are willing to spend the time to learn this technology, it is a very powerful option, and very interesting.
+    Considerations:
+        Size of your database: For small to medium-sized personal projects, most of these options will work well.
+        Complexity of relationships: If you anticipate many complex relationships, a graph database or semantic web technology will be more suitable.
+        Your programming background: If you're comfortable with logic programming, Datalog could be a fascinating choice.
+
+In summary, for a personal language database, I would suggest starting with MongoDB for ease of use, or exploring Semantic Web technologies or AWS Neptune if you want to delve into complex relationships and semantic reasoning. If you want a very powerful and interesting option, that will require more work, Datalog is worth considering.
+What is MongoDB? An Expert Guide | Oracle Sverige
+Source icon
+www.oracle.com
+Semantic Web - Wikipedia
+Source icon
+en.wikipedia.org
+Apache Jena SPARQL APIs
+Source icon
+jena.apache.org
+Purchase - AllegroGraph
+Source icon
+allegrograph.com
+Gremlin (query language) - Wikipedia
+Source icon
+en.wikipedia.org
+
+Oh I forgot to mention two a bit obscure, but potentially very interesting and rewarding options: Prolog and/or in tandem with Mercury, and building a small ontology using SUMO.
+
+Ah, Prolog and Mercury, and SUMO! Those are indeed interesting and potentially very rewarding choices, especially for a language database with a focus on semantic representation and reasoning. Let's add them to the discussion:
+
+6. Prolog (Logic Programming)
+
+    Pros:
+        Excellent for expressing logical rules and relationships declaratively.
+        Built-in backtracking and unification, which are powerful for searching and reasoning.
+        Can be used to build knowledge representation systems and ontologies.
+        Very powerful for parsing, which could be very useful for language related data.
+    Cons:
+        Can be challenging to learn if you're not familiar with logic programming.
+        Performance can be a concern for very large datasets if you do not use indexing and other techniques.
+        Less mainstream than other options, so community support might be limited.
+        It is not a database in the classical sense, so you would be creating a program that contains and queries your data.
+
+7. Mercury (Logic/Functional Programming)
+
+    Pros:
+        A logic/functional programming language that aims to improve on Prolog's performance and maintainability.
+        Strong type system and compile-time error checking.
+        Can be compiled to efficient native code.
+        Can be very useful for large, complex programs.
+    Cons:
+        Even less mainstream than Prolog, so community support is even more limited.
+        Steeper learning curve than Prolog.
+        It is also not a database in the classical sense.
+    Prolog and Mercury together: They can be used in tandem. Prolog can be used for rapid prototyping, and Mercury for creating more robust and performant applications.
+
+8. SUMO (Suggested Upper Merged Ontology)
+
+    Pros:
+        A large, comprehensive ontology that provides a foundation for building domain-specific ontologies.
+        Can be used to represent a wide range of concepts and relationships.
+        Provides a shared vocabulary for semantic interoperability.
+        SUMO is designed to be mapped to WordNet, which is very useful for language processing.
+    Cons:
+        Can be overwhelming due to its size and complexity.
+        Requires careful consideration of how to map your language data to SUMO concepts.
+        Requires using a technology that can handle ontologies, such as Jena or AllegroGraph, or using a language like Prolog.
+        SUMO provides an upper level ontology, that you will still need to add your own ontology on top of.
+
+Integration and Considerations:
+
+    Prolog/Mercury + SUMO: This combination is very interesting. You could use Prolog or Mercury to build a knowledge base that incorporates SUMO concepts. This would allow you to perform sophisticated reasoning and inference on your language data.
+    Semantic Web Technologies + SUMO: You could import parts of SUMO into a semantic web database (like Jena or AllegroGraph) and then add your language data as RDF triples. This would allow you to leverage SPARQL for querying and reasoning.
+    Complexity: Using Prolog/Mercury and SUMO will significantly increase the complexity of your project. However, it will also provide you with a very powerful and flexible system.
+    Learning Curve: Be prepared for a steep learning curve, especially if you're new to logic programming and ontologies.
+    Reward: The reward for mastering these technologies is the ability to create a very sophisticated and intelligent language database.
+
+In summary:
+
+    If you're looking for a challenging but rewarding project, exploring Prolog or Mercury in tandem with SUMO is an excellent option.
+    This approach will allow you to build a very powerful and flexible system for representing and reasoning about language data.
+    However, be prepared for a steep learning curve and significant development effort.
+    If your main goal is to explore those technologies, then this is a great project to do it with.
+    If your main goal is to create a working language database quickly, then MongoDB, or CosmosDB would still be the better option.
+
+Also (and I have at least a friend who has been looking into this option) using any of the above solutions or databases with Dlang or (for that matter) other programming languages like Python etc. Plus (just as a note) I have no particular preference personally when it comes to selection of programming languages - ones that could do the job well are of interest.
+
+Excellent point! Considering the programming languages you'll use to interact with your chosen database is crucial. Let's explore how D and Python, and other languages, fit into the picture with the database options we discussed.
+
+Programming Languages and Database Interactions:
+
+    Python:
+        Python is incredibly versatile and has excellent libraries for interacting with nearly all the database options we've discussed.
+        MongoDB: pymongo is the official Python driver.
+        CosmosDB: Azure provides python SDKs for cosmosDB.
+        AWS Neptune: gremlinpython is the official Python driver for Gremlin.
+        Semantic Web (Jena/Sesame): rdflib is a powerful Python library for working with RDF and SPARQL.
+        Datalog: There are Python libraries that can interact with Datalog engines.
+        Python is very useful for processing text, and language related data.
+        Python has excellent NLP libraries.
+    D (Dlang):
+        D is a systems programming language known for its performance and expressiveness.
+        While D might not have as extensive a library ecosystem as Python, it can still interact with most databases.
+        MongoDB: There are D drivers for MongoDB.
+        PostgreSQL/Other SQL Databases: D has libraries for interacting with SQL databases, which could be relevant if you decide to use a relational database.
+        C Bindings: D can easily interface with C libraries, so you can leverage C drivers for various databases.
+        D is very fast, so if speed is a concern, D is a good option.
+    Prolog/Mercury:
+        Prolog and Mercury are themselves programming languages, so you'll be writing your database logic directly in them.
+        You can still interact with external systems using their foreign language interfaces.
+    General Considerations:
+        Drivers and Libraries: Check for available drivers and libraries for your chosen database and programming language.
+        Performance: If performance is critical, D or languages like C++ might be preferred. Python can be performant, but D and C++ are generally faster for raw processing.
+        Ease of Development: Python excels in ease of development and rapid prototyping. D offers a good balance of performance and expressiveness.
+        Community and Ecosystem: Python has a massive community and a vast ecosystem of libraries, which can be a significant advantage. D's community is smaller, but growing.
+        Interoperability: Languages that can easily interoperate with C libraries provide access to a wide range of database drivers.
+
+Language Specific Notes:
+
+    Python for NLP: Python's rich ecosystem of NLP libraries (NLTK, spaCy, Transformers) makes it a natural choice for processing and analyzing language data.
+    D for Performance-Critical Tasks: If you need to perform computationally intensive tasks on your language data, D's performance can be a significant advantage.
+    Prolog/Mercury for Reasoning: If your focus is on logical reasoning and knowledge representation, Prolog or Mercury are excellent choices.
+
+Recommendations:
+
+    If you prioritize ease of development and access to NLP libraries, Python is a strong choice.
+    If you need high performance and are comfortable with a less mature ecosystem, D is a good option.
+    If you're primarily interested in logical reasoning and knowledge representation, Prolog or Mercury are excellent choices.
+    You can also use a combination of languages. For example, you could use Python for data processing and analysis, and D for performance-critical tasks.
+    When using prolog or mercury, you will be coding the database logic within that language.
+
+In essence, your choice of programming language should align with your project's goals, performance requirements, and your own comfort level.
+
+The task for me would be to create a bit of a web of 'entries' which are words or phrases in different languages. Each entry should also have a general category-tag, i.e. things like 'Greetings', 'Understanding', 'Adjectives' etc - very similar to Lonely Planet, Berlitz and other phrase-books. Swedish and/or English would provide the primary translation for words and phrases in the different languages, and I would then be able to drill myself in and develop along a path through a language from simple phrases going on to more difficult or abstract phrases and reasoning. Also, I'm hoping to leverage one or several languages to provide a 'base-plate' of knowledge in the sense that if I then would like to explore and collect some words and phrases in a new language, I can look back at one or more languages where I have collected and acquired phrases and provide a path for that new language (i.e. 'These 50, 100 or some number of words in my strongest languages provides a good firm 'base-knowledge' for a new language. Let me gradually collect and acquire these entries in my new language')
+
+Okay, that clarifies your project very well! You're essentially building a personalized, interconnected phrasebook with a focus on categorized learning and cross-lingual knowledge transfer. Let's revisit the technology options with this specific use case in mind:
+
+Key Considerations for Your Phrasebook Project:
+
+    Categorization and Tagging: You need a system that efficiently handles categories like "Greetings," "Understanding," and "Adjectives."
+    Multilingual Support: The database must accommodate words and phrases in various languages.
+    Relationships and Interconnections: You want to establish relationships between entries, such as translations, related concepts, and learning paths.
+    Querying and Filtering: You need to be able to query and filter entries based on language, category, and other criteria.
+    Scalability: While you're starting with a personal project, consider whether you might want to scale it in the future.
+    Learning Path: You will need to be able to create some kind of ordering of entries, so that you can create a learning path.
+
+Technology Recommendations Based on Your Use Case:
+
+    Graph Database (AWS Neptune or similar):
+        Pros:
+            Excellent for representing relationships between entries, such as translations and related concepts.
+            Gremlin allows for powerful querying and filtering based on language, category, and relationships.
+            You can easily model learning paths by creating edges that represent the order in which entries should be learned.
+            Graph databases are designed to handle highly interconnected data.
+        Cons:
+            Requires learning Gremlin.
+            AWS Neptune is a cloud service, so you'll be tied to the AWS ecosystem.
+    Semantic Web Technologies (Jena/Sesame):
+        Pros:
+            RDF is well-suited for representing multilingual data and relationships.
+            SPARQL allows for complex queries and reasoning.
+            You can use ontologies to define categories and relationships in a structured way.
+            You could incorporate SUMO or other ontologies to provide a base for your knowledge.
+        Cons:
+            Steeper learning curve.
+            Requires careful ontology design.
+    MongoDB (Document Database):
+        Pros:
+            Flexible schema allows you to easily add new languages and categories.
+            JSON-like documents are easy to work with.
+            Easy to get started.
+            MongoDB can store arrays, so you could store arrays of translations.
+        Cons:
+            Less ideal for complex relationship queries compared to graph databases or semantic web technologies.
+            Modeling learning paths might require more manual work.
+    Prolog/Mercury:
+        Pros:
+            Excellent for representing rules and relationships.
+            Built-in reasoning capabilities.
+            You can create a very flexible and powerful system.
+            Can be used to implement learning paths using logical rules.
+        Cons:
+            Steep learning curve.
+            Less mainstream.
+            Not a traditional database.
+
+Specific Implementation Suggestions:
+
+    Graph Database:
+        Create nodes for each entry (word or phrase).
+        Add properties to nodes for language, category, and translations.
+        Create edges to represent relationships, such as "translationOf," "relatedTo," and "partOfLearningPath."
+        Use Gremlin to query and filter entries and traverse the graph.
+    Semantic Web:
+        Create RDF triples to represent entries, categories, and relationships.
+        Use SPARQL to query and filter the data.
+        Consider using an ontology to define your categories and relationships.
+    MongoDB:
+        Create documents for each entry, with fields for language, category, translations, and related entries.
+        Use arrays to store translations and related entries.
+        Use queries to filter and retrieve entries.
+    Prolog/Mercury:
+        Represent entries as facts and rules.
+        Use logical queries to retrieve and filter entries.
+        Implement learning paths using logical rules.
+
+For your specific use case, I would lean towards a graph database (AWS Neptune) or semantic web technologies (Jena/Sesame) if you want to emphasize relationships and learning paths. If you want to get started quickly and don't need complex relationship queries, MongoDB is a good option. Prolog/Mercury are very powerful, but will require a large amount of time to implement.
+
+Great. What languages programming languages would be most advantageous to use in tandem with the top picks you mentioned (i.e. with MongoDB for instance). + Let's say I would later on like to make my little database project available 'on the road', i.e. developing some kind of Android-based client whereby I could drill myself while walking, running, commuting etc. What extra languages or technologies might we want to add to the list (i.e. languages like Kotlin, Flutter + Dart etc), and would that tilt the rank-order of technologies that we just discussed?
+
+Excellent questions! Let's break down the programming language choices for your database interactions and mobile development plans.
+
+Programming Languages for Database Interactions:
+
+    MongoDB:
+        Python:
+            pymongo is the official Python driver and is very well-supported.
+            Python's ease of use and extensive ecosystem make it ideal for backend development.
+            It is very easy to create APIs in python using frameworks like Flask or FastAPI.
+        Node.js (JavaScript/TypeScript):
+            MongoDB is a NoSQL database, and JavaScript/TypeScript are also used for JSON-like data, making them a natural fit.
+            Node.js is excellent for building scalable backend APIs.
+            TypeScript can be used to add type safety to JavaScript code.
+    Graph Databases (AWS Neptune):
+        Python:
+            gremlinpython is the official Python driver for Gremlin.
+            Python's versatility makes it a good choice for interacting with graph databases.
+        Java:
+            Java is also supported for Gremlin interactions.
+    Semantic Web (Jena/Sesame):
+        Python:
+            rdflib is a powerful Python library for working with RDF and SPARQL.
+        Java:
+            Jena and Sesame are Java-based frameworks, so Java is a natural choice.
+
+Mobile Development (Android Client):
+
+    Kotlin:
+        Kotlin is the official language for Android development.
+        It is modern, concise, and interoperable with Java.
+        It is the best choice for native Android development.
+    Flutter (Dart):
+        Flutter is a cross-platform framework that allows you to build native-like apps for Android and iOS from a single codebase.
+        Dart is the programming language used with Flutter.
+        Flutter is excellent for rapid development and creating visually appealing apps.
+        Flutter can also be used for desktop and web development.
+    Backend Considerations for Mobile:
+        Regardless of whether you choose Kotlin or Flutter, you'll likely need a backend API to serve data to your mobile app.
+        Python (Flask, FastAPI) or Node.js (Express.js) are excellent choices for building RESTful APIs.
+
+Impact on Technology Rank-Order:
+
+    Flutter's Cross-Platform Capabilities:
+        If you prioritize cross-platform development (Android and iOS), Flutter becomes a very strong contender.
+        This might tilt the balance towards technologies that are easier to integrate with a backend API, such as MongoDB or graph databases with well-supported RESTful APIs.
+    Kotlin's Native Android Performance:
+        If you prioritize native Android performance and a seamless user experience, Kotlin is the best choice.
+        This choice makes the backend API very important.
+    API-First Approach:
+        The need for a mobile client emphasizes the importance of an API-first approach.
+        This means choosing a database and programming language that make it easy to build and maintain a robust API.
+        This favors Python and Node.js.
+    Graph Database and Mobile:
+        While Graph databases are powerful, making them work smoothly with mobile applications adds a layer of complexity.
+        You will need to create a robust API that can translate the graph data to a format that the mobile application can understand.
+    Semantic Web and Mobile:
+        Semantic Web technologies are less common in mobile development.
+        You would need to build an API that can handle SPARQL queries and return data in a mobile-friendly format.
+
+Revised Recommendations:
+
+    MongoDB + Python (FastAPI/Flask) + Kotlin/Flutter:
+        This combination provides a good balance of ease of use, scalability, and mobile development flexibility.
+        Python's FastAPI or Flask can be used to create a robust API, and Kotlin or Flutter can be used to build the mobile client.
+        MongoDB is very easy to use, and is well supported.
+    Graph Database (AWS Neptune) + Python (FastAPI/Flask) + Kotlin/Flutter:
+        This option is excellent if you prioritize relationships and learning paths.
+        However, it requires more effort to set up and manage.
+        The API layer is very important in this design.
+    Semantic Web (Jena) + Java (Spring Boot) + Kotlin/Flutter:
+        This is a strong option if you want to use semantic web technologies.
+        Java is a very robust language, and Spring Boot is a very popular framework.
+        This option will require the most work.
+
+In summary, for your project, I would recommend MongoDB and Python, as it provides a good balance of ease of use, and mobile development flexibility.
+
+Just as a quick comment on the Semantic Web and Java (the entry marked as number 3 just above). I have had some interest in Clojure which seems like a very interesting choice for both leveraging Java-based technologies and favoring rapid test/prototype-based development. Could that be an interesting/feasible technology to add to the mix here?
+
+Absolutely! Clojure is an excellent and very interesting option to add to the mix, especially when considering leveraging Java-based technologies like Jena for Semantic Web applications. Let's explore why:
+
+Clojure and Semantic Web (Jena):
+
+    Java Interoperability:
+        Clojure runs on the Java Virtual Machine (JVM), making it seamless to interact with Java libraries like Jena.
+        You can directly call Java functions and classes from Clojure code, allowing you to leverage the full power of Jena.
+    Functional Programming:
+        Clojure's functional programming paradigm is well-suited for working with data and transformations, which are core to Semantic Web applications.
+        Its emphasis on immutability and pure functions can lead to more robust and maintainable code.
+    Rapid Prototyping and REPL-Driven Development:
+        Clojure's REPL (Read-Eval-Print Loop) allows for interactive development, making it easy to experiment and iterate on your code.
+        This is particularly valuable for prototyping and testing Semantic Web queries and transformations.
+    Data Manipulation:
+        Clojure's data structures (lists, maps, vectors) are well-suited for representing RDF data.
+        Its powerful data manipulation functions make it easy to process and transform RDF triples.
+    Concurrency:
+        Clojure has excellent concurrency features, which could be useful for handling large Semantic Web datasets.
+
+Feasibility and Advantages:
+
+    Feasibility: Using Clojure with Jena is highly feasible. There are examples and resources available online that demonstrate how to integrate them.
+    Advantages:
+        Clojure's conciseness and expressiveness can lead to more elegant and maintainable code compared to Java.
+        Its REPL-driven development can significantly speed up development time.
+        Clojure's functional programming paradigm can help you write more robust and predictable code.
+        Clojure is very good at data manipulation, which is extremely important when working with RDF data.
+
+Considerations:
+
+    Learning Curve: Clojure has a learning curve, especially if you're not familiar with functional programming.
+    Community: While the Clojure community is active, it's smaller than the Java or Python communities.
+    Libraries: While Clojure can leverage Java libraries, there might be fewer Clojure-specific libraries for Semantic Web development compared to Java.
+
+In summary:
+
+    Clojure is an excellent choice for leveraging Java-based Semantic Web technologies like Jena.
+    Its functional programming paradigm, REPL-driven development, and data manipulation capabilities make it well-suited for building Semantic Web applications.
+    If you're interested in exploring a more expressive and interactive development experience, Clojure is definitely worth considering.
+    If you are already interested in Clojure, this is a very good project to explore it with.
+
+If I/we add Clojure to the mix here (i.e. maybe with regard to trying out interesting and potentially very rewarding technologies), is it possible (without too much hassle) to enter that into the mix when it comes to the Android client, maybe being used as or in tandem with the background technologies?
+
+That's a very interesting question! Integrating Clojure into the Android client, especially for background tasks or data processing, is indeed possible, but it comes with some considerations. Let's break it down:
+
+Clojure on Android:
+
+    ClojureScript:
+        ClojureScript is a Clojure compiler that targets JavaScript.   
+
+        You could potentially use ClojureScript for parts of your Android app's logic, especially if you're using a hybrid approach (e.g., with React Native or Capacitor).
+        However, this would introduce a JavaScript layer, which might add complexity.
+    Clojure on the JVM (Android):
+        Android runs on a modified JVM (Dalvik/ART).
+        You can, in theory, run Clojure code on Android by packaging the Clojure runtime with your app.
+        However, this comes with significant challenges:
+            Runtime Size: The Clojure runtime adds a considerable amount of overhead to your app's size.
+            Performance: While Clojure on the JVM can be performant, it might not be as optimized for Android's limited resources as native Kotlin code.
+            AOT Compilation: Ahead-of-time (AOT) compilation can help with performance, but it adds complexity to the build process.
+            Android Ecosystem: Android development is heavily centered around Kotlin and Java. Integrating Clojure can make it harder to use Android-specific libraries and APIs.
+    Background Tasks:
+        Clojure could be more feasible for background tasks that don't require tight integration with the Android UI.
+        However, the overhead of the Clojure runtime still applies.
+        It would be possible to create a Clojure based library, that is then accessed by the Kotlin android application.
+
+Feasibility and Considerations:
+
+    Complexity: Adding Clojure to an Android client significantly increases the complexity of your project.
+    Performance: Be prepared to address potential performance issues, especially on older Android devices.
+    Build Process: Setting up a build process that handles Clojure on Android can be challenging.
+    Maintenance: Maintaining a Clojure-based Android app might require specialized knowledge.
+    Interoperability: Clojure's Java interoperability can be useful for accessing Android APIs, but it adds another layer of complexity.
+    Alternative: a better solution would likely be to create a Clojure based backend, and then have the android application communicate with that backend.
+
+Recommendations:
+
+    For most Android development scenarios, especially for UI-intensive apps, Kotlin is the recommended choice.
+    If you're primarily interested in exploring Clojure, consider using it for the backend API instead of the Android client. This approach allows you to leverage Clojure's strengths without the complexities of running it directly on Android.
+    If you have a very specific use case that requires Clojure's capabilities on Android, and you're willing to invest the time and effort, it is possible.
+    If you wanted to explore a hybrid approach, using ClojureScript, and React Native would be a more viable option.
+
+In summary:
+
+    While technically possible, running Clojure directly on Android is generally not recommended due to its overhead and complexity.
+    Using Clojure for the backend API is a more practical and efficient approach.
+    If you are set on using Clojure, then using Clojure for the backend, and Kotlin for the android application is the best option.
+
+Got it. Very helpful. One small question: I was intrigued by some entries in the Kawa Scheme documentation that - since it is Java-based - one could potentially build or at least prototype Android apps with not too much of a hassle? I would suspect it would not hold up as a more definitive solution in this case, but perhaps I'm wrong on that point, and regardless it might be interesting to fiddle with at least as a side-project.
+
+You've hit on another intriguing possibility! Let's explore Kawa Scheme and its potential for Android development.
+
+Kawa Scheme and Android:
+
+    Java Interoperability:
+        Kawa Scheme, being a Scheme implementation that runs on the JVM, inherently possesses strong Java interoperability.
+        This means it can, in theory, access Android's Java-based APIs.
+    Android Development Potential:
+        The Kawa documentation's hints about Android development stem from this Java interoperability.
+        You could potentially use Kawa to create Android applications by:
+            Calling Android's Java APIs from Kawa code.
+            Packaging the Kawa runtime with your Android application.
+    Limitations and Considerations:
+        Runtime Overhead: Like Clojure, Kawa's runtime adds overhead to your app's size. While potentially smaller than Clojure, it's still a factor.
+        Android Ecosystem: Android development is heavily geared towards Kotlin and Java. Integrating Kawa can lead to compatibility and integration challenges.
+        Tooling and Support: The tooling and community support for Kawa-based Android development are significantly less extensive than those for Kotlin or Java.
+        Performance: Performance might be a concern, especially for UI-intensive applications.
+        AOT Compilation: Just like Clojure, AOT compilation could help with performance, but adds complexity.
+    Prototyping and Experimentation:
+        Your assessment is accurate: Kawa could be interesting for prototyping and experimentation.
+        If you want to explore alternative approaches to Android development, Kawa provides a way to do so.
+        It would be a very interesting side project.
+
+Feasibility and Recommendations:
+
+    Not a Definitive Solution: For production-ready Android applications, Kotlin remains the most practical and well-supported choice.
+    Exploration and Learning: If your goal is to explore Scheme on Android and push the boundaries of Android development, Kawa is a viable option.
+    Side Project Potential: Kawa-based Android development lends itself well to side projects and experiments.
+    Learning Scheme: If you want to learn scheme, this is a very interesting way to do so.
+
+In summary:
+
+    Kawa Scheme offers the potential for Android development due to its Java interoperability.
+    However, it comes with limitations related to runtime overhead, ecosystem integration, and performance.
+    It's best suited for prototyping, experimentation, and educational purposes.
+    It is a very interesting technology, and worth exploring.
+
+Could you help give me an idea of a bit of Kawa code that could potentially create a rudimentary little app that could be runnable on Android? I.e. not exactly a hello world style app, but something like a very small calculator app, something that translates degrees Celsius to Fahrenheit and has two or three clickable buttons... or something like that
+
+Alright, let's sketch out a conceptual idea for a rudimentary Android app using Kawa Scheme. Please keep in mind that this will be a simplified example to illustrate the general approach, and it might require adjustments and further research to get it working perfectly on Android.
+
+Conceptual Approach:
+
+    Android SDK and AWT/Swing:
+        We'll leverage Android's Java SDK and potentially AWT/Swing (though Android's native UI toolkit is preferred) to create the UI.
+        Kawa's Java interoperability will be crucial for calling Android's Java APIs.
+    Kawa Code:
+        We'll write Kawa code to define the UI elements, event handlers, and logic for the Celsius-to-Fahrenheit conversion.
+    Compilation and Packaging:
+        We'll need to compile the Kawa code to Java bytecode.
+        Then, we'll package the compiled code and the Kawa runtime into an Android application package (APK).
+
+Conceptual Kawa Code (Illustrative):
+Scheme
+
+(define (celsius-to-fahrenheit c)
+  (+ (* c 1.8) 32))
+
+(define (create-ui)
+  (let* (
+        (frame (java.awt.Frame "Celsius to Fahrenheit"))
+        (celsius-label (java.awt.Label "Celsius:"))
+        (celsius-input (java.awt.TextField 10))
+        (fahrenheit-label (java.awt.Label "Fahrenheit:"))
+        (fahrenheit-output (java.awt.Label ""))
+        (convert-button (java.awt.Button "Convert"))
+        (layout (java.awt.FlowLayout)))
+
+    (.setLayout frame layout)
+    (.add frame celsius-label)
+    (.add frame celsius-input)
+    (.add frame fahrenheit-label)
+    (.add frame fahrenheit-output)
+    (.add frame convert-button)
+
+    (.addActionListener convert-button
+                      (lambda (event)
+                        (let* (
+                               (celsius-str (.getText celsius-input))
+                               (celsius (string->number celsius-str)))
+                          (if celsius
+                              (let ((fahrenheit (celsius-to-fahrenheit celsius)))
+                                (.setText fahrenheit-output (number->string fahrenheit)))
+                              (.setText fahrenheit-output "Invalid input")))))
+
+    (.setSize frame 300 150)
+    (.setVisible frame #t)))
+
+(create-ui)
+
+Explanation:
+
+    celsius-to-fahrenheit: This function performs the conversion.
+    create-ui: This function creates the UI elements (frame, labels, text fields, button) using Java's AWT/Swing classes.
+    addActionListener: This attaches an event handler to the "Convert" button.
+    The event handler retrieves the Celsius value, performs the conversion, and displays the Fahrenheit value.
+
+Important Notes:
+
+    Android Compatibility: This code uses AWT/Swing, which might not be the best fit for Android's UI. You'd ideally use Android's native UI toolkit (Android Views).
+    Android SDK Integration: You'll need to integrate the Android SDK and Kawa runtime into your build process.
+    Compilation and Packaging: You'll need to compile the Kawa code and package it into an APK.
+    Error Handling: This is a very basic example and lacks robust error handling.
+    Android Studio: You will likely need to use Android studio to do the build process.
+    Real Android UI: To create a real android UI, you will need to use the android SDK, and call android specific functions from within your Kawa code.
+
+Challenges:
+
+    Integrating the Kawa runtime into an Android app.
+    Using Android's native UI toolkit from Kawa.
+    Handling Android's lifecycle events.
+
+Next Steps:
+
+    Research how to use Android's native UI toolkit (Android Views) from Kawa.
+    Explore Kawa's documentation for Android-specific examples.
+    Experiment with compiling and packaging Kawa code for Android.
+
+This example gives you a starting point. Building a fully functional Android app with Kawa will require further research and experimentation.
 
 }}}
 
+Android + Windows: =SVDVORAK UTILITY {{{
+
+Question: I have been working for some time both myself and in tandem with a relative (who is very knowledgeable in the area of software-development) on learning more about Android app-development primarily using Kotlin. I have a small but nagging problem of being able to use a custom SvDvorak setup when using a keyboard connected via bluetooth to my Android-device. Since it seems unlikely to be able to get that functionality on my phone without rooting it and changing the system-files directly, I was thinking another solution could be to write a small headless Android-utility that sits as a middle-layer in between my external keyboard-signal and the system and 'translates' keystrokes from my keyboard to the right key. One example would be that if I press the letter g, that should translate to the letter i and so forth.
+
+That's a very interesting and practical problem! You're right, getting a custom keyboard layout like SvDvorak to work system-wide on Android without rooting is challenging. Creating a headless utility (a background service) to remap keystrokes is a clever approach. Here's a breakdown of how you could tackle this, along with some considerations:
+
+Conceptual Overview
+
+    Background Service:
+        Create an Android service that runs in the background. This service will be responsible for intercepting and modifying keyboard events.
+    Input Event Interception:
+        Use the InputManager and InputDevice APIs to listen for keyboard events from your Bluetooth keyboard.
+        You'll need to filter for events specifically from your external keyboard.
+    Key Remapping Logic:
+        Implement a mapping table or function that translates the incoming keycodes from your SvDvorak layout to the standard QWERTY (or whatever the device expects) layout.
+        For example, if the 'g' key in SvDvorak corresponds to 'i' in QWERTY, your code should perform this translation.
+    Injecting Modified Events:
+        Use the InputManager to inject the modified key events back into the system. This effectively simulates pressing the correct keys.
+
+Technical Implementation (Kotlin)
+
+Here's a simplified outline of how you might implement this in Kotlin:
+Kotlin
+
+import android.app.Service
+import android.content.Intent
+import android.os.IBinder
+import android.view.InputDevice
+import android.view.KeyEvent
+import android.view.InputManager
+import android.util.Log
+
+class KeyboardRemappingService : Service() {
+
+    private lateinit var inputManager: InputManager
+    private val svDvorakToQwertyMap = mapOf(
+        KeyEvent.KEYCODE_G to KeyEvent.KEYCODE_I,
+        // Add more key mappings here...
+    )
+
+    override fun onCreate() {
+        super.onCreate()
+        inputManager = getSystemService(INPUT_SERVICE) as InputManager
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // Start listening for keyboard events
+        startListeningForKeyboardEvents()
+        return START_STICKY
+    }
+
+    private fun startListeningForKeyboardEvents() {
+        Thread {
+            while (true) {
+                val devices = InputDevice.getDeviceIds()
+                for (deviceId in devices) {
+                    val device = InputDevice.getDevice(deviceId)
+                    if (device?.sources?.and(InputDevice.SOURCE_KEYBOARD) == InputDevice.SOURCE_KEYBOARD) {
+                        //check if the device is a bluetooth device.
+                        if(device.getName().contains("Bluetooth", true)){
+
+                            val events = inputManager.getInputDevice(deviceId).getMotionRanges()
+
+                            inputManager.registerInputDeviceListener(object : InputManager.InputDeviceListener {
+                                override fun onInputDeviceAdded(deviceId: Int) {}
+                                override fun onInputDeviceRemoved(deviceId: Int) {}
+                                override fun onInputDeviceChanged(deviceId: Int) {
+                                    val device = InputDevice.getDevice(deviceId)
+                                    if(device?.sources?.and(InputDevice.SOURCE_KEYBOARD) == InputDevice.SOURCE_KEYBOARD){
+                                        val events = inputManager.getInputDevice(deviceId).getMotionRanges()
+                                    }
+                                }
+                            }, null)
+
+                            inputManager.registerInputDeviceListener(object : InputManager.InputDeviceListener {
+                                override fun onInputDeviceAdded(deviceId: Int) {}
+                                override fun onInputDeviceRemoved(deviceId: Int) {}
+                                override fun onInputDeviceChanged(deviceId: Int) {
+                                    val device = InputDevice.getDevice(deviceId)
+                                    if(device?.sources?.and(InputDevice.SOURCE_KEYBOARD) == InputDevice.SOURCE_KEYBOARD){
+                                        val events = inputManager.getInputDevice(deviceId).getMotionRanges()
+                                    }
+                                }
+                            }, null)
+
+                            val keyEvents = inputManager.getInputDevice(deviceId).getKeyCharacterMap()
+                            //This is very simplified, and does not actually intercept the keyboard events.
+                            //This is where the keyboard events would be intercepted and modified.
+
+                            //Example of how to remap a key.
+                            //if (keyEvent.action == KeyEvent.ACTION_DOWN) {
+                            //    val originalKeyCode = keyEvent.keyCode
+                            //    val mappedKeyCode = svDvorakToQwertyMap[originalKeyCode] ?: originalKeyCode
+                            //    if (mappedKeyCode != originalKeyCode) {
+                            //        // Inject the modified key event
+                            //        val newKeyEvent = KeyEvent(
+                            //            keyEvent.downTime, keyEvent.eventTime, keyEvent.action,
+                            //            mappedKeyCode, keyEvent.repeatCount, keyEvent.metaState,
+                            //            keyEvent.deviceId, keyEvent.scanCode, keyEvent.flags,
+                            //            keyEvent.source
+                            //        )
+                            //        inputManager.injectInputEvent(newKeyEvent, InputManager.INJECT_INPUT_EVENT_MODE_ASYNC)
+                            //    }
+                            //}
+                        }
+                    }
+                }
+                Thread.sleep(100)
+            }
+        }.start()
+    }
+
+    override fun onBind(intent: Intent?): IBinder? {
+        return null
+    }
+}
+
+Important Considerations
+
+    Permissions:
+        This type of app might require special permissions, potentially including INPUT_METHOD or accessibility service permissions. The exact permissions will depend on how you implement the input interception and injection.
+    Complexity:
+        Accurately intercepting and modifying all keyboard events can be complex. You'll need to handle various key combinations, modifiers (Shift, Ctrl, Alt), and special keys.
+    Android Security:
+        Android's security model is designed to prevent apps from arbitrarily intercepting and modifying input events. You might encounter limitations or restrictions.
+    Accessibility Service:
+        An accessibility service might be a more viable option. It allows you to monitor user input, and modify it. However, the user must explicitly enable your accessibility service.
+    Key Character Map:
+        Getting the correct keycodes from the Bluetooth keyboard, and then correctly translating them will be the hardest part of the project.
+    Testing:
+        Thorough testing is crucial to ensure that your remapping logic works correctly and doesn't introduce unexpected behavior.
+    Battery Usage:
+        A constantly running background service can impact battery life. Optimize your code to minimize resource usage.
+
+Next Steps
+
+    Research InputManager and KeyEvent:
+        Dive deeper into the Android documentation for these classes to understand how to work with keyboard events.
+    Start with a Simple Mapping:
+        Begin by implementing a simple key remapping (e.g., just a few letters) to test your basic setup.
+    Expand the Mapping:
+        Gradually expand your mapping table to cover all the keys in your SvDvorak layout.
+    Test Thoroughly:
+        Test your app with different apps and scenarios to identify and fix any issues.
+
+This is a complex project, but it's definitely achievable. Good luck!
+
+The accessibility approach seems interesting and something we might want to explore deeper, so maybe you could comment a bit on that. Also, I would like to point out (which I failed to think about until just now) that me to some extent but certainly my brother is very knowledgeable in a range of different technologies and languages - including C and other very close to the hardware options. What I'm thinking now is that the app does not necessarily have to be written primarily in Kotlin (although that might be necessary to act as a bridge somewhere). What I mean is, both he and I have looked in the past at a range of different languages and solutions, including (just to take one small example) one article that I have read and saved from a guy that wrote a tutorial/blog-post about having some success in writing small and very efficient apps using Gambit Scheme which compiles down to native and (I think) pretty efficient C-based utilities.
+
+You're right, the accessibility service approach and leveraging your brother's C expertise open up some interesting possibilities. Let's delve into those:
+
+Accessibility Service Approach
+
+    How it Works:
+        An accessibility service is designed to help users with disabilities interact with their devices. It can monitor user input, including keyboard events, and provide alternative ways to interact with the device.
+        In your case, you can create an accessibility service that listens for keyboard events from your Bluetooth keyboard. When a key is pressed, your service can intercept the event, remap the keycode, and then inject the modified event.
+    Advantages:
+        Less Invasive: It doesn't require rooting the device or directly manipulating system files.
+        Established Framework: Android provides a well-defined framework for accessibility services, making it easier to implement.
+        User Control: Users must explicitly enable your accessibility service, which enhances security and privacy.
+    Disadvantages:
+        Permissions: It requires the BIND_ACCESSIBILITY_SERVICE permission, and users will see a warning when enabling the service.
+        Potential Performance Overhead: Intercepting and processing every keyboard event can introduce some performance overhead, especially on less powerful devices.
+        Complexity: Handling all possible keyboard events and modifiers can still be complex.
+        Android restrictions: Android is designed to limit the amount of control that accessibility services have, to protect the user.
+    Implementation Notes:
+        You'll need to create a class that extends AccessibilityService.
+        Override the onAccessibilityEvent() method to handle keyboard events.
+        Use the sendKeyEvent() method to inject modified key events.
+        You will need to create an accessibility service configuration xml file.
+
+Leveraging C and Gambit Scheme
+
+    C for Low-Level Input Handling:
+        C is an excellent choice for low-level input handling due to its direct access to hardware and operating system APIs.
+        You could potentially use the Android Native Development Kit (NDK) to write a C library that interacts with the Linux input subsystem to intercept and modify keyboard events.
+        This approach could offer better performance and more fine-grained control over input handling.
+    Gambit Scheme for Application Logic:
+        Gambit Scheme, with its ability to compile to efficient C code, could be a great way to implement the application logic for your keyboard remapping utility.
+        You could write the core remapping logic in Gambit Scheme, compile it to C, and then integrate it with your Android app using the NDK.
+        This would allow you to write very efficient code.
+    Hybrid Approach:
+        A hybrid approach could be the most effective:
+            Use C (via the NDK) to handle low-level keyboard input and event manipulation.
+            Use Gambit Scheme to implement the key remapping logic.
+            Use Kotlin to create the Android service and UI (if needed) that interacts with the C/Gambit Scheme components.
+    Advantages of the C/Gambit Scheme Approach:
+        Performance: C and compiled Scheme code can offer excellent performance.
+        Low-Level Control: C provides fine-grained control over input handling.
+        Efficiency: Gambit Scheme can generate very efficient C code.
+    Disadvantages of the C/Gambit Scheme Approach:
+        Complexity: Integrating C and Scheme code with an Android app can be complex.
+        Development Time: Writing and debugging C and Scheme code can take more time than using Kotlin alone.
+        Portability: NDK code is platform-specific, so you'll need to compile it for different Android architectures.
+
+Recommendations
+
+    Start with the Accessibility Service:
+        Begin by implementing a basic keyboard remapping utility using an accessibility service in Kotlin. This will allow you to quickly test your core remapping logic and identify any potential issues.
+    Explore the NDK and C:
+        If the accessibility service approach doesn't provide the desired performance or control, then explore using the NDK and C for low-level input handling.
+    Consider Gambit Scheme:
+        If you're comfortable with Scheme, then consider using Gambit Scheme to implement the application logic. Its ability to compile to efficient C code can offer significant performance benefits.
+    Incremental Development:
+        Break down the project into smaller, manageable tasks. Start with a simple key remapping and gradually expand the functionality.
+    Thorough Testing:
+        Test your app thoroughly on different Android devices and with various apps to ensure that it works correctly.
+
+By combining the strengths of Kotlin, C, and Gambit Scheme, you can create a powerful and efficient keyboard remapping utility.
+Your saved info
+Info you asked Gemini to save
+
+So the Gambit Scheme approach was just to mention one option here. The device would not be for sale and would be strictly custom made for myself and my workflow (at least there are no other plans at the moment). I also use strictly Android devices because of their easier accessibility and malleability compared to e.g. iPhone-devices. Also, I'm very keen to use functional approaches as much as possible, as I think (and correct me if I'm wrong here) they may be the best game in town when it comes to this kind of 'pipe this input and translate to something else' kind of utility.
+
+You've hit on some excellent points, and your focus on a custom, highly personalized workflow is a significant advantage. Let's refine the approach based on your preferences:
+
+Prioritizing Functional Approaches and Customization
+
+    Functional Languages:
+        You're absolutely right; functional programming paradigms are exceptionally well-suited for tasks involving data transformation and pipeline processing.
+        Languages like Scheme (Gambit or others), Haskell (if you're feeling adventurous), or even Kotlin with a strong emphasis on its functional features (lambdas, higher-order functions, immutable data) can be ideal.
+        The core logic of your keyboard remapping utility can be expressed as a series of pure functions, making it easier to reason about, test, and maintain.
+    Custom Workflow:
+        Since this is a custom tool for your own use, you have the freedom to tailor it precisely to your needs.
+        This means you can:
+            Implement highly specific key mappings.
+            Add advanced features like macros or custom shortcuts.
+            Optimize the performance for your particular device and usage patterns.
+    Android's Malleability:
+        Android's openness is a crucial asset, allowing you to explore various implementation options and fine-tune the system to your liking.
+        Even if you start with an accessibility service, you can gradually move towards a more low-level approach using the NDK if needed.
+
+Refined Implementation Strategy
+
+    Functional Core Logic:
+        Choose a functional language or utilize Kotlin's functional capabilities to implement the core key remapping logic.
+        Define your SvDvorak to QWERTY mapping as a pure function or a data structure that can be easily transformed.
+        Consider using a declarative approach to define your key mappings, making them easy to read and modify.
+    Accessibility Service as a Starting Point:
+        Begin with an accessibility service in Kotlin to quickly prototype and test your remapping logic.
+        This allows you to focus on the functional aspects of your code without getting bogged down in low-level details.
+    NDK and C (Optional):
+        If performance or control becomes a bottleneck, explore using the NDK and C for low-level input handling.
+        You can create a C library that intercepts keyboard events and passes them to your functional core logic for remapping.
+    Incremental Development and Testing:
+        Adopt an iterative development approach, adding features and refinements incrementally.
+        Write comprehensive unit tests to ensure that your remapping logic works correctly.
+        Test your app thoroughly on your target device and with your typical workflow.
+    Configuration and Customization:
+        Design your app to be highly configurable, allowing you to easily modify key mappings and add custom features.
+        Consider using a configuration file or a simple UI to manage your settings.
+    Focus on Efficiency:
+        Because this is a personal project, you can focus on making it as efficient as possible.
+        This includes reducing latency and minimizing resource usage.
+
+Key Functional Concepts
+
+    Pure Functions: Functions that always produce the same output for the same input and have no side effects.
+    Immutability: Data structures that cannot be modified after they are created.
+    Higher-Order Functions: Functions that take other functions as arguments or return functions as results.
+    Data Transformations: Using functions to transform data from one form to another.
+    Pipelines: Composing functions to create a sequence of data transformations.
+
+By embracing functional programming and focusing on a highly customized workflow, you can create a powerful and efficient keyboard remapping utility that perfectly suits your needs.
+Your saved info
+Info you asked Gemini to save
+
+Great. So could you rank order the three avenues mentioned in your last answer, maybe as a first benchmark according to resource-efficiency, i.e. some Scheme dialect (I have documentation for a whole range of them, from TinyScheme to MIT Scheme, Kawa, Chez, Chicken etc), Haskell, and Kotlin - the latter particularly using a functional approach?
+
+Alright, let's rank those options in terms of resource efficiency, keeping in mind that "resource efficiency" can have multiple facets (CPU, memory, battery, etc.), and the specific implementation will play a significant role.
+
+Here's my ranking, with explanations:
+
+    Scheme (Optimized Implementation):
+        Why it's potentially most efficient:
+            Scheme dialects, especially those designed for embedded systems or compilation to native code (like Chicken or Gambit), can produce very efficient machine code.   
+
+The functional nature of Scheme allows for concise and optimized code, and its focus on tail-call optimization can minimize stack usage.  
+
+        When you have a very specific use case, and you are willing to spend the time to optimize, scheme gives very good control.
+    Caveats:
+        Efficiency heavily depends on the specific Scheme implementation and how you write your code. Some interpreters might be less efficient than compiled code.
+        The NDK integration will add some overhead.
+
+Kotlin (Functional Approach, Compiled):
+
+    Why it's highly efficient:
+        Kotlin compiles to native bytecode (or native code with Kotlin/Native), which is generally very efficient.
+        Kotlin's functional features are well-integrated and optimized.   
+
+        The Android runtime (ART) is highly optimized for Kotlin.
+        Kotlin has great interop with C through the NDK.
+    Caveats:
+        The Java/Kotlin runtime environment introduces some overhead compared to pure native code.
+        The accessibility service will add overhead.
+
+Haskell (Compiled):
+
+    Why it's potentially efficient:
+        Haskell compilers (like GHC) can produce highly optimized native code.
+        Haskell's strong type system and purity can lead to efficient and reliable code.   
+
+        Caveats:
+            Haskell's runtime system (RTS) can introduce some overhead, especially for I/O-intensive tasks.
+            Integrating Haskell with the Android NDK can be more complex than with C or Kotlin.
+            Haskell has a steeper learning curve than Kotlin or Scheme.
+            The Haskell run time libraries are larger than some of the Scheme libraries.
+
+Rationale:
+
+    Scheme's Potential: If you're willing to invest time in optimizing your Scheme code and using a compiler that generates efficient native code, it can be the most resource-efficient option.
+    Kotlin's Practicality: Kotlin offers a great balance of efficiency, ease of use, and Android integration. Its functional features allow you to write efficient and maintainable code.   
+
+    Haskell's Complexity: While Haskell can produce very efficient code, its runtime system and integration with Android can introduce overhead. It also has a greater learning curve.
+
+Important Notes:
+
+    Micro-optimizations: The actual performance differences between these options might be negligible for your specific use case.
+    Development Time: Consider the development time and your familiarity with each language. Kotlin might be the most practical choice if you want to get a working prototype quickly.
+    Testing: Thoroughly test your app on your target device to measure its actual performance.
+
+In your specific situation, I would lean toward a highly optimized Scheme implementation, or a very well written Kotlin implementation. If you have the time and skill, the Scheme option has the potential to be the most efficient. If you want to get something working quickly, and still have great efficiency, Kotlin is a very good option.
+CHICKEN Scheme
+Source icon
+call-cc.org
+Tail call - Wikipedia
+Source icon
+en.wikipedia.org
+Kotlin Advantages Over Java - Guaraná
+Source icon
+guarana-technologies.com
+Functional correctness -- Haskell-ing your way to reliable code - media.ccc.de
+Source icon
+media.ccc.de
+Is Kotlin Worth It in 2024? Evaluating the Benefits and Limitations for Developers - Leanware
+Source icon
+www.leanware.co
+
+Also, when I use my Android-device outdoors, I have come to rely on always carrying an extra battery-pack or even two (i.e. power-banks), so as long as the resource-usage is not too outrageous (i.e. introducing a lot of wear and tear on the device) I think I have that base fairly covered.
+
+That's a very practical approach! Knowing you have a good power backup definitely shifts the focus a bit. If you're less concerned about absolute minimum battery usage, it allows for more flexibility in your implementation choices. Here's how that impacts the decision:
+
+Impact of Power Backup
+
+    Reduced Pressure for Extreme Optimization:
+        You don't need to obsess over squeezing every last drop of performance. You can prioritize development speed, maintainability, and features over micro-optimizations.
+    Flexibility in Language and Approach:
+        You have more freedom to choose languages and frameworks that you are comfortable with, even if they have a slightly higher overhead.
+        This means that if you are more comfortable with Kotlin, that is a perfectly viable option.
+    Focus on User Experience:
+        You can prioritize a smooth and responsive user experience, even if it means using slightly more resources.
+        This includes things like:
+            Fast key remapping.
+            Reliable handling of all key combinations.
+            Easy configuration and customization.
+    Increased Exploration:
+        You can freely explore different approaches and technologies.
+
+Revised Recommendations
+
+    Kotlin (Functional Approach):
+        Given your power backup, Kotlin becomes an even stronger contender.
+        Its ease of use, excellent Android integration, and good performance make it a very practical choice.
+        It also allows for fast prototyping.
+    Scheme (if you want to explore):
+        If you are very interested in learning and using Scheme, then this is still a viable option.
+        If you want to spend the time to optimize it, it could be very efficient.
+    Prioritize Maintainability:
+        Focus on writing clean, well-structured code that is easy to understand and maintain.
+        This will make it easier to add new features and fix bugs in the future.
+    Thorough Testing:
+        Regardless of the language you choose, thorough testing is essential.
+        Test your app with different apps and scenarios to ensure that it works reliably.
+
+In summary:
+
+    With a power backup, Kotlin becomes a very strong option.
+    If you have a strong interest in Scheme, it is still viable.
+    Focus on maintainability and thorough testing.
+
+Essentially, the power backup removes the stress of absolute resource minimization, allowing you to focus on creating a tool that is both functional and enjoyable to use.
+
+Could you sketch out some code for a Kotlin-solution to the problem and maybe as you said focusing on using the service-based approach? As we have discussed, I think relying on a mainly functional approach could be very beneficial, and (if applicable and certainly if feasible) if using or introducing a reactive approach could be useful?
+
+Absolutely. Let's sketch out a Kotlin solution using a service-based approach, focusing on functional programming and incorporating reactive elements where appropriate.
+
+Conceptual Structure
+
+    Service:
+        A background service (KeyboardRemappingService) to listen for and remap keyboard events.
+    Key Mapping Logic:
+        A functional component (KeyMapper) to handle the SvDvorak to QWERTY mapping.
+    Event Handling:
+        Reactive streams (using Flow or RxJava) to process keyboard events asynchronously.
+    Accessibility Service:
+        An AccessibilityService to capture and inject key events.
+
+Kotlin Code (Conceptual)
+Kotlin
+
+import android.accessibilityservice.AccessibilityService
+import android.accessibilityservice.AccessibilityServiceInfo
+import android.view.KeyEvent
+import android.view.accessibility.AccessibilityEvent
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+
+class KeyboardRemappingService : AccessibilityService() {
+
+    private val job = SupervisorJob()
+    private val scope = CoroutineScope(Dispatchers.Default + job)
+    private val keyEventFlow = MutableSharedFlow<KeyEvent>()
+    private val keyMapper = KeyMapper()
+
+    override fun onServiceConnected() {
+        super.onServiceConnected()
+        val info = AccessibilityServiceInfo().apply {
+            eventTypes = AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED
+            flags = AccessibilityServiceInfo.FLAG_REPORT_VIEW_IDS
+            feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC
+        }
+        serviceInfo = info
+
+        keyEventFlow
+            .filter { it.action == KeyEvent.ACTION_DOWN }
+            .map { keyMapper.remap(it.keyCode) }
+            .filter { it != null }
+            .onEach { keyCode ->
+                val event = KeyEvent(
+                    KeyEvent.ACTION_DOWN,
+                    keyCode!!
+                )
+                sendKeyEvent(event)
+            }
+            .launchIn(scope)
+    }
+
+    override fun onAccessibilityEvent(event: AccessibilityEvent?) {
+        if (event?.eventType == AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED) {
+            val keyEvent = event.parcelableData as? KeyEvent
+            if (keyEvent != null) {
+                keyEventFlow.tryEmit(keyEvent)
+            }
+        }
+    }
+
+    override fun onInterrupt() {
+        job.cancel()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        job.cancel()
+    }
+
+    override fun onKeyEvent(event: KeyEvent?): Boolean {
+        if (event != null) {
+            keyEventFlow.tryEmit(event)
+        }
+        return true;
+    }
+}
+
+class KeyMapper {
+
+    private val svDvorakToQwertyMap = mapOf(
+        KeyEvent.KEYCODE_G to KeyEvent.KEYCODE_I,
+        // Add more key mappings here...
+    )
+
+    fun remap(keyCode: Int): Int? {
+        return svDvorakToQwertyMap[keyCode]
+    }
+}
+
+Explanation
+
+    KeyboardRemappingService:
+        Extends AccessibilityService.
+        Uses CoroutineScope and SupervisorJob for coroutine management.
+        keyEventFlow: A MutableSharedFlow to emit keyboard events.
+        KeyMapper: An instance of the KeyMapper class.
+        onServiceConnected(): Configures the accessibility service.
+        onAccessibilityEvent(): Captures keyboard events and emits them to keyEventFlow.
+        onKeyEvent(): Captures key events and emits them to keyEventFlow.
+        Uses Flow operators (filter, map, onEach) for reactive event processing.
+    KeyMapper:
+        Contains the svDvorakToQwertyMap.
+        remap(): A pure function that translates keycodes.
+
+Important Notes
+
+    Permissions:
+        You'll need to add the BIND_ACCESSIBILITY_SERVICE permission to your AndroidManifest.xml.
+        Users will need to enable your accessibility service in their device settings.
+    Key Event Handling:
+        The code currently filters for KeyEvent.ACTION_DOWN events. You might need to handle other event types (e.g., ACTION_UP) as well.
+    Error Handling:
+        Add error handling to your code to gracefully handle unexpected events or errors.
+    Testing:
+        Thoroughly test your app with different apps and scenarios.
+    Manifest:
+        You must add the accessibility service to your AndroidManifest.xml file.
+
+XML
+
+<service
+    android:name=".KeyboardRemappingService"
+    android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService" />
+    </intent-filter>
+    <meta-data
+        android:name="android.accessibilityservice"
+        android:resource="@xml/accessibility_service_config" />
+</service>
+
+    accessibility_service_config.xml
+        Create a xml file named accessibility_service_config.xml in the res/xml folder.
+        Add the following to the file:
+
+XML
+
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/accessibility_description"
+    android:accessibilityEventTypes="typeViewTextChanged"
+    android:packageNames=""
+    android:accessibilityFlags="flagReportViewIds"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="100"
+    android:canPerformGestures="false"
+    android:settingsActivity=".MainActivity"/>
+
+    String Resource
+        add a String resource to your strings.xml file.
+
+XML
+
+<string name="accessibility_description">Remaps Keyboard keys.</string>
+
+This is a starting point. You'll need to expand it to handle all your SvDvorak mappings and edge cases.
+
+Great. One thing I maybe failed to mention is that (without having looked at the code above in detail) since the app is primarily for my own personal use, the GUI-part of the app can be as minimal as possible, i.e. one single icon that represents the utility would be perfectly sufficient - perhaps an icon that could sit on the 'phone desktop' and indicate with color or looking like a pressed button if the utility is active, and another color or a button 'un-pressed' to signal that the utility is not active.
+
+Perfect, a minimal GUI is absolutely feasible and aligns well with the custom, personal nature of your project. Here's how we can adapt the solution to achieve that:
+
+Minimal GUI Approach
+
+    Launcher Icon and Activity:
+        Create a simple launcher icon for your app.
+        Create a minimal MainActivity that serves as the entry point for your app.
+    Toggle Service State:
+        The MainActivity will have a single button (or a visual toggle) to start and stop the KeyboardRemappingService.
+        You can use a ToggleButton or a custom view to visually represent the service's state.
+    Visual Feedback:
+        Change the button's color or appearance to indicate whether the service is active or inactive.
+        Optionally, you can display a small status notification in the notification bar.
+
+Kotlin Code (Minimal GUI)
+
+1. MainActivity.kt:
+Kotlin
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.ToggleButton
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var toggleButton: ToggleButton
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        toggleButton = findViewById(R.id.toggleButton)
+
+        toggleButton.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                startService(Intent(this, KeyboardRemappingService::class.java))
+            } else {
+                stopService(Intent(this, KeyboardRemappingService::class.java))
+            }
+        }
+    }
+}
+
+2. activity_main.xml (Layout):
+XML
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/app"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Remapping Off"
+        android:textOn="Remapping On"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+3. Modify KeyboardRemappingService.kt:
+Kotlin
+
+// ... (existing code)
+
+class KeyboardRemappingService : AccessibilityService() {
+
+    // ... (existing code)
+
+    override fun onDestroy() {
+        super.onDestroy()
+        job.cancel()
+        //Add code here to remove the notification, if you implemented one.
+    }
+}
+
+4. AndroidManifest.xml (Add MainActivity):
+XML
+
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.YourAppTheme">
+    <service
+        android:name=".KeyboardRemappingService"
+        android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.accessibilityservice.AccessibilityService" />
+        </intent-filter>
+        <meta-data
+            android:name="android.accessibilityservice"
+            android:resource="@xml/accessibility_service_config" />
+    </service>
+    <activity android:name=".MainActivity" android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
+
+Explanation
+
+    MainActivity:
+        Sets up the ToggleButton.
+        Starts and stops the KeyboardRemappingService based on the button's state.
+    activity_main.xml:
+        Defines the layout with a single ToggleButton.
+    Visual Feedback:
+        The ToggleButton's text and state provide visual feedback.
+    AndroidManifest:
+        The MainActivity is added as the launcher activity.
+
+Enhancements
+
+    Custom Toggle Button:
+        You can create a custom view or use a library to create a more visually appealing toggle button.
+    Notification:
+        Display a small notification in the notification bar to indicate that the service is running.
+    Settings:
+        If you need to add configuration settings (e.g., custom key mappings), you can add a settings activity or use a configuration file.
+
+This minimal GUI approach keeps the app simple and focused on its core functionality, which aligns perfectly with your requirements.
+github.com
+github.com
+github.com
+github.com
+developers.google.com
+developers.google.com
+github.com
+github.com
+stackoverflow.com
+stackoverflow.com
+
+Excellent. And(!!), just as a quick thought - something that crossed my mind just this instant actually: What just occurred to me is that (at least looking just a bit past the present moment), what I might be interested in is to widen the scope just slightly and go for a solution that would work on both Android, and(!!) on Windows. A bane for me on Windows has been being able to install or use some utility to accomplish the same functionality. I have been sketching out a solution using AutoHotKey, but if I could use some language (I'm thinking Flutter or something similar), that would REALLY be interesting to me.
+
+That's a fantastic idea! Expanding the scope to include Windows support would significantly increase the utility of your project. Using a cross-platform framework like Flutter is a very promising approach. Let's explore that:
+
+Cross-Platform Approach (Flutter)
+
+    Flutter's Advantages:
+        Cross-Platform Development: Flutter allows you to write code once and deploy it to multiple platforms (Android, iOS, Windows, macOS, Linux, web).
+        Native Performance: Flutter apps are compiled to native code, providing excellent performance.
+        Rich UI Framework: Flutter provides a rich set of UI widgets and tools for creating visually appealing and responsive apps.
+        Dart Language: Dart is a modern, object-oriented language that is easy to learn and use.
+        Community and Ecosystem: Flutter has a large and active community, and a growing ecosystem of packages and plugins.
+    Challenges:
+        Low-Level Input Handling: Intercepting and modifying keyboard events at a low level can be challenging in a cross-platform environment. You'll likely need to use platform-specific plugins or native code.
+        Accessibility Services (Android) and Input Hooks (Windows): You'll need to handle platform-specific APIs for input event interception.
+        Plugin Development: You might need to develop custom plugins for platform-specific functionality.
+    Conceptual Architecture:
+        Flutter App:
+            The core application logic and UI will be written in Dart.
+            The app will handle key mapping logic and user configuration.
+        Platform-Specific Plugins:
+            Android: Use a Flutter plugin that integrates with the Android Accessibility Service to intercept keyboard events.
+            Windows: Use a Flutter plugin that integrates with Windows input hooks or low-level keyboard APIs.
+        Key Mapping Logic (Dart):
+            Implement the SvDvorak to QWERTY mapping logic in Dart, making it platform-independent.
+        Service/Background Process:
+            Implement the key remapping functionality as a background process or service on both platforms.
+
+Implementation Steps
+
+    Flutter Setup:
+        Install Flutter and set up your development environment.
+    Create a Flutter Project:
+        Create a new Flutter project.
+    UI Development:
+        Create the UI for your app, including a toggle button and any necessary configuration settings.
+    Platform-Specific Plugins:
+        Android:
+            Create a Flutter plugin that integrates with the Android Accessibility Service.
+            Use the plugin to capture and inject key events.
+        Windows:
+            Explore existing Flutter plugins for Windows input handling.
+            If necessary, create a custom plugin that uses Windows input hooks or low-level keyboard APIs.
+    Key Mapping Logic (Dart):
+        Implement the key mapping logic in Dart.
+    Background Processing:
+        Implement the key remapping functionality as a background process or service on both platforms.
+    Testing:
+        Thoroughly test your app on both Android and Windows.
+
+Considerations
+
+    Plugin Availability: The availability and quality of Flutter plugins for Windows input handling will be a crucial factor.
+    Native Code Integration: You might need to write some native code (Kotlin/Java for Android, C++ for Windows) to handle platform-specific input APIs.
+    Performance: Cross-platform performance is generally good with Flutter, but you'll need to optimize your code for both platforms.
+
+Benefits
+
+    Code Reusability: Write code once and deploy it to multiple platforms.
+    Consistent UI: Maintain a consistent UI across platforms.
+    Faster Development: Speed up development by using a single codebase.
+
+By using Flutter, you can create a cross-platform keyboard remapping utility that works seamlessly on both Android and Windows, providing a consistent and efficient experience.
+
+My concern when it comes to Flutter (although it might not be a complete showstopper) is being able to include and leverage the functional and reactive approaches we talked about. Could you comment a bit about that, and also if languages like D or Rust may be interesting just to glance at, although they definitely have their 'kinks' (difficulty, reach etc, although their respective performances are excellent)
+
+You've raised valid concerns about Flutter's compatibility with functional and reactive approaches, and you're right to consider alternatives like D and Rust. Let's break down those points:
+
+Flutter and Functional/Reactive Programming
+
+    Dart's Capabilities:
+        Dart, the language used in Flutter, has functional programming features, including:
+            First-class functions: Functions can be assigned to variables and passed as arguments.
+            Lambdas: Anonymous functions.
+            Collection methods: map, filter, reduce, etc.
+        However, Dart's functional features are not as extensive as those in dedicated functional languages like Haskell or Scheme.
+    Reactive Programming in Flutter:
+        Flutter has excellent support for reactive programming through:
+            Streams: Dart's built-in Stream class allows you to work with asynchronous data streams.
+            rxdart package: A popular package that provides a rich set of reactive operators based on the ReactiveX (Rx) standard.
+            Flutter's widget tree is rebuilt reactively, so that when data changes, the UI updates.
+        Therefore, while Dart is not a pure functional language, it is highly possible to use reactive programming, and a functional style of programming.
+    Limitations:
+        Dart's type system is not as powerful as Haskell's, which limits some advanced functional programming techniques.
+        The emphasis in Flutter is on UI development, which can sometimes lead to less pure functional code.
+
+D and Rust as Alternatives
+
+    D:
+        D is a systems programming language that offers a blend of C++, Java, and Python features.
+        It has good support for functional programming and metaprogramming.
+        D can be compiled to native code, providing excellent performance.
+        Pros:
+            Excellent performance.
+            Good functional programming support.
+            Metaprogramming capabilities.
+        Cons:
+            Smaller community and ecosystem compared to Flutter.
+            Cross-platform UI development can be more challenging.
+            Less mobile support than Flutter.
+    Rust:
+        Rust is a systems programming language that focuses on safety, performance, and concurrency.
+        It has excellent support for functional programming and is known for its memory safety.
+        Rust can be compiled to native code, providing excellent performance.
+        Pros:
+            Excellent performance and memory safety.
+            Strong functional programming support.
+            Growing community and ecosystem.
+        Cons:
+            Steeper learning curve.
+            Cross-platform UI development can be more challenging.
+            Less mobile support than Flutter.
+    Suitability for Your Project:
+        D and Rust are excellent choices if performance and low-level control are your top priorities.
+        However, they require more effort for cross-platform UI development.
+        Rust is gaining more and more mobile support, and there are UI frameworks being developed for rust, so it is a language that is worth keeping an eye on.
+    Recommendation:
+        If cross-platform UI development is crucial, Flutter with rxdart and a functional approach is a good choice.
+        If performance and low-level control are paramount, and you're willing to invest more time in platform-specific UI development, Rust is a strong contender.
+        If you are very comfortable with C/C++ like languages, then D is also a good option.
+        It is worth noting that it is possible to use Rust or D for the backend logic and use Flutter for the UI. This hybrid approach could give you the best of both worlds.
+
+In summary, Flutter can handle functional and reactive programming, but D and Rust offer more robust support for those paradigms at the cost of increased complexity in UI development.
+
+Right. AND(!!) since the UI-requirements for my particular app - especially at the initial stages - are really very minimal, then both D (which is a community where I have excellent connections with several core developers) and Rust become very interesting alternatives I think.
+
+That's excellent! Given your strong connections within the D community and your minimal UI requirements, D becomes a very compelling option. Rust is also an excellent choice, but your existing connections with D developers provide a significant advantage. Let's explore how you can leverage D for your cross-platform keyboard remapping utility:
+
+D Approach
+
+    D's Strengths:
+        Performance: D is a systems programming language that compiles to native code, providing excellent performance.
+        Functional Programming: D supports functional programming paradigms, including first-class functions, lambdas, and immutable data.
+        Metaprogramming: D's metaprogramming capabilities allow you to write highly flexible and efficient code.
+        Cross-Platform: D can be compiled for various platforms, including Windows and Android.
+        Community: Your connections within the D community will be invaluable for support and guidance.
+    Implementation Strategy:
+        Core Logic (D):
+            Implement the key remapping logic in D, leveraging its functional and metaprogramming capabilities.
+            Create a D library that handles the SvDvorak to QWERTY mapping.
+        Platform-Specific Input Handling:
+            Windows:
+                Use D's Windows API bindings to intercept keyboard events using input hooks.
+                Inject modified key events using the SendInput function.
+            Android:
+                Use the Android NDK to create a D library that interacts with the Linux input subsystem.
+                Alternatively, explore using the accessibility service approach, but implemented from D with the help of the NDK.
+            Use the D programming language, and the NDK to create a shared library, that can be called from a very small Kotlin wrapper application, that starts the service.
+        Minimal UI (Platform-Specific):
+            Windows:
+                Use a simple console application or a minimal GUI framework (e.g., Win32 API, or a light weight cross platform GUI library, that can be called from D) to provide a toggle button and status indicator.
+            Android:
+                Create a very basic Kotlin wrapper application with a single toggle button to start and stop the D service.
+        Build System:
+            Use a cross-platform build system (e.g., CMake, Meson) to manage the build process.
+    Advantages:
+        Excellent performance.
+        Fine-grained control over input handling.
+        Leverage your D community connections.
+    Considerations:
+        Platform-specific UI development will require more effort.
+        Android NDK integration can be complex.
+        Testing on multiple platforms is critical.
+    D specific advantages:
+        D has good support for low level interaction, and the standard library, Phobos, is very extensive.
+        D's compile time features, can be used to create very optimized mapping tables.
+
+Next Steps
+
+    D Development Environment:
+        Set up your D development environment.
+    Key Mapping Library:
+        Start by implementing the key remapping logic in D.
+    Windows Input Handling:
+        Explore D's Windows API bindings and implement keyboard event interception and injection.
+    Android NDK Integration:
+        Experiment with the Android NDK to create a D library for Android input handling.
+    Minimal UI:
+        Create simple UI components for Windows and Android.
+    Testing:
+        Thoroughly test your app on both platforms.
+
+By leveraging D's strengths and your community connections, you can create a highly efficient and customized keyboard remapping utility.
+
+
+}}}
+
+
+Good. Another question regarding Android: One thing that would really level up my use of Android as an integrated part of my workflow is if I could cast my Android-device's screen to my computer (both Windows and Linux) and preferably also vice-versa, i.e. if I could cast my computer's screen to my Android device.
+
+Of course (if possible) it would be great if I could access and manipulate the screen I cast to my desktop-screen, and also the other way around, i.e. being able to control my computer when I cast my desktop/laptop screen to my Android device.
+
+You're looking for solutions that provide robust screen mirroring and remote control capabilities between your Android device and both Windows and Linux computers. Here's a breakdown of the best options, focusing on functionality and cross-platform compatibility:
+
+1. Scrcpy (Screen Copy):
+
+    Functionality:
+        Scrcpy is a free and open-source command-line tool that allows you to display and control your Android device's screen on your computer (Windows, Linux, macOS).
+        It offers excellent performance, low latency, and high-quality screen mirroring.
+        You can control your Android device with your computer's keyboard and mouse.
+        It also allows you to record the screen and take screenshots.
+    Pros:
+        Very low latency.
+        High performance.
+        Free and open-source.
+        Cross-platform compatibility.
+    Cons:
+        Requires ADB (Android Debug Bridge) setup.
+        Command-line interface (though there are some GUI wrappers available).
+        Does not cast the computer's screen to the android device.
+    Setup:
+        Install ADB on your computer.
+        Enable USB debugging on your Android device.
+        Connect your Android device to your computer via USB.
+        Run the scrcpy command in your terminal.
+    Best for: Developers and users who want high performance and low latency.
+
+2. KDE Connect:
+
+    Functionality:
+        KDE Connect is a cross-platform application that integrates your Android device with your desktop.
+        It offers screen mirroring, remote control, file transfer, notifications syncing, and more.
+        It works wirelessly over your local network.
+    Pros:
+        Wireless connectivity.
+        Multiple features beyond screen mirroring.
+        Cross-platform compatibility (Linux, Windows, Android).
+    Cons:
+        Screen mirroring performance may vary depending on your network.
+        The Windows version, while functional, can be less streamlined than the Linux version.
+    Setup:
+        Install KDE Connect on your computer and Android device.
+        Pair your devices over your local network.
+    Best for: Users who want a comprehensive integration solution.
+
+3. TeamViewer/AnyDesk:
+
+    Functionality:
+        These are popular remote desktop applications that offer screen mirroring and remote control.
+        They work over the internet, so you can control your devices from anywhere.
+        They offer apps for Windows, Linux, and Android.
+    Pros:
+        Remote access over the internet.
+        Easy to use.
+        Cross-platform compatibility.
+        Works in both directions.
+    Cons:
+        May have latency issues, especially over slow internet connections.
+        Free versions may have limitations.
+        Security concerns if not used carefully.
+    Best for: Remote access and control over the internet.
+
+4. Vysor:
+
+    Functionality:
+        Vysor allows you to view and control your Android device on your computer.
+        It works via USB or Wi-Fi.
+        It offers screen mirroring, keyboard and mouse control, and file transfer.
+    Pros:
+        Easy to use.
+        Works via USB or Wi-Fi.
+        Cross platform.
+    Cons:
+        Free version has limitations.
+        Latency can be an issue over Wi-Fi.
+    Best for: Users who want a simple and convenient screen mirroring solution.
+
+Key Considerations:
+
+    Latency: Scrcpy generally offers the lowest latency, making it ideal for real-time control.
+    Wireless vs. Wired: KDE Connect and TeamViewer/AnyDesk offer wireless connectivity, while Scrcpy and Vysor can work via USB.
+    Features: KDE Connect and TeamViewer/AnyDesk offer a wider range of features beyond screen mirroring.
+    Security: Be cautious when using remote access tools over the internet, and ensure you're using strong passwords and secure connections.
+
+For most users, Scrcpy will be the best option for casting the android screen to the computer, and TeamViewer or AnyDesk will be the best option for casting the computer screen to the android device.
+
+Many thanks, and I'll definitely jot that down and try it out. Another question that (when established) will be an absolute game-changer for me.
+
+A couple of weeks ago I posed a couple of questions about being able to connect to and read and write to and from cloud-services (like Dropbox or Google Drive) directly from an Android device.
+
+I have granted access for Termux to my Android-device, and I have installed the rclone-utility, so I'm almost there.
+
+The last piece of configuration I would need to setup would be the following:
+
+
+
+How to Unmount:
+
+    Use the fusermount -u command, followed by the mount point. For example:
+    Bash
+
+fusermount -u ~/dropbox
+
+or
+Bash
+
+    fusermount -u ~/gdrive
+
+    This command will gracefully unmount the specified directory.
+
+What Happens If You Don't Unmount:
+
+    Termux Closure: When you close Termux, Android will typically terminate the rclone process, which will effectively unmount the directory. However, there's a small risk that pending write operations might not be fully completed.
+    Android Shutdown/Reboot: Similar to closing Termux, a shutdown or reboot will terminate the rclone process.
+    Potential for data corruption: If rclone is in the middle of writing a file when it is forced to close, it is possible that the file will become corrupted.
+
+Best Practices:
+
+    Develop a Habit: Make it a habit to unmount your rclone mounts before closing Termux or shutting down your device. It only takes a few seconds and can save you from potential headaches.
+    Scripting: If you frequently use rclone mounts, consider creating a simple script that unmounts all your mounts before exiting Termux.
+
+In summary, while Android and Termux will usually handle unmounting automatically, manually unmounting is the safest and most reliable approach.
+
+When I try writing 'fuse' in Termux and then pressing tab (for completion), the only name that pops up is 'fuser'. Does that mean that I have to install 'fusermount' in Termux using pkg?
+
+Yes, you're absolutely right! The fact that "fusermount" isn't auto-completing when you type "fuse" and press Tab in Termux indicates that it's not currently installed.
+
+Here's a breakdown and the solution:
+
+Why "fusermount" Is Needed:
+
+    FUSE (Filesystem in Userspace): FUSE is a kernel module that allows non-privileged users to create their own filesystems.   
+
+fusermount: This utility is part of the FUSE package and is used to mount and unmount FUSE filesystems. rclone relies on fusermount to mount cloud storage as local directories.  
+
+How to Install "fusermount" in Termux:
+
+    Update Packages: It's always a good practice to update your package list before installing new packages.
+    Bash
+
+pkg update
+
+Install the "fuse-utils" Package: The fusermount utility is included in the fuse-utils package.
+Bash
+
+    pkg install fuse-utils
+
+    Verify Installation: After the installation is complete, try typing "fusermount" and pressing Tab. It should now auto-complete.
+
+Important Considerations:
+
+    Termux Permissions: Ensure that Termux has the necessary permissions to access your device's file system.
+    Root Access: FUSE itself does not require root access, which is one of its key advantages.
+
+By installing the fuse-utils package, you'll have the fusermount utility available in Termux, allowing you to properly mount and unmount rclone filesystems.
+Filesystem in Userspace - Wikipedia
+Source icon
+en.wikipedia.org
+FUSE — The Linux Kernel documentation
+Source icon
+www.kernel.org
+Rclone - rsync for cloud storage - MSU HPCC User Documentation
+Source icon
+docs.icer.msu.edu
+
+The message I got back was 'Unable to locate package fuse-utils'
+
+You're encountering a common issue with Termux package management. The "Unable to locate package fuse-utils" message means the package name or the repository information is slightly off. Here's how to fix it:
+
+The Correct Package Name:
+
+    The correct package name in Termux is simply fuse, not fuse-utils.
+
+Steps to Install:
+
+    Update Repositories (Again):
+        It's crucial to ensure your package lists are up-to-date.
+    Bash
+
+pkg update
+
+Install the fuse Package:
+
+    Use the correct package name:
+
+Bash
+
+    pkg install fuse
+
+    Verify Installation:
+        After installation, try typing fusermount and pressing Tab. It should now autocomplete.
+        You can also verify the installation by typing which fusermount in the terminal. If it is installed, it will print the path to the fusermount executable.
+
+Explanation:
+
+    Termux uses a slightly different package naming convention than some other Linux distributions.
+    By installing the package named fuse, you will also install the fusermount utility.
+
+By following these corrected steps, you'll successfully install fusermount and be able to proceed with your rclone mount configuration.
+
+I got the same error-message. Is there a flag or separate command I could run with pkg whereby I can query for fusermount - in a way similar to choco search packagename on Windows or apropos on Linux - to retrieve the right name?
+
+Yes, you're right to look for a search functionality within pkg. Termux, being based on Debian, uses apt (Advanced Package Tool) under the hood, even though it presents a simplified pkg interface. You can leverage apt's search capabilities directly within Termux.
+
+Here's how you can search for packages containing "fusermount":
+
+Using apt search:
+
+    Update Package Lists (If Not Already Done):
+    Bash
+
+pkg update
+
+Use apt search with a Regular Expression:
+Bash
+
+apt search fusermount
+
+or to do a more thorough search, including descriptions:
+Bash
+
+    apt search fuse | grep fusermount
+
+    This command will search the package lists for any packages that contain "fusermount" in their names or descriptions.
+
+    Interpret the Results:
+        The output will show a list of matching packages, along with brief descriptions.
+        Look for the package that seems most relevant. In this case, you're likely to find the fuse package.
+
+Explanation:
+
+    apt search is a powerful tool for finding packages in Debian-based systems.
+    The | grep command pipes the output of apt search to grep, which filters the results to show only lines containing "fusermount." This is useful for more specific searches.
+
+Why pkg search Might Not Be Ideal:
+
+    While Termux's pkg command is designed for simplicity, it may not expose all of apt's search capabilities.
+    Using apt search directly gives you more control and flexibility.
+
+Troubleshooting if apt search Fails:
+
+    Repository Issues: If apt search doesn't return any results, there might be a problem with your Termux repositories.
+        Try running pkg update again to refresh the repository lists.
+        If you have any issues with your internet connection, this can also cause issues.
+    Termux Architecture: Ensure that your Termux installation matches your device's architecture (e.g., arm64).
+
+By using apt search, you'll be able to effectively search for packages and find the correct name for fusermount or any other package you need.
+
+The information I've gathered after doing a bit of searching on the internet is that it seems some people have had to obtain the sources for fusermount and compile them.
+
+You're right to be thorough in your research. It's true that in some very specific scenarios, especially with highly customized Android setups or older Termux installations, compiling fusermount from source might be necessary. However, this is generally a last resort and often indicates a deeper underlying issue.
+
+Here's a breakdown of why compiling from source might be suggested and when it's appropriate:
+
+Reasons for Compiling from Source:
+
+    Missing Package: If the fuse package is genuinely unavailable in your Termux repositories (which is unusual), compiling from source is a workaround.
+    Custom Builds: Some users might have highly customized Android ROMs or Termux setups that require specific versions of fusermount or FUSE.
+    Architecture Incompatibilities: In rare cases, there might be architecture incompatibilities between the pre-built packages and your device.
+    Learning/Experimentation: Compiling from source can be a valuable learning experience for understanding how FUSE and fusermount work.
+
+Why It's Generally Not Necessary:
+
+    Termux Repositories: Termux typically provides up-to-date packages, including fuse, in its repositories.
+    Complexity: Compiling from source can be complex, especially for users who are not familiar with Linux build tools and dependencies.
+    Maintenance: Maintaining a self-compiled fusermount installation can be challenging, as you'll need to manually update it when new versions are released.
+
+Steps to Compile from Source (If Absolutely Necessary):
+
+    Install Build Tools:
+        You'll need to install essential build tools like gcc, make, and pkg-config.
+    Bash
+
+pkg install clang make pkg-config
+
+Download FUSE Source Code:
+
+    Download the FUSE source code from the official FUSE website or a trusted repository.   
+
+    Extract and Configure:
+        Extract the source code archive and navigate to the extracted directory.
+        Run the ./configure script to prepare the build environment.
+
+    Compile:
+        Run the make command to compile the source code.
+
+    Install:
+        Run the make install command to install the compiled binaries.
+
+Important Considerations:
+
+    Dependencies: Compiling from source might require installing additional dependencies.
+    Android NDK: For more complex builds, you might need to use the Android NDK (Native Development Kit).
+    Termux Environment: Ensure that your Termux environment is properly configured for building native code.
+
+Recommendation:
+
+    Before resorting to compiling from source, double-check your Termux repositories and ensure that you're using the correct package name (fuse).
+    If you're still having trouble, consider seeking help from the Termux community or forums.
+
+In most cases, installing the fuse package from the Termux repositories will be the simplest and most reliable solution.
+
+
+
+
+
+I have toyed with the thought of obtaining another Android-device that may pack a better punch than the phone I'm currently using and maybe you could give me some suggestions. What I'm looking for is a phone - which would be preferable to me compared to e.g. a tablet. My ideal device would have a bigger screen and more processing power than my current phone - an Android A20, and also a bigger screen, but not being as large as the largest phones or a tablet, as both of those types of devices would be a bit too (or much too) bulky to take along for physio-exercises like running etc.
+
+You're looking for a sweet spot: a phone with a larger screen and more power than your A20, but not so large that it becomes cumbersome for activities like running. This means we're aiming for something in the "phablet" or larger-than-average phone category, but still manageable. Here are some suggestions, keeping in mind that availability and pricing can vary:
+
+Key Considerations:
+
+    Screen Size: Aim for something in the 6.5-6.8 inch range. This offers a noticeable upgrade from the A20's 6.4 inches without being overly bulky.
+    Processor: Look for a mid-range to high-mid-range processor. Snapdragon 700 or 800 series, or equivalent MediaTek or Exynos chips, would be a significant improvement.
+    RAM: 6GB or 8GB of RAM is ideal for smooth performance.
+    Battery Life: A larger battery is essential for extended use, especially if you're using the device for demanding tasks or outdoor activities.
+    Durability: If you plan on using the phone for physical activities, consider a device with some degree of water and dust resistance.
+
+Phone Recommendations:
+
+    Google Pixel 7a/8a:
+        These phones offer excellent performance, a great camera, and a clean Android experience.
+        They are a good size, not being excessively large.
+        The Pixel series is known for its timely software updates.
+        The "a" series is a good value for the price.
+    Samsung Galaxy A54/A55:
+        Samsung's A series provides a good balance of features and price.
+        The A54/A55 have a vibrant display, a decent camera, and good battery life.
+        Samsung has also improved their software update policy.
+    OnePlus Nord 3:
+        OnePlus Nord phones are known for their fast performance and smooth software.
+        They offer a good balance of features and price.
+        OnePlus devices usually have fast charging.
+    Motorola Edge (series):
+        Motorola has been producing some good mid-range to high mid-range devices.
+        They typically have near stock android, and good battery life.
+        The Motorola Edge series of phones have a good screen size.
+
+Tips for Choosing:
+
+    Read Reviews: Check reputable tech websites and YouTube channels for reviews of the phones you're considering.
+    Compare Specs: Use websites like GSMArena to compare the specifications of different phones.
+    Consider Your Budget: Prices can vary significantly, so set a budget and stick to it.
+    Check for Deals: Look for deals and discounts from retailers and carriers.
+    Physical size: Go to a store and physically hold the phones that you are considering. This is the best way to determine if the device will be too large for your needs.
+
+When considering the physical exercise aspect, a good protective case is always recommended.
+
+I also had a quick look in a store and got the recommendation that maybe a Samsung Galaxy S25 might fit my needs. Could you comment on that device?
+
+The Samsung Galaxy S25 series, particularly the S25 Ultra, represents Samsung's top-tier flagship smartphones. Here's a breakdown of what that means and how it might fit your needs:
+
+Key Strengths of the Samsung Galaxy S25 Series:
+
+    Top-Tier Performance:
+        The S25 series will feature the latest and most powerful processors, ensuring incredibly smooth performance for any task, from demanding apps to gaming.
+        This is a significant upgrade in processing power compared to your current A20.
+    Exceptional Camera System:
+        Samsung's Galaxy S Ultra phones are renowned for their advanced camera technology. Expect a versatile and high-quality camera setup that excels in various lighting conditions.
+    Premium Display:
+        The Dynamic AMOLED displays on the S25 series are known for their vibrant colors, deep blacks, and high refresh rates, providing an immersive viewing experience.
+    Advanced Features:
+        These phones will come packed with the latest features, including enhanced AI capabilities, improved connectivity, and advanced security features.
+    Build Quality:
+        The S25 series is built with premium materials, making for a very durable device.
+
+Considerations for Your Needs:
+
+    Size and Portability:
+        The "Ultra" models, while offering the most features, are also the largest. Consider the standard S25 or S25+ models if you prioritize a more compact form factor.
+        It is very important to try and hold the phone in your hand to see if the size is acceptable for your needs.
+    Price:
+        Flagship phones like the Galaxy S25 series come with a premium price tag.
+    Overkill?
+        If your primary needs are general use, browsing, and some light apps, the S25 series might be more powerful than you require. However, if you want the best performance and camera capabilities, it's an excellent choice.
+    Fitness use:
+        Samsung does a very good job of making there phones water and dust resistant. This is very good for using the phone during physical exercise.
+
+In summary:
+
+    The Samsung Galaxy S25 series is a fantastic choice if you want a top-of-the-line Android phone with excellent performance, a great camera, and a premium display.
+    However, consider the size and price before making a decision.
+    If you want the best of the best, the S25 Ultra is a very strong contender. If you want a great phone that is a little more compact, then look at the S25, or S25+.
+
+I hope this helps!
+
+If I wanted to go for even a bit bigger screen size, that might actually be feasible as well. I think the only upper constraint size-wise would be to be able to get hold of one of those soft cases used to wrap the phone when going for a run - i.e. I don't know what they're called in English, but they're fairly common and are used to 'strap the phone' to the side of ones arm, if you know what I mean.
+
+Yes, I know exactly what you're referring to! Those are called armband phone holders or simply phone armbands.
+
+If you're willing to consider a slightly larger screen size, knowing that you can still use a phone armband, that opens up your options. Here's a breakdown of considerations and some potential devices:
+
+Screen Size Considerations:
+
+    Up to 7 Inches:
+        Many "phablet" style phones and some of the larger "Ultra" models fall into this range.
+        Armbands are readily available for phones in this size category.
+    Armband Compatibility:
+        When choosing a larger phone, pay close attention to the dimensions (height, width, and thickness).
+        Check the specifications of the armband to ensure it can accommodate your chosen phone.
+        Many armbands are designed to be adjustable, but there are limits.
+
+Device Recommendations (Larger Screen Options):
+
+    Samsung Galaxy S25 Ultra (or future Ultra models):
+        These phones typically have the largest screens in Samsung's lineup.
+        They offer top-tier performance and features.
+        Make sure to find an armband that is compatible with the "Ultra" models, as these are often the largest phones on the market.
+    Samsung Galaxy Z Fold Series:
+        These foldable phones offer a tablet-like experience when unfolded.
+        When folded, they are still a large phone.
+        They are great for media consumption and productivity.
+        Finding an armband for these may be more difficult, but there are some available.
+    OnePlus Open:
+        This is another foldable phone, that is in direct competition with the Samsung Fold series of phones.
+        This phone also offers a large screen, when unfolded.
+    Google Pixel Fold:
+        Google's foldable phone.
+        This phone also offers a large screen, when unfolded.
+
+Tips for Finding the Right Armband:
+
+    Measure Your Phone:
+        Get the exact dimensions of your chosen phone.
+    Check Armband Specifications:
+        Look for armbands that list the maximum phone dimensions they can accommodate.
+    Read Reviews:
+        See what other users say about the fit and comfort of the armband.
+    Consider Adjustable Straps:
+        Adjustable straps allow you to customize the fit to your arm size.
+    Material:
+        Choose a breathable and sweat-resistant material.
+    Water Resistance:
+        If you will be running in various weather conditions, a water resistant armband is a great idea.
+
+By following these guidelines, you can find a larger-screen phone and a compatible armband that meets your needs.
+
+The S25 and S25 Ultras also feature a special pen for drawing, if I'm not mistaken?
+
+You're absolutely right! The Samsung Galaxy S25 Ultra (and its predecessors like the S24 Ultra, S23 Ultra, etc.) comes with the S Pen stylus built-in. The standard S25 and S25+ models do not include the S Pen.  
+
+Here's a breakdown of the S Pen's features and benefits:
+
+S Pen Features and Benefits:
+
+    Precise Writing and Drawing:
+        The S Pen offers a highly accurate and responsive writing and drawing experience.   
+
+It's great for taking notes, sketching, and annotating documents.  
+
+Air Actions:
+
+    The S Pen supports "Air Actions," which allow you to control certain phone functions with gestures, even without touching the screen.   
+
+    This can be useful for controlling media playback, taking photos, and navigating the interface.
+
+Screen Off Memo:
+
+    You can quickly jot down notes on the screen even when the phone is locked.   
+
+Smart Select:
+
+    The S Pen makes it easy to select and extract text or images from the screen.   
+
+    Remote Shutter:
+        The S-Pen can be used as a remote shutter button for the camera.
+    Integration with Apps:
+        Many apps support S Pen integration, enhancing their functionality.
+
+S25 Ultra and the S Pen:
+
+    The S25 Ultra has a dedicated slot for the S Pen, making it easy to carry and access.
+    Samsung continues to improve the S Pen's features and performance with each generation.
+
+Considerations:
+
+    Learning Curve:
+        It might take some time to get used to using the S Pen effectively.
+    Personal Preference:
+        Whether or not you find the S Pen useful depends on your personal preferences and workflow.
+
+If you're interested in using a stylus for note-taking, drawing, or other tasks, the S25 Ultra's S Pen is a valuable feature.
+Use the Galaxy S25 Ultra's S Pen - Samsung
+Source icon
+www.samsung.com
+Enjoy S Pen Writing Experience with Galaxy S21 Ultra - Samsung
+Source icon
+www.samsung.com
+Using the S Pen for Sketching and Image Creation on Your Galaxy Device | Samsung Gulf
+Source icon
+www.samsung.com
+Use S Pen Air actions on your Galaxy phone or tablet - Samsung
+Source icon
+www.samsung.com
+Use Screen off memo on your Galaxy phone or tablet - Samsung
+Source icon
+www.samsung.com
+
+Two questions: Can the S Pen be bought as a separate accessory and be used with other or lower-tier phones as well, or are they 'bound in use' to certain models, and (maybe crucially I would say, at least for me) is the tip of the S Pen hard? What I mean by that is that I also own a Galaxy Tab S3 tablet, and the pen they sport is not particularly to my liking, i.e. the tip of that pen is soft and quite a bit wiggly, which I find very difficult to write with.
+
+You've hit on two very important points regarding the S Pen! Let's address them:
+
+1. S Pen Compatibility:
+
+    Model-Specific Features:
+        While some S Pens can physically interact with other Samsung devices, the full range of S Pen features, particularly "Air Actions" and Bluetooth connectivity, is generally limited to the Galaxy Note/Ultra series and some high-end Galaxy tablets that are explicitly designed for S Pen use.
+        Older S Pens, or those from tablets, can often be used for basic writing and drawing on other Samsung devices with Wacom digitizers, but they won't have the same level of functionality.
+    No Universal Compatibility:
+        You cannot simply buy an S Pen and expect it to work with any Samsung phone or tablet.
+        The hardware and software integration is model-specific.
+    Aftermarket Styluses:
+        There are aftermarket styluses that might work with some Samsung devices, but they will not replicate the S Pen's full functionality.
+
+2. S Pen Tip Hardness:
+
+    Evolution of S Pen Tips:
+        Samsung has made improvements to the S Pen's tip over the years.
+        Modern S Pen tips, particularly those found in the Ultra series, are generally firmer and more precise than the tips on older models or some tablets.
+        The S25 Ultra, and the S-pens from the last few ultra models, have tips that are much more firm than the S-pen that came with the Tab S3.
+    Tip Feel:
+        The feel of the S Pen tip is still a matter of personal preference.
+        Some users prefer a softer tip for a more "pen-on-paper" feel, while others prefer a firmer tip for greater precision.
+    Tip Replacement:
+        Samsung provides replacement S Pen tips, and there are also aftermarket options available.   
+
+        You can experiment with different tip types to find one that suits your writing style.
+    Galaxy Tab S3 vs. Ultra:
+        The S-Pen that came with your Galaxy Tab S3 is much softer, and wigglier, than the modern S-Pens. The S-pens that come with the Ultra phones are much more similar to a normal pen, than the older tablet pens.
+
+In summary:
+
+    S Pen compatibility is limited to specific Samsung models.
+    Modern S Pen tips are generally firmer than those on older models, but the feel is subjective.
+    If the wiggly tip of your Tab S3 pen bothers you, you will likely be much happier with the S-Pen that comes with the Ultra phones.
+
+I've also been toying with the idea of buying a FairPhone 5 and installing Lineage OS on it, which seems like a very interesting option. How would that phone stack up specs-wise to the other phones we discussed above?
+
+The Fairphone 5 with LineageOS is indeed an interesting and commendable choice, especially if you prioritize ethical sourcing, repairability, and software freedom. Here's a comparison of its specs and overall experience compared to the flagship Samsung and Google Pixel devices we discussed:
+
+Fairphone 5 Key Strengths:
+
+    Repairability and Modularity:
+        The Fairphone 5 is designed for easy repair and upgrades. You can replace individual components yourself, extending the phone's lifespan.   
+
+Ethical Sourcing:
+
+    Fairphone prioritizes ethical sourcing of materials and fair labor practices.   
+
+Long-Term Software Support:
+
+    Fairphone promises long-term software support, which is a major advantage.   
+
+LineageOS Compatibility:
+
+    Installing LineageOS gives you a clean, bloatware-free Android experience with timely updates and enhanced privacy features.   
+
+SD Card slot:
+
+    The fairphone 5 has a micro SD card slot, that allows for expandable storage.   
+
+Fairphone 5 Limitations Compared to Flagships:
+
+    Processor:
+        The Fairphone 5 uses a Qualcomm QCM6490 processor, which is a solid mid-range chip. While it's capable of handling most tasks, it's not as powerful as the flagship Snapdragon 8 Gen series or Google Tensor chips found in the Pixel and high end Samsung phones.   
+
+    Camera:
+        The Fairphone 5 has a decent camera system, but it might not match the image quality of the Pixel or Samsung Ultra phones, especially in challenging lighting conditions.
+    Display:
+        The Fairphone 5 has a good OLED display, but it may not have the same level of brightness, color accuracy, or refresh rate as the top-tier displays on flagship devices.
+    Features:
+        Flagship phones often include features like advanced camera processing, wireless charging, and enhanced water resistance that may not be present on the Fairphone 5.
+    Size:
+        The Fairphone 5 is a fairly large phone.
+
+LineageOS Considerations:
+
+    Pros:
+        Clean Android experience.
+        Enhanced privacy.
+        Timely updates.
+        Customization options.
+    Cons:
+        You might lose some manufacturer-specific features.
+        Potential for minor bugs or compatibility issues.
+
+How It Stacks Up:
+
+    Performance:
+        The Fairphone 5 is a solid performer for everyday tasks, but it's not designed for intensive gaming or demanding applications.
+    Camera:
+        The camera is good, but not exceptional.
+    Software:
+        LineageOS provides a superior software experience in terms of privacy and customization.
+    Durability and Repairability:
+        The Fairphone 5 excels in this area.
+    Price:
+        The fairphone 5 is in the upper mid-range price bracket.
+
+Who Should Choose the Fairphone 5:
+
+    Users who prioritize ethical sourcing and repairability.
+    Users who want a clean Android experience with enhanced privacy.
+    Users who value long-term software support.
+    Users who want a device that is easy to repair.
+
+Who Should Choose a Flagship:
+
+    Users who need the best possible performance.
+    Users who want the most advanced camera capabilities.
+    Users who want all the latest features.
+
+In short, the Fairphone 5 offers a compelling package for those who value ethical considerations and software freedom. If top-tier performance and camera capabilities are your primary concerns, a flagship device might be a better fit.
+Improving smartphone longevity - Fairphone
+Source icon
+www.fairphone.com
+We have big plans for fair materials by 2030 - Fairphone
+Source icon
+www.fairphone.com
+Fairphone's next chapter starts now.
+Source icon
+www.fairphone.com
+LineageOS - Wikipedia
+Source icon
+en.wikipedia.org
+Fairphone 5. Designed for you. Made fair.
+Source icon
+shop.fairphone.com
+
+}}}
+
+
+Ant. Ch.J BUV {{{
+
+}}}
 
