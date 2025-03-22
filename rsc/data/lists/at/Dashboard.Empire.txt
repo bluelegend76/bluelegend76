@@ -98,6 +98,7 @@ Clangs (C, Cpp, CSharp, Dlang) ----
 Web/Mobile/Cloud ----
   TODO --"--
 
+    'ful som stryk'
 Langs1 Ref-lists ----  __
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
   // maybe add 'främord' etc
@@ -1525,19 +1526,19 @@ Good for handling semi-structured data, which is common in language data.
 
     Pros:
         Excellent for representing and querying complex relationships using RDF (Resource Description Framework).
-        Supports semantic reasoning, allowing you to infer new knowledge from existing data.   
+        Supports semantic reasoning, allowing you to infer new knowledge from existing data.   __
 
-Can handle ontologies and controlled vocabularies, which are valuable for linguistic analysis.
+Can handle ontologies and controlled vocabularies __hm, which are valuable for linguistic analysis.
 These technologies support SPARQL, a query language designed for working with RDF data.  
 
 Cons:
 
     Steeper learning curve, especially if you're new to RDF and SPARQL.
-    Requires careful design of your ontology (schema), although it's more flexible than relational schemas.
+    __ Requires careful design of your ontology (schema), although it's more flexible than relational schemas.
     Can be more complex to set up and manage compared to simpler databases.
-    AllegroGraph is a commercial product, while Jena and Sesame are open source.   
+    AllegroGraph is a commercial product, while Jena and Sesame are open source.   [__]
 
-3. AWS Neptune and Gremlin (Graph Database)
+3. AWS Neptune and Gremlin (Graph Database)  __
 
     Pros:
         Designed specifically for handling highly connected data, making it ideal for representing relationships between words, concepts, and languages.
@@ -1546,7 +1547,7 @@ Cons:
         Scalable and managed service on AWS.
     Cons:
         Requires understanding graph data models and Gremlin.
-        While flexible, designing your graph schema is still important.
+        While flexible, designing your graph-schema is still important.
         You will be locked into the AWS ecosystem.
 
 4. Cosmos DB or DynamoDB (NoSQL Key-Value or Document Databases)
@@ -1561,10 +1562,10 @@ Cons:
 
         You will be locked into the Azure or AWS ecosystems respectively.
 
-5. Datalog (Logic Programming)
+5. Datalog (Logic Programming)  [__]
 
     Pros:
-        Excellent for expressing complex rules and relationships declaratively.
+        Excellent for expressing complex rules and relationships declaratively.  __
         Powerful for reasoning and inference.
         Very flexible and expressive.
         It's a very interesting technology.
@@ -1585,10 +1586,11 @@ Recommendations:
         Datalog: If you are willing to spend the time to learn this technology, it is a very powerful option, and very interesting.
     Considerations:
         Size of your database: For small to medium-sized personal projects, most of these options will work well.
-        Complexity of relationships: If you anticipate many complex relationships, a graph database or semantic web technology will be more suitable.
-        Your programming background: If you're comfortable with logic programming, Datalog could be a fascinating choice.
+        Complexity of relationships: If you anticipate many complex relationships, a graph database or semantic web technology will be more suitable.  __
+        Your programming background: If you're comfortable with logic programming, Datalog could be a fascinating choice.  [__]
 
 In summary, for a personal language database, I would suggest starting with MongoDB for ease of use, or exploring Semantic Web technologies or AWS Neptune if you want to delve into complex relationships and semantic reasoning. If you want a very powerful and interesting option, that will require more work, Datalog is worth considering.
+
 What is MongoDB? An Expert Guide | Oracle Sverige
 Source icon
 www.oracle.com
@@ -1605,11 +1607,16 @@ Gremlin (query language) - Wikipedia
 Source icon
 en.wikipedia.org
 
-Oh I forgot to mention two a bit obscure, but potentially very interesting and rewarding options: Prolog and/or in tandem with Mercury, and building a small ontology using SUMO.
+- Oh I forgot to mention two a bit
+  obscure, but potentially very
+  interesting and rewarding
+  options: Prolog and/or in tandem
+  with Mercury, and building a
+  small ontology using SUMO.
 
 Ah, Prolog and Mercury, and SUMO! Those are indeed interesting and potentially very rewarding choices, especially for a language database with a focus on semantic representation and reasoning. Let's add them to the discussion:
 
-6. Prolog (Logic Programming)
+6. Prolog (Logic Programming)  __
 
     Pros:
         Excellent for expressing logical rules and relationships declaratively.
@@ -1620,14 +1627,14 @@ Ah, Prolog and Mercury, and SUMO! Those are indeed interesting and potentially v
         Can be challenging to learn if you're not familiar with logic programming.
         Performance can be a concern for very large datasets if you do not use indexing and other techniques.
         Less mainstream than other options, so community support might be limited.
-        It is not a database in the classical sense, so you would be creating a program that contains and queries your data.
+        It is not a database in the classical sense, so you would be creating a program that contains and queries your data.  _!
 
 7. Mercury (Logic/Functional Programming)
 
     Pros:
         A logic/functional programming language that aims to improve on Prolog's performance and maintainability.
         Strong type system and compile-time error checking.
-        Can be compiled to efficient native code.
+        Can be compiled to efficient native code.  [__]
         Can be very useful for large, complex programs.
     Cons:
         Even less mainstream than Prolog, so community support is even more limited.
@@ -1641,20 +1648,21 @@ Ah, Prolog and Mercury, and SUMO! Those are indeed interesting and potentially v
         A large, comprehensive ontology that provides a foundation for building domain-specific ontologies.
         Can be used to represent a wide range of concepts and relationships.
         Provides a shared vocabulary for semantic interoperability.
-        SUMO is designed to be mapped to WordNet, which is very useful for language processing.
+        SUMO is designed to be mapped to WordNet, which is very useful for language processing.  __ __
     Cons:
         Can be overwhelming due to its size and complexity.
         Requires careful consideration of how to map your language data to SUMO concepts.
-        Requires using a technology that can handle ontologies, such as Jena or AllegroGraph, or using a language like Prolog.
+        Requires using a technology that can handle ontologies, such as Jena or AllegroGraph, or using a language like Prolog.  __ [__]
         SUMO provides an upper level ontology, that you will still need to add your own ontology on top of.
 
 Integration and Considerations:
 
-    Prolog/Mercury + SUMO: This combination is very interesting. You could use Prolog or Mercury to build a knowledge base that incorporates SUMO concepts. This would allow you to perform sophisticated reasoning and inference on your language data.
+    Prolog/Mercury + SUMO: This combination is very interesting. You could use Prolog or Mercury to build a knowledge base that incorporates SUMO concepts. This would allow you to perform sophisticated reasoning and inference on your language data.  [[__]]
     Semantic Web Technologies + SUMO: You could import parts of SUMO into a semantic web database (like Jena or AllegroGraph) and then add your language data as RDF triples. This would allow you to leverage SPARQL for querying and reasoning.
+
     Complexity: Using Prolog/Mercury and SUMO will significantly increase the complexity of your project. However, it will also provide you with a very powerful and flexible system.
     Learning Curve: Be prepared for a steep learning curve, especially if you're new to logic programming and ontologies.
-    Reward: The reward for mastering these technologies is the ability to create a very sophisticated and intelligent language database.
+    Reward: The reward for mastering these technologies is the ability to create a very sophisticated and intelligent language database. [__]
 
 In summary:
 
@@ -1664,7 +1672,18 @@ In summary:
     If your main goal is to explore those technologies, then this is a great project to do it with.
     If your main goal is to create a working language database quickly, then MongoDB, or CosmosDB would still be the better option.
 
-Also (and I have at least a friend who has been looking into this option) using any of the above solutions or databases with Dlang or (for that matter) other programming languages like Python etc. Plus (just as a note) I have no particular preference personally when it comes to selection of programming languages - ones that could do the job well are of interest.
+- Also (and I have at least a
+  friend who has been looking into
+  this option) using any of the
+  above solutions or databases with
+  Dlang or (for that matter) other
+  programming languages like Python
+  etc. Plus (just as a note) I have
+  no particular preference
+  personally when it comes to
+  selection of programming
+  languages - ones that could do
+  the job well are of interest.
 
 Excellent point! Considering the programming languages you'll use to interact with your chosen database is crucial. Let's explore how D and Python, and other languages, fit into the picture with the database options we discussed.
 
@@ -1688,30 +1707,32 @@ Programming Languages and Database Interactions:
         D is very fast, so if speed is a concern, D is a good option.
     Prolog/Mercury:
         Prolog and Mercury are themselves programming languages, so you'll be writing your database logic directly in them.
-        You can still interact with external systems using their foreign language interfaces.
+        You can still interact with external systems using their foreign language interfaces. (__)
     General Considerations:
         Drivers and Libraries: Check for available drivers and libraries for your chosen database and programming language.
         Performance: If performance is critical, D or languages like C++ might be preferred. Python can be performant, but D and C++ are generally faster for raw processing.
         Ease of Development: Python excels in ease of development and rapid prototyping. D offers a good balance of performance and expressiveness.
         Community and Ecosystem: Python has a massive community and a vast ecosystem of libraries, which can be a significant advantage. D's community is smaller, but growing.
-        Interoperability: Languages that can easily interoperate with C libraries provide access to a wide range of database drivers.
+        __ Interoperability: Languages that can easily interoperate with C libraries provide access to a wide range of database drivers.
 
 Language Specific Notes:
 
-    Python for NLP: Python's rich ecosystem of NLP libraries (NLTK, spaCy, Transformers) makes it a natural choice for processing and analyzing language data.
+    Python for NLP: Python's rich ecosystem of NLP libraries (NLTK, spaCy, Transformers) makes it a natural choice for processing and analyzing language data.  __ __
     D for Performance-Critical Tasks: If you need to perform computationally intensive tasks on your language data, D's performance can be a significant advantage.
-    Prolog/Mercury for Reasoning: If your focus is on logical reasoning and knowledge representation, Prolog or Mercury are excellent choices.
+    Prolog/Mercury for Reasoning: If your focus is on logical reasoning and knowledge representation, Prolog or Mercury are excellent choices.  [__]
 
 Recommendations:
 
     If you prioritize ease of development and access to NLP libraries, Python is a strong choice.
     If you need high performance and are comfortable with a less mature ecosystem, D is a good option.
     If you're primarily interested in logical reasoning and knowledge representation, Prolog or Mercury are excellent choices.
-    You can also use a combination of languages. For example, you could use Python for data processing and analysis, and D for performance-critical tasks.
+    __ You can also use a combination of languages. For example, you could use Python for data processing and analysis, and D for performance-critical tasks.
     When using prolog or mercury, you will be coding the database logic within that language.
 
 In essence, your choice of programming language should align with your project's goals, performance requirements, and your own comfort level.
 
+
+__ __ ____
 The task for me would be to create a bit of a web of 'entries' which are words or phrases in different languages. Each entry should also have a general category-tag, i.e. things like 'Greetings', 'Understanding', 'Adjectives' etc - very similar to Lonely Planet, Berlitz and other phrase-books. Swedish and/or English would provide the primary translation for words and phrases in the different languages, and I would then be able to drill myself in and develop along a path through a language from simple phrases going on to more difficult or abstract phrases and reasoning. Also, I'm hoping to leverage one or several languages to provide a 'base-plate' of knowledge in the sense that if I then would like to explore and collect some words and phrases in a new language, I can look back at one or more languages where I have collected and acquired phrases and provide a path for that new language (i.e. 'These 50, 100 or some number of words in my strongest languages provides a good firm 'base-knowledge' for a new language. Let me gradually collect and acquire these entries in my new language')
 
 Okay, that clarifies your project very well! You're essentially building a personalized, interconnected phrasebook with a focus on categorized learning and cross-lingual knowledge transfer. Let's revisit the technology options with this specific use case in mind:
@@ -1723,12 +1744,12 @@ Key Considerations for Your Phrasebook Project:
     Relationships and Interconnections: You want to establish relationships between entries, such as translations, related concepts, and learning paths.
     Querying and Filtering: You need to be able to query and filter entries based on language, category, and other criteria.
     Scalability: While you're starting with a personal project, consider whether you might want to scale it in the future.
-    Learning Path: You will need to be able to create some kind of ordering of entries, so that you can create a learning path.
+    __ ____ Learning Path: You will need to be able to create some kind of ordering of entries, so that you can create a learning path.
 
 Technology Recommendations Based on Your Use Case:
 
     Graph Database (AWS Neptune or similar):
-        Pros:
+        Pros: __??
             Excellent for representing relationships between entries, such as translations and related concepts.
             Gremlin allows for powerful querying and filtering based on language, category, and relationships.
             You can easily model learning paths by creating edges that represent the order in which entries should be learned.
@@ -1737,14 +1758,14 @@ Technology Recommendations Based on Your Use Case:
             Requires learning Gremlin.
             AWS Neptune is a cloud service, so you'll be tied to the AWS ecosystem.
     Semantic Web Technologies (Jena/Sesame):
-        Pros:
+        Pros: __
             RDF is well-suited for representing multilingual data and relationships.
             SPARQL allows for complex queries and reasoning.
             You can use ontologies to define categories and relationships in a structured way.
             You could incorporate SUMO or other ontologies to provide a base for your knowledge.
         Cons:
             Steeper learning curve.
-            Requires careful ontology design.
+            Requires careful ontology design. [__]
     MongoDB (Document Database):
         Pros:
             Flexible schema allows you to easily add new languages and categories.
@@ -1767,7 +1788,7 @@ Technology Recommendations Based on Your Use Case:
 
 Specific Implementation Suggestions:
 
-    Graph Database:
+    Graph Database: __
         Create nodes for each entry (word or phrase).
         Add properties to nodes for language, category, and translations.
         Create edges to represent relationships, such as "translationOf," "relatedTo," and "partOfLearningPath."
@@ -1776,7 +1797,7 @@ Specific Implementation Suggestions:
         Create RDF triples to represent entries, categories, and relationships.
         Use SPARQL to query and filter the data.
         Consider using an ontology to define your categories and relationships.
-    MongoDB:
+    MongoDB: ____ __ ____
         Create documents for each entry, with fields for language, category, translations, and related entries.
         Use arrays to store translations and related entries.
         Use queries to filter and retrieve entries.
@@ -1785,11 +1806,46 @@ Specific Implementation Suggestions:
         Use logical queries to retrieve and filter entries.
         Implement learning paths using logical rules.
 
-For your specific use case, I would lean towards a graph database (AWS Neptune) or semantic web technologies (Jena/Sesame) if you want to emphasize relationships and learning paths. If you want to get started quickly and don't need complex relationship queries, MongoDB is a good option. Prolog/Mercury are very powerful, but will require a large amount of time to implement.
+____
+For your specific use case, I would
+lean towards a graph database (AWS
+Neptune) or semantic web
+technologies (Jena/Sesame) if you
+want to emphasize relationships and
+learning paths. If you want to get
+started quickly and don't need
+complex relationship queries,
+MongoDB is a good option.
+Prolog/Mercury are very powerful,
+but will require a large amount of
+time to implement.
 
-Great. What languages programming languages would be most advantageous to use in tandem with the top picks you mentioned (i.e. with MongoDB for instance). + Let's say I would later on like to make my little database project available 'on the road', i.e. developing some kind of Android-based client whereby I could drill myself while walking, running, commuting etc. What extra languages or technologies might we want to add to the list (i.e. languages like Kotlin, Flutter + Dart etc), and would that tilt the rank-order of technologies that we just discussed?
+- Great. What languages programming
+  languages would be most
+  advantageous to use in tandem
+  with the top picks you mentioned
+  (i.e. with MongoDB for instance).
+  + Let's say I would later on like
+  to make my little database
+  project available 'on the road',
+  i.e. developing some kind of
+  Android-based client whereby I
+  could drill myself while walking,
+  running, commuting etc. What
+  extra languages or technologies
+  might we want to add to the list
+  (i.e. languages like Kotlin,
+  Flutter + Dart etc), and would
+  that tilt the rank-order of
+  technologies that we just
+  discussed?
 
-Excellent questions! Let's break down the programming language choices for your database interactions and mobile development plans.
+Excellent questions! Let's break
+down the programming language
+choices for your database
+interactions and mobile development
+plans.
+
 
 Programming Languages for Database Interactions:
 
@@ -1800,8 +1856,8 @@ Programming Languages for Database Interactions:
             It is very easy to create APIs in python using frameworks like Flask or FastAPI.
         Node.js (JavaScript/TypeScript):
             MongoDB is a NoSQL database, and JavaScript/TypeScript are also used for JSON-like data, making them a natural fit.
-            Node.js is excellent for building scalable backend APIs.
-            TypeScript can be used to add type safety to JavaScript code.
+            Node.js is excellent for building scalable backend-APIs.
+            TypeScript can be used to add type-safety to JavaScript-code.
     Graph Databases (AWS Neptune):
         Python:
             gremlinpython is the official Python driver for Gremlin.
@@ -1813,6 +1869,8 @@ Programming Languages for Database Interactions:
             rdflib is a powerful Python library for working with RDF and SPARQL.
         Java:
             Jena and Sesame are Java-based frameworks, so Java is a natural choice.
+
+C#/F# DotNet Core (+Avalonia/MAUI)
 
 Mobile Development (Android Client):
 
@@ -1832,8 +1890,8 @@ Mobile Development (Android Client):
 Impact on Technology Rank-Order:
 
     Flutter's Cross-Platform Capabilities:
-        If you prioritize cross-platform development (Android and iOS), Flutter becomes a very strong contender.
-        This might tilt the balance towards technologies that are easier to integrate with a backend API, such as MongoDB or graph databases with well-supported RESTful APIs.
+        If you prioritize cross-platform development (Android and iOS), Flutter becomes a very strong contender. __
+        This might tilt the balance towards technologies that are easier to integrate with a backend API, such as MongoDB or graph databases with well-supported RESTful APIs. ____
     Kotlin's Native Android Performance:
         If you prioritize native Android performance and a seamless user experience, Kotlin is the best choice.
         This choice makes the backend API very important.
@@ -1897,7 +1955,7 @@ Feasibility and Advantages:
 
 Considerations:
 
-    Learning Curve: Clojure has a learning curve, especially if you're not familiar with functional programming.
+    Learning-Curve: Clojure has a learning curve, especially if you're not familiar with functional programming.
     Community: While the Clojure community is active, it's smaller than the Java or Python communities.
     Libraries: While Clojure can leverage Java libraries, there might be fewer Clojure-specific libraries for Semantic Web development compared to Java.
 
@@ -1908,7 +1966,16 @@ In summary:
     If you're interested in exploring a more expressive and interactive development experience, Clojure is definitely worth considering.
     If you are already interested in Clojure, this is a very good project to explore it with.
 
-If I/we add Clojure to the mix here (i.e. maybe with regard to trying out interesting and potentially very rewarding technologies), is it possible (without too much hassle) to enter that into the mix when it comes to the Android client, maybe being used as or in tandem with the background technologies?
+- If I/we add Clojure to the mix
+  here (i.e. maybe with regard to
+  trying out interesting and
+  potentially very rewarding
+  technologies), is it possible
+  (without too much hassle) to
+  enter that into the mix when it
+  comes to the Android client,
+  maybe being used as or in tandem
+  with the background technologies?
 
 That's a very interesting question! Integrating Clojure into the Android client, especially for background tasks or data processing, is indeed possible, but it comes with some considerations. Let's break it down:
 
@@ -1930,7 +1997,7 @@ Clojure on Android:
     Background Tasks:
         Clojure could be more feasible for background tasks that don't require tight integration with the Android UI.
         However, the overhead of the Clojure runtime still applies.
-        It would be possible to create a Clojure based library, that is then accessed by the Kotlin android application.
+        It would be possible to create a Clojure-based library, that is then accessed by the Kotlin android application.
 
 Feasibility and Considerations:
 
@@ -1944,7 +2011,7 @@ Feasibility and Considerations:
 Recommendations:
 
     For most Android development scenarios, especially for UI-intensive apps, Kotlin is the recommended choice.
-    If you're primarily interested in exploring Clojure, consider using it for the backend API instead of the Android client. This approach allows you to leverage Clojure's strengths without the complexities of running it directly on Android.
+    If you're primarily interested in exploring Clojure, consider using it for the backend-API instead of the Android client. This approach allows you to leverage Clojure's strengths without the complexities of running it directly on Android.
     If you have a very specific use case that requires Clojure's capabilities on Android, and you're willing to invest the time and effort, it is possible.
     If you wanted to explore a hybrid approach, using ClojureScript, and React Native would be a more viable option.
 
@@ -1954,7 +2021,7 @@ In summary:
     Using Clojure for the backend API is a more practical and efficient approach.
     If you are set on using Clojure, then using Clojure for the backend, and Kotlin for the android application is the best option.
 
-Got it. Very helpful. One small question: I was intrigued by some entries in the Kawa Scheme documentation that - since it is Java-based - one could potentially build or at least prototype Android apps with not too much of a hassle? I would suspect it would not hold up as a more definitive solution in this case, but perhaps I'm wrong on that point, and regardless it might be interesting to fiddle with at least as a side-project.
+- Got it. Very helpful. One small question: I was intrigued by some entries in the Kawa Scheme documentation that - since it is Java-based - one could potentially build or at least prototype Android apps with not too much of a hassle? I would suspect it would not hold up as a more definitive solution in this case, but perhaps I'm wrong on that point, and regardless it might be interesting to fiddle with at least as a side-project.
 
 You've hit on another intriguing possibility! Let's explore Kawa Scheme and its potential for Android development.
 

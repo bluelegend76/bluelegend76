@@ -697,22 +697,35 @@ bcb (**(!))
                 Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
 MS Windows Terminal ----
-                close pane  cs-w
+    ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
                 close window  a-f4
                 copy text  c-c, c-Ins, cs-c, Enter
                 paste  c-v, s-Ins, cs-v
                 increase / decrease font-size  c-k_plus / c-plus // c-k_minus / c-minus
                 reset font-size  c-k0, c-0
-                duplicate pane  sa-d
-                duplicate pane, split down  sa-minus
+                Panes ----
+                duplicate pane  sa-d  __
+                Switch to Other Pane  a-Arrows  __
+                Resize Panes  sa-Arrows  __
+                close pane  cs-w
+                duplicate pane, split down  sa-minus  __
                 duplicate pane, split right  sa-plus
+                Tabs ----
+                Open new shell 1 .. 9 in new Tab  cs-1 .. cs-9  __
                 duplicate tab  cs-d
-                find  cs-f
+                find (i.e. search the output of any shell)  cs-f
+                    (+next/prev. match  Enter / s-Enter)
                 move focus down / up  a-down / a-up  __
                 new tab  cs-t
                 new tab, profile-index 0 .. 8  cs-1 .. cs-9
                 new window  cs-n
                 next / prev. tab  c-Tab / cs-Tab  __
+                Settings ----
+                Open json-settings with VS Code  = Gives the benefit of autocompletion, integrated help-documentation, etc
+                Inspect available settings ***  ca-, (i.e. opens default.json [****]  __
+                shells available in the wt-menu  the 'profiles'-section in settings.json
+                Apply settings to different shells / all shells  put setting in a profile-object / defaults-object in settings
+                ----
                 open default settings-file (Json)  ca-,
                 open-new-tab dropdown  cs-space  _
                 open settings  c-,
@@ -730,7 +743,10 @@ MS Windows Terminal ----
                 switch to the last tab  ca-9
                 toggle command-palette  cs-p  [__]
                 toggle fullscreen  f11, a-Enter  __
+
                 toggle mark-mode  cs-m  <__>
+                ----
+                run win-command inside WSL  command.exe
 Termux
   ../ref/comp/sysadm/Termux.Tags1.txt
                     - Great. A quick question about using

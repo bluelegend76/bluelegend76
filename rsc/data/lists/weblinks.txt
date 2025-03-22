@@ -3439,6 +3439,7 @@ Desktop Development and Android Testing:
     Android Studio and Emulators:
         Android Studio is the official IDE for Android development. It includes a powerful Android emulator that allows you to test your applications on various Android versions and devices. This is the best way to test apps that require the full Android API.
         You can develop in Java or Kotlin (the official languages for Android development) within Android Studio.
+
     Termux and SSH:
         If you're using Termux, you can set up an SSH server on your Android device. This allows you to connect to your device from your desktop computer and run scripts remotely.
         You can edit your scripts on your desktop and then execute them on your Android device via SSH.
