@@ -112,7 +112,145 @@ META.Shell: bash, dash, termux, pshell, xonsh, nushell
 
 MS Windows Terminal
 ___WindowsTerminal_Themes
+  ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
     ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+                close window  a-f4
+                copy text  c-c, c-Ins, cs-c, Enter
+                paste  c-v, s-Ins, cs-v
+                increase / decrease font-size  c-k_plus / c-plus // c-k_minus / c-minus
+                reset font-size  c-k0, c-0
+                Panes ----
+                duplicate pane  sa-d  __
+                Switch to Other Pane  a-Arrows  __
+                Resize Panes  sa-Arrows  __
+                close pane  cs-w
+                duplicate pane, split down  sa-minus  __
+                duplicate pane, split right  sa-plus
+                Tabs ----
+                Open new shell 1 .. 9 in new Tab  cs-1 .. cs-9  __
+                duplicate tab  cs-d
+                find (i.e. search the output of any shell)  cs-f
+                    (+next/prev. match  Enter / s-Enter)
+                move focus down / up  a-down / a-up  __
+                new tab  cs-t
+                new tab, profile-index 0 .. 8  cs-1 .. cs-9
+                new window  cs-n
+                next / prev. tab  c-Tab / cs-Tab  __
+                Settings ----
+                Open json-settings with VS Code  = Gives the benefit of autocompletion, integrated help-documentation, etc
+                Inspect available settings ***  ca-, (i.e. opens default.json [****]  __
+                shells available in the wt-menu  the 'profiles'-section in settings.json
+                Apply settings to different shells / all shells  put setting in a profile-object / defaults-object in settings
+                the 'hidden'-setting [!!]
+                wt-profiles ='we can use any arbitrary
+                program as our shell'
+                run git bash-shell inside wt
+                ssh + screen
+                C# interactive in wt-Shell __  p51(70)
+                [+More/Several REPLs inside wt **]
+                Node.js REPL  p52
+                Vim-terminal Shell  p53
+                ----
+                open default settings-file (Json)  ca-,
+                open-new-tab dropdown  cs-space  _
+                open settings  c-,
+                open settings-file (Json)  cs-,  __
+                open suggestions, source: all  cs-.  [__]
+                open system-menu  a-space  ??
+                theme ----
+                set color-schemes for diff. shells  colorScheme  p57
+                write y. own col.scheme  p59
+                [+options for bg, fg, sel-bg cursor color]
+                  ..
+                bg-images  p60 (e.g. Octocat in lower corner of Git-shell)
+                Animated GIF:s as bg-image for wt  __ ****
+                Translucency for wt ****  useAcrylic + acrylicOpacity  p62 __ __
+                Increase/Decrease wt bg-opacity  csa-mwscroll __ __
+                hlsl Pixelshader effects  p63
+                ohmyposh  Getrepo-state, themes, Shows Python venv-s etc __ __  p63
+                  __ __ __ oh-my-posh 3  Written in Go (+uses json for config, +config can be generated from existing theme [+use as base for further modifications])
+                custom-define prompt using (=defining) a function named prompt
+                Ex.Proj: Add current time to the prompt  __ __ [__]
+                esc-seq OSC 9;9  =notifies the Win-terminal of changes to the current working directory __ __ (+useful for ensuring wt opens panes with same working directory as the parent pane)  p68
+                add emoji to prompt
+                p68  PSReadline (+tokens-highlighting) +Set-PSReadlineOption
+                Change shell from Bash to Zsh  chsh --shell /bin/zsh  __ ****
+                good basic setup for zsh  oh-my-zsh
+                install omz  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+                set zsh theme  ZSH_THEME="agnoster" (in ~/.zshrc)
+                more modern arrow-symbol  ►
+                'Actions' ----
+                Set Keyboard Shortcut for toggling fullscreen  p76 add 'keys-section' for toggleFullscreen command-entry __ __ __ __
+                have two keybindings for an action  (just) Add two consecutive json-objects
+                List of bindable keys  https://docs.microsoft.com/en-us/windows/terminal/customize-settings/actions#modifier-keys __ __ __ __  p77
+                FIND ALL AVAILABLE BINDABLE ACTIONS ****  p78 __ __ __ __  defaults.json, VS Code Autocomplete **, https://docs.microsoft.com/en-us/windows/terminal/customize-settings/actions
+                BUILDING CUSTOM COMMANDS WITH sendInput  __ __ __ __ p78  ( https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences#input-sequences )
+                how to build custom commands that control the terminal user interface itself  p80 __ __ __
+                USE THE WT-ACTION TO LAUNCH PRECONFIGURED TAB/PANE-LAYOUTS AT THE PRESS OF A BUTTON  ** ** __ __ __ __ p80
+                [+as of late 2020, the wt action is rapidly being updated with more and more capabilities]
+                find currently available wt-action options  wt --help (+rerun it on different subcommands)
+                run e.g. build-process in 'background-tab'  p82
+                +1 p82
+                +EXTRA TIPS  p83
+                 ..
+                Example usages of the wt.exe-command  https://docs.microsoft.com/en-us/windows/terminal/commandline-arguments?tabs=windows
+                Discover WT Hidden Actions  find the 'JSON-schema file'  open settings.json (cs-,)a + navigate to the $schema-field (toward top of file), c-leftclick [+find the interesting ShortcutActionName [p86]  =ALL ACTIONS (HIDDEN OR OTHERWISE) ARE FINDABLE HERE
+                identify the parameters that a given action has  Search for name of an action with 'Action' added to the end (e.g. 'setColorScheme' becomes 'setColorSchemeAction'
+                 togglePaneZoom  p89 (+setting it to sa-z)
+                 toggleAlwaysOnTop
+                 toggleFocusMode
+                hidden commands for managing visual effects  hiddsetColorScheme
+                toggleShaderEffects
+                'Using actions for tab manipulation'
+                (close all tabs except for current)
+                change tab-colors
+                wsl2-chapters  perform common frontend-, backend-, DevOps-tasks efficiently
+                Install PowerShell Core  p96
+                vars containing first / last words of previous command  $^ / $$  (e.g. cd:ing into just created directory)
+                Look up help for prev./last command __ __  help $^
+                Navigate backwards / forwards dir-wise with cd  cd - / cd +  __ __ [PShell Core]
+                Open file (from PShell Core) with program associated with file-type  ii file.txt  (=Invoke-Item)
+                open current dir with explorer  ii .  __
+                quickly show previously run shell-commands __ __  h (Get-History) [=shows command-list, duration, integer-ID]
+                run previous shell-commands __ __  r (Invoke-History) with command-ID int-value ****
+                concerning aliases like clhy for Clear-History  i.e. Look up More Aliases(!!)
+                 ..
+                THE "CURRENT" OBJECT BEING PROCESSED/PASSED THROUGH THE PIPELINE IS REPRESENTED BY ___  __ __ __  $_
+                ----
+                resize pane down / up / right / left  sa-down/up/right/left  __
+                scroll up / down  cs-up / cs-down
+                scroll up / down one page  cs-pgup / cs-pgdn
+                scroll to top / bottom of history  cs-home / cs-end
+                 select all text  cs-a
+                show context-menu  'menu'
+                show/hide quake-window  w-sc(41)
+                switch to tab, index:0 .. index:7  ca-1 .. ca-8
+                switch to the last tab  ca-9
+                toggle command-palette  cs-p  [__]
+                toggle fullscreen  f11, a-Enter  __
+
+                toggle mark-mode  cs-m  <__>
+                ----
+                run win-command inside WSL  command.exe
+                Git-Commands ----  __ __ __  TODO: MAY WANT TO ADD TO 'GIT-LIST'
+                Quick-switch between Git-branches  git checkout -  __ __ __
+                Git Autocorrect  __ __
+                'pushing to Head'
+                Git-Aliases | Command-Aliases
+                Tig | Git-Extensions
+                'viewing files on different branches'
+                git reflog
+                Using gh (=github command-line utility) __ ----
+                Create Repo
+                View Pull-Requests
+                go to pullrequest-branch __
+                ----
+                Create a React-app with npm [**]  npx create-react-app my-app; cd my-app; npm start
+                ----
+                Install able to test C#-snippets in wt-terminal  dotnet tool install -g dotnet-script  p176 __ __ __ [__]
+                ----
+                Chapter 13  connecting to remotes  p188 __ __
+                Azure Cloud [az interactive], Google Cloud [gcloud interactive], AWS [aws-shell]
 PShell
 ----
 bcb (**(!))
@@ -479,274 +617,223 @@ bcb (**(!))
 ~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
 'Basic Bash-list' (30 commands) (+later: Bash2PShell) | Ash|Dash
-                Excellent! We've added nm, objdump, ldd, ar, strip, ranlib, size, strings, and dd to the primary list. whatis and apropos are added to the "par for the course" list.
+                    Excellent! We've added nm, objdump, ldd, ar, strip, ranlib, size, strings, and dd to the primary list. whatis and apropos are added to the "par for the course" list.
 
-                Here's the final primary list (now exceeding 30 commands, as requested) ----
-                    touch
-                    du
-                    df
-                    ps
-                    netstat (or ss)
-                    ifconfig (or ip)
-                    ping
-                    paste
-                    tr
-                    xargs
-                    time
-                    read
-                    set
-                    export
-                    type
-                    wait
-                    lsof
-                    stat
-                    nl
-                    fold
-                    fmt
-                    iconv
-                    seq
-                    shuf
-                    comm
-                    cmp
-                    expand
-                    nm
-                    objdump
-                    ldd
-                    ar
-                    strip
-                    ranlib
-                    size
-                    strings
-                    dd
-                And the final "par for the course" list ----
-                    ls
-                    cd
-                    pwd
-                    mkdir
-                    rmdir
-                    cat
-                    less
-                    head
-                    tail
-                    cp
-                    mv
-                    rm
-                    find
-                    grep
-                    chmod
-                    chown
-                    kill
-                    top
-                    ssh
-                    scp
-                    rsync
-                    tar
-                    gzip (or bzip2 or xz)
-                    awk
-                    sed
-                    sort
-                    uniq
-                    cut
-                    wc
-                    date
-                    cal
-                    echo
-                    printf
-                    alias
-                    history
-                    man
-                    getopts
-                    shift
-                    trap
-                    eval
-                    exec
-                    true
-                    false
-                    command
-                    file
-                    pr
-                    dos2unix
-                    diff
-                    patch
-                    whatis
-                    apropos
+                    Here's the final primary list (now exceeding 30 commands, as requested) ----
+                        touch
+                        du
+                        df
+                        ps
+                        netstat (or ss)
+                        ifconfig (or ip)
+                        ping
+                        paste
+                        tr
+                        xargs
+                        time
+                        read
+                        set
+                        export
+                        type
+                        wait
+                        lsof
+                        stat
+                        nl
+                        fold
+                        fmt
+                        iconv
+                        seq
+                        shuf
+                        comm
+                        cmp
+                        expand
+                        nm
+                        objdump
+                        ldd
+                        ar
+                        strip
+                        ranlib
+                        size
+                        strings
+                        dd
+                    And the final "par for the course" list ----
+                        ls
+                        cd
+                        pwd
+                        mkdir
+                        rmdir
+                        cat
+                        less
+                        head
+                        tail
+                        cp
+                        mv
+                        rm
+                        find
+                        grep
+                        chmod
+                        chown
+                        kill
+                        top
+                        ssh
+                        scp
+                        rsync
+                        tar
+                        gzip (or bzip2 or xz)
+                        awk
+                        sed
+                        sort
+                        uniq
+                        cut
+                        wc
+                        date
+                        cal
+                        echo
+                        printf
+                        alias
+                        history
+                        man
+                        getopts
+                        shift
+                        trap
+                        eval
+                        exec
+                        true
+                        false
+                        command
+                        file
+                        pr
+                        dos2unix
+                        diff
+                        patch
+                        whatis
+                        apropos
 
-                We have successfully created your two lists.  Let me know if you would like me to do anything else with them, such as provide more information about specific commands or format them for a particular use case.
+                    We have successfully created your two lists.  Let me know if you would like me to do anything else with them, such as provide more information about specific commands or format them for a particular use case.
 
-                + Consider these "honorary mentions" – commands that might be useful as you deepen your Linux knowledge, especially if you move into system administration, scripting, or more specialized areas:
+                    + Consider these "honorary mentions" – commands that might be useful as you deepen your Linux knowledge, especially if you move into system administration, scripting, or more specialized areas:
 
-                System Administration & Scripting:
-                    cron or systemd-timers: For scheduling tasks. Essential for automation.
-                    journalctl: For viewing system logs. Crucial for troubleshooting.
-                    firewall-cmd (or iptables or nft): For managing firewalls. Important for security.
-                    lxc or docker: For containerization. A powerful tool for application deployment.
-                    awk and sed (although you already have these in the "par for the course" list, they are worth emphasizing): Mastering these is essential for text processing in scripts.
-                    bash (or zsh, fish): Not a command itself, but learning shell scripting is incredibly powerful.
-                    strace: Tracing system calls. Very valuable for debugging.
-                Networking:
-                    tcpdump: Capturing network traffic. Essential for network analysis.
-                    nmap: Network scanner. Useful for security auditing.
-                Development:
-                    gcc or clang: Compilers. If you plan to do any C/C++ development.
-                    make: Build automation tool. Often used with compilers.
-                    gdb: GNU debugger. Essential for debugging compiled programs.
-                Other Useful Tools:
-                    tmux or screen: Terminal multiplexers. Allow you to manage multiple terminal sessions.
-                    vim or nano or emacs: Text editors. Essential for working with configuration files and scripts.
-                    curl or wget: For transferring data with URLs. Useful for interacting with web services.
-                    jq: JSON processor. Essential for working with JSON data.
+                    System Administration & Scripting:
+                        cron or systemd-timers: For scheduling tasks. Essential for automation.
+                        journalctl: For viewing system logs. Crucial for troubleshooting.
+                        firewall-cmd (or iptables or nft): For managing firewalls. Important for security.
+                        lxc or docker: For containerization. A powerful tool for application deployment.
+                        awk and sed (although you already have these in the "par for the course" list, they are worth emphasizing): Mastering these is essential for text processing in scripts.
+                        bash (or zsh, fish): Not a command itself, but learning shell scripting is incredibly powerful.
+                        strace: Tracing system calls. Very valuable for debugging.
+                    Networking:
+                        tcpdump: Capturing network traffic. Essential for network analysis.
+                        nmap: Network scanner. Useful for security auditing.
+                    Development:
+                        gcc or clang: Compilers. If you plan to do any C/C++ development.
+                        make: Build automation tool. Often used with compilers.
+                        gdb: GNU debugger. Essential for debugging compiled programs.
+                    Other Useful Tools:
+                        tmux or screen: Terminal multiplexers. Allow you to manage multiple terminal sessions.
+                        vim or nano or emacs: Text editors. Essential for working with configuration files and scripts.
+                        curl or wget: For transferring data with URLs. Useful for interacting with web services.
+                        jq: JSON processor. Essential for working with JSON data.
 
-                These are just a few suggestions, of course.  The best "honorary mentions" for you will depend on your specific interests and goals.  As you work with Linux more, you'll discover other commands that become essential to your workflow.  Don't hesitate to explore the man pages and online resources to learn more about any command that piques your interest.
+                    These are just a few suggestions, of course.  The best "honorary mentions" for you will depend on your specific interests and goals.  As you work with Linux more, you'll discover other commands that become essential to your workflow.  Don't hesitate to explore the man pages and online resources to learn more about any command that piques your interest.
 
-                I am very impressed. Many thanks, and, when the time comes, I'll get back and collect up some 'Bash2PowerShell conversions', if you know what I mean.
+                    I am very impressed. Many thanks, and, when the time comes, I'll get back and collect up some 'Bash2PowerShell conversions', if you know what I mean.
 
-                You're very welcome! I'm glad I could help.  I look forward to assisting you with the Bash to PowerShell conversions when you're ready.  Just let me know, and we'll tackle it together.  Good luck with your Linux explorations!
+                    You're very welcome! I'm glad I could help.  I look forward to assisting you with the Bash to PowerShell conversions when you're ready.  Just let me know, and we'll tackle it together.  Good luck with your Linux explorations!
 
-                One more question that came across my mind: I'm trying to get acquainted a bit with Ash and (maybe the more modern version) Dash. As I understand it (although that may not be accurate) is that Dash can do most or a good subset of what Bash can do, but is quicker, and one should avoid what is often called 'Bashisms'. Could you give me some comments on that, and (maybe interspersed) some small examples?
+                    One more question that came across my mind: I'm trying to get acquainted a bit with Ash and (maybe the more modern version) Dash. As I understand it (although that may not be accurate) is that Dash can do most or a good subset of what Bash can do, but is quicker, and one should avoid what is often called 'Bashisms'. Could you give me some comments on that, and (maybe interspersed) some small examples?
 
-                You're on the right track. Ash and Dash are indeed lighter and faster shells compared to Bash. They aim for POSIX compliance, meaning they adhere to a standard set of functionalities.  This makes them more portable and efficient, especially for scripting where speed and resource usage are critical.  Bash, on the other hand, has many extensions and features (the "Bashisms") that aren't in the POSIX standard, making it more powerful but also potentially less portable and resource-intensive.
+                    You're on the right track. Ash and Dash are indeed lighter and faster shells compared to Bash. They aim for POSIX compliance, meaning they adhere to a standard set of functionalities.  This makes them more portable and efficient, especially for scripting where speed and resource usage are critical.  Bash, on the other hand, has many extensions and features (the "Bashisms") that aren't in the POSIX standard, making it more powerful but also potentially less portable and resource-intensive.
 
-                Here's a breakdown and some examples:
+                    Here's a breakdown and some examples:
 
-                Dash vs. Bash:
+                    Dash vs. Bash:
 
-                    Speed and Resource Usage: Dash is significantly faster than Bash, especially for simple scripts. It uses less memory and starts up more quickly. This makes it ideal for system scripts, boot sequences, and resource-constrained environments.
-                    POSIX Compliance: Dash strives for strict POSIX compliance. This ensures that scripts written for Dash are likely to work on other POSIX-compliant systems. Bash, while having a POSIX compatibility mode, also includes many extensions that are not POSIX-compliant.
-                    Features: Bash has a much richer set of features, including:
-                        Arrays
-                        Associative arrays
-                        Brace expansion
-                        Command-line editing (readline)
-                        Process substitution
-                        Here documents/strings
-                        More advanced string manipulation
-                        And many more...
+                        Speed and Resource Usage: Dash is significantly faster than Bash, especially for simple scripts. It uses less memory and starts up more quickly. This makes it ideal for system scripts, boot sequences, and resource-constrained environments.
+                        POSIX Compliance: Dash strives for strict POSIX compliance. This ensures that scripts written for Dash are likely to work on other POSIX-compliant systems. Bash, while having a POSIX compatibility mode, also includes many extensions that are not POSIX-compliant.
+                        Features: Bash has a much richer set of features, including:
+                            Arrays
+                            Associative arrays
+                            Brace expansion
+                            Command-line editing (readline)
+                            Process substitution
+                            Here documents/strings
+                            More advanced string manipulation
+                            And many more...
 
-                Dash has a more limited feature set, focusing on the core functionalities defined by POSIX.
+                    Dash has a more limited feature set, focusing on the core functionalities defined by POSIX.
 
-                When to use Dash:
+                    When to use Dash:
 
-                    System scripts: Scripts that run at boot time or perform system tasks benefit from Dash's speed and efficiency.
-                    Resource-constrained environments: Embedded systems or situations where memory is limited.
-                    Portability: If you need your script to run on a wide variety of Unix-like systems, Dash's POSIX compliance is a big plus.
+                        System scripts: Scripts that run at boot time or perform system tasks benefit from Dash's speed and efficiency.
+                        Resource-constrained environments: Embedded systems or situations where memory is limited.
+                        Portability: If you need your script to run on a wide variety of Unix-like systems, Dash's POSIX compliance is a big plus.
 
-                When to use Bash:
+                    When to use Bash:
 
-                    Interactive shells: Bash's readline support and other interactive features make it a more comfortable shell for daily use.
-                    Complex scripts: If you need arrays, advanced string manipulation, or other Bash-specific features, then Bash is the better choice.
-                    Development: Many development tools and build systems assume Bash.
+                        Interactive shells: Bash's readline support and other interactive features make it a more comfortable shell for daily use.
+                        Complex scripts: If you need arrays, advanced string manipulation, or other Bash-specific features, then Bash is the better choice.
+                        Development: Many development tools and build systems assume Bash.
 
-                Examples:
+                    Examples:
 
-                Let's look at a few examples to illustrate the differences:
+                    Let's look at a few examples to illustrate the differences:
 
-                    Simple loop:
+                        Simple loop:
+                            Bash/Dash:
+                            Bash
+
+                        for i in 1 2 3; do
+                            echo $i
+                        done
+
+                    This will work the same in both Bash and Dash.
+
+                    Arrays (Bash only):
+
+                        Bash:
+                        Bash
+
+                        my_array=(apple banana cherry)
+                        echo ${my_array[0]}  # Output: apple
+
+                        Dash:  Dash does not support arrays.  The above code will produce an error in Dash.
+
+                    Brace expansion (Bash only):
+
+                        Bash:
+                        Bash
+
+                        echo file{1..3}.txt  # Output: file1.txt file2.txt file3.txt
+
+                        Dash: Dash does not support brace expansion.  The above line will be interpreted literally.
+
+                    Arithmetic expansion:
+
                         Bash/Dash:
                         Bash
 
-                    for i in 1 2 3; do
-                        echo $i
-                    done
+                        x=5
+                        y=10
+                        z=$((x + y))
+                        echo $z # Output: 15
 
-                This will work the same in both Bash and Dash.
+                    This will work the same in both Bash and Dash.
 
-                Arrays (Bash only):
+                    String manipulation:
 
-                    Bash:
-                    Bash
+                        Bash:
+                        Bash
 
-                    my_array=(apple banana cherry)
-                    echo ${my_array[0]}  # Output: apple
+                            string="hello world"
+                            echo ${string:6}  # Output: world (substring)
+                            echo ${string//world/universe} # Output: hello universe (string substitution)
 
-                    Dash:  Dash does not support arrays.  The above code will produce an error in Dash.
+                            Dash: Dash has more limited string manipulation capabilities. Substring expansion as shown above is not POSIX and might not work in Dash. Parameter expansion is also more limited.
 
-                Brace expansion (Bash only):
+                    Key Takeaway:
 
-                    Bash:
-                    Bash
+                    Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
-                    echo file{1..3}.txt  # Output: file1.txt file2.txt file3.txt
-
-                    Dash: Dash does not support brace expansion.  The above line will be interpreted literally.
-
-                Arithmetic expansion:
-
-                    Bash/Dash:
-                    Bash
-
-                    x=5
-                    y=10
-                    z=$((x + y))
-                    echo $z # Output: 15
-
-                This will work the same in both Bash and Dash.
-
-                String manipulation:
-
-                    Bash:
-                    Bash
-
-                        string="hello world"
-                        echo ${string:6}  # Output: world (substring)
-                        echo ${string//world/universe} # Output: hello universe (string substitution)
-
-                        Dash: Dash has more limited string manipulation capabilities. Substring expansion as shown above is not POSIX and might not work in Dash. Parameter expansion is also more limited.
-
-                Key Takeaway:
-
-                Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
-
-MS Windows Terminal ----
-    ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
-                close window  a-f4
-                copy text  c-c, c-Ins, cs-c, Enter
-                paste  c-v, s-Ins, cs-v
-                increase / decrease font-size  c-k_plus / c-plus // c-k_minus / c-minus
-                reset font-size  c-k0, c-0
-                Panes ----
-                duplicate pane  sa-d  __
-                Switch to Other Pane  a-Arrows  __
-                Resize Panes  sa-Arrows  __
-                close pane  cs-w
-                duplicate pane, split down  sa-minus  __
-                duplicate pane, split right  sa-plus
-                Tabs ----
-                Open new shell 1 .. 9 in new Tab  cs-1 .. cs-9  __
-                duplicate tab  cs-d
-                find (i.e. search the output of any shell)  cs-f
-                    (+next/prev. match  Enter / s-Enter)
-                move focus down / up  a-down / a-up  __
-                new tab  cs-t
-                new tab, profile-index 0 .. 8  cs-1 .. cs-9
-                new window  cs-n
-                next / prev. tab  c-Tab / cs-Tab  __
-                Settings ----
-                Open json-settings with VS Code  = Gives the benefit of autocompletion, integrated help-documentation, etc
-                Inspect available settings ***  ca-, (i.e. opens default.json [****]  __
-                shells available in the wt-menu  the 'profiles'-section in settings.json
-                Apply settings to different shells / all shells  put setting in a profile-object / defaults-object in settings
-                ----
-                open default settings-file (Json)  ca-,
-                open-new-tab dropdown  cs-space  _
-                open settings  c-,
-                open settings-file (Json)  cs-,  __
-                open suggestions, source: all  cs-.  [__]
-                open system-menu  a-space  ??
-                resize pane down / up / right / left  sa-down/up/right/left  __
-                scroll up / down  cs-up / cs-down
-                scroll up / down one page  cs-pgup / cs-pgdn
-                scroll to top / bottom of history  cs-home / cs-end
-                 select all text  cs-a
-                show context-menu  'menu'
-                show/hide quake-window  w-sc(41)
-                switch to tab, index:0 .. index:7  ca-1 .. ca-8
-                switch to the last tab  ca-9
-                toggle command-palette  cs-p  [__]
-                toggle fullscreen  f11, a-Enter  __
-
-                toggle mark-mode  cs-m  <__>
-                ----
-                run win-command inside WSL  command.exe
 Termux
   ../ref/comp/sysadm/Termux.Tags1.txt
                     - Great. A quick question about using
@@ -1049,18 +1136,164 @@ Termux
                   For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
 
                         Install and Configure rclone.
-                        Mount your cloud storage: rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+                  Mount your cloud storage:
+
+                  rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+
                         Navigate to your mounted directory: cd ~/dropbox/path/to/my/files
                         Edit files with NeoVim: nvim my_file.txt
                         Changes are automatically synced.
+
+                    - The only thing I have left is to
+                      determine what the 'my_dropbox' value
+                      corresponds to on my particular
+                      Android device and/or cloud-services.
+                      The cloud-services relevant in my case
+                      are Dropbox and Google Drive. Could
+                      you therefore give me some more
+                      guidance or information concerning how
+                      I can determine the respective values
+                      I would need to replace the
+                      'my_dropbox' dummy-value with on my
+                      device and cloud-services?
+
+                    You're very close! The my_dropbox: part
+                    of the rclone mount command refers to
+                    the name of your rclone remote
+                    configuration. You need to configure
+                    rclone to connect to your Dropbox or
+                    Google Drive account first. Here's how
+                    to do that:
+
+                    1. Configure Rclone Remotes:
+
+                - Open Termux: Launch your Termux app on
+                      your Android device.
+
+                - Run rclone config: This command will
+                      start the interactive rclone
+                      configuration process.
+
+                rclone config
+
+                    Create a New Remote:
+                You'll be prompted to create a new remote. Choose n for "new remote."
+                Enter a name for your remote. This is what will replace my_dropbox in your mount command. For example:
+                For Dropbox: dropbox_termux
+                For Google Drive: gdrive_termux
+                            Select the storage type:
+                For Dropbox: Choose Dropbox.
+                For Google Drive: Choose Google Drive.
+
+                            Follow the on-screen instructions:
+                Rclone will guide you through the
+                    authentication process. It will likely
+                    open a web browser to your Dropbox or
+                    Google Drive account, where you'll grant
+                    rclone access.
+                If Termux is unable to open a browser, the rclone configuration
+                will provide you with a URL, that you will need to copy and paste into a
+                browser on another device.
+
+                After authorizing rclone, you will be provided
+                with a code, that you will then paste back into the Termux terminal.
+
+                    You'll be
+                    asked various configuration questions.
+                    In most cases, the default options are
+                    fine. Once the configuration is
+                    complete, rclone will save your remote
+                    settings.
+
+                2. Use the Remote Name in Your Mount Command:
+
+                Now that you've configured your remotes, you can use their names in your rclone mount command:
+
+                    For Dropbox:
+                rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes
+
+                    For Google Drive:
+                rclone mount gdrive_termux: ~/gdrive --vfs-cache-mode writes
+                        Replace ~/dropbox and ~/gdrive with the desired mount point in your Termux file system.
+
+                    Explanation:
+
+                    rclone config: This command sets up the connection between rclone and your cloud storage service. It stores your authentication credentials and other configuration settings.
+                    Remote Name: The name you give your remote during the rclone config process is how rclone identifies your cloud storage connection.
+                rclone mount remote_name:local_mount_point: This command mounts your cloud storage as a local directory in Termux.
+
+                    Important Notes:
+
+                    Authentication: Rclone uses OAuth 2.0 for authentication, which is a secure way to grant access to your cloud storage.
+                    Permissions: Ensure that Termux has the necessary permissions to access your file system.
+                Background Process: rclone mount runs as a background process. If you close Termux, the mount will be unmounted. You may need to use nohup or tmux to keep the mount running in the background.
+                    VFS Cache Mode: The --vfs-cache-mode writes option is important for writing files to your mounted cloud storage. It caches data locally to improve performance.
+
+                    By following these steps, you'll be able to mount your Dropbox and Google Drive accounts in Termux and access your cloud files directly from your Android device.
 
                     This approach provides the closest experience to working with local files, with the added benefit of cloud syncing.
 
                     Remember to choose the approach that best suits your needs and technical comfort level.
 
-                    I have no problem at all having to mount, use cli-commands and the like - a big part of my daily workflow is built around exactly that.
+                    - A quick question with regard to using rclone through Termux for getting instant (or near instant) sync between Dropbox, Google Drive (etc) files on an Android device and the cloud: Is there a way to specify only a particular folder inside my Google Drive or Dropbox folder system? What I mean is, if I would connect the whole of my Dropbox or Google Drive folders, that would be too much storage for my Android device to handle.
+
+                    Yes, you can absolutely specify a particular folder within your Google Drive or Dropbox structure when using rclone with Termux on Android. This allows you to sync only the relevant files and avoid overwhelming your device's storage.
+
+                    Here's how you can achieve this:
+
+                    1. Specifying the Remote Path:
+
+                    When configuring your rclone remote, you define the "remote" as a combination of the remote name and the path within that remote. For example:
+
+                        If your Google Drive remote is named "gdrive" and you want to sync the folder "MySyncFolder" within your Drive, you would use "gdrive:MySyncFolder" as the remote path.
+                        If your Dropbox remote is named "dropbox" and you want to sync the folder "Documents/Important", you'd use "dropbox:Documents/Important".
+
+                    2. Using the rclone sync or rclone copy commands:
+
+                    When using rclone sync or rclone copy, you specify the source and destination paths. To sync a specific folder, you would use the remote path you defined in step 1.
+
+                    Example using Google Drive:
+                    Bash
+
+                    rclone sync gdrive:MySyncFolder /storage/shared/MySyncFolder
+
+                    This command will:
+
+                        rclone sync: Sync the files.
+                        gdrive:MySyncFolder: Specifies the "MySyncFolder" folder within the "gdrive" remote.
+                        /storage/shared/MySyncFolder: Specifies the local directory on your Android device where you want to sync the files.
+
+                    Example using Dropbox:
+                    Bash
+
+                    rclone copy dropbox:Documents/Important /storage/shared/ImportantDocuments
+
+                    This command will:
+
+                        rclone copy: copy the files.
+                        dropbox:Documents/Important: Specifies the "Documents/Important" folder within the "dropbox" remote.
+                        /storage/shared/ImportantDocuments: Specifies the local directory on your Android device where you want to copy the files.
+
+                    Important Considerations:
+
+                        Remote Configuration:
+                            Ensure you have correctly configured your rclone remotes for Google Drive and Dropbox using rclone config.
+                        Local Path:
+                            Choose a local path on your Android device that has sufficient storage space.
+                        Permissions:
+                            Termux needs appropriate permissions to access the local storage directories.
+                        Sync vs. Copy:
+                            rclone sync makes the destination identical to the source, deleting files in the destination that are not present in the source.
+                            rclone copy copies files from the source to the destination without deleting any files in the destination.
+                        Filters:
+                            Rclone also allows you to add filters to your commands. This allows for even more fine grained control. You can specify file types to include or exclude.
+
+                    By specifying the correct remote path, you can easily sync only the necessary folders and keep your Android device's storage manageable.
+
+                    - I have no problem at all having to mount, use cli-commands and the like - a big part of my daily workflow is built around exactly that.
 
                     Excellent! If you're comfortable with the command line and mounting file systems, rclone will be your best friend for syncing cloud files with Termux. Here's a more detailed guide to get you set up and working efficiently:
+
 
                     - 1. Installing and Configuring Rclone:
 
@@ -1109,57 +1342,6 @@ Termux
 
                       rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
 
-                    The only thing I have left is to determine what the 'my_dropbox' value corresponds to on my particular Android device and/or cloud-services. The cloud-services relevant in my case are Dropbox and Google Drive. Could you therefore give me some more guidance or information concerning how I can determine the respective values I would need to replace the 'my_dropbox' dummy-value with on my device and cloud-services?
-
-                    You're very close! The my_dropbox: part of the rclone mount command refers to the name of your rclone remote configuration. You need to configure rclone to connect to your Dropbox or Google Drive account first. Here's how to do that:
-
-                    1. Configure Rclone Remotes:
-
-                        Open Termux: Launch your Termux app on your Android device.
-
-                        Run rclone config: This command will start the interactive rclone configuration process.
-
-                    rclone config
-
-                        Create a New Remote:
-                    You'll be prompted to create a new remote. Choose n for "new remote."
-                            Enter a name for your remote. This is what will replace my_dropbox in your mount command. For example:
-                    For Dropbox: dropbox_termux
-                    For Google Drive: gdrive_termux
-                            Select the storage type:
-                    For Dropbox: Choose Dropbox.
-                    For Google Drive: Choose Google Drive.
-                            Follow the on-screen instructions:
-                    Rclone will guide you through the authentication process. It will likely open a web browser to your Dropbox or Google Drive account, where you'll grant rclone access.
-                    If Termux is unable to open a browser, the rclone configuration will provide you with a URL, that you will need to copy and paste into a browser on another device. After authorizing rclone, you will be provided with a code, that you will then paste back into the Termux terminal.
-                    You'll be asked various configuration questions. In most cases, the default options are fine.
-                    Once the configuration is complete, rclone will save your remote settings.
-
-                    2. Use the Remote Name in Your Mount Command:
-
-                    Now that you've configured your remotes, you can use their names in your rclone mount command:
-
-                    For Dropbox:
-                    rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes
-
-                    For Google Drive:
-                    rclone mount gdrive_termux: ~/gdrive --vfs-cache-mode writes
-                        Replace ~/dropbox and ~/gdrive with the desired mount point in your Termux file system.
-
-                    Explanation:
-
-                    rclone config: This command sets up the connection between rclone and your cloud storage service. It stores your authentication credentials and other configuration settings.
-                    Remote Name: The name you give your remote during the rclone config process is how rclone identifies your cloud storage connection.
-                    rclone mount remote_name:local_mount_point: This command mounts your cloud storage as a local directory in Termux.
-
-                    Important Notes:
-
-                    Authentication: Rclone uses OAuth 2.0 for authentication, which is a secure way to grant access to your cloud storage.
-                    Permissions: Ensure that Termux has the necessary permissions to access your file system.
-                    Background Process: rclone mount runs as a background process. If you close Termux, the mount will be unmounted. You may need to use nohup or tmux to keep the mount running in the background.
-                    VFS Cache Mode: The --vfs-cache-mode writes option is important for writing files to your mounted cloud storage. It caches data locally to improve performance.
-
-                    By following these steps, you'll be able to mount your Dropbox and Google Drive accounts in Termux and access your cloud files directly from your Android device.
 
                     Fantastic. I really feel (and that is actually not an understatement) that a whole new world is about to be opened here for me (with respect to my daily dev- and computer-workflow).
 
@@ -1709,6 +1891,7 @@ Termux
 
                 I hope this helps!
 SSH
+                Could you give me direction as to which chapters to read and focus on? I.e. what I'm thinking is that some chapters contain absolutely essential knowledge, and some might be good to take a quick look or glance at, but not absolutely critical or paramount to study in detail.
 Tasker
 Vbox
 VeraCrypt
@@ -3282,7 +3465,897 @@ https://www.nushell.sh/cookbook/book/  #or migrate to sysadmin(!!)
                 default
 Xonsh
 
-top
+bind-macros             __hm
+readline                __Star
+                        inits
+                                ~/Dropbox/config/.inputrc
+                                /usr/share/readline/inputrc
+                                        /etc/inputrc
+                                        /etc/X11/xinit/xinputrc
+                                        /usr/share/doc/readline-common/inputrc.arrows
+                                        /usr/share/doc/libreadline5/examples/Inputrc
+                                        /usr/share/doc/libreadline6/examples/Inputrc
+                                        /usr/share/doc/libreadline5/inputrc.arrows
+                                        /usr/share/doc/libreadline6/inputrc.arrows
+                                        /usr/share/doc/bash/inputrc.arrows
+                                        /usr/share/im-config/xinputrc.common
+                        TODO(!! 2021+) (=CHECK AGAINST COMPLETE C-LIST (+REARRANGE AND INDENT AS CHECKED (**))
+                                    +(!!) Complete List All Commands (+their default (emacs-style(**)) key-bindings(**) {{{
+                                        "\C-g": abort
+                                        "\C-x\C-g": abort
+                                        "\e\C-g": abort
+                                        "\C-j": accept-line
+                                        "\C-m": accept-line
+                                        "\C-b": backward-char
+                                        "\eOD": backward-char
+                                        "\e[D": backward-char
+                                        "\C-h": backward-delete-char
+                                        "\C-?": backward-delete-char
+                                        "\C-x\C-?": backward-kill-line
+                                        "\e\C-h": backward-kill-word
+                                        "\e\C-?": backward-kill-word
+                                        "\e\e[D": backward-word
+                                        "\e[1;5D": backward-word
+                                        "\e[5D": backward-word
+                                        "\eb": backward-word
+                                        "\e<": beginning-of-history
+                                        "\C-a": beginning-of-line
+                                        "\eOH": beginning-of-line
+                                        "\e[1~": beginning-of-line
+                                        "\e[H": beginning-of-line
+                                        "\C-xe": call-last-kbd-macro
+                                        "\ec": capitalize-word
+                                        "\C-]": character-search
+                                        "\e\C-]": character-search-backward
+                                        "\C-l": clear-screen
+                                        "\C-i": complete
+                                        "\e\e": complete
+                                        "\e!": complete-command
+                                        "\e/": complete-filename
+                                        "\e@": complete-hostname
+                                        "\e{": complete-into-braces
+                                        "\e~": complete-username
+                                        "\e$": complete-variable
+                                        "\C-d": delete-char
+                                        "\e[3~": delete-char
+                                        "\e\\": delete-horizontal-space
+                                        "\C-x\C-v": display-shell-version
+                                        "\el": downcase-word
+                                        "\e\C-i": dynamic-complete-history
+                                        "\C-x\C-e": edit-and-execute-command
+                                        "\C-x)": end-kbd-macro
+                                        "\e>": end-of-history
+                                        "\C-e": end-of-line
+                                        "\eOF": end-of-line
+                                        "\e[4~": end-of-line
+                                        "\e[F": end-of-line
+                                        "\C-x\C-x": exchange-point-and-mark
+                                        "\C-f": forward-char
+                                        "\eOC": forward-char
+                                        "\e[C": forward-char
+                                        "\C-s": forward-search-history
+                                        "\e\e[C": forward-word
+                                        "\e[1;5C": forward-word
+                                        "\e[5C": forward-word
+                                        "\ef": forward-word
+                                        "\eg": glob-complete-word
+                                        "\C-x*": glob-expand-word
+                                        "\C-xg": glob-list-expansions
+                                        "\e^": history-expand-line
+                                        "\e#": insert-comment
+                                        "\e*": insert-completions
+                                        "\e.": insert-last-argument
+                                        "\e_": insert-last-argument
+                                        "\C-k": kill-line
+                                        "\ed": kill-word
+                                        "\C-n": next-history
+                                        "\eOB": next-history
+                                        "\e[B": next-history
+                                        "\en": non-incremental-forward-search-history
+                                        "\ep": non-incremental-reverse-search-history
+                                        "\C-o": operate-and-get-next
+                                        "\C-x!": possible-command-completions
+                                        "\e=": possible-completions
+                                        "\e?": possible-completions
+                                        "\C-x/": possible-filename-completions
+                                        "\C-x@": possible-hostname-completions
+                                        "\C-x~": possible-username-completions
+                                        "\C-x$": possible-variable-completions
+                                        "\C-p": previous-history
+                                        "\eOA": previous-history
+                                        "\e[A": previous-history
+                                        "\C-q": quoted-insert
+                                        "\C-v": quoted-insert
+                                        "\e[2~": quoted-insert
+                                        "\C-x\C-r": re-read-init-file
+                                        "\C-r": reverse-search-history
+                                        "\e\C-r": revert-line
+                                        "\er": revert-line
+                                        .
+                                        alias-expand-line (not bound)
+                                        arrow-key-prefix (not bound)
+                                        backward-byte (not bound)
+                                        copy-backward-word (not bound)
+                                        copy-forward-word (not bound)
+                                        copy-region-as-kill (not bound)
+                                        dabbrev-expand (not bound)
+                                        delete-char-or-list (not bound)
+                                        dump-functions (not bound)
+                                        dump-macros (not bound)
+                                        dump-variables (not bound)
+                                        emacs-editing-mode (not bound)
+                                        forward-backward-delete-char (not bound)
+                                        forward-byte (not bound)
+                                        history-and-alias-expand-line (not bound)
+                                        history-search-backward (not bound)
+                                        history-search-forward (not bound)
+                                        history-substring-search-backward (not bound)
+                                        history-substring-search-forward (not bound)
+                                        kill-region (not bound)
+                                        kill-whole-line (not bound)
+                                        magic-space (not bound)
+                                        menu-complete (not bound)
+                                        menu-complete-backward (not bound)
+                                        non-incremental-forward-search-history-again (not bound)
+                                        non-incremental-reverse-search-history-again (not bound)
+                                        old-menu-complete (not bound)
+                                        overwrite-mode (not bound)
+                                        print-last-kbd-macro (not bound)
+                                        redraw-current-line (not bound)
+                                        shell-backward-kill-word (not bound)
+                                        shell-backward-word (not bound)
+                                        shell-forward-word (not bound)
+                                        shell-kill-word (not bound)
+                                        skip-csi-sequence (not bound)
+                                        tab-insert (not bound)
+                                        tty-status (not bound)
+                                        universal-argument (not bound)
+                                        unix-filename-rubout (not bound)
+                                        vi-append-eol (not bound)
+                                        vi-append-mode (not bound)
+                                        vi-arg-digit (not bound)
+                                        vi-back-to-indent (not bound)
+                                        vi-backward-bigword (not bound)
+                                        vi-backward-word (not bound)
+                                        vi-bword (not bound)
+                                        vi-bWord (not bound)
+                                        vi-change-case (not bound)
+                                        vi-change-char (not bound)
+                                        vi-change-to (not bound)
+                                        vi-char-search (not bound)
+                                        vi-column (not bound)
+                                        vi-complete (not bound)
+                                        vi-delete (not bound)
+                                        vi-delete-to (not bound)
+                                        vi-editing-mode (not bound)
+                                        vi-end-bigword (not bound)
+                                        vi-end-word (not bound)
+                                        vi-eof-maybe (not bound)
+                                        vi-eword (not bound)
+                                        vi-eWord (not bound)
+                                        vi-fetch-history (not bound)
+                                        vi-first-print (not bound)
+                                        vi-forward-bigword (not bound)
+                                        vi-forward-word (not bound)
+                                        vi-fword (not bound)
+                                        vi-fWord (not bound)
+                                        vi-goto-mark (not bound)
+                                        vi-insert-beg (not bound)
+                                        vi-insertion-mode (not bound)
+                                        vi-match (not bound)
+                                        vi-movement-mode (not bound)
+                                        vi-next-word (not bound)
+                                        vi-overstrike (not bound)
+                                        vi-overstrike-delete (not bound)
+                                        vi-prev-word (not bound)
+                                        vi-put (not bound)
+                                        vi-redo (not bound)
+                                        vi-replace (not bound)
+                                        vi-rubout (not bound)
+                                        vi-search (not bound)
+                                        vi-search-again (not bound)
+                                        vi-set-mark (not bound)
+                                        vi-subst (not bound)
+                                        vi-tilde-expand (not bound)
+                                        vi-yank-arg (not bound)
+                                        vi-yank-to (not bound)
+                                        }}}
+                        Ptools ----
+                                Edit cmd-line with Vim              c-x c-e
+                                  c-eu c-w a-bs
+                                list glob-matches                   c-x g
+                                complete with brace-expansion (*)   a-{    # ga-ä
+                        classic (=std 'emacs' readline)
+                                    set em.|vi-keys     set -o vi / emacs  ||  emacs shopt -s -o vi / emacs
+                                    te: token(?)        type symbols (eg. $ for env.var, etc)
+                                     abort               c-g
+                                     enter               c-m            @
+                                     clear scr.          c-l
+                                    reread initfile     c-x c-r         @
+                                    key macro           c-x (,  c-x )
+                                     run k.macro         c-x e
+                                    [quot.insert        c-q || c-v]
+                                    char.search(!)      c-]  #cgs-ö  +neg.count searches backw.(!)
+                                     set mark (!)        cg-q  #c-@ (a-space)
+                                     swap mark/cursor*   c-x c-x
+
+                                                movem.
+                                            start|end line      c-a|e
+                                            c. forw|back        c-f|b
+                                            word forw|back      e-f | a-b
+
+                                        edit (change|del.)
+                                    del. word backw. *      c-w  #(=fr. start of next w.)
+                                     del. word forw.        a-d  #(=fr. blank bef. next w.)
+                                    del. back to punct.     a-bs
+                                     del. ch. back|forw      c-h|d      @
+                                     del. back|forw. line    c-u|k
+                                     u.case|d.case word      a-u|l  # x.case char.s fr. cursor forw.
+                                     c.case word             a-c
+                                    paste               c-y     @@@ --v
+                                        insert prev. arg.s
+                                    last arg. (***!)    a-.
+                                    paste a4  (***!)    e-4 ca-y    # cmd a1 a2 a3 a4 &
+                                                                    #  (+arg.num can be neg.(!!))
+                                    rot. killring       a-y     # = paste + go back in killring (**!!)
+                                    undo                c-_  #cs_-      @
+                                      #note: ev. line has separate undo-hist.(!)
+                                    del. spaces
+                                      (=around point)   a-\  #ga-å
+                                    revert line         a-r     @
+                                    ----
+                                    transp. words **(!)     e-t  # pull word bef. cursor forw. (+leave cursor on blank after)
+                                     transp. chars          c-t  # pull ch. bef. cursor forw.
+
+                                    search hist backw.      c-r (****)
+                                     [end of hist.]          sa-<
+                                    back|forw. hist-line    up|down // c-p|n
+
+                                    insert glob-matches   c-x *     @@@
+                                    list token-matches      sa-+  # a-?
+                                    insert token-matches    sa-'  # a-*
+                                     completion                 c-x x [=list]  a-x [=complete tokens]  x 2T [=list]
+                                    COMPLETION*** {{{
+
+                                        c-x X   'file-patt.': lista möjl. compl. {{{
+                                            visa möjliga completions av texten före markör; text hanteras som filnamn -- Ctrl+x /
+                                            visa möjliga completions av texten före markör; text hanteras som skal/miljövariabel -- Ctrl+x $
+                                            visa möjliga hostname completions -- Ctrl+x @
+                                            visa möjliga username completion -- Ctrl+x ~
+                                                försök göra username completion -- Ctrl+x ~
+                                            visa möjliga completions av texten före markör; text hanteras som kommandonamn -- Ctrl+x !
+                                        }}}
+                                        a X     tokens($~@!/*): försök compl. {{{
+                                            försök skalvariabel-completion på texten innan markören -- Alt+$
+                                            försök hostname completion på texten innan markören -- Alt+@
+                                            försök filename completion på texten innan markören -- Alt+/
+                                            försök username completion på texten innan markören -- Alt+~
+                                        }}}
+                                        -------------------------------
+                                        X 2T    'file-patt.'s +tokens: lista (möjl.) compl. {{{
+
+                                            lista undermappar, men INTE dolda
+                                                * 2T  :DDDD
+
+                                            ########lista HELA mappstrukturen inklusive undermappar
+                                                / 2T
+
+                                            lista hela mappstrukturen i mappen mappp (inklusive dolda mappar) -- mappnamn 2T :)) (PROVA)
+
+
+                                            visa/lista alla tillgängliga kommandon -- 2T
+
+                                            lista alla tillgängliga kommandon som börjar med 'sträng' -- sträng 2T
+
+
+
+                                            lista alla nuvarande användare från systemet (/etc/passwd)
+                                                ~ 2T
+
+                                            @ 2T  -- ????
+                                                entries från /etc/hosts
+
+                                            = 2T -- ????
+                                                =ger output som ls :)
+
+                                            lista alla systemvariabler -- $ 2T
+
+                                        }}}
+
+                                        Types/Tokens +Pri.  $~@!/ * {{{
+                                         $   (skal)var.
+                                         ~   anv.namn
+                                         @   hostname (bluelegend, meuh, mm)
+
+                                         !   komm., inkl. alias och funktioner
+                                         /   filnamn
+                                        }}}
+                        vi shortcuts
+                                        http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal
+                                        https://catonmat.net/ftp/bash-vi-editing-mode-cheat-sheet.pdf
+                                         https://github.com/pkrumins/bash-vi-editing-mode-cheat-sheet
+                                    .   catonmat vim-vi mode-bindings readline {{{
+
+                                        http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.pdf
+
+
+                                        Readline VI Editing Mode Cheat Sheet
+                                        Default Keyboard Shortcuts for Bash
+                                        Shortcut
+                                        Description
+
+
+                                        ESC     Switch to command mode.
+
+                                            Commands for Entering Input mode:
+                                        i       Insert before cursor.
+                                        a       Insert after cursor.
+                                        I       Insert at the beginning of line.
+                                        A       Insert at the end of line.
+                                        c<movement command>     Change text of a movement command <movement command> (see below).
+                                        C           Change text to the end of line (equivalent to c$).
+                                        cc or S     Change current line (equivalent to 0c$).
+                                        s           Delete  a  single  character  under  the  cursor  and  enter  input  mode  (equivalent  to c[SPACE]) .
+                                        r       Replaces a single character under the cursor (without leaving command mode).
+                                        R       Replaces characters under the cursor.
+                                        v       Edit (and execute) the current command in a text editor (an editor in $VISUAL and $EDITOR variables or vi).
+
+                                        Basic Movement Commands (in command mode):
+                                        l or SPACE      Move one character right.
+                                        h       Move one character left.
+                                        w       Move one word or token right.
+                                        b       Move one word or token left.
+                                        W       Move one non-blank word right.
+                                        B       Move one non-blank word left.
+                                        e       Move to the end of the current word.
+                                        E       Move to the end of the current non-blank word.
+                                        0       Move to the beginning of line.
+                                        ˆ       Move to the first non-blank character of line.
+                                        $       Move to the end of line.
+                                        %   Move to the corresponding opening/closing bracket (()’s, []’s and {} ’s).
+
+                                        Character Finding Commands (these are also Movement Commands):
+                                        fc  Move right to the next occurance of c .
+                                        Fc  Move left to the previous occurance of c .
+                                        tc  Move right to the next occurance of c, then one char backward.
+                                        Tc  Move left to the previous occurance of c, then one char forward.
+                                        ;   Redo the last character finding command.
+                                        ,   Redo the last character finding command in opposite direction.
+                                        |   Move to the n-th column (you may specify the argument n by typing it on number keys, for example, 20|).
+
+                                        A cheat sheet by
+                                        Peteris Krumins
+                                        (peter@catonmat.net), 2008.
+                                        http://www.catonmat.net - good coders code, great reuse
+                                        Released under GNU Free Document License.
+
+                                        Deletion Commands:
+                                        x       Delete a single character under the cursor.
+                                        X       Delete a character before the cursor.
+                                        d<movement command>     Delete text of a movement command <movement command> (see above).
+                                        D       Delete to the end of the line (equivalent to d$).
+                                        dd      Delete current line (equivalent to 0d$).
+                                        CTRL-w      Delete the previous word.
+                                        CTRL-u      Delete from the cursor to the beginning of line.
+
+                                        Undo, Redo and Copy/Paste Commands:
+                                        u       Undo previous text modification.
+                                        U       Undo all previous text modifications on the line.
+                                        .       Redo the last text modification.
+                                        y<movement command>     Yank a movement into buffer (copy).
+                                        yy      Yank the whole line.
+                                        p       Insert the yanked text at the cursor (paste).
+                                        P       Insert the yanked text before the cursor.
+
+                                        Commands for Command History:
+                                        k       Move backward one command in history.
+                                        j       Move forward one command in history.
+                                        G       Move to the history line n (=you may specify the argument n by typing it on number keys, for example, 15G).
+                                        / string or CTRL-r  Search history backward for a command matching string.
+                                        ? string or CTRL-s  Search  history  forward  for  a  command  matching string (remember  that  on  most machines CTRL-s stops the output to the terminal (CTRL-q starts output) and you might need to change it with stty command).
+                                        n       Repeat search in the same direction as previous.
+                                        N       Repeat search in the opposite direction as previous.
+
+                                        Completion Commands:
+                                        TAB or CTRL-i or =      List possible completions.
+                                        *       Insert all possible completions.
+
+                                        Miscellaneous Commands:
+                                        ∼       Invert the case of the character under cursor, and move a character right.
+                                        #       Prepend # (comment character) to the line and send it to the history list.
+                                        -       Inserts the n -th word of the previous command in the current line.
+                                        0, 1, 2, ...     Sets the numeric argument.
+                                        CTRL-v      Insert a character literally (quoted insert).
+                                        CTRL-t      Transpose (exchange) two characters.
+
+
+                                        Examples and Tips
+                                        • Some of the commands take a <movement command>. These commands apply the movement to themselves. For example, d$ would use $ as a movement,  which moves the cursor to the end of the line,  thus,  the whole d$ would delete text from the current cursor position to the end of the line. Another example, a command c fA would use fA as a movement, which finds the next occurance of the character A , thus, the whole command would change the line up to character A .
+
+                                        • Use CTRL-v to insert character literally, for example, CTRL-v CTRL-r would insert CTRL-r in the command line.
+
+                                        • See man bash , man readline , and built in bind command for modifying the default behavior!
+
+                                        A cheat sheet by
+                                        Peteris Krumins
+                                        (peter@catonmat.net), 2008.
+                                        http://www.catonmat.net - good coders code, great reuse
+                                        Released under GNU Free Document License.
+
+                                    }}}
+
+                                    }}}
+                                    do-uppercase-version (M-a, M-b, M-x, ...)
+history-fc *
+                picklist(!)  (=first stabs at collecting lists)
+                        History
+
+                        history -p !d       #print matching history-entry
+                        history -d 1029     #del. entry from history
+                        -s      save history-entry
+                        -w      save history to a file (*)
+                        -r      load history from a file (*)
+                        -a      append current history session to the history file
+                        -n      load complete h. from a file
+                        -c      delete the entire history
+
+                        set cmdhist
+                        set lithist         =breaks ';'-lines into separate
+
+                        file w. last 2k hist-lines          ~/.bash_history  (or older(?) ~/.history)
+                        hist.expansion                      1. determ. matching hist-line[='event'], 2. determ. matching parts fr. that line[='words'(wh.sp.sep. or quoted)], +3. modifiers can manipul. the words
+                    te: the hist.expans. char.          !       (=can be quoted by \ and ')
+                        event designator        =history event | previous executed (and saved) command line
+                        word designator         =find word|arg (w. blanks|quotes around) fr. prev. cline  saved in cline-history
+                        word modifier           =modif. extracted|identified word designator
+
+                                    brace expansion   (+28.4 in unpowtools)
+                                    evince -p 40 ~/Empire/Doks/Comp/sysadm/lin/bluebash.pdf &
+
+                        word designators ex:  gvim f1 f2 f3 f4 f5 &
+                        word modifiers ex:    /home/bluelegend/bla.txt
+
+                    Fc
+                        show|edit|run clines fr. hist. (**)  #=starts vim (or ed. set in FCEDIT
+                        list cmds(?)                fc -l
+                        edit clines + run ag.       fc kill    fc 31 36
+                        . {{{
+
+                        Display or execute commands from the history list.
+                        fc (3): fc [-e ename] [-lnr] [first] [last]
+                        fc is used to list or edit and re-execute commands from the history list. FIRST and LAST can be numbers specifying the range, or FIRST can be a string, which means the most recent command beginning with that string.
+
+                        }}}
+
+                        run latest cline ^kill      fc -s kill   #'starts w. "kill"'
+                        byt ut kill mot 'x' + kör se. k bö. m 'kill'  ;  fc -s kill=x {{{
+                        fc -s [pat=rep] [command]
+                        With the `fc -s [pat=rep ...] [command]' format, COMMAND is re-executed after the substitution OLD=NEW is performed.
+
+                        kör senaste kommandoraden SOM BÖRJAR med strängen cc
+                        fc -s cc
+                        kör senaste kommandoraden som börjar med cc + byt cc mot gg
+                        fc -s cc=gg cc
+                        }}}
+                        tips:  alias r='fc -s'  #'r cc' kör se. k bö. m cc
+                                        #'r cc=gg' kör se. k bö. m cc, efter bytt cc mot gg
+
+                        öppna-red-kör latest ^kill cline  ;  fc kill        #+kör när trycker ZZ/ZQ
+                        ---------
+                        ((välj editor)) {{{
+                        öppna fil m editor x   ;  fc (-e) x #jumpstarting script from executed bash cmd-seq  #defaults: FCEDIT, EDITOR, vim
+                        }}}
+                        öppna-red-kör k31 fr.hist  ;  fc 31
+                        öppna-red-kör k31-k38 fr.hist  ;  fc 31 38
+
+                        lista krader x-y  ;  fc -l 2030 2039
+                        list latest ^kill cline  ;  fc -l kill
+
+                        open(+edit, run) clines 31-38 + no numbers *        fc -n 31 38     #'kickstart a script'
+                        open(+edit, run) clines 31-38, +reversed *(!)       fc -r 31 38     #'kickstart a script'
+
+                    events  #clines saved in history
+                        hist. cline 33  ;  !33   #+execute again, etc
+                        last exec. cline  ;  !!  # !-1
+                        sec. to last cline  ;  !-2  ****   #+tip: cyclic execution two clines (=line a, line b, line a (etc)): !-2, !-2, ....
+                        **** kör se. två cmd cykl.  ;  !-2 + rep. ***
+
+                        latest cline *.mm*  ;  !?.mm[?]
+                        latest cline ^tux  ;  !tux[!]
+
+                        ersätt 'str1' med 'bla' i fö.fö. komm.  ;  !-2:s/str1/bla/
+                        ersätt 'str1' med 'bla' i fö.fö. komm. = alla  ;  !-2:gs/str1/bla/   ????
+
+                        ta bort 'zz' + kör se. kraden  ;  ^zz^^
+
+                        EXEMPEL (=ANV. OVANSTÅENDE SOM RUBR.ER + SORTERA IN EXEMPLEN PÅ RELEV. STÄLLENA ** {{{
+
+                        Ctrl+r                sök efter sträng i kommandohistoriken (t ex också om du blev avbruten 
+
+                        sudda sista arg från krad 20 (i hist)       
+                            rm !20:$        #rm /tmp/0444-diff.txt.     
+                        visa senaste 8 k fr. hist   
+                            history 8   
+                        kör krad 16 igen    
+                            !16         #vi ../todo.    
+                        kör se. k bö. med cdc (gör unik!)   
+                            !cdc    
+                        kör se. k + stdout till 'fil'   
+                            !! > fil            
+                        skriv ut sista fil från senaste vi-cline
+                            lpr !vi:$               
+                        !m:p        
+                        more gobbledygook.c     
+                    find . -name '*.tg' -atime -5 2>/dev/null | grep väva   
+                        tuxguitar "$(!!)" & 
+
+                        !!-     = allt utom sista ordet för förra kommandot :  KLAR 2014        
+
+                        }}}
+
+                        words  #words in prev. events
+                        Tecken som skiljer ref till komm.rad med ref till ord ; kolon   ( !?kill?:0 firefox  *******)
+                        (Ord där ':' kan uteslutas
+                        !!:^  !!^
+                        !!:$  !!$
+                        !!:*  !!*
+                        !!:-  !!-
+                        !!:%  !!%
+
+                        cmd-word            :0                                # !-2:0
+                        first flag|arg      :1  / (:)^                  # !-2:1  /  !-2:^  /  !-2^
+
+                        all prev. on cline      !#      # sleep 5; date; !#
+
+                    1      The nth word.
+                        ^      The first argument.  That is, word 1.
+                        1-4    A range of words;
+                        `-y' abbreviates `0-y'.  ********
+                        1*     Abbreviates 1-$.
+                        *      All  of  the  words  but the zeroth.  This is a synonym for `1-$'.  It is not an error to use * if there is just one word in the event; the empty string is returned in that case.
+                        1-     Abbreviates 1-$ like 1*, but omits the last word.
+                        -----
+                        $      The last argument.
+                        %      The word matched by the most recent `?string?' search.  **********
+                        If a word designator is supplied without an event specification, the previous command is used as the event.
+                        !!-     = allt utom sista ordet för förra kommandot :  KLAR 2014
+
+                    EXEMPEL (=ANV. OVANSTÅENDE SOM RUBR.ER + SORTERA IN EXEMPLEN PÅ RELEV. STÄLLENA ** {{{
+                        hitta ord(m blankst. runt) fr. annan krad
+
+                        0                "0:te ordet" = kommandoordet   
+                        !:0         
+                        n                n:te ordet (t ex 1:a, 2:a osv ordet)   
+                        ls !:1  
+                        ls a    
+                        ^                första argumentet, dvs ord 1 :)    
+                        ls !^   
+                        ls a    
+                        $                sista argumentet   
+                        gedit a !$  
+                        gedit a &   
+                        %                ??? ord som matchades i senaste !?sträng?-sökning ???  
+                        x-y                <range of words> 
+                        ls !:3-5    
+                        ls c d e    
+                        !:-5 &  
+                        gvim a b c d e &    
+                        *                alla ord utom 0 = alla argument (samma som '1-$')  
+                        gedit !*    
+                        gedit a b c d e f g h & 
+                        x*                förkortning av 'x-$'  
+                        ls !:5* 
+                        ls e f g h &    
+                        x-                som 'x-$' men utelämnar det sista ordet   
+                        cat !:1- > a-till-h.txt 
+                        cat a b c d e f g h > a-till-h.txt  
+                        för: gvim a &   
+                        ls !:1- 
+                        ls a    
+                        [om en ord-identifierare ges utan att specificera händelse/kommando (från hist(??)) så används senaste]      
+                        !^                första argumentet på senaste raden. samma som !:1 
+                        ls !^   
+                        ls a    
+                        !$                slutet av föregående kommando//ta det sista på föregående kommandorad 
+                        (t ex när vi sökt efter Joe i användarlistan djupt ner i trädstrukt. i ex. 2 i 'grep' = skulle ta /flera/lager/ner/i/mapp/system/user-list/list15'  
+                        vi !$                använd slutet av föregående kommando (t ex fil långt ner i mappstruktur)   
+                        !:n*                argument nr 'n' t o m sista från föregående rad 
+                        (=heltal 0 till 9)  
+                        !:2*                argumenten fr o m 2 och till sista från föregående raden    
+                        less !:2        kör less med 2:a argumentet från senaste kommandoraden  
+                        !:2-4                argumenten 2 t o m 4 från föregående rad   
+                        !*                alla argumenten för föregående kommandot (ex råkade skriva 'vi cd /ja')   
+                        ((samma som !:1*))  
+                        ls a*   
+                        a1 a2 a3    
+                        rm !$   
+                        kop. foo.c till foo.c.orig  
+                        --------------------------- 
+                    cp -i !$ !$.orig        #=cp -i foo.c foo.c.orig    
+                        skriv ut sista fil från senaste vi-session      
+                        lpr !vi:$               
+                        !cdc:2*                plockar argument nr 2 t o m sista från senaste kommandoraden som börjar med 'cdc'        
+                        !:0                kommandot från senaste raden ensamt (utan ev körda argument) 
+                        !:2-                 som '2*' men utan SISTA argumentet 
+                        !?fn?%                ger första ordet (argumentet) som hittades som har 'fn' i sig 
+                        % sort fn1 fn2 fn3  
+                        ... 
+                        % echo !?fn?%   
+                        echo fn1    
+                        fn1 
+                        !!-     = allt utom sista ordet för förra kommandot :  KLAR 2014        
+                        }}}
+
+                    modifiers  #=modify extracted event words
+
+                        :h     head(=sökväg men ej fil)
+                        :t     tail =bara filnamnet
+                        :r     ta bort filändelse
+                        :e     lämna kvar filändelse
+                        :p**   print the new command but do not execute it.
+                        --
+                        q      Quote the substituted words, escaping further substitutions.
+                        x      Quote the substituted words as with q, but break into words at blanks and newlines.
+                    s/old/new/ {{{
+                        Substitute new for the first occurrence of old in the event line.  Any delimiter can be used in place of /.
+                        The final delimiter is optional if it is the last character of the event line.  The delimiter may be quoted in  old  and  new with a single backslash.  If & appears in new, it is replaced by old.  A single backslash will quote the &.  If old is null, it is set to the last old substituted, or, if no previous  history  sub‐ stitutions took place, the last string in a !?string[?]  search.
+                        as|gs      Cause  changes  to  be  applied  over  the entire event line.  This is used in conjunction with `:s' (e.g., `:gs/old/new/') or `:&'.        If used with `:s', any delimiter can be used in place of /, and the final  delim‐ iter is optional if it is the last character of the event line.  An a may be used as a synonym for g.
+                        }}}
+                        g|a
+                    G      Apply the following `s' modifier once to each word in the event line.
+                    &      Repeat the previous substitution.
+
+                        EXEMPEL (=ANV. OVANSTÅENDE SOM RUBR.ER + SORTERA IN EXEMPLEN PÅ RELEV. STÄLLENA ** {{{
+
+                        :p                lista det som skulle köras utan att köra  
+                        ^fel^rättelse        ändra i förut skrivet kommando, t ex stavfel el bara byta ut ord   
+                        ^6c^6C                ändrar stavfel litet 'c' i 'vi /etc/X11/XF86config' till 'Config' 
+                        ^k^k2   
+                        ^gg                ta bort några överflödiga bokstäver (samma som '^gg^' för t ex ta    
+                        EXEMPEL: /home/bluelegend/bla.ly    
+                        :h                ta bort filnamn och lämna kvar bara första delen (=sökväg)    
+                        /home/bluelegend/   
+                        :t                liknande ovan, men ta bort sökvägen och lämna kvar filen  
+                        bla.ly  
+                        :r                ta bort filnamnssuffix, t ex .txt eller .odt  
+                        /home/bluelegend/bla    
+                        :e                ta bort allt utom filnamnssuffixet    
+                        .ly 
+                        :s                'substitution', t ex !!:s/mroe/more/  
+                        (går att avgränsa ('/') med allt utom blanksteg)    
+                        &  (~) !!:s/blu/blå/    
+                        :q  
+                    :x  
+                        sudda sista arg från krad 20 (i hist)       
+                        rm !20:$        #rm /tmp/0444-diff.txt.     
+                        lista det som körs om man begär se. k bö. m cdc / khist 25      
+                        !cdc:p      #=bra för att kunna syna, ev ändra, o sen köra      
+                        !25:p       
+                        !m:p        
+                        more gobbledygook.c     
+                        !!:s/myfile/&.old/        samma som '!!:s/myfile/myfile.old/'   
+                        [man måste inte använda snedstreck (/) som avgränsare. alla tecken kan användas 
+                    % !!:s:xy:yx        =bra om man t ex har sökvägar m '/' i som sökord]   
+                        :g                för att byta ut VARJE förekomst (!!:gs/mroe/more) 
+                        &                repetera föregående utbyte ('subst.')  
+                    !!:s/blu/&e/    
+
+                        vim resume/resume.xml   
+                        evince !$:r.pdf &   
+                        bluelegend@bluelegend-K53E:~/Dropbox/KENDO/inkomna_räkningar-info $ 
+                        $ ls faktura_43005759_sida0002.pdf  
+                        faktura_43005759_sida0002.pdf   
+                    $ mv ../inkomna_räkningar-info.pdf !!:$:s/02/01/    
+                        el '!$:s/2/1/' i detta fallet   
+                        mv ../inkomna_räkningar-info.pdf faktura_43005759_sida0001.pdf  
+                        $ ls    
+                        faktura_43005759_sida0001.pdf  faktura_43005759_sida0002.pdf    
+
+                        }}}
+                ----
+                tuxguitar `!!` &
+                !cdc:p  !25:p       
+                    .
+                    lista det som körs om man begär se. k bö. m cdc / khist 25      
+                    (=bra för att kunna syna, ev ändra, o sen köra)
+                !cdc:2*
+                    .
+                    plockar argument nr 2 t o m sista från senaste kommandoraden som börjar med 'cdc'        
+                !?pattern?
+                    .
+                    kör senaste kommandot (kommandoraden i historik) som innehåller strängen 'mönster' nånstans. [sista frågetecknet kan tas bort om det följs direkt av en <Newline> 
+                ----
+                historyexempel
+                ((se filen history-bash.txt :) ))
+                ~/Dropbox/history_bash.txt
+
+                $ gvim yellow_submarine--the_beatles.drsfingerstyle.ly &
+                $ evince !!:1:r.pdf:p &
+                evince yellow_submarine--the_beatles.drsfingerstyle.pdf &
+ed                      __Star  _editors_
+ dirs                   __hm
+man-info-apropos        __Star  _file_
+                        http://www.computerhope.com/unix/info.htm
+
+                        ## ~/Dropbox/anki/ankidecksdrs-completeindexandcards/ankidecksdrs-completeindexandcards.txt    =sortera info-korten o testa o gå igenom *******
+                        ## ~/Dropbox/Anki/ankidecksdrs-completeindexandcards/ankidecksdrs-completeindexandcards.txt    #laptopdatorerna-var (=Dropbox o gemener/versaler (!"#¤¤%))
+
+                        Teori {{{
+
+                            Vad är Subtopics + Hur ser de ut?   =Alla kommande rader som innehåller '*' i en meny, t.ex.: '* Ämne: Nod om ämne + kommande text'
+                            * Menu  Hur ser en meny ut?(=första raden som gör att man kan se att det är en meny)
+                            Vad är en Nod + ev Hur ser den ut?  (1.2)
+                            Vad är en header? + Hur ser en header ut?   
+                            Hur ser en korsreferens ut? *-ämne inne i texten som leder till nån plats långt bort
+
+                            Fördelen med de avancerade info-kommandona  =man kan gå till alla noder vars namn man känner till
+
+                        }}}
+                        [termer-terminologi-nyckelord-nyckeltermer] {{{
+                            nod
+                            korsreferens
+                            fotnoter
+                        }}}
+
+                        num.argum./mod. av argum mm {{{
+
+                                M-0 .. M-9  (add-digit-to-numeric-arg)Lägg till denna siffra till det aktuella numeriska argumentet
+                                info: M--   info: (add-digit-to-numeric-arg)  Lägg till denna siffra till det aktuella numeriska argumentet
+                                M-A .. M-Z  (do-lowercase-version)  Kör kommando som är knutet till denna tangents gemena variant
+                            C-u (universal-argument)  Börja (eller multiplicera med 4) det numeriska argumentet
+
+                        }}}
+                        ----
+                        help {{{
+
+                            h   (get-help-window)  Visa hjälpmeddelande
+                            H   "(get-info-help-node)  Besök Info-noden ""(info)Help"""
+                            info: H info: Starta Info-handboken.
+                            h/? Help
+
+                        }}}
+                        rörelse//rulla skärmen/fönstret, flytta markören {{{
+
+                            info: ESC C-f (show-footnotes) **   info: Visa fotnoterna som är associerade med denna nod i ett annat fönster **
+                            -------
+                            SPC (scroll-forward)  Rulla framåt i detta fönster
+                            PgUp, M-v   (scroll-backward-page-only)  Rulla bakåt i detta fönster och stanna inom noden
+                            M-C-v   (scroll-other-window)  Rulla det andra fönstret
+                            ESC C-v, ESC PgDn   (scroll-other-window) Rulla det andra fönstret
+                            M-f (forward-word)  Gå ett ord framåt
+                            M-b (backward-word)  Gå ett ord bakåt
+                            C-e (end-of-line)  Gå till slutet på raden
+                            C-a (beginning-of-line)  Gå till början på raden
+                            M-r (move-to-window-line)  Flytta markören till en specifik rad i fönstret
+                            M-> (end-of-node)  Gå till slutet på denna nod
+                            M-< (beginning-of-node)  Gå till början på denna nod
+                            Left    (backward-char)  Gå ett tecken bakåt
+                            Right   (forward-char)  Gå ett tecken framåt
+                            Down    (next-line)  Gå ned till nästa rad
+                            Up  (prev-line)  Gå upp till föregående rad
+                            ESC PgUp    (scroll-other-window-backward)Rulla det andra fönstret bakåt
+                            SPC Rulla en skärmlängd framåt.
+                            Backspace   Rulla en skärmlängd bakåt.
+                            Down    Gå en rad nedåt.
+                            C-x ^   (grow-window)  Väx (eller krymp) detta fönster
+                            C-x o ****  (next-window)  Välj nästa fönster ****
+                            C-x t   (tile-windows)  Dela det tillgängliga skärmutrymmet mellan de synliga fönstren
+                            C-x 2   (split-window)  Dela aktuellt fönster
+                            C-x 1   (keep-one-window)  Ta bort alla andra fönster
+
+                        }}}
+                        PgDn/PgUp   Rulla fram/bakåt INOM NODEN**
+                        stäng/avsluta fönster/info {{{
+
+                            x   (delete-window)  Ta bort aktuellt fönster
+                            x   Stäng detta hjälpfönster.
+                            q   (quit)  Avsluta användandet av Info
+                            q, C-x C-c  (quit) Avsluta användandet av Info
+                            q   Avsluta Info helt.
+                            C-x k   (kill-node)  Döda denna nod
+
+                        }}}
+                        NODER/KORSREFERENSER/FOTNOTER  TODO:DELA EV UPP ****** {{{
+
+                            **** M-C-f  **** (show-footnotes)  Visa fotnoterna som är associerade med denna nod i ett annat fönster
+                            M-TAB   (move-to-prev-xref)  Gå till föregående korsreferens
+                                ESC TAB (move-to-prev-xref) Gå till föregående korsreferens
+                            f?***** *****Visa en lista på alla korsreferenser i noden*****
+                            f*****  Gå till korsreferens (gärna sån i närheten av markören, då namnet kommer föreslås och inte behöver skrivas in manuellt)*****
+                            l (litet L) ******  HUR KOMMER MAN TILLBAKS TILL UTGÅNGSSTÄLLET NÄR MAN FÖLJT EN KORSREFERENS??*******
+                            *** O   *** (goto-invocation-node)  Hitta den nod som beskriver start av programmet
+                            [   (global-prev-node)  Gå bakåt eller upp i nodstrukturen
+                            p   (prev-node)  Välj föregående nod
+                            n   (next-node)  Välj nästa nod
+                            d   "(dir-node)  Välj noden ""(dir)"""
+                            r   (xref-item)  Läs en fotnot eller korsreferens och välj dess nod
+                            u   (up-node)  Välj uppnoden
+                            t   "(top-node)  Välj noden ""Top"" i denna fil"
+                            m   (menu-item)  Läs en menypost och välj dess nod
+                            l (litetL) **** (history-node)  Välj den senast valda noden ****
+                            g   (goto-node)  Läs ett nodnamn och välj det
+                            >   (last-node)  Välj den sista noden i denna fil
+                            info: < info: (first-node)  Välj den första noden i denna fil
+                            info: C-x b info: (select-visited-node)  Välj en nod som har besökts nyligen i ett synligt fönster
+                            d   Gå till huvudkatalognoden.
+                            t   Gå till den översta noden i detta dokument.
+                            u   Gå en nivå uppåt.
+                            n   Gå till nästa nod på denna nivå.
+                            p   Gå till föregående nod på denna nivå.
+                            ]   Gå till nästa nod i dokumentet.
+                            [   Gå till föregående nod i dokumentet.
+                            n/p****(=se upp så inte missar för många undernoder Gå till nästa/föregående nod PÅ SAMMA NIVÅ****
+                            b****   Gå till början av nuvarande noden*****
+                            l (= pipe? )    Gå till den sista noden i detta fönster.
+                            RET Följ hypertextlänken under markören.
+                            TAB Hoppa till nästa hypertextlänk.
+                            End Gå till slutet på denna nod.
+                            Home    Gå till början på denna nod.
+                            g   Gå till den namngivna noden.
+                            Space   framåt i noden (+till nästa om når slut på noden)
+                            Delete/Backspace    bakåt i noden (+till nästa om når slut på noden)
+                            ]/[ Gå till nästa/föregående nod OAVSETT NIVÅ :) ******
+                            u** Gå till Upp-noden(=Gå tillbaks till menyn du kom ifrån)**
+                            find: r find: Följ den namngivna korsreferensen.
+                            info: 0 info: Välj sista objektet i denna nods meny.
+                            1...9 ****  Välj första...nionde objektet i denna nods meny. ****
+                            M-x visible-mode*** Sätt så information alltid visas för korsreferenser, även utan att behövs hålla pekaren över länken***
+
+                        }}}
+                        C-x C-b ****    (list-visited-nodes) Skapa ett fönster som innehåller en meny med alla nyligen besökta noder ****
+                        d   Gå till dir-nivån/menyn :)
+                        1 .. 9  (menu-digit)  Välj denna menypost
+                        m   Välj den namngivna menyposten.
+                        LFD (select-reference-this-line)  Välj referens eller menypost som finns på denna rad
+                        0   (last-menu-item)  Välj det sista objektet i denna nods meny
+                        g Top   Gå direkt till nod 'Top', eller 'Go to node' (tillåter inte förkortningar som m gör, men Tab-completion)
+                        TAB (move-to-next-xref)  Gå till nästa korsreferens (=punkt/stjärnmarkerade nod) :)
+                        SÖK {{{
+
+                            M-x info-apropos ****** ******Om man inte är säker på vilken info-sida som dokumenterar ämnet man är ute (=gör en slags apropos-sökning)*****
+                            info: R info: (toggle-regexp)  Växla användningen av reguljära uttryck i sökningar
+                            }   (search-next)  Upprepa den senaste sökningen i samma riktning
+                            {   (search-previous)  Upprepa den senaste sökningen i omvänd riktning
+                            }   Sök efter nästa förekomst.
+                            {   Sök efter föregående förekomst.
+                            s, /    (search)  Läs en sträng och sök efter den
+                            S   (search-case-sensitively)  Läs en sträng och sök efter den skiftlägeskänsligt
+                            i   (index-search)  Slå upp en sträng i indexet för denna fil
+                            ,   "(next-index-match)  Gå till nästa matchande indexpost från det senaste ""i""-kommandot"
+                            m   Kommando för att skriva söksträng = menysträng att gå till*****
+                            Tips för m-sökning***   Kan använda tab-completion***
+                            Tab/Esc+Tab**   Gå till nästa/föregående Subtopic***
+                            C-s (isearch-forward)  Sök interaktivt efter en sträng allteftersom du skriver den
+                            C-r (isearch-backward)  Sök interaktivt efter en sträng allteftersom du skriver den
+                            find: i *** find: Sök efter en angiven sträng i indexet, och välj noden som refereras av den första posten som hittas. ***
+                            s eller /   Sök framåt efter en angiven sträng(regex).
+                            i***    Sök och gå direkt till ett indexord***
+                            iC-l (litet L)***   Syntax för att i-söka efter control+lilla L***
+                            I(stort i)+'ord'    Index-sökning på ordet 'ord', som skapar en virtuell meny med resultaten ******** :D
+
+                        }}}
+                        Tab Kör completion när man skriver in namnet på korsreferens
+                        '* Ämne::   Om userfriendly och ugly (comp.readable) text + Förkortningen
+                        G   (menu-sequence)  Läs en lista med menyer som börjar med katalog, och följ dem
+                        kör fil, kör/avbryt kommando {{{
+
+                            info: C-x C-v   info: (view-file) Läs namnet på en fil och välj den
+
+                            M-x (execute-command)  Läs ett kommandonamn i echo-området och kör det
+                            M-C-g   (abort-key)  Avbryt pågående åtgärd
+                            Ctrl+g  Avbryt ett kommando
+                            C-g Avbryt pågående åtgärd.
+                            ESC C-g (abort-key) Avbryt pågående åtgärd
+
+                            ctrl-L  Rita om skärmen
+                            C-l (redraw-display)  Rita om displayen
+
+                        }}}
+ grub
+printf
+diff-patch              __hm
+less                    __hm    _file_
+top-ps                  __hm
                         Window 1:Def: Cumulative mode Off.  System: Delay 3,0 secs; Secure mode Off.
                         Z,B,E,e   Global: 'Z' colors; 'B' bold; 'E'/'e' summary/task memory scale
                     l,t,m,I   Toggle: 'l' load avg; 't' task/cpu; 'm' memory; 'I' Irix mode
@@ -3308,8 +4381,39 @@ top
                         .
                         .
                         Type 'q' or <Esc> to continue 
-ps
-jobs
+jobs-kill (bg-fg)
+wm  [fluxbox, xfce, lxde, openbox, ]
+mc(!)                   __Star  _file_
+test
+find-xargs              __HM
+                    funkar att ge hel lista med mappar som sökväg (el t.ex. `cat dirlist`)
+
+                    'Any file that matches this pattern is considered to return true and will thus continue to the next predicate of the command'
+
+                    exec: Sometimes this is too demanding of system resources and it can be a better idea to use find just to find the files and print the filenames into a datafile (and make the move afterwards etc)
+
+                    find -iregex '.*\(tange\|keyb\|short\).*\.mm' 2>/dev/null
+                    find /tmp/ -name sample_file -printf '%m %n %u %g %t %p'
+                    ----
+                    ~/Dropbox/xargs.txt
+
+                    find . -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
+                    find . -follow -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs  #följ symlänkar
+
+                    However, the xargs utility is most effective when used in conjunction with find and a command like chmod that just wants a list of arguments to process. You can really see a vast speed improvement when handling large numbers of pathnames. For example:
+                    $ find some_directory -type f -print0 | xargs -0 chmod 0644
+
+                    locate P1100087.JPG PC220010.JPG PA310075.JPG PA310076.JPG | xargs -i cp '{}' .     #'kunna hantera ev blanksteg i sökvägar o filnamn' (??)
+
+                    XARGSVÄXLAR
+                    XARGSEXEMPEL
+regex
+ Apt-Pacman (etc)       __star  _sysadm_ ('bcb')
+sed-awk                 __HM
+grep-ag-rg              __HM
+rsync **
+cron-anacron
+wakeonlan(!)
 
 Man: Index/Categories
                 Part I User Commands ----

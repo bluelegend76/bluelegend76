@@ -38,16 +38,19 @@ https://www.noongarboodjar.com.au/wp-content/uploads/2017/
 
 
 ___start
+MongoDB Compass ____ ____
+https://github.com/fsprojects/FsUnit
+https://www.reactiveui.net/
+material ui(??)
+
 KIVY [PYTHON]
     https://docs.micropython.org/en/latest/  __
-
 PipeWire
   https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home
   https://wiki.archlinux.org/title/PipeWire
   https://docs.pipewire.org/
-https://fossil-scm.org/home/doc/trunk/www/permutedindex.html
-    https://www.puppet.com/docs/puppet/7/puppet_language.html
-https://github.com/sqlitebrowser/sqlitebrowser/wiki  __ ____
+        https://fossil-scm.org/home/doc/trunk/www/permutedindex.html
+        https://www.puppet.com/docs/puppet/7/puppet_language.html
 Figma {{{
 https://designcode.io/figma-handbook
 ____
@@ -260,8 +263,6 @@ https://scheme-book.readthedocs.io/en/latest/internals/overriding-stencils.html
 https://scheme-book.readthedocs.io/en/latest/internals/engravers/index.html
 https://scheme-book.readthedocs.io/en/latest/internals/scheme-music/index.html
 }}}
-https://github.com/fsprojects/FsUnit
-https://www.reactiveui.net/
     https://www.jetbrains.com/help/rider/Refactorings__Index.html
     https://clojure.org/reference/macros [__ __]
 https://www.clojerl.io/  [____]

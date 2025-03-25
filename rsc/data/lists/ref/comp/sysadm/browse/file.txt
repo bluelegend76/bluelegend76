@@ -1645,7 +1645,7 @@ xfce4 terminal  ~/Dropbox/config/xfce4-term/accels.scm
                 ; zoom-out" "<Primary>minus")
                 ; help-menu" "")
 ----
-midnight commander
+mc
             path/url to MC-man (empire-tagged)
             [filemanager] ----
                     .

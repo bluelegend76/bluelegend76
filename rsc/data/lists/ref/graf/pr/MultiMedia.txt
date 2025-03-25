@@ -9,29 +9,37 @@ Gimp
             ---- G'Mic
                 .
 Inkscape
-                ----
-                select/view  #+zoom
-                pen
-                  spiro/shaped lines (+simplif.)
-                bezier
-                node
-                calligr. *
-                hints
-                boolean
-                convert  #i.e. shape to outline etc.  #'obj. to path', 'stroke to path'
-                eraser
-                snap (*)
-                  grids|guides (+'obj. to guides' ****)
-                layers  (+sublayers|layer-groups)
-                align|distrib.
-                trace (manual|auto)
-                edit|create|generate svg (with Vim - from svg code(**(!)))
-                tweak
-                  gradient
-                [generate]
-                'grad. mesh'
-                CommandLine
-                clean svg
+                    ----
+                    select, zoom, view
+                    move, scale
+                    transform
+                    pen (+line-shapes)
+                      spiro/shaped lines (+simplif.)
+                    tool-styles/settings
+                    bezier, nodes
+                    tweak
+                    calligr.
+                    gradient
+                    hints/color-gestures
+                      mini-swatch
+                    boolean
+                    convert  # shape to outline, obj. to path, stroke to path
+                    eraser
+                    snap (*)
+                      grids|guides (+'obj. to guides' ****)
+                      tiling
+                    layers  (+sublayers|layer-groups)
+                    align|distribute, arrange
+                    tracing (+autotrace, potrace)
+                    xml (+gvim/gvimdiff edit)
+                     3d-box
+                    tiling (generate)
+                    'gradient-meshes'
+
+                    py-extensions
+                    edit|create|generate svg (with Vim - from svg code(**(!)))
+                    CommandLine/scripting
+                    svg clean
 Scribus
                     ----
                     scribus-man: (keyb-shortc.s) {{{

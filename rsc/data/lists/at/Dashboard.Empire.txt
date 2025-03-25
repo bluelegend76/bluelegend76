@@ -21,6 +21,8 @@ Vanki LearnQna ----
 ^[^:]\+:
 
 
+multimedia:
+    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
 
 file/media:
     gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
@@ -102,6 +104,8 @@ Web/Mobile/Cloud ----
 Langs1 Ref-lists ----  __
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
   // maybe add 'främord' etc
+  --
+  ~/gdrive/rsc/media/pic-graphics/shorth/
 LangsDb.legacy ----
   ../../db/langdb.legacy.list/langdb.txt  # or LangDb1.list.txt
   [+charAlfa]
@@ -111,7 +115,7 @@ LangsDb.legacy ----
 
 ~/gdrive/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
 
-## 'Trinity-Suite'
+## 'Trinity-proj.'
     . {{{
 ##   (belief and morality; models and theory; knowledge, action, and 'does it work' (soundness))
         They don't say they know; They say they believe(=gotcha)
@@ -208,6 +212,8 @@ dft curr 2023 {{{
 
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
 \v\@([^ ]?)+
+
+V I M  +  E M A C S
 
     Gremlin + Neptune
         'MuLäroplans-Träden' **(!!)
@@ -706,12 +712,17 @@ Samsung Notes [!(!)]
 
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
+
+@ = Clean/Focus On
+# = Suited for Ontheroad
+
             Pegged, Tsv-Utils, Perlstyle-Regex
     ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
 TC CORE READTHROUGH + THE WIKI[!!]  __
   CLEAN UP NEW DOTNETCORE-DOKS  __
 ----
-C# DotNet Core MVC + Blazor  [+Avalonia]  Cs Funct 3
+Maui / AVALONIA  __
+C# DotNet Core MVC __  + Blazor  Cs Funct 3
     Puppet Lang + Patterns(etc)
     FuncPy  [_Renskriv_]  __  Py/F# SysAdmin
     Nushell, Xonsh  _
@@ -852,7 +863,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
   }}}
   ----
-    Reveal, Impress
+    Reveal, Impress  __
     . {{{
       ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
             ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
@@ -872,7 +883,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
   }}}
-  ASP.NET CORE MVC (++Web APIs)
+  ASP.NET CORE MVC __ (++Web APIs)
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
 
@@ -885,7 +896,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
   }}}
-  py/f# sysadm
+  py/f# sysadm  #
   . {{{
       PyProgr
     ~/Empire/Doks/Comp/lang/py/sysadm/py-unlin-sysadm.txt
@@ -903,22 +914,22 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 
         ~/gdrive/rsc/Doks/phone/Comp/datasci/py/pydatawrangl-clean_2022.txt
     }}}
-  MLEARN**(+), Obsidian
+  Obsidian __ @  MLEARN**(+)
   . {{{
     gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
 
     ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt
     ~/Empire/lang/markup/MD/md-obsidian.txt
   }}}
-    vim pyplugins
+    vim pyplugins  _
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
-  Xonshell
+  Xonshell  __
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}
-  Termux
+  Termux  __  @@
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/Termux.Tags1.txt
   }}}
@@ -926,17 +937,18 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
   }}}
-  Avalonia
+  AVALONIA
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
 
     ~/gdrive/rsc/Doks/taskuj/LIA2/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
   }}}
-  NuShell
+  NuShell  _
   . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_docs-book.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
+
     ~/Empire/Doks/Comp/lang/webdev/db/relational/mysql-maria/mysql-nushell_2009.txt
   }}}
   Wsl
@@ -947,15 +959,36 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
       Graph, MSAL
   ----
+  GraphQL(!)  #
     sqlitebrowser
     . {{{
       ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/sqlitebrowser-docs.txt
     }}}
+    MongoDB Compass  @@
+    . {{{
+    }}}
   Rx.Net
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/RxDotnet-2e_2024.txt
+  }}}
+  REACT (+Mongo)  ##  _Clean_
+  . {{{
+    gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
+    [+Material UI]
+  }}}
     Bash|Dash-Mans
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
+  }}}
   Puppet
-  Mojo,  Devops
-  F# + Webframeworks (Fabulous, Fable, Suave)
+  Mojo  TODO:OCR
+  Devops
+  . {{{
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+  }}}
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
@@ -985,8 +1018,17 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
   }}}
   AzDevops
+  . {{{
+    ~/Empire/Doks/Comp/PROGR/projman/azdevops/azuredevops-agileprojman_2019.txt
+    ~/Empire/Doks/Comp/PROGR/projman/azdevops/azuredevops-solutimplem_2020.txt
+
+    ~/Empire/Doks/Comp/PROGR/projman/azdevops/azuredev-guide_2019.txt
+    ~/Empire/Doks/Comp/PROGR/projman/azdevops/azuredevops-begguide.mini.txt
+    ~/Empire/Doks/Comp/PROGR/projman/azdevops/azure-prodaccel.txt
+  }}}
   Java|Cloj Semantic-Web
   . {{{
+    ~/Empire/Doks/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
   }}}
 
   ~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
@@ -1230,6 +1272,7 @@ Termux
   AndroidProgr (+Kotlin??)
   ----
 AnkiMan (+Renskriv ___office)
+SASS+Compass
 
     MAUI (=Office)  [Kotlin + Funct.] {{{
       https://dotnet.microsoft.com/en-us/apps/maui
@@ -2144,12 +2187,1380 @@ Next Steps:
 This example gives you a starting point. Building a fully functional Android app with Kawa will require further research and experimentation.
 
 }}}
+-- -- " " -- --  2 {{{
+`
+
+Question: I would like to (for context) refer you to a previous question I asked:
+
+- "The task for me would be to create a bit of a web of 'entries' which are words or phrases in different languages. Each entry should also have a general category-tag, i.e. things like 'Greetings', 'Understanding', 'Adjectives' etc - very similar to Lonely Planet, Berlitz and other phrase-books. Swedish and/or English would provide the primary translation for words and phrases in the different languages, and I would then be able to drill myself in and develop along a path through a language from simple phrases going on to more difficult or abstract phrases and reasoning. Also, I'm hoping to leverage one or several languages to provide a 'base-plate' of knowledge in the sense that if I then would like to explore and collect some words and phrases in a new language, I can look back at one or more languages where I have collected and acquired phrases and provide a path for that new language (i.e. 'These 50, 100 or some number of words in my strongest languages provides a good firm 'base-knowledge' for a new language. Let me gradually collect and acquire these entries in my new language')"
+
+Could you help me sketch out and start out with producing a MongoDB-based solution for starting off this project?
+
+____
+Absolutely! Let's design a MongoDB schema and outline a basic structure to get your multilingual phrasebook project started.
+
+1. MongoDB Schema Design
+
+We'll use a single collection
+called entries to store all your
+language entries. Here's a
+suggested schema:
+
++ add 'block|cluster-index'
+  learningpath-index
+
+{
+  "_id": ObjectId(), // MongoDB's unique document ID
+  "term": {
+    "en": "Hello", // English translation (or your primary base language)
+    "sv": "Hej",  // Swedish translation (or your secondary base language)
+    "fr": "Bonjour", // Example: French translation
+    // ... more language translations as needed
+  },
+  "category": "Greetings", // Category tag
+  "base_knowledge_reference": ["en:Hello", "sv:Hej"], // Optional: References to base knowledge entries
+  "notes": "Formal greeting used in the morning.", // Optional: Additional notes
+  "created_at": ISODate(),
+  "updated_at": ISODate()
+}
+
+Explanation:
+
+- _id: MongoDB's default unique
+  identifier for each document.
+- term: An object containing
+  translations for the entry in
+  different languages. The keys are
+  language codes (e.g., "en" for
+  English, "sv" for Swedish, "fr"
+  for French).
+- category: A string representing
+  the category of the phrase (e.g.,
+  "Greetings", "Understanding",
+  "Adjectives").
+- base_knowledge_reference: An
+  optional array of strings that
+  reference other entries that form
+  the "base knowledge" for this
+  entry. Each string is a
+  concatenation of the language
+  code and the term (e.g.,
+  "en:Hello"). This is very usefull
+  for your intended use case.
+
+notes: An optional string for
+additional notes or context.
+
+- created_at: Timestamp of when the
+  entry was created.
+- updated_at: Timestamp of when the
+  entry was last updated.
+
+2. Basic MongoDB Operations (Conceptual)
+
+Here are some conceptual MongoDB
+operations you'll likely use:
+
+Inserting Entries:
+
+db.entries.insertOne({
+  term: {
+    en: "Goodbye",
+    sv: "Adjö",
+    fr: "Au revoir"
+  },
+  category: "Greetings",
+  created_at: new Date(),
+  updated_at: new Date()
+});
+
+Querying Entries by Category:
+
+db.entries.find({ category: "Greetings" });
+
+Querying Entries by Language Term:
+
+db.entries.find({ "term.en": "Hello" });
+
+Querying Entries by multiple
+languages:
+
+db.entries.find({"term.en": "Hello", "term.fr": "Bonjour"})
+
+Querying Entries by Base Knowledge
+Reference:
+
+db.entries.find({ "base_knowledge_reference": "en:Hello" });
+
+Updating Entries:
+
+db.entries.updateOne(
+  { "term.en": "Hello" },
+  { $set: { "term.es": "Hola", updated_at: new Date() } }
+);
+
+- 3. Considerations and Next Steps
+
+- Language Codes: Standardize your
+  language codes (ISO 639-1 or ISO
+  639-3).
+- Indexing: Add indexes to
+  frequently queried fields (e.g.,
+  category, language term fields)
+  for better performance.
+- Data Validation: Consider using
+  MongoDB's schema validation to
+  enforce data integrity.
+- Application Logic: You'll need to
+  build an application (e.g., using
+  Node.js, Python, or another
+  language) to interact with the
+  MongoDB database. This
+  application would handle things
+  like:
+  - User interface for adding,
+    editing, and querying entries.
+  - Logic for displaying entries in
+    different languages.
+  - Logic for displaying base
+    knowledge references.
+- Base Knowledge Relationships: The
+  base_knowledge_reference field is
+  powerful. You can use it to
+  create a graph-like structure,
+  allowing you to traverse related
+  entries and build your language
+  learning path.
+- User Management: If you plan on
+  having multiple users, you'll
+  need to add user authentication
+  and authorization.
+- Data Import/Export: Plan for
+  importing and exporting data
+  (e.g., CSV, JSON) to facilitate
+  data migration and sharing.
+
+Example of base knowledge usage
+
+Let's say you have the phrase "How
+are you?" in english, and you want
+to use the word "you" as a base to
+help you understand the next
+language.
+
+{
+  "_id": ObjectId(),
+  "term": {
+    "en": "How are you?",
+    "fr": "Comment allez-vous?"
+  },
+  "category": "Greetings",
+  "base_knowledge_reference": ["en:you"]
+}
+
+Then you have the entry for the
+word "you"
+
+{
+  "_id": ObjectId(),
+  "term": {
+    "en": "you",
+    "fr": "vous"
+  },
+  "category": "Pronouns"
+}
+
+This will allow you to query all
+the phrases that build on the base
+knowledge word "you".
+
+Let me know if you'd like to dive
+deeper into any of these areas!
+
+- Great great! I think I would like
+  to intersperse one quick comment
+  here, which is that I think this
+  is a very good starting-point for
+  me, and what I would like to
+  explore going forward (and
+  explore in a gradual progressive
+  manner) is how to progress from a
+  modest starting-point here
+  towards a small to medium-sized
+  solution for this personal
+  language database-project, and
+  the goal would be to establish a
+  database with the addition of a
+  simple desktop- and
+  Android-client (including which
+  programming-languages to use
+  along the way) making it possible
+  for me to both add new and
+  interesting words and phrases to
+  the database, and be able to
+  drill myself continuously on new
+  words and phrases whether being
+  in the office in front of a
+  computer, or on the road doing
+  exercise or commuting. What I
+  mean by this comment is, that
+  along the way (as we explore and
+  progress along this path of
+  developing the app), I will
+  continuously want to intersperse
+  these comments so we do not end
+  up along the 'wrong path' when it
+  comes to selecting technologies,
+  developing the
+  database-structure, etc.
+
+Excellent! That's a very clear and
+well-defined goal. I completely
+understand your desire for a
+gradual, progressive approach,
+ensuring that we stay on the right
+track for your personal language
+learning database.
+
+Here's a breakdown of how we can
+proceed, keeping your desired
+desktop and Android clients in
+mind:
+
+- 1. Technology Choices (Initial Considerations)
+
+- Backend (Database and API):
+  - MongoDB (already established):
+    We'll stick with MongoDB for
+    its flexibility and ease of
+    use, especially for handling
+    multilingual data.
+  - Node.js with Express.js:
+    Node.js is excellent for
+    building RESTful APIs.
+    Express.js simplifies the
+    process. This combination is
+    cross-platform, which is a
+    major benefit.
+- Desktop Client:
+  - Electron: Allows you to build
+    cross-platform desktop
+    applications using web
+    technologies (HTML, CSS,
+    JavaScript). This aligns well
+    with Node.js and would allow
+    you to reuse code, should you
+    choose to use it in other
+    areas.
+  - Python with PyQt/Tkinter:
+    Python is a versatile language,
+    and PyQt or Tkinter are good
+    for creating desktop GUIs.
+- Android Client:
+  - React Native: Cross-platform
+    mobile development using
+    JavaScript and React. This
+    would allow for code sharing
+    with the desktop client (if you
+    choose electron), and the web
+    API.
+  - Kotlin (Native): Provides
+    excellent performance and
+    native Android features.
+  - Flutter: Cross platform
+    framework that provides good
+    performance, and one codebase
+    for IOS and Android.
+
+2. Development Strategy (Progressive Steps)
+
+[Or use GraphQL]
+- Phase 1: Robust API Development
+  (Node.js/Express.js)
+  - Focus on building a
+    well-structured and
+    well-documented RESTful API
+    that allows for:
+    - Creating, reading, updating,
+      and deleting entries in the
+      MongoDB database.
+    - Querying entries by category,
+      language, and base knowledge
+      references.
+    - Implementing basic error
+      handling and data validation.
+  - This API will serve as the
+    foundation for both the desktop
+    and Android clients.
+- Phase 2: Desktop Client (Electron
+  or Python)
+  - Start with a basic desktop
+    client that allows you to:
+    - Display entries in a
+      user-friendly way.
+    - Add and edit entries.
+    - Filter entries by category or
+      language.
+    - Implement basic search
+      functionality.
+  - Electron would be advantageous
+    for sharing code with the web
+    API, and React Native.
+- Phase 3: Android Client (React
+  Native, Kotlin or Flutter)
+  - Develop an Android client that
+    mirrors the functionality of
+    the desktop client.
+  - Consider offline capabilities
+    for on-the-go learning.
+- Phase 4: Advanced Features
+  - Implement spaced repetition
+    algorithms for effective
+    learning.
+  - Add audio pronunciation
+    support.
+  - Include user accounts and
+    progress tracking.
+  - Integrate with external
+    dictionaries or translation
+    services.
+
+- 3. Key Considerations
+
+- Code Reusability: Aim for code
+  reusability across the API,
+  desktop, and Android clients.
+  This will save development time
+  and ensure consistency.
+- API Design: A well-designed API
+  is crucial for maintainability
+  and scalability.
+- User Experience (UX): Focus on
+  creating a simple and intuitive
+  user interface for both the
+  desktop and Android clients.
+- Offline Functionality: Consider
+  offline capabilities for the
+  Android client, as users may not
+  always have internet access.
+- Testing: Implement thorough
+  testing at each stage to ensure
+  the application's reliability.
+
+
+Next Steps
+
+Let's start with Phase 1: Robust API Development (Node.js/Express.js).
+
+Would you like to start with:
+
+- Setting up a Node.js/Express.js
+  project?
+- Defining the API endpoints?
+- Or would you like to discuss the
+  pros and cons of the different
+  client side technologies?
+
+I think I would like to just
+quickly comment on the technologies
+(at least briefly). I think I have
+two thoughts I would like to
+explore:
+
+- My sense (and correct me if this
+  is not accurate or 'needs some
+  tweaking') is that if I choose to
+  go along the path of using Python
+  for a large part of the project,
+  that might make the project more
+  amenable to integrating
+  machine-learning solutions (at
+  least some simple models) further
+  down the line.
+
+  On the other hand, my day-to-day
+  work at the workplace where I am
+  currently an apprentice involves
+  using C# and DotNet Core. Another
+  track for me to explore
+  would/might therefore be to
+  leverage C# and/or F# to develop
+  an API and possibly also a
+  desktop-client, and then to use
+  technologies like MAUI and/or
+  Avalonia to be able to reach both
+  web (making my app usable through
+  a web-interface on my personal
+  Linux-workstation) and to reach
+  my Android-device as well.
+
+You've hit on two very relevant
+points that deserve careful
+consideration. Let's break down the
+implications of each approach:
+
+- 1. Python for Machine Learning Potential:
+
+- Accuracy: You are absolutely
+  correct. Python is the dominant
+  language in the machine learning
+  and data science world. Libraries
+  like scikit-learn, TensorFlow,
+  PyTorch, and spaCy provide a rich
+  ecosystem for developing ML
+  models.
+- Relevance to Language Learning:
+  There are many ways ML could
+  enhance your project:
+  - Spaced Repetition Optimization:
+    ML could be used to personalize
+    spaced repetition algorithms
+    based on your learning
+    patterns.
+  - Language Analysis: You could
+    use NLP techniques to analyze
+    the structure and grammar of
+    phrases, providing deeper
+    insights.
+  - Translation Enhancement:
+    Integrating with or even
+    building simple translation
+    models could be possible.
+  - Pronunciation Assessment: ML
+    could be used to evaluate your
+    pronunciation.
+- Considerations:
+  - While Python is excellent for
+    ML, it might add complexity to
+    the API development if you're
+    not already proficient in
+    Python web frameworks (like
+    Flask or FastAPI).
+  - If you choose python for the
+    api, you would most likely want
+    to use python for the Desktop
+    application as well, to avoid
+    having to use several
+    languages.
+
+2. C#/.NET for Workplace Synergy and Cross-Platform Potential:
+
+- Accuracy: Yes, C# and .NET Core
+  (now just .NET) are very capable
+  for building both APIs and
+  desktop applications.
+- Workplace Relevance: Leveraging
+  your existing C# knowledge could
+  significantly speed up
+  development.
+- Cross-Platform with
+  MAUI/Avalonia:
+  - MAUI (Multi-platform App UI):
+    Designed for building native
+    mobile and desktop apps from a
+    single codebase. It's a strong
+    contender for reaching both
+    Android and desktop.
+  - Avalonia: Another
+    cross-platform UI framework
+    that supports various
+    platforms, including Linux,
+    macOS, Windows, and Android.
+- Considerations:
+  - While .NET has ML.NET, its ML
+    ecosystem is not as extensive
+    as Python's.
+  - If your primary goal is to
+    deeply integrate ML, you might
+    find yourself needing to bridge
+    between .NET and Python.
+  - MAUI is relatively new, and
+    while promising, it's still
+    evolving.
+
+Decision-Making Framework:
+
+- ML Priority:
+  - If ML is a core component of
+    your vision, Python might be
+    the better long-term choice.
+  - You could still use .NET for
+    the API and desktop client and
+    integrate with Python ML
+    services when needed.
+- Development Speed and Workplace
+  Synergy:
+  - If you want to leverage your C#
+    skills and prioritize rapid
+    development, .NET with
+    MAUI/Avalonia is a strong
+    option.
+- Long-Term Maintainability:
+  - Consider which language and
+    framework you'll be most
+    comfortable maintaining in the
+    long run.
+- Community and Ecosystem:
+  - Both Python and .Net have very
+    large communities, and
+    extensive packages.
+
+My Recommendation:
+
+Given your workplace experience
+with C# and .NET, I would recommend
+starting with .NET for the API and
+desktop/Android clients. This will
+allow you to quickly build a
+functional application and then
+assess the need for deeper ML
+integration. If you decide to add
+significant ML features, you can
+then explore integrating Python
+services.
+
+Let's begin by defining the API
+endpoints for your .NET API. Would
+you like to proceed with that?
+
+- Let's explore this with a couple
+  of questions on my part. My sense
+  is that it will still be
+  beneficial to use MongoDB as the
+  database-solution for holding the
+  database or 'knowledge-base' of
+  words and phrases that will then
+  be queried by other technologies.
+  Would you agree with that
+  statement?
+
+Yes, I absolutely agree. Using
+MongoDB as your database solution
+is still highly beneficial, even if
+you choose .NET for your API and
+clients. Here's why:
+
+- Flexibility with Multilingual
+  Data:
+  - MongoDB's document-oriented
+    structure is perfect for
+    storing the varying language
+    translations within each entry.
+    You won't have to deal with
+    rigid schema constraints that
+    relational databases might
+    impose.
+- Ease of Development:
+  - MongoDB's JSON-like documents
+    map well to the objects you'll
+    be working with in your API and
+    clients, simplifying data
+    serialization and
+    deserialization.
+- Scalability:
+  - MongoDB is designed to scale
+    horizontally, which is
+    important if your database
+    grows significantly.
+- .NET Integration:
+  - There are excellent MongoDB
+    drivers for .NET, making it
+    easy to connect your .NET API
+    to the database.
+- Ability to handle complex data:
+  - The base_knowledge_reference
+    field, that we talked about
+    earlier, is very easy to
+    implement in MongoDB.
+- No Schema Changes:
+  - As you add languages, or other
+    data to the entries, you will
+    not have to alter the Schema of
+    your database.
+
+Therefore, I strongly recommend
+keeping MongoDB as your database
+backend. It will work seamlessly
+with your .NET API and provide the
+flexibility you need for your
+multilingual data.
+
+- Great. Are there good
+  language-connections or drivers
+  (mind you, I'm not entirely clear
+  on the exact terminology, but I
+  think you know what I'm angling
+  for here) for adding and querying
+  the data in the MongoDB database
+  using C# and F#?
+
+You're absolutely right, the
+terminology you're looking for is
+"drivers" or "language connectors."
+And yes, there are excellent
+drivers for connecting C# and F# to
+MongoDB.
+
+- C# Driver:
+  - The official MongoDB C# driver
+    is called MongoDB.Driver. It's
+    a robust and well-maintained
+    library that provides all the
+    necessary functionality to
+    interact with MongoDB from your
+    C# code.
+  - It's available as a NuGet
+    package, making it easy to
+    install and integrate into your
+    .NET projects.
+  - It offers a wide range of
+    features, including:
+    - Connecting to MongoDB
+      servers.
+    - Performing CRUD (Create,
+      Read, Update, Delete)
+      operations.
+    - Querying data using LINQ-like
+      syntax.
+    - Handling data serialization
+      and deserialization.
+    - Supporting asynchronous
+      operations.
+- F# Driver:
+  - Since F# runs on the .NET
+    runtime, you can directly use
+    the MongoDB.Driver C# driver
+    from your F# code.
+  - F# integrates seamlessly with
+    .NET libraries, so you'll have
+    full access to the driver's
+    capabilities.
+  - There are also some F# type
+    providers that can enhance the
+    interaction with MongoDB, but
+    the standard C# driver is the
+    most common and robust way to
+    connect.
+
+Key Points:
+
+- The MongoDB.Driver is the
+  standard and recommended way to
+  connect .NET applications
+  (including those written in C#
+  and F#) to MongoDB.
+- It's well-documented and actively
+  maintained by MongoDB.
+- It provides a comprehensive set
+  of features for working with
+  MongoDB.
+
+Therefore, you can confidently use
+MongoDB as your database backend
+with your .NET API, knowing that
+there's a reliable and efficient
+driver available.
+
+- Great. Another small(ish)
+  question just on the
+  technology-side before we move
+  forward: The three primary
+  code-editors (in the loose sense
+  of that word, going from
+  text-editors with
+  programming-language support and
+  tools all the way up to
+  full-blown IDEs) are Vim/NeoVim,
+  Emacs, and JetBrains (primarily
+  Rider).
+
+- Since MongoDB uses JSON as the
+  primary format, could you help me
+  explore just for a moment which
+  tools and additions are available
+  for these three 'editors', if you
+  know what I mean?
+
+You're right to consider your
+development environment. A good
+editor or IDE can significantly
+improve your workflow when working
+with JSON and MongoDB. Let's
+explore the support for Vim/NeoVim,
+Emacs, and JetBrains Rider.
+
+1. Vim/NeoVim:
+
+- JSON Support:
+  - Vim has built-in JSON syntax
+    highlighting.
+  - Plugins like vim-json enhance
+    JSON support with features
+    like:
+    - Indentation and formatting.
+    - Syntax validation.
+    - JSON schema validation.
+  - jq Integration:
+    - jq is a powerful command-line
+      JSON processor. You can
+      integrate jq with Vim to:
+      - Format JSON.
+      - Query and filter JSON data.
+      - Transform JSON.
+  - MongoDB Integration:
+    - There are plugins that
+      facilitate working with
+      MongoDB from within Vim, but
+      they are not as common as the
+      JSON plugins.
+    - You can always use the
+      command line tools for
+      MongoDB within a Vim terminal
+      buffer.
+- Pros:
+  - Highly configurable and
+    customizable.
+  - Lightweight and fast.
+  - Excellent for text
+    manipulation.
+- Cons:
+  - Steeper learning curve.
+  - Requires manual configuration
+    for advanced features.
+
+2. Emacs:
+
+    JSON Support:
+        Emacs has excellent built-in JSON support.
+        json-mode provides syntax highlighting, indentation, and validation.
+        jq Integration:
+            Just like in Vim, you can easily integrate jq with Emacs.
+        MongoDB Integration:
+            Emacs has packages that can interact with MongoDB, but they are not as widely used as the general JSON tools.
+            Emacs's mongo-shell can be used within Emacs.
+    Pros:
+        Extremely powerful and extensible.
+        Excellent for working with various file formats.
+        Strong community support.
+    Cons:
+        Steeper learning curve than most IDE's.
+        Can be resource-intensive.
+
+- 3. JetBrains Rider:  ____
+
+    JSON Support:
+        Rider has excellent built-in JSON support, including:
+            Syntax highlighting.
+            Code completion.
+            Schema validation.
+            Formatting.
+        MongoDB Integration:
+            Rider (through the DataGrip plugin that is included) provides excellent MongoDB integration.
+            You can connect to MongoDB databases, browse collections, and execute queries directly within Rider.
+            This is a large advantage over vim and emacs.
+    Pros:
+        Powerful IDE with a wide range of features.
+        Excellent MongoDB integration.
+        Good support for .NET development.
+    Cons:
+        Resource-intensive.
+        Commercial (though there are free versions for students and open-source developers).
+
+Recommendation:
+
+- For working directly with
+  MongoDB, JetBrains Rider (and the
+  included DataGrip) offers the
+  most seamless and integrated
+  experience. Its MongoDB support
+  is excellent.
+- Vim/NeoVim and Emacs are
+  excellent for general JSON
+  manipulation and text editing,
+  but they require more manual
+  configuration for MongoDB
+  integration.
+- If you are going to be working
+  with C# and .NET, Rider is a very
+  strong choice.
+
+For your project, if you are going
+to be working a lot with the
+MongoDB database, I would strongly
+recommend Rider.
+
+- If I wanted to install jq on an
+  Ubuntu or an Arch system, what
+  would be the command to run, and
+  (maybe more importantly) what
+  would be the package-name - i.e.
+  I suspect that the name is not
+  simply 'jq', but that it might be
+  something more like 'json-tools'
+  or something like that.
+
+You're right to be cautious about
+package names! Thankfully, jq is
+typically packaged under its
+straightforward name, jq.
+
+Here's how to install it on Ubuntu and Arch Linux:
+
+Ubuntu (Debian-based systems):
+
+    Command: sudo apt install jq
+    Package Name: jq
+
+Arch Linux (and Arch-based systems like Manjaro):
+
+    Command: sudo pacman -S jq
+    Package Name: jq
+
+Explanation:
+
+    apt (Advanced Package Tool) is the package manager used in Debian-based distributions like Ubuntu.
+    pacman is the package manager used in Arch Linux and its derivatives.
+    In both cases, the package name is simply jq.
+
+Therefore, you will not have to worry about looking for another package name.
+
+
+- Going back to our main
+  exploration of setting a basic
+  'scheme' for and implementing the
+  MongoDB - i.e. I would like to
+  get started testing out, adding
+  some entries, and then play
+  around with the data to build up
+  a mock-implementation to be able
+  to work forward. Let's say we go
+  for the scheme you and I
+  discussed 2 or three posts prior
+  to my last question, could you
+  help me explore how I would go
+  about exploring this at the Linux
+  command-line?
+
+- Plus, maybe I should be at least a
+tad bit more specific:
+
+- What would I need to install from
+  the Linux command-line to be able
+  to start exploring MongoDB? (I
+  suspect it would look something
+  like 'sudo apt install mongodb')
+
+- Could you help me explore
+  interacting with the database
+  using a couple of different
+  programming-languages, both the
+  standard (i.e. using JavaScript),
+  but also Python, and C#/F#, so I
+  can determine for myself which
+  one of those options seems the
+  most simple and viable to me?
+
+- I would also like to explore some
+  commands I could run from the
+  command-line to start up a
+  MongoDB database, where I guess
+  there are similar solutions to
+  using 'the PostGres shell' (or
+  whatever it is called) for
+  creating and manipulating
+  PostGres databases from the
+  command-line
+
+
+Excellent! Let's get you set up with MongoDB on your Linux system and explore some basic interactions.
+
+1. Installing MongoDB on Linux:
+
+sudo apt update
+sudo apt install mongodb
+
+Arch Linux (and Arch-based):
+
+sudo pacman -S mongodb
+
+    Starting the MongoDB Service:
+        After installation, you'll need to start the MongoDB service:
+            Systemd (most modern distros): sudo systemctl start mongod
+            To make it start on boot: sudo systemctl enable mongod
+    Checking MongoDB Status:
+        To check if MongoDB is running: sudo systemctl status mongod
+
+2. Interacting with MongoDB from the Command Line (MongoDB Shell):
+
+    Starting the MongoDB Shell:
+        Type mongo in your terminal. This will open the MongoDB shell, which is a JavaScript environment for interacting with MongoDB.
+    Basic Commands:
+        Show Databases: show dbs
+        Use a Database: use your_database_name (creates the database if it doesn't exist)
+        Show Collections: show collections
+        Insert a Document:
+        JavaScript
+
+db.entries.insertOne({
+  term: { en: "Hello", sv: "Hej" },
+  category: "Greetings"
+});
+
+Find Documents: db.entries.find()
+Find Documents with a Condition: db.entries.find({ category: "Greetings" })
+Update a Document:
+
+        db.entries.updateOne(
+          { "term.en": "Hello" },
+          { $set: { "term.fr": "Bonjour" } }
+        );
+
+        Delete a Document: db.entries.deleteOne({ "term.en": "Hello" })
+
+3. Interacting with MongoDB from Different Programming Languages:
+
+    JavaScript (Node.js):
+        Install the MongoDB Node.js Driver: npm install mongodb
+        Example Code:
+        JavaScript
+
+    const { MongoClient } = require('mongodb');
+
+    async function main() {
+      const uri = 'mongodb://127.0.0.1:27017'; // MongoDB URI
+      const client = new MongoClient(uri);
+
+      try {
+        await client.connect();
+        const database = client.db('your_database_name');
+        const entries = database.collection('entries');
+
+        const result = await entries.insertOne({
+          term: { en: 'Hello', sv: 'Hej' },
+          category: 'Greetings',
+        });
+        console.log('Inserted document with _id:', result.insertedId);
+
+        const foundEntries = await entries.find({ category: 'Greetings' }).toArray();
+        console.log('Found entries:', foundEntries);
+      } finally {
+        await client.close();
+      }
+    }
+
+    main().catch(console.dir);
+
+Python:
+
+    Install the PyMongo Driver: pip install pymongo
+    Example Code:
+
+    from pymongo import MongoClient
+
+    client = MongoClient('mongodb://127.0.0.1:27017/')
+    db = client['your_database_name']
+    entries = db['entries']
+
+    result = entries.insert_one({
+        'term': {'en': 'Hello', 'sv': 'Hej'},
+        'category': 'Greetings'
+    })
+    print(f'Inserted document with _id: {result.inserted_id}')
+
+    found_entries = list(entries.find({'category': 'Greetings'}))
+    print(f'Found entries: {found_entries}')
+
+    client.close()
+
+.NET (C#):
+
+    Install the MongoDB C# Driver (NuGet): Install-Package MongoDB.Driver
+    Example Code:
+
+        using MongoDB.Driver;
+        using System;
+        using System.Threading.Tasks;
+
+        public class Program
+        {
+            public static async Task Main(string[] args)
+            {
+                var client = new MongoClient("mongodb://127.0.0.1:27017");
+                var database = client.GetDatabase("your_database_name");
+                var entries = database.GetCollection<MongoDB.Bson.BsonDocument>("entries");
+
+                var document = new MongoDB.Bson.BsonDocument
+                {
+                    { "term", new MongoDB.Bson.BsonDocument { { "en", "Hello" }, { "sv", "Hej" } } },
+                    { "category", "Greetings" }
+                };
+
+                await entries.InsertOneAsync(document);
+                Console.WriteLine("Inserted document.");
+
+                var foundEntries = await entries.Find(Builders<MongoDB.Bson.BsonDocument>.Filter.Eq("category", "Greetings")).ToListAsync();
+                Console.WriteLine("Found entries:");
+                foreach (var entry in foundEntries)
+                {
+                    Console.WriteLine(entry.ToJson());
+                }
+            }
+        }
+
+        F# code can be very similar to the C# code, since F# uses the same .Net driver.
+
+Key Points:
+
+- The MongoDB shell is excellent
+  for quick interactions and
+  testing.
+- The language drivers provide
+  powerful and flexible ways to
+  interact with MongoDB from your
+  application code.
+- You can choose the language that
+  best suits your needs and
+  preferences.
+
+Let me know if you have any further
+questions or if you'd like to
+explore any of these examples in
+more detail!
+
+- Just one thing to clear up so I
+  get a clearer picture: Right
+  after starting up the
+  Mongo-utility on the
+  command-line, checking which
+  databases I have (etc) there is a
+  small JavaScript-snippet for
+  inserting new entries into my
+  database. Does that mean that the
+  way to insert new entries into my
+  MongoDB-database is to run those
+  JavaScript-snippets inside my
+  MongoDB shell? Have I understood
+  that correctly?
+
+Yes, you've understood that perfectly!
+
+When you type mongo into your
+terminal and launch the MongoDB
+shell, you're entering a JavaScript
+environment specifically designed
+to interact with your MongoDB
+server.
+
+Therefore:
+
+- JavaScript as the Shell Language:
+  The commands you run within the
+  MongoDB shell are indeed
+  JavaScript commands.
+- Direct Database Interaction:
+  Those JavaScript snippets
+  directly manipulate the MongoDB
+  database. You can:
+  - Insert new documents (entries).
+  - Query existing documents.
+  - Update documents.
+  - Delete documents.
+  - And perform various other
+    database operations.
+
+So, to reiterate, you're absolutely
+correct: the way to insert, query,
+and manipulate data within the
+MongoDB database from the command
+line is by running JavaScript
+snippets within the MongoDB shell.
+
+- Perfect. I guess that is a common
+  point of confusion for many
+  people starting off using
+  MongoDB.
+
+- Also (for making the deployment-
+  and backup-questions really
+  clear), once I have inserted some
+  json 'document-entries' into my
+  mongo database, is there a simple
+  way of saving the database to
+  backup, put it under
+  version-control or such?
+
+Yes, that's a very common point of confusion, and it's great that we've cleared it up!
+
+And you're absolutely right to
+consider backup and version control
+early on. Data safety is crucial.
+Here's a breakdown of how you can
+back up and manage your MongoDB
+data:
+
+1. Database Backup:
+
+    mongodump:
+        This is the primary tool for creating backups of your MongoDB databases.
+        It exports the data in BSON format, which is a binary representation of JSON.
+        Command: mongodump --db your_database_name --out /path/to/backup/directory
+            This command will create a directory at /path/to/backup/directory containing a BSON file for your database.
+        To backup all databases, you can simply run mongodump without the --db option.
+    File System Backup:
+        If you're running MongoDB on a file system that supports snapshots or backups (e.g., LVM snapshots), you can take a snapshot of the data directory.
+        This is a lower-level approach but can be very efficient.
+        This is not the preferred method, as it can cause database corruption if the mongod process is running while the backup is being performed.
+    MongoDB Atlas (Cloud):
+        If you're using MongoDB Atlas, the cloud-hosted version, backups are automatically managed.
+        Atlas provides point-in-time recovery and other backup features.
+
+2. Database Restore:
+
+    mongorestore:
+        This is the tool for restoring MongoDB backups created with mongodump.
+        Command: mongorestore --db your_database_name /path/to/backup/directory/your_database_name
+            This command will restore the data from the specified backup directory to the database.
+
+3. Version Control:
+
+    Storing Backup Files:
+        You can store your mongodump backup files in a version control system like Git.
+        This allows you to track changes to your database over time.
+        However, keep in mind that BSON files can be large, so you might want to compress them before committing them to Git.
+    Storing Seed Data (JSON Files):
+        If you have initial seed data for your database, you can store those JSON files in version control.
+        This makes it easy to recreate your database from scratch.
+        You could also create scripts that create the database, and insert the seed data, and then store those scripts in your version control.
+
+4. Important Considerations:
+
+    Backup Frequency:
+        Determine how often you need to back up your database based on your data's importance and the rate of change.
+    Backup Retention:
+        Decide how long you need to keep your backups.
+    Backup Security:
+        Encrypt your backups to protect sensitive data.
+    Backup Testing:
+        Regularly test your backups to ensure they can be restored successfully.
+
+In summary:
+
+    mongodump and mongorestore are your primary tools for backing up and restoring MongoDB databases.
+    You can use version control to manage your backup files and seed data.
+    Always prioritize backup frequency, retention, and security.
+
+- What is the price-tag for using
+  MongoDB Atlas, i.e. it seems like
+  an interesting option, but I
+  guess there would be some
+  price-plan for most users?
+
+- Also, the option of storing
+  json-file seed-data also seems
+  (at least to my mind right now) a
+  viable option, i.e. storing a
+  json-representation of my data
+  (somewhat similar to storing an
+  SQL-file that can recreate a
+  database, rather than trying to
+  store the entire database), and
+  as the database grows in size
+  beyond simple test-running, I can
+  explore other options at that
+  stage
+
+You're absolutely right to consider
+the pricing of MongoDB Atlas and to
+explore the JSON seed data
+approach. Let's break down both:
+
+1. MongoDB Atlas Pricing:
+
+    MongoDB Atlas offers a tiered pricing structure, and it depends on your needs. Here's a general overview:
+        Free Tier (M0):
+            Atlas provides a free tier that's excellent for development, testing, and small projects.
+            It comes with limited storage and resources.
+            This is a great place to start.
+        Shared Clusters (M2, M5):
+            These are shared clusters with limited resources, suitable for small to medium-sized applications.
+            Pricing varies based on the region and instance size.
+        Dedicated Clusters (M10 and above):
+            These are dedicated clusters with more resources and advanced features.
+            Pricing scales based on instance size, storage, and other factors.
+        Serverless:
+            MongoDB Atlas also offers a serverless option, where you pay for what you use. This can be cost-effective for applications with variable workloads.
+        Factors Affecting Cost:
+            Region: Pricing varies between AWS, Google Cloud, and Azure regions.
+            Instance size: Larger instances cost more.
+            Storage: Storage costs are separate.
+            Backup and data transfer: Additional costs for backups and data transfer.
+            Advanced features: Features like encryption and auditing may incur additional charges.
+    Recommendation:
+        Start with the free tier (M0) to experiment and develop your application.
+        As your application grows, you can upgrade to a shared or dedicated cluster based on your needs.
+        Always use the Atlas pricing calculator on the MongoDB website to get the most accurate and up to date pricing.
+
+2. JSON Seed Data Approach:
+
+    Advantages:
+        Simplicity: JSON files are easy to create and manage.
+        Version Control: You can easily store JSON seed data in Git or other version control systems.
+        Portability: JSON files are portable and can be used to recreate your database on any MongoDB instance.
+        Human-Readable: JSON is human-readable, making it easy to inspect and modify your data.
+        Scriptability: you can create scripts that parse the json files, and insert the data into your database.
+    Implementation:
+        Create JSON files that represent your initial database entries.
+        Write scripts (e.g., in JavaScript, Python, or C#) to read the JSON files and insert the data into your MongoDB database.
+        Store these scripts in your version control system.
+    Considerations:
+        This approach is best suited for initial data and smaller datasets.
+        As your database grows, you may need to consider more robust backup and restore strategies.
+        If the dataset grows very large, parsing and inserting the data can take a long time.
+    Recommendation:
+        For your initial development and testing, the JSON seed data approach is an excellent choice.
+        It's simple, portable, and easy to manage.
+        You can always transition to mongodump or MongoDB Atlas backups as your database scales.
+
+In essence, MongoDB Atlas offers a scalable and managed solution, but the JSON seed data approach is a practical and efficient way to get started.
+
+
+- Great. Could we also go back to
+  the previous post (discussing how
+  to interact with the MongoDB with
+  C#, Python etc) and amend that
+  with how to interact with Mongo
+  using F#?
+
+Yes, absolutely! Let's add an F#
+example to the previous post,
+demonstrating how to interact with
+MongoDB using F#.
+
+Since F# runs on the .NET runtime,
+it uses the same MongoDB.Driver as
+C#. The code will be very similar
+to the C# example, but with F#'s
+functional syntax.
+
+Here's the F# example:
+
+open MongoDB.Driver
+open System
+open System.Threading.Tasks
+
+[<EntryPoint>]
+let main argv =
+    task {
+        let client = MongoClient("mongodb://127.0.0.1:27017")
+        let database = client.GetDatabase("your_database_name")
+        let entries = database.GetCollection<MongoDB.Bson.BsonDocument>("entries")
+
+        let document = MongoDB.Bson.BsonDocument(
+            [|
+                "term", MongoDB.Bson.BsonDocument([| "en", "Hello"; "sv", "Hej" |])
+                "category", "Greetings"
+            |]
+        )
+
+        do! entries.InsertOneAsync(document) |> Async.AwaitTask
+        printfn "Inserted document."
+
+        let! foundEntries = entries.Find(Builders<MongoDB.Bson.BsonDocument>.Filter.Eq("category", "Greetings")).ToListAsync() |> Async.AwaitTask
+
+        printfn "Found entries:"
+        for entry in foundEntries do
+            printfn "%A" (entry.ToJson())
+    } |> Async.RunSynchronously
+
+    0
+
+Explanation:
+
+    Open Namespaces:
+        open MongoDB.Driver and open System bring in the necessary namespaces.
+    [<EntryPoint>]:
+        This attribute marks the main function as the entry point of the F# application.
+    task { ... }:
+        This is an asynchronous computation expression, used to handle asynchronous operations.
+    MongoClient and GetDatabase:
+        These are used to connect to the MongoDB server and get a reference to the database.
+    GetCollection<MongoDB.Bson.BsonDocument>:
+        This gets a reference to the "entries" collection, specifying that we're working with BSON documents.
+    MongoDB.Bson.BsonDocument:
+        This is used to create BSON documents, which are the F# representation of json documents for MongoDB.
+    entries.InsertOneAsync(document) |> Async.AwaitTask:
+        This inserts the document into the collection asynchronously.
+    entries.Find(Builders<MongoDB.Bson.BsonDocument>.Filter.Eq("category", "Greetings")).ToListAsync() |> Async.AwaitTask:
+        This finds documents with the specified category and converts the result to a list asynchronously.
+    printfn "%A" (entry.ToJson()):
+        This prints the JSON representation of each found document.
+    Async.RunSynchronously:
+        This executes the asynchronous task synchronously.
+    NuGet Package:
+        As with C#, you'll need to install the MongoDB.Driver NuGet package in your F# project.
+
+Key Points:
+
+- The F# code is very similar to
+  the C# code, demonstrating the
+  interoperability of F# with .NET
+  libraries.
+- F#'s functional syntax provides a
+  concise and expressive way to
+  interact with MongoDB.
+- The task { ... } computation
+  expression simplifies
+  asynchronous operations.
+
+This F# example should give you a
+good starting point for interacting
+with MongoDB from your F#
+applications.
+
+}}}
 
 Android + Windows: =SVDVORAK UTILITY {{{
 
-Question: I have been working for some time both myself and in tandem with a relative (who is very knowledgeable in the area of software-development) on learning more about Android app-development primarily using Kotlin. I have a small but nagging problem of being able to use a custom SvDvorak setup when using a keyboard connected via bluetooth to my Android-device. Since it seems unlikely to be able to get that functionality on my phone without rooting it and changing the system-files directly, I was thinking another solution could be to write a small headless Android-utility that sits as a middle-layer in between my external keyboard-signal and the system and 'translates' keystrokes from my keyboard to the right key. One example would be that if I press the letter g, that should translate to the letter i and so forth.
+- Question: I have been working for
+  some time both myself and in
+  tandem with a relative (who is
+  very knowledgeable in the area of
+  software-development) on learning
+  more about Android
+  app-development primarily using
+  Kotlin. I have a small but
+  nagging problem of being able to
+  use a custom SvDvorak setup when
+  using a keyboard connected via
+  bluetooth to my Android-device.
+  Since it seems unlikely to be
+  able to get that functionality on
+  my phone without rooting it and
+  changing the system-files
+  directly, I was thinking another
+  solution could be to write a
+  small headless Android-utility
+  that sits as a middle-layer in
+  between my external
+  keyboard-signal and the system
+  and 'translates' keystrokes from
+  my keyboard to the right key. One
+  example would be that if I press
+  the letter g, that should
+  translate to the letter i and so
+  forth.
 
-That's a very interesting and practical problem! You're right, getting a custom keyboard layout like SvDvorak to work system-wide on Android without rooting is challenging. Creating a headless utility (a background service) to remap keystrokes is a clever approach. Here's a breakdown of how you could tackle this, along with some considerations:
+That's a very interesting and
+practical problem! You're right,
+getting a custom keyboard layout
+like SvDvorak to work system-wide
+on Android without rooting is
+challenging. Creating a headless
+utility (a background service) to
+remap keystrokes is a clever
+approach. Here's a breakdown of how
+you could tackle this, along with
+some considerations:
 
 Conceptual Overview
 
@@ -2166,8 +3577,8 @@ Conceptual Overview
 
 Technical Implementation (Kotlin)
 
-Here's a simplified outline of how you might implement this in Kotlin:
-Kotlin
+Here's a simplified outline of how
+you might implement this in Kotlin:
 
 import android.app.Service
 import android.content.Intent
@@ -2292,9 +3703,42 @@ Next Steps
 
 This is a complex project, but it's definitely achievable. Good luck!
 
-The accessibility approach seems interesting and something we might want to explore deeper, so maybe you could comment a bit on that. Also, I would like to point out (which I failed to think about until just now) that me to some extent but certainly my brother is very knowledgeable in a range of different technologies and languages - including C and other very close to the hardware options. What I'm thinking now is that the app does not necessarily have to be written primarily in Kotlin (although that might be necessary to act as a bridge somewhere). What I mean is, both he and I have looked in the past at a range of different languages and solutions, including (just to take one small example) one article that I have read and saved from a guy that wrote a tutorial/blog-post about having some success in writing small and very efficient apps using Gambit Scheme which compiles down to native and (I think) pretty efficient C-based utilities.
+- The accessibility approach seems
+  interesting and something we
+  might want to explore deeper, so
+  maybe you could comment a bit on
+  that. Also, I would like to point
+  out (which I failed to think
+  about until just now) that me to
+  some extent but certainly my
+  brother is very knowledgeable in
+  a range of different technologies
+  and languages - including C and
+  other very close to the hardware
+  options. What I'm thinking now is
+  that the app does not necessarily
+  have to be written primarily in
+  Kotlin (although that might be
+  necessary to act as a bridge
+  somewhere). What I mean is, both
+  he and I have looked in the past
+  at a range of different languages
+  and solutions, including (just to
+  take one small example) one
+  article that I have read and
+  saved from a guy that wrote a
+  tutorial/blog-post about having
+  some success in writing small and
+  very efficient apps using Gambit
+  Scheme which compiles down to
+  native and (I think) pretty
+  efficient C-based utilities.
 
-You're right, the accessibility service approach and leveraging your brother's C expertise open up some interesting possibilities. Let's delve into those:
+You're right, the accessibility
+service approach and leveraging
+your brother's C expertise open up
+some interesting possibilities.
+Let's delve into those:
 
 Accessibility Service Approach
 
@@ -2354,12 +3798,33 @@ Recommendations
         Test your app thoroughly on different Android devices and with various apps to ensure that it works correctly.
 
 By combining the strengths of Kotlin, C, and Gambit Scheme, you can create a powerful and efficient keyboard remapping utility.
-Your saved info
-Info you asked Gemini to save
 
-So the Gambit Scheme approach was just to mention one option here. The device would not be for sale and would be strictly custom made for myself and my workflow (at least there are no other plans at the moment). I also use strictly Android devices because of their easier accessibility and malleability compared to e.g. iPhone-devices. Also, I'm very keen to use functional approaches as much as possible, as I think (and correct me if I'm wrong here) they may be the best game in town when it comes to this kind of 'pipe this input and translate to something else' kind of utility.
+- So the Gambit Scheme approach was
+  just to mention one option here.
+  The device would not be for sale
+  and would be strictly custom made
+  for myself and my workflow (at
+  least there are no other plans at
+  the moment). I also use strictly
+  Android devices because of their
+  easier accessibility and
+  malleability compared to e.g.
+  iPhone-devices. Also, I'm very
+  keen to use functional approaches
+  as much as possible, as I think
+  (and correct me if I'm wrong
+  here) they may be the best game
+  in town when it comes to this
+  kind of 'pipe this input and
+  translate to something else' kind
+  of utility.
 
-You've hit on some excellent points, and your focus on a custom, highly personalized workflow is a significant advantage. Let's refine the approach based on your preferences:
+You've hit on some excellent
+points, and your focus on a custom,
+highly personalized workflow is a
+significant advantage. Let's refine
+the approach based on your
+preferences:
 
 Prioritizing Functional Approaches and Customization
 
@@ -2408,11 +3873,25 @@ Key Functional Concepts
     Data Transformations: Using functions to transform data from one form to another.
     Pipelines: Composing functions to create a sequence of data transformations.
 
-By embracing functional programming and focusing on a highly customized workflow, you can create a powerful and efficient keyboard remapping utility that perfectly suits your needs.
-Your saved info
-Info you asked Gemini to save
+By embracing functional programming
+and focusing on a highly customized
+workflow, you can create a powerful
+and efficient keyboard remapping
+utility that perfectly suits your
+needs.
 
-Great. So could you rank order the three avenues mentioned in your last answer, maybe as a first benchmark according to resource-efficiency, i.e. some Scheme dialect (I have documentation for a whole range of them, from TinyScheme to MIT Scheme, Kawa, Chez, Chicken etc), Haskell, and Kotlin - the latter particularly using a functional approach?
+- Great. So could you rank order
+  the three avenues mentioned in
+  your last answer, maybe as a
+  first benchmark according to
+  resource-efficiency, i.e. some
+  Scheme dialect (I have
+  documentation for a whole range
+  of them, from TinyScheme to MIT
+  Scheme, Kawa, Chez, Chicken etc),
+  Haskell, and Kotlin - the latter
+  particularly using a functional
+  approach?
 
 Alright, let's rank those options in terms of resource efficiency, keeping in mind that "resource efficiency" can have multiple facets (CPU, memory, battery, etc.), and the specific implementation will play a significant role.
 
@@ -2527,9 +4006,25 @@ In summary:
 
 Essentially, the power backup removes the stress of absolute resource minimization, allowing you to focus on creating a tool that is both functional and enjoyable to use.
 
-Could you sketch out some code for a Kotlin-solution to the problem and maybe as you said focusing on using the service-based approach? As we have discussed, I think relying on a mainly functional approach could be very beneficial, and (if applicable and certainly if feasible) if using or introducing a reactive approach could be useful?
+- Could you sketch out some code
+  for a Kotlin-solution to the
+  problem and maybe as you said
+  focusing on using the
+  service-based approach? As we
+  have discussed, I think relying
+  on a mainly functional approach
+  could be very beneficial, and (if
+  applicable and certainly if
+  feasible) if using or introducing
+  a reactive approach could be
+  useful?
 
-Absolutely. Let's sketch out a Kotlin solution using a service-based approach, focusing on functional programming and incorporating reactive elements where appropriate.
+Absolutely. Let's sketch out a
+Kotlin solution using a
+service-based approach, focusing on
+functional programming and
+incorporating reactive elements
+where appropriate.
 
 Conceptual Structure
 
@@ -2695,9 +4190,30 @@ XML
 
 This is a starting point. You'll need to expand it to handle all your SvDvorak mappings and edge cases.
 
-Great. One thing I maybe failed to mention is that (without having looked at the code above in detail) since the app is primarily for my own personal use, the GUI-part of the app can be as minimal as possible, i.e. one single icon that represents the utility would be perfectly sufficient - perhaps an icon that could sit on the 'phone desktop' and indicate with color or looking like a pressed button if the utility is active, and another color or a button 'un-pressed' to signal that the utility is not active.
+____
+- Great. One thing I maybe failed
+  to mention is that (without
+  having looked at the code above
+  in detail) since the app is
+  primarily for my own personal
+  use, the GUI-part of the app can
+  be as minimal as possible, i.e.
+  one single icon that represents
+  the utility would be perfectly
+  sufficient - perhaps an icon that
+  could sit on the 'phone desktop'
+  and indicate with color or
+  looking like a pressed button if
+  the utility is active, and
+  another color or a button
+  'un-pressed' to signal that the
+  utility is not active.
 
-Perfect, a minimal GUI is absolutely feasible and aligns well with the custom, personal nature of your project. Here's how we can adapt the solution to achieve that:
+Perfect, a minimal GUI is
+absolutely feasible and aligns well
+with the custom, personal nature of
+your project. Here's how we can
+adapt the solution to achieve that:
 
 Minimal GUI Approach
 
@@ -2832,23 +4348,33 @@ Enhancements
         If you need to add configuration settings (e.g., custom key mappings), you can add a settings activity or use a configuration file.
 
 This minimal GUI approach keeps the app simple and focused on its core functionality, which aligns perfectly with your requirements.
-github.com
-github.com
-github.com
-github.com
-developers.google.com
-developers.google.com
-github.com
-github.com
-stackoverflow.com
-stackoverflow.com
 
-Excellent. And(!!), just as a quick thought - something that crossed my mind just this instant actually: What just occurred to me is that (at least looking just a bit past the present moment), what I might be interested in is to widen the scope just slightly and go for a solution that would work on both Android, and(!!) on Windows. A bane for me on Windows has been being able to install or use some utility to accomplish the same functionality. I have been sketching out a solution using AutoHotKey, but if I could use some language (I'm thinking Flutter or something similar), that would REALLY be interesting to me.
+- Excellent. And(!!), just as a
+  quick thought - something that
+  crossed my mind just this instant
+  actually: What just occurred to
+  me is that (at least looking just
+  a bit past the present moment),
+  what I might be interested in is
+  to widen the scope just slightly
+  and go for a solution that would
+  work on both Android, and(!!) on
+  Windows. A bane for me on Windows
+  has been being able to install or
+  use some utility to accomplish
+  the same functionality. I have
+  been sketching out a solution
+  using AutoHotKey, but if I could
+  use some language (I'm thinking
+  Flutter or something similar),
+  that would REALLY be interesting
+  to me.
 
 That's a fantastic idea! Expanding the scope to include Windows support would significantly increase the utility of your project. Using a cross-platform framework like Flutter is a very promising approach. Let's explore that:
 
 Cross-Platform Approach (Flutter)
 
+____
     Flutter's Advantages:
         Cross-Platform Development: Flutter allows you to write code once and deploy it to multiple platforms (Android, iOS, Windows, macOS, Linux, web).
         Native Performance: Flutter apps are compiled to native code, providing excellent performance.
@@ -2907,7 +4433,19 @@ Benefits
 
 By using Flutter, you can create a cross-platform keyboard remapping utility that works seamlessly on both Android and Windows, providing a consistent and efficient experience.
 
-My concern when it comes to Flutter (although it might not be a complete showstopper) is being able to include and leverage the functional and reactive approaches we talked about. Could you comment a bit about that, and also if languages like D or Rust may be interesting just to glance at, although they definitely have their 'kinks' (difficulty, reach etc, although their respective performances are excellent)
+- My concern when it comes to
+  Flutter (although it might not be
+  a complete showstopper) is being
+  able to include and leverage the
+  functional and reactive
+  approaches we talked about. Could
+  you comment a bit about that, and
+  also if languages like D or Rust
+  may be interesting just to glance
+  at, although they definitely have
+  their 'kinks' (difficulty, reach
+  etc, although their respective
+  performances are excellent)
 
 You've raised valid concerns about Flutter's compatibility with functional and reactive approaches, and you're right to consider alternatives like D and Rust. Let's break down those points:
 
@@ -2960,14 +4498,22 @@ D and Rust as Alternatives
         However, they require more effort for cross-platform UI development.
         Rust is gaining more and more mobile support, and there are UI frameworks being developed for rust, so it is a language that is worth keeping an eye on.
     Recommendation:
-        If cross-platform UI development is crucial, Flutter with rxdart and a functional approach is a good choice.
+        - If cross-platform UI development is crucial, Flutter with rxdart and a functional approach is a good choice.
         If performance and low-level control are paramount, and you're willing to invest more time in platform-specific UI development, Rust is a strong contender.
         If you are very comfortable with C/C++ like languages, then D is also a good option.
         It is worth noting that it is possible to use Rust or D for the backend logic and use Flutter for the UI. This hybrid approach could give you the best of both worlds.
 
 In summary, Flutter can handle functional and reactive programming, but D and Rust offer more robust support for those paradigms at the cost of increased complexity in UI development.
 
-Right. AND(!!) since the UI-requirements for my particular app - especially at the initial stages - are really very minimal, then both D (which is a community where I have excellent connections with several core developers) and Rust become very interesting alternatives I think.
+- Right. AND(!!) since the
+  UI-requirements for my particular
+  app - especially at the initial
+  stages - are really very minimal,
+  then both D (which is a community
+  where I have excellent
+  connections with several core
+  developers) and Rust become very
+  interesting alternatives I think.
 
 That's excellent! Given your strong connections within the D community and your minimal UI requirements, D becomes a very compelling option. Rust is also an excellent choice, but your existing connections with D developers provide a significant advantage. Let's explore how you can leverage D for your cross-platform keyboard remapping utility:
 
@@ -3014,7 +4560,7 @@ Next Steps
 
     D Development Environment:
         Set up your D development environment.
-    Key Mapping Library:
+    Key Mapping Library:  ___hm_eng
         Start by implementing the key remapping logic in D.
     Windows Input Handling:
         Explore D's Windows API bindings and implement keyboard event interception and injection.
