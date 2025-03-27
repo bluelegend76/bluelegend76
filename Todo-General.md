@@ -1,6 +1,8 @@
 # General Todo/Scratchlist ----
 __
 - [ ] **Look at Impress.js/Reveal.js**  __
+- All-Systems-Install: Reveal.js
+  (=Install with NPM, +Link in Index.html (+copy in other presentations))
 
 - ## **START + CONSERTED PUSH TO LEARN FILE/MEDIA-BROWSERS, MEDIA-PROGRAMS (ETC ...)**
 - Prepare + Send THEDOC-NEXT Potpurri-Video to Abe (för att uttala sig om)
