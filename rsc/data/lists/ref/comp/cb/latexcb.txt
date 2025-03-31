@@ -8,31 +8,32 @@ Pandoc
 Reveal.js
                     .
                     Absolutely! Here's a list of 15-20 Reveal.js features that can help you create visually engaging presentations, going beyond the basics:
-                    Core Features & Transitions ----
-                        Horizontal and Vertical Slides: Create complex layouts with nested slides.
-                        Slide Transitions: Use various transitions like fade, slide, convex, concave, and zoom.
-                        Background Transitions: Smoothly change backgrounds between slides.
-                        Fragments: Gradually reveal elements on a slide (e.g., bullet points, images).
-                    Visual Enhancements:
-                        Background Images and Videos: Use media to create immersive backgrounds.
-                        Parallax Backgrounds: Add depth and movement with parallax effects.
-                        Custom CSS Styling: Tailor the look and feel to match your branding.
-                        Themes: Use pre-built themes or create your own.
-                        Syntax Highlighting: Display code snippets with proper formatting.
-                        Interactive Elements: Embed iframes, videos, and interactive charts.
-                    Advanced Features & Interactivity:
-                        Speaker Notes: Add notes for yourself that are visible only in the speaker view.
-                        Markdown Support: Write content in Markdown for faster slide creation.
-                        Auto-Animate: Create smooth transitions between slides with matching elements.
-                        PDF Export: Generate a PDF version of your presentation.
-                        Remote Control: Control your presentation from a smartphone or tablet.
-                        Plugins: Extend functionality with plugins for features like charts, diagrams, and more.
-                        MathJax Support: Display mathematical formulas using LaTeX.
-                        Embedded HTML: You can embed any html into a slide.
-                        Slide numbering: Show the slide number.
-                        Animated gifs: Add animated gifs.
-                    These features can help you create presentations that are not only informative but also visually appealing and engaging. Remember to use these features thoughtfully and avoid overwhelming your audience with too many effects.
-                Markdown + Pandoc = Reveal
+                        Core Features & Transitions ----
+                        [v] Horizontal and Vertical Slides: Create complex layouts with nested slides.
+                        [v] Slide Transitions: Use various transitions like fade, slide, convex, concave, and zoom.
+                        [-] Background Transitions: Smoothly change backgrounds between slides.
+                        [v] Fragments: Gradually reveal elements on a slide (e.g., bullet points, images).
+                        Visual Enhancements ----
+                        [ ] Background Images and Videos: Use media to create immersive backgrounds.
+                        [ ] Parallax Backgrounds: Add depth and movement with parallax effects.
+                        [-] Custom CSS Styling: Tailor the look and feel to match your branding.
+                        [ ] Themes: Use pre-built themes or create your own.
+                        [v] Syntax Highlighting: Display code snippets with proper formatting.
+                        [-] Interactive Elements: Embed iframes, videos, and interactive charts.
+                        Advanced Features & Interactivity ----
+                        [-] Speaker Notes: Add notes for yourself that are visible only in the speaker view.
+                        [V] Markdown Support: Write content in Markdown for faster slide creation.
+                        [/] Auto-Animate: Create smooth transitions between slides with matching elements.
+                        [ ] PDF Export: Generate a PDF version of your presentation.
+                        [/] Remote Control: Control your presentation from a smartphone or tablet.
+                        [ ] Plugins: Extend functionality with plugins for features like charts, diagrams, and more.
+                        [ ] MathJax Support: Display mathematical formulas using LaTeX.
+                        [ ] Embedded HTML: You can embed any html into a slide.
+                        [ ] Slide numbering: Show the slide number.
+                        [v] Animated gifs: Add animated gifs.
+
+                        These features can help you create presentations that are not only informative but also visually appealing and engaging. Remember to use these features thoughtfully and avoid overwhelming your audience with too many effects.
+                Markdown + Pandoc = Reveal ----
                     Yes, absolutely! Using Markdown with Pandoc to create Reveal.js presentations is an excellent and highly recommended workflow. Here's why and how it benefits you:
 
                     Advantages of Markdown + Pandoc:
@@ -55,7 +56,7 @@ Reveal.js
                             You separate content creation (Markdown) from presentation styling and layout (Reveal.js).
                             This makes it easier to update content without affecting the presentation's design.
 
-                    Workflow Outline:
+                    Workflow Outline: ____ ____
 
                         Write in Markdown:
                             Use Markdown syntax to create your slides, headings, lists, images, and other content.
@@ -71,7 +72,6 @@ Reveal.js
                             Continue to refine your Markdown content and Reveal.js customizations until you're satisfied.
 
                     Example Pandoc Command:
-                    Bash
 
                     pandoc -t revealjs -s input.md -o output.html --variable revealjs-url=reveal.js
 
@@ -87,7 +87,7 @@ Reveal.js
 
                     In conclusion, using Markdown with Pandoc provides a solid foundation for creating Reveal.js presentations. It streamlines the content creation process and allows you to focus on delivering a compelling message.
 Impress.js
-                Could you help me outline some of the most interesting as well as basic and necessary commands or 'concepts' (i.e. like a shopping-list) for Impress.js?
+                - Could you help me outline some of the most interesting as well as basic and necessary commands or 'concepts' (i.e. like a shopping-list) for Impress.js?
 
                 Absolutely! Impress.js is a powerful tool for creating dynamic, non-linear presentations using HTML, CSS, and JavaScript. Here's a "shopping list" of essential commands and concepts, broken down for clarity:
 
