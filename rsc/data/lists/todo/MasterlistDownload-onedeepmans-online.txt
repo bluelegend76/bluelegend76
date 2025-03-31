@@ -41,16 +41,6 @@ ___start
 MongoDB Compass ____ ____
 https://github.com/fsprojects/FsUnit
 https://www.reactiveui.net/
-material ui(??)
-
-KIVY [PYTHON]
-    https://docs.micropython.org/en/latest/  __
-PipeWire
-  https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home
-  https://wiki.archlinux.org/title/PipeWire
-  https://docs.pipewire.org/
-        https://fossil-scm.org/home/doc/trunk/www/permutedindex.html
-        https://www.puppet.com/docs/puppet/7/puppet_language.html
 Figma {{{
 https://designcode.io/figma-handbook
 ____
@@ -160,10 +150,13 @@ https://designcode.io/figma-handbook-figma-to-html
 
 }}}
 https://jeroenjanssens.com/dsatcl/  #data science at command-line
-
 https://docs.aws.amazon.com/neptune/  ____ ____
 ----
 https://wiki.archlinux.org/title/General_recommendations  ____
+        https://www.puppet.com/docs/puppet/7/puppet_language.html
+----
+material ui(??)
+
 ----
     Terraform {{{
 
@@ -272,6 +265,7 @@ https://www.learnreframe.com/  Clojure
 
 https://github.com/dlang-community/Pegged/wiki/Pegged-Tutorial  ____
     https://github.com/eBay/tsv-utils
+        https://fossil-scm.org/home/doc/trunk/www/permutedindex.html
 ----
 https://github.com/yt-dlp/yt-dlp/wiki
     https://pillow.readthedocs.io/en/stable/reference/Image.html
@@ -289,6 +283,13 @@ yarn {{{
 https://yarnpkg.com/getting-started
 
 }}}
+
+KIVY [PYTHON]
+    https://docs.micropython.org/en/latest/  __
+PipeWire
+  https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home
+  https://wiki.archlinux.org/title/PipeWire
+  https://docs.pipewire.org/
 
 
     Qt DesignStudio

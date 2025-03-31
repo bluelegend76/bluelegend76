@@ -128,7 +128,7 @@ discord
         ~/Dropbox/rsc/data/lists/ref/comp/discord-shortckeys.pdf
         ---- Default Keybinds ----
         Show Keyboard Shortcuts List  cs-7  # c-/
-        Messages ---- These shortcuts work when focused on a message.
+        Messages ----  These shortcuts work when focused on a message.
         Edit Last Message  up  __
                 Edit Message  e
                 Delete Message  bs
@@ -149,7 +149,7 @@ discord
                 Toggle QuickSwitcher  c-k
                   Create or join a server  cs-n
                 Start share of current window  cs-n  #In Linux
-        Drag And Drop ---- These shortcuts work when focused on a draggable item
+        Drag And Drop ----  These shortcuts work when focused on a draggable item
                 Start Drag and Drop  c-d
                 Move  up / down
                 Drop item  Space / Enter
