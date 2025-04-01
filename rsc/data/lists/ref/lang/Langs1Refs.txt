@@ -38,6 +38,9 @@ Add Rhetoric and Speeches(!!)
       auxil/lang1_picks2/svisldict.txt
       auxil/lang1_picks2/lat.words.svlatdict.txt
 
++jp/ar
+gvim -p freq/freq_dan.txt freq/freq_isl.txt freq/freq_ty freq/freq_fra.txt freq/z-ru.txt freq/freq_lat.txt freq/z-spa.txt freq/z-kin.txt
+
   En-IdiomDict.txt
   en-idiomdict2.txt
   svenska_idiomatiska_uttryck.txt
