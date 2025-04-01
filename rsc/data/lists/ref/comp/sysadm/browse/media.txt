@@ -128,7 +128,7 @@ discord
         ~/Dropbox/rsc/data/lists/ref/comp/discord-shortckeys.pdf
         ---- Default Keybinds ----
         Show Keyboard Shortcuts List  cs-7  # c-/
-        Messages ---- These shortcuts work when focused on a message.
+        Messages ----  These shortcuts work when focused on a message.
         Edit Last Message  up  __
                 Edit Message  e
                 Delete Message  bs
@@ -145,11 +145,11 @@ discord
                 Navigate between unread channels  sa-up / sa-down
                 Navigate between unread channels with mentions  csa-up / csa-down
                 Navigate to current call  csa-v
-                Toggle between last server and DMs  ca-right
+                Toggle between last server and DMs (direct messages)  ca-right
                 Toggle QuickSwitcher  c-k
                   Create or join a server  cs-n
                 Start share of current window  cs-n  #In Linux
-        Drag And Drop ---- These shortcuts work when focused on a draggable item
+        Drag And Drop ----  These shortcuts work when focused on a draggable item
                 Start Drag and Drop  c-d
                 Move  up / down
                 Drop item  Space / Enter
@@ -197,244 +197,255 @@ Google Meet
             Push to Talk*
         *Enable "Push to Talk" in settings to use this shortcut. 	Press and hold spacebar 	Press and hold spacebar
 
-Shotwell  @@  [libraries: Nature, Fun, GrafRef ]
+Shotwell  @@  [libraries: Nature, Fun, GrafRef, Promo ]
                     import images / start an image-library ----
-                        Shotwell supports ____ (= what file formats)
-                            jpeg, png, tiff, bmp, gif, webp and raw photo files.
-                        supported video file formats
-                            Container formats: Ogg, QuickTime, MP4, AVI.
-                            Codecs: Theora, Quicktime, MPEG-4, Motion JPEG.
-                    import photo-files from your hard disk into Shotwell, Alternatively, click File > Import From Folder... and select the folder containing the photos you want to import.
-                    If you do not want Shotwell to recurse into subfolders while importing photos, uncheck the Recurse Into Subfolders checkbox on the bottom of the file dialog.
-                    __ (when importing photo files) Shotwell will ask ____
-                            whether you want to copy the photo files to your library folder or to import them in place without copying the files.
-                        directly import the photos and copy them.
-                            hold down c- while dragging photos in,
-                        directly import the photos without copying them.  @
-                            hold down cs- while dragging photos in,
-                        The View > Extended Information command  @  cs-x
+                        .
+                            Shotwell supports ____ (= what file formats)
+                                jpeg, png, tiff, bmp, gif, webp and raw photo files.
+                            supported video file formats
+                                Container formats: Ogg, QuickTime, MP4, AVI.
+                                Codecs: Theora, Quicktime, MPEG-4, Motion JPEG.
+                        import photo-files from your hard disk into Shotwell, Alternatively, click File > Import From Folder... and select the folder containing the photos you want to import.
+                        If you do not want Shotwell to recurse into subfolders while importing photos, uncheck the Recurse Into Subfolders checkbox on the bottom of the file dialog.
+                        __ (when importing photo files) Shotwell will ask ____
+                                whether you want to copy the photo files to your library folder or to import them in place without copying the files.
+                            directly import the photos and copy them.
+                                hold down c- while dragging photos in,
+                            directly import the photos without copying them.  @
+                                hold down cs- while dragging photos in,
+                            The View > Extended Information command  @  cs-x
                     view / display ----
-                        Photo views (!)
-                            When you select any collection in the sidebar, Shotwell displays all photos in the collection in the main window area.
-                    adjusts the viewing size of the image thumbnails.  @  + / -
-                    view a photo full-window  double-click the photo
-                    When viewing a photo in full-window mode, you can zoom by pressing the following keyboard shortcuts:  @
-                            c-0 for the full image, c-1 for 100% (1 photo pixel = 1 screen pixel), and c-2 for 200% (1 photo pixel = 2x2 screen pixels).
-                    Shotwell offers a fullscreen mode to display photos.  @  press F11
-                        pin the toolbar down
-                            =button
-                    The sidebar on the left side of the Shotwell window lists various views of your library. (!!)
-                            The Last Import view 
-                            The Flagged 
-                            The Saved Search 
-                            The Events folder 
-                            The Tags folder 
-                    Saved Search 
-                            allows you to sort your library by many criteria.
+                        .
+                            Photo views (!)
+                                When you select any collection in the sidebar, Shotwell displays all photos in the collection in the main window area.
+                        adjusts the viewing size of the image thumbnails.  @  + / -
+                        view a photo full-window  double-click the photo
+                        When viewing a photo in full-window mode, you can zoom by pressing the following keyboard shortcuts:  @
+                                c-0 for the full image, c-1 for 100% (1 photo pixel = 1 screen pixel), and c-2 for 200% (1 photo pixel = 2x2 screen pixels).
+                        Shotwell offers a fullscreen mode to display photos.  @  press F11
+                            pin the toolbar down
+                                =button
+                        The sidebar on the left side of the Shotwell window lists various views of your library. (!!)
+                                The Last Import view 
+                                The Flagged 
+                                The Saved Search 
+                                The Events folder 
+                                The Tags folder 
+                        Saved Search 
+                                allows you to sort your library by many criteria.
                     'events' ----
-                    To give an event a name rather than referring to it by its date, (!)
-                            select the event, click Events > Rename Event... and enter a new name.
-                    To create a new event, (@)
-                            select the photos you would like in the new event and click Events > New Event.
-                        To merge events, (!)
-                            select Events from the sidebar, then, while holding down Ctrl click on the events you want to merge in the main window area. Finally, click Events > Merge Events.
-                        change the event sort order,
-                            click View > Sort Events and select either > ascending or descending.
-                    Change the photo used to represent each event (the key photo) (!)
-                            select the photo and choose Photos > Make Key Photo for Event.
+                        .
+                        To give an event a name rather than referring to it by its date, (!)
+                                select the event, click Events > Rename Event... and enter a new name.
+                        To create a new event, (@)
+                                select the photos you would like in the new event and click Events > New Event.
+                            To merge events, (!)
+                                select Events from the sidebar, then, while holding down Ctrl click on the events you want to merge in the main window area. Finally, click Events > Merge Events.
+                            change the event sort order,
+                                click View > Sort Events and select either > ascending or descending.
+                        Change the photo used to represent each event (the key photo) (!)
+                                select the photo and choose Photos > Make Key Photo for Event.
                     flagging / rating (=starring) ----
-                    Flagging a photo (+Purpose)  @@
-                            use the c-g or / shortcut keys.
-                              --
-                            you might flag all photos which need visual adjustment, or all photos which you want to share with a friend.
-                            useful because you can operate on all flagged photos as a set. For example, you can select the Flagged view and then upload all flagged photos to a publishing service.
-                    assign each photo a rating from 1-5 stars,  @@
-                            press any of the shortcut keys 1, 2, 3, 4 or 5 to assign a rating.
-                    mark the photo(s) as rejected // completely clear the rating(s)  for photos  @@
-                            press 9 // 0
-                    set a different rating filter (=normally Shotwell displays all photos except rejected photos.)  @(@)
-                            View > Filter Photos menu
-                            - display only photos rated with 3 stars or higher, 
-                            - display all photos including those marked rejected.
-                             --
-                            The Shotwell icon on the toolbar displays the current rating filter and can also be used to set the filter.
-                    increase or decrease a photo's rating  @@
-                            the keyboard shortcuts < and >.
+                        .
+                        Flagging a photo (+Purpose)  @@
+                                use the c-g or / shortcut keys.
+                                  --
+                                you might flag all photos which need visual adjustment, or all photos which you want to share with a friend.
+                                useful because you can operate on all flagged photos as a set. For example, you can select the Flagged view and then upload all flagged photos to a publishing service.
+                        assign each photo a rating from 1-5 stars,  @@
+                                press any of the shortcut keys 1, 2, 3, 4 or 5 to assign a rating.
+                        mark the photo(s) as rejected // completely clear the rating(s)  for photos  @@
+                                press 9 // 0
+                        set a different rating filter (=normally Shotwell displays all photos except rejected photos.)  @(@)
+                                View > Filter Photos menu
+                                - display only photos rated with 3 stars or higher, 
+                                - display all photos including those marked rejected.
+                                 --
+                                The Shotwell icon on the toolbar displays the current rating filter and can also be used to set the filter.
+                        increase or decrease a photo's rating  @@
+                                the keyboard shortcuts < and >.
                     manage photo-library ----
-                        delete photos entirely from your hard disk. (=the 'two trashes')
-                            a photo, when deleted, is first put into Shotwell's trash.
-                            If you delete it from Shotwell's trash, it is put into your computer's trash.
-                            If you delete it from your computer's trash the photo is finally and irretrievably deleted from your computer.
-                    Removing photos from the library (!(?))
-                            choose Edit > Remove From Library.
-                        (Emptying or restoring the trash folder)
-                            Select the Trash entry in the
-                            Sidebar and Shotwell will display
-                            all photos that have been marked
-                            for removal or deletion.
-                                .
-                            In the Trash view, the following commands are available:
-                                .
-                            Delete Delete the selected photos
-                            from the trash folder.
-                                .
-                            Restore Restore the selected photos
-                                .
-                            Empty trash Delete all photos from the trash folder.
-                        Deleting or emptying Trash
-                            Only Remove  Remove photos from the library but leave the photos in their location on the computer.
-                               .
-                            Trash file  Remove photos from the
-                            library and delete them from the
-                               .
-                            Cancel Do nothing.
+                        .
+                            delete photos entirely from your hard disk. (=the 'two trashes')
+                                a photo, when deleted, is first put into Shotwell's trash.
+                                If you delete it from Shotwell's trash, it is put into your computer's trash.
+                                If you delete it from your computer's trash the photo is finally and irretrievably deleted from your computer.
+                        Removing photos from the library (!(?))
+                                choose Edit > Remove From Library.
+                            (Emptying or restoring the trash folder)
+                                Select the Trash entry in the
+                                Sidebar and Shotwell will display
+                                all photos that have been marked
+                                for removal or deletion.
+                                    .
+                                In the Trash view, the following commands are available:
+                                    .
+                                Delete Delete the selected photos
+                                from the trash folder.
+                                    .
+                                Restore Restore the selected photos
+                                    .
+                                Empty trash Delete all photos from the trash folder.
+                            Deleting or emptying Trash
+                                Only Remove  Remove photos from the library but leave the photos in their location on the computer.
+                                   .
+                                Trash file  Remove photos from the
+                                library and delete them from the
+                                   .
+                                Cancel Do nothing.
                     Search ----
-                    There are two ways to search in Shotwell:  @@
-                            The search bar allows you to quickly search the current view for certain criteria.  c-f | f8
-                                --
-                            find, show and hide photos and videos based on title, tag, rating or other options.
-                                .
-                                .
-                            Saved Searches feature more complex search criteria and persist in the sidebar between sessions.
-                    To begin searching (with c-f),  @
-                            simply enter a search keyword in the text box, or click on Flagged, Rating or Type.
-                                .
-                            The text search matches your keywords across tag names, photo or video titles and photos' original filenames.
-                            The Flagged, Rating and Type buttons allow you to filter your collection by whether photos are flagged, their current number of stars, and whether the items shown are images, videos, or raw camera files, respectively.
-                    Create a new saved search  @@
-                            hitting c-S.
-                                .
-                            The dialog box allows you
-                            to enter a name for the search and
-                              .
-                              .
-                            select whether you want to meet
-                            Any, All, or None of the criteria
-                              .
-                            Each row represents a search criterion.
-                            Use the + button to add more rows, and the - button to remove a specific row.
-                            The combo box on the left of each row selects the type of criteria.
-                    The sidebar on the left of the window lists various ____
-                            views of your library.
-                    Tags ----
-                    add new tags to photos,  @@
-                            select the photos you would like to tag + press c-t.
-                    give photo several tags,  @@
-                            When you use c-T or Tags > Add Tags... you can type in the names of one or more tags, separated by commas.
-                    rename a tag  @(@)
-                            selecting that tag in the sidebar and choosing Tags > Rename Tag "[name]"..., by rightclicking
-                    change which tags are associated with a particular photo,  @
-                            select that photo, choose Tags > Modify Tags... or right-click on a photo and select Modify Tags... and edit the comma separated list.
-                    remove a tag from one or more photos,  @(@)
-                            select that tag in the sidebar, then select the photos you would like to remove, and choose Tags > Remove Tag "[name]" from Photos or right-click on the photos an select Remove Tag "[name]" from Photos.
-                    To delete a tag entirely,  (@)
-                            select that tag in the sidebar and choose Tags > Delete Tag "[name]" or by right-click and select Delete Tag "[name]".
-                    tags that can help you to sort your tag list in ways that better match how you work or think (for example, you can store location tags like "Mountains" or "Beach" under a parent tag "Places")  @!(?)
-                            Hierarchial tags
-                    create a new subtag  @(!)
-                            right-click on a tag and select New.
-                        change a photo's title,  (!)
-                            select the photo and click Photos > Edit Title..., or press F2.
-                        adjust the date and time of photos, (=inside sh.well, or to external file)
-                            select the photos you would like to adjust, choose Photos > Adjust Date and Time... and select a new date and time.
-                            ----
-                    effects / enhance ----
-                    quick way to automatically adjust the brightness and contrast of your photo.  (@)
-                            Clicking on the Enhance button
-                                +can then improve the adjustments by clicking on the Adjust button.
-                        Color adjustments (!!)
-                            The Adjust button opens a floating window with a histogram and sliders to adjust a photo's exposure, saturation, tint, temperature, and shadows.
-                                + 'The histogram' .... (=the Enhance button)
-                        correct under- or over-exposed photos.
-                            Exposure
-                            Changes the brightness to make it look like the photo was exposed for a longer or shorter time.
-                        correct flat-looking photos or photos where the difference between bright and dark spots seems too big.
-                            Contrast
-                        Changes how vivid colors look =If your photo looks gray and washed out,
-                            Saturation
-                        useful for correcting photos taken with the wrong ____ setting, which typically have an unnatural color cast. For example, photos taken outdoors with ____ set to "Tungsten" may have a blue cast.
-                            Tint
-                        Changes how "warm" or "cool" the picture looks. Use this to make cold, depressing scenes look more lively, for example.
-                            Temperature
-                        Use this to make cold, depressing scenes look more lively, for example.
-                            Temperature
-                            Changes how "warm" or "cool" the picture looks.
-                        makes shadowy areas appear lighter. Use this to make detail more visible if it's obscured by the darkness of a shadow.
-                            Shadows
-                        These sliders change how light the brightest white is and how dark the darkest black is. Use them to change the contrast of the photo. Photos which look washed out should particularly benefit from changing these settings.
-                            Intensity Threshold (sliders on the histogram)
-                        Cropping  (!!)
-                            fullscreen mode.
-                                =Crop button on the toolbar.
-                              .
-                            Tip:
-                    You can also constrain the crop box to one of many common sizes.  Choose a size from the drop-down list that suits your needs. If you press the flip button next to it, the orientation of the constraint will switch (from landscape to portrait).
-                        the rule of thirds
-                            See More
-                            (=obj.s at crossings of lines forming 3x3 grid)
-                    use an external editor to do additional work on a photo (GIMP / UFRaw)  Photos > Open With External
-                    in full-window view: to show the original photo rather than the externally-edited one.  (@)
-                            press and hold the Shift key in full-window view
-                        Removing red-eye
-                            use the Red-eye tool.
-                                - Drag the circle over the affected pupil, adjust its size with the slider control, and press Apply.
-                    Rotate or flip a photo  @@
-                            - rotate left: Shift+c-R or [
-                            - rotate right: c-R or ]
-                            If you select more than one image, you can rotate all of them at the same time.
-                    tool that allows photos to be leveled and straightened.  @
-                            The straighten tools
-                                keyboard shortcut c-A.
-                        tip about metadata (such as tags and titles)  (!!)
-                            Shotwell can optionally write metadata (such as tags and titles) to photo files. For more information, see the section Photo files.
-                    Share / Publish ----
-                    export photos from Shotwell  (!!)
-                            Alternatively, select a set of photos and choose the File > Export... command or press Shift+c-E,
-                        size, pixel size etc wh. Image will be exporting
-                            - A scaling-constraint (which means how Shotwell will decide to scale the photos down), and the desired pixel size.
-                                (+see more)
-                    help to save your privacy (etc)  @
-                            - The option whether you like to export metadatas such as tags or ratings.  This can help to save your privacy if you have geolocation tags or tags which shouldn't be seen by anyone.
-                                If selected, Shotwell will write tags, titles, and other metadata to the new files.
-                        print multiple images in one page;
-                            select multiple images, choose File > Print..., and in the Print dialog, choose the Image Settings tab. In Image Settings, choose one of the multiple-image-per-page options under Autosize.
-                    Publishing to the Web  @
-                            Through the use of plugins, Shotwell can publish photos and videos to the following services, each of which requires an account:
-                             - Flickr
-                             - Google Photos
-                             - YouTube (videos only)
-                             - Tumblr (Photos only)
-                             - Any site running the Piwigo photo gallery software (photos only)
-                               .
-                            Preferences + click on the Plugins tab
-                            - cs-p
-                    Sending photos
-                            using the GNOME desktop's Send To mechanism, which lets you send photos via email, instant messaging or in other ways.
-                                 .
-                            You can optionally choose to send the files in a compressed format.
-                    desktop background (image/slideshow) ----
-                    Set a desktop background or slideshow @@!
-                            File > Set as Desktop Background.
-                            File > Set as Desktop Slideshow....  Shotwell will prompt you for a slideshow delay, which can be any interval up to one day in length.  The background slideshow will proceed even when Shotwell is not running.
-                    see a slideshow of any collection in Shotwell, @@!
-                            navigate to that collection and select View > Slideshow or press F5.
-                             (+dur, transit, trans. dur.)
-                            ----
-
-                            ----
-                    If you no longer want the missing files to be part of your Shotwell collection (perhaps because you deleted them),  ((@@))
-                            go to the Missing Files view, select the photos and then click Remove From Library.
-                    Shotwell Database ----
-                    Shotwell normally stores its database and photo thumbnails in ____  @@ @@
-                            the directory ~/.shotwell . This directory does not hold photos, but the database in this directory contains a list of all the photos in the Shotwell library.
-                    advanced Library feature, *(*)  @@ @@
-                            it's possible for you to have multiple Shotwell libraries, each of which has its own set of photos.
-                                Each library needs its own database directory. To launch Shotwell with an alternate library, specify an alternate database directory on the cmdline
+                        .
+                        There are two ways to search in Shotwell:  @@
+                                The search bar allows you to quickly search the current view for certain criteria.  c-f | f8
+                                    --
+                                find, show and hide photos and videos based on title, tag, rating or other options.
+                                    .
+                                    .
+                                Saved Searches feature more complex search criteria and persist in the sidebar between sessions.
+                        To begin searching (with c-f),  @
+                                simply enter a search keyword in the text box, or click on Flagged, Rating or Type.
+                                    .
+                                The text search matches your keywords across tag names, photo or video titles and photos' original filenames.
+                                The Flagged, Rating and Type buttons allow you to filter your collection by whether photos are flagged, their current number of stars, and whether the items shown are images, videos, or raw camera files, respectively.
+                        Create a new saved search  @@
+                                hitting c-S.
+                                    .
+                                The dialog box allows you
+                                to enter a name for the search and
                                   .
-                                shotwell -d [library-directory]
-                            ----
+                                  .
+                                select whether you want to meet
+                                Any, All, or None of the criteria
+                                  .
+                                Each row represents a search criterion.
+                                Use the + button to add more rows, and the - button to remove a specific row.
+                                The combo box on the left of each row selects the type of criteria.
+                        The sidebar on the left of the window lists various ____
+                                views of your library.
+                    Tags ----
+                        .
+                        add new tags to photos,  @@
+                                select the photos you would like to tag + press c-t.
+                        give photo several tags,  @@
+                                When you use c-T or Tags > Add Tags... you can type in the names of one or more tags, separated by commas.
+                        rename a tag  @(@)
+                                selecting that tag in the sidebar and choosing Tags > Rename Tag "[name]"..., by rightclicking
+                        change which tags are associated with a particular photo,  @
+                                select that photo, choose Tags > Modify Tags... or right-click on a photo and select Modify Tags... and edit the comma separated list.
+                        remove a tag from one or more photos,  @(@)
+                                select that tag in the sidebar, then select the photos you would like to remove, and choose Tags > Remove Tag "[name]" from Photos or right-click on the photos an select Remove Tag "[name]" from Photos.
+                        To delete a tag entirely,  (@)
+                                select that tag in the sidebar and choose Tags > Delete Tag "[name]" or by right-click and select Delete Tag "[name]".
+                        tags that can help you to sort your tag list in ways that better match how you work or think (for example, you can store location tags like "Mountains" or "Beach" under a parent tag "Places")  @!(?)
+                                Hierarchial tags
+                        create a new subtag  @(!)
+                                right-click on a tag and select New.
+                            change a photo's title,  (!)
+                                select the photo and click Photos > Edit Title..., or press F2.
+                            adjust the date and time of photos, (=inside sh.well, or to external file)
+                                select the photos you would like to adjust, choose Photos > Adjust Date and Time... and select a new date and time.
+                                ----
+                    effects / enhance ----
+                        .
+                        quick way to automatically adjust the brightness and contrast of your photo.  (@)
+                                Clicking on the Enhance button
+                                    +can then improve the adjustments by clicking on the Adjust button.
+                            Color adjustments (!!)
+                                The Adjust button opens a floating window with a histogram and sliders to adjust a photo's exposure, saturation, tint, temperature, and shadows.
+                                    + 'The histogram' .... (=the Enhance button)
+                            correct under- or over-exposed photos.
+                                Exposure
+                                Changes the brightness to make it look like the photo was exposed for a longer or shorter time.
+                            correct flat-looking photos or photos where the difference between bright and dark spots seems too big.
+                                Contrast
+                            Changes how vivid colors look =If your photo looks gray and washed out,
+                                Saturation
+                            useful for correcting photos taken with the wrong ____ setting, which typically have an unnatural color cast. For example, photos taken outdoors with ____ set to "Tungsten" may have a blue cast.
+                                Tint
+                            Changes how "warm" or "cool" the picture looks. Use this to make cold, depressing scenes look more lively, for example.
+                                Temperature
+                            Use this to make cold, depressing scenes look more lively, for example.
+                                Temperature
+                                Changes how "warm" or "cool" the picture looks.
+                            makes shadowy areas appear lighter. Use this to make detail more visible if it's obscured by the darkness of a shadow.
+                                Shadows
+                            These sliders change how light the brightest white is and how dark the darkest black is. Use them to change the contrast of the photo. Photos which look washed out should particularly benefit from changing these settings.
+                                Intensity Threshold (sliders on the histogram)
+                            Cropping  (!!)
+                                fullscreen mode.
+                                    =Crop button on the toolbar.
+                                  .
+                                Tip:
+                        You can also constrain the crop box to one of many common sizes.  Choose a size from the drop-down list that suits your needs. If you press the flip button next to it, the orientation of the constraint will switch (from landscape to portrait).
+                            the rule of thirds
+                                See More
+                                (=obj.s at crossings of lines forming 3x3 grid)
+                        use an external editor to do additional work on a photo (GIMP / UFRaw)  Photos > Open With External
+                        in full-window view: to show the original photo rather than the externally-edited one.  (@)
+                                press and hold the Shift key in full-window view
+                            Removing red-eye
+                                use the Red-eye tool.
+                                    - Drag the circle over the affected pupil, adjust its size with the slider control, and press Apply.
+                        Rotate or flip a photo  @@
+                                - rotate left: Shift+c-R or [
+                                - rotate right: c-R or ]
+                                If you select more than one image, you can rotate all of them at the same time.
+                        tool that allows photos to be leveled and straightened.  @
+                                The straighten tools
+                                    keyboard shortcut c-A.
+                            tip about metadata (such as tags and titles)  (!!)
+                                Shotwell can optionally write metadata (such as tags and titles) to photo files. For more information, see the section Photo files.
+                    Share / Publish ----
+                        .
+                        export photos from Shotwell  (!!)
+                                Alternatively, select a set of photos and choose the File > Export... command or press Shift+c-E,
+                            size, pixel size etc wh. Image will be exporting
+                                - A scaling-constraint (which means how Shotwell will decide to scale the photos down), and the desired pixel size.
+                                    (+see more)
+                        help to save your privacy (etc)  @
+                                - The option whether you like to export metadatas such as tags or ratings.  This can help to save your privacy if you have geolocation tags or tags which shouldn't be seen by anyone.
+                                    If selected, Shotwell will write tags, titles, and other metadata to the new files.
+                            print multiple images in one page;
+                                select multiple images, choose File > Print..., and in the Print dialog, choose the Image Settings tab. In Image Settings, choose one of the multiple-image-per-page options under Autosize.
+                        Publishing to the Web  @
+                                Through the use of plugins, Shotwell can publish photos and videos to the following services, each of which requires an account:
+                                 - Flickr
+                                 - Google Photos
+                                 - YouTube (videos only)
+                                 - Tumblr (Photos only)
+                                 - Any site running the Piwigo photo gallery software (photos only)
+                                   .
+                                Preferences + click on the Plugins tab
+                                - cs-p
+                        Sending photos
+                                using the GNOME desktop's Send To mechanism, which lets you send photos via email, instant messaging or in other ways.
+                                     .
+                                You can optionally choose to send the files in a compressed format.
+                    desktop background (image/slideshow) ----
+                        .
+                        Set a desktop background or slideshow @@!
+                                File > Set as Desktop Background.
+                                File > Set as Desktop Slideshow....  Shotwell will prompt you for a slideshow delay, which can be any interval up to one day in length.  The background slideshow will proceed even when Shotwell is not running.
+                        see a slideshow of any collection in Shotwell, @@!
+                                navigate to that collection and select View > Slideshow or press F5.
+                                 (+dur, transit, trans. dur.)
+                                ----
 
-                        The library directory (**(!)) ; Where Sh.w. stores|looks for y. Images (=is usually the Pictures directory in your home directory,,  Set in Pref.s)
+                                ----
+                        If you no longer want the missing files to be part of your Shotwell collection (perhaps because you deleted them),  ((@@))
+                                go to the Missing Files view, select the photos and then click Remove From Library.
+                    Shotwell Database ----
+                        .
+                        Shotwell normally stores its database and photo thumbnails in ____  @@ @@
+                                the directory ~/.shotwell . This directory does not hold photos, but the database in this directory contains a list of all the photos in the Shotwell library.
+                        advanced Library feature, *(*)  @@ @@
+                                it's possible for you to have multiple Shotwell libraries, each of which has its own set of photos.
+                                    Each library needs its own database directory. To launch Shotwell with an alternate library, specify an alternate database directory on the cmdline
+                                      .
+                                    shotwell -d [library-directory]
+                                ----
+
+                            The library directory (**(!)) ; Where Sh.w. stores|looks for y. Images (=is usually the Pictures directory in your home directory,,  Set in Pref.s)
 digikam
         .
         .
