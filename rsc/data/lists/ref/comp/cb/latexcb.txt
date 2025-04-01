@@ -6,6 +6,23 @@ LOffice Impress
 
 Pandoc
 Reveal.js
+                        https://revealjs.com/config/
+                    transitions
+                        https://revealjs.com/transitions/
+                      vert. slides
+                        https://revealjs.com/vertical-slides/
+                    fragments
+                        https://revealjs.com/fragments/
+                    code-fencing
+                        https://revealjs.com/code/
+                    images, videos
+                    animated gifs
+                        Include same way as regular html
+                        https://revealjs.com/media/
+                    speaker-notes
+                        https://revealjs.com/speaker-view/
+                    Jump to slide-num
+                        g, num, Enter
                     .
                     Absolutely! Here's a list of 15-20 Reveal.js features that can help you create visually engaging presentations, going beyond the basics:
                         Core Features & Transitions ----
@@ -229,22 +246,22 @@ Sphinx  <raw|Overview>
                     Large and Active Community: A strong community provides extensive documentation, tutorials, and support.
                     Customization: Highly customizable through themes, extensions, and configuration options.
 Markdown
-                https://www.markdownguide.org/basic-syntax/
-                header                    #
-                paragraph
-                fetstil, kursivering      *fetstil*  _kursivt_
-                blockquote                     > Mitt citat
-                list                      - punktlista   1. 2. numrerad lista
-                image                     ![bildtext](/sökväg/fil.png)  #+as var-reference(!)
-                code                      `   ```python
-                separator-line            *** --- ___
-                hyperlink                 Detta är [min länk](https://duckduckgo.com "En popup-text").  (+Formatering)
-                      #+as var-reference(!)
-                 escaping                  \
-                (anchor/page-links)
-                Task Lists ***            - [ ] Task One
-                Tables **(*) (+justification)
-                ---- Jupyter Notebooks
+                        https://www.markdownguide.org/basic-syntax/
+                        header                    #
+                        paragraph
+                        fetstil, kursivering      *fetstil*  _kursivt_
+                        blockquote                     > Mitt citat
+                        list                      - punktlista   1. 2. numrerad lista
+                        image                     ![bildtext](/sökväg/fil.png)  #+as var-reference(!)
+                        code                      `   ```python
+                    separator-line            *** --- ___
+                        hyperlink                 Detta är [min länk](https://duckduckgo.com "En popup-text").  (+Formatering)
+                              #+as var-reference(!)
+                         escaping                  \
+                        (anchor/page-links)
+                        Task Lists ***            - [ ] Task One
+                        Tables **(*) (+justification)
+.               ---- Jupyter Notebooks
                  inline html
                 set Fonts
                 color note-boxes

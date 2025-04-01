@@ -1,14 +1,17 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
 
+    +React.txt
+    HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
+
 c:/Users/SEDAALB2/Desktop/Scratch.txt
 ../weblinks.txt
     Queen  [YÄTT VA ZÅATN OEN XYVCC (B YHFGVTN VAYÄTT)]
     'För att bättre förstå om vad som influerat flera klassiska kompositörer'
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
-.'MIN TAGGIGA STOL' {{{
-  Vad som hänt är att jag har blivit - misshandlad, rånad, utnyttjad och förnedrad (av - skolan, klassen, utb.företaget)  (+Varför håller du på och ältar det där? Bara släpp det.)
+.'The Four Dangers' {{{
+  misshandlad, rånad, utnyttjad, förnedrad/förlöjligad
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
 TODO ADD 1 = STARTUPS 1 {{{
@@ -75,6 +78,80 @@ Håll utkik efter vår serie om hur du får ut det mesta av Microsoft 365!
 
 }}}
 
+2025-04-02 ---- (pres. halvtid) - Toy:Tmhe {{{
+
+bet.vetenskap, psykologi, kunskapsteori
+    [[arkitekt som är min egen administratör/bygger mina egna verktyg]]
+
+
+jag har en rätt speciell stil...  ____
+    [doktorn/doctor chaos, prof., memento, conan the librarian]
+
+
+du har en välsignelse eller en förbannelse, lite beroende på vem det är som tittar
+    du är ju helt galen... och helt|fullständigt briljant
+    "den enda skillnaden på mig och en galning är att jag inte är galen."
+[school-accolades]
+
+tror jag lätt ger intrycket av en [slouch]
+
+handler
+service
+utilities
+helper
+worker
+builder
+provider
+expediatior
+ ... (?)
+
+nu kör vi (behöver inte mycket handholding)
+
+[misstag]
+tog det ganska makligt
+(behövde ju komma igen och allt det där)
+
+
+- frågar för mycket / frågar för lite
+- det finns inga dumma frågor / f*n vad trög du är | händer det nåt eller?
+
+
+- min resumé sen innan (paul + adam)
+
+
+- lärdom
+- kontakter
+  - anställning
+
+
+blivit mer av en validering
+
+- hinner inte göra något arbete =kan använda som ex-jobb
+
+
+vad tycker ni? vad ska jag fokusera på?
+
+- visa att jag är en riktig jäkel rent tekniskt?
+- visa att jag är en social, trevlig prick som kan spela roliga visor på julfesterna?
+
+fyra fula ord (för att representera 'min sits' på skolan)
+    m-zvffunaqry  r-eåa  u-hgalggwnaqr|fynineorgr  f-söearqevat
+    [+zra nyyn äe iäyqvtg glqyvtn zrq ivyxn qrg äe fbz une/äe qr fxlyqvtn:
+    - aåtba
+    - vatra
+
+man är ju ändå bara människa (så länge man står upp)
+
+
+tre alternativ:
+- ___
+- bita ihop / dyka ner + stänga locket
+- hoppa av
+
+
+tillgång till kod  (=ab?)
+
+}}}
 
 
 Forums Stora
