@@ -35,6 +35,8 @@ markdown etc:
 [git, test/deploy]:
     gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
 
+scripting / Web ----
+    gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
 
