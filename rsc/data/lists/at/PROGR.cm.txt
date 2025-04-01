@@ -7292,6 +7292,8 @@ ___projs2git_cleanlist2024
             https://vimdoc.sourceforge.net/htmldoc/usr_41.html#41.9
             https://vim-jp.org/vimdoc-en/eval.html#exception-handling
 
+CONVERT BASIC 'BIG BLOCK-BUTTONS' TO BUTTONS AS 'EXTREMELY SPARSE ISLANDS WITH LONG DISTANCE BETWEEN'
+        - GRAVITATE TOWARDS LEFT END OF SCREEN (=USING L-HAND THUMB:  LEFTMOST: UNDO/REDO)
 
         - Basic clean-up and organization of code
           - upload spoof logo

@@ -6,17 +6,24 @@ Känn dina vänner väl, men/och dina fiender bättre. {{{
   Det är viktigt att förstå hur dina vänner tänker, men ännu viktigare att förstå hur dina fiender tänker.
 }}}
 
-The tragedy of science: A beautiful theory destroyed by an ugly fact.
+'Du/Jag har inget att förlora utom hela ditt/mitt förstånd.'
+
+The tragedy of science: A beautiful theory destroyed by an ugly fact.  - T.H. Huxley
+    https://quoteinvestigator.com/2020/12/26/ugly-fact/
+
+"All plans are rubbish, but planning is essential."  - Dwight D. Eisenhower
 
 'Effects are real. Perceptions are not.'
 
 Man brukar säga "Personen orkade inte leva". Jag tror det är fel/missvisande. Jag tror en bättre formulering är "Personen orkade inte lida".
+    ['Survivor Bias']
 
 Management by Inertia
 
 "The proof is in the pudding, not the word-salad."
       om en (ny) hammare fungerar
     # vad som avgör om pajen smakar bra är när du tar en tugga, inte om någon teolog/sociolog kan lägga fram avancerade argument för att så är fallet (speciellt om du precis tagit en tugga och det smakar riktigt illa)
+(som med _ termer kan argumentera att du är _ om du inte gillar smaken)
 
     [A lie repeated enough times...]
 PERSISTANCE OF EXPERIENCE
