@@ -836,6 +836,7 @@ bcb (**(!))
 
 Termux
   ../ref/comp/sysadm/Termux.Tags1.txt
+            TERMUX + TERMUX-API + RCLONE/DROPBOX (ETC) ----
                     - Great. A quick question about using
                       Termux on Android: I was very happy
                       that I could install NeoVim on Termux
@@ -894,78 +895,57 @@ Termux
                     access your device's storage.
 
                     - Open the Termux app.
-                    - Run the command: termux-setup-storage
+            - Run the command: termux-setup-storage
                     - A permission dialog will appear. Grant
                       Termux access to your storage.
+            This creates a storage directory within your Termux home directory (~).
+            Navigating the storage Directory:
 
-                    This creates a storage directory within
-                    your Termux home directory (~).
+            After granting permissions, you can navigate to your device's storage using the storage-directory.
 
-                    Navigating the storage Directory:
+            Inside storage, you'll find:
 
-                    After granting permissions, you can
-                    navigate to your device's storage using
-                    the storage-directory.
+            - dcim: For photos and videos.
+            - downloads: For downloaded files.
+            - movies: For movies.
+            - pictures: For pictures.
+            ____
+            - shared: This is the most important
+              one. It points to your device's main
+              "internal storage" or "shared
+              storage".
 
-                    Inside storage, you'll find:
+            Therefore, to access your general drive, you will have to cd storage/shared
 
-                    - dcim: For photos and videos.
-                    - downloads: For downloaded files.
-                    - movies: For movies.
-                    - pictures: For pictures.
-                    ____
-                    - shared: This is the most important
-                      one. It points to your device's main
-                      "internal storage" or "shared
-                      storage".
+            Accessing NeoVim Files:
 
-                    Therefore, to access your general drive,
-                    you will have to cd storage/shared
+            ____
+            - By default, NeoVim's configuration files (like init.vim or init.lua) are typically located in ~/.config/nvim.
+            - You can use cd ~/.config/nvim to navigate to this directory.
 
-                    Accessing NeoVim Files:
-
-                    ____
-                    - By default, NeoVim's configuration
-                      files (like init.vim or init.lua) are
-                      typically located in ~/.config/nvim.
-                    - You can use cd ~/.config/nvim to
-                      navigate to this directory.
-
-                    ____
-                    - To be able to edit files in your
-                      general android storage, you will have
-                      to navigate from your home directory,
-                      into the storage folder, and then
-                      further into the shared folder, using
-                      cd storage/shared
+            ____
+            - To be able to edit files in your general android storage, you will have to navigate from your home directory, into the storage folder, and then further into the shared folder, using
+            cd storage/shared
 
                     Symlinks (Optional):
 
-                    - If you find navigating through
-                      storage/shared cumbersome, you can
-                      create symbolic links to commonly used
-                      directories.
+            - If you find navigating through storage/shared cumbersome, you can create symbolic links to commonly used directories.
 
                     ____
-                    For example, to create a symlink to your
-                    Downloads folder:
+            For example, to create a symlink to your Downloads folder:
 
-                    ln -s ~/storage/shared/Download ~/Downloads
+            ln -s ~/storage/shared/Download ~/Downloads
 
-                    Then, you can simply use cd ~/Downloads
-                    to access your Downloads folder.
+            Then, you can simply use cd ~/Downloads to access your Downloads folder.
 
                     Using termux-open:
 
                     ____ ____ ____
-                    termux-open is a Termux utility that
-                    allows you to open files with the
-                    appropriate Android app.
+            termux-open is a Termux utility that allows you to open files with the appropriate Android app.
 
-                    For example, to open a PDF file in your
-                    Downloads folder:
+            For example, to open a PDF file in your Downloads folder:
 
-                    termux-open ~/storage/shared/Download/my_document.pdf
+            termux-open ~/storage/shared/Download/my_document.pdf
 
                     Cloud Storage (Dropbox, Google Drive):
 
@@ -983,16 +963,11 @@ Termux
 
                     Example Workflow:
 
-                    - Grant Termux storage permissions:
-                      termux-setup-storage
-                    - Navigate to your Downloads folder:
-                      cd ~/storage/shared/Download
-                    - Open a text file with NeoVim: nvim
-                      my_text_file.txt
-                    - Edit the file.
-                    - Save and exit NeoVim.
-                    - (Optional) Upload the file back to
-                      your cloud storage.
+            - Grant Termux storage permissions: termux-setup-storage
+            - Navigate to your Downloads folder: cd ~/storage/shared/Download
+            - Open a text file with NeoVim: nvim my_text_file.txt
+            - Edit the file.  - Save and exit NeoVim.
+            - (Optional) Upload the file back to your cloud storage.
 
                     By following these steps, you should be
                     able to effectively access and manage
@@ -1037,15 +1012,8 @@ Termux
 
                     How it helps: You can use rclone to:
 
-                    - Mount cloud storage as a local
-                      directory: This is the closest you'll
-                      get to real-time syncing. Changes made
-                      in NeoVim are immediately reflected in
-                      the cloud.
-                    - Sync files and folders: You can
-                      manually or automatically sync changes
-                      between your Termux storage and cloud
-                      storage.
+            - Mount cloud storage as a local directory: This is the closest you'll get to real-time syncing. Changes made in NeoVim are immediately reflected in the cloud.
+            - Sync files and folders: You can manually or automatically sync changes between your Termux storage and cloud storage.
 
                     Setup:
 
@@ -1057,7 +1025,7 @@ Termux
                     Google Drive.
 
                     Mount your cloud storage:
-                    rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+            rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
                     (replace my_dropbox with your configured remote name).
 
                     Now, you can access your Dropbox files in ~/dropbox.
@@ -1073,28 +1041,24 @@ Termux
                     - Requires some command-line knowledge.
                     - Mounting can be resource-intensive.
 
+            2. TERMUX-API AND CLOUD STORAGE APPS:  ___SEEMORE
 
-
-
-
-
-                    2. Termux-API and Cloud Storage Apps:
-
-                    What it is: Termux-API allows you to interact with Android's system features.
+            What it is: Termux-API allows you to interact with Android's system features.
                     How it helps: You can use it to:
                     Trigger file downloads from cloud apps (Dropbox, Google Drive) using intents.
                     Trigger file uploads back to cloud apps.
                     Setup:
-                    Install Termux-API: pkg install termux-api
+            Install Termux-API: pkg install termux-api
                     Install the Dropbox or Google Drive app on your Android device.
-                    Use termux-open with intents to download or upload files.
-                    Advantages:
-                    Leverages existing cloud app functionality.
-                    Simpler than rclone for basic file operations.
-                    Disadvantages:
-                    Not real-time syncing.
-                    Requires manual triggering of downloads and uploads.
-                    Limited control over syncing.
+                    .
+            Use termux-open with intents to download or upload files.
+            Advantages:
+            Leverages existing cloud app functionality.
+            Simpler than rclone for basic file operations.
+            Disadvantages:
+            Not real-time syncing.
+            Requires manual triggering of downloads and uploads.
+            Limited control over syncing.
 
                     ____ ____ ____ ____
                     3. Git (for Text Files):
@@ -1131,14 +1095,14 @@ Termux
                             More complex setup than basic cloud syncing.
 
                     Recommended Workflow (Rclone):
-
                   ____ ____ ____ ____
-                  For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
+            For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
 
                         Install and Configure rclone.
-                  Mount your cloud storage:
-
-                  rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+                        .
+            config:
+            Mount your cloud storage:
+            rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
 
                         Navigate to your mounted directory: cd ~/dropbox/path/to/my/files
                         Edit files with NeoVim: nvim my_file.txt
@@ -1179,38 +1143,25 @@ Termux
                     Create a New Remote:
                 You'll be prompted to create a new remote. Choose n for "new remote."
                 Enter a name for your remote. This is what will replace my_dropbox in your mount command. For example:
-                For Dropbox: dropbox_termux
+            For Dropbox: 'my_dropbox' = dropbox_termux
                 For Google Drive: gdrive_termux
                             Select the storage type:
-                For Dropbox: Choose Dropbox.
+            For Dropbox: Choose Dropbox.
                 For Google Drive: Choose Google Drive.
 
                             Follow the on-screen instructions:
-                Rclone will guide you through the
-                    authentication process. It will likely
-                    open a web browser to your Dropbox or
-                    Google Drive account, where you'll grant
-                    rclone access.
+            Rclone will guide you through the authentication process. It will likely open a web browser to your Dropbox or Google Drive account, where you'll grant rclone access.
                 If Termux is unable to open a browser, the rclone configuration
                 will provide you with a URL, that you will need to copy and paste into a
                 browser on another device.
-
-                After authorizing rclone, you will be provided
-                with a code, that you will then paste back into the Termux terminal.
-
-                    You'll be
-                    asked various configuration questions.
-                    In most cases, the default options are
-                    fine. Once the configuration is
-                    complete, rclone will save your remote
-                    settings.
+            After authorizing rclone, you will be provided with a code, that you will then paste back into the Termux terminal.
+            You'll be asked various configuration questions.  In most cases, the default options are fine. Once the configuration is complete, rclone will save your remote settings.
 
                 2. Use the Remote Name in Your Mount Command:
 
                 Now that you've configured your remotes, you can use their names in your rclone mount command:
-
-                    For Dropbox:
-                rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes
+            mounting:
+            For Dropbox: rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes
 
                     For Google Drive:
                 rclone mount gdrive_termux: ~/gdrive --vfs-cache-mode writes
@@ -1226,7 +1177,7 @@ Termux
 
                     Authentication: Rclone uses OAuth 2.0 for authentication, which is a secure way to grant access to your cloud storage.
                     Permissions: Ensure that Termux has the necessary permissions to access your file system.
-                Background Process: rclone mount runs as a background process. If you close Termux, the mount will be unmounted. You may need to use nohup or tmux to keep the mount running in the background.
+            Background Process: rclone mount runs as a background process. If you close Termux, the mount will be unmounted. You may need to use nohup or tmux to keep the mount running in the background.
                     VFS Cache Mode: The --vfs-cache-mode writes option is important for writing files to your mounted cloud storage. It caches data locally to improve performance.
 
                     By following these steps, you'll be able to mount your Dropbox and Google Drive accounts in Termux and access your cloud files directly from your Android device.
@@ -1236,8 +1187,7 @@ Termux
                     Remember to choose the approach that best suits your needs and technical comfort level.
 
                     - A quick question with regard to using rclone through Termux for getting instant (or near instant) sync between Dropbox, Google Drive (etc) files on an Android device and the cloud: Is there a way to specify only a particular folder inside my Google Drive or Dropbox folder system? What I mean is, if I would connect the whole of my Dropbox or Google Drive folders, that would be too much storage for my Android device to handle.
-
-                    Yes, you can absolutely specify a particular folder within your Google Drive or Dropbox structure when using rclone with Termux on Android. This allows you to sync only the relevant files and avoid overwhelming your device's storage.
+            Specify a particular folder within your Google Drive or Dropbox structure when using rclone with Termux on Android. This allows you to sync only the relevant files and avoid overwhelming your device's storage.
 
                     Here's how you can achieve this:
 
@@ -1246,7 +1196,7 @@ Termux
                     When configuring your rclone remote, you define the "remote" as a combination of the remote name and the path within that remote. For example:
 
                         If your Google Drive remote is named "gdrive" and you want to sync the folder "MySyncFolder" within your Drive, you would use "gdrive:MySyncFolder" as the remote path.
-                        If your Dropbox remote is named "dropbox" and you want to sync the folder "Documents/Important", you'd use "dropbox:Documents/Important".
+            If your Dropbox remote is named "dropbox" and you want to sync the folder "Documents/Important", you'd use "dropbox:Documents/Important".
 
                     2. Using the rclone sync or rclone copy commands:
 
@@ -1265,8 +1215,7 @@ Termux
 
                     Example using Dropbox:
                     Bash
-
-                    rclone copy dropbox:Documents/Important /storage/shared/ImportantDocuments
+            rclone copy dropbox:Documents/Important /storage/shared/ImportantDocuments
 
                     This command will:
 
@@ -1282,11 +1231,11 @@ Termux
                             Choose a local path on your Android device that has sufficient storage space.
                         Permissions:
                             Termux needs appropriate permissions to access the local storage directories.
-                        Sync vs. Copy:
-                            rclone sync makes the destination identical to the source, deleting files in the destination that are not present in the source.
-                            rclone copy copies files from the source to the destination without deleting any files in the destination.
-                        Filters:
-                            Rclone also allows you to add filters to your commands. This allows for even more fine grained control. You can specify file types to include or exclude.
+            Sync vs. Copy:
+            rclone sync makes the destination identical to the source, deleting files in the destination that are not present in the source.
+            rclone copy copies files from the source to the destination without deleting any files in the destination.
+            Filters:
+            Rclone also allows you to add filters to your commands. This allows for even more fine grained control. You can specify file types to include or exclude.
 
                     By specifying the correct remote path, you can easily sync only the necessary folders and keep your Android device's storage manageable.
 
@@ -1378,7 +1327,7 @@ Termux
                     Replace <mount_point> with the directory where you mounted your cloud drive (e.g., ~/dropbox, ~/gdrive).
 
                         Example:
-                    rclone mount --umount ~/dropbox
+            rclone mount --umount ~/dropbox
 
                     Advantages of Using rclone mount --umount:
 

@@ -1,6 +1,8 @@
-set foldmethod=indent foldlevel=1
-vim: fdm=indent:fdl=2:
+vim:fdm=indent:fdl=2:
+set fdm=indent fdl=1
 ___block3(=words)
+___defrru_freq
+___phrases_1isUniverb
 
 
 ___PToolkit
@@ -19451,6 +19453,10 @@ LISTS (=freqs phrases books)
      |
      |
       201-300: https://translate.google.com/#view=home&op=translate&sl=de&tl=en&text=ohne
+
+___defrru_freq
+set fdm=indent fdl=3
+set fdm=indent fdl=2
     ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-De.txt  @@  __lang-1=de
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_ty.txt
                 1 ich  jag | I
@@ -19622,7 +19628,7 @@ LISTS (=freqs phrases books)
                 167 ab ; från * | from *
                 168 leid ; lidande, smärta, sorg * | suffering, sorrow *
                 169 lassen ; låta * | let *
-             170 hey  hallå | hey
+            170 hey  hallå | hey
                 171 waren  var / varor * | were / goods *
                 172 zur ; till | to  ?
                 173 lass ; låta(, lat) | let(, lazy)
@@ -75344,7 +75350,8 @@ pick=startoff   #unless|om (...) inte
             37:7 Tennisracket. Tennisboll.
             37:8 Golfklubba. Golfboll.
             37:9 Skidor. Stavar. Pjäxor.
-  ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.txt  _sv_  ___PickStart
+___phrases_1isUniverb ___PickStart
+  ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.txt  _sv_
                     evince -p 8 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
                     Vanliga uttryck – när man träffar någon
                 God morgon.
