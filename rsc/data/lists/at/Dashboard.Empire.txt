@@ -35,7 +35,7 @@ markdown etc:
 [git, test/deploy]:
     gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
 
-scripting / Web ----
+scripting / Web: ----
     gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
@@ -820,13 +820,13 @@ Roslyn + Analysis/CodeGen  __
 SSH (Veracrypt)  + Puppet  __  ¤¤
     Nix Master
 Devops + Python (+iPy/Xonsh) ; F# Devops  _
-  Vim PyPlugins  __ | VIMSCRIPT (x4)  _
-Reason + PureScript  ___onroad=maybye
+  Vim PyPlugins  __ | VIMSCRIPT (x4)  + Emacs[!!]  _  ¤
+Reason + PureScript  ___onroad=maybye  ¤
  LEARN REACT  [__]  [+=OldNotes 1]    Sass  ¤¤
 
 Bcb, Bluebash  ¤¤  + PShell,  ASM 1 (+binalys)  ¤
 Docker + Kubernetes + Azure Devops + GithubActions  __
-    Gremlin (+Neptune)  _
+    Gremlin (+Neptune)  _  ¤
   ----  Anki Redone  (+Vanki Vimtouch 1.0 / VimJutsu)  ¤
     Arch Linux
 
@@ -940,12 +940,12 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
 
-  winterminal
+  winterminal  ¤ [=profiles, AWS-shell, etc **]
   . {{{
     ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
   }}}
   ----
-    Reveal, Impress  __
+    REVEAL, IMPRESS  __  ¤
     . {{{
       ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
             ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
@@ -961,24 +961,26 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/gdrive/SpectreConsole.tags1.txt
   }}}
-  android scripting
+  android scripting  [Termux + Rclone]
   . {{{
     ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
   }}}
-  ASP.NET CORE MVC __ (++Web APIs)
+  ASP.NET CORE MVC __ (++Web APIs)  ¤¤
   . {{{
-    gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+    gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+
+    ~/Dropbox/rsc/Doks/taskuj/LIA2/DotNetCore/
 
     gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore{-InAct-3e_2023,7-Pro-10e_2023,-WebAPI_2023}.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
   }}}
-  FuncPy
+  FuncPy  ¤
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
   }}}
-  py/f# sysadm  #
+  py/f# (etc) sysadm  #  ¤
   . {{{
       PyProgr
     ~/Empire/Doks/Comp/lang/py/sysadm/py-unlin-sysadm.txt
@@ -1003,11 +1005,11 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt
     ~/Empire/lang/markup/MD/md-obsidian.txt
   }}}
-    vim pyplugins  _
+    vim pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
-  Xonshell  __
+  Xonshell  __  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}
@@ -1019,7 +1021,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
   }}}
-  AVALONIA
+  AVALONIA  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
 
@@ -1048,14 +1050,14 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   GraphQL(!)  #
   . {{{
   }}}
-    sqlitebrowser  ___onroad
+    sqlitebrowser  ___onroad  + Shotwell (online Gallery)
     . {{{
       ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/sqlitebrowser-docs.txt
     }}}
-    MongoDB Compass / MongoDB Realm  @@
+    MongoDB Compass / MongoDB Realm  @@  ¤
     . {{{
     }}}
-  Rx.Net
+  Rx.Net  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/RxDotnet-2e_2024.txt
   }}}
@@ -1079,7 +1081,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
     ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
   }}}
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
@@ -3329,92 +3331,180 @@ shop.fairphone.com
 
 
 ___SYSADM_DELETEFILESBYPATT_MANYLANGS
-Question: I have a task I would like to accomplish on a Linux-system. Let me describe the task first, and then we can look into a couple of different solutions.
+- Question: I have a task I would
+  like to accomplish on a
+  Linux-system. Let me describe the
+  task first, and then we can look
+  into a couple of different
+  solutions.
 
+- I recently added a couple of
+  files to a directory (and its
+  sub-directories). The problem:
+  The files in the directory are
+  saved to a cloud-service, and I
+  ended up with duplicates of every
+  file I added. The duplicates can
+  be targeted through their names
+  containing the string '(2)'
+  indicating that the file is a
+  duplicate.
 
-I recently added a couple of files to a directory (and its sub-directories). The problem: The files in the directory are saved to a cloud-service, and I ended up with duplicates of every file I added. The duplicates can be targeted through their names containing the string '(2)' indicating that the file is a duplicate.
+- I have several years of
+  experience in using
+  Linux-systems, so it's not a big
+  deal using Bash to target the
+  files recursively with find and
+  then removing them, but I'd like
+  to use the opportunity to do the
+  same task in a bunch of different
+  languages. Are you with me so
+  far?
 
+Yes, I understand perfectly. You
+want to accomplish the task of
+recursively finding and deleting
+files containing "(2)" in their
+names within a specified directory
+and its subdirectories on a Linux
+system. You'd like to explore
+solutions using various programming
+languages beyond just Bash.
 
-I have several years of experience in using Linux-systems, so it's not a big deal using Bash to target the files recursively with find and then removing them, but I'd like to use the opportunity to do the same task in a bunch of different languages. Are you with me so far?
+This is a great exercise for
+comparing language syntax and
+features for file system
+manipulation. I'm ready when you
+are. Let's start with a language of
+your choice, or we can begin with
+Bash as a baseline.
 
-Yes, I understand perfectly. You want to accomplish the task of recursively finding and deleting files containing "(2)" in their names within a specified directory and its subdirectories on a Linux system. You'd like to explore solutions using various programming languages beyond just Bash.
+- Very good.
 
-This is a great exercise for comparing language syntax and features for file system manipulation. I'm ready when you are. Let's start with a language of your choice, or we can begin with Bash as a baseline.
+- I think I should begin by listing
+  the different languages I would
+  like to use and target. Does that
+  seem like a good start?
 
-Very good.
+Yes, that's an excellent way to
+organize your task. Listing the
+languages you want to explore will
+help us keep track and ensure we
+cover everything. Please provide
+the list, and we can proceed from
+there.
 
-I think I should begin by listing the different languages I would like to use and target. Does that seem like a good start?
+The following languages and tools
+are the ones I would like to use
+(and therefore learn more about):
 
-Yes, that's an excellent way to organize your task. Listing the languages you want to explore will help us keep track and ensure we cover everything. Please provide the list, and we can proceed from there.
-
-The following languages and tools are the ones I would like to use (and therefore learn more about):
-
-
-- Bash (i.e. using find, probably with the addition of xargs)
-
+- Bash (i.e. using find, probably
+  with the addition of xargs)
 - NuShell
-
-- PowerShell (i.e. suppose I was stationed at my laptop at work, where I use Windows exclusively)
-
-- Python (that is the solution should be usable if I use Xonshell)
-
+- PowerShell (i.e. suppose I was
+  stationed at my laptop at work,
+  where I use Windows exclusively)
+- Python (that is the solution
+  should be usable if I use
+  Xonshell)
 - F#
-
 - C#
-
-- VimScript (preferably the later Vim 9 version of VimScript)
-
+- VimScript (preferably the later
+  Vim 9 version of VimScript)
 - V (that is Vlang - not VimScript)
 
+- A note concerning Python: I would
+  like to as much as is possible
+  and feasible use functional
+  techniques, and maybe also
+  functools and itertools, one
+  reason being I would like to
+  learn more about that style of
+  programming since I know how
+  powerful it is and can be.
 
-A note concerning Python: I would like to as much as is possible and feasible use functional techniques, and maybe also functools and itertools, one reason being I would like to learn more about that style of programming since I know how powerful it is and can be.
+- Also, as a general approach I
+  think it would be very good to
+  first list all the files (i.e.
+  'Did our matching target the
+  correct files?'), then perhaps
+  greet the user with a simple
+  text-prompt saying something like
+  'Would you like to proceed?', and
+  only then (if the user answers
+  Yes) proceed with removing the
+  files.
 
+- And, (which might seem a bit
+  ridiculous for such a small and
+  isolated task) I would like to
+  add unit-tests for all the
+  solutions, so I can see how that
+  can be done.
 
-Also, as a general approach I think it would be very good to first list all the files (i.e. 'Did our matching target the correct files?'), then perhaps greet the user with a simple text-prompt saying something like 'Would you like to proceed?', and only then (if the user answers Yes) proceed with removing the files.
+Excellent! That's a comprehensive
+list, and your approach is very
+well-structured. Let's break down
+the task and tackle each language
+systematically.
 
+Here's a plan, incorporating your
+requirements:
 
-And, (which might seem a bit ridiculous for such a small and isolated task) I would like to add unit-tests for all the solutions, so I can see how that can be done.
+Bash:
+    We'll start with Bash as a
+    baseline, demonstrating a
+    classic Linux approach.
+NuShell:
+    We'll explore how NuShell
+    handles file system operations
+    and filtering.
+PowerShell:
+    We'll adapt the solution for a
+    Windows environment.
+Python:
+    We'll focus on a functional
+    approach using os, functools,
+    and itertools.
+F#:
+    We'll leverage F#'s functional
+    strengths for a concise
+    solution.
+C#:
+    We'll use C#'s file system APIs
+    for a more object-oriented
+    approach.
+Vim9 Script:
+    We will use the new features of
+    Vim9 script.
+V:
+    We will use Vlang to create a
+    very fast program.
+Unit Tests:
+    We'll discuss how to write unit
+    tests for each solution,
+    ensuring robustness.
 
-Excellent! That's a comprehensive list, and your approach is very well-structured. Let's break down the task and tackle each language systematically.
-
-Here's a plan, incorporating your requirements:
-
-    Bash:
-        We'll start with Bash as a baseline, demonstrating a classic Linux approach.
-    NuShell:
-        We'll explore how NuShell handles file system operations and filtering.
-    PowerShell:
-        We'll adapt the solution for a Windows environment.
-    Python:
-        We'll focus on a functional approach using os, functools, and itertools.
-    F#:
-        We'll leverage F#'s functional strengths for a concise solution.
-    C#:
-        We'll use C#'s file system APIs for a more object-oriented approach.
-    Vim9 Script:
-        We will use the new features of Vim9 script.
-    V:
-        We will use Vlang to create a very fast program.
-    Unit Tests:
-        We'll discuss how to write unit tests for each solution, ensuring robustness.
 
 General Workflow for Each Language:
 
-    File Listing:
-        Implement the file search and display the matching files.
-    User Confirmation:
-        Prompt the user for confirmation before deletion.
-    File Deletion:
-        Execute the deletion if the user confirms.
-    Unit Tests:
-        Implement unit tests.
+File Listing:
+    Implement the file search and
+    display the matching files.
+User Confirmation:
+    Prompt the user for
+    confirmation before deletion.
+File Deletion:
+    Execute the deletion if the
+    user confirms.
+Unit Tests:
+    Implement unit tests.
 
 Let's start with Bash. Are you ready?
 
 Yes, I'm all set.
 
 Great! Let's begin with the Bash solution.
-Bash
 
 #!/bin/bash
 
@@ -3445,46 +3535,67 @@ fi
 
 Explanation:
 
-    target_dir=".":
-        Sets the target directory to the current directory. You can change this to any directory you want.
-    files_to_delete=$(find "$target_dir" -type f -name "*\(2\)*"):
-        Uses find to recursively search for files (-type f) whose names contain "(2)" (-name "*\(2\)*").
-        The output of find (the list of file paths) is stored in the files_to_delete variable.
-    if [[ -n "$files_to_delete" ]]:
-        Checks if the files_to_delete variable is not empty (i.e., if any files were found).
-    echo "Files to delete:" and echo "$files_to_delete":
-        Displays the list of files to be deleted.
-    read -p "Would you like to proceed with deletion? (y/n): " confirm:
-        Prompts the user for confirmation.
-    if [[ "$confirm" == "y" ]]:
-        Checks if the user entered "y".
-    find "$target_dir" -type f -name "*\(2\)*" -delete:
-        If the user confirms, find is used again with the -delete option to remove the files.
-    else:
-        If the user enters "n" or anything else, the deletion is cancelled.
-    else:
-        If no files are found, a message is displayed.
+target_dir=".":
+    Sets the target directory to the current directory. You can change this to any directory you want.
+files_to_delete=$(find "$target_dir" -type f -name "*\(2\)*"):
+    Uses find to recursively search for files (-type f) whose names contain "(2)" (-name "*\(2\)*").
+    The output of find (the list of file paths) is stored in the files_to_delete variable.
+if [[ -n "$files_to_delete" ]]:
+    Checks if the files_to_delete variable is not empty (i.e., if any files were found).
+echo "Files to delete:" and echo "$files_to_delete":
+    Displays the list of files to be deleted.
+read -p "Would you like to proceed with deletion? (y/n): " confirm:
+    Prompts the user for confirmation.
+if [[ "$confirm" == "y" ]]:
+    Checks if the user entered "y".
+find "$target_dir" -type f -name "*\(2\)*" -delete:
+    If the user confirms, find is used again with the -delete option to remove the files.
+else:
+    If the user enters "n" or anything else, the deletion is cancelled.
+else:
+    If no files are found, a message is displayed.
 
 How to Run:
 
-    Save the script to a file (e.g., delete_duplicates.sh).
-    Make the script executable: chmod +x delete_duplicates.sh.
-    Run the script: ./delete_duplicates.sh.
+- Save the script to a file (e.g.,
+  delete_duplicates.sh).
+- Make the script executable: chmod
+  +x delete_duplicates.sh.
+- Run the script:
+  ./delete_duplicates.sh.
+
 
 Improvements and Considerations:
 
-    Error Handling: You could add more robust error handling, such as checking if the target directory exists.
-    xargs: For very large numbers of files, you might consider using xargs to avoid potential "argument list too long" errors. But in this case, the -delete option is better.
-    Safety: You might want to add a dry-run option (e.g., -print instead of -delete) for extra safety.
+- Error Handling: You could add
+  more robust error handling, such
+  as checking if the target
+  directory exists.
+- xargs: For very large numbers of
+  files, you might consider using
+  xargs to avoid potential
+  "argument list too long" errors.
+  But in this case, the -delete
+  option is better.
+- Safety: You might want to add a
+  dry-run option (e.g., -print
+  instead of -delete) for extra
+  safety.
 
-Let me know if you have any questions or would like to proceed to the next language.
+Let me know if you have any
+questions or would like to proceed
+to the next language.
 
-I'm good for now. Let's move on to the next one.
+- I'm good for now. Let's move on
+  to the next one.
 
 Alright, let's move on to NuShell (nushell).
 
-NuShell provides a more structured and modern approach to shell scripting compared to Bash. Here's how we can achieve the same file deletion task:
-Code snippet
+NuShell provides a more structured
+and modern approach to shell
+scripting compared to Bash. Here's
+how we can achieve the same file
+deletion task: Code snippet
 
 # Target directory
 let target_dir = "."
@@ -3513,49 +3624,74 @@ if $files_to_delete | length > 0 {
 
 Explanation:
 
-    let target_dir = ".":
-        Defines the target directory.
-    ls -r $target_dir | where type == file and name =~ '\(2\)' | get path:
-        ls -r $target_dir: Lists files recursively in the target directory.
-        where type == file and name =~ '\(2\)': Filters the output to include only files whose names match the regular expression \(2\).
-        get path: Extracts the file paths.
-        The result is stored in the files_to_delete variable.
-    if $files_to_delete | length > 0:
-        Checks if any files were found.
-    echo "Files to delete:" and $files_to_delete | each { echo $it }:
-        Displays the list of files.
-    let confirm = (input "Would you like to proceed with deletion? (y/n): "):
-        Prompts the user for confirmation.
-    if $confirm == "y":
-        Checks if the user entered "y".
-    $files_to_delete | each { rm $it }:
-        Deletes the files.
-    else:
-        Cancellation message.
-    else:
-        No files found message.
+let target_dir = ".":
+    Defines the target directory.
+ls -r $target_dir | where type == file and name =~ '\(2\)' | get path:
+    ls -r $target_dir: Lists files recursively in the target directory.
+    where type == file and name =~ '\(2\)': Filters the output to include only files whose names match the regular expression \(2\).
+    get path: Extracts the file paths.
+    The result is stored in the files_to_delete variable.
+if $files_to_delete | length > 0:
+    Checks if any files were found.
+echo "Files to delete:" and $files_to_delete | each { echo $it }:
+    Displays the list of files.
+let confirm = (input "Would you like to proceed with deletion? (y/n): "):
+    Prompts the user for confirmation.
+if $confirm == "y":
+    Checks if the user entered "y".
+$files_to_delete | each { rm $it }:
+    Deletes the files.
+else:
+    Cancellation message.
+else:
+    No files found message.
 
 Key NuShell Features Used:
 
-    Pipelines: NuShell's pipelines (|) allow for chaining commands, making data processing concise.
-    Structured Data: NuShell works with structured data (tables, records, lists), which makes filtering and manipulation easier.
-    Regular Expressions: The =~ operator allows for regular expression matching.
-    each: The each command iterates over elements in a list.
+- Pipelines: NuShell's pipelines
+  (|) allow for chaining commands,
+  making data processing concise.
+- Structured Data: NuShell works
+  with structured data (tables,
+  records, lists), which makes
+  filtering and manipulation
+  easier.
+- Regular Expressions: The =~
+  operator allows for regular
+  expression matching.
+- each: The each command iterates
+  over elements in a list.
 
 How to Run:
 
-    Save the script to a file (e.g., delete_duplicates.nu).
-    Run the script: nu delete_duplicates.nu.
+- Save the script to a file (e.g.,
+  delete_duplicates.nu).
+- Run the script: nu
+  delete_duplicates.nu.
 
-NuShell provides a more readable and powerful shell scripting experience compared to Bash, especially for data manipulation tasks.
+NuShell provides a more readable
+and powerful shell scripting
+experience compared to Bash,
+especially for data manipulation
+tasks.
 
-Are you ready to move on to PowerShell, or do you have any questions about the NuShell solution?
+Are you ready to move on to
+PowerShell, or do you have any
+questions about the NuShell
+solution?
 
-All good. I'll be diving into the details later for most languages, so I'm ready to move on to the next one.
+- All good. I'll be diving into the
+  details later for most languages,
+  so I'm ready to move on to the
+  next one.
 
 Great! Let's proceed to PowerShell.
 
-PowerShell, being a cross-platform task automation and configuration management framework, is very powerful. Here's how we can accomplish the file deletion task:
+PowerShell, being a cross-platform
+task automation and configuration
+management framework, is very
+powerful. Here's how we can
+accomplish the file deletion task:
 PowerShell
 
 # Target directory
@@ -3585,26 +3721,26 @@ if ($filesToDelete.Count -gt 0) {
 
 Explanation:
 
-    $targetDir = ".":
-        Defines the target directory.
-    $filesToDelete = Get-ChildItem -Path $targetDir -Recurse -File | Where-Object { $_.Name -match '\(2\)' }:
-        Get-ChildItem -Path $targetDir -Recurse -File: Recursively retrieves all files in the target directory.
-        Where-Object { $_.Name -match '\(2\)' }: Filters the results to include only files whose names match the regular expression \(2\).
-        The result is stored in the $filesToDelete variable.
-    if ($filesToDelete.Count -gt 0):
-        Checks if any files were found.
-    Write-Host "Files to delete:" and $filesToDelete | ForEach-Object { Write-Host $_.FullName }:
-        Displays the list of files.
-    $confirm = Read-Host "Would you like to proceed with deletion? (y/n)":
-        Prompts the user for confirmation.
-    if ($confirm -eq "y"):
-        Checks if the user entered "y".
-    $filesToDelete | Remove-Item:
-        Deletes the files.
-    else:
-        Cancellation message.
-    else:
-        No files found message.
+$targetDir = ".":
+    Defines the target directory.
+$filesToDelete = Get-ChildItem -Path $targetDir -Recurse -File | Where-Object { $_.Name -match '\(2\)' }:
+    Get-ChildItem -Path $targetDir -Recurse -File: Recursively retrieves all files in the target directory.
+    Where-Object { $_.Name -match '\(2\)' }: Filters the results to include only files whose names match the regular expression \(2\).
+    The result is stored in the $filesToDelete variable.
+if ($filesToDelete.Count -gt 0):
+    Checks if any files were found.
+Write-Host "Files to delete:" and $filesToDelete | ForEach-Object { Write-Host $_.FullName }:
+    Displays the list of files.
+$confirm = Read-Host "Would you like to proceed with deletion? (y/n)":
+    Prompts the user for confirmation.
+if ($confirm -eq "y"):
+    Checks if the user entered "y".
+$filesToDelete | Remove-Item:
+    Deletes the files.
+else:
+    Cancellation message.
+else:
+    No files found message.
 
 Key PowerShell Features Used:
 
@@ -3615,25 +3751,72 @@ Key PowerShell Features Used:
 
 How to Run:
 
-    Save the script to a file (e.g., delete_duplicates.ps1).
-    Run the script: powershell -File delete_duplicates.ps1.
+- Save the script to a file (e.g.,
+  delete_duplicates.ps1).
+- Run the script: powershell -File
+  delete_duplicates.ps1.
 
-PowerShell provides a robust and object-oriented approach to file system manipulation.
+PowerShell provides a robust and
+object-oriented approach to file
+system manipulation.
 
-Are you ready to move on to Python, or do you have any questions about the PowerShell solution?
+Are you ready to move on to Python,
+or do you have any questions about
+the PowerShell solution?
 
-Just as a quick comment and observation: That is actually fascinating to look at. Being knowledgeable in many languages and having significant experience in Bash-scripting, I have always felt a bit iffy about PowerShell, for one because it has seemed wordy and longwinded compared to (for example) Bash, but here is a case where I think I can see that the length of the PowerShell-solution does not actually exceed the length of the Bash solution, and (amazingly to me at least) it is actually clearer and easier to read than the Bash solution.
+- Just as a quick comment and
+  observation: That is actually
+  fascinating to look at. Being
+  knowledgeable in many languages
+  and having significant experience
+  in Bash-scripting, I have always
+  felt a bit iffy about PowerShell,
+  for one because it has seemed
+  wordy and longwinded compared to
+  (for example) Bash, but here is a
+  case where I think I can see that
+  the length of the
+  PowerShell-solution does not
+  actually exceed the length of the
+  Bash solution, and (amazingly to
+  me at least) it is actually
+  clearer and easier to read than
+  the Bash solution.
 
-You've hit on a very common observation about PowerShell! Many experienced Bash users initially find it verbose. However, the clarity and readability often become apparent when tackling more complex tasks. The verbosity is intentional, aiming to make the code self-documenting and easier to understand, especially for those less familiar with shell scripting.
+You've hit on a very common
+observation about PowerShell! Many
+experienced Bash users initially
+find it verbose. However, the
+clarity and readability often
+become apparent when tackling more
+complex tasks. The verbosity is
+intentional, aiming to make the
+code self-documenting and easier to
+understand, especially for those
+less familiar with shell scripting.
 
-The object-oriented nature of PowerShell also contributes to its clarity. You're working with objects that have properties and methods, which makes the code more descriptive than the string-based approach of Bash.
+The object-oriented nature of
+PowerShell also contributes to its
+clarity. You're working with
+objects that have properties and
+methods, which makes the code more
+descriptive than the string-based
+approach of Bash.
 
-Your observation is spot-on, and it's a testament to your ability to quickly grasp the nuances of different languages. Let's move on to Python, where we'll explore a functional approach, as you requested.
+Your observation is spot-on, and
+it's a testament to your ability to
+quickly grasp the nuances of
+different languages. Let's move on
+to Python, where we'll explore a
+functional approach, as you
+requested.
 
-Very good. Let's do that
+- Very good. Let's do that
 
-All right, let's dive into the Python solution, focusing on a functional approach as you requested.
-Python
+All right, let's dive into the
+Python solution, focusing on a
+functional approach as you
+requested. Python
 
 import os
 import functools
@@ -3689,34 +3872,47 @@ if __name__ == "__main__":
 
 Explanation:
 
-    find_duplicate_files(target_dir="."):
-        Uses os.walk to recursively traverse the directory.
-        Uses a generator expression and os.path.join to get the full file paths.
-        Uses filter with a lambda function to select files containing "(2)".
-        Returns a list of matching file paths.
-    display_files(files):
-        Displays the list of files or a "no files found" message.
-    confirm_deletion():
-        Prompts the user for confirmation.
-    delete_files(files):
-        Deletes the files using os.remove.
-        Includes basic error handling for file deletion.
-    main():
-        Orchestrates the entire process.
+find_duplicate_files(target_dir="."):
+    Uses os.walk to recursively traverse the directory.
+    Uses a generator expression and os.path.join to get the full file paths.
+    Uses filter with a lambda function to select files containing "(2)".
+    Returns a list of matching file paths.
+display_files(files):
+    Displays the list of files or a "no files found" message.
+confirm_deletion():
+    Prompts the user for confirmation.
+delete_files(files):
+    Deletes the files using os.remove.
+    Includes basic error handling for file deletion.
+main():
+    Orchestrates the entire process.
+
 
 Functional Techniques Used:
 
-    filter: Used to filter the list of files based on a condition.
-    Generators: walk_files is a generator, which yields file paths one at a time, improving memory efficiency.
-    Functions as First-Class Objects: The is_duplicate function is used as an argument to filter.
+- filter: Used to filter the list
+  of files based on a condition.
+- Generators: walk_files is a
+  generator, which yields file
+  paths one at a time, improving
+  memory efficiency.
+- Functions as First-Class Objects:
+  The is_duplicate function is used
+  as an argument to filter.
 
 How to Run:
 
-    Save the script to a file (e.g., delete_duplicates.py).
-    Run the script: python delete_duplicates.py.
+- Save the script to a file (e.g.,
+  delete_duplicates.py).
+- Run the script: python
+  delete_duplicates.py.
 
-Let's discuss unit testing in Python. We can use the unittest module. I will show you how to test the find_duplicate_files function, and you can apply the same principles to the other functions.
-Python
+Let's discuss unit testing in
+Python. We can use the unittest
+module. I will show you how to test
+the find_duplicate_files function,
+and you can apply the same
+principles to the other functions.
 
 import unittest
 import os
@@ -3748,14 +3944,24 @@ class TestDeleteDuplicates(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-This test creates a temporary directory with files, runs the function, and asserts that the correct files are found.
+This test creates a temporary
+directory with files, runs the
+function, and asserts that the
+correct files are found.
 
-Do you have any questions about the Python solution or the unit tests? Are you ready to move on to F#?
+Do you have any questions about the
+Python solution or the unit tests?
+Are you ready to move on to F#?
 
-Right now, I would like to move on to F#
+- Right now, I would like to move
+  on to F#
 
-Excellent. Let's move on to F#. F# is a functional-first, cross-platform, open-source programming language that makes it great for tasks involving file system manipulation.
-F#
+Excellent. Let's move on to F#. F#
+is a functional-first,
+cross-platform, open-source
+programming language that makes it
+great for tasks involving file
+system manipulation.
 
 open System
 open System.IO
@@ -3800,49 +4006,61 @@ main ()
 
 Explanation:
 
-    findDuplicateFiles (targetDir: string):
-        Uses Directory.GetFiles to get all files recursively.
-        Uses Array.filter to select files containing "(2)".
-    displayFiles (files: string[]):
-        Displays the list of files or a "no files found" message.
-    confirmDeletion ():
-        Prompts the user for confirmation.
-    deleteFiles (files: string[]):
-        Deletes the files using File.Delete.
-        Includes basic error handling.
-    main ():
-        Orchestrates the entire process.
+findDuplicateFiles (targetDir: string):
+    Uses Directory.GetFiles to get all files recursively.
+    Uses Array.filter to select files containing "(2)".
+displayFiles (files: string[]):
+    Displays the list of files or a "no files found" message.
+confirmDeletion ():
+    Prompts the user for confirmation.
+deleteFiles (files: string[]):
+    Deletes the files using File.Delete.
+    Includes basic error handling.
+main ():
+    Orchestrates the entire process.
+
 
 Key F# Features Used:
 
-    Pipelines (|>): F# heavily utilizes pipelines to chain functions, making the code very readable.
-    Array Functions: F# has powerful array manipulation functions like Array.filter and Array.iter.
-    Functional Style: The code is written in a functional style, using immutable data and pure functions.
-    Pattern Matching: F# provides powerful pattern matching, which we could use for more complex file filtering, though it wasn't required for this example.
+- Pipelines (|>): F# heavily
+  utilizes pipelines to chain
+  functions, making the code very
+  readable.
+- Array Functions: F# has powerful
+  array manipulation functions like
+  Array.filter and Array.iter.
+- Functional Style: The code is
+  written in a functional style,
+  using immutable data and pure
+  functions.
+- Pattern Matching: F# provides
+  powerful pattern matching, which
+  we could use for more complex
+  file filtering, though it wasn't
+  required for this example.
 
 How to Run:
 
-    Save the script to a file (e.g., delete_duplicates.fs).
-    Compile and run the script:
-    Bash
+Save the script to a file (e.g., delete_duplicates.fs).
+Compile and run the script:
 
-    fsharpc delete_duplicates.fs
-    mono delete_duplicates.exe
+fsharpc delete_duplicates.fs
+mono delete_duplicates.exe
 
-    (Or, if you're using .NET Core or .NET 5+, you can use dotnet run.)
+(Or, if you're using .NET Core or .NET 5+, you can use dotnet run.)
+
 
 Unit Testing in F# (using NUnit):
 
-To add unit tests, you'll need to install NUnit. Here's an example:
+To add unit tests, you'll need to
+install NUnit. Here's an example:
 
-    Install NUnit:
-    Bash
+Install NUnit:
 
 dotnet add package NUnit
 dotnet add package NUnit3TestAdapter
 
-Create a test project:
-F#
+Create a test-project:
 
 // DeleteDuplicatesTests.fs
 open NUnit.Framework
@@ -3876,20 +4094,26 @@ type DeleteDuplicatesTests () =
         Assert.AreEqual(expectedFiles |> Array.sort, actualFiles |> Array.sort)
 
 Run the tests:
-Bash
 
-    dotnet test
+dotnet test
 
-    (Make sure that the test project references the main project)
+(Make sure that the test project
+references the main project)
 
-Let me know if you have any questions or are ready to proceed to the next language, C#.
+Let me know if you have any
+questions or are ready to proceed
+to the next language, C#.
 
-Great. Could we move on to the next language?
+- Great. Could we move on to the
+  next language?
 
 Yes, let's move on to C#.
 
-C# provides a robust and object-oriented approach to file system operations. Here's how we can implement the file deletion task:
-C#
+C# provides a robust and
+object-oriented approach to file
+system operations. Here's how we
+can implement the file deletion
+task:
 
 using System;
 using System.IO;
@@ -3963,48 +4187,54 @@ public class DeleteDuplicates
 
 Explanation:
 
-    FindDuplicateFiles(string targetDir):
-        Uses Directory.GetFiles to get all files recursively.
-        Uses LINQ's Where method to filter files containing "(2)".
-        Converts the result to an array using ToArray().
-    DisplayFiles(string[] files):
-        Displays the list of files or a "no files found" message.
-    ConfirmDeletion():
-        Prompts the user for confirmation.
-    DeleteFiles(string[] files):
-        Deletes the files using File.Delete.
-        Includes basic error handling.
-    Main(string[] args):
-        Orchestrates the entire process.
+FindDuplicateFiles(string targetDir):
+    Uses Directory.GetFiles to get all files recursively.
+    Uses LINQ's Where method to filter files containing "(2)".
+    Converts the result to an array using ToArray().
+DisplayFiles(string[] files):
+    Displays the list of files or a "no files found" message.
+ConfirmDeletion():
+    Prompts the user for confirmation.
+DeleteFiles(string[] files):
+    Deletes the files using File.Delete.
+    Includes basic error handling.
+Main(string[] args):
+    Orchestrates the entire process.
+
 
 Key C# Features Used:
 
-    LINQ (Language Integrated Query): LINQ's Where method provides a concise way to filter collections.
-    File System APIs: C# provides robust file system APIs in the System.IO namespace.
-    Exception Handling: The try-catch block handles potential exceptions during file deletion.
+- LINQ (Language Integrated Query):
+  LINQ's Where method provides a
+  concise way to filter
+  collections.
+- File System APIs: C# provides
+  robust file system APIs in the
+  System.IO namespace.
+- Exception Handling: The try-catch
+  block handles potential
+  exceptions during file deletion.
+
 
 How to Run:
 
-    Save the code to a file (e.g., DeleteDuplicates.cs).
-    Compile and run the code:
-    Bash
+Save the code to a file (e.g., DeleteDuplicates.cs).
+Compile and run the code:
 
-    csc DeleteDuplicates.cs
-    ./DeleteDuplicates.exe
+csc DeleteDuplicates.cs
+./DeleteDuplicates.exe
 
-    (Or, if you're using .NET Core or .NET 5+, you can use dotnet run.)
+(Or, if you're using .NET Core or .NET 5+, you can use dotnet run.)
+
 
 Unit Testing in C# (using NUnit):
 
-    Install NUnit:
-    Bash
+Install NUnit:
 
-    dotnet add package NUnit
-    dotnet add package NUnit3TestAdapter
+dotnet add package NUnit
+dotnet add package NUnit3TestAdapter
 
-    Create a test class:
-
-C#
+Create a test-class:
 
 using NUnit.Framework;
 using System.IO;
@@ -4044,21 +4274,26 @@ public class DeleteDuplicatesTests
     }
 }
 
-    Run the tests:
-    Bash
+Run the tests:
 
-    dotnet test
+dotnet test
 
-    (Make sure that the test project references the main project)
+(Make sure that the test project
+references the main project)
 
-Are you ready to move on to Vim9 Script?
+Are you ready to move on to Vim9
+Script?
 
-Great. Could we move on to the next one?
+- Great. Could we move on to the
+  next one?
 
 Yes, let's move on to Vim9 Script.
 
-Vim9 Script is the newer, more performant version of Vim's scripting language. Here's how we can implement the file deletion task:
-Vim Script
+Vim9 Script is the newer, more
+performant version of Vim's
+scripting language. Here's how we
+can implement the file deletion
+task:
 
 vim9script
 
@@ -4118,40 +4353,52 @@ Main()
 
 Explanation:
 
-    FindDuplicateFiles(targetDir: string): list<string>:
-        Uses globpath to get all files recursively.
-        Uses stridx to check if the file name contains "(2)".
-        Adds matching files to a list.
-    DisplayFiles(files: list<string>): bool:
-        Displays the list of files or a "no files found" message.
-    ConfirmDeletion(): bool:
-        Prompts the user for confirmation.
-    DeleteFiles(files: list<string>): void:
-        Deletes the files using delete.
-        Includes basic error handling.
-    Main(): void:
-        Orchestrates the entire process.
+FindDuplicateFiles(targetDir: string): list<string>:
+    Uses globpath to get all files recursively.
+    Uses stridx to check if the file name contains "(2)".
+    Adds matching files to a list.
+DisplayFiles(files: list<string>): bool:
+    Displays the list of files or a "no files found" message.
+ConfirmDeletion(): bool:
+    Prompts the user for confirmation.
+DeleteFiles(files: list<string>): void:
+    Deletes the files using delete.
+    Includes basic error handling.
+Main(): void:
+    Orchestrates the entire process.
 
 Key Vim9 Script Features Used:
 
-    Explicit Typing: Vim9 Script supports explicit typing, which can improve performance and readability.
-    globpath: Used for file globbing.
-    stridx: Used to find the index of a substring.
-    delete: Used to delete a file.
-    try-catch: Used for error handling.
+- Explicit Typing: Vim9 Script
+  supports explicit typing, which
+  can improve performance and
+  readability.
+- globpath: Used for file globbing.
+- stridx: Used to find the index of
+  a substring.
+- delete: Used to delete a file.
+- try-catch: Used for error
+  handling.
+
 
 How to Run:
 
-    Save the script to a file (e.g., delete_duplicates.vim).
-    Open Vim and run the script:
-    Vim Script
+- Save the script to a file (e.g.,
+  delete_duplicates.vim).
+- Open Vim and run the script:
 
-    :source delete_duplicates.vim
+:source delete_duplicates.vim
+
 
 Unit Testing in Vim9 Script:
 
-Vim9 Script does not have a built-in unit testing framework. You can write simple tests by adding assertions to the script and running it. Here's an example of how you can add a basic test for the FindDuplicateFiles function.
-Vim Script
+Vim9 Script does not have a
+built-in unit testing framework.
+You can write simple tests by
+adding assertions to the script and
+running it. Here's an example of
+how you can add a basic test for
+the FindDuplicateFiles function.
 
 vim9script
 
@@ -4185,17 +4432,25 @@ Main()
 
 Important Notes:
 
-    Vim9 Script is relatively new, and its ecosystem is still developing.
-    For more comprehensive testing, you might consider using external testing frameworks or integrating Vim with other languages.
+- Vim9 Script is relatively new,
+  and its ecosystem is still
+  developing.
+- For more comprehensive testing,
+  you might consider using external
+  testing frameworks or integrating
+  Vim with other languages.
 
 Are you ready to move on to V (Vlang)?
 
-Yes I'm ready to move on
+- Yes I'm ready to move on
 
 All right, let's move on to V (Vlang).
 
-Vlang is a statically typed, compiled programming language known for its simplicity and speed. Here's how we can implement the file deletion task:
-Verilog
+Vlang is a statically typed,
+compiled programming language known
+for its simplicity and speed.
+Here's how we can implement the
+file deletion task:
 
 import os
 
@@ -4248,42 +4503,48 @@ fn main() {
     }
 }
 
+
 Explanation:
 
-    find_duplicate_files(target_dir string) []string:
-        Uses os.walk to recursively traverse the directory.
-        Checks if the file is not a directory and if its path contains "(2)".
-        Appends matching file paths to a string array.
-    display_files(files []string) bool:
-        Displays the list of files or a "no files found" message.
-    confirm_deletion() bool:
-        Prompts the user for confirmation.
-    delete_files(files []string):
-        Deletes the files using os.rm.
-        Includes basic error handling.
-    main():
-        Orchestrates the entire process.
+find_duplicate_files(target_dir string) []string:
+    Uses os.walk to recursively traverse the directory.
+    Checks if the file is not a directory and if its path contains "(2)".
+    Appends matching file paths to a string array.
+display_files(files []string) bool:
+    Displays the list of files or a "no files found" message.
+confirm_deletion() bool:
+    Prompts the user for confirmation.
+delete_files(files []string):
+    Deletes the files using os.rm.
+    Includes basic error handling.
+main():
+    Orchestrates the entire process.
+
 
 Key Vlang Features Used:
 
-    os.walk: Used for recursive directory traversal.
-    path.contains(): Used to check if a string contains a substring.
-    os.rm(): Used to delete a file.
-    Error Handling: Vlang uses or for error handling.
-    Simple Syntax: Vlang has a clean and simple syntax.
+- os.walk: Used for recursive
+  directory traversal.
+- path.contains(): Used to check if
+  a string contains a substring.
+- os.rm(): Used to delete a file.
+- Error Handling: Vlang uses or for
+  error handling.
+- Simple Syntax: Vlang has a clean
+  and simple syntax.
+
 
 How to Run:
 
-    Save the code to a file (e.g., delete_duplicates.v).
-    Compile and run the code:
-    Bash
+Save the code to a file (e.g., delete_duplicates.v).
+Compile and run the code:
 
-    v run delete_duplicates.v
+v run delete_duplicates.v
+
 
 Unit Testing in Vlang:
 
 Vlang has built-in support for unit testing. Here's an example:
-Verilog
 
 import os
 import testing
@@ -4309,16 +4570,24 @@ fn test_find_duplicate_files(t testing.T) {
 }
 
 To run the tests:
-Bash
 
 v test delete_duplicates.v
 
-Let me know if you have any questions.
+Let me know if you have any
+questions.
 
-Fantastic! Now I would like to also include Dlang, which in many respects is a fantastic up-and-coming (for some time) language
+- Fantastic! Now I would like to
+  also include Dlang, which in many
+  respects is a fantastic
+  up-and-coming (for some time)
+  language
 
-Excellent choice! Dlang is a powerful and versatile language with a strong emphasis on efficiency and expressiveness. Let's add a Dlang solution to our file deletion task.
-D
+Excellent choice! Dlang is a
+powerful and versatile language
+with a strong emphasis on
+efficiency and expressiveness.
+Let's add a Dlang solution to our
+file deletion task.
 
 import std.stdio;
 import std.file;
@@ -4381,42 +4650,50 @@ void main() {
 
 Explanation:
 
-    findDuplicateFiles(string targetDir):
-        Uses walkFiles to recursively traverse the directory.
-        Checks if the file name contains "(2)" using indexOf.
-        Appends matching file paths to a string array.
-    displayFiles(string[] files):
-        Displays the list of files or a "no files found" message.
-    confirmDeletion():
-        Prompts the user for confirmation.
-    deleteFiles(string[] files):
-        Deletes the files using remove.
-        Includes basic error handling using try-catch.
-    main():
-        Orchestrates the entire process.
+findDuplicateFiles(string targetDir):
+    Uses walkFiles to recursively traverse the directory.
+    Checks if the file name contains "(2)" using indexOf.
+    Appends matching file paths to a string array.
+displayFiles(string[] files):
+    Displays the list of files or a "no files found" message.
+confirmDeletion():
+    Prompts the user for confirmation.
+deleteFiles(string[] files):
+    Deletes the files using remove.
+    Includes basic error handling using try-catch.
+main():
+    Orchestrates the entire process.
+
 
 Key Dlang Features Used:
 
-    walkFiles: Used for recursive directory traversal.
-    indexOf: Used to find the index of a substring.
-    remove: Used to delete a file.
-    try-catch: Used for error handling.
-    readln and write: Used for user input.
-    String Manipulation: Dlang provides powerful string manipulation tools.
+- walkFiles: Used for recursive
+  directory traversal.
+- indexOf: Used to find the index
+  of a substring.
+- remove: Used to delete a file.
+- try-catch: Used for error
+  handling.
+- readln and write: Used for user
+  input.
+- String Manipulation: Dlang
+  provides powerful string
+  manipulation tools.
+
 
 How to Run:
 
-    Save the code to a file (e.g., delete_duplicates.d).
-    Compile and run the code:
-    Bash
+- Save the code to a file (e.g.,
+  delete_duplicates.d).
+- Compile and run the code:
 
-    dmd delete_duplicates.d
-    ./delete_duplicates
+dmd delete_duplicates.d
+./delete_duplicates
+
 
 Unit Testing in Dlang (using Unittest):
 
 Dlang has a built-in unittest feature. Here's an example:
-D
 
 import std.stdio;
 import std.file;
@@ -4450,19 +4727,31 @@ unittest {
 }
 
 To run the tests:
-Bash
 
 dmd -unittest delete_duplicates.d
 ./delete_duplicates -unittest
 
-Dlang is another great language to add to the list. I hope this Dlang example and the unittest information is useful.
+Dlang is another great language to
+add to the list. I hope this Dlang
+example and the unittest
+information is useful.
 
-I haven't taken a good look at the Dlang code, but (just to be clear) I would like to use as functional programming as much as possible.
+- I haven't taken a good look at
+  the Dlang code, but (just to be
+  clear) I would like to use as
+  functional programming as much as
+  possible.
 
-You're absolutely right, and I apologize for not emphasizing the functional aspects of Dlang as much as possible in the previous example. Let's refactor the Dlang code to lean more heavily into functional programming paradigms.
+You're absolutely right, and I
+apologize for not emphasizing the
+functional aspects of Dlang as much
+as possible in the previous
+example. Let's refactor the Dlang
+code to lean more heavily into
+functional programming paradigms.
 
-Here's the revised Dlang code, focusing on functional techniques:
-D
+Here's the revised Dlang code,
+focusing on functional techniques:
 
 import std.stdio;
 import std.file;
@@ -4540,23 +4829,45 @@ unittest {
 
 Key Functional Improvements:
 
-    findDuplicateFiles:
-        Uses walkFiles to produce a range of file paths.
-        Uses filter to filter the files based on the condition (containing "(2)").
-        Uses array to convert the filtered range into a string array.
-    displayFiles:
-        Uses each to iterate over the files and print them, rather than a traditional foreach loop.
-    deleteFiles:
-        Uses each to iterate over the files and delete them.
+findDuplicateFiles:
+
+    Uses walkFiles to produce a range of file paths.
+    Uses filter to filter the files based on the condition (containing "(2)").
+    Uses array to convert the filtered range into a string array.
+
+displayFiles:
+
+    Uses each to iterate over the files and print them, rather than a traditional foreach loop.
+
+deleteFiles:
+
+    Uses each to iterate over the files and delete them.
+
 
 Explanation of Functional Dlang Features:
 
-    Ranges: Dlang's ranges provide a powerful way to work with sequences of data in a functional style.
-    filter: This function filters a range based on a predicate function.
-    each: This function iterates over a range and applies a function to each element.
-    Lambda Expressions: Dlang supports lambda expressions (e.g., file => file.toUTF8().indexOf("(2)") != -1), which are used to define anonymous functions.
+- Ranges: Dlang's ranges provide a
+  powerful way to work with
+  sequences of data in a functional
+  style.
+- filter: This function filters a
+  range based on a predicate
+  function.
+- each: This function iterates over
+  a range and applies a function to
+  each element.
+- Lambda Expressions: Dlang
+  supports lambda expressions
+  (e.g., file =>
+  file.toUTF8().indexOf("(2)") !=
+  -1), which are used to define
+  anonymous functions.
 
-This revised code should more closely align with your preference for a functional programming style. I hope this is more in line with what you were looking for.
+This revised code should more
+closely align with your preference
+for a functional programming style.
+I hope this is more in line with
+what you were looking for.
 
 
 ___WacomBamboo_RemapKeys
@@ -4665,11 +4976,32 @@ Let me know if you have any questions or encounter any issues during the process
 
 
 ___VIMEMACS_MODULARCONFIG
-- Quick question on another topic: I'm gonna start working on modularizing my Vim and Emacs configs; The problem that is probably well known when it comes to such configuration-files (especially when the degree of configurability is high) is that it swells into a completely disorganized tangle that becomes impossible to grasp.
+- Quick question on another topic:
+  I'm gonna start working on
+  modularizing my Vim and Emacs
+  configs; The problem that is
+  probably well known when it comes
+  to such configuration-files
+  (especially when the degree of
+  configurability is high) is that
+  it swells into a completely
+  disorganized tangle that becomes
+  impossible to grasp.
 
-You've hit upon a very common and frustrating problem with highly configurable editors like Vim and Emacs! As your configurations grow, they can quickly become unwieldy and difficult to manage. Modularizing them is an excellent strategy.
+You've hit upon a very common and
+frustrating problem with highly
+configurable editors like Vim and
+Emacs! As your configurations grow,
+they can quickly become unwieldy
+and difficult to manage.
+Modularizing them is an excellent
+strategy.
 
-Here's a breakdown of how you can approach modularizing your Vim and Emacs configurations, along with some best practices:
+Here's a breakdown of how you can
+approach modularizing your Vim and
+Emacs configurations, along with
+some best practices:
+
 
 Vim Modularization:
 
@@ -4713,6 +5045,7 @@ Vim Modularization:
         Use a snippet engine (e.g., UltiSnips, LuaSnip) to manage snippets.
         Keep snippet files in the snippets/ directory, organized by filetype.
 
+
 Emacs Modularization:
 
     Directory Structure:
@@ -4749,37 +5082,101 @@ Emacs Modularization:
 
 General Best Practices:
 
-    Comments: Add plenty of comments to your configuration files to explain what each section does.
-    Version Control: Use Git to track changes to your configuration files.
-    Documentation: Create a README file to document your configuration.
-    Avoid Global Variables: Minimize the use of global variables.
-    Use Functions: Encapsulate related code into functions.
-    Keep it Simple: Strive for simplicity and clarity.
-    Use a Naming Convention: Use consistent naming conventions.
+- Comments: Add plenty of comments
+  to your configuration files to
+  explain what each section does.
+- Version Control: Use Git to track
+  changes to your configuration
+  files.
+- Documentation: Create a README
+  file to document your
+  configuration.
+- Avoid Global Variables: Minimize
+  the use of global variables.
+- Use Functions: Encapsulate
+  related code into functions.
+- Keep it Simple: Strive for
+  simplicity and clarity.
+- Use a Naming Convention: Use
+  consistent naming conventions.
 
-By following these guidelines, you can create a modular and maintainable configuration for Vim and Emacs.
+By following these guidelines, you
+can create a modular and
+maintainable configuration for Vim
+and Emacs.
 
-That is very good advice, and I'll definitely take that onboard, at the very least as a good check-list of things I may already know but may have to refresh or collect up.
+- That is very good advice, and
+  I'll definitely take that
+  onboard, at the very least as a
+  good check-list of things I may
+  already know but may have to
+  refresh or collect up.
 
+- My more specific question for now
+  would be the following:
 
-My more specific question for now would be the following:
+- When it comes to developing
+  plugins and having a good modular
+  config, I think I would like to
+  take some inspiration from one of
+  the best in the field (starting
+  with Vim, and it doesn't matter
+  too much exactly who the
+  individual is at this point).
 
-When it comes to developing plugins and having a good modular config, I think I would like to take some inspiration from one of the best in the field (starting with Vim, and it doesn't matter too much exactly who the individual is at this point).
+- I have taken a look at this
+  person's vimrc (which I think
+  could be a good baseline for my
+  own), and I think that maybe with
+  a few minor adjustments it would
+  be fit for purpose.
 
-I have taken a look at this person's vimrc (which I think could be a good baseline for my own), and I think that maybe with a few minor adjustments it would be fit for purpose.
-
-
-My only trouble is that the file is 500 lines long, so what would be ideal for me would be if I could provide that file to you in its entirety, have you read it in, and then myself be able to walk through the file in small snippets and ask you questions about it or certain pieces of it. Would that be possible, i.e. 'Yes that is entirely possible' or maybe 'Yes that is possible, but for me to read a file that long into my memory and keep it for context would require you to update to our latest LLM-model', etc
+- My only trouble is that the file
+  is 500 lines long, so what would
+  be ideal for me would be if I
+  could provide that file to you in
+  its entirety, have you read it
+  in, and then myself be able to
+  walk through the file in small
+  snippets and ask you questions
+  about it or certain pieces of it.
+  Would that be possible, i.e. 'Yes
+  that is entirely possible' or
+  maybe 'Yes that is possible, but
+  for me to read a file that long
+  into my memory and keep it for
+  context would require you to
+  update to our latest LLM-model',
+  etc
 
 Unfortunately, directly providing a 500-line file for me to "read in" and keep in my context for an extended, interactive walkthrough is beyond my current capabilities. While I can process substantial amounts of text, maintaining that context across a prolonged, question-and-answer session with snippets is not something I'm designed to do reliably.
 
 Here's why and what we can do:
 
-    Context Window Limitations: Large language models, including me, have context window limitations. This means there's a limit to how much text I can remember at any given time. A 500-line file, especially with code, would consume a significant portion of that window.
-    Conversation Dynamics: As a conversation progresses, older parts of the context tend to fade as new information is added. This would make it difficult to maintain a consistent understanding of the entire file over time.
-    File Handling: I don't have the ability to directly access or store files from your local system.
+- Context Window Limitations: Large
+  language models, including me,
+  have context window limitations.
+  This means there's a limit to how
+  much text I can remember at any
+  given time. A 500-line file,
+  especially with code, would
+  consume a significant portion of
+  that window.
+- Conversation Dynamics: As a
+  conversation progresses, older
+  parts of the context tend to fade
+  as new information is added. This
+  would make it difficult to
+  maintain a consistent
+  understanding of the entire file
+  over time.
+- File Handling: I don't have the
+  ability to directly access or
+  store files from your local
+  system.
 
-However, we can still achieve your goal by breaking it down:
+However, we can still achieve your
+goal by breaking it down:
 
     Snippet-Based Approach:
         You can copy and paste small snippets of the Vim configuration file into our conversation.
@@ -4795,36 +5192,83 @@ However, we can still achieve your goal by breaking it down:
         We can discuss strategies for modularizing the configuration based on the file's content.
         I can help you identify logical modules and suggest ways to organize them.
 
-Essentially, we can work together to analyze the file in a more manageable, interactive way, even if I can't "read it in" as a whole.
+Essentially, we can work together
+to analyze the file in a more
+manageable, interactive way, even
+if I can't "read it in" as a whole.
 
-Let me know if you'd like to proceed with the snippet-based approach or if you have any other questions.
+Let me know if you'd like to
+proceed with the snippet-based
+approach or if you have any other
+questions.
 
-No worries. That is very valuable information (and, I am probably going to start questions about snippets of the file as I walk through it anyway). Question though (before we start that walking-through process): Would it be possible for an upgraded or last edition of your LLM to accomplish the kind of tasks I posed to you in my last question?
+- No worries. That is very valuable
+  information (and, I am probably
+  going to start questions about
+  snippets of the file as I walk
+  through it anyway). Question
+  though (before we start that
+  walking-through process): Would
+  it be possible for an upgraded or
+  last edition of your LLM to
+  accomplish the kind of tasks I
+  posed to you in my last question?
 
-That's a very insightful question about the future capabilities of large language models.
+That's a very insightful question
+about the future capabilities of
+large language models.
 
-While I can't predict the exact features of future LLMs, it's highly likely that some of the limitations I mentioned will be significantly mitigated or even eliminated in upcoming models. Here's a breakdown of what's plausible:
+While I can't predict the exact
+features of future LLMs, it's
+highly likely that some of the
+limitations I mentioned will be
+significantly mitigated or even
+eliminated in upcoming models.
+Here's a breakdown of what's
+plausible:
 
-    Expanded Context Windows:
-        Future LLMs are expected to have vastly expanded context windows. This would allow them to retain much larger amounts of text, potentially entire files or even multiple files, within their working memory.
-    Persistent Memory:
-        Research is ongoing into methods for LLMs to have more persistent or long-term memory. This could involve techniques for storing and retrieving information across multiple conversations, effectively allowing the model to "remember" previous interactions and data.
-    File Handling Capabilities:
-        Future LLMs might be integrated more closely with file systems, allowing them to directly access and process files. This could involve secure and controlled access to local or cloud-based storage.
-    Improved Context Management:
-        Researchers are working on improving how LLMs manage context, ensuring that relevant information is retained and irrelevant information is discarded. This would lead to more consistent and accurate responses over longer conversations.
-    Specialized Tools and Plugins:
-        Future LLMs might be equipped with specialized tools or plugins that allow them to perform specific tasks, such as code analysis or file manipulation.
+Expanded Context Windows:
+    Future LLMs are expected to have vastly expanded context windows. This would allow them to retain much larger amounts of text, potentially entire files or even multiple files, within their working memory.
+Persistent Memory:
+    Research is ongoing into methods for LLMs to have more persistent or long-term memory. This could involve techniques for storing and retrieving information across multiple conversations, effectively allowing the model to "remember" previous interactions and data.
+File Handling Capabilities:
+    Future LLMs might be integrated more closely with file systems, allowing them to directly access and process files. This could involve secure and controlled access to local or cloud-based storage.
+Improved Context Management:
+    Researchers are working on improving how LLMs manage context, ensuring that relevant information is retained and irrelevant information is discarded. This would lead to more consistent and accurate responses over longer conversations.
+Specialized Tools and Plugins:
+    Future LLMs might be equipped with specialized tools or plugins that allow them to perform specific tasks, such as code analysis or file manipulation.
+
 
 In summary:
 
-It's reasonable to expect that future LLMs will be able to handle tasks like analyzing large configuration files and maintaining context across extended conversations much more effectively. The improvements in context windows, memory management, and file handling capabilities would make this possible.
+It's reasonable to expect that
+future LLMs will be able to handle
+tasks like analyzing large
+configuration files and maintaining
+context across extended
+conversations much more
+effectively. The improvements in
+context windows, memory management,
+and file handling capabilities
+would make this possible.
 
-However, it's also important to note that there are still many challenges to overcome, such as ensuring the security and privacy of user data, and preventing LLMs from generating harmful or misleading information.
+However, it's also important to
+note that there are still many
+challenges to overcome, such as
+ensuring the security and privacy
+of user data, and preventing LLMs
+from generating harmful or
+misleading information.
 
-Therefore, while the future looks promising, it's difficult to say exactly when these capabilities will become widely available.
+Therefore, while the future looks
+promising, it's difficult to say
+exactly when these capabilities
+will become widely available.
 
-Well I was actually asking the question specifically in the context of 'your current next iteration', i.e. Gemini Advanced
+- Well I was actually asking the
+  question specifically in the
+  context of 'your current next
+  iteration', i.e. Gemini Advanced
 
 You're right to ask for that clarification. Regarding Gemini Advanced, while it represents a significant step forward in my capabilities, the core limitations I described earlier regarding context window size and persistent memory are still factors, though the degree to which they limit us is reduced.
 
@@ -4859,68 +5303,183 @@ And, if the image generation capability is accessible, an image attempting to ma
 
 
 ___LLMSGEMINI_TIPSTRICKS_ADVANCED
-- Great. I'm not ready to start off the 'My vimrc - Next generation' conversation just yet, so instead I would like to ask more about your current capabilities. I know from experience and having used your services for over a year now that a very good method for me with regard to looking up things, generating code (etc) is to simply write very specific and often very detailed prompts.
+- Great. I'm not ready to start off
+  the 'My vimrc - Next generation'
+  conversation just yet, so instead
+  I would like to ask more about
+  your current capabilities. I know
+  from experience and having used
+  your services for over a year now
+  that a very good method for me
+  with regard to looking up things,
+  generating code (etc) is to
+  simply write very specific and
+  often very detailed prompts.
 
-However, could you maybe give me some ideas that I could explore of 'tips and tricks' about using Gemini and other LLMs, i.e. what areas are commonly missed about what LLMs like yourself can do, especially for person's like myself who are fluent in very technical and nuanced English and can write very specific and detailed prompts? What more things are there to explore when it comes to interacting with LLMs (for example 'I know that you are VERY skilled in providing me extremely fine-grained questions, but have you ever tried using services like me for drilling you in questions concerning knowledge, learning trivia etc'
+- However, could you maybe give me
+  some ideas that I could explore
+  of 'tips and tricks' about using
+  Gemini and other LLMs, i.e. what
+  areas are commonly missed about
+  what LLMs like yourself can do,
+  especially for person's like
+  myself who are fluent in very
+  technical and nuanced English and
+  can write very specific and
+  detailed prompts? What more
+  things are there to explore when
+  it comes to interacting with LLMs
+  (for example 'I know that you are
+  VERY skilled in providing me
+  extremely fine-grained questions,
+  but have you ever tried using
+  services like me for drilling you
+  in questions concerning
+  knowledge, learning trivia etc'
 
-You're absolutely right that detailed and specific prompts are key to unlocking the power of LLMs. Let's explore some "tips and tricks" and less commonly explored areas that you, with your technical fluency, can leverage:
+You're absolutely right that
+detailed and specific prompts are
+key to unlocking the power of LLMs.
+Let's explore some "tips and
+tricks" and less commonly explored
+areas that you, with your technical
+fluency, can leverage:
 
-Beyond Basic Question-Answering and Code Generation:
+Beyond Basic Question-Answering and
+Code Generation:
 
-    Role-Playing and Simulation:
-        Try assigning me a specific role or persona. For example, "Act as an expert in compiler design and explain the concept of register allocation." This can lead to more focused and in-depth responses.
-        Simulate scenarios. "Imagine you are a network security consultant. How would you approach a penetration test for a web application?"
-        Use me to simulate debates or discussions on complex topics.
+- Role-Playing and Simulation:
 
-    Creative Writing and Idea Generation:
-        Use me to brainstorm ideas for projects, stories, or articles.
-        Generate different creative writing styles, such as poetry, screenplays, or short stories.
-        Ask me to help you refine your own creative writing.
+  - Try assigning me a specific
+    role or persona. For example,
+    "Act as an expert in compiler
+    design and explain the concept
+    of register allocation." This
+    can lead to more focused and
+    in-depth responses.
+  - Simulate scenarios. "Imagine
+    you are a network security
+    consultant. How would you
+    approach a penetration test for
+    a web application?"
+  - Use me to simulate debates or
+    discussions on complex topics.
 
-    Knowledge Drilling and Trivia:
-        As you mentioned, I can be an excellent tool for drilling yourself on specific topics.
-        Create custom quizzes or trivia games.
-        Ask me to generate flashcards or study guides.
-        Use me to test your knowledge of obscure technical details.
+- Creative Writing and Idea Generation:
 
-    Language and Translation:
-        Go beyond basic translation. Ask me to translate nuanced phrases or idioms.
-        Use me to learn about the etymology of words or the history of languages.
-        Ask me to generate text in different writing styles within a specific language.
+  - Use me to brainstorm ideas for
+    projects, stories, or articles.
+  - Generate different creative
+    writing-styles, such as poetry,
+    screenplays, or short-stories.
+  - Ask me to help you refine your
+    own creative writing.
 
-    Data Analysis and Manipulation (within limitations):
-        While I don't have direct access to external data sources, you can provide me with data snippets, and I can help you analyze them.
-        Use me to generate sample datasets or to explain complex data structures.
-        Ask me to help you write regular expressions or other data manipulation tools.
+- Knowledge Drilling and Trivia:
 
-    Personalized Learning and Tutoring:
-        Use me to create personalized learning plans.
-        Ask me to explain complex concepts in a way that is tailored to your learning style.
-        Use me as a virtual tutor for specific subjects.
+  - As you mentioned, I can be an
+    excellent tool for drilling
+    yourself on specific topics.
+  - Create custom quizzes or trivia
+    games.
+  - Ask me to generate flashcards
+    or study guides.
+  - Use me to test your knowledge
+    of obscure technical details.
 
-    Debugging and Problem Solving:
-        Provide me with code snippets and ask me to help you debug them.
-        Use me to brainstorm solutions to complex technical problems.
-        Ask me to help you analyze logs or error messages.
+- Language and Translation:
 
-    Automating Repetitive Tasks (with code generation):
-        Even if I can't execute the code, I can generate code for you that automates tasks.
-        Use me to generate scripts for file manipulation, data processing, or other repetitive tasks.
+  - Go beyond basic translation.
+    Ask me to translate nuanced
+    phrases or idioms.
+  - Use me to learn about the
+    etymology of words or the
+    history of languages.
+  - Ask me to generate text in
+    different writing styles within
+    a specific language.
 
-    Exploring Different Perspectives:
-        Ask me to present different viewpoints on controversial topics.
-        Use me to analyze arguments and identify logical fallacies.
+- Data Analysis and Manipulation (within limitations):
+
+  - While I don't have direct
+    access to external data
+    sources, you can provide me
+    with data snippets, and I can
+    help you analyze them.
+  - Use me to generate sample
+    datasets or to explain complex
+    data structures.
+  - Ask me to help you write
+    regular expressions or other
+    data manipulation tools.
+
+- Personalized Learning and Tutoring:
+
+  - Use me to create personalized
+    learning plans.
+  - Ask me to explain complex
+    concepts in a way that is
+    tailored to your learning
+    style.
+  - Use me as a virtual tutor for
+    specific subjects.
+
+- Debugging and Problem Solving:
+
+  - Provide me with code snippets
+    and ask me to help you debug
+    them.
+  - Use me to brainstorm solutions
+    to complex technical problems.
+  - Ask me to help you analyze logs
+    or error messages.
+
+- Automating Repetitive Tasks (with code generation):
+
+  - Even if I can't execute the
+    code, I can generate code for
+    you that automates tasks.
+  - Use me to generate scripts for
+    file manipulation, data
+    processing, or other repetitive
+    tasks.
+
+- Exploring Different Perspectives:
+
+  - Ask me to present different
+    viewpoints on controversial
+    topics.
+  - Use me to analyze arguments and
+    identify logical fallacies.
 
 Tips for Advanced Prompting:
 
-    Specify the Format: If you need the output in a specific format (JSON, CSV, Markdown), explicitly state it.
-    Use Delimiters: Use delimiters (e.g., triple quotes, backticks) to clearly separate different parts of your prompt.
-    Iterative Refinement: Don't be afraid to refine your prompts based on the responses you receive.
-    Provide Examples: If you have examples of the desired output, include them in your prompt.
-    Use Chain-of-Thought Prompting: Break down complex tasks into smaller steps.
-    Zero-Shot, One-Shot, Few-Shot Learning: Experiment with different prompting techniques.
+- Specify the Format: If you need
+  the output in a specific format
+  (JSON, CSV, Markdown), explicitly
+  state it.
+- Use Delimiters: Use delimiters
+  (e.g., triple quotes, backticks)
+  to clearly separate different
+  parts of your prompt.
+- Iterative Refinement: Don't be
+  afraid to refine your prompts
+  based on the responses you
+  receive.
+- Provide Examples: If you have
+  examples of the desired output,
+  include them in your prompt.
+- Use Chain-of-Thought Prompting:
+  Break down complex tasks into
+  smaller steps.
+- Zero-Shot, One-Shot, Few-Shot
+  Learning: Experiment with
+  different prompting techniques.
 
-By combining your technical fluency with these advanced prompting techniques, you can unlock even more of the potential of LLMs.
+By combining your technical fluency
+with these advanced prompting
+techniques, you can unlock even
+more of the potential of LLMs.
 
 
 
@@ -5169,43 +5728,74 @@ Given your vocal coaching background, you can likely expect to learn spoken Faro
 
 
 ___PYTHON_FUNCTIONDECORATORS=*****
-- I'm looking for an explanation of the '@word'-syntax in Python. I think it's called either decorators or attributes. Could you give me some direction on this one?
+- I'm looking for an explanation of
+  the '@word'-syntax in Python. I
+  think it's called either
+  decorators or attributes. Could
+  you give me some direction on
+  this one?
 
-You're right, the @word syntax in Python refers to decorators. While the term "attributes" is related to object properties, it's decorators that use the @ symbol.
+You're right, the @word syntax in
+Python refers to decorators. While
+the term "attributes" is related to
+object properties, it's decorators
+that use the @ symbol.
 
 Here's a breakdown of Python decorators:
 
 What are Decorators?
 
-    Decorators are a powerful and flexible feature in Python that allows you to modify or extend the behavior of functions or classes without permanently changing their source code.   
+- Decorators are a powerful and
+  flexible feature in Python that
+  allows you to modify or extend
+  the behavior of functions or
+  classes without permanently
+  changing their source code.   
 
-They provide a way to wrap a function or class with another function, adding functionality before or after the original function's execution.  
+They provide a way to wrap a
+function or class with another
+function, adding functionality
+before or after the original
+function's execution.  
 
-    Essentially, decorators are syntactic sugar for applying a function to another function.
+- Essentially, decorators are
+  syntactic sugar for applying a
+  function to another function.
+
 
 How They Work
 
-    Functions as First-Class Objects: In Python, functions are first-class objects, meaning they can be assigned to variables, passed as arguments to other functions, and returned from functions.   
+- Functions as First-Class Objects:
+  In Python, functions are
+  first-class objects, meaning they
+  can be assigned to variables,
+  passed as arguments to other
+  functions, and returned from
+  functions.   
 
-Inner Functions: Decorators often use inner functions (functions defined within other functions) to wrap the original function.
+Inner Functions: Decorators often
+use inner functions (functions
+defined within other functions) to
+wrap the original function.
 
-The @ Syntax: The @decorator_name syntax is a shorthand for applying a decorator to a function. For example:
-Python
+The @ Syntax: The @decorator_name
+syntax is a shorthand for applying
+a decorator to a function. For
+example:
 
 @my_decorator
 def my_function():
     # function code
 
 This is equivalent to:
-Python
 
-    def my_function():
-        # function code
+def my_function():
+    # function code
 
-    my_function = my_decorator(my_function)
+my_function = my_decorator(my_function)
+
 
 Example
-Python
 
 def my_decorator(func):
     def wrapper():
@@ -5226,26 +5816,62 @@ Something is happening before the function is called.
 Hello!
 Something is happening after the function is called.
 
+
 Key Concepts
 
-    Decorator Function: The function that modifies the behavior of another function (e.g., my_decorator in the example).   
+- Decorator Function: The function
+  that modifies the behavior of
+  another function (e.g.,
+  my_decorator in the example).
+- Wrapped Function: The original
+  function that is being modified
+  (e.g., say_hello in the example).
+  wrapper Function: The inner
+  function that performs the
+  additional actions before and
+  after calling the original
+  function.
+- Passing Arguments: Decorators can
+  be designed to handle functions
+  with arguments using *args and
+  **kwargs.
+- Returning Values: Decorators
+  should typically return the
+  result of the wrapped function to
+  preserve its original behavior.
+- Decorators can also be created as
+  classes.
 
-    Wrapped Function: The original function that is being modified (e.g., say_hello in the example).
-    wrapper Function: The inner function that performs the additional actions before and after calling the original function.
-    Passing Arguments: Decorators can be designed to handle functions with arguments using *args and **kwargs.
-    Returning Values: Decorators should typically return the result of the wrapped function to preserve its original behavior.
-    Decorators can also be created as classes.
 
 Common Use Cases
 
-    Logging: Recording function calls and their arguments.
-    Timing: Measuring the execution time of functions.
-    Authentication and Authorization: Checking user permissions before allowing access to certain functions.
-    Caching: Storing function results to avoid redundant computations.
-    Validation: Checking input parameters.
-    Frameworks: Many Python web frameworks (like Flask and Django) use decorators for routing, request handling, and other tasks.
+- Logging: Recording function calls
+  and their arguments.
+- Timing: Measuring the execution
+  time of functions.
+- Authentication and Authorization:
+  Checking user permissions before
+  allowing access to certain
+  functions.
+- Caching: Storing function results
+  to avoid redundant computations.
+- Validation: Checking input
+  parameters.
+- Frameworks: Many Python web
+  frameworks (like Flask and
+  Django) use decorators for
+  routing, request handling, and
+  other tasks.
 
-In summary: Decorators are a powerful Python feature that allows you to extend or modify the behavior of functions and classes in a clean and reusable way. They use the @ syntax and are commonly used for tasks like logging, timing, and authentication.
+In summary: Decorators are a
+powerful Python feature that allows
+you to extend or modify the
+behavior of functions and classes
+in a clean and reusable way. They
+use the @ syntax and are commonly
+used for tasks like logging,
+timing, and authentication.
+
 github.com
 github.com
 github.com
@@ -5257,7 +5883,15 @@ medium.com
 www.pzuraq.com
 www.pzuraq.com
 
-Question: Is there any software similar to the Sqlitebrowser available for browsing MongoDB-data? Particularly (although not necessarily exclusively) on Linux, and of course if possible something that is free/open source.
+
+- Question: Is there any software
+  similar to the Sqlitebrowser
+  available for browsing
+  MongoDB-data? Particularly
+  (although not necessarily
+  exclusively) on Linux, and of
+  course if possible something that
+  is free/open source.
 
 It's great you're looking for a GUI for MongoDB! It can significantly simplify working with NoSQL data. Here's a breakdown of popular options, with a focus on free/open-source and Linux compatibility:
 

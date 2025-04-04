@@ -1,0 +1,25 @@
+
+~/Dropbox/rsc/data/lists/ref/comp/cb/h5c3.txt  ****(*!)
+
+    ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/Html.txt
+    ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/Css.txt
+    ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/js/js.txt
+    ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/SVG.txt
+    ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/js/jscb.txt
+	-c 'tabdo set foldmethod=indent'
+	-c 'tabdo set foldlevel=1'
+    -c 'belowright vertical split'
+    -c '/\Cjscb 2020'
+	-c 'normal zt'
+	-c 'normal 1gt'
+
+~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/FreecWebdev-h5c3.txt
+----
+~/Dropbox/rsc/data/lists/learnqna/vanki/z.WEB-JS_vanki.orig.txt
+    ~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/z.WEB-JS_vanki.orig.txt
+~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/webdev/freec01_h5c3.tags.txt
+    ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/webdev/freec01_h5c3.txt
+~/Dropbox/rsc/samples/code/prl.words/words_css.css
+----
+~/Dropbox/rsc/data/lists/learnqna/vanki/tmp/alr-ontheroad/freec-01.4of4-bmk.txt
+
