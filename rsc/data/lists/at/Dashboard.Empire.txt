@@ -8,11 +8,139 @@ set fdm=marker syn= guifont=* | colors ron
 
 c:/Users/SEDAALB2/Desktop/Scratch.txt
 ../weblinks.txt
+fb, social {{{
     Queen  [YÄTT VA ZÅATN OEN XYVCC (B YHFGVTN VAYÄTT)]
     'För att bättre förstå om vad som influerat flera klassiska kompositörer'
     You Win Again, Self-Control, Voyage Voyage, Wildhearts, 
+}}}
+.    2025-04-02 ---- (pres. halvtid) - Toy:Tmhe {{{
+
+[[Arkitekt som är sin egen administratör/bygger sin egen environment]]
+
+---
+"Du har en väldigt speciell stil..."
+- doktorn
+- prof.
+- 'memento'
+- Conan the librarian
+    [kampsport + extremt teoretiska ämnen (språk, bet.vetenskap, psykologi, k-teori]
+
+---
+'Du har en välsignelse eller en förbannelse, lite beroende på vem det är som tittar.
+8 av 10 ser nån som är spretig och kaotisk. Övriga 2 ser något unikt och spännande.'
+
+- Du har visat intresse och otrolig förmåga
+- Du ska inte sluta! Du är ju som gjord för det här!
+- Ditt inlärningssystem är både spännande och mycket(!) genomtänkt
+
+"Den enda skillnaden på mig och en galning är att jag inte är galen."
+
+---
+Brainstorming + behöver ofta en väldigt bred vy/bild/överblick
+
+
+---
+Nu kör vi! (behöver inte mycket handhållning/styrning)
+
+---
++ Vad är det som tatt tid? (man funderar också själv)
+
+[misstag?]
+- tog det ganska makligt
+    (behövde ju komma igen(!))
+- la tid på att lära känna folk (+hålla mig väl med min 'värd')
+- Återuppta träning (efter mer än 2 år)
+
+- bygga tooling + Starta upp egna ref.systemet på Win
+    [+insåg häromdan att den failat]
+
+(olika medicinska + admin.problem, olika arbetsstationer, seg laptop, möten, ...)
+
+
+---
+## Syftet med en LIA?
+- lärdom
+- kontakter
+  - kanske(!) också en anställning
+
+- "Vi förstod verkligen inte mycket eller gjorde många knop i början"
+
+---
+- var inte rädd för att fråga --> du frågar väldigt mycket
+    <--> du frågar för lite
+- det finns inga dumma frågor
+    <--> vad är det för en dum fråga
+- det ska inte presteras nåt visst här
+    <--> värst vad långsamt det går
+
+---
+handler
+service
+utilities
+helper
+worker
+builder
+provider
+expediatior
+ ... (?)
+
+---
+- Det här var inte alldeles tydligt/lätt att begripa sig på
+- Tricket (för företaget vid en LIA) är att hitta saker relaterat till produktionsflödet
+- Om en LIA blir satt i produktionsflödet/att läsa produktionskod och om de inte kan det då har de misslyckats, ett sånt upplägg är jag kritisk till.
+
+(validering el. tillfälle att lära sig)
+
+
+- hinner inte göra något arbete =kan använda som ex-jobb
+
+
+---
+Vad vill vi åstadkomma?
+
+---
+vad tycker ni? vad ska jag fokusera på?
+
+- Fokusera på att visa framfötterna tekniskt?
+- Fokusera på det sociala + visa sina sociala+artistiska kvalitéer?
+
+
+---
+De fyra fula orden
+    m-zvffunaqry  r-eåa  u-hgalggwnaqr|fynineorgr  f-söearqevat
+    [+zra nyyn äe iäyqvtg glqyvtn zrq ivyxn qrg äe fbz une/äe qr fxlyqvtn:
+    - aåtba
+    - vatra
+
+"Man är ju ändå bara människa (så länge man står upp)"
+
+
+---
+tre alternativ:
+- ändra uppgifter (för att komma in i gänget/produktionsflödet bättre)
+- pausa + återkomma
+- dyka ner + stänga locket
+--
+- hoppa av
+
+}}}
+postmortem lia2 with Sandy {{{
+
+Jag gjorde några stilistiska fel i början
+
+kul energisk prick (+yvig inlärningsstil, +sen på bollen)
+
+  la för mycket tid på att vara en trevlig, lustig prick
+
+Jag gjorde några otaktiska/ostrategiska val i början
+
+
+Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett team
+
+}}}
 .'The Four Dangers' {{{
-  misshandlad, rånad, utnyttjad, förnedrad/förlöjligad
+  astonishment, doubt, fear, hesitation
+  zvffunaqynq, eåanq, hgalggwnq, söearqenq/söeyöwyvtnq
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
 TODO ADD 1 = STARTUPS 1 {{{
@@ -35,7 +163,7 @@ markdown etc:
 [git, test/deploy]:
     gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
 
-scripting / Web: ----
+scripting / Web ----  TODO: HTML, CSS, ETC
     gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
@@ -43,7 +171,7 @@ System (incl. C#):
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
 
-LANG-DB 1
+LANG-DB 1:
   gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
 }}}
 Scratch-Area {{{
@@ -76,81 +204,6 @@ Iterera och finslipa: “Kan du beskriva fördelarna med att använda truckar i 
 Håll det kortfattat: “Beskriv fördelarna med truckar i tillverkning, deras påverkan på effektivitet och hållbarhet, och möjliga förbättringar.”
 Håll utkik efter vår serie om hur du får ut det mesta av Microsoft 365!
 }}}
-
-}}}
-
-2025-04-02 ---- (pres. halvtid) - Toy:Tmhe {{{
-
-bet.vetenskap, psykologi, kunskapsteori
-    [[arkitekt som är min egen administratör/bygger mina egna verktyg]]
-
-
-jag har en rätt speciell stil...  ____
-    [doktorn/doctor chaos, prof., memento, conan the librarian]
-
-
-du har en välsignelse eller en förbannelse, lite beroende på vem det är som tittar
-    du är ju helt galen... och helt|fullständigt briljant
-    "den enda skillnaden på mig och en galning är att jag inte är galen."
-[school-accolades]
-
-tror jag lätt ger intrycket av en [slouch]
-
-handler
-service
-utilities
-helper
-worker
-builder
-provider
-expediatior
- ... (?)
-
-nu kör vi (behöver inte mycket handholding)
-
-[misstag]
-tog det ganska makligt
-(behövde ju komma igen och allt det där)
-
-
-- frågar för mycket / frågar för lite
-- det finns inga dumma frågor / f*n vad trög du är | händer det nåt eller?
-
-
-- min resumé sen innan (paul + adam)
-
-
-- lärdom
-- kontakter
-  - anställning
-
-
-blivit mer av en validering
-
-- hinner inte göra något arbete =kan använda som ex-jobb
-
-
-vad tycker ni? vad ska jag fokusera på?
-
-- visa att jag är en riktig jäkel rent tekniskt?
-- visa att jag är en social, trevlig prick som kan spela roliga visor på julfesterna?
-
-fyra fula ord (för att representera 'min sits' på skolan)
-    m-zvffunaqry  r-eåa  u-hgalggwnaqr|fynineorgr  f-söearqevat
-    [+zra nyyn äe iäyqvtg glqyvtn zrq ivyxn qrg äe fbz une/äe qr fxlyqvtn:
-    - aåtba
-    - vatra
-
-man är ju ändå bara människa (så länge man står upp)
-
-
-tre alternativ:
-- ___
-- bita ihop / dyka ner + stänga locket
-- hoppa av
-
-
-tillgång till kod  (=ab?)
 
 }}}
 
@@ -3003,6 +3056,500 @@ Recommendation:
 In most cases, installing the fuse package from the Termux repositories will be the simplest and most reliable solution.
 
 
+
+___RevealJs
+Quick question: I would like to get some quick guidance on how to include images, video (preferably with audio), and animated gifs when using the Reveal.js framework for presentations.
+
+Okay, here's quick guidance on embedding images, videos (with audio), and animated GIFs in Reveal.js:
+
+Reveal.js uses standard HTML for its slides, so embedding media is generally done using standard HTML tags within your <section> elements.
+
+    Images (.jpg, .png, .svg, etc.)
+        HTML Tag: Use the <img> tag.
+        Essential Attributes:
+            src: Specifies the path (URL or relative path) to your image file.
+            alt: Provides alternative text for accessibility (screen readers) and if the image fails to load.
+        Example:
+        HTML
+
+<section>
+  <h2>Slide with an Image</h2>
+  <p>Here is a static image:</p>
+  <img src="images/my-static-image.jpg" alt="A descriptive caption for the image">
+</section>
+
+Styling: You can control size and position using CSS (e.g., inline style attribute or separate CSS rules):
+HTML
+
+    <img src="images/logo.png" alt="Company Logo" style="width: 150px; height: auto;">
+
+Animated GIFs (.gif)
+
+    HTML Tag: Use the <img> tag, just like static images. Browsers automatically handle the animation.
+    Example:
+    HTML
+
+    <section>
+      <h2>Slide with an Animated GIF</h2>
+      <p>Look at this animation:</p>
+      <img src="images/my-animation.gif" alt="An animated diagram showing a process">
+    </section>
+
+    Note: Treat animated GIFs exactly like static images in your HTML.
+
+Video (with Audio) (.mp4, .webm, etc.)
+
+    HTML Tag: Use the HTML5 <video> tag.
+    Essential Attributes:
+        src: Path to your video file. It's best practice to use the <source> tag inside <video> to provide multiple formats for better browser compatibility.
+        controls: Adds default video controls (play/pause, volume, fullscreen). Crucial for user interaction and accessing audio controls.
+    Reveal.js Specifics:
+        data-autoplay: Add this attribute to the <video> tag if you want the video to start playing automatically when the slide becomes visible. Note: Autoplay with sound might be blocked by some browsers initially and may require user interaction first.
+    Example:
+    HTML
+
+        <section>
+          <h2>Slide with Video</h2>
+          <video controls data-autoplay>
+            <source src="videos/my-presentation-video.mp4" type="video/mp4">
+            <source src="videos/my-presentation-video.webm" type="video/webm">
+            Your browser does not support the video tag. </video>
+          <p>The video above includes audio and controls.</p>
+        </section>
+
+        Styling: You can use CSS to control the video player's size (e.g., width="800", height="600" or using CSS classes). max-width: 100% is often useful for responsiveness.
+
+General Tips:
+
+    File Paths: Keep your media files organized (e.g., in images/ and videos/ subdirectories) and use relative paths in your src attributes for portability.
+    Performance: Optimize your media file sizes to ensure your presentation loads quickly and runs smoothly.
+    Accessibility: Always include meaningful alt text for images. For videos, consider providing captions or transcripts.
+
+Just place these HTML snippets within the <section> tags where you want the media to appear in your presentation.
+
+I would like to quickly double-check some common Reveal.js-constructions when it comes to using Markdown as a quick and easy way of writing slides.
+
+Okay, let's quickly review some common ways to structure Reveal.js slides using Markdown. This is indeed a very popular and efficient method.
+
+The core idea is to use a <section> tag with the data-markdown attribute. Reveal.js then processes the Markdown content inside that section.
+
+Here are the most common constructions:
+
+    Single Slide Content:
+        Place your Markdown directly inside a <textarea> within the <section data-markdown>. The <textarea> helps prevent the browser from trying to interpret the Markdown as HTML before Reveal.js gets to it.
+        Construction:
+        HTML
+
+    <section data-markdown>
+      <textarea data-template>
+        ## Slide Title
+        This is a paragraph written in Markdown.
+
+        - Item 1
+        - Item 2
+
+        *Emphasis* and **Strong text**.
+      </textarea>
+    </section>
+
+Multiple Horizontal Slides (using Separators):
+
+    You can define multiple slides within a single data-markdown section using a separator. The default horizontal separator is --- (three hyphens) on its own line.
+    Construction:
+    HTML
+
+    <section data-markdown>
+      <textarea data-template>
+        ## Slide 1
+        Content for the first slide.
+
+        ---
+
+        ## Slide 2
+        Content for the second slide.
+
+        ---
+
+        ## Slide 3
+        More content.
+      </textarea>
+    </section>
+
+Multiple Vertical Slides (using Separators):
+
+    To create slides stacked vertically under a horizontal slide, use the default vertical separator -- (two hyphens) on its own line.
+    Construction:
+    HTML
+
+    <section data-markdown>
+      <textarea data-template>
+        ## Main Horizontal Slide (Topic A)
+
+        --
+
+        ### Vertical Slide A.1
+        Details about Topic A.
+
+        --
+
+        ### Vertical Slide A.2
+        More details about Topic A.
+
+        ---
+
+        ## Main Horizontal Slide (Topic B)
+        Start of a new topic.
+      </textarea>
+    </section>
+
+External Markdown File:
+
+    For larger presentations, it's often cleaner to keep your Markdown in a separate .md file and link to it.
+    Construction:
+    HTML
+
+    <section data-markdown="slides/my-presentation.md"
+             data-separator="^\n---\n$"
+             data-separator-vertical="^\n--\n$">
+    </section>
+
+        In this case, the slides/my-presentation.md file would contain the Markdown content using the separators defined (or the defaults if attributes are omitted).
+        You can override the default separators using data-separator (horizontal) and data-separator-vertical if needed, often using regular expressions.
+
+Element Attributes and Fragments:
+
+    You can add HTML attributes (like classes for styling or data- attributes) to elements generated from Markdown using special HTML comments immediately following the Markdown element. This is commonly used for Reveal.js fragments.
+    Construction:
+    HTML
+
+    <section data-markdown>
+      <textarea data-template>
+        ## Fragments Example
+
+        - Item 1 - Item 2 - Item 3 This paragraph will fade in. </textarea>
+    </section>
+
+Speaker Notes:
+
+    Add speaker notes within your Markdown using Note: at the beginning of a line.
+    Construction:
+    HTML
+
+         <section data-markdown>
+          <textarea data-template>
+            ## Important Concept
+            Explain the core idea here.
+
+            Note:
+            Remember to mention the example from last week. This part is crucial for the next slide.
+          </textarea>
+        </section>
+
+Important Reminder:
+To make any of this work, you need to include and initialize the Markdown plugin in your Reveal.js setup:
+JavaScript
+
+Reveal.initialize({
+  // other options...
+  plugins: [ RevealMarkdown ] // Make sure Markdown plugin is listed
+});
+
+These are the primary ways you'll structure Reveal.js presentations using Markdown. They cover most common use cases and keep your slide content clean and readable.
+
+Question: Could you give me some quick guidance on how to use the Termux API (utility if that's the correct word for it) to sync changes for text-files etc up to Dropbox or the like? I.e. I have been researching a bit to use rclone to get instant updating for Android, but (and it's quite a reasonable but I think) I have gotten the impression that it is simpler to set up and use the Termux API, which would be a boon for me. I.e. I'm not that concerned about getting instant updating, as long as I can (maybe something like every minute or 30 seconds) drop out of a Vim editing-session and run a sync.
+
+Okay, let's clarify the roles of Termux API and rclone for syncing files to Dropbox from Termux.
+
+You've hit on a common point of confusion. While the Termux API is fantastic for letting Termux scripts interact with Android features (like sharing text, accessing contacts, using the camera, reading sensors, accessing shared storage), it doesn't have built-in functionality to directly interact with cloud service APIs like Dropbox.
+
+Think of it this way:
+
+    Termux API: Lets Termux talk to the Android system around it.
+    rclone: Is a dedicated command-line program specifically designed to talk to cloud storage services (Dropbox, Google Drive, OneDrive, S3, many others).
+
+Therefore, for syncing files directly between your Termux home directory and Dropbox, rclone is actually the simpler and correct tool for the job. Your initial research was heading in the right direction!
+
+Here's a quick guide on how to use rclone in Termux for your purpose:
+
+    Install rclone:
+    If you haven't already, install it within Termux:
+    Bash
+
+pkg update
+pkg install rclone
+
+Configure rclone for Dropbox (One-Time Setup):
+This is the only part that takes a few minutes, but you only do it once.
+Bash
+
+rclone config
+
+    It will guide you through an interactive setup.
+    Choose n for a new remote.
+    Give it a name (e.g., mydropbox).
+    Choose the number corresponding to "Dropbox".
+    Leave client_id and client_secret blank (press Enter for defaults).
+    Choose the level of access (usually full access is fine, option 1).
+    For Edit advanced config?, say n (No) unless you have specific needs.
+    For Use auto config?, say y (Yes). It will likely give you a URL to open in a browser on your device (or another device) to authorize rclone with your Dropbox account. Follow the instructions in the browser, grant access, and then return to Termux.
+    Confirm the configuration (y).
+    You can then quit the config (q).
+
+Create a Directory to Sync:
+Let's say you keep your notes in ~/documents/notes.
+
+Perform a Sync:
+To sync the contents of your local ~/documents/notes directory up to a folder named TermuxNotes in your Dropbox, the command would be:
+
+rclone sync ~/documents/notes mydropbox:TermuxNotes
+
+    sync: This makes the destination (mydropbox:TermuxNotes) look exactly like the source (~/documents/notes). It copies new/changed files to Dropbox and deletes files in Dropbox that are no longer in your local notes directory. Be careful with sync if you might delete local files accidentally!
+    copy: If you just want to copy new/changed files to Dropbox without deleting anything on the Dropbox side, use copy instead:
+
+    rclone copy ~/documents/notes mydropbox:TermuxNotes
+
+    mydropbox: is the remote name you chose during rclone config.
+    TermuxNotes is the folder name within your Dropbox. If it doesn't exist, rclone will create it.
+
+Simplifying the Sync (Your Vim Workflow):
+You want to sync quickly after editing in Vim.
+
+    Create a Script: Make a simple shell script, for example, ~/bin/sync_notes.sh:
+    Bash
+
+#!/data/data/com.termux/files/usr/bin/sh
+echo "Syncing notes to Dropbox..."
+rclone copy ~/documents/notes mydropbox:TermuxNotes --progress
+echo "Sync complete."
+# Optional: Add a Termux notification
+# termux-notification -t "Sync Complete" -c "Notes synced to Dropbox"
+
+Make it executable: chmod +x ~/bin/sync_notes.sh (You might need to create the ~/bin directory first: mkdir ~/bin).
+Run Manually: After exiting Vim, just run:
+Bash
+
+~/bin/sync_notes.sh
+
+Run from Vim (Optional): You could even map a key in Vim to run this script without exiting. Add this to your .vimrc:
+Vim Script
+
+        nnoremap <leader>s :w<CR>:!~/bin/sync_notes.sh<CR>
+
+        (This maps Leader + s to first save the file (:w) and then execute (:!) your sync script).
+
+Conclusion:
+
+Forget trying to force the Termux API to do cloud sync. Embrace rclone – it's built precisely for this. The initial rclone config is the only "complex" part. After that, running a sync command or a simple script containing that command is very straightforward and perfectly fits your workflow of syncing periodically after editing sessions in Vim.
+
+
+___TermuxAPI **** __ __
+- No problem, and that's a very good clarification. Could you give me some guidance though on what the Termux API CAN be used for. I mean, I can gather that it's a very good and useful utility, so maybe you could outline a bunch (and some more) use-cases and 'neat tricks' or how to put it
+
+You're right, the Termux API is incredibly useful! It acts as a bridge, allowing your command-line scripts and programs running inside Termux to interact with the hardware and software features of your Android device. It unlocks a lot of potential for automation and unique workflows directly from the terminal.
+
+Think of it as giving your Linux-like environment "Android superpowers." Here's an outline of common use cases and neat tricks, grouped by capability:
+
+1. User Interaction & Feedback:
+
+    Clipboard Access (termux-clipboard-get, termux-clipboard-set):
+        Use Case: Quickly grab text from your clipboard for processing in a script (e.g., extract URLs, format code) or push script output directly to the clipboard.
+        Neat Trick: Create a script that takes a URL from the clipboard, uses curl or wget to download something, and then puts a status message back onto the clipboard.
+        Bash
+
+    # Get URL from clipboard
+    url=$(termux-clipboard-get)
+    # Download (example)
+    echo "Downloading $url ..."
+    wget "$url"
+    # Set clipboard with status
+    termux-clipboard-set "Download from $url complete."
+
+Displaying Messages (termux-toast, termux-notification):
+
+    Use Case: Show quick status updates with termux-toast (small popups) or persistent notifications with termux-notification for longer tasks finishing (like code compilation, backups, downloads).
+    Neat Trick: Monitor a website for changes using curl and diff in a loop, and send a notification if a change is detected.
+    Bash
+
+    # (Simplified example)
+    termux-notification -t "Script Finished" -c "Your long process is complete." --id my-script-notify
+    # Remove notification later: termux-notification-remove my-script-notify
+
+Native Dialog Boxes (termux-dialog, termux-dialog-confirm, termux-dialog-text, termux-dialog-checkbox, termux-dialog-spinner etc.):
+
+    Use Case: Make your scripts interactive by prompting the user with native Android dialogs for input, choices, or confirmations, which looks much nicer than plain terminal prompts.
+    Neat Trick: Create a script that uses termux-dialog-spinner to let you easily choose from a list of common SSH connections or project directories.
+    Bash
+
+    # Example: Ask for confirmation
+    termux-dialog-confirm -t "Delete file?" -i "Are you sure you want to delete important_file.txt?"
+    if [ $? = 0 ]; then
+      echo "Confirmed, deleting..."
+      # rm important_file.txt
+    else
+      echo "Cancelled."
+    fi
+
+Text-to-Speech (termux-tts-speak):
+
+    Use Case: Have your scripts speak results, alerts, or read out text passages.
+    Neat Trick: Combine with termux-battery-status to announce when your phone is fully charged or critically low.
+    Bash
+
+        termux-tts-speak "Warning, battery level critical."
+
+2. Accessing Device Data & Content:
+
+    Shared Storage Access (termux-storage-setup + standard file access):
+        Use Case: Allows Termux to access shared directories like Downloads, DCIM (Photos), Movies, Music, Documents after running termux-storage-setup once and granting permission. You can then cd ~/storage/shared/Downloads etc.
+        Neat Trick: Write a script to automatically organize files downloaded via the browser into dated folders within ~/storage/shared/Documents/.
+    Contact List (termux-contact-list):
+        Use Case: Access your phone's contacts from scripts (e.g., find a phone number or email).
+        Neat Trick: Combine with termux-dialog-spinner to select a contact and then use termux-sms-send or termux-share (with email intent) to quickly initiate communication.
+    SMS Messages (termux-sms-list, termux-sms-send):
+        Use Case: Send SMS messages programmatically, or read incoming messages.
+        Neat Trick: Create a simple SMS alert system. If a server monitoring script detects an issue, it can send you an SMS via termux-sms-send.
+        Bash
+
+    termux-sms-send -n 1234567890 "Server main_server is down!"
+
+Call Log (termux-call-log):
+
+    Use Case: Access your call history for analysis or logging.
+
+Location (termux-location):
+
+    Use Case: Get current GPS coordinates, speed, altitude, bearing.
+    Neat Trick: Create a script that gets your current location and then uses curl to fetch the weather forecast for that specific spot from a weather API.
+    Bash
+
+        # Get location data (JSON format)
+        location_data=$(termux-location -p gps)
+        # Process with 'jq' (need pkg install jq)
+        lat=$(echo "$location_data" | jq .latitude)
+        lon=$(echo "$location_data" | jq .longitude)
+        echo "Current location: Lat $lat, Lon $lon"
+        # ... then use lat/lon with a weather API
+
+    Battery Status (termux-battery-status):
+        Use Case: Get battery percentage, temperature, health, charging status.
+        Neat Trick: A script that runs periodically (using termux-job-scheduler) and sends a notification/TTS alert only when the battery reaches 100% while charging.
+
+3. Controlling Device Hardware:
+
+    Camera (termux-camera-photo, termux-camera-info):
+        Use Case: Take pictures programmatically.
+        Neat Trick: A simple security script: if triggered (e.g., by a failed login attempt detected elsewhere), take a photo and save it with a timestamp.
+        Bash
+
+        timestamp=$(date +%Y%m%d_%H%M%S)
+        termux-camera-photo -c 0 ~/storage/shared/intruder_$timestamp.jpg # -c 0 for back camera
+
+    Flashlight (termux-torch):
+        Use Case: Toggle the flashlight on/off.
+        Neat Trick: Create a simple alias in your .bashrc like alias torch='termux-torch' for quick access.
+    Vibration (termux-vibrate):
+        Use Case: Provide haptic feedback from scripts (e.g., confirmation, alert).
+    Sensors (termux-sensor):
+        Use Case: Access data from various sensors (light, proximity, accelerometer, gyroscope, magnetic field, etc.). Requires experimenting with -s to list available sensors and -d for delay, -n for number of readings.
+        Neat Trick: Use the light sensor (-s 'Light') to potentially trigger actions based on ambient light levels (though continuous background monitoring is tricky).
+    Infrared (termux-infrared-transmit - if device has IR blaster):
+        Use Case: Send IR signals like a remote control.
+
+4. System Integration & Automation:
+
+    Sharing (termux-share):
+        Use Case: Send text or files from Termux to any Android app that can receive shared content (email, notes, cloud storage apps via their share intent, social media, etc.). This is a powerful way to export script results.
+        Neat Trick: Select a file using termux-dialog, process it (e.g., zip it), and then use termux-share to send the processed file to another app.
+        Bash
+
+        processed_text="This text was generated by my script."
+        echo "$processed_text" | termux-share -a send
+
+    Job Scheduler (termux-job-scheduler):
+        Use Case: Schedule scripts to run periodically or at specific times, often more reliably on Android than traditional cron. Great for maintenance tasks, checks, or simple automations.
+    Media Scanner (termux-media-scan):
+        Use Case: Tell the Android Media Store about new or deleted media files (images, videos, music) in shared storage so they show up in galleries or music players. Useful after downloading or generating media with scripts.
+    Wallpaper (termux-wallpaper):
+        Use Case: Change the device wallpaper from a script.
+        Neat Trick: Script that fetches the NASA Astronomy Picture of the Day using curl, saves the image, and sets it as the wallpaper.
+
+Important Note: You need to install the separate Termux:API app (usually from the same source as Termux itself, like F-Droid) and install the API package within Termux (pkg install termux-api).
+
+The real power comes when you combine these API calls within your shell scripts (bash, zsh) or other scripting languages you run in Termux (python, ruby, node, etc.) to automate tasks and integrate your command-line work deeply with your Android device.
+
+
+___PYTHON_ANDROID **** __
+- And which are the more modern Python utilities, scripting-environments and/or frameworks that are recommended these days? I.e. I know that I have asked about SL4A some time ago, but that that particular package or environment is considered a bit dated
+
+Okay, you're right, SL4A (Scripting Layer for Android) is generally considered dated now. While it was a pioneering effort, the Python ecosystem and the ways we approach scripting and automation, both generally and on platforms like Android, have evolved significantly.
+
+Here's a rundown of modern Python utilities, environments, and frameworks commonly recommended for scripting and related tasks as of early 2025:
+
+1. Core Python & Standard Library (Still Foundational):
+
+    Don't underestimate the power built into Python itself! Modern Python (3.8+) has excellent tools for scripting:
+        pathlib: An object-oriented way to handle filesystem paths, much cleaner than os.path.
+        argparse: The standard way to parse command-line arguments for your scripts.
+        subprocess: For running external commands and interacting with them.
+        json, csv: Built-in handling for common data formats.
+        datetime: For handling dates and times.
+        logging: For robust logging instead of just print() statements.
+        venv: The standard, built-in way to create isolated virtual environments for your projects. Crucial for managing dependencies.
+
+2. Package Management (Essential):
+
+    pip: The standard package installer for Python. You'll use it constantly (pip install <package>).   
+
+venv: As mentioned, the standard way to create lightweight virtual environments to keep project dependencies separate. Always use a virtual environment for any non-trivial script or project!  
+Poetry / PDM: More modern, integrated tools for dependency management and packaging. They manage a pyproject.toml file, handle virtual environments automatically, manage lock files for reproducible builds, and simplify publishing packages. Many developers prefer these over raw pip + venv + requirements.txt for larger projects.  
+
+    pipx: Excellent for installing Python-based command-line applications (like youtube-dl, black, ansible) into isolated environments so they don't pollute your global or project environments.
+
+3. Modern CLI Application Frameworks (for building powerful scripts):
+
+    Typer: Relatively new and very popular. It uses Python type hints to define your command-line interface, making it incredibly easy and fast to build robust CLIs with commands, arguments, options, help text, autocompletion, etc. Built on top of Click.
+    Click: A very mature, powerful, and widely used framework for creating command-line interfaces. It's decorator-based and highly composable. Typer is often seen as a modern layer on top, but Click itself is still excellent and widely used.
+    Rich: Not a framework for parsing arguments, but an amazing library for creating beautiful, colorful, and richly formatted terminal output (tables, progress bars, markdown, syntax highlighting). Often used with Typer or Click.   
+
+    Questionary: For creating interactive command-line prompts (like dropdowns, checkboxes, text input) that are much nicer than basic input().
+
+4. Key Third-Party Libraries for Common Scripting Tasks:
+
+    Requests: The de facto standard library for making HTTP requests. If your script needs to talk to a web API, you'll almost certainly use requests.   
+
+Beautiful Soup 4 (bs4) / Scrapy: For web scraping (parsing HTML/XML). Beautiful Soup + requests is great for simpler tasks; Scrapy is a full framework for large-scale scraping.  
+Pandas: If your scripting involves manipulating tabular data (like from CSVs or databases), Pandas is the go-to library for data analysis and manipulation. Might be overkill for simple tasks but invaluable for data-heavy ones.  
+python-dotenv: For loading environment variables from .env files, which is great for managing configuration settings (like API keys) separately from your code.
+PyYAML: For working with YAML configuration files.  
+Watchdog: For monitoring filesystem events (e.g., run a command when a file changes).  
+
+5. Task Runners:
+
+    Invoke / Doit: Tools that allow you to define and run common tasks for your project (e.g., linting, testing, building, deploying) using Python code. Can be very helpful for organizing more complex scripting workflows.
+
+6. Scripting Environments:
+
+    IDEs (VS Code, PyCharm): Modern IDEs provide excellent support for Python development, including debugging, linting, refactoring, virtual environment management, and Git integration, significantly improving the scripting development experience.   
+
+    Jupyter Notebooks / JupyterLab: While often associated with data science, Jupyter is also a fantastic environment for exploratory scripting, testing out API interactions, or documenting a process that involves code execution.
+
+Regarding Android Specifically (Successor to SL4A's Goal):
+
+    Termux + Python + Termux:API: As discussed previously, this is the most direct and powerful way to run Python scripts on Android that can interact with the device's features (files, sensors, notifications, clipboard, etc.). You write standard Python scripts and call the termux-* command-line utilities using subprocess or similar.
+    Pydroid 3: A self-contained Android app that provides a Python interpreter, pip, a basic IDE, and some GUI/Android integration libraries. It's easier to set up initially than Termux but might be less flexible for complex command-line workflows or interacting with other command-line tools.   
+
+Kivy / BeeWare (Toga): These are frameworks for building cross-platform graphical applications using Python. If your goal is to create an actual app with a UI that runs on Android (and potentially other platforms), these are the modern choices, but they are full GUI frameworks, not just simple scripting environments like SL4A aimed to be.  
+
+In Summary:
+
+The modern Python scripting landscape relies on:
+
+    Leveraging the strong standard library.
+    Using pip and venv (or Poetry/PDM) for robust package and environment management.
+    Employing powerful CLI frameworks like Typer or Click to build user-friendly script interfaces.
+    Utilizing high-quality third-party libraries (requests, Rich, etc.) for specific tasks.
+    Developing within capable IDEs or environments.
+    On Android, using Termux + Termux:API as the primary way to bridge Python scripts with device features.
 
 
 
