@@ -1089,7 +1089,7 @@ yay -S flutter
 sudo pacman -S sbcl
 # *(*)? install CLisp (+slime) Ubuntu(!) [@@@@ TODO] {{{
 # sudo apt-get install sbcl
-# shell:
+# shell: =
 #    sudo apt-get -y install cl-quicklisp
 # Next:
 # curl -o /tmp/ql.lisp http://beta.quicklisp.org/quicklisp.lisp
