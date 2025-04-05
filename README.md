@@ -54,3 +54,4 @@
 Måndag Kväll:
 - Texts + Startlist 'ShowPieces'  [__]
   - More SimplePieces (+quicklinks to Dashboard)
+- 'Den blinde rasisten'

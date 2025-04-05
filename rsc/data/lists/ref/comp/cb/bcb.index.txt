@@ -895,7 +895,7 @@ Termux
                     access your device's storage.
 
                     - Open the Termux app.
-            - Run the command: termux-setup-storage
+            - Run the command: termux-setup-storage  __X
                     - A permission dialog will appear. Grant
                       Termux access to your storage.
             This creates a storage directory within your Termux home directory (~).
@@ -934,7 +934,7 @@ Termux
                     ____
             For example, to create a symlink to your Downloads folder:
 
-            ln -s ~/storage/shared/Download ~/Downloads
+            ln -s ~/storage/shared/Download ~/Downloads  __X
 
             Then, you can simply use cd ~/Downloads to access your Downloads folder.
 
@@ -945,7 +945,7 @@ Termux
 
             For example, to open a PDF file in your Downloads folder:
 
-            termux-open ~/storage/shared/Download/my_document.pdf
+            termux-open ~/storage/shared/Download/my_document.pdf  __X __X
 
                     Cloud Storage (Dropbox, Google Drive):
 
@@ -1017,12 +1017,13 @@ Termux
 
                     Setup:
 
-                    Install rclone in Termux: pkg install rclone
+            Install rclone in Termux: pkg install rclone  __X
 
-                    Configure rclone for your cloud service:
-                    rclone config. This will guide you
-                    through authenticating with Dropbox or
-                    Google Drive.
+            Configure rclone for your cloud service:
+
+            rclone config  __X
+
+            This will guide you through authenticating with Dropbox or Google Drive.
 
                     Mount your cloud storage:
             rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
@@ -1048,7 +1049,7 @@ Termux
                     Trigger file downloads from cloud apps (Dropbox, Google Drive) using intents.
                     Trigger file uploads back to cloud apps.
                     Setup:
-            Install Termux-API: pkg install termux-api
+            Install Termux-API: pkg install termux-api  [[__X]]
                     Install the Dropbox or Google Drive app on your Android device.
                     .
             Use termux-open with intents to download or upload files.
@@ -1138,10 +1139,11 @@ Termux
                       start the interactive rclone
                       configuration process.
 
-                rclone config
+            rclone config  __X
 
                     Create a New Remote:
-                You'll be prompted to create a new remote. Choose n for "new remote."
+                You'll be prompted to create a new remote.
+            Choose n for "new remote."  __X
                 Enter a name for your remote. This is what will replace my_dropbox in your mount command. For example:
             For Dropbox: 'my_dropbox' = dropbox_termux
                 For Google Drive: gdrive_termux
@@ -1161,7 +1163,8 @@ Termux
 
                 Now that you've configured your remotes, you can use their names in your rclone mount command:
             mounting:
-            For Dropbox: rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes
+            For Dropbox:
+            rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes  __X
 
                     For Google Drive:
                 rclone mount gdrive_termux: ~/gdrive --vfs-cache-mode writes
@@ -1171,7 +1174,7 @@ Termux
 
                     rclone config: This command sets up the connection between rclone and your cloud storage service. It stores your authentication credentials and other configuration settings.
                     Remote Name: The name you give your remote during the rclone config process is how rclone identifies your cloud storage connection.
-                rclone mount remote_name:local_mount_point: This command mounts your cloud storage as a local directory in Termux.
+            rclone mount remote_name:local_mount_point: This command mounts your cloud storage as a local directory in Termux.  __?
 
                     Important Notes:
 
@@ -1215,7 +1218,7 @@ Termux
 
                     Example using Dropbox:
                     Bash
-            rclone copy dropbox:Documents/Important /storage/shared/ImportantDocuments
+            rclone copy dropbox:Documents/Important /storage/shared/ImportantDocuments  __X
 
                     This command will:
 

@@ -6,6 +6,38 @@ set fdm=marker syn= guifont=* | colors ron
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+TODO ADD 1 = STARTUPS 1 {{{
+
+Vanki LearnQna ----
+  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
+
+~/Desktop/Scratch.txt
+
+
+multimedia:
+    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
+
+file/media:
+    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
+sysadm:  TODO: ADD WIN-TERMINAL
+    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
+markdown etc:
+    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
+[git, test/deploy]:
+    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
+
+scripting / Web ----  TODO: HTML, CSS, ETC
+    gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
+System (incl. C#):
+    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
+
+LANG1-REFS 1: (+maybe LangDb1)
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+
+LANG-DB 1:
+  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
+}}}
+
 c:/Users/SEDAALB2/Desktop/Scratch.txt
 ../weblinks.txt
 fb, social {{{
@@ -143,37 +175,6 @@ Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett t
   zvffunaqynq, eåanq, hgalggwnq, söearqenq/söeyöwyvtnq
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
-TODO ADD 1 = STARTUPS 1 {{{
-
-Vanki LearnQna ----
-  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
-
-~/Desktop/Scratch.txt
-
-
-multimedia:
-    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
-
-file/media:
-    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
-sysadm:  TODO: ADD WIN-TERMINAL
-    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
-markdown etc:
-    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
-[git, test/deploy]:
-    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
-
-scripting / Web ----  TODO: HTML, CSS, ETC
-    gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
-System (incl. C#):
-    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
-
-LANG1-REFS 1: (+maybe LangDb1)
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-
-LANG-DB 1:
-  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
-}}}
 Scratch-Area {{{
   Could you help me generate XML-comment documentation for this interface?
   Could you help me generate XML-comment documentation for the piece of code I have highlighted?
@@ -1414,11 +1415,14 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
+Org-Man
 SASS+Compass {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
 }}}
 AnkiMan (+Renskriv ___office)
   festival
+  CsFunct 3(??__)
+Tiny Scheme,  (GimpPy)
             Samsung Notes (+Phone/Tablet)
             Nyxt (+qutebrowser/'hackers browser')
 
