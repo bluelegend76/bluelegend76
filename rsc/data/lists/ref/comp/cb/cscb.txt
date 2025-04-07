@@ -13,7 +13,7 @@ out  = tar inget invärde, ger bara ett utvärde
 namespace  = i den här _ måste alla klass- och typ-namn vara unika
    [+using  = slippa kvalificera med namnrymd.aaaaa.function()]
 
-DotNet CLI [moved to Compile/Build]
+DotNet CLI  [moved to Compile/Build]
 Azure CLI (??)
                 .
                 .

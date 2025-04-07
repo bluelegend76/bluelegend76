@@ -1,11 +1,15 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
 
-LÄS IGENOM ALLT[!] SOM GÅR ATT HITTA ANG. TOYOTA ----
- - Warehouse Service
-   - CAN<<=TAKE PICTURE>>
- - DOTNET CORE
+==============================
+Webnotes (=Here)
+Läs Igenom Enhetstester för TruckCom Updater + TruckCom Core
+    LÄS IGENOM SAKER PÅ TOYOTA ----
+ - Warehouse Service = Manual
+ - DOTNET, DOTNET CORE  + Wiki
  - TRUCKCOM CORE <hela koden>
+   - CAN<<=TAKE PICTURE>>
+==============================
 
 Learning React {{{
 If I wanted to learn React, what resources and books could you recommend?
@@ -575,6 +579,496 @@ In summary:
 
 C# pattern matching is a powerful feature that enhances conditional logic and data processing. While it shares similarities with F# and OCaml, it has its own unique syntax and focus. It's a valuable tool for writing more expressive and maintainable C# code.
 
+
+}}}
+Designing Classes in C#/DotNet Core [With Unit Testing/Testability in Mind] {{{
+
+- I have run across a couple of
+  quite mystifying difficulties at
+  my new workplace, this with
+  regard to DotNet Core and coding
+  in C#.
+
+- I think I have recognized that
+  the trouble stems from being a
+  bit new to not so much
+  class-design in C#, but to
+  class-design in C# and DotNet
+  Core when unit-testing is
+  involved into the mix.
+
+- The benefits of using
+  unit-testing is quite obvious:
+  Things do not break left and
+  right. The difficulties that it
+  introduces are also quite great:
+  Splitting up classes into a
+  myriad sub-classes and using
+  interfaces to the max.
+
+- Could you give me some tips and advice?
+
+It's completely understandable that
+integrating unit testing into your
+C# and .NET Core development can
+feel like a significant shift,
+especially when it comes to
+class-design. While the benefits of
+testability are immense, the
+initial overhead of restructuring
+code can be challenging. Here's
+some advice and tips to navigate
+this:
+
+1. Embrace SOLID Principles
+(Especially Dependency Inversion
+and Interface Segregation):
+
+____
+- Dependency Inversion Principle
+  (DIP): This is arguably the most
+  crucial principle for testable
+  code. It states that high-level
+  modules should not depend on
+  low-level modules. Both should
+  depend on abstractions
+  (interfaces or abstract classes).   
+
+  - Why it helps: Allows you to
+    easily replace concrete
+    dependencies with mock or stub
+    implementations in your
+    unit-tests. Your class under
+    test doesn't care about the
+    specific implementation of its
+    collaborators.
+    __
+  - Example: Instead of a
+    UserService directly
+    instantiating a
+    DatabaseRepository, it should
+    depend on an
+    IUserRepository-interface. Your
+    production code uses the
+    concrete DatabaseRepository,
+    while your tests use a mock
+    MockUserRepository.
+
+- Interface Segregation Principle
+  (ISP): Clients should not be
+  forced to depend on interfaces
+  they do not use.
+  - Why it helps: Prevents you from
+    creating "fat" interfaces that
+    force test-implementations to
+    provide unnecessary methods.
+    Smaller, focused interfaces are
+    easier to mock and reason
+    about.
+  - Example: If a class only needs
+    to read user data, it should
+    depend on an
+    IUserReader-interface, not a
+    more general IUserRepository
+    that also includes methods for
+    writing and deleting users.
+
+2. Design for Composability:
+
+- Favor composition over
+  inheritance when it promotes
+  better testability and
+  flexibility.
+- Break down complex logic into
+  smaller, more focused classes
+  with single responsibilities.
+  These smaller classes are easier
+  to test in isolation.
+- Use constructor-injection to
+  provide dependencies to your
+  classes. This makes the
+  dependencies explicit and easily
+  replaceable for testing.
+
+3. Focus on the "Unit" in Unit
+Testing:
+
+- TT@A unit-test should test a
+  small, isolated piece of code –
+  typically a single method within
+  a class.
+- Minimize external dependencies
+  within a unit test. If a class
+  relies on other services or
+  components, abstract those
+  dependencies away using
+  interfaces and mock them.
+- Aim for fast and deterministic
+  unit-tests. They should run
+  quickly and produce the same
+  result every time.
+
+4. Mocking-Frameworks are Your Friends:
+
+- Familiarize yourself with a
+  mocking framework like Moq
+  (popular in .NET). These
+  frameworks simplify the process
+  of creating mock objects and
+  setting up expectations for their
+  interactions.
+- N@Use mocks to simulate the
+  behavior of dependencies without
+  actually invoking them. This
+  allows you to test the logic
+  within your class in isolation.
+
+5. TT@Start Testing Early and Often:
+
+- Ideally, write unit tests before
+  or alongside your actual code
+  (Test-Driven Development - TDD).
+  This can influence your design
+  towards better testability from
+  the outset.
+- Don't wait until the end of
+  development to write tests.
+  Regularly running your tests
+  helps catch bugs early and
+  ensures your code remains
+  testable as it evolves.
+
+6. Refactor for Testability:
+
+- Don't be afraid to refactor your
+  existing code to make it more
+  testable. This might involve
+  extracting interfaces,
+  introducing new classes for
+  specific responsibilities, or
+  changing how dependencies are
+  managed.
+- Refactoring should be done
+  incrementally and with good
+  test-coverage in place to ensure
+  you don't introduce regressions.
+
+7. Understand the Trade-offs:
+
+- While maximizing testability is
+  important, there's a balance to
+  be struck. Over-engineering your
+  code solely for testability can
+  sometimes lead to overly complex
+  designs.
+- TT@Focus on testing the critical
+  logic and interactions within
+  your application. Not every
+  single private method needs its
+  own unit-test (though their
+  behavior should ideally be
+  covered by testing public
+  methods).
+
+8. Learn from Examples and Patterns:
+
+- Explore common design patterns
+  that promote testability, such
+  as:
+  - Strategy Pattern: Allows you to
+    swap out algorithms or
+    behaviors easily.
+  - Factory Pattern: Helps in
+    creating objects, potentially
+    abstracting away concrete
+    implementations.
+  - Observer Pattern: Facilitates
+    communication between objects
+    without tight coupling.
+
+9. Don't Aim for 100% Coverage
+Immediately:
+
+- Start by focusing on testing the
+  most critical and complex parts
+  of your application.
+- Gradually increase your test
+  coverage as you become more
+  comfortable with unit testing and
+  as the codebase evolves.
+- High coverage doesn't guarantee
+  bug-free code, but it
+  significantly reduces the risk of
+  regressions.
+
+In summary, the key to navigating
+class-design with unit-testing in
+mind is to embrace principles like
+Dependency Inversion, design for
+composability, and utilize mocking
+effectively. It's a
+learning-process, so be patient
+with yourself and focus on
+gradually improving the testability
+of your codebase.
+
+Considering your work involves
+remapping keys using AutoHotkey,
+and you're now tackling these .NET
+Core challenges at your new
+workplace in Uddevalla, remember
+that the skills you've developed in
+one area (like meticulous
+configuration) can often translate
+to another (like designing
+well-structured, testable code).
+The same attention to detail and
+systematic approach will serve you
+well in this new domain. Good luck!
+
+- Could you recommend some books or
+  other resources when it comes to
+  these topics? I suspect that
+  Xunit Patterns (which I have
+  recently bought) might be a good
+  book to dissect. Maybe also at
+  least some looks at
+  design-patterns and DotNet Core
+  might be of assistance, although
+  I suspect that the value of the
+  two latter is actually more
+  limited in this respect.
+
+You're right, "XUnit Test Patterns"
+by Gerard Meszaros is an excellent
+and highly recommended resource for
+understanding the principles and
+best practices of unit testing,
+especially within the xUnit family
+of frameworks (which includes
+xUnit.net used in .NET Core). Many
+reviewers consider it a
+comprehensive guide that goes
+beyond just xUnit and delves into
+the core concepts of test
+automation and writing effective
+tests.
+
+Here are some other resources that
+you might find helpful, categorized
+by topic:
+
+Unit Testing in .NET Core:
+
+- "The Art of Unit Testing: With
+  Examples in .NET" by Roy
+  Osherove: This is a classic and
+  widely respected book that
+  focuses on the "why" and "how" of
+  writing good unit tests. While it
+  might have some examples in older
+  .NET versions, the core
+  principles are timeless and
+  directly applicable to .NET Core.
+  It emphasizes testable design and
+  provides practical guidance.
+- "Pragmatic Unit Testing in C#
+  with NUnit" by Andy Hunt and Dave
+  Thomas: Although it mentions
+  NUnit in the title, the
+  fundamental concepts of unit
+  testing explained in this book
+  are transferable to xUnit.net.
+  It's known for its clear and
+  concise explanations and
+  practical examples.
+- Microsoft Learn Documentation on
+  Unit Testing: Microsoft provides
+  excellent documentation on unit
+  testing in .NET Core, including
+  how to use xUnit.net, mocking
+  with Moq, and best practices.
+  This is a free and constantly
+  updated resource.
+- Online Courses (e.g., on
+  Pluralsight, Udemy): Platforms
+  like Pluralsight and Udemy often
+  have dedicated courses on unit
+  testing in .NET Core, which can
+  provide a more hands-on and
+  guided learning experience. Look
+  for courses that cover xUnit.net
+  and mocking frameworks.
+
+Design Patterns:
+
+While you suspect their direct
+value might be limited specifically
+for unit testing, understanding
+design patterns can indirectly lead
+to more testable code by promoting
+loose coupling and separation of
+concerns.
+
+- "Design Patterns: Elements of
+  Reusable Object-Oriented
+  Software" by Erich Gamma, Richard
+  Helm, Ralph Johnson, and John
+  Vlissides 1 (The "Gang of Four"
+  book): This is the seminal book
+  on design patterns. While the
+  examples are in C++ and
+  Smalltalk, the principles are
+  universally applicable. It's a
+  valuable resource for
+  understanding the fundamental
+  patterns.   
+- "Head First Design Patterns" by
+  Eric Freeman and Elisabeth
+  Freeman: This book uses a more
+  engaging and visual approach to
+  explain design patterns. While
+  the primary language is Java, the
+  concepts translate well to C#,
+  and it can be a more accessible
+  starting point than the GoF book
+  for some.
+- "Design Patterns in C#" by Steven
+  John Metsker: This book
+  specifically focuses on
+  implementing the classic design
+  patterns using C# and the .NET
+  Framework. It provides practical
+  examples and demonstrates how
+  these patterns can be applied in
+  the .NET ecosystem.
+- "Hands-On Design Patterns with C#
+  and .NET Core" by Gaurav Aroraa
+  Chilberto: This book directly
+  addresses design patterns in the
+  context of C# and .NET Core,
+  making it very relevant to your
+  current environment.
+
+Dependency Injection in .NET Core:
+
+A strong understanding of
+Dependency Injection (DI) is
+crucial for writing testable code
+in .NET Core.
+
+- Microsoft Learn Documentation on
+  Dependency Injection in ASP.NET
+  Core: Microsoft's official
+  documentation provides a
+  comprehensive guide to the
+  built-in DI container in ASP.NET
+  Core, including service
+  lifetimes, registration, and best
+  practices.
+- "Dependency Injection Principles,
+  Practices, and Patterns" by Mark
+  Seemann and Steven van Deursen:
+  This book offers a deep dive into
+  the theory and practical
+  application of dependency
+  injection. While not specific to
+  .NET Core, the principles
+  discussed are fundamental and
+  highly relevant.
+- Online Articles and Blog Posts:
+  Numerous blog posts and articles
+  online explain DI concepts in
+  .NET Core with practical
+  examples. Search for topics like
+  "Dependency Injection in .NET
+  Core," "Constructor Injection,"
+  and "Service Lifetimes."
+
+Testable Architecture:
+
+Thinking beyond just unit tests to
+the overall architecture of your
+application is key for long-term
+maintainability and testability.
+
+- "Clean Architecture: A
+  Craftsman's Guide to Software
+  Structure and Design" by Robert
+  C. Martin ("Uncle Bob"): This
+  book presents a philosophy for
+  designing software with clear
+  separation of concerns, making it
+  inherently more testable. The
+  principles are language-agnostic
+  but highly applicable to .NET
+  Core.
+- "Domain-Driven Design: Tackling
+  Complexity in the Heart of
+  Software" by Eric Evans: While
+  focused on modeling complex
+  domains, DDD principles often
+  lead to more modular and testable
+  architectures by emphasizing a
+  clear separation between the
+  domain logic and infrastructure
+  concerns.
+- "Adaptive Code via C#: Agile
+  Coding with Design Patterns and
+  SOLID Principles" by Gary McLean
+  Hall: This book emphasizes
+  writing adaptable and
+  maintainable code using C#,
+  covering SOLID principles and
+  design patterns in a practical
+  context, which directly
+  contributes to testability.
+
+Regarding your suspicion about the
+limited direct value of Design
+Patterns and .NET Core books for
+unit testing:
+
+You're partially correct. Design
+patterns themselves aren't directly
+about writing unit tests. However,
+applying good design patterns often
+leads to code that is easier to
+unit test because it tends to be
+more modular, less coupled, and
+adheres to principles like SOLID
+(especially DIP).
+
+Similarly, while a general .NET
+Core book might not focus
+extensively on unit testing
+strategies, understanding how .NET
+Core works, especially its built-in
+Dependency Injection, is crucial
+for designing testable applications
+within this framework.
+
+Therefore, I would still recommend
+exploring resources on Design
+Patterns and .NET Core, but keep
+your primary focus on books and
+resources specifically dedicated to
+unit testing principles and
+practices in the .NET Core
+environment, like "XUnit Test
+Patterns" and "The Art of Unit
+Testing." Understanding Dependency
+Injection in .NET Core is also
+paramount for effective unit
+testing.
+
+By combining the knowledge from
+these different areas, you'll build
+a strong foundation for designing
+classes and writing effective unit
+tests in your .NET Core projects.
+Good luck with your learning
+journey in Uddevalla!
 
 }}}
 
@@ -11029,9 +11523,14 @@ https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater/pullrequ
     https://dev.azure.com/tmhe/_usersSettings/tokens
 
 # SW6 Backlog: 'Installer background service: First iteration'
+
+
 https://dev.azure.com/tmhe/TMHMS-Development/_backlogs/backlog/RnD-SW-6/Features
 
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Package-syncing.md&version=GBmain&_a=preview  # Syncing Sequence-Diagram + Markdown-code
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater  #Project/Classes Tree-structure overview
+
+
     https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25684/Installer-Service  # Sync-client overview +/= requirements-wiki
 ----
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing  # Pong(=Sequence)-diagram - Rendered
@@ -11040,8 +11539,6 @@ https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Docu
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Package-syncing.md&version=GBmain&_a=preview
 ----
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/TruckCom%20Project%20Wiki/10796/Production-computer-management
-https://dev.azure.com/tmhe/TMHMS-Development/_backlogs/backlog/RnD-SW-6/Features  # sw6 backlogs
-    https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing
 
 
