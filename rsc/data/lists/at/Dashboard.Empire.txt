@@ -999,15 +999,27 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
   }}}
   ----
-    REVEAL, IMPRESS  __  ¤
+    REVEAL, IMPRESS  __  ¤¤
     . {{{
-      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
-            ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
 
-      ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt
+      Docs:
+      ~/Dropbox/rsc/Doks/phone/graf/anim/revealjs.txt
+      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
+      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
+
+      Intro-Book:
+      ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.txt
+          ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.pdf
+
+      ~/Empire/Doks/Comp/lang/webdev/js/present/md2revealjs-withpandoc.pdf
+      ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.txt
+          ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.pdf
+
+
+      cp ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
       --
-      ~/Empire/graf/imprjs.txt
-      ~/Empire/graf/pr/imprjs.txt
+      cp ~/Empire/graf/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
+      cp ~/Empire/graf/pr/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
             ~/Empire/Comp/lang/webdev/imprjs_aux.txt
             ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
     }}}
@@ -1021,6 +1033,9 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   ASP.NET CORE MVC __ (++Web APIs)  ¤¤
   . {{{
+    gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+
+
     gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
 
     ~/Dropbox/rsc/Doks/taskuj/LIA2/DotNetCore/
@@ -1034,6 +1049,10 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
   }}}
+  SSH  ¤¤
+  . {{{
+    ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
+  }}}
   py/f# (etc) sysadm  #  ¤
   . {{{
       PyProgr
@@ -1042,7 +1061,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   JupNotebooks, polyglot notebooks, Pandas(etc)
   . {{{
-      ~/gdrive/JupNoteb.binder.Tags1.txt
+      cp ~/gdrive/JupNoteb.binder.Tags1.txt
 
         https://learn.microsoft.com/en-us/training/modules/polyglot-notebooks/
         https://code.visualstudio.com/docs/languages/polyglot
@@ -1052,37 +1071,37 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 
         ~/gdrive/rsc/Doks/phone/Comp/datasci/py/pydatawrangl-clean_2022.txt
     }}}
-  Obsidian __ @  MLEARN**(+)
+  Obsidian __ @  MLEARN**(+)  ¤¤
   . {{{
     gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
 
-    ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt
+    cp ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt ~/Dropbox/Udt/
     ~/Empire/lang/markup/MD/md-obsidian.txt
   }}}
-    vim pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]
+    vimscripting + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
-  Xonshell  __  ¤
+  Xonshell  __  ¤¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}
-  Termux  __  @@
+  Termux  __  @@  ¤¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/Termux.Tags1.txt
   }}}
-  Mpv-Docs | Yt-Downl
+  Mpv-Docs  ¤¤ | Yt-Downl
   . {{{
     ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
   }}}
-  AVALONIA  ¤
+  AVALONIA  ¤¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
 
     ~/gdrive/rsc/Doks/taskuj/LIA2/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
   }}}
-  NuShell  _
+  NuShell  _  ¤(¤)
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_docs-book.txt
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
@@ -1104,7 +1123,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   GraphQL(!)  #
   . {{{
   }}}
-    sqlitebrowser  ___onroad  + Shotwell (online Gallery)
+    sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤
     . {{{
       ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/sqlitebrowser-docs.txt
     }}}
@@ -1119,6 +1138,11 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
     [+Material UI]
+
+
+    cp ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/
+
+    cp ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
   }}}
     Bash|Dash-Mans
   . {{{
@@ -1137,6 +1161,14 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤
   . {{{
+
+    F# for Devops ----
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work-2//
+
+    https://mallibone.com/post/fsharp-scripting
+
+
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
 
@@ -1149,7 +1181,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
   }}}
-  Reason + PureScript
+  Reason + PureScript  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
     ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
