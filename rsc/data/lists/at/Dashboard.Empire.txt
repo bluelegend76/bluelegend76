@@ -858,7 +858,11 @@ TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
   CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
 ----
 Maui / AVALONIA  __  ¤¤
-C# DotNet Core MVC  + Blazor  Cs Funct 3
+C# DotNet Core MVC + Blazor, Cs Funct 3 {{{
+
+~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/dotnet/DnFramew_p34.txt
+
+}}}
     Puppet Lang + Patterns(etc)
     FuncPy  [_Renskriv_]  __  Py/F# SysAdmin  ¤
     Nushell, Xonsh  _  ¤
@@ -889,8 +893,14 @@ Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
 }}}
 office.Overview [2]  # write summary|overview {{{
+
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/Termux.Tags2.txt
+~/Dropbox/rsc/Doks/phone/Comp/editor/vim/vimscr-ibmtuts.Tags1.txt
+
 Reveal.js|Impress.js  __
-Spectre Console  __
+Spectre Console  __ {{{
+  ~/gdrive/SpectreConsole.tags1.txt
+}}}
   iPython(*)
   Xonsh
   CsRx 3, Rx.Net;  Csharp Tips (etc)
@@ -1008,7 +1018,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
       ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
 
       Intro-Book:
-      ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.txt
+      ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
           ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.pdf
 
       ~/Empire/Doks/Comp/lang/webdev/js/present/md2revealjs-withpandoc.pdf
@@ -1023,10 +1033,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
             ~/Empire/Comp/lang/webdev/imprjs_aux.txt
             ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
     }}}
-  Spectre Console
-  . {{{
-    ~/gdrive/SpectreConsole.tags1.txt
-  }}}
   android scripting  [Termux + Rclone]
   . {{{
     ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
@@ -1045,6 +1051,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
   }}}
+  + Cs-Tips 70, DesPatts, Xunit-Patts
   FuncPy  ¤
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
@@ -1161,6 +1168,8 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤
   . {{{
+
+  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
 
     F# for Devops ----
     https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
@@ -1447,6 +1456,8 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
+Pegged, Tsv-Utils, Perlstyle-Regex
+----
 Org-Man
 SASS+Compass {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
@@ -1454,7 +1465,7 @@ SASS+Compass {{{
 AnkiMan (+Renskriv ___office)
   festival
   CsFunct 3(??__)
-Tiny Scheme,  (GimpPy)
+Tiny Scheme, GimpScheme-Plugins  (GimpPy)
             Samsung Notes (+Phone/Tablet)
             Nyxt (+qutebrowser/'hackers browser')
 

@@ -1087,7 +1087,7 @@ yay -S flutter
 # TODO: https://docs.flutter.dev/get-started/install/linux
 
 # }}}
-sudo pacman -S sbcl
+sudo pacman -S sbcl emacs-slime
 # *(*)? install CLisp (+slime) Ubuntu(!) [@@@@ TODO] {{{
 # sudo apt-get install sbcl
 # shell: =
