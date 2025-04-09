@@ -885,240 +885,152 @@ win-explorer
                 +home, end etc??
 freecommander
             TODO: Add accelerator-keys too
-            File: Attribute/Timestamp... (+properties)
-                s-Enter
+            File: Attribute/Timestamp... (+properties)  s-Enter
                 File: Change case...
-            File: Compare text files...
-                ca-v
-                File: Context menu
-                    s-f10
-            File: Copy
-                f5, s-f5
-                File: Create MD5-checksums
-                    c-k
-            File: Delete
-                f8
+                .
+            File: Compare text files...  ca-v
+                File: Context menu  s-f10
+                .
+        File: Copy  f5, s-f5
+                File: Create MD5-checksums  c-k
+                .
+            File: Delete  f8
         File: Delete without basket  s-f8
-            File: Edit
-                f4
-                File: Edit new
-                    s-f4
-                File: Exit
-                    a-f4
+            File: Edit  f4
+                File: Edit new  s-f4
+                File: Exit  a-f4
                 File: Find computer
-            File: Move
-                f6, s-f6
-            File: Multi rename...
-                c-m
+        File: Move  f6, s-f6
+            File: Multi rename...  c-m
                 File: New item
-            File: New text file
-                cs-n
-                File: Pack
-                    a-f5
-                File: Rename
-                    f2
-            File: Search in folders...
-                c-f7
-                File: Search
-                    a-f7
-                File: Split...
-                    cs-i  # el. cs-l
-                File: Unpack
-                    a-f6
+                .
+            File: New text file  cs-n
+                File: Pack  a-f5
+                File: Rename  f2
+            File: Search in folders...  c-f7
+                File: Search  a-f7
+                File: Split...  cs-i  # el. cs-l
+                File: Unpack  a-f6
                 File: Verify MD5-checksums
-                File: View
-                    f3
-            File: View external
-                s-f3
-                File: Wipe
-                    cs-f8
+                File: View  f3
+            File: View external  s-f3
+                File: Wipe  cs-f8
 
-                Edit: Copy
-                    c-c
+                Edit: Copy  c-c
                 Edit: Copy file name to clipboard (8.3)
                 Edit: Copy file path to clipboard (8.3)
                 Edit: Copy file path to clipboard (UNC)
                 Edit: Copy file path to clipboard (Web)
-            Edit: Copy full name as text
-                a-Ins
-            Edit: Copy full path as text
-                ca-Ins
+            Edit: Copy full name as text  a-Ins
+            Edit: Copy full path as text  ca-Ins
                 Edit: Copy full path as text (8.3)
                 Edit: Copy full path as text (UNC)
                 Edit: Copy full path as text (Web)
-                Edit: Cut
-                    c-x
-                Edit: Invert selection
-                    k*
-            Edit: Invert selection - only files
-                c-k*
-                Edit: Load selection from file
-                    a_e,o
-                Edit: Paste
-                    c-v
-                Edit: Save selection in file
-                    a_e,v
-                Edit: Select all
-                    c-a
-            Edit: Select all files
-                c-k/  # or c-k+
-            Edit: Select files with same ext.
-                a-k+
-            Edit: Select group...
-                k+
-                Edit: Select same in other pane
-                    a_e,m
-                Edit: Unselect all
-                    c_k-
-            Edit: Unselect files with same ext.
-                a_k-
-            Edit: Unselect group...
-                k-
+                Edit: Cut  c-x
+                Edit: Invert selection  k*
+            Edit: Invert selection - only files  c-k*
+                Edit: Load selection from file  a_e,o
+                Edit: Paste  c-v
+                Edit: Save selection in file  a_e,v
+                Edit: Select all  c-a
+            Edit: Select all files  c-k/  # or c-k+
+            Edit: Select files with same extension  a-k+
+            Edit: Select group...  k+
+                Edit: Select same in other pane  a_e,m
+                Edit: Unselect all  c_k-
+            Edit: Unselect files with same extension  a_k-
+            Edit: Unselect group...  k-
 
-                Folder: Add current folder
-                    cs-v
-            Folder: Change left drive
-                a-f1
-            Folder: Change right drive
-                a-f2
-            Folder: Compare
-                a-v
+                Folder: Add current folder  cs-v
+                .
+            Folder: Change left drive  a-f1
+            Folder: Change right drive  a-f2
+            Folder: Compare  a-v
                     Folder: Compare management
                     Folder: Control panel
                     Folder: Desktop
-            Folder: Edit address bar
-                a-g
-                Folder: Edit
-                    cs-f
-            Folder: Favorite folder
-                a-up
+            Folder: Edit address bar  a-g
+                Folder: Edit  cs-f
+            Folder: Favorite folder  a-up
             Folder: Filter
                 Folder: Filter off
             Folder: Go to folder...
                 Folder: Go up
-            Folder: History
-                a-down
-            Folder: History back
-                a-left
-            Folder: History next
-                a-right
-                Folder: Make folder-set
-                    a_d,m
+            Folder: History  a-down
+            Folder: History back  a-left
+            Folder: History next  a-right
+                Folder: Make folder-set  a_d,m
                 Folder: My documents
         Folder: New  f7
             Folder: Open folder in other pane
                 Folder: Open folder in same pane
-            Folder: Open left folder on the right
-                c-right
-            Folder: Open right folder on the left
-                c-left
-            Folder: Quick filter
-                c-y
-            Folder: Quick filter off
-                a-y
-            Folder: Root
-                c-home
-            Folder: Search
-                s-f7
-                Folder: Set filter
-                    c-f
-                Folder: Size of folders
-                    a-f9
-                Folder: Size of selected folders
-                    c-f9
+            Folder: Open left folder on the right  c-right
+            Folder: Open right folder on the left  c-left
+            Folder: Quick filter  c-y
+            Folder: Quick filter off  a-y
+            Folder: Root  c-home
+            Folder: Search  s-f7
+                Folder: Set filter  c-f
+                Folder: Size of folders  a-f9
+                Folder: Size of selected folders  c-f9
             Folder: Sort - switch
-            Folder: Sort: Date/Time
-                c-f5
-            Folder: Sort: Extension
-                cs-f4
-            Folder: Sort: Name
-                c-f3
-            Folder: Sort: Size
-                c-f6
-            Folder: Sort: Type
-                c-f4
+            Folder: Sort: Date/Time  c-f5
+            Folder: Sort: Extension  cs-f4
+            Folder: Sort: Name  c-f3
+            Folder: Sort: Size  c-f6
+            Folder: Sort: Type  c-f4
                 Folder: Sort: Unsorted
                 Folder: Start-menu
-            Folder: Synchronize
-                a-s
+            Folder: Synchronize  a-s
 
                 View: 100% <-> 50%
             View: Auto resize columns
                 ca-num...
-            View: Details
-                c-f2
-                View: Edit...
-                    c-g
-                View: Flat view - files
-                    c-b
-                View: Flat view - folders
-                    cs-b
+            View: Details  c-f2
+                View: Edit...  c-g
+                View: Flat view - files  c-b
+                View: Flat view - folders  cs-b
                 View: Horizontal
-                View: Large / Small icons
-                    a_w,s/w,a
-                View: Layout restore
-                    a_w,y,r
-                View: Left to right
-                    ca-right
-                View: List
-                    c-f1
-                View: Minimize
-                    s-Esc
-            View: Only selected files
-                c-s
-            View: Quick view
-                c-q
-                View: Refresh
-                    c-r
-                View: Refresh all
-                    cs-r
-                View: Right to left
-                    ca-left
-                View: Same folder
-                    c-e
-                View: Set active pane
-                    Tab
+                View: Large / Small icons  a_w,s/w,a
+                View: Layout restore  a_w,y,r
+                View: Left to right  ca-right
+                View: List  c-f1
+                View: Minimize  s-Esc
+            View: Only selected files  c-s
+            View: Quick view  c-q
+                View: Refresh  c-r
+                View: Refresh all  cs-r
+                View: Right to left  ca-left
+                View: Same folder  c-e
+                View: Set active pane  Tab
                 View: Show/hide hidden and system files
-                View: Split 0/100
-                    cs-f1
-                View: Split 100/0
-                    cs-f3
+                View: Split 0/100  cs-f1
+                View: Split 100/0  cs-f3
                 View: Split 25/75
-                View: Split 50/50
-                    cs-f2
+                View: Split 50/50  cs-f2
                 View: Split 75/25
-            View: Split horizontal
-                c-h
-            View: Swap
-                c-u
-                View: Tab: Close all folder tabs
-                    cs-w
-                View: Tab: Close folder tab
-                    c-w
-                View: Tab: Copy folder tab
+            View: Split horizontal  c-h
+            View: Swap  c-u
+                View: Tab: Close all folder-tabs  cs-w
+                View: Tab: Close folder-tab  c-w
+                View: Tab: Copy folder-tab
                 View: Tab: Folder tab to left
                 View: Tab: Folder tab to right
                 View: Tab: Folder tabs left to right
                 View: Tab: Folder tabs right to left
-            View: Tab: Lock folder tab
-                View: Tab: Lock folder tab - navigation to sub...
-                View: Tab: Lock folder tab - no navigation
-                View: Tab: New folder tab
-                    c-t, cs-t
-            View: Tab: Next folder tab
-                c-tab
-                View: Tab: Previous folder tab
-                    cs-tab
-                View: Tab: Open in new folder tab
-                View: Tab: Open in new folder tab in other pane
-                View: Tab: Rename and lock folder tab
-            View: Tab: Swap folder tabs
-                cs-u
-                View: Thumbnails
-                    c-i  # or c-l
+            View: Tab: Lock folder-tab
+                View: Tab: Lock folder-tab - navigation to sub...
+                View: Tab: Lock folder-tab - no navigation
+                View: Tab: New folder-tab  c-t, cs-t
+            View: Tab: Next folder-tab  c-tab
+                View: Tab: Previous folder-tab  cs-tab
+                View: Tab: Open in new folder-tab
+                View: Tab: Open in new folder-tab in other pane
+                View: Tab: Rename and lock folder-tab
+            View: Tab: Swap folder-tabs  cs-u
+                View: Thumbnails  c-i  # or c-l
             View: Toggle views  ___hm_eng
-            View: Tree
-                a-t
+            View: Tree  a-t
                 View: Tree - collapsed selected
                 View: Vertical
             View: Views
@@ -1128,21 +1040,15 @@ freecommander
                 Extras: Color - Font...
             Extras: Connect to network drive...
                 f11
-            Extras: Define shortcuts...
-                a_x,k
-                Extras: DOS box...
-                    c-d
+            Extras: Define shortcuts...  a_x,k
+                Extras: DOS box...  c-d
                 Extras: Favorite tools
-            Extras: Favorite tools edit...
-                cs-y
+            Extras: Favorite tools edit...  cs-y
                 Extras: Font...
                 Extras: Open with...
-                Extras: Run...
-                    a_x,n
-                Extras: Save settings
-                    a_e,a
-            Extras: Settings
-                cs-s
+                Extras: Run...  a_x,n
+                Extras: Save settings  a_e,a
+            Extras: Settings  cs-s
                 Extras: Switch language
                 Extras: Take Desktop Snapshot...
 

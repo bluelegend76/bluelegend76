@@ -1181,6 +1181,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
 
+FunProfit
     gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
 
     gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
