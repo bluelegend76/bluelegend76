@@ -6,6 +6,7 @@
     ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/js/js.txt
     ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/SVG.txt
     ~/Dropbox/rsc/data/lists/ref/comp/lang/webdev/js/jscb.txt
+
 	-c 'tabdo set foldmethod=indent'
 	-c 'tabdo set foldlevel=1'
     -c 'belowright vertical split'

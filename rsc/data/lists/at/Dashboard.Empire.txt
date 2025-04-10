@@ -30,6 +30,7 @@ scripting / Web ----  TODO: HTML, CSS, ETC
     gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
+LISP, F#, ML, ...
 
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
@@ -1168,6 +1169,15 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤
   . {{{
+    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
+      https://suave.io/
+
+FUNPROFIT
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
+
+
 
   gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
 
@@ -1177,14 +1187,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 
     https://mallibone.com/post/fsharp-scripting
 
-
-    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
-      https://suave.io/
-
-FunProfit
-    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
-
-    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
   }}}
   Roslyn (+Analysis|CodeGen)
   . {{{

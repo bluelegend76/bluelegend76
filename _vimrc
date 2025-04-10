@@ -85,6 +85,9 @@ nnoremap <A-Down> ddjP
 " --
 vnoremap <Up> kok$
 vnoremap <Down> joj$
+" 'Sentence Highlighter' ----
+vnoremap <Right> <Esc>)visozt
+vnoremap <Left> <Esc>(ztviso
 
 
 nnoremap <leader>co :colors <C-D>
