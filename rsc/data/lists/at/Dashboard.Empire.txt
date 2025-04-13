@@ -854,6 +854,7 @@ Office.Rush [1]  # rush through + take review/notes {{{
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
             Pegged, Tsv-Utils, Perlstyle-Regex
+            ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/DlangWiki-FunctionalGarden.txt
     ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
 TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
   CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
@@ -1059,6 +1060,26 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
   }}}
   + Cs-Tips 70, Cs DesPatts, Xunit-Patts
+  . {{{
+    cd ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/
+
+    effective-cs-with-scottm_2017.txt
+    ----
+    designpatts.cs.Cleaned1.txt
+    designpatts.cs.Tags1.txt
+    cs-despatts_2018.txt
+        csharptips-2014.txt
+    cscb_2022.Tags1.txt
+
+    cs-codeconventions.txt
+    cs-avanc.txt
+    cshconceptsavanc.txt
+    cs-datastructsalgos.txt
+
+    funct/CsFunct3_2021.txt
+    csfunct.tags1.txt
+    functional-cs.Tags1.txt
+  }}}
   FuncPy  ¤
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
