@@ -1,7 +1,12 @@
 let mapleader=","
+" IDEAS:
+" TODO: TAG MARKED SENTENCE WITH EMPIRE-STYLE TAGS  v_n v_N (+numbers) v_t v_T (etc/and others)
+" TODO: VMARKED SENTENCE: PAD EMPTY LINE AT TOP (=ABOVE MARKED SENTENCE)
+" TODO: LEFT/RIGHT = MOVE BETW. SENTENCES (MAYBE: VMARK SENTENCE)
+
 " TODO: VIM SPELL, VIM COLORS
-" INVESTIGATE: INSTALLING AND USING VUNDLE FOR HANDLING VIM-PLUGINS
-" TODO: ADD ,te : go to top + set setting/run ex-line at top
+" INVESTIGATE: INSTALLING AND USING VUNDLE/PLUG FOR HANDLING VIM-PLUGINS
+" TODO: ADD ,et : go to top + set setting/run ex-line at top
 "---- __
 colorscheme ron
 set guicursor+=a:blinkon0

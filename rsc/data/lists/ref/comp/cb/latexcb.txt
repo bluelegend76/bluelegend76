@@ -6,6 +6,12 @@ LOffice Impress
 
 Pandoc
 Reveal.js
+                    ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs.Tags1.txt
+                    ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
+                    ----
+                    ~/Dropbox/Udt/rsc/doks/graf/present/reveal/md2revealjs-withpandoc.txt
+                    ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs-tutorial.txt
+                    ----
                         https://revealjs.com/config/
                     transitions
                         https://revealjs.com/transitions/
