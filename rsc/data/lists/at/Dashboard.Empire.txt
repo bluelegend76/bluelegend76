@@ -1080,6 +1080,14 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     csfunct.tags1.txt
     functional-cs.Tags1.txt
   }}}
+  XUnit + 'Prop.based Testing'
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/XunitPatts.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt
+
+    touch ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt
+    ln -s ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt ~/Empire/Doks/Comp/PROGR/test/
+  }}}
   FuncPy  ¤
   . {{{
     ~/gdrive/FuncPy.binder.Tags1.txt
@@ -1096,7 +1104,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   }}}
   JupNotebooks, polyglot notebooks, Pandas(etc)
   . {{{
-      cp ~/gdrive/JupNoteb.binder.Tags1.txt
+      ~/gdrive/JupNoteb.binder.Tags1.txt
 
         https://learn.microsoft.com/en-us/training/modules/polyglot-notebooks/
         https://code.visualstudio.com/docs/languages/polyglot
