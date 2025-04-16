@@ -177,6 +177,13 @@ Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett t
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
 Scratch-Area {{{
+  . {{{
+    - Färre/Gjort färre timmar på plats
+    - Fysåterhämtning
+    - Soc. samvaro och kontakter
+    - Hålla (sig) väl med 'hyresvärden'
+  }}}
+
   Could you help me generate XML-comment documentation for this interface?
   Could you help me generate XML-comment documentation for the piece of code I have highlighted?
 
@@ -1125,7 +1132,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
-  Xonshell  __  ¤¤
+  Xonshell  __  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}

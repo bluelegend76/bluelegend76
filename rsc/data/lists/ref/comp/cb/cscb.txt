@@ -3568,6 +3568,7 @@ ReSharper/R#
                     Ctrl Alt F 	Code Cleanup 
 Avalonia:  ____
             CREATE AND EDIT
+.???
             Show context actions
                 
             a-Enter 
@@ -4079,6 +4080,19 @@ Visual Studio:
 ptools.Features-Hitlist
             Unit Testing
             .
+DotNet (Classes etc)
+                System.IO
+                System.Net
+                    Http
+                System.Diagnostics
+                    FileVersionInfo
+                    Process.Start()
+                        Run executable file as a process
+                System.Text
+                    JSON
+                ----
+                System.Data (incl. SQL, ADO)
+                System.XML
 ptools
                 dynamic memory (=managed heap)
                 ---- functions --------
