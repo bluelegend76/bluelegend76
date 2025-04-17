@@ -176,13 +176,39 @@ Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett t
   zvffunaqynq, eåanq, hgalggwnq, söearqenq/söeyöwyvtnq
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
-Scratch-Area {{{
-  . {{{
+Scratch-Area + todoscratch/'hänglista' + Daily {{{
+
+- freecommander accelerator-keys + cleanup
+- sista 5 linux-kommandon: gemini-sök ('Xonsh el. Bash för Linux-Sysadmin?')
+- CLEAN OUT NEWEST WEBNOTES ('AT BOTTOM' = Tracker + Sparql, etc)
+
+- Genomläsning TruckCom Core
+- Gemini-frågor på TCC-kod(generellt) + på Uppgifts-Instruktionerna
+    - Warehouse Service-manualen
+ - Vanki-Deck 1 med Peter L
+     ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
+- lägg ut senaste 2 videos med Henrik och Erik(!)
+    senaste snack med Erik:
+    - checksum
+    = Installation Utilities
+     + interface
+     + IServiceCollection
+     compare 2 checksums
+- Ny Vanki-Deck DotNet Core 23 (*)
+---- store
+- begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas
+    - hälsat på SW 5
+  .... {{{
     - Färre/Gjort färre timmar på plats
     - Fysåterhämtning
     - Soc. samvaro och kontakter
     - Hålla (sig) väl med 'hyresvärden'
   }}}
+- CAN-skissen (+Manual)
+---- Vad Lärt?
+- Framkant i Planering
+- förhandling, tydlighet och kommunikation
+ - vikten av priming-faktorer
 
   Could you help me generate XML-comment documentation for this interface?
   Could you help me generate XML-comment documentation for the piece of code I have highlighted?
@@ -867,11 +893,8 @@ TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
   CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
 ----
 Maui / AVALONIA  __  ¤¤
-C# DotNet Core MVC + Blazor, Cs Funct 3 {{{
-
-~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/dotnet/DnFramew_p34.txt
-
-}}}
+C# DotNet Core MVC + Blazor, Cs Funct 3
+    ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/dotnet/DnFramew_p34.txt
     Puppet Lang + Patterns(etc)
     FuncPy  [_Renskriv_]  __  Py/F# SysAdmin  ¤
     Nushell, Xonsh  _  ¤
@@ -903,10 +926,12 @@ Buckey's Godot
 }}}
 office.Overview [2]  # write summary|overview {{{
 
+~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
 cd ~/Dropbox/Udt/rsc/data/lists/Tagged/
 Termux.Tags2.txt 
 vimscr-ibmtuts.Tags1.txt 
 vdocs-Usr41.Tags1.txt
+  Vimscr. Hardway
 
 LVIMSCR-HARDW
 PRACT-VIM, Vim-Tips
@@ -923,8 +948,8 @@ F# [Overview and Concepts]  +Cloj.
   FuncPy **
   Anki
   ----
-    Py Webscraping
-  Avalonia  __
+Py Webscraping
+Avalonia  __
     [CsFunct 3]
 
 }}}

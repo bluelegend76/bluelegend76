@@ -1,6 +1,21 @@
 ~/scripts/ALLTODOIST/pr_lynx.bash
 ___0000
 
+
+vim:fdm=marker:sw=2:syn=:
+
+@b(ump):   3yyp}ddzc3-   #copy last q&a-post + bump i-number 1
+@s(plit):  o----yypO         #split (=put ---- + blank line + ----)
+
+----
+1
+{{{
+    
+    --
+    refdokid-p1
+    }}}
+
+
 TODO  =MAYBE CONVERT TO INDENT-STYLE LIST(!!)
 
 	http://homes.chass.utoronto.ca/~purslow/lhfb.html
