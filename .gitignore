@@ -2,3 +2,6 @@
 *.swp
 
 *.xml
+
+# Exclude Emacs Doom config-files
+.emacs.d/elpa/**
