@@ -4080,19 +4080,48 @@ Visual Studio:
 ptools.Features-Hitlist
             Unit Testing
             .
-DotNet (Classes etc)
-                System.IO
-                System.Net
+DotNet (Classes etc) ----
+                DDE
+                    System.Web  [Caching, SessionState ]
+                --------
+                System.IO               # binary-/text-streams, files, ...
+                System.Net              # http, tcp/ip, sockets, ...
                     Http
                 System.Diagnostics
                     FileVersionInfo
+                        FileVersion (=semver-number)
                     Process.Start()
                         Run executable file as a process
-                System.Text
+                System.Collections
+                    Generic
+                System.Text             # encodings, Regex, ...
                     JSON
+                System.Globalization    # cultures, sorting, ...
+                System.Security         # cryptog, permissions, ...
+                    Cryptography.MD5.Create();
+                System.Reflection       # metadata, IL-emit
+                System.Threading
+                System.Drawing
+                    Drawing2d
+                    Imaging
+                    Printing
+                    Text
+                Windows.Forms   # + Test generating with F#(!!)
+                    [event-driven, Windows Forms-designer, ]
                 ----
-                System.Data (incl. SQL, ADO)
-                System.XML
+                System.Configuration
+                System.Resources
+                System.ServiceProcess
+                System.Runtime
+                  InteropServices
+                  Remoting
+                  Serialization
+                ----
+                T@T@System.Data (incl. SQL, ADO, OLE)
+                System.XML              # + Dom, xslt, xpath, schema ...
+                ==== NuGet (=third-party) ====
+                Spectre
+                Avalonia/MAUI   # Avalonia/XAML-designer????
 ptools
                 dynamic memory (=managed heap)
                 ---- functions --------

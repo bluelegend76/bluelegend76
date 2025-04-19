@@ -932,10 +932,10 @@ freecommander
                 Select ----
                     Edit: Select files with same extension  a_ee, a-k+  ____
                     --
-                    Edit: Invert selection  a_ei  k*
+                    Edit: Invert selection  a_ei, k*
                     Edit: Invert selection - only files  a_en, c-k*
-                     Edit: Save selection in file  a_e,v
-                    Edit: Load selection from file  a_e,o
+                     Edit: Save selection in file  a_ev
+                    Edit: Load selection from file  a_eo
                             Edit: Paste  c-v
                     Edit: Select all files  c-k/  # or c-k+
                     Edit: Select group...  k+
@@ -955,7 +955,7 @@ freecommander
                                 Folder: Desktop
                     Folder: Edit address bar  a-g
                     Folder: Edit  cs-f
-                        Folder: Favorite folder  a-up
+                Folder: Favorite folder  a_dva, a-up  [+go to fav = cs-1, cs-2 etc]
                     Folder: Filter
                     Folder: Filter off
                     Folder: Go to folder...
@@ -1125,7 +1125,7 @@ foxit reader (win = supports dark-mode)
                 Undo  Command + Z
                 Redo  Command + Shift + Z
                 Select All  Command + A
-            Add Bookmark  Command + B
+        Add Bookmark  Command + B
                 Preferences  Command + K
                 Delete the word before the cursor’s current position  Command + Backspace
                 Connect to Digital Rights Management Servers and Get Templates  Command + Option + G

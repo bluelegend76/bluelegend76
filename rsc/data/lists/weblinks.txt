@@ -12,6 +12,8 @@ Läs Igenom Enhetstester för TruckCom Updater + TruckCom Core
 ==============================
 
 Learning React {{{
+    +Hooks, Functional Components
+
 If I wanted to learn React, what resources and books could you recommend?
 
 Learning React can be an exciting journey! Here's a breakdown of recommended resources, combining online platforms and books, to help you get started and progress:
@@ -22,13 +24,13 @@ Online Resources (Highly Recommended for Interactive Learning):
         This is the absolute best place to start. It's comprehensive, up-to-date, and provides a solid foundation. The "Thinking in React" section is particularly valuable.
         The recent react.dev overhaul makes this resource even more valuable.
     Scrimba:
-        Scrimba offers interactive coding screencasts. You can pause, edit the code, and run it directly in the browser. Their React courses are highly regarded for their practical approach.
+        Scrimba offers interactive coding-screencasts. You can pause, edit the code, and run it directly in the browser. Their React courses are highly regarded for their practical approach.
     freeCodeCamp:
         freeCodeCamp's React curriculum is excellent and free. It provides hands-on projects and exercises to reinforce your learning.
     Codecademy:
-        Codecademy's React course is another solid option, particularly if you prefer a structured learning path.
+        Codecademy's React-course is another solid option, particularly if you prefer a structured learning-path.
     Udemy and Coursera:
-        These platforms offer a wide variety of React courses, both beginner-friendly and advanced. Look for courses with high ratings and recent updates.
+        These platforms offer a wide variety of React-courses, both beginner-friendly and advanced. Look for courses with high ratings and recent updates.
         Look for instructors that teach using hooks, and functional components.
     React Router Documentation:
         Once you start building multi-page apps, you'll need React Router. The official documentation is excellent.
@@ -62,13 +64,28 @@ Learning Path Recommendations:
 
 Key Things to Focus On:
 
-    Hooks: Understand how to use hooks (like useState, useEffect, and useContext) for managing state and side effects in functional components.
-    Component-Based Architecture: Learn how to break down your application into reusable components.
-    State Management: Understand how to manage state in React applications, both locally and globally.
-    React Router: Learn how to implement navigation in your React applications.
-    Testing: Learn how to write unit and integration tests for your React components.
+- Hooks: Understand how to use
+  hooks (like useState, useEffect,
+  and useContext) for managing
+  state and side effects in
+  functional components.
+- Component-Based Architecture:
+  Learn how to break down your
+  application into reusable
+  components.
+- State Management: Understand how
+  to manage state in React
+  applications, both locally and
+  globally.
+- React Router: Learn how to
+  implement navigation in your
+  React applications.
+- Testing: Learn how to write unit
+  and integration tests for your
+  React components.
 
 By combining these resources and focusing on the key concepts, you'll be well on your way to mastering React.
+
 }}}
 ReasonML / Rescript {{{
 
@@ -11521,6 +11538,7 @@ HCCYÄFNER / Ghgbevnyf (cå Rat),  _pnfgf (+Oybttvat)
 https://dev.azure.com/tmhe/TMHMS-Development/_workitems/edit/256553  # First Work-Items
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater/pullrequest/91206
     https://dev.azure.com/tmhe/_usersSettings/tokens
+https://www.figma.com/design/gOoCKGMNZNJnjdwfuaRsru/WH-Production-%7C-Handover?node-id=257-21911
 
 # SW6 Backlog: 'Installer background service: First iteration'
 
@@ -11531,6 +11549,7 @@ https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Docu
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater  #Project/Classes Tree-structure overview
 
 
+https://www.figma.com/design/gOoCKGMNZNJnjdwfuaRsru/WH-Production-%7C-Handover?node-id=257-21911  # TC Updater Figma-Mockup
     https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25684/Installer-Service  # Sync-client overview +/= requirements-wiki
 ----
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing  # Pong(=Sequence)-diagram - Rendered

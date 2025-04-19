@@ -177,6 +177,9 @@ Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett t
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
 Scratch-Area + todoscratch/'hänglista' + Daily {{{
+TODO: STYTR-MALL.TXT till TELEFONEN
+    (+Senare: BOLLTRÄNINGSMALLAR.TXT inkl. Beskrivningarna)
+- KALKERA/TRANSKRIBERA UT RSKRIFT STENOANTECKNINGARNA 1 *****
 
 - freecommander accelerator-keys + cleanup
 - sista 5 linux-kommandon: gemini-sök ('Xonsh el. Bash för Linux-Sysadmin?')
@@ -189,11 +192,18 @@ Scratch-Area + todoscratch/'hänglista' + Daily {{{
      ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
 - lägg ut senaste 2 videos med Henrik och Erik(!)
     senaste snack med Erik:
-    - checksum
-    = Installation Utilities
+    - checksum (=gör checksum för storlek för två filer + jämför dem)
+    = Installation/Installer Utilities =klass+project
+        som innehåller metoden för att räkna ut checksumman
+    +anropa den i testkonsoll-projektet o få ut checksum för första filen
+    +tredje klass i Utils: =jämföra två checksums
+    (test på samma fil x2 = samma resultat; test på två olika TC-exe:erna = inte samma resultat)
      + interface
      + IServiceCollection
      compare 2 checksums
+    = Från Updater-koden kunna läsa av/avgöra vilken version av TCC som är installerat på datorn (=inte kunna hantera paket med choco etc)
+    = Bästa sätt att ta reda på om TC är installerat  (=när/hur kan jag avgöra att det inte är installerat? - +=vilka platser att kolla på)
+    - LISTA/FÖRSLAG: FRAMTIDA FEATURES ATT KUNNA LÄGGA TILL I FRAMTIDEN
 - Ny Vanki-Deck DotNet Core 23 (*)
 ---- store
 - begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas
@@ -305,7 +315,8 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
       - vta-apps Docs: Dualist
     }}}
     - Gregg Snippets [=10 per day]   [+images to refssection]
-    - dan-words;  kanji-2000  -de | fr | spa | ru  +jp,  @ ita (!)  (incl. set jp-dicts.ref(!!))   - lat [ 2-4 words etc (??)]
+    - LANGDB1, dan-words;  kanji-2000  -de | fr | spa | ru  +jp,  @ ita (!)  (incl. set jp-dicts.ref(!!))   - lat [ 2-4 words etc (??)]
+    - Regex-patts (Vim, c#, Perl, ...)
         - Some Sv-En words|phrases (+one quote|joke(quip)) + Write w. Shorth(!!) {{{
             ( =sjukv|samhinfo|facket mm(!) 2-4  Rel.Ond: 5 meningar
                 - Doyle FSpeech (=gregg++):  Plocka 10-20(-50) mest grundl. eng-ord(!!)

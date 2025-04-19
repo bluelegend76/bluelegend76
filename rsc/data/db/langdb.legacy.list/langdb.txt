@@ -1,7 +1,8 @@
 vim:fdm=indent:fdl=2:
 set fdm=indent fdl=1
-___block3(=words)
 ___defrru_freq
+___block3(=words)
+
 ___phrases_1isUniverb
 
 
@@ -19457,6 +19458,14 @@ LISTS (=freqs phrases books)
 ___defrru_freq
 set fdm=indent fdl=3
 set fdm=indent fdl=2
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/freqar.txt
+        ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/freqar.pdf
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Chin.pdf
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-De.pdf
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Fra.pdf
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Ru.pdf
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Spa.pdf
+
     ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-De.txt  @@  __lang-1=de
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_ty.txt
                 1 ich  jag | I
