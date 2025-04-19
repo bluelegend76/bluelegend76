@@ -1067,6 +1067,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     REVEAL, IMPRESS  __  ¤¤
     . {{{
   ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
+  ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
 
       Docs:
       ~/Dropbox/rsc/Doks/phone/graf/anim/revealjs.txt
@@ -1074,15 +1075,13 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
       ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
 
       Intro-Book:
-      ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
           ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.pdf
 
       ~/Empire/Doks/Comp/lang/webdev/js/present/md2revealjs-withpandoc.pdf
       ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.txt
           ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.pdf
 
-
-      cp ~/Dropbox/rsc/data/lists/ref/graf/pr/impressjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
+      ~/Dropbox/Udt/rsc/doks/graf/present/impress/imprjs.txt
       --
       cp ~/Empire/graf/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
       cp ~/Empire/graf/pr/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
@@ -8132,6 +8131,7 @@ https://www.mongodb.com/docs/atlas/device-sdks/sdk/kotlin/  # atlas realm - andr
 GEMINI NEWER {{{
 ___FSHARP_DATASTRUCTURES
 ___gnometracker_sparql
+___zzzz
 ___csharp_records_recordstructs
 ___revealjs_mobileclicker
 ___MapGisEtc__FsharpAvaloniaFabulfablesuave
@@ -9061,31 +9061,88 @@ For someone with programming experience looking to mod Morrowind, you should foc
 
 
 ___gnometracker_sparql
-Great! Another question: Could you give me a VERY quick overview (that also involves some code and practical examples) of using Tracker (I think it's called Gnome Tracker, but there may also be some minimal versions) and also using the SPARQL language for obtaining some useful information concerning files etc? I.e. I have been using the Bash and the Shell to good effect for text-files, but I would really like to enhance that workflow if possible for other files and file-types as well. Note also: My currently installed primary operating system is Arch Linux.
+- Great! Another question: Could
+  you give me a VERY quick overview
+  (that also involves some code and
+  practical examples) of using
+  Tracker (I think it's called
+  Gnome Tracker, but there may also
+  be some minimal versions) and
+  also using the SPARQL language
+  for obtaining some useful
+  information concerning files etc?
+  I.e. I have been using the Bash
+  and the Shell to good effect for
+  text-files, but I would really
+  like to enhance that workflow if
+  possible for other files and
+  file-types as well. Note also: My
+  currently installed primary
+  operating system is Arch Linux.
 
-You're right, the file indexing and search tool in GNOME is called Tracker. It uses a semantic database to store information about your files and allows querying this data using SPARQL (SPARQL Protocol and RDF Query Language). Here's a quick overview with practical examples relevant to your Arch Linux system:
+You're right, the file indexing and
+search tool in GNOME is called
+Tracker. It uses a semantic
+database to store information about
+your files and allows querying this
+data using SPARQL (SPARQL Protocol
+and RDF Query Language). Here's a
+quick overview with practical
+examples relevant to your Arch
+Linux system:
 
 1. Tracker Overview:
 
-    Indexing: Tracker automatically indexes your files and their metadata (like file type, size, modification date, tags, EXIF data for images, etc.). It runs in the background.
-    Database: The indexed information is stored in a local database (typically SQLite).
-    tracker3: On modern Arch Linux systems, you'll likely be using tracker3 (the latest version). Older systems might have tracker. You can check with tracker3 --version or tracker --version.
-    tracker3 sparql: This is the command-line tool you'll use to execute SPARQL queries against the Tracker database.
+- Indexing: Tracker automatically
+  indexes your files and their
+  metadata (like file type, size,
+  modification date, tags, EXIF
+  data for images, etc.). It runs
+  in the background.
+- Database: The indexed information
+  is stored in a local database
+  (typically SQLite).
+- tracker3: On modern Arch Linux
+  systems, you'll likely be using
+  tracker3 (the latest version).
+  Older systems might have tracker.
+  You can check with tracker3
+  --version or tracker --version.
+- tracker3 sparql: This is the
+  command-line tool you'll use to
+  execute SPARQL queries against
+  the Tracker database.
 
 2. SPARQL Basics for Tracker:
 
-SPARQL is a query language for RDF (Resource Description Framework), a way of representing information as subject-predicate-object triples. Tracker represents your files and their metadata in this format.
+SPARQL is a query language for RDF
+(Resource Description Framework), a
+way of representing information as
+subject-predicate-object triples.
+Tracker represents your files and
+their metadata in this format.
 
-    PREFIX: Used to define namespaces for commonly used vocabularies (ontologies) that describe file metadata. Tracker uses its own vocabulary.
-    SELECT: Specifies the variables you want to retrieve in your query results. Variables are prefixed with ?.
-    WHERE: Defines the patterns (triples) that the data must match.
+- PREFIX: Used to define namespaces
+  for commonly used vocabularies
+  (ontologies) that describe file
+  metadata. Tracker uses its own
+  vocabulary.
+- SELECT: Specifies the variables
+  you want to retrieve in your
+  query results. Variables are
+  prefixed with ?.
+- WHERE: Defines the patterns
+  (triples) that the data must
+  match.
 
 3. Practical Examples:
 
-Let's assume you want to find some information about image files in your ~/Pictures directory.
+Let's assume you want to find some
+information about image files in
+your ~/Pictures directory.
 
-Example 1: Finding all image file names in your Pictures directory:
-Code snippet
+Example 1: Finding all image file
+names in your Pictures directory:
 
 PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
@@ -9103,8 +9160,9 @@ WHERE {
   FILTER regex(?filename, ".(jpg|jpeg|png)$", "i") # Case-insensitive match for common image extensions
 }
 
-To execute this, replace yourusername and run in your terminal:
-Bash
+To execute this, replace
+yourusername and run in your
+terminal:
 
 tracker3 sparql -q "$(cat <<'EOF'
 PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
@@ -9127,17 +9185,32 @@ EOF
 
 Explanation:
 
-    We define prefixes for the Tracker ontology.
-    We select the ?filename.
-    In the WHERE clause:
-        ?file a nfo:FileDataObject .: We look for resources that are file data objects.
-        ?file nie:url ?uri .: We get the file URI.
-        ?file nfo:fileName ?filename .: We get the file name.
-        FILTER regex(?uri, "^file:///home/yourusername/Pictures/"): We filter results to only include files whose URI starts with your Pictures directory.
-        FILTER regex(?filename, ".(jpg|jpeg|png)$", "i"): We further filter to only include files with common image extensions (case-insensitive).
+- We define prefixes for the
+  Tracker ontology.
+- We select the ?filename.
+- In the WHERE clause:
+  - ?file a nfo:FileDataObject .:
+    We look for resources that are
+    file data objects.
+  - ?file nie:url ?uri .: We get
+    the file URI.
+  - ?file nfo:fileName ?filename .:
+    We get the file name.
+  - FILTER regex(?uri,
+    "^file:///home/yourusername/Pictures/"):
+    We filter results to only
+    include files whose URI starts
+    with your Pictures directory.
+  - FILTER regex(?filename,
+    ".(jpg|jpeg|png)$", "i"): We
+    further filter to only include
+    files with common image
+    extensions (case-insensitive).
 
-Example 2: Finding recently modified documents (e.g., .odt, .docx, .pdf) in your Documents directory:
-Code snippet
+Example 2: Finding recently
+modified documents (e.g., .odt,
+.docx, .pdf) in your Documents
+directory:
 
 PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
@@ -9157,18 +9230,30 @@ WHERE {
 ORDER BY DESC(?modified)
 LIMIT 10
 
-Execute similarly using tracker3 sparql -q "...".
+Execute similarly using tracker3
+sparql -q "...".
 
 Explanation:
 
-    We look for resources that are nfo:Document.
-    We retrieve the ?filename and ?modified (last modification date).
-    We filter by the Documents directory and common document extensions.
-    ORDER BY DESC(?modified) sorts the results by the last modified date in descending order (most recent first).
-    LIMIT 10 restricts the output to the top 10 results.
+- We look for resources that are
+  nfo:Document.
+- We retrieve the ?filename and
+  ?modified (last modification
+  date).
+- We filter by the Documents
+  directory and common document
+  extensions.
+- ORDER BY DESC(?modified) sorts
+  the results by the last modified
+  date in descending order (most
+  recent first).
+- LIMIT 10 restricts the output to
+  the top 10 results.
 
-Example 3: Finding files tagged with a specific tag (assuming you use a tagging application that integrates with Tracker):
-Code snippet
+Example 3: Finding files tagged
+with a specific tag (assuming you
+use a tagging application that
+integrates with Tracker):
 
 PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
@@ -9187,197 +9272,541 @@ WHERE {
 
 Enhancing your Workflow:
 
-    Scripting: You can embed these tracker3 sparql commands within your Bash scripts to automate file searches and information retrieval based on various criteria.
-    Custom Queries: Explore the Tracker ontology (you can find documentation online) to discover more properties you can query (e.g., file size, MIME type, EXIF metadata for images, etc.).
-    Integration with other tools: You could potentially pipe the output of SPARQL queries to other command-line tools for further processing.
+- Scripting: You can embed these
+  tracker3 sparql commands within
+  your Bash scripts to automate
+  file searches and information
+  retrieval based on various
+  criteria.
+- Custom Queries: Explore the
+  Tracker ontology (you can find
+  documentation online) to discover
+  more properties you can query
+  (e.g., file size, MIME type, EXIF
+  metadata for images, etc.).
+- Integration with other tools: You
+  could potentially pipe the output
+  of SPARQL queries to other
+  command-line tools for further
+  processing.
 
 Minimal Versions of Tracker:
 
-While tracker3 is the current standard, there might be minimal installations or alternative frontends. However, the core indexing service and the ability to query via SPARQL are fundamental to Tracker's functionality. You'll likely be interacting with the same underlying database and query language regardless of the specific desktop environment or minimal installation.
+While tracker3 is the current
+standard, there might be minimal
+installations or alternative
+frontends. However, the core
+indexing service and the ability to
+query via SPARQL are fundamental to
+Tracker's functionality. You'll
+likely be interacting with the same
+underlying database and query
+language regardless of the specific
+desktop environment or minimal
+installation.
 
 Key Takeaway:
 
-Tracker and SPARQL provide a powerful way to query your files based on their metadata, going beyond simple filename matching. While the SPARQL syntax might have a learning curve, your programming background will definitely help you grasp the concepts and construct useful queries to enhance your file management workflow on Arch Linux. Remember to explore the Tracker ontology documentation for more advanced querying possibilities.
+Tracker and SPARQL provide a
+powerful way to query your files
+based on their metadata, going
+beyond simple filename matching.
+While the SPARQL syntax might have
+a learning curve, your programming
+background will definitely help you
+grasp the concepts and construct
+useful queries to enhance your file
+management workflow on Arch Linux.
+Remember to explore the Tracker
+ontology documentation for more
+advanced querying possibilities.
 github.com
+
 github.com
 Your saved info
 Info you asked Gemini to save
 
-Would it also be possible to enhance the use and effect of Tracker and SPARQL using other solutions, primarily I'm thinking in my case of using other and more powerful programming-languages than Bash, such as Python, F#, etc?
 
-Yes, absolutely! Using more powerful programming languages like Python or F# can significantly enhance the use and effect of Tracker and SPARQL, offering greater flexibility, automation, and integration possibilities compared to pure Bash scripting. Here's how:
+- Would it also be possible to
+  enhance the use and effect of
+  Tracker and SPARQL using other
+  solutions, primarily I'm thinking
+  in my case of using other and
+  more powerful
+  programming-languages than Bash,
+  such as Python, F#, etc?
+
+Yes, absolutely! Using more
+powerful programming languages like
+Python or F# can significantly
+enhance the use and effect of
+Tracker and SPARQL, offering
+greater flexibility, automation,
+and integration possibilities
+compared to pure Bash scripting.
+Here's how:
 
 1. Python:
 
-Python has excellent libraries for interacting with external processes and handling structured data, making it a strong candidate for enhancing your Tracker workflow.
+Python has excellent libraries for
+interacting with external processes
+and handling structured data,
+making it a strong candidate for
+enhancing your Tracker workflow.
 
-    Executing tracker3 sparql: You can use Python's subprocess module to execute tracker3 sparql commands and capture their output. This allows you to dynamically generate SPARQL queries within your Python scripts based on various conditions.
-    Python
+Executing tracker3 sparql: You can
+use Python's subprocess module to
+execute tracker3 sparql commands
+and capture their output. This
+allows you to dynamically generate
+SPARQL queries within your Python
+scripts based on various
+conditions.
 
-    import subprocess
-    import json
+import subprocess
+import json
 
-    def run_tracker_sparql(query):
-        process = subprocess.run(
-            ['tracker3', 'sparql', '-q', query],
-            capture_output=True,
-            text=True,
-            check=True  # Raise an exception for non-zero exit codes
-        )
-        # Assuming Tracker outputs results in a parsable format (e.g., TSV, JSON - though JSON might require a specific output format flag if available)
-        # For simplicity, let's assume tab-separated values for now and you'd parse accordingly
-        results = [line.split('\t') for line in process.stdout.strip().split('\n')]
-        if results and results[0]:
-            headers = results[0]
-            data = [dict(zip(headers, row)) for row in results[1:]]
-            return data
-        return []
+def run_tracker_sparql(query):
+    process = subprocess.run(
+        ['tracker3', 'sparql', '-q', query],
+        capture_output=True,
+        text=True,
+        check=True  # Raise an exception for non-zero exit codes
+    )
+    # Assuming Tracker outputs results in a parsable format (e.g., TSV, JSON - though JSON might require a specific output format flag if available)
+    # For simplicity, let's assume tab-separated values for now and you'd parse accordingly
+    results = [line.split('\t') for line in process.stdout.strip().split('\n')]
+    if results and results[0]:
+        headers = results[0]
+        data = [dict(zip(headers, row)) for row in results[1:]]
+        return data
+    return []
 
-    query = """
-    PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
-    PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
-    SELECT ?filename ?modified
-    WHERE {
-      ?doc a nfo:Document ;
-           nie:url ?uri ;
-           nfo:fileName ?filename ;
-           nfo:lastModified ?modified .
-      FILTER regex(?uri, "^file:///home/yourusername/Documents/")
-      FILTER regex(?filename, ".(pdf)$", "i")
-    }
-    ORDER BY DESC(?modified)
-    LIMIT 5
-    """
+query = """
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+SELECT ?filename ?modified
+WHERE {
+  ?doc a nfo:Document ;
+       nie:url ?uri ;
+       nfo:fileName ?filename ;
+       nfo:lastModified ?modified .
+  FILTER regex(?uri, "^file:///home/yourusername/Documents/")
+  FILTER regex(?filename, ".(pdf)$", "i")
+}
+ORDER BY DESC(?modified)
+LIMIT 5
+"""
 
-    recent_pdfs = run_tracker_sparql(query)
-    if recent_pdfs:
-        print("Recent PDF documents:")
-        for pdf in recent_pdfs:
-            print(f"- {pdf['filename']} (Modified: {pdf['modified']})")
-    else:
-        print("No recent PDFs found.")
+recent_pdfs = run_tracker_sparql(query)
+if recent_pdfs:
+    print("Recent PDF documents:")
+    for pdf in recent_pdfs:
+        print(f"- {pdf['filename']} (Modified: {pdf['modified']})")
+else:
+    print("No recent PDFs found.")
 
-    Data Processing and Analysis: Python's rich ecosystem of libraries (like pandas, collections) allows you to easily process and analyze the data retrieved from Tracker. You can perform more complex filtering, sorting, aggregation, and visualization of your file metadata.
+Data Processing and Analysis:
+Python's rich ecosystem of
+libraries (like pandas,
+collections) allows you to easily
+process and analyze the data
+retrieved from Tracker. You can
+perform more complex filtering,
+sorting, aggregation, and
+visualization of your file
+metadata.
 
-    Integration with Other Systems: Python can seamlessly integrate Tracker data with other applications, APIs, or databases. For example, you could:
-        Create a web interface to search your files using Tracker.
-        Automate file organization tasks based on Tracker metadata.
-        Generate reports on your file usage patterns.
+Integration with Other Systems:
+Python can seamlessly integrate
+Tracker data with other
+applications, APIs, or databases.
+For example, you could:
 
-    More Complex Logic: Python allows you to implement more intricate logic for generating SPARQL queries dynamically based on user input or other program states.
+- Create a web interface to search
+  your files using Tracker.
+- Automate file organization tasks
+  based on Tracker metadata.
+- Generate reports on your file
+  usage patterns.
+
+More Complex Logic: Python allows
+you to implement more intricate
+logic for generating SPARQL queries
+dynamically based on user input or
+other program states.
 
 2. F#:
 
-F#, as a functional-first language on the .NET platform, also offers powerful capabilities for this task.
+F#, as a functional-first language
+on the .NET platform, also offers
+powerful capabilities for this
+task.
 
-    Executing External Processes: Similar to Python's subprocess, F# provides ways to execute external commands and capture their output (e.g., using Process.Start).
-    F#
+Executing External Processes:
+Similar to Python's subprocess, F#
+provides ways to execute external
+commands and capture their output
+(e.g., using Process.Start).
 
-    open System.Diagnostics
+open System.Diagnostics
 
-    let runTrackerSparql query =
-        let process = new Process()
-        process.StartInfo.FileName <- "tracker3"
-        process.StartInfo.Arguments <- $"-q \"{query}\""
-        process.StartInfo.RedirectStandardOutput <- true
-        process.StartInfo.UseShellExecute <- false
-        process.StartInfo.CreateNoWindow <- true
-        process.Start() |> ignore
-        let output = process.StandardOutput.ReadToEnd().Split('\n')
-        process.WaitForExit()
-        // Further parsing of 'output' would be needed based on Tracker's output format
-        output
+let runTrackerSparql query =
+    let process = new Process()
+    process.StartInfo.FileName <- "tracker3"
+    process.StartInfo.Arguments <- $"-q \"{query}\""
+    process.StartInfo.RedirectStandardOutput <- true
+    process.StartInfo.UseShellExecute <- false
+    process.StartInfo.CreateNoWindow <- true
+    process.Start() |> ignore
+    let output = process.StandardOutput.ReadToEnd().Split('\n')
+    process.WaitForExit()
+    // Further parsing of 'output' would be needed based on Tracker's output format
+    output
 
-    let query = """
-    PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
-    PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
-    SELECT ?filename ?fileSize
-    WHERE {
-      ?file a nfo:FileDataObject ;
-             nie:url ?uri ;
-             nfo:fileName ?filename ;
-             nfo:fileSize ?fileSize .
-      FILTER (?fileSize > 10000000) # Find files larger than 10MB
-    }
-    """
+let query = """
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+SELECT ?filename ?fileSize
+WHERE {
+  ?file a nfo:FileDataObject ;
+         nie:url ?uri ;
+         nfo:fileName ?filename ;
+         nfo:fileSize ?fileSize .
+  FILTER (?fileSize > 10000000) # Find files larger than 10MB
+}
+"""
 
-    let largeFiles = runTrackerSparql query
-    printfn "Large files:"
-    largeFiles |> Array.iter (printfn "%s") // Simple printing, more parsing needed
+let largeFiles = runTrackerSparql query
+printfn "Large files:"
+largeFiles |> Array.iter (printfn "%s") // Simple printing, more parsing needed
 
-    Strong Typing and Functional Paradigm: F#'s strong typing and functional nature can lead to more robust and maintainable code for processing and manipulating the structured data from Tracker.
-
-    .NET Ecosystem: Access to the extensive .NET libraries allows for sophisticated data handling, networking, and UI development if you want to build more elaborate tools around Tracker.
-
-    Pattern Matching: F#'s powerful pattern matching capabilities can be very useful for parsing and extracting specific information from the results returned by Tracker.
+- Strong Typing and Functional
+  Paradigm: F#'s strong typing and
+  functional nature can lead to
+  more robust and maintainable code
+  for processing and manipulating
+  the structured data from Tracker.
+- .NET Ecosystem: Access to the
+  extensive .NET libraries allows
+  for sophisticated data handling,
+  networking, and UI development if
+  you want to build more elaborate
+  tools around Tracker.
+- Pattern Matching: F#'s powerful
+  pattern matching capabilities can
+  be very useful for parsing and
+  extracting specific information
+  from the results returned by
+  Tracker.
 
 General Advantages of Using Higher-Level Languages:
 
-    Abstraction: They provide higher-level abstractions, making it easier to work with the data and implement complex logic compared to the more direct command execution in Bash.
-    Error Handling: Robust error handling mechanisms are available to gracefully manage potential issues during query execution or data processing.
-    Code Organization: Languages like Python and F# encourage better code organization and modularity, making your scripts easier to understand, maintain, and extend.
-    Libraries and Ecosystems: Access to a vast number of libraries for tasks like data parsing (JSON, CSV, etc.), data analysis, web development, and more.
+- Abstraction: They provide
+  higher-level abstractions, making
+  it easier to work with the data
+  and implement complex logic
+  compared to the more direct
+  command execution in Bash.
+- Error Handling: Robust error
+  handling mechanisms are available
+  to gracefully manage potential
+  issues during query execution or
+  data processing.
+- Code Organization: Languages like
+  Python and F# encourage better
+  code organization and modularity,
+  making your scripts easier to
+  understand, maintain, and extend.
+- Libraries and Ecosystems: Access
+  to a vast number of libraries for
+  tasks like data parsing (JSON,
+  CSV, etc.), data analysis, web
+  development, and more.
 
-In summary, while Bash is useful for simple command-line interactions, using Python or F# allows you to:
+In summary, while Bash is useful
+for simple command-line
+interactions, using Python or F#
+allows you to:
 
-    Dynamically generate and execute more complex SPARQL queries.
-    Parse and process the results from Tracker in a structured and efficient way.
-    Integrate Tracker data with other systems and applications.
-    Build more sophisticated tools and workflows around your file metadata.
+- Dynamically generate and execute
+  more complex SPARQL queries.
+- Parse and process the results
+  from Tracker in a structured and
+  efficient way.
+- Integrate Tracker data with other
+  systems and applications.
+- Build more sophisticated tools
+  and workflows around your file
+  metadata.
 
-Choosing between Python and F# often comes down to personal preference and the specific requirements of your project. Python has a larger and more diverse ecosystem for general-purpose scripting and data science, while F# offers the benefits of strong typing and a functional paradigm within the .NET ecosystem. Both are excellent choices for enhancing your interaction with Tracker and SPARQL beyond the capabilities of basic shell scripting.
+Choosing between Python and F#
+often comes down to personal
+preference and the specific
+requirements of your project.
+Python has a larger and more
+diverse ecosystem for
+general-purpose scripting and data
+science, while F# offers the
+benefits of strong typing and a
+functional paradigm within the .NET
+ecosystem. Both are excellent
+choices for enhancing your
+interaction with Tracker and SPARQL
+beyond the capabilities of basic
+shell scripting.
 
-One quick follow-up along those lines: When it comes to machine-learning and data-science (thereby making it possible to glean even more from the data generated by Tracker and SPARQL), I guess Python might have a clear edge on F#, but (and you may correct me) F# is also a language that has some strong data-science capabilities, in particular when compared to C#, so maybe the gap is not as wide, or it may be used for the middle-layer and Python could be leveraged for the deeper data-science/machine-learning layers. I'd very much like to hear your opinion on those thoughts
 
-You've hit on a very nuanced and interesting point! Your intuition is largely correct. Let's break down the data science and machine learning capabilities of Python and F#:
+- One quick follow-up along those
+  lines: When it comes to
+  machine-learning and data-science
+  (thereby making it possible to
+  glean even more from the data
+  generated by Tracker and SPARQL),
+  I guess Python might have a clear
+  edge on F#, but (and you may
+  correct me) F# is also a language
+  that has some strong data-science
+  capabilities, in particular when
+  compared to C#, so maybe the gap
+  is not as wide, or it may be used
+  for the middle-layer and Python
+  could be leveraged for the deeper
+  data-science/machine-learning
+  layers. I'd very much like to
+  hear your opinion on those
+  thoughts
 
-Python's Dominance in Data Science and Machine Learning:
+You've hit on a very nuanced and
+interesting point! Your intuition
+is largely correct. Let's break
+down the data science and machine
+learning capabilities of Python and
+F#:
 
-    Vast Ecosystem: Python undeniably holds a significant edge in the data science and machine learning landscape due to its massive and mature ecosystem of libraries. Key players include:
-        NumPy and Pandas: Fundamental for numerical computing and data manipulation.
-        SciPy: Provides a wide range of scientific and technical computing tools.
-        Matplotlib and Seaborn: Powerful libraries for data visualization.
-        Scikit-learn: A comprehensive library for various machine learning algorithms (classification, regression, clustering, etc.).
-        TensorFlow and PyTorch: Leading frameworks for deep learning.
-        Numerous other specialized libraries: For natural language processing (NLTK, spaCy), computer vision (OpenCV, Pillow), statistical modeling (Statsmodels), and more.
-    Large and Active Community: This extensive ecosystem is supported by a large and active community, resulting in abundant tutorials, documentation, online resources, and readily available help.
-    Industry Adoption: Python is the lingua franca of data science and machine learning in many industries, leading to more job opportunities and readily available collaborative environments.
+Python's Dominance in Data Science
+and Machine Learning:
+
+Vast Ecosystem: Python undeniably
+holds a significant edge in the
+data science and machine learning
+landscape due to its massive and
+mature ecosystem of libraries. Key
+players include:
+
+- NumPy and Pandas: Fundamental for
+  numerical computing and data
+  manipulation.
+- SciPy: Provides a wide range of
+  scientific and technical
+  computing tools.
+- Matplotlib and Seaborn: Powerful
+  libraries for data visualization.
+- Scikit-learn: A comprehensive
+  library for various machine
+  learning algorithms
+  (classification, regression,
+  clustering, etc.).
+- TensorFlow and PyTorch: Leading
+  frameworks for deep learning.
+- Numerous other specialized
+  libraries: For natural language
+  processing (NLTK, spaCy),
+  computer vision (OpenCV, Pillow),
+  statistical modeling
+  (Statsmodels), and more.
+
+- Large and Active Community: This
+  extensive ecosystem is supported
+  by a large and active community,
+  resulting in abundant tutorials,
+  documentation, online resources,
+  and readily available help.
+- Industry Adoption: Python is the
+  lingua franca of data science and
+  machine learning in many
+  industries, leading to more job
+  opportunities and readily
+  available collaborative
+  environments.
 
 F#'s Strengths in Data Science (and Comparison to C#):
 
-You are also correct that F# possesses strong data science capabilities, especially when compared to its imperative cousin, C#. Here's why:
+You are also correct that F#
+possesses strong data science
+capabilities, especially when
+compared to its imperative cousin,
+C#. Here's why:
 
-    Functional Paradigm: F#'s functional-first nature leads to more concise, expressive, and often more mathematically aligned code, which can be beneficial for data manipulation and analysis. Immutability, a core concept in functional programming, can also help prevent unexpected side effects and make code easier to reason about.
-    Type Safety: F#'s strong static typing can catch errors at compile time, leading to more reliable data processing pipelines. This can be particularly valuable when dealing with complex data transformations.
-    Conciseness: F# code for data manipulation can often be more concise and less verbose than equivalent C# code, thanks to features like type inference and powerful collection processing functions.
-    .NET Interoperability: F# has excellent interoperability with the entire .NET ecosystem. This means you can leverage powerful .NET libraries for tasks like data access, networking, and even some machine learning tasks (though the .NET ML.NET library is still evolving compared to Python's giants).
-    Suitability for Data Pipelines: F#'s functional features make it well-suited for building robust and composable data processing pipelines.
+- Functional Paradigm: F#'s
+  functional-first nature leads to
+  more concise, expressive, and
+  often more mathematically aligned
+  code, which can be beneficial for
+  data manipulation and analysis.
+  Immutability, a core concept in
+  functional programming, can also
+  help prevent unexpected side
+  effects and make code easier to
+  reason about.
+- Type Safety: F#'s strong static
+  typing can catch errors at
+  compile time, leading to more
+  reliable data processing
+  pipelines. This can be
+  particularly valuable when
+  dealing with complex data
+  transformations.
+- Conciseness: F# code for data
+  manipulation can often be more
+  concise and less verbose than
+  equivalent C# code, thanks to
+  features like type inference and
+  powerful collection processing
+  functions.
+- .NET Interoperability: F# has
+  excellent interoperability with
+  the entire .NET ecosystem. This
+  means you can leverage powerful
+  .NET libraries for tasks like
+  data access, networking, and even
+  some machine learning tasks
+  (though the .NET ML.NET library
+  is still evolving compared to
+  Python's giants).
+- Suitability for Data Pipelines:
+  F#'s functional features make it
+  well-suited for building robust
+  and composable data processing
+  pipelines.
 
-F# for Data Science - The Reality and the Niche:
+F# for Data Science - The Reality
+and the Niche:
 
-While F# has these strengths, it's important to acknowledge the current reality:
+While F# has these strengths, it's
+important to acknowledge the
+current reality:
 
-    Smaller Ecosystem: The data science library ecosystem in F# is significantly smaller than Python's. While libraries like Deedle (for data frames) and Math.NET Numerics are powerful, they don't have the breadth and depth of Python's offerings.
-    Smaller Community: The F# data science community is smaller, which can mean fewer readily available resources and less community support.
-    Industry Adoption: F# is not as widely adopted in mainstream data science roles compared to Python.
+- Smaller Ecosystem: The data
+  science library ecosystem in F#
+  is significantly smaller than
+  Python's. While libraries like
+  Deedle (for data frames) and
+  Math.NET Numerics are powerful,
+  they don't have the breadth and
+  depth of Python's offerings.
+- Smaller Community: The F# data
+  science community is smaller,
+  which can mean fewer readily
+  available resources and less
+  community support.
+- Industry Adoption: F# is not as
+  widely adopted in mainstream data
+  science roles compared to Python.
 
-Your Thoughts on Layering (F# Middle-Layer, Python Deeper ML):
+Your Thoughts on Layering (F#
+Middle-Layer, Python Deeper ML):
 
-Your idea of using F# for a "middle layer" and Python for "deeper data science/machine learning layers" is a very insightful and potentially effective approach! Here's why this makes sense:
+Your idea of using F# for a "middle
+layer" and Python for "deeper data
+science/machine learning layers" is
+a very insightful and potentially
+effective approach! Here's why this
+makes sense:
 
-    F# for Data Wrangling and Feature Engineering: F#'s strengths in type safety, conciseness, and functional programming could make it excellent for building robust and well-defined data pipelines to clean, transform, and engineer features from the data retrieved by Tracker and SPARQL. This stage often benefits from strong typing and clear data transformations.
-    Python for Model Building and Training: Once the data is well-prepared by the F# layer, you could leverage Python's extensive machine learning libraries (scikit-learn, TensorFlow, PyTorch) for model building, training, and evaluation.
-    Interoperability: .NET's good interoperability allows for communication between F# and Python code, although it might involve serialization/deserialization of data between the two environments (e.g., using JSON or other data formats).
+- F# for Data Wrangling and Feature
+  Engineering: F#'s strengths in
+  type safety, conciseness, and
+  functional programming could make
+  it excellent for building robust
+  and well-defined data pipelines
+  to clean, transform, and engineer
+  features from the data retrieved
+  by Tracker and SPARQL. This stage
+  often benefits from strong typing
+  and clear data transformations.
+- Python for Model Building and
+  Training: Once the data is
+  well-prepared by the F# layer,
+  you could leverage Python's
+  extensive machine learning
+  libraries (scikit-learn,
+  TensorFlow, PyTorch) for model
+  building, training, and
+  evaluation.
+- Interoperability: .NET's good
+  interoperability allows for
+  communication between F# and
+  Python code, although it might
+  involve
+  serialization/deserialization of
+  data between the two environments
+  (e.g., using JSON or other data
+  formats).
 
 Conclusion:
 
-Python currently holds a dominant position in the data science and machine learning landscape due to its vast ecosystem and large community. However, F# offers compelling advantages in terms of type safety, conciseness, and functional programming that can be very beneficial for data manipulation and building robust data pipelines.
+Python currently holds a dominant
+position in the data science and
+machine learning landscape due to
+its vast ecosystem and large
+community. However, F# offers
+compelling advantages in terms of
+type safety, conciseness, and
+functional programming that can be
+very beneficial for data
+manipulation and building robust
+data pipelines.
 
-Your idea of a layered approach – using F# for data preparation and potentially some initial analysis, and then leveraging Python for more advanced machine learning tasks – is a valid and potentially powerful strategy, especially if you value the strengths of both languages. The practical feasibility would depend on the specific complexity of your data science goals and the overhead of interop between the two languages.
+Your idea of a layered approach –
+using F# for data preparation and
+potentially some initial analysis,
+and then leveraging Python for more
+advanced machine learning tasks –
+is a valid and potentially powerful
+strategy, especially if you value
+the strengths of both languages.
+The practical feasibility would
+depend on the specific complexity
+of your data science goals and the
+overhead of interop between the two
+languages.
 
-In the context of enhancing your Tracker and SPARQL data, F# could indeed be a strong contender for building the logic to process and structure that information before potentially feeding it into Python for more advanced machine learning analysis.
+In the context of enhancing your
+Tracker and SPARQL data, F# could
+indeed be a strong contender for
+building the logic to process and
+structure that information before
+potentially feeding it into Python
+for more advanced machine learning
+analysis.
 
-Another small question (and this is really for a very brief overview): I have been researching the presentation-abilities of Reveal.js and Impress.js over the last years, and for my money, they still seem to be VERY capable frameworks for creating astonishing presentations. However, it's always good to keep an eye out for new things or developments (although I'm not likely to ditch those two frameworks any time soon - i.e. they're really amazing), so could you give me a very quick overview? And, I am actually also looking out for the possibility of COMPLETELY rolling my own presentations or 'macros' of web-design tricks for putting them together, since that is an area of study of mine.
+
+___zzzz
+- Another small question (and this
+  is really for a very brief
+  overview): I have been
+  researching the
+  presentation-abilities of
+  Reveal.js and Impress.js over the
+  last years, and for my money,
+  they still seem to be VERY
+  capable frameworks for creating
+  astonishing presentations.
+  However, it's always good to keep
+  an eye out for new things or
+  developments (although I'm not
+  likely to ditch those two
+  frameworks any time soon - i.e.
+  they're really amazing), so could
+  you give me a very quick
+  overview? And, I am actually also
+  looking out for the possibility
+  of COMPLETELY rolling my own
+  presentations or 'macros' of
+  web-design tricks for putting
+  them together, since that is an
+  area of study of mine.
 
 It's great that you've found Reveal.js and Impress.js to be powerful presentation frameworks! They indeed remain very capable for creating engaging presentations. Keeping an eye on new developments is always a good idea, whether for inspiration or potential future use.
 

@@ -1,4 +1,9 @@
 ~/bin/scripts/at/at.Vim.bash
+
+~/Dropbox/Udt/rsc/data/lists/Tagged/vimscr-ibmtuts.Tags1.txt 
+~/Dropbox/Udt/rsc/data/lists/Tagged/vdocs-Usr41.Tags1.txt
+~/Dropbox/Udt/rsc/data/lists/Tagged/lvimscrhard.Tags2.xt
+
     ___pickout
 ~/Dropbox/rsc/data/lists/ref/comp/VimJutsu-secretsofthemasters.txt
 Ocaml Merlin  https://ocaml.github.io/merlin/editor/vim/

@@ -874,14 +874,18 @@ pdftk  @@[@] [**]  (from Transcribe)
 potrace  [@@]
                 .
                 .
-xsane
+xsane  <@@>
                 .
                 .
 imagick
-                ----
-                .
-                ~/Dropbox/rsc/data/lists/ref/comp/cb/imagickcb.txt
-                ~/Dropbox/rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
+                        ~/Dropbox/rsc/Doks/phone/graf/Imagemagick2_usage-techniques.txt
+                        ~/Dropbox/rsc/data/lists/ref/comp/cb/imagickcb.txt
+                            ~/Dropbox/rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
+                        ~/Dropbox/rsc/data/lists/ref/comp/pr/media/imagick.txt
+                        ----
+                        .
+                        ~/Dropbox/rsc/data/lists/ref/comp/cb/imagickcb.txt
+                        ~/Dropbox/rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
 ffmpeg  (from Blender at-index (etc))  @(@!)
                         ____
                         ~/Dropbox/rsc/data/lists/ref/comp/cb/ffmpegcb.txt

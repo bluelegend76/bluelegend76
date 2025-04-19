@@ -834,6 +834,7 @@ bcb (**(!))
 
                     Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
+    ~/Dropbox/Udt/rsc/data/lists/Tagged/Termux.Tags2.txt 
 Termux
                     ../ref/comp/sysadm/Termux.Tags1.txt
                     .
@@ -1800,6 +1801,7 @@ Termux
 SSH
                 Could you give me direction as to which chapters to read and focus on? I.e. what I'm thinking is that some chapters contain absolutely essential knowledge, and some might be good to take a quick look or glance at, but not absolutely critical or paramount to study in detail.
 Tasker
+                        ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
 Vbox
 VeraCrypt
 VNC/Remote Desktop
