@@ -1,0 +1,686 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+    ~/Empire/Doks/Comp/editor/emacs/emacsrefcard03.pdf
+    ~/Empire/Doks/Comp/editor/emacs/emacsrefcard04.pdf
+        ~/Empire/Doks/Comp/editor/emacs/emacsrefcard01.pdf
+./Empire/Doks/Comp/editor/emacs/emacsrefcard01.pdf
+~/Empire/Doks/Comp/editor/emacs/emacsrefcard02.pdf
+            GNU Emacs Reference Card
+            (for version 26)
+
+            Starting Emacs
+            To enter GNU Emacs 26, just type its name: emacs
+
+            Leaving Emacs
+            suspend Emacs (or iconify it under X)
+            exit Emacs permanently
+
+            C-z
+            C-x C-c
+
+            Files
+            read a file into Emacs
+            save a file back to disk
+            save all files
+            insert contents of another file into this buffer
+            replace this file with the file you really want
+            write buffer to a specified file
+            toggle read-only status of buffer
+
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+
+            C-f
+            C-s
+            s
+            i
+            C-v
+            C-w
+            C-q
+
+            Getting Help
+            The help system is simple. Type C-h (or F1) and follow the directions. If you are a first-time user, type C-h t for a tutorial.
+            remove help window
+            scroll help window
+
+            C-x 1
+            C-M-v
+
+            apropos: show commands matching a string
+            describe the function a key runs
+            describe a function
+            get mode-specific information
+
+            C-h
+            C-h
+            C-h
+            C-h
+
+            a
+            k
+            f
+            m
+
+            Motion
+            entity to move over
+            character
+            word
+            line
+            go to line beginning (or end)
+            sentence
+            paragraph
+            page
+            sexp
+            function
+            go to buffer beginning (or end)
+            scroll
+            scroll
+            scroll
+            scroll
+            scroll
+
+            Multiple Windows
+            backward
+            C-b
+            M-b
+            C-p
+            C-a
+            M-a
+            M-{
+            C-x [
+            C-M-b
+            C-M-a
+            M-<
+
+            to next screen
+            to previous screen
+            left
+            right
+            current line to center, top, bottom
+
+            goto line
+            goto char
+            back to indentation
+
+            forward
+            C-f
+            M-f
+            C-n
+            C-e
+            M-e
+            M-}
+            C-x ]
+            C-M-f
+            C-M-e
+            M->
+
+            C-v
+            M-v
+            C-x <
+            C-x >
+            C-l
+            M-g g
+            M-g c
+            M-m
+
+            Killing and Deleting
+            entity to kill
+            character (delete, not kill)
+            word
+            line (to end of)
+            sentence
+            sexp
+
+            backward
+            DEL
+            M-DEL
+            M-0 C-k
+            C-x DEL
+            M-- C-M-k
+
+            forward
+            C-d
+            M-d
+            C-k
+            M-k
+            C-M-k
+
+            kill region
+            copy region to kill ring
+            kill through next occurrence of char
+
+            C-w
+            M-w
+            M-z char
+
+            yank back last thing killed
+            replace last yank with previous kill
+
+            C-y
+            M-y
+
+            Error Recovery
+
+            Marking
+
+            abort partially typed or executing command C-g
+            recover files lost by a system crash
+            M-x recover-session
+            undo an unwanted change
+            C-x u, C-_ or C-/
+            restore a buffer to its original contents
+            M-x revert-buffer
+            redraw garbaged screen
+            C-l
+
+            set mark here
+            exchange point and mark
+
+            C-@ or C-SPC
+            C-x C-x
+
+            set mark arg words away
+            mark paragraph
+            mark page
+            mark sexp
+            mark function
+            mark entire buffer
+
+            M-@
+            M-h
+            C-x C-p
+            C-M-@
+            C-M-h
+            C-x h
+
+            Incremental Search
+            search forward
+            search backward
+            regular expression search
+            reverse regular expression search
+
+            C-s
+            C-r
+            C-M-s
+            C-M-r
+
+            Query Replace
+
+            select previous search string
+            select next later search string
+            exit incremental search
+            undo effect of last character
+            abort current search
+
+            M-p
+            M-n
+            RET
+            DEL
+            C-g
+
+            Valid responses in query-replace mode are
+
+            Use C-s or C-r again to repeat the search in either direction. If
+            Emacs is still searching, C-g cancels only the part not matched.
+            c 2019 Free Software Foundation, Inc. Permissions on back.
+
+            interactively replace a text string
+            M-%
+            using regular expressions
+            M-x query-replace-regexp
+            replace this one, go on to next
+            replace this one, don’t move
+            skip to next without replacing
+            replace all remaining matches
+            back up to the previous match
+            exit query-replace
+            enter recursive edit (C-M-c to exit)
+
+            SPC or y
+            ,
+            DEL or n
+            !
+            ^
+            RET
+            C-r
+
+            When two commands are shown, the second is a similar command for a frame instead of a window.
+            delete all other windows
+            C-x 1
+            C-x 5 1
+            split window, above and below
+            C-x 2
+            C-x 5 2
+            delete this window
+            C-x 0
+            C-x 5 0
+            split window, side by side
+            C-x 3
+            scroll other window
+            C-M-v
+            switch cursor to another window
+            C-x o
+            C-x 5 o
+            select buffer in other window
+            C-x 4 b
+            C-x 5 b
+            display buffer in other window
+            C-x 4 C-o C-x 5 C-o
+            find file in other window
+            C-x 4 f
+            C-x 5 f
+            find file read-only in other window
+            C-x 4 r
+            C-x 5 r
+            run Dired in other window
+            C-x 4 d
+            C-x 5 d
+            find tag in other window
+            C-x 4 .
+            C-x 5 .
+            grow window taller
+            C-x ^
+            shrink window narrower
+            C-x {
+            grow window wider
+            C-x }
+
+            Formatting
+            indent current line (mode-dependent)
+            indent region (mode-dependent)
+            indent sexp (mode-dependent)
+            indent region rigidly arg columns
+            indent for comment
+            insert newline after point
+            move rest of line vertically down
+            delete blank lines around point
+            join line with previous (with arg, next)
+            delete all white space around point
+            put exactly one space at point
+            fill paragraph
+            set fill column to arg
+            set prefix each line starts with
+            set face
+
+            TAB
+            C-M-\
+            C-M-q
+            C-x TAB
+            M-;
+            C-o
+            C-M-o
+            C-x C-o
+            M-^
+            M-\
+            M-SPC
+            M-q
+            C-x f
+            C-x .
+            M-o
+
+            Case Change
+            uppercase word
+            lowercase word
+            capitalize word
+            uppercase region
+            lowercase region
+
+            M-u
+            M-l
+            M-c
+            C-x C-u
+            C-x C-l
+
+            The Minibuffer
+            The following keys are defined in the minibuffer.
+            complete as much as possible
+            TAB
+            complete up to one word
+            SPC
+            complete and execute
+            RET
+            show possible completions
+            ?
+            fetch previous minibuffer input
+            M-p
+            fetch later minibuffer input or default
+            M-n
+            regexp search backward through history
+            M-r
+            regexp search forward through history
+            M-s
+            abort command
+            C-g
+            Type C-x ESC ESC to edit and repeat the last command that
+            used the minibuffer. Type F10 to activate menu bar items on
+            text terminals.
+
+            GNU Emacs Reference Card
+            Buffers
+            select another buffer
+            list all buffers
+            kill a buffer
+
+            C-x b
+            C-x C-b
+            C-x k
+
+            Transposing
+            transpose
+            transpose
+            transpose
+            transpose
+
+            characters
+            words
+            lines
+            sexps
+
+            C-t
+            M-t
+            C-x C-t
+            C-M-t
+
+            Spelling Check
+            check spelling of
+            check spelling of
+            check spelling of
+            toggle on-the-fly
+
+            current word
+            all words in region
+            entire buffer
+            spell checking
+
+            M-$
+            M-x ispell-region
+            M-x ispell-buffer
+            M-x flyspell-mode
+
+            Tags
+            find a tag (a definition)
+            M-.
+            find next occurrence of tag
+            C-u M-.
+            specify a new tags file
+            M-x visit-tags-table
+            regexp search on all files in tags table
+            M-x tags-search
+            run query-replace on all the files
+            M-x tags-query-replace
+            continue last tags search or query-replace
+            M-,
+
+            Shells
+            execute a shell command
+            execute a shell command asynchronously
+            run a shell command on the region
+            filter region through a shell command
+            start a shell in window *shell*
+
+            M-!
+            M-&
+            M-|
+            C-u M-|
+            M-x shell
+
+            Rectangles
+            copy rectangle to register
+            kill rectangle
+            yank rectangle
+            open rectangle, shifting text right
+            blank out rectangle
+            prefix each line with a string
+
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+
+            r
+            r
+            r
+            r
+            r
+            r
+
+            r
+            k
+            y
+            o
+            c
+            t
+
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+            M-/
+
+            a
+            a
+            a
+            a
+            a
+
+            g
+            l
+            i g
+            i l
+            e
+
+            Abbrevs
+            add global abbrev
+            add mode-local abbrev
+            add global expansion for this abbrev
+            add mode-local expansion for this abbrev
+            explicitly expand abbrev
+            expand previous word dynamically
+
+            Miscellaneous
+            numeric argument
+            negative argument
+            quoted insert
+
+            C-u num
+            M-C-q char
+
+            Regular Expressions
+            any single character except a newline
+            zero or more repeats
+            one or more repeats
+            zero or one repeat
+            quote special characters
+            quote regular expression special character c
+            alternative (“or”)
+            grouping
+            shy grouping
+            explicit numbered grouping
+            same text as nth group
+            at word break
+            not at word break
+            entity
+            match start
+            line
+            ^
+            word
+            \<
+            symbol
+            \_<
+            buffer
+            \‘
+            class of characters
+            match these
+            explicit set
+            [ ... ]
+            word-syntax character
+            \w
+            character with syntax c
+            \sc
+            character with category c \cc
+
+            Registers
+            . (dot)
+            *
+            +
+            ?
+            \
+            \c
+            \|
+            \( . . . \)
+            \(:? . . . \)
+            \(:NUM . . . \)
+            \n
+            \b
+            \B
+            match end
+            $
+            \>
+            \_>
+            \’
+            match others
+            [^ . . . ]
+            \W
+            \Sc
+            \Cc
+
+            International Character Sets
+
+            C-x r s
+            C-x r i
+
+            save value of point in register
+            jump to point saved in register
+
+            C-x r SPC
+            C-x r j
+
+            Keyboard Macros
+            start defining a keyboard macro
+            C-x (
+            end keyboard macro definition
+            C-x )
+            execute last-defined keyboard macro
+            C-x e
+            append to last keyboard macro
+            C-u C-x (
+            name last keyboard macro
+            M-x name-last-kbd-macro
+            insert Lisp definition in buffer
+            M-x insert-kbd-macro
+
+            Commands Dealing with Emacs Lisp
+            eval sexp before point
+            eval current defun
+            eval region
+            read and eval minibuffer
+            load a Lisp library from load-path
+
+            C-x C-e
+            C-M-x
+            M-x eval-region
+            M-:
+            M-x load-library
+
+            Simple Customization
+
+            specify principal language
+            C-x RET l
+            show all input methods
+            M-x list-input-methods
+            enable or disable input method
+            C-\
+            set coding system for next command
+            C-x RET c
+            show all coding systems
+            M-x list-coding-systems
+            choose preferred coding system
+            M-x prefer-coding-system
+
+            Info
+            enter the Info documentation reader
+            find specified function or variable in Info
+            Moving within a node:
+            scroll forward
+            scroll reverse
+            beginning of node
+            Moving between nodes:
+            next node
+            previous node
+            move up
+            select menu item by name
+            select nth menu item by number (1–9)
+            follow cross reference (return with l)
+            return to last node you saw
+            return to directory node
+            go to top node of Info file
+            go to any node by name
+            Other:
+            run Info tutorial
+            look up a subject in the indices
+            search nodes for regexp
+            quit Info
+
+            save region in register
+            insert register contents into buffer
+
+            customize variables and faces
+
+            M-x customize
+
+            Making global key bindings in Emacs Lisp (example):
+            (global-set-key (kbd "C-c g") ’search-forward)
+            (global-set-key (kbd "M-#") ’query-replace-regexp)
+
+            Writing Commands
+            C-h i
+            C-h S
+            SPC
+            DEL
+            b
+            n
+            p
+            u
+            m
+            n
+            f
+            l
+            d
+            t
+            g
+            h
+            i
+            s
+            q
+
+            (defun command-name (args)
+            "documentation" (interactive "template")
+            body)
+            An example:
+            (defun this-line-to-top-of-window (line)
+            "Reposition current line to top of window.
+            With prefix argument LINE, put point on LINE."
+            (interactive "P")
+            (recenter (if (null line)
+            0
+            (prefix-numeric-value line))))
+            The interactive spec says how to read arguments interactively. Type C-h f interactive RET for more details.
+            Copyright c 2019 Free Software Foundation, Inc.
+            For GNU Emacs version 26
+            Designed by Stephen Gildea
+            Released under the terms of the GNU General Public License version 3
+            or later.
+            For more Emacs documentation, and the TEX source for this card, see
+            the Emacs distribution, or https://www.gnu.org/software/emacs
+
+            
+

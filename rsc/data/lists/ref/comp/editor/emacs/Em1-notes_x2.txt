@@ -1,0 +1,508 @@
+___Em1+evil/Org
+set foldmethod=indent foldlevel=0
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=1:
+
+~/.emacs.d/elpa/evil-20230120.2022/evil-maps.el
+~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/em-mastext1.txt {{{
+
+  ---- p32
+    [ modeline ]  ,,  mini-buffer | echo area
+
+
+  ---- p35
+    cut           copy           paste
+    kill    save to kill-ring    yank
+
+
+  ---- p38
+    'faces'             # fonts
+    'font locking'
+    'font-lock faces'   # set syntax highlight + color theme
+  ---- p50
+    'key sequence'      # =seq. of keyb/muose actions
+    'prefix key'        # eg. c-x
+    'complete key'      # =one or more key-seq.s that invoce a command
+    'key map'           # eg. c-f, c-x 8  (=prefix w. set of sub-cmds)
+      'c-'               ='the c- modifier'   p111
+  ---- p54-p55, p53
+    interactive commands
+    extended command funcionality
+
+  ---- p58 ****
+    Check keys in c-x 8--map ; c-x 8 c-h  *******
+
+
+  ---- p66
+    open customize interface ; a-x customize
+                                    a-x customize-colors
+    a-x list-colors-display
+    a-x info-apropos Colors on a TTY
+     a-x customize-themes  p71
+  ---- p66
+    a-x customize subcommands
+        = customized, changed, face, group,  mode, saved,  themes
+
+
+  ---- p68
+    Evaluating Elisp Code ***!(!)
+        a-x eval-buffer
+        a-x eval-region
+          --
+        ca-x (eval-defun)  +(do) in every defvar/defcustom form
+        c-x c-e (eval-last-sexp)
+        c-j
+        sa-.
+        a-x ielm (**)  (+auto-complete ??)
+  ---- p70
+    Repos + Packages
+        (setq package-archives  [+addresses + eval-buffer]
+    a-x package-list-packages
+    a-x package-install
+     a-x package-refresh-contents
+    --  p164
+    Installing Helm **
+        (set elpa + melpa repos), a-x package-install helm Ent, (+restart/refresh) **
+
+
+  ---- p73  (the 'Help/Man/Info/Describe'-system)
+    Open Info ; c-h i
+      node navig.   ]  [
+                    l  r
+      to parent node   u
+                       space
+      cycle xref /
+        / links     tab
+      search by name   m
+         everyday use-tips for navig.   p74
+    Apropos for the info manuals (=will crawl all manual-pages)  p254
+                      a-x info-apropos
+  ---- p75, p80
+    c-h F       doc for cmd (=a function)
+     c-h m
+    c-h a -word$
+               regex-search for cmd (=not function) for words
+    Find Info. ab. Version Control **(*)
+                   c-h i + emacs(=hyp.link), c-s 'version control' / c-h a ^vc-
+     c-h v     variable
+    c-h k / c key  (***)
+     c-h d      search doc-string
+     c-h f vc-dir
+    --
+    c-h C Ent   coding system in curr. buffer  p89
+    c-h s
+
+
+  ---- p80  some basic commands
+    c-x b       switch buffer
+    c-x k
+    c-x o       (other buffer)
+    c-x c-b     list buffers
+     c-x c-c
+    c-x c-w     save as *
+    --
+   go to first non-blank
+     char. of line **       a-m   p113
+   a-g a-g 50            go to line 50
+   ---- p251  insert literal character
+   insert literal esc char.   c-q Esc
+   insert line feed (=not CR)   c-q c-j
+   ----
+   a-z c  (=zap to char. 'c')
+  ---- p206
+    character-info (ab. char. at point)   c-u c-x =
+   ----
+   move / recenter point (=to top / mid / bot) **   p177
+      a-r
+      c-l
+        ca-l
+  ---- p56
+    a-0  c-0  ca-0   c_-  a_-  ca_-
+    kill prev. word from point   a_- a_d
+    -- p183
+    kill to beg. of line   a-0 c-k
+     Kill S-Express.   ca-k
+    copy   a-w
+    Append-Kill(!!) (+use for
+      refactoring)   ca-w
+    Tip: Cut three words
+      to kill ring **(!)   a-d a-d a-d
+                # +can then be pasted
+                  as one chunk(!)
+  ---- p210
+    upcase word bef. point
+  ---- p189  transposing
+    char.      c-t
+    words      a-t
+    S-Expr.s *  ca-t
+    lines      c-x c-t
+     (+paragraphs / sentences)
+    [+Emacs ignores some punct.char.s when word-moving(!!)]
+
+  ---- p140  setting mark + switch/jump back
+    c-space
+    c-space c-space
+    c-x c-x
+     c-u c-space     = setting marks
+
+  ---- p146  mark units (eg. words, paragraphs)
+    a-h      next paragr.
+    c-x h    whole buffer
+    ca-h **  Next Defun (=function)
+    a-@ **   Next Word
+    ca-space   =NEXT S-EXPRESSION  (or ca-@)
+    --
+    Tip: Mark Three Words   a-@ a-@ a-@ // a-2 a-@
+
+  
+  ---- p93
+    completion of buffer-names (=when buffer-switching)
+        = ido/fido  (+Helm, Ivy  etc)     (+c-x o  (??))
+          a-x customize-option Ent ido-mode Ent
+          a-x customize-option Ent ido-enable-flex-matching Ent
+          a-x customize-group ido
+          a-x customize-group icomplete
+
+  ---- p100
+    saving + returning to past win.config
+        winner-mode  + c-c left/right
+
+  ---- p101
+    Set/Bind Keyboard Shortcut: a-o = c-x o ****
+        (global-set-key (kbd "M-o") 'other-window)
+
+  ---- p105(+), p108
+    tab bar mode
+     tab line mode
+    a-x customize-option tab-line-tabs-function
+
+
+  ---- p110
+    read manpage for readline ; a-x man Ent readline Ent
+
+
+  ---- p116
+    display line/column numbers *
+        a-x display-line-numbers-mode
+        (etc) (!!(**))
+          column-number-mode
+          line-number-mode
+
+  ---- p115+(?), p196
+    word/line wrapping in em. ; 'truncation' / 'fill column/paragraph'
+        a-x toggle-truncate-lines
+        --
+        a-q
+        c-x f 78
+    set fill-prefix *(*)
+        c-x .   #text up to point =fill prefix (next time using a-q)
+    a-x auto-fill-mode
+  ---- p198+
+    Comment/Uncomment (line)
+        a-;
+        c-x a-;
+        a-x comment-box    #=around region
+        --
+        a-j ca-j     #new line + comment
+            (+some customization-options)
+
+  ---- p123
+    ca-f / ca-b         balanced s-expr. back/forw
+     ca-k
+     ca-n / ca-p        next / prev. balanced s-expr.
+    ca-d / ca-u
+    ca-u              # to string's opening quote
+    a-}
+    ca-a / ca-e       # to beg/end of function
+
+
+  ---- p213
+    Count Things
+        a-x count-matches
+        a-x count-words
+        a-x count-words-region  /  a-=
+    Del. Duplic. Lines
+        a-x delete-duplicate-lines  (+versions with c-u)
+    flush/keep
+        a-x flush-lines
+        a-x keep-lines
+  ---- p216
+    + blank lines | white-space
+        c-o    insert blank line after point  (or split line)
+        c-x c-o   del. all blank lines after point
+        ca-o   split line after point + keep indentation **(*)
+        join point-line w. line above   a-^
+      Splitting / Joining with Fill Prefixes   ca-o (with fill prefix active)
+        del. all but one space/tab
+          left/right of point   a-space
+        (+a-x whitespace-mode  , whitespace-report  etc)
+  ----
+  ---- sorting (!!)  p239
+
+
+  ---- p136  (for files, dired-dirs, man-pages, org-mode,
+                            DocView(=pdf), info man-pages
+              [=saved in file in ~/.emacs.d/]
+    Bookmarks: Set / List / Jump to *****
+        c-x r m
+        c-x r l
+        c-x r b
+
+  ---- p138  registers
+    store point in register + jump back
+        c-x r space,  c-x r j
+          c-x r s,  c-x r i  #region to reg. + insert content at point
+
+
+  ---- p149  Isearch (=incremental search)  c-s / c-r
+    Recall Last Search     c-s c-s
+     Case Folding       a-x customize-option case-fold-search Ent
+     a-n / a-p
+    TAB-COMPLETE STRING AGAINST
+      PREV. ISEARCH-STRING   ca-i  (eg. 'complete-symbol')
+    isearch word at point   c-w  #=add word at point to search-string
+                            #+times several
+                             (etc)
+     a-s c    search case sensit.
+     a-s r    regex-mode search
+      + word-mode
+        symbol-mode
+        lax whitesp.matching   a-s space
+        char.folding (**)
+    isearch forw. for symbol at point (*)    a-s .
+
+
+  ---- p158  Print/Edit lines (in buf.) matching regex (****(*))
+    a-s o      occur mode   # a-x occur
+    activate occur on curr.
+        search-string (=inside isearch)    a-s o  (**(*))
+    (+set context-lines)
+    Jump to Match    Ent
+    go to next / prev. match    a-n / a-p
+    Revert occur.buffer / Refresh search-results     g
+    Switch occur.buff. to Edit Mode **(*)   e
+    --
+    To next/prev. occur-match / error
+      after a-x compile **(*)    a-g a-n // a-g a-p
+    search sever. buf.s with multi-occur (eg. '\.py$' in all py-buffers) **
+        a-x multi-occur-in-matching-buffers    p161
+        a-x multi-occur
+    Tip Using multi-occur (**)   e (for across multip. buf.s)
+                                   + combine w. keyb.macros / search/replace
+                                   + c-c c-c  (=commit)
+
+  ---- p162
+    search functions, class def.s etc (=when programming)
+        Imenu    a-x imenu
+    (+Tip: bind to a-i  (global-set-key (kbd "M-i") 'imenu) )
+    --  Tip: Use Helm for Completion **
+            =uses powerful 'filter-when-typing' + uses pow.ful fuzzy-searching **
+
+  ---- p165  Helm
+    Helm-Completions Prefix **    c-x c ....
+      c-h a ^Helm-              c-x c c-h
+    MOST IMPORTANT HELM-COMMANDS  p167
+      primary action     Ent  #=jump to open +display candidate
+      second.action     c-e
+      tert.action       c-j
+      switch to action-selector(?)   tab
+      next/prev. candidate    c-n / c-p
+        to end/beg. complet.list   a-< / sa-<
+     --
+      Resume last Helm command    c-x c b   p168
+      c-x c /
+      Complete 'a-x apropos'-results
+           c-x c a
+        (+MANY (MANY) MORE (**) ....)
+
+  ---- p170  Helm Search vs Ido Search
+    Helm
+        in-depth search wh. not knowing what to look for
+        + if requires addit. context-awareness of similar matches
+    Ido
+        seamless finding of files/dirs through the mini-buffer
+       eg. for finding widgets.c     c-x b wc
+
+  ---- p170  Ido/Fido 2(!!)
+    set ido mode (=in init)
+        (ido-mode 1)
+        (setq ido-everywhere t)
+        (setq ido-enable-flex-matching t)
+    Ido shortcuts (etc)
+        c-s / c-r
+      tab
+      Ent
+      c-d        open a-x dired-buf in curr. buf
+       //  go to root dir
+       ~/  go to home dir
+
+  ---- p173  using grep (from inside emacs)
+    a-x grep  /  a-x grep-find
+    lgrep  /  rgrep  /  rzgrep    #+highlighting
+    Recursive grep-search for
+      Symbol point is on ***    a-x rgrep Ent Ent
+    (find + don't search cert. directories)
+    jump to next/prev. match
+      in emacs grep **    a-g a-n / a-g a-p
+            (+using grep-mode (=major mode))
+
+  
+  ---- p201   Regex Search & Replace (**!)
+    ca-%
+      (+ space  .  !     ^  u U )
+    ca-% hello  (+Case Folding (**))  p202
+    give string for search & replace    a-%
+
+
+  ---- KEYBOARD MACROS ******* p221
+    record / stop recording    c-x (  /  c-x )
+                               f3
+    play last macro    c-x e
+                       f4
+    stop rec. macro    c-g
+    stop rec. macro + play it   f4
+    --
+    Append-Record Macro (=to last)   c-u f3
+    Play sec. to Last Macro   c-u f4
+      set counter + rec. macro  c-3 f3
+    play last macro 5 times   c-5 f4
+    --
+    Run Macro Until Done / Fails on Error   c-0 f4
+     group of advanced cmds for macros **   the c-x c-k map
+                                       (the map is called 'kmacro')
+            *****  p223,p224
+       (Query for user input--actions)
+    cycle macro ring
+    name last macro
+    bind last macro to a key
+    Edit Last Macro    c-x c-k e   p226
+
+    Edit Lossage (=last 300 key-strokes)   c-x c-k l   p226
+    INSERT MACRO (INTO BUFFER) AS ELISP   a-x insert-kbd-macro
+    Save Macro to a File (=the init-file)
+      - name macro
+      - open init
+      - insert macro as lisp
+   create macro (+see what each entry in
+    the macro string corresponds to (as a command))  a-x kmacro-edit-lossage
+  TIP: EXTRACT MACRO FROM LAST 300 ACTIONS
+    - print the lossage buffer (c-x c-k l)
+    - edit (as though it were text)
+    - commit the changes  c-c c-c
+
+  ---- Abbrev. Expansion  (=Hippie Expand (+snip, hip, abbrev))
+    c-x a:
+      .
+    a-\  ca-\
+
+  ---- electric-indent-mode / 'interactive indentation mode'
+
+  ---- Aligning  p242
+
+  ---- aspell / ispell
+  ---- Flycheck (+syntax check(!))
+
+  ---- Xref (!)  p264
+    a-.   find def. at point
+    a-,   'pop marker and return'
+      +Dumb Jump / RipGrep
+    xref + dired: search/search+replace xrefs via dired **   A / Q
+      .
+    (highlight + updating)
+
+  ---- Filter with Terminal (!!)
+    a-!
+    a-&    # filter asynchronously
+            ((+may not be good for long-running processes
+              =use a-x compile instead))
+    --
+    a-|    # filter + reinsert region(!!)
+
+  ---- Compile / Recompile (**)  p294
+    a-x compile
+    a-x recompile
+      a-g a-n / a-g a-p
+    re-run last command  g  ***
+    compile in the current project   c-x p c
+
+  ---- emacs shells (=x3)  p295
+
+  ---- VERSION CONTROL (**(!))  p253
+    - c-h i
+    - go to 'emacs' hyperlink
+    - c-s (=search) + 'version' / 'version control'  (+c-s for next)
+      --
+    - find 'vc-' via docstring  //  c-h a ^vc- (=list all instances)
+    -- -- p257
+      c-x v +    vc-update
+      c-x v =    vc-diff
+      c-x v D    vc-root-diff
+      c-x v G    vc-ignore
+      c-x v I    vc-log-incoming
+      c-x v L    vc-print-root-log
+      c-x v O    vc-log-outgoing
+      c-x v a    vc-update-change-log
+      c-x v b    vc-switch-backend
+  ---- Magit  p304 , p261,p262
+  ---- Project Management (projectile, +newer Cedet(em 27+) (=based fr. version control)
+  ---- DokView
+  ---- nov  (=epub reader emacs)
+    https://depp.brause.cc/nov.el/
+  ---- presentation (mode)
+    https://www.emacswiki.org/emacs/EmacsPresentation
+      https://www.youtube.com/watch?v=vz9aLmxYJB0
+        https://www.youtube.com/watch?v=1-dUkyn_fZA
+  ---- Eww  p280
+    a-x eww
+    create new eww-buffer (if does not alr. exist)  c-u a-x eww
+    a-x browse-url
+    --
+    +Browsing Keys (****(!))  p281
+  ---- Dired (+ cross dir(ectories))  p282
+    a-x dired
+    c-d (=from ido wh. browsing when browsing w. c-x c-f etc)
+      customize dired-listing-switches
+    up one dir   ^
+    n/p  c-n / c-p
+    mark/unmark active  m/u
+    unmark ev.thing   U
+     flag for deletion   d
+    [sign by marked files  '*']
+      Exploring more   explore like before // M.Petersons 'Discover' package
+    -- dired operations (=on marked or active objects)
+      copy         C
+      move/rename  R
+      chown        O
+      chgrp        G
+      chmod(=perm.s)  M
+      delete marked   D
+      delete flagged  x
+      visit files (=requires dired-x)  F | c-u F (p289)
+      compress marked to a (zip) file        c
+    -- more dired commands (=not marked files)
+      refresh dired buffer  g
+      create sub-dir        +
+      toggle sorting by name/date   s
+      jump to prev/next dir         < // >
+      jump to file                j
+      --
+         #'g is the universal refresh key'
+    -- search/replace in dired-files
+      begin isearch       a-s a c-s
+      xref search|replace regex(!!)        A||Q
+      synchr./asynchr. shell command ***   !/&
+    -- 'working across directories / collapse subdir.s'
+      i  $
+        +tip: find_wrapper-commands (replacing find + xargs)  p291-
+         + find-lisp-find-dired
+  ---- Tramp  p278(??)
+    bookmark remote files   c-x r m
+
+
+
+  ---- Hydra
+
+}}}
+___Em1+evil/Org
+Emacs (quicklists super-condensed**** 2021-03  (Mastering, +extending(='glickstein',)  ('+thoughtbot-elisp'(???)) )
+

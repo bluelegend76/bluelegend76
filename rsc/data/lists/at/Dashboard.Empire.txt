@@ -16,6 +16,8 @@ Vanki LearnQna ----
 
 multimedia:
     gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
+Vim/Emacs:
+    ....
 
 file/media:
     gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
@@ -30,7 +32,7 @@ scripting / Web ----  TODO: HTML, CSS, ETC
     gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
-LISP, F#, ML, ...
+FUNCT =LISP, F#, ML, ...:
 
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
@@ -260,7 +262,7 @@ mpv --start=00:13:00 --speed=1.65 ~/Video/Peter-L-20250227_102445.mp4 ~/Video/Pe
 Keyboard Shortcuts.Db1(...) ----
     .
 PROGR ----
-  PROGR.cm.txt
+  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
 Clangs (C, Cpp, CSharp, Dlang) ----
   TODO: INCLUDE INTO BLUELEGEND76
   TODO --"--
@@ -928,10 +930,10 @@ office.Overview [2]  # write summary|overview {{{
 
 ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
 cd ~/Dropbox/Udt/rsc/data/lists/Tagged/
-Termux.Tags2.txt 
+  Termux.Tags2.txt 
 vimscr-ibmtuts.Tags1.txt 
 vdocs-Usr41.Tags1.txt
-  Vimscr. Hardway
+lvimscrhard.Tags2.xt
 
 LVIMSCR-HARDW
 PRACT-VIM, Vim-Tips
@@ -8114,7 +8116,15 @@ https://www.mongodb.com/docs/compass/current/query/queries/
 https://www.mongodb.com/docs/atlas/device-sdks/sdk/kotlin/  # atlas realm - android
     https://studio3t.com/knowledge-base/?utm_source=help-menu&utm_medium=link&utm_campaign=inapp&utm_content=knowledge-base
 GEMINI NEWER {{{
+___FSHARP_DATASTRUCTURES
+___gnometracker_sparql
+___csharp_records_recordstructs
+___revealjs_mobileclicker
+___MapGisEtc__FsharpAvaloniaFabulfablesuave
+___Emacs_listchange_colorschemes
 
+
+___FSHARP_DATASTRUCTURES
 Another question: I would like to get your help with looking at and drilling F# data-structures, essentially to the point where I 'get it'. Would you be able to help me with that, and do you have any ideas about how it could be done? + If I then have some ideas about how we could improve on that scheme, we can discuss it.
 
 Excellent! I'm glad to hear you've got Common Lisp working in Emacs again.
@@ -8307,6 +8317,8 @@ Key Takeaways:
 
 Do these code examples and explanations of tuples, records, and discriminated unions make sense? Would you like to explore any of them in more detail before we move on to the collection types like lists and arrays? Let me know your thoughts!
 
+
+___csharp_records_recordstructs
 Could you tell me just a bit about records and record-structs (at least that's what I think they're called) in C#, and maybe you could also tell me a bit about their use-cases?
 
 You're right! C# has both record types (introduced in C# 9) and struct types (which have been around much longer). record struct is a further combination introduced in C# 10. Let's break down each of these in C#:
@@ -8413,6 +8425,8 @@ In summary:
 
 The choice between these often depends on the specific requirements of your application, the size and complexity of the data, and performance considerations.
 
+
+___revealjs_mobileclicker
 Question about Reveal.js: I have heard that one could effectively use one's smartphone as a clicking-device. If so, that is indeed awesome, and, could you tell me a bit about how to set this up and make it work?
 
 You're right, using your smartphone as a clicking device for Reveal.js presentations is indeed a very convenient feature! There are a few ways to set this up, but the most common and straightforward method leverages Reveal.js's built-in support for remote control via websockets.
@@ -8484,8 +8498,9 @@ In summary, the process is usually:
 
 It's a fantastic feature for a smoother and more engaging presentation experience, allowing you to move around freely without being tethered to your laptop. Enjoy using your smartphone as a clicker!
 
-Question: I have two projects that I would like to explore and develop. On the one hand I would like to explore different technologies like GIS, mapserver, OperLayers, etc, i.e. software to create and explore maps and geo-data.
 
+___MapGisEtc__FsharpAvaloniaFabulfablesuave
+Question: I have two projects that I would like to explore and develop. On the one hand I would like to explore different technologies like GIS, mapserver, OperLayers, etc, i.e. software to create and explore maps and geo-data.
 
 The other is inspired from an article I read about rapid 'hot-development' of a Windows Forms app using F#, i.e. a very short rapid cycle of development, and being able to twiddle a GUI-app or the like almost in real time.
 
@@ -8578,6 +8593,10 @@ Both of these projects offer exciting learning opportunities. The GIS project wi
 
 Which project are you leaning towards starting with, or do you have any initial thoughts or preferences based on this overview?
 
+
+___Emacs_listchange_colorschemes
+. {{{
+
 Great. Many thanks. I would like to get back to the question very shortly, but first I'd like to ask how I can show all available color-schemes, and then how to set the color-scheme, in the Emacs text-editor? Preferably I would like to do this on the command-line and not via point-and-click menus.
 
 You're welcome! Let's get your Emacs color scheme sorted out from the command line. Here's how you can list available themes and set one:
@@ -8644,11 +8663,12 @@ So, the general workflow would be:
 
 Let me know if you have any trouble listing the themes or setting one!
 
+}}}
 Great. I should maybe clarify another thing as well: I would like to use the command-line or 'mini-buffer' (at least that's what I think it's called) from inside Emacs, i.e. not the Bash command-line or terminal from which I start up Emacs.
 
 Ah, excellent clarification! Yes, the prompt at the bottom of your Emacs window where you type commands like M-x is indeed called the minibuffer. So, you want to find and set color themes within your running Emacs session. Here's how to do that using the minibuffer:
 
-1. Listing Available Color Themes within Emacs:
+- 1. Listing Available Color Themes within Emacs:
 
 You can use the customize-themes command to see a list of all available themes and preview them.
 
@@ -9025,6 +9045,8 @@ In Summary:
 
 For someone with programming experience looking to mod Morrowind, you should focus on understanding the TES Script within the Construction Set. Then, I highly recommend learning Lua to leverage the power of the Morrowind Script Extender (MWSE). While C++ and graphics programming are relevant for the underlying engine and creating entirely new rendering features, they are not typically required for creating most types of gameplay and content mods. Your programming skills will be very valuable in mastering the scripting aspects of Morrowind modding.
 
+
+___gnometracker_sparql
 Great! Another question: Could you give me a VERY quick overview (that also involves some code and practical examples) of using Tracker (I think it's called Gnome Tracker, but there may also be some minimal versions) and also using the SPARQL language for obtaining some useful information concerning files etc? I.e. I have been using the Bash and the Shell to good effect for text-files, but I would really like to enhance that workflow if possible for other files and file-types as well. Note also: My currently installed primary operating system is Arch Linux.
 
 You're right, the file indexing and search tool in GNOME is called Tracker. It uses a semantic database to store information about your files and allows querying this data using SPARQL (SPARQL Protocol and RDF Query Language). Here's a quick overview with practical examples relevant to your Arch Linux system:
