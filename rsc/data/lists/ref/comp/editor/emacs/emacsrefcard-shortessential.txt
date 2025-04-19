@@ -1,0 +1,410 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/emacs/emacsrefcard26_survival.pdf
+            GNU Emacs Survival Card
+            for version 26
+
+            In the following, C-z means hit the ‘z’ key while holding
+            down the Ctrl key. M-z means hit the ‘z’ key while hitting
+            the Meta (labeled Alt on some keyboards) or after hitting
+            Esc key.
+
+            Running Emacs
+            To enter GNU Emacs, just type its name: emacs. Emacs
+            divides the frame into several areas: menu line, buffer area
+            with the edited text, mode line describing the buffer in the
+            window above it, and a minibuffer/echo area in the last line.
+            C-x C-c
+            C-x C-f
+
+            C-x C-s
+            C-x k
+            C-g
+            C-x u
+
+            quit Emacs
+            edit file; this command uses the minibuffer to
+            read the file name; use this to create new files
+            by entering the name of the new file
+            save the file
+            kill a buffer
+            in most context: cancel, stop, abort partially
+            typed or executing command
+            undo
+
+            Moving About
+            C-l
+            C-x b
+            M-<
+            M->
+            M-g M-g
+
+            scroll current line to center of window
+            switch to another buffer
+            move to beginning of buffer
+            move to end of buffer
+            go to a given line number
+
+            Multiple Windows
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+
+            0
+            1
+            2
+            3
+            o
+
+            remove the current window from the display
+            make active window the only window
+            split window horizontally
+            split window vertically
+            move to other window
+
+            Emacs defines a ‘region’ as the space between the mark and
+            the point. A mark is set with C-space. The point is at the
+            cursor position.
+            mark entire paragraph
+            mark entire buffer
+
+            Killing and Copying
+            C-w
+            M-w
+            C-k
+            M-DEL
+            C-y
+            M-y
+
+            C-s
+            C-r
+            RET
+            M-C-s
+            M-C-r
+
+            search for a string
+            search for a string backwards
+            quit searching
+            regular expression search
+            reverse regular expression search
+
+            Use C-s or C-r again to repeat the search in either direction.
+
+            Tags
+            Tags tables files record locations of function and procedure
+            definitions, global variables, data types and anything else
+            convenient. To create a tags table file, type ‘etags input files’
+            as a shell command.
+            M-.
+            find a definition
+            C-u M-.
+            find next occurrence of definition
+            M-*
+            pop back to where M-. was last invoked
+            M-x tags-query-replace run query-replace on all files
+            recorded in tags table
+            M-,
+            continue last tags search or query-replace
+
+            Compiling
+            M-x compile
+            C-c C-c
+            C-x ‘
+
+            compile code in active window
+            go to the next compiler error, when in the
+            compile window or
+            when in the window with source code
+
+            Dired, the Directory Editor
+            C-x d
+            d
+            ~
+            u
+            x
+            C
+            g
+            f
+            s
+
+            invoke Dired
+            flag this file for deletion
+            flag all backup files for deletion
+            remove deletion flag
+            delete the files flagged for deletion
+            copy file
+            update the Dired buffer
+            visit the file described on the current line
+            switch between alphabetical date/time order
+
+            Reading and Sending Mail
+
+            Regions
+
+            M-h
+            C-x h
+
+            Searching
+
+            kill region
+            copy region to kill-ring
+            kill from the cursor all the way to the end of
+            the line
+            kill word
+            yank back the last kill (C-w C-y combination
+            could be used to move text around)
+            replace last yank with previous kill
+
+            M-x
+            q
+            h
+            d
+            x
+            C-x
+            C-c
+            C-c
+
+            rmail
+
+            m
+            C-c
+            C-f C-c
+
+            start reading mail
+            quit reading mail
+            show headers
+            mark the current message for deletion
+            remove all messages marked for deletion
+            begin composing a message
+            send the message and switch to another buffer
+            move to the ‘CC’ header field, creating one if
+            there is none
+
+            Miscellaneous
+            fill paragraph
+            expand previous word dynamically
+            iconify (suspend) Emacs when running it
+            under X or shell, respectively
+            M-x revert-buffer replace the text being edited with the
+            text of the file on disk
+            M-q
+            M-/
+            C-z
+
+            Query Replace
+            interactively search and replace
+            using regular expressions
+
+            M-%
+            M-C-%
+
+            Valid responses in query-replace mode are
+            replace this one, go on to next
+            replace this one, don’t move
+            skip to next without replacing
+            replace all remaining matches
+            back up to the previous match
+            exit query-replace
+            enter recursive edit (M-C-c to exit)
+
+            SPC
+            ,
+            DEL
+            !
+            ^
+            RET
+            C-r
+
+            Regular Expressions
+            . (dot)
+            *
+            +
+            ?
+            [. . .]
+            [^. . .]
+            \c
+            . . .\|. . .\|. . .
+            \( . . . \)
+            \n
+            ^
+            $
+            \w
+            \W
+            \<
+            \>
+            \b
+            \B
+
+            any single character except a newline
+            zero or more repeats
+            one or more repeats
+            zero or one repeat
+            denotes a class of character to match
+            negates the class
+            quote characters otherwise having a special
+            meaning in regular expressions
+            matches one of the alternatives (“or”)
+            groups a series of pattern elements to a single
+            element
+            same text as nth group
+            matches at line beginning
+            matches at line end
+            matches word-syntax character
+            matches non-word-syntax character
+            matches at word beginning
+            matches at word end
+            matches at word break
+            matches at non-word break
+
+            Registers
+            C-x
+            C-x
+            C-x
+            C-x
+
+            r
+            r
+            r
+            r
+
+            s
+            i
+            SPC
+            j
+
+            save region in register
+            insert register contents into buffer
+            save value of point in register
+            jump to point saved in register
+
+            r
+            r
+            r
+            r
+            r
+            r
+
+            r
+            k
+            y
+            t
+            o
+            c
+
+            M-$
+            check spelling of word at the cursor
+            M-x ispell-region check spelling of all words in region
+            M-x ispell-buffer check spelling of entire buffer
+
+            International Character Sets
+            select and activate input method for the
+            current buffer
+            enable or disable input method
+            list-input-methods show all input methods
+            set-language-environment specify principal language
+            RET c
+            set coding system for next command
+            find-file-literally visit file with no conversion of
+            any kind
+            list-coding-systems show all coding systems
+            prefer-coding-system choose preferred coding system
+
+            C-x RET C-\
+            C-\
+            M-x
+            M-x
+            C-x
+            M-x
+            M-x
+            M-x
+
+            Keyboard Macros
+            C-x
+            C-x
+            C-x
+            C-u
+            M-x
+
+            (
+            start defining a keyboard macro
+            )
+            end keyboard macro definition
+            e
+            execute last-defined keyboard macro
+            C-x (
+            append to last keyboard macro
+            name-last-kbd-macro name last keyboard macro
+
+            Simple Customization
+            M-x customize customize variables and faces
+
+            Getting Help
+            Emacs does command completion for you. Typing M-x tab or
+            space gives a list of Emacs commands.
+            C-h
+            C-h
+            C-h
+            C-h
+            C-h
+
+            t
+            i
+            a
+            k
+
+            Emacs help
+            run the Emacs tutorial
+            enter Info, the documentation browser
+            show commands matching a string (apropos)
+            display documentation of the function invoked
+            by keystroke
+
+            Emacs gets into different modes, each of which customizes
+            Emacs for editing text of a particular sort. The mode line
+            contains names of the current modes, in parentheses.
+            C-h m
+
+            Rectangles
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+            C-x
+
+            Spelling Check
+
+            get mode-specific information
+
+            copy rectangle to register
+            kill rectangle
+            yank rectangle
+            prefix each line with a string
+            open rectangle, shifting text right
+            blank out rectangle
+
+            Shells
+            M-x shell
+            M-!
+            M-|
+            C-u M-|
+
+            start a shell within Emacs
+            execute a shell command
+            run a shell command on the region
+            filter region through a shell command
+
+            Copyright c 2019 Free Software Foundation, Inc.
+            For GNU Emacs version 26
+            Author Wlodek Bzyl (matwb@univ.gda.pl)
+            Released under the terms of the GNU
+            General Public License version 3 or later.
+            For more Emacs documentation, and the TEX
+            source for this card, see the Emacs distribution,
+            or https://www.gnu.org/software/emacs
+
+            
+

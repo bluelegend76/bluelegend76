@@ -874,13 +874,418 @@ pdftk  @@[@] [**]  (from Transcribe)
 potrace  [@@]
                 .
                 .
+xsane
+                .
+                .
 imagick
                 ----
                 .
+                ~/Dropbox/rsc/data/lists/ref/comp/cb/imagickcb.txt
+                ~/Dropbox/rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
 ffmpeg  (from Blender at-index (etc))  @(@!)
-                ----
-                .
+                        ____
+                        ~/Dropbox/rsc/data/lists/ref/comp/cb/ffmpegcb.txt
+                        --
+                        combine audio and video   https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg#277667
+                        --
+                        ffmpeg -i "video.mkv" -itsoffset 00:00:01 -i "audio.ogg" -map 0:v -map 1:a -c copy "out-vidplusaudio.mkv"
+                            ffmpeg -i "11_02.mkv" -itsoffset 00:00:02 -i "11_02.ogg" -map 0:v -map 1:a -c copy "2024-03-11_02.mkv"
+                                                      ^
+                                                      +---- offset audio 1 sec
+
+                        ___ffmpeg_convert ___ffmpeg_aureplace(*) ___ffmpeg_rec (=frecord.bash vid.mp4)**  ___ffmpeg_crop   ___ffmpeg_cut ___ffmpeg_splice
+                        https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg?rq=1  ****************
+                        ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
+                        (=Lösning 2 (concat demuxer) ***************** )  mkv, mp4 mm (**!)
+
+                        ___ffmpeg_rec
+                            Ref =drs_screencastingkommandon
+                        ffmpeg -f alsa -ac 2 -i pulse -f x11grab -s 1920x1080 -i :0.0 -r 25 -vcodec libx264 FNAME.mkv
+                        audacity: Audio Host=ALSA, Recording Device=pulse
+
+                        ffmpeg -f pulse -f x11grab -s 1920x1080 -i :0.0 -r 25 -vcodec libx264 output.mkv                    #bara video (=spela in audio separat + lägg på)
+                        ffmpeg -f alsa -ac 2 -i pulse -f x11grab -s 1920x1080 -i :0.0 -r 25 -vcodec libx264 output2.mkv     #VIDEO + AUDIO DIREKT *****
+                        ffmpeg -f alsa -ac 2 -i pulse -f x11grab -s 1920x1080 -i :0.0 -r 24 -vcodec libx264 output3.mp4     #HM: CAPTURE VERKAR INTE FUNKA SPEC. BRA FÖR JUST VLC (????)
+                                                        -r 25                   force 25 fps
+                        +JÄMFÖR M. EXEMPEL 6.1 o 6.2 FR:  https://ffmpeg.org/ffmpeg.html  **********
+                        ref 2   #=hd för gaming mm (**)
+                        ffmpeg -f alsa -i pulse -f x11grab -s 1920×1080 -i :0.0 -c:a libmp3lame -ab 128k -ac 2 -c:v mpeg2video -qscale:v 0 amnesia_mpeg_0.avi
+                                -b:v                    (t.ex. 64k) =video average bit rate
+
+                        offset audio/video for video file
+                            ffmpeg -i "in.mp4" -itsoffset 3.84 -i "in.mp4" -map 0:v -map 1:a -c copy "out.mp4"  #audio delayed
+                                ffmpeg -i "movie.mp4" -itsoffset 3.84 -i "movie.mp4" -map 0:v -map 1:a -c copy "movie-audio-delayed.mp4"
+                            ffmpeg -i "in.mp4" -itsoffset 3.84 -i "in.mp4" -map 1:v -map 0:a -c copy "out.mp4"  #video delayed
+                            -----
+                            ffmpeg -itsoffset 0.25 -i in.mkv out.mkv
+                            ffmpeg -itsoffset -0.1 -i in.mkv out.mkv
+
+                        ___ffmpeg_crossfade(**)     sök: crossfade effect between video clip audio ffmpeg
+                                            https://superuser.com/questions/778762/crossfade-between-2-videos-using-ffmpeg  (=testa lösning 2)
+                                    ffmpeg -f alsa -ac 2 -i pulse -f x11grab -s 1920x1080 -i :0.0 -r 24 -vcodec libx264 output3.mp4
+                            @a: 'attzmzo    **** #=återcentrera pverktygslistan (**)
+                             #+kan sen köras med 'Q' igen
+
+                            VIDEO =VIDEOFORMAT (WEBM, MP4 MM MM) ****  +FFMPEG TUTORIALS, PVERKTL MM *********
+                            {{{
+
+                                    Visa Info om Videofil mm (=MediaFil):  ffprobe (**)
+                                            https://ffmpeg.org/ffprobe.html
+
+
+                                an ffmpeg tutorial (for beginners**) ****** {{{
+
+                                    recording, converting and streaming digital audio and video in various formats.
+                                    It can be used to do most of our multimedia tasks quickly and easily say, audio compression,
+                                    audio/video format conversion, extract images from a video and a lot more
+
+
+                                ___ffmpeg_convert
+                                    syntax enklaste konvertering                    ffmpeg -i input.avi output.mpg
+                                    flaggor för i/o-filerna                         direkt innan filen de ska påverka (=innan i- o innan o-filen (respektive))
+
+                                            comment on ffm basic simplicity:
+                                                But there is one slight flaw. Since FFmpeg devs had to keep a default setting
+                                                for the audio and video bitrate, they settled on a 64kbps audio(radio quality)
+                                                and 200 kbps for video, a bad video quality. But these options can always be changed
+                                                so this is not a big issue.
+
+                                    keep vid. qual. of o-file                       ffmpeg -i input.avi -sameq output.mpg
+                                      same as i-file ***            
+                                    pre-defined audio and video options             ffmpeg -i input.avi -target dvd output.mpg      ___teoriterm ******
+                                      for various file formats (t.ex. dvd) **
+                                    convert first 30 sec. of i- to o-               ffmpeg -i input.fmt1  -t 30 output.fmt2
+
+                                        -ar                                 au.freq. för o-fil (t.ex. 48000 Hz)
+                                        -ac                                 antal au-kanaler ut
+                                        -ab                                 bitrate val. för au-fil     #t.ex. -ab 128k
+                                         -an                                no audio
+
+                                                +SE EV. 'AUDIO COMPRESSION HOWTO' (***)  ---->>
+
+                                    -acodec
+
+                                    konvertera audio till ogg vorb.                 ffmpeg -i input.mp3  -b 128k  output.ogg
+
+                                        -b                                  sätt bitrate för videofil
+                                                                                    ffmpeg -i input.avi -b 200k output.avi
+                                        -r                                  framerate (**)
+                                        -s                                  set size/resolution of output file *
+                                                                                    ffmpeg -i input.avi  -s 1024x768 output.avi         # -s xga    +se ev. mer 'resolution abbrevs'
+                                                                                                                                        # hd720 stands for 1280x720
+                                        -aspect                             set o- aspect ratio
+                                                                                    ffmpeg -i input.avi -aspect 4:3 output.avi
+
+                                ___ffmpeg_aureplace (**!)
+
+                                        ffmpeg -i INPUTVID.mp4 -i AUREPLACE.mp3 -acodec copy -vcodec copy -map 0:v:0 -map 1:a:0 OUTVID.mp4
+                                        ffmpeg -i ~/Hämtningar/testing/tpope--vim_config.mp4 -i ~/Hämtningar/testing/tpope--vim_config--compr.mp3 -acodec copy -vcodec copy -map 0:v:0 -map 1:a:0 tpope--vim_config_cleanedaudio.mp4
+
+                                        howto cropping and padding                              https://superuser.com/questions/690021/video-padding-using-ffmpeg#690211
+                                          videos using ffmpeg (**)
+                                ___ffmpeg_crop
+                                        for f in *.mp4; do ffmpeg -i $f -vf "crop=1280:720:70:170" ${f/-orig/}; done  #(!!)= rename origvids to vidname-orig.mp4
+                                                ffmpeg -i before.mp4 -vf "crop=w:h:x:y" after.mp4
+
+                                        ACR-EGDE/CPP-10H_CROPMATRIX (***(*)):       170 570 190 70  1920 1080       #el 180(**)
+                                                ffmpeg -i before.mp4 -vf "crop=1280:720:70:170" after.mp4
+
+
+                                                1a 3b 6c 9d
+                                                320 770 340 710
+                                                    ct"
+                                                    =1920-b-d:
+                                                    =1080-a-c:
+                                                    =d:
+                                                    =a
+                                                    
+
+                                                50 0 50 0
+                                        Bridge Cropmatrix
+
+
+
+                                        Kashmir Dfs
+                                                390 0 40 630  1920 1080
+                                                width=1920-430            1490
+                                                height=1080-630           450
+                                                frleft=630                630
+                                                frtop=1080-390            690
+                                                ffmpeg -i Infile.mp4 -vf "crop=1290:650:630:390" Outfile.mp4
+
+
+                                        Cut Vlc Cropmatrix-numbers(*)
+                                            @m:  "ayiww"byiww"cyiww"dyiww"xyiww"yyiw
+                                        Convert Vlc-crop_format (top-right-bot-left) to ffmpeg-crop_format (width-height-frleft-frtop)      #=sätt först top-right-bot-left till "a "b "c "d    + "x "y till wh-orig (def. 1920x1080)
+                                            @f:  ^fwct"=x-b-d:=y-a-c:=d:=a
+
+                                            ffmpeg -i ancientegypt.mp4 -vf "crop=480:260:0:50" ancientegypt_croptest.mp4
+                        480 360
+
+                                            (t.ex.:) ffmpeg -i test.mp4 -vf "crop=1070:600:230:250" test-cropped.mp4  (****************/!!!!!!)
+
+                                                                                    ######  ffmpeg -i inputfile.avi -croptop 88 -cropbottom 88 -cropleft 360 -cropright 360 outputfile.avi
+                                                                                    ffmpeg -i input.avi  -padtop 120  -padbottom 120  -padcolor 000000  output.avi  ****
+
+                                        -vn
+                                        -vcodec
+                                                                                     ffmpeg -i input.avi  -vcodec libtheora output.ogv
+
+                                        komprimera audio fr. 320 kbps       ffmpeg -i inputfile.mp3 -ab 128 outputfile.mp3
+                                          till 128
+
+                                        KONVERTERINGSLISTA + EV. IDÉ: KONVERTERA NER LJUDINSPELNING FÖR RÖST (SB-L.B.) TILL 96 kbs el. likn.        #=låter som radioröst ****
+
+                                        ffmpeg -i  inputfile.mpg  -vcodec mpeg4 outputfile.avi
+                                        If you want to force a particular format. You can easily do this using the '-f' flag
+
+
+                                        Convert 'down' to flv (**/!)
+                                             ffmpeg -i  recorded_file.mov  -ar 22050  -ab 32k  -r 25  -s 480x360  -vcodec flv -qscale 9.5 output_file.avi
+
+
+                                    ffmpeg -formats
+
+                                        extract images from a video         ffmpeg -i inputfile.avi -r 1 -f image2 image-%3d.jpeg
+
+                                                                            ffmpeg -i inputfile.avi -r 1 -s 4cif -f image2 image-%3d.jpeg       #semer 4cif
+                                                                            ffmpeg -i inputfile.avi  -r  1  -t  4  image-%d.jpeg
+                                                                            ffmpeg -i inputfile.avi  -r 1 -t  40 -ss  01:30:14 image-%d.jpeg
+                                                                            ffmpeg -i inputfile.avi  -r 1 -vframes 120 -ss  01:30:14 image-%d.jpeg
+
+                                                            ___SEMER ___SEMER *****
+
+                                        How to record audio from mic using FFmpeg aka audio grabbing *****
+                                                                            ffmpeg -f oss -i /dev/dsp audio.mp3
+                                            cat /dev/sda1 > /dev/dsp
+
+                                        remove au                           ffmpeg -i inputfile.avi -an outputfile.avi
+                                        remove vid                          ffmpeg -i inputfile.avi -vn -ab 128 outputfile.mp3
+
+
+                                    ___ffmpeg_cut
+
+                                            https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video (**/?)
+                                                    ffmpeg -ss 00:00:30.0 -i input.wmv -c copy -t 00:00:10.0 output.wmv         #=klipp fr. 00:00:30 till 00:00:40 (****/?)
+                                                    ffmpeg -ss 30 -i input.wmv -c copy -t 10 output.wmv
+
+                                }}}
+                                https://www.labnol.org/internet/useful-ffmpeg-commands/28490/   ******************** ___SEMER ___SEMER (=GÅ IGENOM + GÖR PVERKTL FÖR FFMPEG ********)   ___ffmpeg_crop
+
+                                https://blog.addpipe.com/converting-webm-to-mp4-with-ffmpeg/ ** {{{
+
+                                        ffmpeg -i video.webm video.mp4
+
+                                    webm - låg minnesförbrukn. (=mobila enheter mm)
+                                    mp4 - bättre stöd över många enheter        (om video=h.264 + audio=aac)        #+ev. h264 =high profile + level 4.2
+
+                                    bra program för att                         vlc **
+                                      visa info om strömmar i
+                                      videofil
+
+                                    (converting can be lengthy and _intensive process, but)
+                                      ffmpeg provides a series of presets and controls to help you optimize for quality or faster conversions
+
+
+                                    video encoding m. h.264:
+                                        control qual. w. quantizer scale                crf(=constant rate factor)  =0-51       #0=lossless, 23=def, 51=worst
+                                    video encoding qual. presets                        ultrafast - veryslow (medium=def.)      #slower =better compression
+
+                                }}}
+                                 https://docs.blender.org/manual/en/latest/files/media/video_formats.html ** {{{
+
+                                    se/infogat i teorilistan **
+
+                                 }}}
+                                https://www.reddit.com/r/blender/comments/14wx9b/best_video_output_format/  **** {{{
+
+                                    ___pverktl_video
+
+                                    save animations to still frames in non-lossy image format                   tif/png
+                                    stitch together w. ffmpeg                                                   mp4 container w. h264 encoding (w. no compression at all)       #highest 1080 resolution avail.
+
+                                    Another reason I like mp4/h264 is I can upload compressed versions of these videos to my own personal sites and have
+                                    flash players play them progressively (non-stream) -- even things like android and iphones can handle the format.
+
+                                    mp3 (el aac)        #use max bitrate poss.
+
+                                    For long term archiving I keep all the individual frames and maybe a lower resolution preview video along with my .blend files
+                                    and other assets. Can always re-encode new videos from the still images when the common video file format shifts to something else in the future.
+
+                                     color corrections/grading (**)  (=gimp/macprogrammet??)
+                                                        https://docs.blender.org/manual/en/latest/files/media/image_formats.html
+
+                                    If you're going to do any sort of post processing, especially any gamma operations,
+                                    and HD space is not an issue you should definitely be going for openExr instead of tiff.    #???
+
+                                }}}
+                                 https://docs.blender.org/manual/en/latest/render/output/file_formats.html {{{
+
+                                    tips(=bygger på samma som redit-artikeln =rendera ut png-bilder+):
+                                        Images can then be encoded to a video by adding the rendered image sequence
+                                        into the Video Sequencer and choosing an appropriate Video Output. (*)
+
+                                    Blender Encoding Panel(=för video output):
+                                        video container         #=output format
+                                        codec
+                                        compression settings
+
+                                    With all of these compression choices, there is a trade-off between file size,
+                                    compatibility across platforms, and playback quality.
+
+                                        tips: se mer info när encoding körs
+                                            kolla terminalen + om programmet startats med 'blender -d'
+
+                                    tips(!): 'check the compatibility of your container format and codec' (*!!)
+
+                                    +DETALJERAT 'SPARA UT/RENDER VIDEO AS IMAGE SEQ, EITHER PNG OR OPENEXR**' +mm ****
+
+                                 }}}
+                                .    https://blender.stackexchange.com/questions/3470/what-file-format-should-i-use-for-rendering {{{
+
+                                    dpx image format                            huge; used in preservation
+                                    openexr tips                                enable preview (=sparar jpgs så kan kolla snabbt på resultatet)
+                                    png   true color        +ANG. COMPRESSION
+
+                                    openexr:
+                                    These images are good for keeping every bit of data around
+                                    (including render passes in the case of Multilayer),
+                                    which can be useful for compositing.
+
+                                    Note that when rendering a still, the image is stored uncompressed in memory,
+                                    so you can render an image then save it multiple times in different formats
+                                    (with different compression ratios).
+
+
+                                      PNG 8 bit is fine to save file without any changes
+                                      PNG 16bit is fine for some editing in Photoshop/Gimp
+                                      Heavy color editing and compositing -- OpenEXR -- has a huge dynamic range
+                                      Heavy compositing, animation/movie compositing -- OpenEXR multilayer
+
+                                }}}
+
+
+                                https://danielpocock.com/quick-start-blender-video-editing/ {{{
+
+                                        ___pverktl_video 1
+
+                                    review the max. memory size property                            #set to somewhat less than amount of phys. ram in the workstation
+
+                                    (!!) same fps for output file (to render) as input file         =KOLLA EV. O JÄMFÖR FPS FÖR VIDEO FILMAD M. VIDEOKAM./S5-TELEFONEN/GOPRO-MINI/TAB-S3/WEBCAM-1BT (****)
+                                    resolution_percentage (=under 'picture dimensions')             =100%
+
+                                    output format =png (**)
+                                    outp. dir + ## om 01-99 (mm)
+
+                                        GrundRedigera 1, +
+
+                                    kolla klippets längd till hö. (=prop.s)
+                                     + mata in värdet i rutan nere
+                                                 (=hur långt vill rendera (=ej def.=250 frames))
+
+                                    check av-sync (!!)
+
+                                     'you will need to listen to the strips...' =???????????        (=matcha mot slaskaudiospåret(=orig.)  tills ej hör eko + ta bort slaskspåret(!!)
+
+                                    TRANSFORMS =ZOOM IN PICTURE ???? MM                             H-KLICKA TRANSFORM-STRIP + KOLLA 'UNIFORM SCALE' ??????/******      +redigera värden o animera m. keyframes (**)    ___PICKOUT ( ___SEMER )
+
+                                    GENERERA PNG.S + GENERERA AUDIO (ogg?)    ___PICKOUT ( ___SEMER )
+
+                                      apt-get install mjpegtools vpx-tools mkvtoolnix
+
+                                    ------
+
+                                    Color Balance (=om bild är för ljus, gul mm):  strip modifier > color balance       #anv. reglagen lift, gamma o gain för att justera shadows, midtones o highlights     ( ___PICKOUT )
+
+                                }}}
+                                 https://www.instructables.com/id/Learn-to-Edit-Video-on-Blender-in-5-Minutes/ ****** ++ ___SEMER {{{
+
+                                    tips: spara .blend-filen i samma mapp som videorna (=även om flyttar filerna, så hittar blender videorna)(??)
+
+
+                                    top: video preview
+                                    bottom: seq. editor
+                                    right: prop.s of project
+
+
+                                    To play our video, we need to set the preview zone.     ( ___PICKOUT ) ___SEMER
+                                    Only the strips inside the preview zone will be played.
+                                        p
+                                        a-a
+                                        mhj
+                                          zoom
+
+
+
+                                    I hope this tutorial was useful!
+
+                                    Next time we will see how to
+
+                                        Create Group (Meta)                             =VAR ???????? ( ___SEMER )      #=hitta mer info/annan tutorial, testa mm (***/!!!)
+                                        Add Text/Image/Video overlay                    =VAR ???????? ( ___SEMER )  ( ___PICKOUT )
+                                                Modify a strip (color/position/size)
+
+                                 }}}
+
+                            ------
+                                 Ffmpeg - an intermediate guide     #wikibook: OBS OBS! KAN BEHÖVA RENSAS =SAMMANSTÄLLAS FÖRST (=TILL EN TEXTFIL) (o inte sönderbruten html-sida) {{{
+                                 }}}
+                                Video Compression (bok)  (=INKLUSIVE VIDEOREDIGERING, BILDFORMAT, VIDEOSTANDARDS MM *******) {{{
+                                    ~/vidaudcompr.pdf
+
+                                    viktiga scheman/ordlistor/tabeller (=förstförsta genomtitten(*)):
+                                        s24
+                                        s59
+                                        s63 - aspect ratios
+                                            s71 - audio synchronization
+                                        s91 - frame rates
+                                        s100 ca++ - mer om aspect ratios
+                                        s124 - video formats
+                                         Dig. Image formats (+screen resolution*)
+                                                ===========
+                                                ===========
+                                                ===========
+                                                ===========
+                                                ===========
+
+                                }}}
+                                Ffmpeg Documentation(!)   #=Man     (+ev. bash-man(??)) {{{
+                                }}}
+                                        .   (anteckn. =första genomtitt doc/index*) {{{
+                                            TODO: EV. LYSSNA IN (=VALOUD) BÖRJAN(*) PÅ FFMPEG DOCUMENTATION (=presentationen av vad ffmpeg kan göra*)
+                                             -sources
+                                             -sinks
+                                              -report
+                                             5.4 main options       -f -i -c -t -ss  -metadata  -disposition
+                                             5.5 video options      -r -s
+                                                5.6 advanced video options
+                                                        key_frames??
+                                             5.7 audio options
+                                                5.8 advanced audio options
+                                              5.9 subtitle options
+                                             +Advanced options
+                                             preset files(??)
+                                              ffpreset files
+                                              avpreset files
+                                                --- examples ---
+                                            6.1/6.2 GRAB AUDIO AND VIDEO (=SCREENCASTING MM) *****
+                                            6.3 Video and Audio File Format Conversion (*)      #+='convert dvd to mp4' mm
+                                        }}}
+                                    https://en.wikipedia.org/wiki/List_of_codecs #Lossless_video_compression
+
+                            }}}
+                        
+                        https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video
+
+                        ____
+                        ~/Dropbox/rsc/data/lists/ref/comp/pr/media/FFmpeg-Faq-Toc--Docs.txt
+                        ~/Dropbox/rsc/Doks/phone/graf/pr/ffmpeg/ffmpeg-cookb.toc.txt
+                        ~/Dropbox/rsc/Doks/phone/graf/pr/ffmpeg/FfmpegBook.txt
+                            ~/Dropbox/rsc/Doks/phone/graf/pr/ffmpeg/Ffmpeg.txt  #=linkslist
+                        ---- ----
 yt-dlp
+                ~/Dropbox/rsc/Doks/phone/Comp/media/ytdlp-man.txt
+
                 Now that yt-dlp is installed, you can use it from the command line. Here are a few basic examples:
 
                 Download a YouTube video:
@@ -898,6 +1303,7 @@ yt-dlp
 fontforge
                 ----
                 .
+
 Reveal.js  (@@)
                 ----
                 .
@@ -910,29 +1316,16 @@ Obs Studio (Win)
                 .
 
 
-FFMPEG Extras
 
 ~/Dropbox:
-  rsc/aubooks/comp/dolphin-man.tags.txt
-  rsc/aubooks/comp/dolphin-man.txt
-rsc/data/lists/at/Blender.g.txt
-rsc/data/lists/ref/comp/cb/ffmpegcb.txt
-rsc/data/lists/ref/comp/cb/imagickcb.txt
-rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
-rsc/data/lists/ref/comp/pr/media/FFmpeg-Faq-Toc--Docs.txt
-rsc/data/lists/ref/comp/sysadm/cmdl-fu.shell.txt
-rsc/data/lists/ref/graf/pr/MultiMedia.txt
-rsc/Doks/phone/Comp/lang/py/au-transcribe/Py-VoiceCompute-Intro_2018.txt
-rsc/Doks/phone/Comp/lang/py/ipy/ipy-interactive-comp_2013.txt
-rsc/Doks/phone/Comp/sysadm/lin/distro/NixGuix/NixpkgsRefman.txt
-rsc/Doks/phone/graf/pr/Blender/blender-refman_pythonscripting.txt
-rsc/Doks/phone/graf/pr/ffmpeg/FfmpegBook.txt
-rsc/Doks/phone/graf/pr/ffmpeg/ffmpeg-cookb.toc.txt
-rsc/Doks/phone/graf/pr/ffmpeg/Ffmpeg.txt
-rsc/Doks/phone/graf/vid/vidaudcompr.txt
+  ~/Dropbox/rsc/aubooks/comp/dolphin-man.tags.txt
+  ~/Dropbox/rsc/aubooks/comp/dolphin-man.txt
+~/Dropbox/rsc/data/lists/at/Blender.g.txt
+~/Dropbox/rsc/data/lists/ref/comp/sysadm/cmdl-fu.shell.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/py/au-transcribe/Py-VoiceCompute-Intro_2018.txt
+~/Dropbox/rsc/Doks/phone/graf/pr/Blender/blender-refman_pythonscripting.txt
+~/Dropbox/rsc/Doks/phone/graf/vid/vidaudcompr.txt
 
-rsc/data/lists/ref/comp/cb/ffmpegcb.txt
-rsc/Doks/phone/graf/pr/ffmpeg/ffmpeg-cookb.toc.txt
 
 
 - Great. Just as a clarifier (on a previous snippet of our conversation above), I would like to learn a lot more about the ffmpeg command and its uses in the future.

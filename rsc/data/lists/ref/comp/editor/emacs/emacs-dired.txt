@@ -1,0 +1,234 @@
+set foldmethod=indent foldlevel=2
+vim: fdm=indent:fdl=2:
+
+~/Empire/Doks/Comp/emacs/emacsrefcard26_dired.pdf
+            Dired Reference Card
+            (based on Dired in GNU Emacs 26)
+            Commands marked with (DX) require dired-x
+
+            Entering and Exiting Dired
+            run dired
+            dired the directory of the file you are editing
+            quit dired
+
+            C-x d
+            C-x C-j (DX)
+            q
+
+            Motion Commands
+            move
+            move
+            move
+            move
+            move
+            move
+            move
+            move
+            move
+            move
+
+            up to previous line
+            down to next line
+            up to previous directory line
+            down to next directory line
+            to next marked file
+            to previous marked file
+            up to previous subdirectory
+            down to next subdirectory
+            to parent directory
+            to first child subdirectory
+
+            p
+            n
+            <
+            >
+            M-}
+            M-{
+            M-C-p
+            M-C-n
+            ^
+            M-C-d
+
+            copy file(s)
+            rename a file or move files to another directory
+            change ownership of file(s)
+            change the group of the file(s)
+            change mode of file(s)
+            print file(s)
+            convert filename(s) to lower case
+            convert filename(s) to upper case
+            delete marked (as opposed to flagged) file(s)
+            compress or uncompress file(s)
+            run info on file
+            make symbolic link(s)
+            make relative symbolic link(s)
+            make hard link(s)
+            search files for a regular expression
+            regexp query replace on marked files
+            byte-compile file(s)
+            load file(s)
+            shell command on file(s)
+            asynchronous shell command on file(s)
+
+            C
+            R
+            O
+            G
+            M
+            P
+            % l
+            % u
+            D
+            Z
+            I (DX)
+            S
+            Y
+            H
+            A
+            Q
+            B
+            L
+            !
+            &
+
+            Flagging Files for Deletion
+
+            Mouse Commands
+            visit file or directory
+
+            Commands on Files Marked or Specified
+            by the Prefix
+
+            Unmark commands remove delete flags
+            Mouse_Button_2
+
+            Immediate Actions on Files
+            visit current file
+            view current file
+            visit current file in other window
+            create a new subdirectory
+            compare file at point with the one at mark
+
+            f
+            v
+            o
+            +
+            =
+
+            Marking and Unmarking Files
+            mark a file or subdirectory for later commands
+            unmark a file or all files of a subdirectory
+            unmark all marked files in a buffer
+            mark files with a given extension
+            mark all directories
+            mark all symlinks
+            mark all executables
+            invert marking
+            mark all files in the current subdir
+            mark file names matching a regular expression
+            change the marks to a different character
+            mark files for which Elisp expression returns t
+
+            m
+            u
+            M-delete
+            * .
+            * /
+            * @
+            * *
+            t
+            * s
+            * %
+            * c
+            * ( (DX)
+
+            d
+            ~
+#
+            % &
+            .
+            x
+            % d
+
+            Regular Expression Commands
+            mark filenames matching a regular expression
+            copy marked files by regexp
+            rename marked files by regexp
+            hardlink
+            symlink
+            symlink, with relative paths
+            mark for deletion
+
+            %
+            %
+            %
+            %
+            %
+            %
+            %
+
+            m
+            C
+            R
+            H
+            S
+            Y
+            d
+
+            Dired and Find
+            dired file(s) whose name matches a pattern M-x find-name-dired
+            dired file(s) that contain pattern
+            M-x find-grep-dired
+            dired file(s) based on find output
+            M-x find-dired
+
+            Getting Help
+
+            Modifying the Dired Buffer
+            insert a subdirectory into this buffer
+            remove marked files from the listing
+            remove a subdir listing
+            re-read all directories (retains all marks)
+            toggle sorting of current subdir by name/date
+            edit ls switches
+            recover marks, hidden lines, and such (undo)
+            hide all subdirectories
+            hide or unhide subdirectory
+
+            flag file for deletion
+            flag all backup files (file names ending in ˜)
+            flag all auto-save files
+            flag various intermediate files
+            flag numeric backups (ending in .˜1˜, .˜2˜, etc.)
+            execute the deletions requested (flagged files)
+            flag files matching a regular expression
+
+            i
+            k
+            C-u k
+            g
+            s
+            C-u s
+            C-_
+            M-$
+            $
+
+            dired help
+            dired summary (short help) and error log
+
+            h
+            ?
+
+            Copyright c 2019 Free Software Foundation, Inc.
+            For GNU Emacs version 26
+            Originally written May 2000 by Evgeny Roubinchtein,
+            using refcard layout designed by Stephen Gildea.
+            Released under the terms of the GNU General Public License version 3 or
+            later.
+            For more Emacs documentation, and the TEX source for this card, see the
+            Emacs distribution, or
+
+            https://www.gnu.org/software/emacs
+
+            
+

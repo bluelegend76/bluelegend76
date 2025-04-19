@@ -1,0 +1,5289 @@
+~/bin/scripts/at/at.Emacs.bash
+
+https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
+Per N: Emacs-Dlang-UBUNTUINSTALL 2024 {{{
+  Fork + Download PN GitLab Repo
+  Clone + Updating the Clone (i.e. instead of Forking) {{{
+    For now, I would like to switch
+    to another question really
+    quickly: I would like to fork a
+    repository from Gitlab. It
+    seems though that I do not have
+    permission to do that. What I'm
+    thinking is that I could clone
+    it to my local computer. Let's
+    say I have cloned it, and at a
+    later point, I would like to
+    pull down all the additions /
+    amendments added by the owner.
+    How would I carry out that last
+    step from a Linux command-line
+    with git?
+
+    Cloning and Pulling Changes
+    from a GitLab Repository
+
+    1. Clone the Repository:
+
+    git clone https://gitlab.com/username/repository-name.git
+
+    Replace
+    https://gitlab.com/username/repository-name.git
+    with the actual URL of the
+    repository you want to clone.
+
+    2. Add a Remote:
+
+    If you don't have a remote
+    named upstream configured, add
+    it:
+
+    git remote add upstream https://gitlab.com/username/repository-name.git
+
+    3. Fetch Changes:
+
+    Fetch the latest changes from
+    the upstream repository:
+
+    git fetch upstream
+
+    4. Merge Changes:
+
+    Merge the changes from the
+    upstream main branch (or the
+    branch you want to merge from)
+    into your local branch:
+
+    git merge upstream/main
+
+
+    5. Push Changes (Optional):
+
+    If you've made local changes
+    and want to push them to your
+    fork, you can do so:
+
+    git push origin your-branch-name
+
+    Note: If you encounter merge
+    conflicts, you'll need to
+    resolve them manually before
+    pushing.
+
+    By following these steps, you
+    can clone a GitLab repository,
+    fetch changes from the upstream
+    repository, and merge them into
+    your local branch.
+
+    Would you like to explore other
+    Git commands or workflows?
+  }}}
+  Patch Own Settings (I.e. Evil, Emp-Vim_Mappings, SysCrafters_Org, etc) {{{
+
+    Here are a couple of options
+    you can explore to seamlessly
+    integrate your Evil keybindings
+    into your friend's Emacs
+    configuration while using his
+    forked GitLab repository:
+
+    Option 1: Utilize Emacs Load Paths
+
+    - 1. Fork the Repository: Go
+      ahead and fork your friend's
+      GitLab repository containing
+      his Emacs configuration.
+    - 2. Local Init File: Create a
+      local init.el file in your
+      Emacs configuration directory
+      (usually ~/.emacs.d/).
+    - 3. Load Paths: Within your
+      local init.el file, use the
+      load-path function to add the
+      directory containing your
+      friend's forked repository.
+      This allows Emacs to find his
+      configuration files.
+    - 4. Evil Mode Configuration:
+      In your local init.el file,
+      add the line (require
+      'evil-mode) to enable Evil
+      keybindings. You can add any
+      other custom configurations
+      you prefer here.
+    - 5. Override or Extend: For
+      configurations you want to
+      modify or add on top of your
+      friend's setup, use Emacs
+      Lisp functions like defadvice
+      or after-init to selectively
+      override or extend specific
+      functionalities.
+
+    Benefits:
+
+    - Clean Separation: Your local
+      init.el file keeps your Evil
+      mode configuration and
+      personal touches separate
+      from your friend's base
+      configuration.
+    - Easy Maintenance: You can
+      manage your Evil mode setup
+      and other preferences
+      independently.
+
+    Option 2: Leverage Emacs Package Manager (MELPA)
+
+    - 1. Fork the Repository:
+      Similar to Option 1, fork
+      your friend's repository.
+    - 2. Package Configuration:
+      Within your friend's forked
+      repository, consider creating
+      a separate package
+      specifically for Evil mode
+      configurations. This package
+      can include require
+      'evil-mode' and any other
+      Evil mode customizations.
+    - 3. Install from Package: In
+      your local Emacs
+      configuration, use the Emacs
+      Package Manager (MELPA) to
+      install the Evil mode package
+      you created within the forked
+      repository.
+
+    Benefits:
+
+    - Modular Approach: This option
+      breaks down configurations
+      into smaller, manageable
+      packages.
+    - Potential Sharing: If your
+      Evil mode configuration is
+      generally useful, you could
+      even consider publishing it
+      to MELPA for wider use.
+
+    Considerations:
+
+    - Understanding Emacs Lisp:
+      Both options require some
+      familiarity with Emacs Lisp
+      for effective configuration
+      management (using load-path,
+      defadvice, or package
+      creation).
+    - Conflicting Configurations:
+      Be mindful of potential
+      conflicts between your Evil
+      mode setup and your friend's
+      existing configuration.
+
+    Additional Tips:
+
+    - Communicate with your Friend:
+      Discuss your approach with
+      your friend. They might have
+      valuable insights or
+      suggestions regarding their
+      repository structure.
+    - Start Small: Begin with basic
+      Evil mode configuration and
+      gradually add more
+      customizations as needed.
+    - Consult Emacs Documentation:
+      The Emacs documentation is a
+      valuable resource for
+      understanding Emacs Lisp and
+      configuration options:
+      https://www.gnu.org/software/emacs/manual/
+
+    By using either approach and
+    leveraging Emacs' powerful
+    configuration capabilities, you
+    can seamlessly integrate your
+    Evil mode preferences with your
+    friend's Emacs configuration,
+    allowing you to enjoy the
+    benefits of both!
+
+  }}}
+  Run Emacs Install-script
+  - Går det/Finns det ett skript för att/Hur gör man för att uppdatera Emacs från nyaste repot(=om man redan har det installerat)?
+}}}
+Modularize init.el {{{
+
+emacs split configuration into multiple files (=split up emacs init file)
+https://emacs.stackexchange.com/questions/18418/split-configuration-into-multiple-files
+
+https://www.emacswiki.org/emacs/ElispCookbook
+    https://superuser.com/questions/231384/how-to-get-code-completion-in-emacs
+    https://stackoverflow.com/questions/61446/what-is-the-best-code-template-facility-for-emacs
+
+Emacs:
+
+- 1. Create Lisp Files: Create separate Lisp files for each module or functionality, similar to Vim's module files. Each Lisp file should handle a specific aspect of your Emacs configuration.
+
+- 2. Load Module Files: In your init.el file, use the require form to load each module file. For instance, to load a module file named keybindings.lisp, use the following form:
+
+Code snippet
+
+(require 'keybindings)
+
+- 3. Maintain Central init.el File: Keep the central init.el file focused on global settings, initialization, and package management. Avoid placing module-specific configurations directly into the central init.el file.
+
+- 4. Organize Directories: Create a directory structure that reflects the module files. For example, you could have a ~/.emacs.d/modules directory where all the module files reside.
+
+- 5. Use Relative Paths: Use relative paths when loading module files to ensure portability across different environments. This will prevent issues when moving your Emacs configuration to another machine.
+
+- 6. Utilize Custom Load Path: You can also define a custom load-path variable to specify the directory where Emacs should look for module files. This allows you to centralize the module files and avoid having to explicitly require each one.
+
+
+By following these guidelines, you can effectively organize your Emacs resource files into a modular structure, making them easier to manage, maintain, and extend.
+
+
+
+I think I've asked this question before, but I'll ask it again just to jog my memory: If I use the M-x package-install command, I would have to repeat that again when starting afresh with Emacs on another computer. Is there a good way to set it into my configuration file, and in that case, what syntax would I use? Is it 'require PACKAGENAME' or something like that?
+Yes, you can set the installed packages into your configuration file. This is a good way to ensure that you have the same packages installed on all of your computers. You can use the following syntax to add packages to your configuration file:
+
+Lisp
+(require 'PACKAGENAME)
+
+Replace PACKAGENAME with the name of the package you want to install. For example, to install the html-mode package, you would use the following code:
+
+Lisp
+(require 'html-mode)
+
+You can also use the following syntax to enable a package after it has been installed:
+
+Lisp
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(load "PACKAGENAME")
+
+Replace PACKAGENAME with the name of the package you want to enable. For example, to enable the css-mode package, you would use the following code:
+
+Lisp
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(load "css-mode")
+
+By adding these lines to your configuration file, you can ensure that you have the same packages installed and enabled on all of your computers. This can save you a lot of time and effort, and it can also help to ensure that you are always using the latest versions of the packages.
+
+Here's an example of how to set up your configuration file to install and enable the html-mode and css-mode packages:
+
+Lisp
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'html-mode)
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(load "css-mode")
+
+This code will install both packages and enable them for all files you open in Emacs.
+
+I hope this helps!
+
+}}}
+  = Package|Save Per N - Emacs-inits(+Emacs Compilations)
+  - Evil installation
+  - noblink cursor
+   - Personal (vimlike) Keybindings
+  - Slime
+___ElispStartwith
+emacs over vim:
+    - image in txt-files
+    - pdf-tools
+    - org-mode
+    - simult. code syntaxes
+
+Jump between declaration/definition and implementation
+  # function, method, class, symbol (and other code elements) ----
+-- Emacs
+go to Declaration  a-.
+go to Implementation  ca-.
+
+__
+___Em1+evil/Org
+Tip Search: emacs frequency package **[!!]
+    c-pageup/c-pagedown
+~/Dropbox/rsc/Doks/phone/Comp/lang/lisp/emacs_lispcodemovements-tut.txt
+Emacs Markdown Mode  https://www.emacswiki.org/emacs/MarkdownMode
+https://github.com/redguardtoo/evil-matchit
+inits {{{
+    ~/.emacs.d/init.el ~/Dropbox/config/emacs/init.el
+      ~/.emacs.d/elpa/evil-20230120.2022/evil-maps.el
+    ~/Empire/curr-desktop/emacs-config-master/init.el  #per nordlöw init
+
+    https://gitlab.com/per.nordlow/emacs-config/-/tree/master/lilypond
+    https://gitlab.com/-/ide/project/per.nordlow/emacs-config/edit/master/-/lilypond/
+}}}
+empire dropbox checkable txt ref-lists [**] {{{
+~/Dropbox/rsc/data/lists/ref/comp/Emacs-Tocs.txt  #+TODO: START FILLING WITH FUNCTIONS FOR THE NEOVIM LUA API(**** etc)
+
+~/Dropbox/rsc/data/lists/ref/comp/Em1-notes_x2.txt
+
+~/Dropbox/rsc/data/lists/ref/comp/emacs-dired.txt
+~/Dropbox/rsc/data/lists/ref/comp/emacsman1.index.txt
+~/Dropbox/rsc/data/lists/ref/comp/emacs-mastextend.check.txt
+~/Dropbox/rsc/data/lists/ref/comp/emacsrefcard-Long.txt
+~/Dropbox/rsc/data/lists/ref/comp/emacsrefcard-org.txt
+~/Dropbox/rsc/data/lists/ref/comp/emacsrefcard-shortessential.txt
+~/Dropbox/rsc/data/lists/ref/emacs-quicklistcondens.Mast-extendglick-thbot.txt
+~/Dropbox/rsc/data/lists/ref/comp/orgman-emacs.index.txt
+ ~/Dropbox/rsc/data/lists/ref/OrgmanNotes1-2021.txt
+}}}
+~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/em-mastext1.txt {{{
+
+  ---- p32
+    [ modeline ]  ,,  mini-buffer | echo area
+  ---- p35
+    cut           copy           paste
+    kill    save to kill-ring    yank
+  ---- p38
+    'faces'             # fonts
+    'font locking'
+    'font-lock faces'   # set syntax highlight + color theme
+  ---- p50
+    'key sequence'      # =seq. of keyb/muose actions
+    'prefix key'        # eg. c-x
+    'complete key'      # =one or more key-seq.s that invoce a command
+    'key map'           # eg. c-f, c-x 8  (=prefix w. set of sub-cmds)
+      'c-'               ='the c- modifier'   p111
+  ---- p54-p55, p53
+    interactive commands
+    extended command funcionality
+
+  ---- p58 ****
+    Check keys in c-x 8--map ; c-x 8 c-h  *******
+
+  ---- p66
+    open customize interface ; a-x customize
+                                    a-x customize-colors
+    a-x list-colors-display
+    a-x info-apropos Colors on a TTY
+     a-x customize-themes  p71
+  ---- p66
+    a-x customize subcommands
+        = customized, changed, face, group,  mode, saved,  themes
+
+  ---- p68
+    Evaluating Elisp Code ***!(!)
+        a-x eval-buffer
+        a-x eval-region
+          --
+        ca-x (eval-defun)  +(do) in every defvar/defcustom form
+        c-x c-e (eval-last-sexp)
+        c-j
+        sa-.
+        a-x ielm (**)  (+auto-complete ??)
+  ---- p70
+    Repos + Packages
+        (setq package-archives  [+addresses + eval-buffer]
+    a-x package-list-packages
+    a-x package-install
+     a-x package-refresh-contents
+    --  p164
+    Installing Helm **
+        (set elpa + melpa repos), a-x package-install helm Ent, (+restart/refresh) **
+
+
+  ---- p73  (the 'Help/Man/Info/Describe'-system)
+    Open Info ; c-h i
+      node navig.   ]  [
+                    l  r
+      to parent node   u
+                       space
+      cycle xref /
+        / links     tab
+      search by name   m
+         everyday use-tips for navig.   p74
+    Apropos for the info manuals (=will crawl all manual-pages)  p254
+                      a-x info-apropos
+  ---- p75, p80
+    c-h F       doc for cmd (=a function)
+     c-h m
+    c-h a -word$
+               regex-search for cmd (=not function) for words
+    Find Info. ab. Version Control **(*)
+                   c-h i + emacs(=hyp.link), c-s 'version control' / c-h a ^vc-
+     c-h v     variable
+    c-h k / c key  (***)
+     c-h d      search doc-string
+     c-h f vc-dir
+    --
+    c-h C Ent   coding system in curr. buffer  p89
+    c-h s
+
+
+  ---- p80  some basic commands
+    c-x b       switch buffer
+    c-x k
+    c-x o       (other buffer)
+    c-x c-b     list buffers
+     c-x c-c
+    c-x c-w     save as *
+    --
+   go to first non-blank
+     char. of line **       a-m   p113
+   a-g a-g 50            go to line 50
+   ---- p251  insert literal character
+   insert literal esc char.   c-q Esc
+   insert line feed (=not CR)   c-q c-j
+   ----
+   a-z c  (=zap to char. 'c')
+  ---- p206
+    character-info (ab. char. at point)   c-u c-x =
+   ----
+   move / recenter point (=to top / mid / bot) **   p177
+      a-r
+      c-l
+        ca-l
+  ---- p56
+    a-0  c-0  ca-0   c_-  a_-  ca_-
+    kill prev. word from point   a_- a_d
+    -- p183
+    kill to beg. of line   a-0 c-k
+     Kill S-Express.   ca-k
+    copy   a-w
+    Append-Kill(!!) (+use for
+      refactoring)   ca-w
+    Tip: Cut three words
+      to kill ring **(!)   a-d a-d a-d
+                # +can then be pasted
+                  as one chunk(!)
+  ---- p210
+    upcase word bef. point
+  ---- p189  transposing
+    char.      c-t
+    words      a-t
+    S-Expr.s *  ca-t
+    lines      c-x c-t
+     (+paragraphs / sentences)
+    [+Emacs ignores some punct.char.s when word-moving(!!)]
+
+  ---- p140  setting mark + switch/jump back
+    c-space
+    c-space c-space
+    c-x c-x
+     c-u c-space     = setting marks
+
+  ---- p146  mark units (eg. words, paragraphs)
+    a-h      next paragr.
+    c-x h    whole buffer
+    ca-h **  Next Defun (=function)
+    a-@ **   Next Word
+    ca-space   =NEXT S-EXPRESSION  (or ca-@)
+    --
+    Tip: Mark Three Words   a-@ a-@ a-@ // a-2 a-@
+
+  
+  ---- p93
+    completion of buffer-names (=when buffer-switching)
+        = ido/fido  (+Helm, Ivy  etc)     (+c-x o  (??))
+          a-x customize-option Ent ido-mode Ent
+          a-x customize-option Ent ido-enable-flex-matching Ent
+          a-x customize-group ido
+          a-x customize-group icomplete
+
+  ---- p100
+    saving + returning to past win.config
+        winner-mode  + c-c left/right
+
+  ---- p101
+    Set/Bind Keyboard Shortcut: a-o = c-x o ****
+        (global-set-key (kbd "M-o") 'other-window)
+
+  ---- p105(+), p108
+    tab bar mode
+     tab line mode
+    a-x customize-option tab-line-tabs-function
+
+
+  ---- p110
+    read manpage for readline ; a-x man Ent readline Ent
+
+
+  ---- p116
+    display line/column numbers *
+        a-x display-line-numbers-mode
+        (etc) (!!(**))
+          column-number-mode
+          line-number-mode
+
+  ---- p115+(?), p196
+    word/line wrapping in em. ; 'truncation' / 'fill column/paragraph'
+        a-x toggle-truncate-lines
+        --
+        a-q
+        c-x f 78
+    set fill-prefix *(*)
+        c-x .   #text up to point =fill prefix (next time using a-q)
+    a-x auto-fill-mode
+  ---- p198+
+    Comment/Uncomment (line)
+        a-;
+        c-x a-;
+        a-x comment-box    #=around region
+        --
+        a-j ca-j     #new line + comment
+            (+some customization-options)
+
+  ---- p123
+    ca-f / ca-b         balanced s-expr. back/forw
+     ca-k
+     ca-n / ca-p        next / prev. balanced s-expr.
+    ca-d / ca-u
+    ca-u              # to string's opening quote
+    a-}
+    ca-a / ca-e       # to beg/end of function
+
+
+  ---- p213
+    Count Things
+        a-x count-matches
+        a-x count-words
+        a-x count-words-region  /  a-=
+    Del. Duplic. Lines
+        a-x delete-duplicate-lines  (+versions with c-u)
+    flush/keep
+        a-x flush-lines
+        a-x keep-lines
+  ---- p216
+    + blank lines | white-space
+        c-o    insert blank line after point  (or split line)
+        c-x c-o   del. all blank lines after point
+        ca-o   split line after point + keep indentation **(*)
+        join point-line w. line above   a-^
+      Splitting / Joining with Fill Prefixes   ca-o (with fill prefix active)
+        del. all but one space/tab
+          left/right of point   a-space
+        (+a-x whitespace-mode  , whitespace-report  etc)
+  ----
+  ---- sorting (!!)  p239
+
+
+  ---- p136  (for files, dired-dirs, man-pages, org-mode,
+                            DocView(=pdf), info man-pages
+              [=saved in file in ~/.emacs.d/]
+    Bookmarks: Set / List / Jump to *****
+        c-x r m
+        c-x r l
+        c-x r b
+
+  ---- p138  registers
+    store point in register + jump back
+        c-x r space,  c-x r j
+          c-x r s,  c-x r i  #region to reg. + insert content at point
+
+
+  ---- p149  Isearch (=incremental search)  c-s / c-r
+    Recall Last Search     c-s c-s
+     Case Folding       a-x customize-option case-fold-search Ent
+     a-n / a-p
+    TAB-COMPLETE STRING AGAINST
+      PREV. ISEARCH-STRING   ca-i  (eg. 'complete-symbol')
+    isearch word at point   c-w  #=add word at point to search-string
+                            #+times several
+                             (etc)
+     a-s c    search case sensit.
+     a-s r    regex-mode search
+      + word-mode
+        symbol-mode
+        lax whitesp.matching   a-s space
+        char.folding (**)
+    isearch forw. for symbol at point (*)    a-s .
+
+
+  ---- p158  Print/Edit lines (in buf.) matching regex (****(*))
+    a-s o      occur mode   # a-x occur
+    activate occur on curr.
+        search-string (=inside isearch)    a-s o  (**(*))
+    (+set context-lines)
+    Jump to Match    Ent
+    go to next / prev. match    a-n / a-p
+    Revert occur.buffer / Refresh search-results     g
+    Switch occur.buff. to Edit Mode **(*)   e
+    --
+    To next/prev. occur-match / error
+      after a-x compile **(*)    a-g a-n // a-g a-p
+    search sever. buf.s with multi-occur (eg. '\.py$' in all py-buffers) **
+        a-x multi-occur-in-matching-buffers    p161
+        a-x multi-occur
+    Tip Using multi-occur (**)   e (for across multip. buf.s)
+                                   + combine w. keyb.macros / search/replace
+                                   + c-c c-c  (=commit)
+
+  ---- p162
+    search functions, class def.s etc (=when programming)
+        Imenu    a-x imenu
+    (+Tip: bind to a-i  (global-set-key (kbd "M-i") 'imenu) )
+    --  Tip: Use Helm for Completion **
+            =uses powerful 'filter-when-typing' + uses pow.ful fuzzy-searching **
+
+  ---- p165  Helm
+    Helm-Completions Prefix **    c-x c ....
+      c-h a ^Helm-              c-x c c-h
+    MOST IMPORTANT HELM-COMMANDS  p167
+      primary action     Ent  #=jump to open +display candidate
+      second.action     c-e
+      tert.action       c-j
+      switch to action-selector(?)   tab
+      next/prev. candidate    c-n / c-p
+        to end/beg. complet.list   a-< / sa-<
+     --
+      Resume last Helm command    c-x c b   p168
+      c-x c /
+      Complete 'a-x apropos'-results
+           c-x c a
+        (+MANY (MANY) MORE (**) ....)
+
+  ---- p170  Helm Search vs Ido Search
+    Helm
+        in-depth search wh. not knowing what to look for
+        + if requires addit. context-awareness of similar matches
+    Ido
+        seamless finding of files/dirs through the mini-buffer
+       eg. for finding widgets.c     c-x b wc
+
+  ---- p170  Ido/Fido 2(!!)
+    set ido mode (=in init)
+        (ido-mode 1)
+        (setq ido-everywhere t)
+        (setq ido-enable-flex-matching t)
+    Ido shortcuts (etc)
+        c-s / c-r
+      tab
+      Ent
+      c-d        open a-x dired-buf in curr. buf
+       //  go to root dir
+       ~/  go to home dir
+
+  ---- p173  using grep (from inside emacs)
+    a-x grep  /  a-x grep-find
+    lgrep  /  rgrep  /  rzgrep    #+highlighting
+    Recursive grep-search for
+      Symbol point is on ***    a-x rgrep Ent Ent
+    (find + don't search cert. directories)
+    jump to next/prev. match
+      in emacs grep **    a-g a-n / a-g a-p
+            (+using grep-mode (=major mode))
+
+  
+  ---- p201   Regex Search & Replace (**!)
+    ca-%
+      (+ space  .  !     ^  u U )
+    ca-% hello  (+Case Folding (**))  p202
+    give string for search & replace    a-%
+
+
+  ---- KEYBOARD MACROS ******* p221
+    record / stop recording    c-x (  /  c-x )
+                               f3
+    play last macro    c-x e
+                       f4
+    stop rec. macro    c-g
+    stop rec. macro + play it   f4
+    --
+    Append-Record Macro (=to last)   c-u f3
+    Play sec. to Last Macro   c-u f4
+      set counter + rec. macro  c-3 f3
+    play last macro 5 times   c-5 f4
+    --
+    Run Macro Until Done / Fails on Error   c-0 f4
+     group of advanced cmds for macros **   the c-x c-k map
+                                       (the map is called 'kmacro')
+            *****  p223,p224
+       (Query for user input--actions)
+    cycle macro ring
+    name last macro
+    bind last macro to a key
+    Edit Last Macro    c-x c-k e   p226
+
+    Edit Lossage (=last 300 key-strokes)   c-x c-k l   p226
+    INSERT MACRO (INTO BUFFER) AS ELISP   a-x insert-kbd-macro
+    Save Macro to a File (=the init-file)
+      - name macro
+      - open init
+      - insert macro as lisp
+   create macro (+see what each entry in
+    the macro string corresponds to (as a command))  a-x kmacro-edit-lossage
+  TIP: EXTRACT MACRO FROM LAST 300 ACTIONS
+    - print the lossage buffer (c-x c-k l)
+    - edit (as though it were text)
+    - commit the changes  c-c c-c
+
+  ---- Abbrev. Expansion  (=Hippie Expand (+snip, hip, abbrev))
+    c-x a:
+      .
+    a-\  ca-\
+
+  ---- electric-indent-mode / 'interactive indentation mode'
+
+  ---- Aligning  p242
+
+  ---- aspell / ispell
+  ---- Flycheck (+syntax check(!))
+
+  ---- Xref (!)  p264
+    a-.   find def. at point
+    a-,   'pop marker and return'
+      +Dumb Jump / RipGrep
+    xref + dired: search/search+replace xrefs via dired **   A / Q
+      .
+    (highlight + updating)
+
+  ---- Filter with Terminal (!!)
+    a-!
+    a-&    # filter asynchronously
+            ((+may not be good for long-running processes
+              =use a-x compile instead))
+    --
+    a-|    # filter + reinsert region(!!)
+
+  ---- Compile / Recompile (**)  p294
+    a-x compile
+    a-x recompile
+      a-g a-n / a-g a-p
+    re-run last command  g  ***
+    compile in the current project   c-x p c
+
+  ---- emacs shells (=x3)  p295
+
+  ---- VERSION CONTROL (**(!))  p253
+    - c-h i
+    - go to 'emacs' hyperlink
+    - c-s (=search) + 'version' / 'version control'  (+c-s for next)
+      --
+    - find 'vc-' via docstring  //  c-h a ^vc- (=list all instances)
+    -- -- p257
+      c-x v +    vc-update
+      c-x v =    vc-diff
+      c-x v D    vc-root-diff
+      c-x v G    vc-ignore
+      c-x v I    vc-log-incoming
+      c-x v L    vc-print-root-log
+      c-x v O    vc-log-outgoing
+      c-x v a    vc-update-change-log
+      c-x v b    vc-switch-backend
+  ---- Magit  p304 , p261,p262
+  ---- Project Management (projectile, +newer Cedet(em 27+) (=based fr. version control)
+  ---- DokView
+  ---- nov  (=epub reader emacs)
+    https://depp.brause.cc/nov.el/
+  ---- presentation (mode)
+    https://www.emacswiki.org/emacs/EmacsPresentation
+      https://www.youtube.com/watch?v=vz9aLmxYJB0
+        https://www.youtube.com/watch?v=1-dUkyn_fZA
+  ---- Eww  p280
+    a-x eww
+    create new eww-buffer (if does not alr. exist)  c-u a-x eww
+    a-x browse-url
+    --
+    +Browsing Keys (****(!))  p281
+  ---- Dired (+ cross dir(ectories))  p282
+    a-x dired
+    c-d (=from ido wh. browsing when browsing w. c-x c-f etc)
+      customize dired-listing-switches
+    up one dir   ^
+    n/p  c-n / c-p
+    mark/unmark active  m/u
+    unmark ev.thing   U
+     flag for deletion   d
+    [sign by marked files  '*']
+      Exploring more   explore like before // M.Petersons 'Discover' package
+    -- dired operations (=on marked or active objects)
+      copy         C
+      move/rename  R
+      chown        O
+      chgrp        G
+      chmod(=perm.s)  M
+      delete marked   D
+      delete flagged  x
+      visit files (=requires dired-x)  F | c-u F (p289)
+      compress marked to a (zip) file        c
+    -- more dired commands (=not marked files)
+      refresh dired buffer  g
+      create sub-dir        +
+      toggle sorting by name/date   s
+      jump to prev/next dir         < // >
+      jump to file                j
+      --
+         #'g is the universal refresh key'
+    -- search/replace in dired-files
+      begin isearch       a-s a c-s
+      xref search|replace regex(!!)        A||Q
+      synchr./asynchr. shell command ***   !/&
+    -- 'working across directories / collapse subdir.s'
+      i  $
+        +tip: find_wrapper-commands (replacing find + xargs)  p291-
+         + find-lisp-find-dired
+  ---- Tramp  p278(??)
+    bookmark remote files   c-x r m
+
+
+
+  ---- Hydra
+
+}}}
+Emacs (quicklists super-condensed**** 2021-03  (Mastering, +extending(='glickstein',)  ('+thoughtbot-elisp'(???)) ) {{{
+
+            ~/legacy/gdrive-cleanlast-2021/transcribe_phonenotes_Emacs-Fmoviebox-AlltodoscriptNamingscheme/emacs1/curr/
+
+    ~/gdrive/Doks/Emacs1.pdf
+
+Marked (=Blue) Headers/Topics (***(!!)) -- -- -- -- -- {{{
+
+  c-u 0  a-0  c-0  ca-0  (+neg.)
+  CUSTOMIZE   +apply.save
+  Eval. Elisp **  (+ielm (!!))
+  Repos: =elpa, melpa  **
+  more help|docs (**)  ++(=later)
+  * Open File, Save, Buf.s (+switch), close
+  * Save As, Save All, c-x b, c-x c-b
+  CUSTOMIZE KEYS !!! (=bind)
+  a-x python-mode
+  (restructured text-mode (!!))
+  sexpr         ca-f / b    ca-d / u   ca-k (??)
+  c-u c-space  ;  jump back to mark  (+more =moves back in mark-ring)
+  Bookmark tips (*) + !
+  (registers (=point, numbers, text)
+  [DIFFERENT RINGS]
+  sexpr         ca-space
+  Isearch     c-s / c-r
+  Occur (=print/edit lines matching regex) **
+  (e **!  + c-c c-c  =commit)
+  multi buf.s + multi-occur(?)(=for multi-buf)
+  Helm **
+  imenu  (+search functions, class-def.s etc when programming(??)  + a-i (=bind))
+  Helm <--> Ido:
+  grep (**)  find w. em.grep  ='neg. dir-matches' ('*' (=??))
+  a-r (goal column(?))  c-l  ca-l
+  55 a-g a-g  (=line(!))
+  =for refactoring etc (=picking fr. diff. places etc) (**!)
+  a-d, a-d osv  **!  [+cases for building vs killing]
+  Transpose
+  line wrap = 'fill'
+  comment     a-;
+  S & Repl.
+  Regex:  \|  \( |)  etc
+  Upcase etc
+  Count Matches
+  Delete duplic. lines (+only adjac.)  etc
+  Remove / Keep Flush
+  ----
+  insert blank line ; c-o
+  c-x c-o
+  ca-o
+  a-^
+  Split/Join (+Fill Prefixes)(*)
+  m-space   Cycle-spacing  (wh.sp. mode  wh.sp.report)
+  Macros (+why are macros so good) **
+  Abbreviations:
+  indent
+  Sort
+  zapping   a-z
+  aspell, ispell
+  flyspell mode (*)
+  Version Control ; c-x v (+c-h)
+  (Projectile +) Cedet  *!
+  Xref   a-.
+  tip: list lines matching patt = can be narrowed further w. occur *
+  Highlighting
+  Bookmarking remote Files ***
+  Dired **(!)
+  (Em.s find-wrapper cmd.s
+  Call shell cmd     a-!
+  a-x compile
+  Magit **    p304
+  LSP mode / EGlot
+
+}}}
+
+extended topics-list (=including Blue Headers) -- -- --
+
+      evince -p 1 ~/gdrive/Doks/Emacs1.pdf &
+
+    dumb jump
+    rip
+    svg, xpm etc (??=im)
+    [perh. modeline etc]
+    init.el (xdg)  [a-x + customize]
+    'the extended cmd-functionality' (+interactive)
+      region
+      'font-locking', 'faces',   'font-lock faces'
+      -q
+        ((client-server))
+      'key-sequence', 'complete key', 'prefix key'
+      'key-maps'
+    -----
+    c-x #       f10 (??)
+      'the c-modifyer'
+      'truncation' (+filling / wrapping(??))
+    ----
+    a_- a-d  ;  upcase last word
+  c-u 0  a-0  c-0  ca-0  (+neg.)
+    ----
+     (eg. c-x 8) c-h  ****
+    info-apropos
+    INFO NAVIG.-CMD.S * ( ']' etc)
+    (INFO AB. VERSION CONTROL)
+    [ a-x apropos Ent. hook
+    Hippie Expand
+  CUSTOMIZE   +apply.save
+    [groups = packages]
+    +"sub-commands"(*!)
+    a-x customize-themes
+    customize-option Ent global-....
+    customize-group Ent display-line-numbers
+      [[set Ido mode]]
+      set FIDO (etc) via Customize
+        FIDO, Helm, ivy, Selectrum, icicles,
+          Icomplete
+    +extra compl. options
+  Eval. Elisp **  (+ielm (!!))
+    (=  ca-x  c-x c-e  etc)
+    a-:  c-u c-x c-e // c-j     #glickstein
+    + Esc-Tab  (=completion ??)
+            lisp interact. mode
+  Repos: =elpa, melpa  **
+    packages  = : list, install, (refresh)
+     [install Helm]
+    ----
+    (eg. c-x 8) c-h  ****
+  more help|docs (**)  ++(=later)
+    c-h F
+    c-h a  word-regex ^helm-
+            (=package name as prefix)
+    manual info  Describe
+    [c-h b   =list key-bindings
+         m
+         f
+         v
+          d  (=apropos-search in docstrings)
+                ( +'*'  =  [  )
+     c-h k / c
+    +Check maj.modes menus (*)
+     c-h i m Emacs (++)
+     c-u a-x apropos  (??  =glickst.)
+     c-h s  =syntax table (for maj.mode etc)
+
+    local / regional / global  movements
+  * Open File, Save, Buf.s (+switch), close
+            ('progr.loader directives')
+          file local var.s
+  * Save As, Save All, c-x b, c-x c-b
+    'transient buffers'
+
+      evince -p 2 ~/gdrive/Doks/Emacs1.pdf &
+
+  CUSTOMIZE KEYS !!! (=bind)
+    (MAPPING KEYS--SYNTAX) +Glickst. **
+     +Glickstein **
+    Check key for binding  -describe key  (**)
+
+    WinCmds     tab-bar
+    - tab-line
+    - Only cycling w. same maj.mode **(!!)
+
+    read manpage
+    ----
+    "10 c-n"
+    a-m ......
+      (line num.)
+          ----
+    a-f / a-b  (+concerning m.(inor?/ajor) modes)
+  a-x python-mode
+    subword-mode // superword-mode
+            (glasses-mode)
+  (restructured text-mode (!!))
+    a-x text-mode
+    ----
+    ----
+        (objects + movement)
+  sexpr         ca-f / b    ca-d / u   ca-k (??)
+    defun
+    strings         ca-n / p
+    sentence    a-a / e
+    funct.      ca-a / e
+    (page)
+    paragraph
+    buf
+    word
+  c-u c-space  ;  jump back to mark  (+more =moves back in mark-ring)
+    jump betw. two marks  ;  c-x c-x
+
+  Bookmark tips (*) + !
+    + the bookmark file
+    (bookmark-default-file)  + custom handlers
+      =files, dirs, manual (**)
+    c-x r m   (=set(??) bookmark)
+          r
+          b
+
+  (registers (=point, numbers, text)
+        c-x r
+    c-x r space  c-x r j
+
+  [DIFFERENT RINGS]
+    (=mark ring, global mark ring, (etc))
+  
+    (objects: set mark for | mark)
+  sexpr         ca-space
+    defun       (or  a-@)
+    strings
+    sentence
+    funct.
+    (page)      c-x c-p
+    paragraph   a-h
+    buf         c-x h
+    word        a-@
+    --
+    a-@, a-@ osv *** / (a-2 a-@)
+
+
+      evince -p 3 ~/gdrive/Doks/Emacs1.pdf &
+
+
+  Isearch     c-s / c-r
+    " regex     ca-s / ca-r
+    recall last search  ;  c-s c-s
+      change direction
+      start fr. beg. (again)
+      Case insens. + Case Folding
+    tab-complete against prev. search  ;  ca-i **(!!)
+    a-n / a-p
+    c-w *  ca-y  c-s c-e  *
+      c-y
+    add sever. words  ;  c-w, c-w, ....  (**)
+    modes: a-s   c r w - space ' .
+  Occur (=print/edit lines matching regex) **
+    [a-x occur // a-s o  (+inside isearch) ]
+      lmb / ent
+      a-n / p
+      < / >
+        g [=refresh buffer *]
+    next/prev. match in occur / after a-x compile  ;  a-g  a-n / a-p
+    context-lines
+        -- --
+  (e **!  + c-c c-c  =commit)
+  multi buf.s + multi-occur(?)(=for multi-buf)
+    *** keyb. macros // search & replace
+  Helm **
+    find Helm-cmds w. apropos ; c-h a ^helm-
+    c-x c  + c-h
+     Helm <--> imenu ; fuzzy + filter directly <--> tab-style completion (!)
+  imenu  (+search functions, class-def.s etc when programming(??)  + a-i (=bind))
+    helm-apropos (**)
+    MOST IMPORTANT HELM COMMANDS
+    Ent  c-e  c-j  **   tab (etc)
+    c-x c b (resume last)
+    Complete a-x apropos w. Helm ; c-x c a  c-x c m
+     c-x c i
+           r
+     c-x c h r          a-x info
+             a-x
+             a-s o      Occur (*(*))
+             c-c g      google suggest
+  Helm <--> Ido:
+     - indepth (+more context)  - not knowing exactly wh. looking for  <-->  - seamless finding of files|dirs through minibuffer (eg. c-x b wc (=for 'widgets.c')
+    (Set Ido mode)
+
+
+      evince -p 4 ~/gdrive/Doks/Emacs1.pdf &
+
+
+    +=Ido:  c-s/r  tab  c-d *   '//' '~/'  (+extra info)
+
+  grep (**)  find w. em.grep  ='neg. dir-matches' ('*' (=??))
+    a-g  a-n / a-p
+    grep-mode (**)
+
+  a-r (goal column(?))  c-l  ca-l
+  55 a-g a-g  (=line(!))
+    ((a-g tab))
+    a-g c
+
+
+     a-d  (c-bs)
+     a-0 c-k
+      a-k
+      ca-k
+     cs-bs  #kill current line
+    --
+    c-w   kill active region
+    a-w
+    ca-w
+  =for refactoring etc (=picking fr. diff. places etc) (**!)
+    a-y
+    --
+  a-d, a-d osv  **!  [+cases for building vs killing]
+    ----
+  Transpose
+    char
+    word        a-t
+      + p192(??) =For Source Code (!!)
+    sexpr       ca-t
+    lines       c-x c-t
+    paragr.
+    sentence
+  line wrap = 'fill'
+    a-q
+      c-x f
+    c-u a-q
+     c-x .   #fill-prefix *
+    empty line + c-x ..
+    autofill-mode
+    ----
+  comment     a-;
+    c-x a-;
+    comment-box
+    a-j ca-j
+     +Options (=customize)
+    ----
+  S & Repl.
+    ca-%    #+can be run fr. w.in isearch
+    +space (??)
+     .
+     ,
+     Ent
+     !          replace all
+     ^          back to prev. match
+     u / U      undo last / all(!) replaces
+    Replace 'Hello' 'HEllo' 'hello'  etc
+     (=uses case folding *) !!
+  Regex:  \|  \( |)  etc
+    [0-9]  #no \d or [:digit:]
+     \<
+    \_<  beg. of Symbol (**)
+    \scode \Scode  (??)
+
+
+
+      evince -p 5 ~/gdrive/Doks/Emacs1.pdf &
+
+
+
+    regex SYNTAX CLASSES **!
+    wh.sp.
+    word constituents
+    symbol constituents
+    punct. char.s
+    brackets
+    string char.s
+    comments
+    ----
+    show char. info (=blue highl.)  c-u c-x =
+    \#1
+    \#  increm. num.
+    \?  prompt user
+    \&
+     \,(form ...)   eg. (upcase)  (**!)
+    tip: Use keyb.macros most of the time (**)
+    ----
+    \`  \´      glickstein
+    \=
+    \b
+    ----
+  Upcase etc
+    c-x c-u
+    a-u
+    UPCASE LAST WORD *
+    ---
+      Unicode  a-x describe  categories (??)
+    ----
+  Count Matches
+  Delete duplic. lines (+only adjac.)  etc
+  Remove / Keep Flush
+  ----
+  insert blank line ; c-o
+  c-x c-o
+  ca-o
+  a-^
+  Split/Join (+Fill Prefixes)(*)
+  m-space   Cycle-spacing  (wh.sp. mode  wh.sp.report)
+
+
+  Macros (+why are macros so good) **
+    c-x (    f3 | f4
+        +num.
+    Append to last
+        play sec. to last
+    play 3 times
+    Run until fails
+     c-x c-k (=map)(!!)
+    Counters
+     Query for user input
+    Recursive Editing
+     ----
+    Cycle  Name  Bind
+      Edit last Macro ** ; c-x c-k e
+    Edit Last 300 Keystrokes (='lossage')
+    [INSERT MACROS AS ELISP **!!]
+    Save Macro to init-file **!!
+    [- Create macro (from lossage?) +
+     Inspect the String's Corresp. Commands (!!)
+
+    EXTRACT MACRO FR. LAST 300 ACTIONS (=if forgot to record) *
+
+
+
+      evince -p 6 ~/gdrive/Doks/Emacs1.pdf &
+
+
+
+  Abbreviations:
+    Hippie(!!) expand   a-/     , skeletons, 
+    YASnippet, Autoinsert
+     --
+    electric-indent-mode
+    ---
+  indent
+    indent-tabs-mode
+     tab (etc)
+    num + indent
+    c-x tab  =interactive indent-mode
+    ---
+  Sort
+    sort-regexp-fields
+    ----
+    Aligning etc (=based on regex) 'sections'
+    tip: Align py on '='
+      (=em.s autom. alignm. tools)
+    Regex Align Complex Mode (**)
+    ----
+  zapping   a-z
+    ----
+  aspell, ispell
+    a-$   word at point
+  flyspell mode (*)
+        +for linting (*!(!))
+     for Latex etc (=customize)
+     +custom dict.s
+    --
+    c-q tab  =literal tab
+    c-q c-j
+  Version Control ; c-x v (+c-h)
+    vc-update (etc)
+      c-h f vc-dir (??)
+  (Projectile +) Cedet  *!
+    c-x p
+  Xref   a-.
+    pop marker   a-,
+    classic tags files (=for larger proj.s)
+    dumb-jump
+    regex  a-? / ca-.   + searchres. cmds *
+    [jump to def. for symb. under point
+                dumb-jump + ripgrep (??)
+    Xref + Dired  + S&R
+      =A / Q
+    --
+    a-s o  (+flush/keep)
+    ----
+  tip: list lines matching patt = can be narrowed further w. occur *
+  Highlighting
+    ((autorevert-mode))
+
+
+
+      evince -p 7 ~/gdrive/Doks/Emacs1.pdf &
+
+
+
+    image-dired * **
+    image-mode
+    ----
+    DocView  (+pdf-tools | org-pdftools) *   +options
+      =pdf, Msoffice etc
+      Reading List  - links format
+      org-store link
+      - store clip link
+      annot.s (**)
+      - search
+      --
+    Epub nov
+    ----
+    Presentation-mode
+    ----
+    tramp  (+autoparses ssh)
+      ((invoke fr. root))
+      helm-tramp
+      rgrep
+      multi-hops
+    +sudo multihop
+    ----
+  Bookmarking remote Files ***
+    ----
+    Browser   EWW
+      a-x eww
+      a-x browse-url
+      Browsing Keys   = b.m
+        hist
+        copy link
+    ----
+  Dired **(!)
+    ^           m / u  U d
+    ('*')       M.Petersons 'Discover-Package'
+      +Extras(!)
+    C   M
+    R   D
+    O   x(!!)
+    G       visit
+    (+more for not(!) marked)
+    +(require 'dired-x)
+    ----
+    S&R in Dired-Files **
+    ----
+    collapse subdirs etc
+    ----
+  (Em.s find-wrapper cmd.s
+    =replace find + xargs  (find-lisp-find-dired)
+    ----
+  Call shell cmd     a-!
+    -- " --  +insert outp.    c-u a-!
+     --
+    -- " --  asynchr. + print    a-&    #or a-x compile
+    -- " " " --    + insert    c-u a-&
+
+    Pipe Region to Shell cmd *    a-|
+    -- " --  +replace region    c-u a-|
+    -----
+  a-x compile
+    // recompile
+    - rerun last cmd
+    - compile in the curr. proj. (**)
+
+
+
+      evince -p 8 ~/gdrive/Doks/Emacs1.pdf &
+
+
+
+    shell
+    eshell
+    ansi-term
+     proced  + readline  (etc.)
+    ----
+  Magit **    p304
+    ----
+    multi cursors  (**)
+  LSP mode / EGlot
+    ----
+    Build popup UI:s ; Hydra
+    ----
+    - +links to some blogs and resources
+    ======
+        Glickstein
+    Define (+bind?) 'other-window-backward'
+
+    parametrizing interactive (p, b,    optional
+    ----
+    nil (/t)   #+more
+    if
+    (some prop(ertie?)s of nil)
+
+    CONDENSING CODE
+    or
+    common use of if
+    and
+     when
+
+    defalias
+     hook * (=like aucmds(?))
+    predicates
+    progn
+     lambda f.s
+    local vars = let
+    yes-or-nop
+     format
+     Advice code =code attached to a lisp function
+    
+     (+macros)
+    null <--> not (=one is an alias)
+    defvar ((=shared var.s))
+     eq
+    "read inwards"
+    Symbols (+put/get)
+    (set-marker)
+     while
+
+    --
+    "return last expr."    &rest
+    defgroup
+    dufcustom
+    cons|setq
+    load-file
+    load-library
+    autoload
+    require
+    provide
+    inferring
+
+    --
+    a-x byte-compile
+    eval after load
+    eval
+     ---
+     lists
+    cons
+    reverse
+    +Useful Functions
+    setcar|setcdr
+    "CAN BUILD ANY(!!) STRUCTS W. LISTS!"
+
+
+}}}
+
+Doks/Resources/searches {{{
+http://xahlee.info/emacs/emacs/modernization.html
+
+  https://www.youtube.com/watch?v=_14E7pDJJ_w  #my emacs workflow (as a software engineer and student)
+Javascript: js-mode   https://www.emacswiki.org/emacs/JavaScriptMode
+
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/
+~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/Elisp-IntroTo.txt
+  https://www.emacswiki.org/emacs/EmacsCommonLisp
+
+  https://www.codementor.io/emacs-experts
+https://www.markus-gattol.name/ws/emacs_notes_cheat_sheets.html#sec8
+
+Good emacs init file structure
+    https://emacs.stackexchange.com/questions/2520/organize-the-content-of-emacs-d-init-el-and-emacs-d  __ __ __ EMACS INIT.EL ORGANIZE *******
+    https://www.emacswiki.org/emacs/DotEmacsStructuring
+
+    https://jack-kelly.com/setting_up_emacs_for_python_development __ __ __  PYTHON EMACS
+
+.. emacs pdf refcards {{{
+    ~/Empire/Doks/Comp/emacs/emacs-refcard_long--HIGHLIGHTS_2021.pdf
+    ~/Empire/Doks/Comp/emacs/emacs-refcard_long.pdf
+    ----
+     ~/Empire/Doks/Comp/emacs/emacsrefcard26_survival.pdf
+    ~/Empire/Doks/Comp/emacs/emacsrefcard02.pdf  #very short (2p)
+            ~/Empire/Doks/Comp/emacs/emacsrefcard01.pdf
+            ~/Empire/Doks/Comp/emacs/emacsrefcard04.pdf
+    ~/Empire/Doks/Comp/emacs/emacsrefcard03.pdf  #6p
+    --
+    ~/Empire/Doks/Comp/emacs/emacsrefcard26_dired.pdf
+            ~/Empire/Doks/Comp/emacs/emacsrefcard26_calc.pdf
+     ~/Empire/Doks/Comp/emacs/emacsrefcard26_org.pdf
+    ~/Empire/Doks/Comp/emacs/emacsrefcard_org01.pdf
+ }}}
+
+emacs lsp {{{
+    emacs lsp-mode
+    https://emacs-lsp.github.io/lsp-mode/
+
+    https://emacs-lsp.github.io/lsp-mode/tutorials/CPP-guide/
+    emacs lsp tutorial
+}}}
+
+    systemcrafters (=videos) {{{
+
+    Now playing
+    System Crafters Live! - I'm Switching to FreeBSD
+    2.9K viewsStreamed 1 day ago
+    37:33
+
+    Now playing
+    System Crafters Live! - Writing Tools with Transient in Emacs (Part 4)
+    1.5K viewsStreamed 2 weeks ago
+    44:20
+
+    Now playing
+    System Crafters Live! - Writing Tools with Transient in Emacs (Part 3)
+    1.4K viewsStreamed 2 weeks ago
+    15:06
+
+    Now playing
+    System Crafters Live! - Writing Tools with Transient in Emacs (Part 2)
+    1K viewsStreamed 2 weeks ago
+    10:52
+
+    Now playing
+    System Crafters Live! - Writing Tools with Transient in Emacs
+    1.5K viewsStreamed 2 weeks ago
+    1:48:58
+
+    Now playing
+    System Crafters Live! - Reviewing Rational Emacs PRs
+    1.6K viewsStreamed 3 weeks ago
+    1:47:52
+
+    Now playing
+    System Crafters Live! - Trying New Emacs Packages by Minad
+    3.6K viewsStreamed 1 month ago
+    15:41
+
+    Now playing
+    The 6 Emacs Settings Every User Should Consider
+    10K views1 month ago
+    1:57:16
+
+    Now playing
+    System Crafters Live! - Live Crafting: Rational Emacs
+    2.8K viewsStreamed 1 month ago
+    1:54:29
+
+    Now playing
+    System Crafters Live! - Rational Emacs: A New Base Configuration
+    5.8K viewsStreamed 1 month ago
+    1:54:52
+
+    Now playing
+    System Crafters Live! - Configuring Emacs With Only the UI?
+    2.9K viewsStreamed 1 month ago
+    24:12
+
+    Now playing
+    The Basics of Emacs Configuration
+    12K views2 months ago
+    1:58:13
+
+    Now playing
+    System Crafters Live! - Planning the New Emacs From Scratch
+    4.3K viewsStreamed 2 months ago
+    1:07:27
+
+    Now playing
+    System Crafters Live! - Building the World's WORST Emacs Configuration (Part 2)
+    1.6K viewsStreamed 2 months ago
+    48:02
+
+    Now playing
+    System Crafters Live! - Building the World's WORST Emacs Configuration
+    2K viewsStreamed 2 months ago
+    1:50:59
+
+    Now playing
+    System Crafters Live! - Why Geeks Don't Use Guix
+    4.6K viewsStreamed 2 months ago
+    34:33
+
+    Now playing
+    5 Reasons to Try Guix in 2022
+    53K views2 months ago
+    2:02:43
+
+    Now playing
+    System Crafters Live - The Best of 2021!
+    2.2K viewsStreamed 3 months ago
+    2:07:39
+
+    Now playing
+    System Crafters Live! - The Hidden Value of Emacs' Tab Bar
+    4K viewsStreamed 3 months ago
+    55:03
+
+    Now playing
+    System Crafters Live! - Community Chat and Config Hacking (Part 2)
+    1.1K viewsStreamed 3 months ago
+    55:43
+
+    Now playing
+    System Crafters Live! - Community Chat and Config Hacking
+    1.2K viewsStreamed 3 months ago
+    2:02:24
+
+    Now playing
+    System Crafters Live! - Can StumpWM Replace EXWM?
+    4.5K viewsStreamed 3 months ago
+    1:59:11
+
+    Now playing
+    System Crafters Live - I'm Rewriting My Configuration... Again
+    4.3K viewsStreamed 4 months ago
+    1:55:46
+
+    Now playing
+    System Crafters Live! - Tools for Building a Lisp-Focused System
+    4.6K viewsStreamed 4 months ago
+    1:57:30
+
+    Now playing
+    System Crafters Live! - Editor Popularity: Does It Matter?
+    2.5K viewsStreamed 4 months ago
+    1:55:02
+
+    Now playing
+    System Crafters Live! - Catching Up With Emacs
+    4.2K viewsStreamed 4 months ago
+    1:56:43
+
+    Now playing
+    System Crafters Live! - The Many Uses of Embark
+    5.4K viewsStreamed 5 months ago
+    31:40
+
+    Now playing
+    Automated Org Mode Website Publishing with GitHub or SourceHut
+    4.2K views5 months ago
+    1:52:25
+
+    Now playing
+    System Crafters Live! - Comparing Project.el to Projectile
+    3K viewsStreamed 5 months ago
+    1:58:56
+
+    Now playing
+    Sharing Your Configuration with Guix Home - Hack Sessions
+    1.6K viewsStreamed 5 months ago
+    1:56:14
+
+    Now playing
+    System Crafters Live! - A First Look at Guix Home
+    4K viewsStreamed 6 months ago
+    43:29
+
+    Now playing
+    "Inverse Literate" Emacs Configurations (Part 2) - Hack Sessions
+    952 viewsStreamed 6 months ago
+    1:09:55
+
+    Now playing
+    "Inverse Literate" Emacs Configurations - Hack Sessions
+    2.5K viewsStreamed 6 months ago
+    30:40
+
+    Now playing
+    Build Your Website with Org Mode
+    10K views6 months ago
+    2:08:23
+
+    Now playing
+    System Crafters Live! - Investigating use-package Alternatives
+    2.2K viewsStreamed 6 months ago
+    16:34
+
+    Now playing
+    Give Your Dotfiles a Home with GNU Stow
+    8.3K views6 months ago
+    1:07:42
+
+    Now playing
+    System Crafters Live! - The Many Varieties of Emacs (Part 2)
+    1.5K viewsStreamed 6 months ago
+    48:27
+
+    Now playing
+    System Crafters Live! - The Many Varieties of Emacs
+    2.5K viewsStreamed 6 months ago
+    1:53:47
+
+    Now playing
+    Improving EXWM #3 // Hack Sessions
+    1.5K viewsStreamed 6 months ago
+    29:45
+
+    Now playing
+    5 Org Roam Hacks for Better Productivity in Emacs
+    13K views6 months ago
+    2:08:13
+
+    Now playing
+    System Crafters Live! - Integrating Nushell with Emacs
+    3.2K viewsStreamed 6 months ago
+    2:00:56
+
+    Now playing
+    System Crafters Live! - Emacs Package Potluck: The Sequel
+    1.9K viewsStreamed 6 months ago
+    2:01:07
+
+    Now playing
+    Improving EXWM #2 // Hack Sessions
+    1.6K viewsStreamed 6 months ago
+    25:45
+
+    Now playing
+    Fix Your Git Commits Like a Rebase Expert with Magit
+    4.9K views6 months ago
+    1:57:52
+
+    Now playing
+    System Crafters Live! - Exploring the Org Roam DB API
+    2.8K viewsStreamed 6 months ago
+    2:00:26
+
+    Now playing
+    Improving EXWM #1 // Hack Sessions
+    2.9K viewsStreamed 7 months ago
+    2:04:54
+
+    Now playing
+    System Crafters Live! - We Need to Talk About EXWM
+    3.6K viewsStreamed 7 months ago
+    16:50
+
+    Now playing
+    Org Roam: The Best Way to Keep a Journal in Emacs
+    18K views7 months ago
+    2:09:11
+
+    Now playing
+    System Crafters Live! - Can We Fix a Bug in Emacs?
+    2.1K viewsStreamed 7 months ago
+    2:02:23
+
+    Now playing
+    System Crafters Live! - Emacs Package Potluck (Trying Your Suggestions!)
+    3K viewsStreamed 7 months ago
+    31:06
+
+    Now playing
+    Capturing Notes Efficiently in Emacs with Org Roam
+    19K views7 months ago
+    1:59:04
+
+    Now playing
+    System Crafters Live! - Can You Apply Zettelkasten in Emacs?
+    7K viewsStreamed 7 months ago
+
+    Now playing
+    Emacs Has a Built-in Pomodoro Timer?? #Shorts
+    15K views8 months ago
+    2:00:53
+
+    Now playing
+    System Crafters Live! - The Future of System Crafters
+    2.5K viewsStreamed 8 months ago
+    34:19
+
+    Now playing
+    Getting Started with Org Roam - Build a Second Brain in Emacs
+    58K views8 months ago
+    1:57:15
+
+    Now playing
+    System Crafters Live! - Is Emacs intimidating for beginners?
+    3.5K viewsStreamed 8 months ago
+    28:31
+
+    Now playing
+    Declutter Your Buffer Lists in Emacs with Perspective.el
+    8.2K views8 months ago
+    1:58:00
+
+    Now playing
+    System Crafters Live! - Do we really need use-package in Emacs?
+    3.1K viewsStreamed 8 months ago
+    56:39
+
+    Now playing
+    9 Techniques to Boost Your Git Workflow with Magit
+    8.6K views8 months ago
+    42:48
+
+    Now playing
+    straight.el: Advanced Emacs Package Management
+    7K views9 months ago
+    32:51
+
+    Now playing
+    An Introduction to the Ultimate Git Interface, Magit!
+    15K views9 months ago
+    2:00:39
+
+    Now playing
+    System Crafters Live! - Text Adventuring in Emacs
+    2.3K viewsStreamed 9 months ago
+    1:55:27
+
+    Now playing
+    System Crafters Live! - So you've installed GNU Guix, now what?
+    3K viewsStreamed 9 months ago
+    51:36
+
+    Now playing
+    Installing Guix as a Complete GNU/Linux System
+    14K views9 months ago
+    2:07:38
+
+    Now playing
+    System Crafters Live! - The Challenges of System Crafting
+    2.3K viewsStreamed 9 months ago
+    2:01:56
+
+    Now playing
+    System Crafters Live! - Improving the IRC Experience in ERC
+    1.5K viewsStreamed 9 months ago
+    24:49
+
+    Now playing
+    Chat Like the 90's in Emacs with ERC
+    4.9K views10 months ago
+    2:11:12
+
+    Now playing
+    System Crafters Live! - Taking a look at Magit 3.0 • Streaming with Emacs Lisp
+    3K viewsStreamed 10 months ago
+    25:37
+
+    Now playing
+    Doom Emacs or Spacemacs? Use both with Chemacs2!
+    7.9K views10 months ago
+    1:59:18
+
+    Now playing
+    System Crafters Live! - Replacing Ivy and Counsel with Vertico and Consult
+    5.5K viewsStreamed 10 months ago
+    18:55
+
+    Now playing
+    Streamline Your Emacs Completions with Vertico
+    13K views10 months ago
+    1:59:37
+
+    Now playing
+    System Crafters Live! - Building lsp-mode configurations • Emacs News
+    2.7K viewsStreamed 10 months ago
+    Using Package Channels in GNU Guix - Craft Your System with Guix #4
+    2.8K views10 months ago
+    System Crafters Live! - Should you use pre-made Emacs configs? • Emacs News
+    2.2K viewsStreamed 10 months ago
+    Everyday Package Management with GNU Guix
+    5.3K views10 months ago
+    System Crafters Live! - Trying New Emacs Packages: Vertico and Corfu • Emacs Lisp Hacking • Q&A
+    3.7K viewsStreamed 11 months ago
+    28:34
+
+    Now playing
+    Efficient Text Selection with Emacs Key Bindings - Emacs Essentials #3
+    6.6K views11 months ago
+    2:19:50
+
+    Now playing
+    System Crafters Live! - Lisp Compiler Progress • Live Lisp Hacking • Q&A
+    2.1K viewsStreamed 11 months ago
+    2:02:40
+
+    Now playing
+    System Crafters Live! - I'm creating a new Lisp • Emacs News • Q&A
+    3.3K viewsStreamed 11 months ago
+    50:20
+
+    Now playing
+    Creating Custom Minor Modes - Learning Emacs Lisp #7
+    3.3K views11 months ago
+    2:06:24
+
+    Now playing
+    System Crafters Live! - Ranking the Open Source Licenses • Live Hacking: Guile Scheme • Q&A
+    1.9K viewsStreamed 11 months ago
+    44:59
+
+    Now playing
+    Installing the GNU Guix Package Manager - Craft Your System with GNU Guix #2
+    6.8K views11 months ago
+    2:06:57
+
+    Now playing
+    System Crafters Live! - Dotfile Detective: tecosaur • Emacs News • Q&A
+    2.5K viewsStreamed 1 year ago
+    36:22
+
+    Now playing
+    Efficient Movement with Emacs Key Bindings - Emacs Essentials #2
+    8.1K views1 year ago
+    2:03:29
+
+    Now playing
+    System Crafters Live! - Gemini: The Hackers' Web • Dotfile Detective • Q&A
+    2.4K viewsStreamed 1 year ago
+    1:22:52
+
+    Now playing
+    Managing Files and Directories in Practice - Learning Emacs Lisp #6
+    3.9K views1 year ago
+    2:05:29
+
+    Now playing
+    System Crafters Live! - Static Websites with Emacs, Org Mode, and Sourcehut • Episode planning • Q&A
+    2.9K viewsStreamed 1 year ago
+    51:50
+
+    Now playing
+    An Introduction to GNU Guix
+    24K views1 year ago
+    1:55:46
+
+    Now playing
+    System Crafters Live! - What is GNU? • Is Sourcehut the future? • Q&A
+    2.9K viewsStreamed 1 year ago
+    1:11:56
+
+    Now playing
+    The Absolute Beginner's Guide to Emacs
+    99K views1 year ago
+    2:02:09
+
+    Now playing
+    System Crafters Live! - Emacs Native Comp will change *everything* • Trying out Eglot • Q&A
+    8.8K viewsStreamed 1 year ago
+    1:03:07
+
+    Now playing
+    Reading and Writing Buffers in Practice - Learning Emacs Lisp #5
+    5.8K views1 year ago
+    2:01:52
+
+    Now playing
+    System Crafters Live! - Should you do everything in Emacs? • Becoming a Lisp Ninja • Q&A
+    3.4K viewsStreamed 1 year ago
+    1:55:06
+
+    Now playing
+    System Crafters Live! - Is Lisp a dead language? • Emacs Lisp Hacking • Q&A
+    3.7K viewsStreamed 1 year ago
+    44:58
+
+    Now playing
+    Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior
+    5.6K views1 year ago
+    58:14
+
+    Now playing
+    How to Cut Emacs Start Up Time in Half! - Emacs From Scratch #12
+    6.7K views1 year ago
+    1:57:58
+
+    Now playing
+    System Crafters Live! - Emacs Future in Danger?, Config Hacking, Q&A
+    6.6K viewsStreamed 1 year ago
+    18:27
+
+    Now playing
+    Keeping Your Emacs Packages Up To Date - Emacs From Scratch #11
+    3.4K views1 year ago
+    1:58:00
+
+    Now playing
+    System Crafters Live! - Emacs Startup Speed, Emacs News, Q&A
+    3.6K viewsStreamed 1 year ago
+    41:56
+
+    Now playing
+    Craft an Email Workflow with Org Mode
+    4.6K views1 year ago
+    59:37
+
+    Now playing
+    Defining Variables and Scopes - Learning Emacs Lisp #4
+    5K viewsStreamed 1 year ago
+    16:23
+
+    Now playing
+    How to Create a Dotfiles Folder
+    7.6K views1 year ago
+    29:13
+
+    Now playing
+    Enhance Your Email with Org Mode - Emacs Mail #4
+    5.2K views1 year ago
+    1:02:53
+
+    Now playing
+    Defining Functions and Commands - Learning Emacs Lisp #3
+    7.9K viewsStreamed 1 year ago
+    17:18
+
+    Now playing
+    The Basics of Dotfiles
+    7K views1 year ago
+    42:38
+
+    Now playing
+    Compose and Send Email with Emacs - Emacs Mail #3
+    5.9K views1 year ago
+    1:16:13
+
+    Now playing
+    Types, Conditionals, and Loops - Learning Emacs Lisp #2
+    12K viewsStreamed 1 year ago
+    26:31
+
+    Now playing
+    What is System Crafting?
+    2.9K views1 year ago
+    38:14
+
+    Now playing
+    How to Encrypt Your Passwords with Emacs
+    6.3K views1 year ago
+    39:52
+
+    Now playing
+    Introduction to Emacs Lisp - Learning Emacs Lisp #1
+    30K viewsStreamed 1 year ago
+    28:25
+
+    Now playing
+    Managing Multiple Email Accounts with mu4e and mbsync - Emacs Mail
+    4.4K views1 year ago
+    26:39
+
+    Now playing
+    5 Reasons to Learn Emacs in 2021
+    60K views1 year ago
+    1:01:53
+
+    Now playing
+    Streamline Your E-mail Management with mu4e - Emacs Mail
+    15K viewsStreamed 1 year ago
+    25:35
+
+    Now playing
+    Teach Emacs to Keep Your Folders Clean
+    4.2K views1 year ago
+    29:57
+
+    Now playing
+    Enabling Desktop Notifications with Dunst - Emacs Desktop Environment #6
+    2.3K views1 year ago
+    5:22
+
+    Now playing
+    Happy Holidays, and plans for 2021!
+    871 views1 year ago
+    32:45
+
+    Now playing
+    Give Emacs Psychic Completion Powers with prescient.el
+    4.8K views1 year ago
+    35:36
+
+    Now playing
+    Unlock the Power of the Daemon with emacsclient
+    8K views1 year ago
+    39:11
+
+    Now playing
+    The Perfect Panel: Integrating Polybar with Emacs - Emacs Desktop Environment #5
+    5.9K viewsStreamed 1 year ago
+    15:01
+
+    Now playing
+    Dynamic Tiling Windows like dwm in Emacs with Edwina
+    4K views1 year ago
+    19:00
+
+    Now playing
+    Organize Your Windows with the Tab Bar in Emacs 27
+    8.2K views1 year ago
+    40:23
+
+    Now playing
+    Using Multiple Monitors in EXWM - Emacs Desktop Environment #4
+    2.5K viewsStreamed 1 year ago
+    50:10
+
+    Now playing
+    How to Create and Manage Multiple Windows - Emacs Tips
+    5.4K viewsStreamed 1 year ago
+    52:28
+
+    Now playing
+    Optimizing Window Placement in EXWM - Emacs Desktop Environment #3
+    3.3K viewsStreamed 1 year ago
+    1:05:50
+
+    Now playing
+    Emacs IDE - Python Development Configuration
+    27K viewsStreamed 1 year ago
+    51:44
+
+    Now playing
+    Emacs Desktop Environment #2 - Improving the EXWM Experience
+    6.4K viewsStreamed 1 year ago
+    31:38
+
+    Now playing
+    Emacs Tips - How to Give Presentations with Org Mode
+    14K viewsStreamed 1 year ago
+    1:08:16
+
+    Now playing
+    Emacs Desktop Environment #1 - Getting Started with EXWM
+    28K viewsStreamed 1 year ago
+    50:00
+
+    Now playing
+    Emacs IDE - How to Debug Your Code with dap-mode
+    18K viewsStreamed 1 year ago
+    56:23
+
+    Now playing
+    Emacs From Scratch #10 - Effortless File Management with Dired
+    17K viewsStreamed 1 year ago
+    37:32
+
+    Now playing
+    Emacs Tips - How to Use File and Directory Local Variables
+    3.6K viewsStreamed 1 year ago
+    1:03:26
+
+    Now playing
+    Emacs From Scratch #9 - Learn to Love the Terminal Modes
+    16K viewsStreamed 1 year ago
+    Emacs Tips - How to Create Your Own Color Theme
+    6.3K viewsStreamed 1 year ago
+    Emacs From Scratch #8 - Build Your Own IDE with lsp-mode
+    43K viewsStreamed 1 year ago
+    Emacs Tips - How to Show Reminders for Org Mode Tasks
+    6.7K viewsStreamed 1 year ago
+    Emacs From Scratch #7 - Configure Everything with Org Babel
+    18K viewsStreamed 1 year ago
+    1:01:51
+
+    Now playing
+    Emacs From Scratch #6 - Organize Your Life with Org Mode
+    31K viewsStreamed 1 year ago
+    47:37
+
+    Now playing
+    Emacs From Scratch #5 - Org Mode Basics
+    35K viewsStreamed 1 year ago
+    1:01:25
+
+    Now playing
+    Emacs From Scratch #4 - Projectile and Magit
+    25K viewsStreamed 1 year ago
+    59:26
+
+    Now playing
+    Emacs From Scratch #3 - Key Bindings and Evil
+    29K viewsStreamed 1 year ago
+    54:42
+
+    Now playing
+    Emacs From Scratch #2 - Adding Helpful UI Improvements
+    33K viewsStreamed 1 year ago
+    58:30
+
+    Now playing
+    Emacs From Scratch #1 - Getting Started with a Basic Usable Configuration
+    104K viewsStreamed 1 year ago
+    1:06:38
+
+    Now playing
+    Stream Hacking: Creating a Live Chat Widget for our OBS Overlay
+    900 viewsStreamed 1 year ago
+    1:24:20
+
+    Now playing
+    Stream Hacking: Creating a Live Data Channel for Custom OBS Overlay
+    905 viewsStreamed 1 year ago
+    1:29:16
+
+    Now playing
+    Stream Hacking: Fetching Live Stream Details with YouTube Data API
+    3.2K viewsStreamed 1 year ago
+    1:01:01
+
+    Now playing
+    Stream Hacking: Custom OBS Overlay Server
+    932 viewsStreamed 1 year ago
+    1:14:03
+
+    Now playing
+    Live-Coding a BrowserSource Overlay Server for OBS
+    1.8K viewsStreamed 1 year ago
+    1:03:23
+
+    Now playing
+    Parsing Text with Combinators - F# Part 5 [Episode 005]
+    13K views5 years ago
+    26:33
+
+    Now playing
+    Functional Concurrency with the Actor Model - F# Part 4 [Episode 004]
+    13K views5 years ago
+    43:19
+
+    Now playing
+    Functional Game Logic with State Pipelines - F# Part 3 [Episode 003]
+    24K views5 years ago
+    17:45
+
+    Now playing
+    Records and Discriminated Unions - F# Part 2 [Episode 002]
+    26K views5 years ago
+    30:49
+
+    https://www.youtube.com/c/SystemCrafters/videos (!!!!)
+        tab + 'list' + l  (+s-tab)
+
+
+    Introduction to Functional Programming with F# - Part 1 [Episode 001]
+    https://www.youtube.com/watch?v=Teak30_pXHk
+    110K views5 years ago
+
+    }}}
+    ~/dropbox-legacy/scripts/ALLTODOIST/aa_VIMEMACS.bash
+    --
+    ~/dropbox-legacy/emacs.orig.txt
+    ~/dropbox-legacy/emacs.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/masteringemacs-v3.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/emacsmanual1.tags1.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/emacsextend.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/Em-Doks_Giraffeetc.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/Emacs01-Learning3_534.txt
+}}}
+.  install packages {{{
+  https://www.emacswiki.org/emacs/ELPA
+   https://melpa.org/#/getting-started
+}}}
+
+ptools {{{
+  eval. expression      c-x c-e
+  word completion       sa-7  #a-/
+
+pick {{{
+
+evaluate el(isp) expressions (**!) ; (=in emacs lisp mode)  point after(!) expression + c-x c-e
+area where messages/returns (eg. for evaluations) are printed ; mini buffer (or echo area)
+simplest things in elisp (*) ; atoms (eg. numbers)  #=evaluates to themselves (in the repl)
+example of builtin var. (**) ; path-separator  #=evaluates to ';'
+set elisp mode in emacs ; a-x emacs-lisp-mode / edit .el-file(**)  #(+scratch-buffers are often in elisp-mode)
+call function in elisp (***!) ; (fname arg1 arg2 ... )
+(compiling elisp(?) ; =is possible  (=for speed etc(??)))
+2 * 3 + 8 / 4  i (e)lisp (**) ; (+ (* 2 3),,   (/ 8 4))
+print a text message in the mini buffer(*) ; (message "hello, minibuffer")  #='function that has the side effect of adding specified message to echo area'
+(mode that acts like interact. lisp interpr (?) ; a-x ielm  #=no redirection etc (=use emacsshell for that) (?)
+teterm: functions that take variable number of args (=like sum) (*) ; variadic functions
+function that inserts text " TEXT" into buffer (**!) ; (insert " TEXT")  #=at point of cursor
+quote list (1 2 3)  [2 ways] ; (quote (1 2 3))  //  '(1 2 3)  # ' ="stop evaluating from this point"(**!)
+(teterm: single apostrophe when quoting list (eg. instead of (quote .... ; =syntactic sugar for (quote . . . .)) *
+nested lists possible? ; yes, eg. '(1 2 (3 4 5) (6 (7)))
+
+return head / first post of list (**!) ; (car '(1 2 3))  #'contents of address register'
+return rest of list (=after head/first post) ; (cdr '(1 2 3))  #'contents of decrement register'
+ [clojure version of car/cdr ; first / rest]
+empty list in elisp ; '()
+elisp none / false ; nil / ()
+elisp true ; t  #=symbol for true (=used as otherwise in cond)**
+true o false i elisp ; nil = false ,,  allt annat är truthy
+build lists in elisp: build list (1 2 3)  from 1 and (2 3) ; (cons 1 '(2 3))  #"construct" =like pushing
+ (recursive cons  (=for 1, 2, 3) ; thoughtbot elisp-intro  ca 18.15)
+add items in list to "list1" (**) (=not as one sublist, as with cons) ** ; (append '(1 2) '(3 4))  #=argument 1 is a list
+assign value (=list (1 2 3)) to global var (=symbol(!)) "some-list" (***!) ; (set 'some-list '(1 2 3))  (setq some-list '(1 2 3))
+assign local var "a" to 1 (**) ; (let (a 1))  #+see more elisp-thoughtbot(**)_20:45ca(**)  #='let opens a new scope'
+printf in elisp ; format  [ (let ((a 1) (b 5)) (format "a is %d and b is %d" a b)) ]
+Define var b =Depending on var a (****!!) ; let*  (**)   (let* ((a 1) (b (+ a 5))) (format "a is  (OSV...)
+paraphrase of let vs let* ; let defines vars in parallel (=cannot depend on eachother's values) ,, let* lets one define vars sequentially (**!)
+
+define function say-hello (that prints "hello!") (***!!) ; (defun say-hello () (message "hello!"))
+call defined function "say-hello" (=has no args) (**) ; (say-hello)
+function with arg: define function square (=squares number) (**) ; (defun square (x) (* x x))  #+call: (square 2)
+ex. of some predefined functions in elisp (*) ; square, sqrt
+explain keyword 'when' in elisp (*/!!) ; =like if w.out else
+
+Conditional: if(!?) 2+2=4, print "yes!"  (***!!) ; (when (= (+ 2 2) 4) (message "yes!"))
+Conditional: def. funct. evens-or-odds (**!) ; (defun evens-or-odds (n) (if (= 0 (% n 2)),, "even!",, "odd!"))  #=no 'else' keyword (***)  (tbot-elisp_30:00)
+variable number of args when defining elisp function (*!) ; &rest  #(or something)
+Conditional: like case (**!!) ; (defun pick-a-word (n)  (cond  ((= 1) "a")  ((= 2) "b")  (t "blast!"))   (tbot-elisp_33:30)  (+kör med  (pick-a-word 2)  )
+Recursion/"Calling itself"**: FACTORIAL W. ELISP (**!!) ; (defun factorial (n)  (if (< n 1)  1  [else](* n (factorial (- n 1))))    (tbot-elisp_37:50)
+function literal/anon. funct.  (in elisp) ; =lambdas  ((lambda (x) (* x x x) 5)
+
+Bind lambda-function to name =var (****!!) ; (fset 'cube (lambda (x) (* x x x)))  (tbot-elisp_45 ******!!!!)
+'Apply function on Obj.s in List' (=eg. Upcase) (**(**)!!) ; (mapcar 'upcase '("foo" "bar" "baz"))
+filtering with 'remove-if-not' ; eg. 'remove if not odd number'  (=oddp(redicate))
+reduce in elisp ; (=??)
+'THE qs-FUNCTION' (=implem. of quicksort) (**!) ;  (tbot-elisp_47:15+)
+SET SHORTCUT KEY: a-# = call sort-lines(!!) (**!) ; (global-set-key (kbd "M-#") 'sort-lines)  #=in all(!) modes
+Set local key-binding (*) ; local-set-key (??)
+Add certain command runs ev. time entering C-mode (**!!) ; (add-hook 'c-mode-common-hook  (lambda ()  (local-set-key (kbd "<f5>") 'recompile)))
+
+
+(tbot_55:00 ************* SEE MORE(!!))
+Help about M-mode currently in (**!!) ; c-h m  #describe-mode  =hooks, enabled minor modes etc etc (**)  (tbot-elisp_54:30)
+Help for keycommand c-c c-c ; c-h k / c-h c(??)  c-c c-c   (describe-key (kbd "C-h k"))
+Search for commands w. "word" in name(or docstring) ; c-h a name   (apropos-command "region")
+Show description of function "qs" ; c-h f qs(??)  (describe-function 'qs)
+HELP ABOUT THE HELP COMMAND ; c-h c-h (**!)
+
+
+MACROS (='Are Awesome(!!)') (=See More) ?????
+}}}
+
+  thoughtbot 'getting started w. elisp'
+  builtin vars
+  message   (=like echo and printf (**))
+  ielm | eshell
+  insert
+   (append)
+  format
+  defun
+   let*
+  defun
+   cond (=like case)
+  ----
+  fset
+  mapcar
+  reduce
+  local-set-key
+  add-hook
+   Help *!
+
+}}}
+wishlist {{{
+  Dotfiles-Project in Git
+
+  indentation  (spaces, no tabs)
+  Lilypond Mode
+  syntax in textblocks (+'multi-syntax')
+  organize init.el
+
+    bongo
+  Org Roam
+    translate-shell emacs
+
+  emacs latex
+  markdown
+
+  auto-draw included svg(etc) graphics files
+  auto-insert image-links(!)
+}}}
+.  measure writing/typing speed {{{
+        https://pavpanchekha.com/blog/emacs-keylogger.html  https://www.reddit.com/r/emacs/comments/2euqn7/emacs_extension_to_measure_typing_speed_in_the/
+          https://github.com/candera/emacs/blob/master/candera/typing-speed.el  (**)
+
+Sure, here is the modified measure-writing-speed function that starts the timer
+when you enter insert mode and stops the timer when you exit insert mode:
+
+Code snippet
+
+(defun measure-writing-speed ()
+  (interactive)
+  (let ((start-time nil)
+        (end-time nil))
+    (add-hook 'evil-insert-mode-hook
+               (lambda ()
+                 (setq start-time (time-to-millisecond (current-time)))
+                 (message "Timer started.")))
+    (add-hook 'evil-insert-leaving-hook
+               (lambda ()
+                 (setq end-time (time-to-millisecond (current-time)))
+                 (difference start-time end-time)
+                 (message "Writing speed: %d characters per minute, %d words per minute."
+                          (/ (length (buffer-string)) (/ (difference start-time end-time) 1000))
+                          (/ (length (buffer-string)) (/ (difference start-time end-time) 60)))))
+  )
+)
+
+To use this function, you would just call it without any arguments. When you
+enter insert mode, the timer will start, and when you exit insert mode, the
+timer will stop and the result will be echoed back to you.
+
+Here is an example of how to use the function:
+
+- Open a new Emacs buffer.
+- Enter insert mode.
+- Start typing some text.
+- Exit insert mode.
+- The result will be displayed in the minibuffer.
+
+I hope this helps!
+
+}}}
+--
+repeat {{{
+  repeat complex command
+  https://www.emacswiki.org/emacs/RepeatingComplexCommand
+}}}
+evil {{{
+    https://github.com/emacs-evil/evil
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/evilman1.tags.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/evilman1.txt
+    http://cachestocaches.com/2016/12/vim-within-emacs-anecdotal-guide/
+
+    ======
+    https://readthedocs.org/projects/evil/downloads/pdf/latest/  #zzzz=chapter 3 - Key Maps (**!)
+    ======  (+checkout aaron bieber  and  evil-leader)(!!)
+
+https://github.com/cofi/evil-leader
+    . +more ='mapping keys' (in evil)  +Aaron Bieber  {{{
+
+emacs evil mode mapping keys:  emacs evil mode documentation
+    https://github.com/emacs-evil/evil
+    https://evil.readthedocs.io/en/latest/index.html  **!
+        https://readthedocs.org/projects/evil/downloads/pdf/latest/
+    ----
+    https://emacs.stackexchange.com/questions/12175/instructions-on-how-to-work-with-evil-mode
+     https://github.com/wasamasa/dotemacs/blob/master/init.org#evil
+    http://blog.jenkster.com/2013/02/mapping-jk-in-emacs-evil-mode.html
+        https://www.systutorials.com/keyboard-key-mapping-for-emacs-evil-mode-and-rearranging-alt-ctrl-and-win-keys/
+        https://stackoverflow.com/questions/10313864/emacs-evil-mode-key-map
+https://www.youtube.com/watch?v=JWD1Fpdd4Pc&t=1200s
+------
+https://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html
+ https://web.archive.org/web/20161021043220/http://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html
+https://blog.aaronbieber.com/2015/07/05/a-gentle-introduction-to-emacs-configuration.html
+https://blog.aaronbieber.com/2016/08/07/getting-started-with-emacs-lisp.html
+https://blog.aaronbieber.com/2015/08/04/authoring-emacs-packages.html
+    https://github.com/aaronbieber
+
+    }}}
+
+.    (evil docs(?(*))) {{{
+    3 inställningslägen (+senare merge/snabbinställn. mm):
+     standard emacs(+ev enb. evil av)    #.emacs/.emacs.d_0base
+    evil drs #fler colorschemes + path  #.emacs/.emacs.d_1drsevil       #=i dropbox-legacy + när ska anv.: rm .emacs, rm .emacs.d, ln -s ~/Dropbox/.emacs|.emacs.d      #+ev ol. alias för att kunna flytta mellan spacem. o em25
+    emacs clojbrave                     #.emacs/.emacs.d_2clojbrav
+    spacemacs (+python mm)              #.emacs/.emacs.d_3spacem
+}}}
+
+___Em1+evil/Org
+~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/evilman1.tags.txt  #TT(T)@
+EVIL: INSTALL + MANUAL 2020 ++ (****) {{{
+
+    https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html#Top  ****  (+SÖK: EMACS LISP REFERENCE MANUAL)
+            https://www.gnu.org/software/emacs/manual/html_mono/emacs.html
+            https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
+        https://www.gnu.org/manual/manual.html
+
+
+            https://github.com/emacs-evil/evil      #quickinstall 1 (**)
+        https://bytebucket.org/lyro/evil/raw/default/doc/evil.pdf
+         https://www.linode.com/docs/tools-reference/tools/emacs-evil-mode/
+        https://www.emacswiki.org/emacs/Evil
+          https://evil.readthedocs.io/en/latest/overview.html#installation-via-package-el  (**)
+          https://melpa.org/#/getting-started       #add melpa-ref(??
+        -----
+        https://github.com/noctuid/evil-guide
+            https://github.com/noctuid/evil-guide
+        https://evil.readthedocs.io/en/latest/index.html
+                https://readthedocs.org/projects/evil/downloads/pdf/latest/
+
+                                https://www.emacswiki.org/emacs/Evil
+                                https://bytebucket.org/lyro/evil/raw/default/doc/evil.pdf
+                                https://www.linode.com/docs/tools-reference/tools/emacs-evil-mode/
+                                https://github.com/emacs-evil/evil
+                                 https://evil.readthedocs.io/en/latest/overview.html#installation-via-package-el
+                                 https://melpa.org/#/getting-started
+                                    https://www.linux.com/training-tutorials/vim-tips-folding-fun/
+                                    https://learnvimscriptthehardway.stevelosh.com/chapters/49.html
+
+}}}
+TODO (inkl. installera Evil-mode) (**) {{{
+    install + evil **   #flytta ev till 'programattinstallera'=install/tweak-indexet ***
+        sudo apt-get install emacs
+            sudo add-apt-repository ppa:kelleyk/emacs
+            sudo apt-get update
+            sudo apt-get install emacs25
+            +remove {{{
+                sudo apt remove emacs25 emacs25-nox && sudo apt autoremove
+            }}}
+        a-x invert-face Ent default     #eller a-x customize-themes
+            https://stackoverflow.com/questions/5982572/how-to-install-emacs-colortheme
+        skapa ~/.emacs  #~/.emacs.d skapas automatiskt **
+        +infoga i .emacs-filen: {{{
+
+            (require 'package)
+
+            (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+            (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+            (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+
+            (setq package-enable-at-startup nil)
+            (package-initialize)
+
+        }}}
+        starta emacs + a-x package-list-packages Ent
+        q (=quit när paketen uppdaterats färdigt)
+        a-x package-install Ent evil Ent
+        a-x evil-mode Ent
+        insert into .emacs {{{
+            (require 'evil)
+            (evil-mode t)
+        }}}
+        a-x package-install Ent helm Ent
+
+}}}
+___Em1+evil/Org
+
+}}}
+Emacs Multilang Syntax Highlighting {{{
+My understanding is that Emacs is a bit more nuanced than Vim can be about syntax-coding. Let's say I have a file containing both HTML and CSS. Would it be possible to have the code syntax-colored in both HTML and CSS so that each of the parts show up with their correct syntax-coloring (if you know what I mean), and in that case, how would I do that? (e.g. by using two different minor modes at the same time?)
+
+Yes, Emacs' syntax highlighting capabilities are indeed more sophisticated than Vim's. It's possible to have the code syntax-colored in both HTML and CSS so that each of the parts show up with their correct syntax-coloring. Emacs can handle multiple minor modes at the same time, and this is how you would achieve syntax-coloring for both HTML and CSS in a file containing both languages.
+
+Here's how you would do it:
+
+Install the appropriate packages for syntax highlighting HTML and CSS. Emacs has packages for syntax highlighting a wide variety of languages, including HTML and CSS. You can install these packages using the M-x package-install command.
+
+Enable the HTML mode and the CSS mode. Once you have installed the appropriate packages, you can enable the HTML mode and the CSS mode for the file containing both languages. You can do this by pressing M-x html-mode and then M-x css-mode.
+
+Emacs will automatically detect that the file contains both HTML and CSS, and it will apply the appropriate syntax highlighting to each language. You should now be able to see the code syntax-colored in both HTML and CSS, so that each of the parts show up with their correct syntax-coloring.
+
+Emacs' syntax highlighting capabilities are quite powerful, and it can handle a wide variety of programming languages and markup languages. With a little bit of configuration, you can set up Emacs to syntax-color your code in the way that you prefer.
+}}}
+emmet {{{
+  https://github.com/rooney/zencoding
+    https://github.com/smihica/emmet-mode
+  https://www.emacswiki.org/emacs/ZenCoding
+}}}
+html mode {{{
+  https://www.youtube.com/watch?v=CztlFGGRrpk
+  https://www.gnu.org/software/emacs/manual/html_node/emacs/HTML-Mode.html
+    https://www.emacswiki.org/emacs/HtmlMode
+}}}
+nxml mode (etc) {{{
+      #tip: seems to work in evil mode
+  https://www.inmotionhosting.com/support/edu/emacs/nxml-mode/
+      complete tag (<head to <head></head>)                       c-c c-i
+      complete tag + linebreak (<head to <head>\n\n</head>)       c-c c-b
+  https://www.gnu.org/software/emacs/manual/html_mono/nxml-mode.html
+  --
+  https://www.gnu.org/software/emacs/manual/html_node/nxml-mode/Introduction.html
+
+
+  Essential Editing Commands and Actions in Emacs nXML Mode
+
+  Navigation:
+  
+  C-x C-f: Move to the beginning of the next XML element.
+  C-x C-b: Move to the beginning of the previous XML element.
+  C-x C-n: Move to the next XML tag.
+  C-x C-p: Move to the previous XML tag.
+  C-x C-e: Move to the end of the current XML element.
+  C-x C-s: Move to the start of the current XML element.
+
+  Editing:
+  
+  C-x C-w: Cut the current XML element.
+  C-x C-y: Paste the cut XML element.
+  C-x C-d: Delete the current XML element.
+  C-x C-c: Comment out the current XML element.
+  C-x C-u: Uncomment the current XML element.
+  C-x C-q: Start quoting mode for entering special characters within XML attributes.
+
+  Formatting:
+  
+  M-x nxml-indent-region: Indent the current region of XML code.
+  M-x nxml-reformat-region: Reformat the current region of XML code.
+
+  Validation:
+  
+  M-x nxml-validate-region: Validate the current region of XML code against a DTD or schema.
+
+  Additional Commands:
+  
+  M-x nxml-find-tag: Find a specific XML tag.
+  M-x nxml-insert-tag: Insert a new XML tag.
+  M-x nxml-close-tag: Close the current XML tag.
+  M-x nxml-check-balance: Check if the XML document is well-formed (balanced tags).
+
+  Note: These are just a few examples of the many commands and actions available in Emacs nXML mode. You can explore the full list of commands by using C-h f and searching for commands related to XML.
+
+}}}
+'Em 1' {{{
+  (=convert to quicklist 1 2022 (**(!)))
+  ~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/em-mastext1.tagged.txt
+}}}
+Org [** __] {{{
+  https://www.youtube.com/watch?v=VcgjTEa0kU4
+  https://www.youtube.com/watch?v=PNE-mgkZ6HM
+    Org Babel(??(**))  https://www.youtube.com/watch?v=kkqVTDbfYp4
+
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.tags1.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.txt
+    ~/Empire/Doks/Comp/editor/emacs/emacsrefcard_org01.pdf
+orgman + org vanki-file(!!):   https://orgmode.org/
+    ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.txt
+    https://orgmode.org/org.html (in chrome)
+    ~/Dropbox/rsc/data/lists/learnqna/vanki/orgman-emacs.vdeck.txt
+emacs Org-Mode - Notes 1 2020-2021 {{{
+___start
+
+        evince -p 4 ~/gdrive/rsc/Doks/em.org.pdf &
+
+     outliner
+    research compendium
+
+    activate / packag. system
+     list-packages (!!)
+    add-to-list + 'load-path  *
+    [git]
+      ----
+            make help
+    (font-lock via hook)  *
+  ---- p13
+    keybinding conventions (Elisp)
+    [local var. Org (in non-org-file)] *
+    org-submit-bug-report
+  ---- p14
+    start w. minimal config *  x2
+            backtrace
+    Org Syntactical Elements * (TODO etc)
+      ****
+  ---- p16
+
+___start
+Ch. 2 - Document Structure **
+     org-cycle + Tab *
+    Headlines (+  *, **, ***)
+    16.4 Clean view  + Headline Numbers
+    --
+    Global / Local Cycling
+        tab | s-tab
+  ---- p17
+      c-u (=num.) + s-tab *
+    c-u c-u tab   c-u c-u c-u tab
+
+    c-c c-r  "reveal"
+    c-c c-k
+    c-c tab
+    c-c c-x b
+    c-c c-x v
+  ---- p18   init visib(!)
+    
+    2.3 Motion
+     c-c c-u / c-p      next heading
+         c-f / c-b
+         c-n
+         c-j
+  ---- p19
+    tab | return  (="down | up" (??))    /  n | p  ....
+    2.4 Struct. Editing
+    m-Ent   c-u | c-u c-u
+    c-Ent
+    ms-Ent  New TODO
+    cs-Ret
+
+    a-left|right  promote | demote heading
+  ---- p20
+    sa-left | right     promote | demote subtree *
+    a-up | down
+    c-c @   mark subtree
+     kill | copy | paste  subtree
+    (c-u c-y)
+
+        evince -p 5 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p21
+     Sorting *
+    narrowing *
+        promote to headline *
+    2.5 Sparse trees  *!
+     [c-c / ]
+  ---- p22 (=12(?))
+    keyb. access to specific Sp(??).trees
+    
+    2.6 Plain Lists (+checkboxes)
+
+        descr.  ' :: '
+  ---- p24
+    sa-Ent  = Checkbox
+      (+etc commands)
+  ---- p25
+    Drawers
+      LogBook
+    2.8 Blocks (including Code (clocking??) etc **!)
+    a-tab  =  ca-i | esc-tab ****
+  ---- p26 [16]
+    3 = Tables
+    c-c Ent
+    c-c |       |vert
+
+  ---- p27
+    Column + Row Editing (*)
+      a-up|down (etc) !
+  ---- p28
+    Sort table lines
+        c-c ^
+     [+by time | by function]
+    --
+    Region (eg. copy rect. region)
+    split  a-Ent
+  ---- p29
+    Calculations
+     c-c t
+     s-Ent
+    Misc (*)
+        import file as table *
+    c-c |(??)
+        export *!
+  ---- p30
+     Align table
+    shrink | expand
+  ---- p31
+    hover field (=preview)
+        +remove on export
+    orgtbl-mode (=minor)
+        ="use in textmode, mail, etc" **
+  ---- p32
+    (+add-hook
+
+        evince -p 6 ~/gdrive/rsc/Doks/em.org.pdf &
+    
+        Spreadsheet + Calc
+    references
+        c-c ? | c-c }
+    ((B3)) @Row $Col
+      $1  $+1  $-2
+          $<
+          $>>>
+      @1   +3 -1
+      @I    (=) first headerline
+    ***
+      @0  $0        +p33  Examples
+    ----
+    Ranges  $1 .. $3 (etc)
+        +can be used w. Calc vector functions
+    - - - -
+    formula field coord.s
+        @#  $#   etc
+     +Ex  ((*))
+  ---- p34
+    Named Ref.s (pi etc)
+    Remote ref.s  **
+     remote(  )
+    Calc formula Syntax
+        constants.el
+  ---- p35
+    mode string  + semicolon
+    p20  n3 s3 e2 f4
+    D R
+    F S
+    T t U
+    E*  N  L
+        +printf + Ex. *
+  ---- p36
+        'logical operations' (*)
+    Lisp Forms as formulas *
+        (= string manipul. etc)
+    '( ....
+        + ;L -etc flags
+  ---- p37
+        +Ex.s *
+    Durations and timeval.s
+        ;t  *
+    ----
+    3.5.5 Field and Range formulas
+        ' := '
+    eg. assign formula into field *
+        vsum(@II..III)
+            +calculate
+  ---- p38
+    c-u c-c =
+        TBLFM
+    $2=
+    @3=
+    @1$2..@4$3  (*)
+    $NAME
+    ----
+    Column Formulas *  =$1+$2
+      c-c =
+
+        evince -p 7 ~/gdrive/rsc/Doks/em.org.pdf &
+    
+  ---- p39
+    Lookup Functions  (3 st)
+    (eg. org-lookup-all)
+    'These three functions can be used
+     to implement assoc. arrays,
+     count matching cells, rank results,
+     group data, etc
+    +Worg tutorial (*!)
+    ----
+    Edit + Debug formulas *
+    ----  (SEE MORE)
+  ---- p40
+    
+        shift reference
+            c-c }
+    remove formula (!)
+  ---- p41
+        multip. TBLFM *
+    Debug Formulas (=in menu)
+    Updating the table
+        c-c *
+        c-u c-c *
+  ---- p42
+    Advanced features
+    c-#
+        Students exam results example (*)       
+  ---- p43
+    !
+    ~
+    -
+    #
+    *
+    /
+     +Ex. *
+    ---
+    3.6  Org Plot
+     gnuplot (=praph / ascii)
+        c-c " g
+  ---- p44
+    Plot Options (*)
+            file (outp.)
+    script
+  ---- p45
+    ascii
+        c-c ``
+        c-u c-c * (update)
+  ---- p46
+    Ch. 4(??) - Hyperlinks *!
+    [[LINK][DESCR.]]
+        org-link-escape
+    c-c c-l
+  ---- p47
+    Internal Links
+    follow  c-c c-o
+    [[#my-custom-id]]
+        <<My Target>>
+    (+NAME)
+        linter *
+
+        evince -p 8 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    orgs (link)  mark ring
+
+    c-c &
+
+        (link to Headers etc)
+  ---- p48
+    Radio Targets
+     <<<My Target>>>
+    - - Ext. Links - -  *!
+    files, websites, messages (mail etc)
+    BBDB-db:s, IRC conversations *
+
+    file: attachment:, bbdb:,
+      docview:, doi, elisp:,  **!
+    ....
+     help:, http(s):,
+      id info irc  mailto news
+     shell *
+  ---- p50
+        inline
+    Handling Links
+      org-stor-link  (+bind)
+    [globally unique moveable links] *
+  ---- p51
+    Web Browsers
+      ...
+      ...
+      ...  file types
+    Agenda View
+      c-c c-l  insert link
+
+    link history *
+        
+        link abbrev.s *
+    c-u (x3) c-c c-l  ('kup' in list)
+  ---- p52
+    Completion supp. for cert. file types
+
+    c-u c-c c-l
+    c-u c-l  (on existing link)
+    c-u c-o  (+prefixes)
+     Ret  lmb/rmb  mmb
+    --
+    c-c %  Push curr. pos. onto ring  *
+  ---- p53
+    c-c &  jump back
+    c-c c-x c-n/p
+      (+ bind to  a-n/p)
+    
+    Link Abbreviations  *!!
+
+      Elisp   + EXAMPLES (**!)
+  ---- p54
+        define custom abbrev.s
+    (+completion) *!
+
+    +Search Options in FileLinks
+      (= line no, internal links,
+       headlines, ids search)
+
+        evince -p 9 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p55
+    (search the curr. file)
+
+    Custom Searches (w. functions *)
+      BibTex etc
+  ---- p56
+    5 - TODO Items (*)
+
+    c-c c-t  rotate
+    s-right/left  (t in agenda)
+    'c-c/t'  View as Sparse tree
+    'c-C/T'  Search *
+
+  ---- p57
+    Show All 'RDS'(??) fr. many files
+    sa-Ent  new todo below curr.
+        
+        tags (??)
+    --
+    5.2.1  TODOs as workflow states
+
+      "|"
+
+      TODOs as types
+  ---- p58
+    tags [p69]
+        (+Using Completion)
+        [p243]
+
+    'Multip. Keyw. Sets in one file(?)
+    *(!!) (+setq and sequences)
+
+    cs-left/right  Change
+    s-right/left  sequences
+  ---- p59
+    * Fast access to TODO states (r, b, k etc) *
+
+    Setup Keywords for indiv. files
+     +complete w. esc-tab
+
+     c-c c-c
+
+  ---- p60
+    custom faces
+
+      TODO Dependencies (*) !
+
+  ---- p61
+    blocked = dimmed / checkboxes *
+        org-depend.el
+    
+    5.3 ProgressLogging
+
+    c-u  c-c c-t
+        (or automatically) *
+    
+    closing Items (?)
+        c-c c-t space  (?)
+     ----
+    Tracking TODO state changes
+
+  ---- p62
+    recommended drawer =LOGBOOK
+
+    Wait Done Cancelled (etc)
+
+        evince -p 10 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    "WAIT (w@/!)" etc
+
+      logging pref.s local to buf.
+
+    STARTUP Keywords
+
+        Space vs c-u Space
+            (w. point on drawer in agenda)
+
+  ---- p63
+    Track Habits *!*
+        (+nudge)
+     +  ++    +2d/3d
+    
+    (+consistency graph)
+
+  ---- p64
+        + colors *!
+    (+grap(?)-options)
+
+        c-u K
+         K
+
+    5.4 Priorities (wh. has many TODOs)
+      [#A]  A B C
+                ('cookies')
+      [#1]
+         ((<65))
+
+  ---- p65
+    c-c  ,          Space
+    s-up/down
+
+    Break down tasks into Subtasks *
+
+    - = insert outline tree below
+          the todo  (+ 33 % / 1/2)
+    
+    c-c c-c
+            recursive etc
+
+  ---- p66
+    Function = make entry change
+        to done wh. all children are done **!!
+
+    5.6 Checkboxes **!*
+      [ ]  -  x
+
+        [2/4] - Cookies *
+
+  ---- p67  Set, Toggle etc.
+
+                (+ c-u / c-u x2)
+    c-c c-c 
+    c-c c-x c-b
+    c-c c-x c-r     (radio button)
+    sa-Ent
+    c-c c-x o   (toggle ordered)
+      ----
+    (c-u) c-c #  update stat.s cookies
+
+  ---- p69
+
+    6 - Tags *
+
+    :work:urgent: (etc)
+        
+        (subheadings inherits tags)
+
+    'set tags that all entries in a file should inherit'
+        (??????)
+
+    Matching (*)
+        (inheritance)
+
+    6.2 Setting tags
+
+    c-c c-q
+        Enter new
+
+        evince -p 11 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p70
+        hardlist of tags
+    Default tags etc *!
+        
+            **
+    @work @home  etc
+
+    fast tag Selection *
+     (setq ........  *!!)
+
+            \n
+
+  ---- p71
+    {@work(w) @home ...
+
+    mutually exclusive tags
+
+    [:start/endgroup !!]
+
+        c-c c-c + sel.keys tag1, tag2 ...
+     --
+    tab Ent c-g q  !  c-c
+
+  ---- p72
+    +Examples  *
+     ----
+    Tag Hierarchy !!*
+        [GTD : Control Persp]
+    
+        + {       }
+    +Regexes **  {re}
+
+    Searches
+
+     c-c / m // c-c \
+
+     org-agenda m
+                M
+
+        (Find / List urgents etc)
+
+
+  ---- p74
+    7 - Prop.s and / Columns
+
+    - inst. of tags, eg. for diff. softw. releases *
+    - eg. CD-db
+
+    Convinient view for editing prop.s ; Column View
+
+    prop.syntax
+            :key: val  *
+
+  ---- p75
+    inheritance + preset val.s  *
+
+    (prop.blocks)
+        +adding etc *
+
+    m-tab
+    c-c c-x p
+      insert-drawer
+    c-c c-c
+  ---- p76
+        c-c S
+    s-left/right
+    c-c c-c d
+            D
+            --
+            C
+    
+    Spec. prop.s  ('ALLTAGS' etc)
+            **
+    
+    CLOCKSUM
+
+    7.3 Prop. Searches (=create sparse ____(trees?) etc)
+
+        evince -p 12 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p77
+    = sparse tree / spec. lists cmds
+
+    agenda etc
+
+    'c-c / p'
+
+        Inheritance (can be slow)
+    
+    moving subtrees
+
+  ---- p78
+    7.5 Column View
+        s-tab s-tab
+
+  ---- p79
+    SUMMARY-TYPE *
+
+    'est+'
+        +Ex. *!
+
+  ---- p81:2  ###
+
+    Capture Col.View
+    
+     :id
+
+     :match  *
+
+  ---- p82
+  
+    :exclude-tags
+
+    c-c c-c c-c  .......
+
+    + formulas *
+
+        Collect properties *
+
+  ---- p83
+    8 - Dates and Times
+      
+      =labeling TODO-items w. dates and times *
+
+    => Causes entries to be shown on specif. dates of Agenda *
+
+    <d a t e>
+        +1w *
+
+    +cal(?).expressions
+
+  ---- p84
+    %%(
+
+  ---- p80(??)
+    c-c c-x c-c
+     r / r
+    c-c c-c // q
+
+    1-9 , 0
+    n / p
+
+  ---- p81(??)
+    e(dit)
+    c-c c-c
+     v
+     a
+     <  //  >
+     sa-left/right
+
+        evince -p 13 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    inactive timestamps
+    [ D a t e ]
+
+    c-c .
+    c-c !
+    c-c c-c
+    c-c .
+    c-c < // > (!!)
+    c-c c-o
+
+  ---- p85(??)
+    s-left/right
+     -up/down
+    c-c c-y
+
+  ---- p86(??)
+    relat. dates
+
+  p87
+    +Formats  etc
+
+    sa-left
+    (custom formats)
+
+    Deadlines + Scheduling
+        |
+  ---- p88(??)
+    =setting a date wh. y. want to
+     start working on an action item
+
+  ---- p89(??)
+    Insert b:s or S:s
+
+    c-c c-d
+    c-c c-s
+    c-c / d
+    c-c / b
+    c-c / s
+
+
+    Repeated
+
+  ---- p90
+
+        DONE
+
+    +mark repeater as done
+
+  ---- p91
+    Clocking Work Time *
+        (+elisp)
+
+    c-c c-x c-i
+
+  ---- p92
+    (effort estimates
+
+    c-c c-x c-o
+    c-c c-x c-x
+    c-c c-x c-e
+     ...
+    cs-up/down
+
+    
+    p93
+     sa-up/down
+     c-c c-t
+     c-c c-x c-q
+     c-c c-x c-j
+     c-c c-x c-d
+
+    the clock-table
+
+  ---- p94
+    :scope *
+    :block
+
+      start
+    
+    :step/fileskip 0
+
+        evince -p 14 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    |
+    |
+  ---- p96
+
+    :formatter (*)
+        
+        +Examples
+
+    - Resolve idle time *
+
+  ---- p97
+    k K  s S
+      C
+    - -  - -
+    
+    c-c c-x c-z(or 2)
+
+        x11-idle
+
+  ---- p98  Effort Estim.s
+
+    c-c c-x e
+    c-c c-x c-e
+        (Columns)
+
+  p99
+     Narrowing down
+    Relative timers!
+                ++
+
+  ---- p100
+    9 - Refiling / Archiving
+      + copying
+
+  ---- p101
+    Move proj.tree to other file **
+
+    internal archiving
+        (+key commands)
+
+  ---- p103
+    Capture (=new ideas and tasks)
+
+    10 - +Attachm.
+            (=assigns Ref.mat.
+             with them)
+
+    templates
+      + c-c  c-c
+    
+    c-c c-w
+    c-c c-k
+
+  ---- p104
+            =templates
+
+    c-u  Capture
+
+    c-u c-u  .....
+
+    Capt.templates (elisp)
+
+    define task fr. email. etc  +binding
+
+  p105
+
+    types
+
+    target *
+        (file .... (etc)  *
+
+  ---- p106
+
+        '(function  funct  ..... *
+
+    properties  +++
+
+  ---- p107
+
+    Template Expansion *
+
+    eg % [FILE]
+
+        evince -p 15 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    p108
+        %(EXP)
+        %<Fu(nc?)t>
+         etc
+          .
+          .
+          .
+          .
+          .
+        %^g
+
+  ---- p109
+        link (=file?)  types
+    10.2 Attachm. *!
+
+  ---- p110  defaults + dispatcher
+    c-c c-a
+
+  p111
+    F  open w. dired
+
+  ---- p113
+    Autom. v-control w. git **!
+
+    attach fr. dired  + elisp (*)
+
+    rss feeds
+
+  ----
+  ---- p115
+    11 - Agenda Views *
+    
+    Sorting, collecting and displaying
+     scattered TODOS etc *
+
+    TODO , ........
+
+     ....   stuck (#)  etc
+    
+    Agenda Files (??)
+
+    c-c  [  //  ]
+
+  ---- p116
+
+    c- '/,  (??)
+
+    c-c c-x <
+
+    <  //  >
+
+    ----
+    
+    The Agenda Dispatcher
+
+      a  m  / (!!)  <
+      t  M  #   <<
+      T  S (!!)  !    *----'sticky'
+                    r / g
+
+  ---- p117
+  
+    Agenda Views (builtin)
+
+    weekly / daily
+
+  ---- p118
+    a-x org-agenda a  *
+
+    Calender / Diary integration
+        ( (setq ....
+
+     c  (or C)
+
+  ---- p119
+    BBDB =for contacts
+
+    see upcoming anniv.
+
+    Appointm. Remainders
+
+        evince -p 16 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p120
+    The Global TODO-List
+
+    org-agenda  t  //  T
+
+    'if y. often need to search for a specific keyword'
+
+        (scheduled / deadline)
+
+  ---- p121
+    Matching Tags & Prop.s
+
+    'if y. often need a specif. search' *!
+
+    TODO-keyw.s +(!) Tags *
+
+    & // |   + -
+
+    +work-boss (???)   **
+
+    work + {^boss.*}  *
+        
+        (=regexes)
+
+    Prop.s / Spec. Poop.s(????)
+        
+        SEE MORE
+
+  ---- p122
+
+        ********
+
+    'Here is a complex example'
+
+    comparisons (<= etc)
+
+      +/- min.s etc
+
+    <Date>
+
+     {regex}
+
+    Searching TODO tip = 'for typing speed'
+
+    
+    p123
+        More Examples *
+    
+    Search-View **
+        (=good for finding notes) *
+
+    ] // [  // { // }
+        =adjust search
+
+    GTD Stuck proj.s
+
+  ---- p124     #   !
+
+    11.4 Pres. + Sorting Categories *
+
+  p125
+    timeofday-specif.s
+
+    <    >--<    >
+
+    sorting + priorities
+
+  ---- p126
+    Filtering / Limiting agenda items *
+
+    \   <    =
+    tag  categ.  regex
+
+    custom filters
+
+  ---- p127
+    _    ^    /(!!)    | (=X)
+    effort  headline
+
+    Computed Tag filtering
+
+  ---- p128
+    (auto-exclude)   (+elisp)!!
+
+    self-adapting filters
+
+        evince -p 17 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  p128
+        set limits for the Agenda
+    
+    Commands in the Agenda Buffer  p129
+                            ****
+
+    p132   remote editing
+                    **
+
+    p136
+        Cal.commands + quit/exit
+
+
+    Custom Agenda Views - store + qu.(??) access freq. used TODOs
+
+  p137
+    Storing Searches
+        (setq .....  !**
+
+  p138
+    block agenda
+
+    Setting Options for Custom Commands (+elisp *)
+
+  p140
+    Export Agenda Views
+        html, ps, pdf, ical
+    
+    ps2pdf
+    
+    x  c-x c-w  (+elisp*) (x2)
+
+  ---- p141
+    emacs -eval '(......  **!
+
+  ---- p142
+    column view (in Agenda)
+
+
+  ----
+  ---- p143
+    12 - Markup for Rich Content
+
+    =org has lightweight lang for this (*)
+
+    line
+    ----
+        \\
+    ----
+    line
+
+    *bold*  /italic/
+     _underlined*
+        =verbatim=
+            ~code~  *
+
+  ---- p144
+    sub / sup    _ / ^
+
+    Latex-like   \alpha \sig  m-tab (=ma)(??)
+
+
+  p145
+    c-c c-x \
+
+        toggle display as U8 chars
+
+    Embedded Latex ***
+        (+mathjax or im.s)
+    
+    \begin {eq .....
+             (+options)
+
+  p146
+    Preview Latex fragm.s
+        c-c c-x c-l
+    
+    cdlatex minor-mode *
+
+  ---- p147
+    c-c {     (*)
+     tab   `
+     ^     '
+     -
+
+        evince -p 18 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p147
+    Literal Ex.s
+    
+    #+BEGIN_EXAMPLE
+        ......
+
+    #+BEGIN_SRC emacs-lisp -n 20
+        ****
+
+    (ref:name)
+
+        [[ (name ]]  (+hover)
+
+                    -r
+
+            =remove labels
+
+  ---- p149
+    -l "((%s))"
+
+    Image-links *
+
+  ---- p150
+    c-c c-x c-v
+        toggle inline display of im.s
+    
+    #+CAPTION
+
+    - - - - 
+
+    Footnotes   [fn:1]
+
+        + + +
+    
+    (+cmds)
+
+  ----
+  ---- p153
+    13 - Exporting
+
+    ascii, beamer, html, ical, latex, md, odt,
+     org, texinfo, man
+            (+install more)
+
+    c-c c-e
+
+  p153
+      c-a
+      c-b
+      c-S(ubtree)
+      c-v
+    Export-Settings
+
+  ---- p154
+    AUTHOR, CREATOR ....
+    DATE, Email
+    SEL/EXCLUDE_TAGS
+      .....
+      .....
+      .....
+    '
+    *
+    _
+    :
+    <
+    \n
+
+  ---- p155
+     .....
+     .....
+     .....
+
+        incl. entities footn.
+    
+    H  num. of headl.s for exp.
+
+      todo
+    
+     |
+
+  p156  Table of Contents
+
+  p157  Include(-)Files (*)
+    example export scr
+
+    +specif lines
+
+        evince -p 19 ~/gdrive/rsc/Doks/em.org.pdf &
+    
+    ""three left curly brackets (!!)""
+
+
+  ---- p159  + Predefined Macros
+                 *
+        (keyw, title etc)
+
+  ---- p160  ' '#' '  =commented
+    clean text --- export (ascii etc)
+                    |
+  ----
+                width etc
+  ----
+  p162  Beamer exp. *!
+
+  p165  Org Beamer Mode
+         +c-c c-b
+
+    'A Beamer Emample' *
+  
+  p166  HTML Export
+
+    Doctype (etc)
+        incl html5 *
+
+  ---- p168
+    preamble / postamble
+
+  p170  Math formatting
+  
+  p171  text areas
+    CSS support *!
+
+  p172  + JS-support *!
+
+  ---- p173  Latex / PDF Export  **
+
+  p176  Quoting Latex Code **
+
+    + tables
+        im.s
+      plain lists
+
+  ---- p179
+    Source Blocks *
+  p180
+    Example Blocks
+     +special blocks (??)
+
+  ---- p181  Markdown Export
+
+    ODT Export *
+      + Extending ODT Export
+
+    (+doc, docx, rtf, pdf)
+
+  ---- p183
+    Converting + LOffice / Pandoc *
+
+    +Custom Styles
+        + Links
+    
+    Tables
+        im.s
+
+  ---- p185  Clickab. im.s (!!*)
+    Math
+    Latex
+  
+  p187  MathML / ODoc formulas
+
+    literal examples
+
+  ---- p188
+    Advanc. Topics
+    ODoc Style Files *
+    'one off-styles'
+
+    customize tables
+
+        evince -p 20 ~/gdrive/rsc/Doks/em.org.pdf &
+
+  ---- p192
+    Validate ODoc
+    Xml
+
+    OrgExport
+     ----
+    TexInfo Export *
+
+  ---- p193-194
+
+    Info directory file
+
+  p195  Quoting Texinfo Code **
+
+  p196  Plain Lists
+            
+            tables
+              im.s
+            quotes
+  p197
+        Ex.s
+    iCal Export     p199
+
+  p200
+    Advanc. Exp. Conf.
+
+    hooks (=elisp*)
+        |
+  ---- p201
+    Filters (**)
+
+  p202
+    extend existing backend
+
+    p203  export to minimal HTML
+
+  ----
+  ---- p204
+    14 - Publishing
+
+        += convert files into pdf (*)
+
+    sources + destinations
+
+  p206  Options for the exporters
+            (+for the diff formats)
+
+  p210  'Publishing Links'
+            (='create link fr. one org file to another')
+
+  p211
+    Generate a Sitemap *!!
+
+  p212
+    Generate an index
+    
+        +rsync/union ?
+    
+    (+Example Conf.s)
+
+  ---- p214  Trigger the Public(ation(??))
+
+  ----
+  ---- p215
+    15 - Working w. Source Code
+        ((=CHECK/LISTEN MORE (!!!!!) ))
+          ***!
+    
+      - uses appropr. maj mode
+      - Can extract code +
+         export to source files
+
+    Compile the Code
+
+  ---- p216
+    Structure of Code Blocks *!!
+
+  p217
+    15.3 Using Header arguments *
+          + (setq  | ..... |  *
+
+  p218  Code block specif.
+    
+        evince -p 21 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    #+CALL:
+
+    15.4 Environm. of a CodeBl.
+            +passing arg.s
+        v
+        v
+        v
+        v
+        v
+        v
+        v
+
+  p224
+    choosing a wdir (*!!)
+
+  p225
+    headers + footers (?)
+        (=elisp*)
+    
+  15.5 Eval.ing Code Blocks
+   *!  #+CALL: call_<name> **
+
+  p227
+    limit codeblock evaluation
+
+    Cache results
+
+  15.6 Results of Eval.  v
+                         v
+                         v
+                         v
+                         v
+                         v
+                         v
+                        v
+                       v
+  p232
+    Post-processing
+            :post  (+Example
+
+  p233
+    Exporting Code blocks
+        'code', results, both, none
+
+  p234
+    15.8 Extracting Source Code
+
+  p236
+    Supported Langs *!
+
+  p237
+    Edit Source Code *!
+
+    c-c '
+      c-x c-s
+
+    <<Ref to o(ther(??)) Code blocks>>
+        "noweb"
+
+  p241
+    15.12  Libr. of Babel
+      = 'a collection of code blocks'
+
+    Key bindings
+      + useful functions *
+
+    c-c c-c  (etc)
+
+  ---- p242
+    15.14 Batch Exec. (+elisp) *
+
+  ----
+  ---- p243
+    16 - Misc. *
+
+    esc-tab  cs-i  (*)
+
+    Insert Template
+
+        c-c c-,
+
+     a
+     c
+     .
+     .
+     .
+     .
+
+  ----
+
+    16.3  Speed Keys
+            (=single keys in headers)
+
+    16.4  A Cleaner Outline View
+
+  p245  Org indent mode
+    - hard indentation
+
+        evince -p 22 ~/gdrive/rsc/Doks/em.org.pdf &
+  
+  p246
+    16.5  c-c c-s  (etc) *
+
+    16.6
+      = org num min. mode  *
+    
+    (+ 'turn on globally for all org files)
+
+
+    16.7
+        c-c c-c  (!!)
+
+    16.8   p247-250
+        In Buf. Settings
+            (=summary)
+
+     #+ARCHIVE:  etc
+         .
+         .
+         .
+         .
+
+        evince -p 23 ~/gdrive/rsc/Doks/em.org.pdf &
+
+    16.9 Org Syntax
+            (on Worg)
+
+      a-:    ((= inspect syntax))  *
+
+    16.10
+      c-c c-x i
+
+      Escape char.
+
+
+      Code eval.  + secur.
+
+
+    16.3  Packages that Org cooperates with
+
+        calc.el
+        constants.el
+        cdlatex
+         imenu
+        speedbar
+        tabk
+
+        (+pack.s that conflict w. org)
+
+
+}}}
+
+}}}
+Compiling/Working with Code {{{
+Progr.Langs Plugins [***(!!)] {{{
+  Python {{{
+    search: emacs python code completion
+    https://tkf.github.io/emacs-jedi/latest/
+    https://realpython.com/account/signup/?intent=continue_reading&next=%2Femacs-the-best-python-editor%2F
+    https://www.emacswiki.org/emacs/PythonProgrammingInEmacs
+    https://steelkiwi.com/blog/emacs-configuration-working-python/
+    https://pythonawesome.com/an-emacs-package-to-bring-powerful-python-editing-to-emacs/
+    https://emacs.stackexchange.com/questions/9696/how-do-you-create-a-robust-python-ide-with-emacs-as-the-text-editor
+  }}}
+  Android {{{
+    https://hypecyclist.org/post/tips-on-android-development-using-emacs/
+    https://stackoverflow.com/questions/3644747/how-can-i-develop-for-android-in-emacs
+    https://leeadams.dev/blog/i-use-emacs-for-android-development-ama
+  }}}
+}}}
+
+code navigation:
+  project-find-regexp
+  c-x 0
+  a-,
+  a-.
+  jump to iostream (=defs etc)    c-click iostream
+
+a-x compile
+a-x recompile
+make (and g++)
+
+https://stackoverflow.com/questions/740836/compiling-c-programs-with-emacs-on-windows
+        https://www3.cs.stonybrook.edu/~alee/g++/g++on_emacs.html
+    https://emacs.stackexchange.com/questions/38421/how-to-compile-and-run-a-c-file
+    https://www.emacswiki.org/emacs/CompileCommand
+
+https://www.emacswiki.org/emacs/FlyMake
+  https://www.flycheck.org/en/latest/user/installation.html#use-package
+https://www.emacswiki.org/emacs/CollectionOfEmacsDevelopmentEnvironmentTools
+  https://www.emacswiki.org/emacs/CEDET_Quickstart
+  https://cedet.sourceforge.net/
+
+}}}
+lsp-mode ide, tree-sitter(?? etc) {{{
+  https://www.youtube.com/watch?v=E-NAM9U5JYE
+
+      https://github.com/emacs-tree-sitter/elisp-tree-sitter
+}}}
+cscope {{{
+  https://www.emacswiki.org/emacs/CScopeAndEmacs
+    cscope alternatives
+}}}
+. csharp-mode {{{
+  https://www.emacswiki.org/emacs/CSharpMode
+    https://github.com/emacs-csharp/csharp-mode/issues/271
+  https://0x85.org/csharp-emacs.html
+}}}
+Clojure dev(!!) {{{
+
+Which plugins would be useful to install in Emacs for Clojure development?
+
+Essential Plugins for Clojure Development in Emacs
+Here are some highly recommended plugins for Clojure development in Emacs:
+
+Core Plugins:
+Cider: A comprehensive Clojure development environment for Emacs. It provides features like REPL integration, code completion, debugging, and more.
+paredit: A mode for editing structured data in Emacs, which is particularly useful for working with Clojure's syntax.
+flycheck: A linter that can help you identify errors and potential issues in your Clojure code.
+Additional Plugins:
+projectile: A project management plugin that provides features like project searching, file navigation, and buffer management.
+undo-tree: A plugin that allows you to undo and redo changes in a more granular way.
+helm: A powerful framework for searching and selecting items in Emacs, which can be used for various tasks like file navigation, buffer switching, and more.
+dired: A file manager built into Emacs that provides a powerful way to interact with your filesystem.
+Datomic-Specific Plugins (if applicable):
+datomic-mode: A plugin specifically designed for working with Datomic in Emacs. It may provide features like query completion, schema visualization, and connection management.
+Note: The specific plugins you may need will depend on your preferences and project requirements. You can explore the Emacs package archive (ELPA) to discover additional plugins that might be useful for your workflow.
+
+Installation:
+
+To install these plugins, you can use Emacs' built-in package manager. Open Emacs and press M-x list-packages. Use the C-s command to search for the desired plugin, then press Enter to install it.
+
+By using these plugins, you can create a highly productive and efficient Clojure development environment in Emacs.
+
+}}}
+ag/ack/grep {{{
+  https://github.com/Wilfred/ag.el
+    https://github.com/emacsorphanage/helm-ag
+}}}
+guile ide [__] {{{
+  https://www.emacswiki.org/emacs/GuileIde
+  https://ajnirp.github.io/Emacs-Guile-Primer/
+https://www.reddit.com/r/guile/comments/ksbgpt/guile_hacker_handbook_emacs/
+https://www.emacswiki.org/emacs/GuileEmacs
+https://www.gnu.org/software/guile/manual/html_node/Using-Guile-in-Emacs.html
+https://courses.cs.washington.edu/courses/cse341/01wi/linux-emacs/guile-emacs.html
+}}}
+eshell {{{
+  https://www.masteringemacs.org/article/complete-guide-mastering-eshell
+}}}
+Elisp (including em28 builtin cheat-sheet) {{{
+http://xahlee.info/emacs/emacs/modernization_of_elisp.html
+
+    https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet
+M-x shortdoc-display-group
+
+    https://github.com/bbatsov/emacs-lisp-style-guide
+    https://www.emacswiki.org/emacs/CodingStyle
+ELisp Cookbook, Style Guide, Nifty Tricks (etc) - Links {{{
+
+https://masteringemacs.org/reading-guide        https://www.masteringemacs.org/article/evaluating-elisp-emacs
+
+    https://github.com/p3r7/awesome-elisp
+https://alhassy.github.io/ElispCheatSheet/
+https://www.emacswiki.org/emacs/ElispCookbook
+}}}
+        https://7id.xray.aps.anl.gov/software/emacs/html/elisp_44.html
+        https://www.gnu.org/software/emacs/manual/html_node/elisp/Tips.html
+    --
+https://www.emacswiki.org/emacs/EmacsNiftyTricks
+
+
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/gnu_emacsman.txt
+
+___ElispStartwith
+~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/Elisp-IntroTo.txt
+  ~/Empire/Doks/Comp/emacs/elisp_refman.pdf
+      ~/Dropbox/rsc/Doks/elisprefman.annot.pdf
+  https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html        #ELISP INTRO
+    ~/Dropbox/rsc/data/lists/learnqna/vanki/comp/lang/elisp/
+        elisp_refman.bmk01-02.txt
+        elisp_refman.bmk03-04.txt
+        elisp_refman.bmk05-06.txt
+        elisp_refman.bmk07-08.txt
+        elisp_refman.bmk09-10.txt
+        elisp_refman.bmk10--12.txt
+        elisp_refman.bmk12--14.txt
+}}}
+https://github.com/emacs-mirror/emacs/blob/master/lisp/emacs-lisp/cl-lib.el
+gdb {{{
+  https://undo.io/resources/gdb-watchpoint/using-gdb-emacs/
+}}}
+indentation {{{
+setting level (+only spaces)
+
+  https://www.emacswiki.org/emacs/NoTabs
+      https://www.emacswiki.org/emacs/IndentationBasics
+  https://stackoverflow.com/questions/69934/set-4-space-indent-in-emacs-in-text-mode
+  https://home.cs.colorado.edu/~main/cs1300-old/cs1300/doc/emacs/emacs_24.html
+          https://dougie.io/emacs/indentation/
+}}}
+code completion {{{
+  https://superuser.com/questions/231384/how-to-get-code-completion-in-emacs [***]
+}}}
+Pdf-Tools (*(*)) {{{
+https://github.com/mishoo/pdf-mode.el  [****]
+  https://itexpertly.com/how-to-view-and-annotate-pdf-files-in-emacs/
+
+em:pdf-tools(**!) {{{
+
+james cash**:  https://www.youtube.com/watch?v=zqc-CWm4DGE
+    https://github.com/politza/pdf-tools (****(!!))
+http://pragmaticemacs.com/emacs/view-and-annotate-pdfs-in-emacs-with-pdf-tools/
+
+c-c c-l         store cliplink (=in reading list(??))
+--
+c-c c-a h       highlight w. yellow
+c-c c-a t       annot. w. text
+c-c c-a o       strikethrough text
+c-c c-a D       del. an annot.
+
+}}}
+.   Emacs Pdf-Tools****  (+Org-Mode) {{{
+    https://github.com/politza/pdf-tools
+      https://emacsnotes.wordpress.com/2018/08/09/222/  #=older docview
+    https://github.com/politza/pdf-tools/tree/master/lisp
+          (=clone down + search/extract all 'define-key' *****)
+        eg. c-c c-c   commit, c-c c-q    abort, 
+         c-c c-f, space
+            l   list annots
+            a   (dired?)
+            (d   display annot.s)
+            D   del
+            t   add text annot
+            m   markup annotation
+            s   squiggly
+            u   underline
+            o   strikeout
+            h   highlight
+         +Menus (=change colors etc)
+        annot **(*!)
+            https://github.com/politza/pdf-tools/blob/master/lisp/pdf-annot.el
+        cache
+        dev
+        history
+        info
+        isearch
+        links
+        loader
+        misc
+        occur
+        outline
+        sync
+        tools
+        util
+        view
+        virtual
+    http://alberto.am/2020-04-11-pdf-tools-as-default-pdf-viewer.html
+    --
+    https://emacs.stackexchange.com/questions/19686/how-to-use-pdf-tools-pdf-view-mode-in-emacs
+    https://www.emacswiki.org/emacs/PdfTools
+     https://www.emacswiki.org/emacs/pdftools.el  (??)
+----
+edit (raw) pdf w. emacs
+    https://emacs.stackexchange.com/questions/49/how-to-view-and-edit-pdf-files-in-emacs
+    https://github.com/mishoo/pdf-mode.el
+            http://qpdf.sourceforge.net/
+}}}
+https://github.com/vedang/pdf-tools  https://pdftools.wiki/555b4a2a
+
+}}}
+dired (+icicles) {{{
+  https://www.youtube.com/watch?v=PMWwM8QJAtU
+
+  https://www.opensourceforu.com/2015/09/the-basics-of-dired-mode-in-emacs/
+        https://www.emacswiki.org/emacs/Icicles_-_Dired_Enhancements
+
+open directory:
+n p  c-n c-p
+file-mark      %
+! R Copy
+&libreoffice   (open with external program)
+q
+? M Y
+
+}}}
+include/show images __ __ __!! {{{
+
+To automatically load and display images in Emacs, you can use the image-mode package. This package provides functions for loading and displaying images within Emacs buffers.
+
+Here's a step-by-step guide on how to automatically load and display images in Emacs:
+
+Install the image-mode package:
+
+If you haven't already, install the image-mode package using your preferred package manager. For example, if you're using package.el, you can add the following line to your ~/.emacs file:
+
+Lisp
+(package-install-from-url "https://melpa.org/packages/image-mode.el")
+
+Add the following code to your ~/.emacs file:
+
+Lisp
+(require 'image-mode)
+
+(add-hook 'after-file-read-hook 'image-display-inline-images)
+
+This code will enable image display in Emacs buffers and ensure that images are automatically loaded and displayed when a file is opened.
+
+Restart Emacs:
+
+After saving the changes to your ~/.emacs file, restart Emacs for the changes to take effect.
+
+Now, when you open a text file containing image links, Emacs will automatically load and display the images within the buffer. You should no longer need to click or press Enter on the image links.
+
+Very nice! And I'm trying to find it, but could you remind me of the syntax in my text file for linking to the file.
+The syntax for linking to an image file in an Emacs text file depends on the format you want to use. Here are two common options:
+
+Using [[..]] links:
+
+[[image file://path/to/image.png]]
+
+This syntax uses Emacs's built-in link system. When you place your cursor on the link, Emacs will display a preview of the image. Click on the link to view the full-sized image.
+
+Using org-image-link links:
+
+[[image http://path/to/image.png]]
+
+This syntax uses the org-mode package's image linking feature. This method allows you to embed images directly into the text, without the need for any additional clicking or hovering.
+
+Both methods will automatically load and display the images in Emacs once you've enabled image display using the image-mode package and the after-file-read-hook.
+
+    iimage.el (**)
+        https://stackoverflow.com/questions/9780124/insert-image-into-text-buffer
+        https://github.com/typester/emacs/blob/master/lisp/iimage.el
+        https://aidan.codes/blog/2010/10/displaying-inline-images-in-emacs-org-mode/  **!
+}}}
+image dired {{{
+
+em:image-dired|dired-plus(**) {{{
+
+https://ryanfaulhaber.com/posts/cool-emacs-dired/
+    ~/Dropbox/rsc/aubooks/comp/image-dired.emacs.txt
+
+. "L =" rotate, move around, resize, image(??) html gallery
+- Run Imag.(dired?) on im. fr. w. in Em. (*(??))
+- 'Info-goto-node .....   Image-Dired  (!/??)
+(( - c-h k <f5> c-e  ???))
+
+ -- --
+
+- browse, organize, tag
+- "You can read more about ..." + im-dired.el
+      define-key--section (=past mid-file**)
+- Bookm. Tags
+- Features *!
+   ...
+   ...
+   ...
+     'dired-do-shell-command'
+(- respect exif-orientation)
+(- Gallery  + tags-links *!  + add CSS-file (=to style the gallery))
+
+ -- -- --
+ -- -- --
+
+[=last section(!!)]
+
+enter image-dired (*) ; m (=mark image-file)  + c-t d (=show marked as thumbs *)
+a-x image-dired (+dir(ectory))
+
+open larger image preview fr. thumbnail * ; Ent
+(move around in (=image preview-)buffer (??(/*)) ; arrowkeys)
+display next/prev. image ; space // del.
+
+view im. in orig. size // w. external program ; c-u Ent // c-Ent
+
+ -- --
+
+del. image ; flag im. for deletion in dired (=d) + delete
+del.(=remove?) thumbnail im. fr. thumbnail buffer ; c-d
+
+[image-dired-db-file]
+mark files for tagging *! ; m c-t t (=fr. dired buffer or thumbnail buffer)
+view files marked w. cert. tag (??/!) ; c-t d
+
+- tag / rm tag directly fr. thumbnail buffer ; t t / t r  *(*)
+- enter comment for im. (=fr. thumbnail buffer / dired) **! ; c / c-t c
+- Rotat. image left/right *  ("+jpegtran"(?)) * ; l / r  #"L/R"
+
+}}}
+
+  ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/image-dired.emacs.txt
+
+  http://ergoemacs.org/emacs/emacs_view_images.html
+}}}
+web browser: wowser, w3m etc {{{
+  https://www.emacswiki.org/emacs/CategoryWebBrowser
+  https://www.emacswiki.org/emacs/w3
+  https://www.emacswiki.org/emacs/emacs-w3m
+  https://github.com/emacs-w3m/emacs-w3m
+    https://www.emacswiki.org/emacs/EmacsXWidgets
+  https://en.wikipedia.org/wiki/Eww_(web_browser)
+
+    emacs w3m
+        https://emacs-w3m.github.io/
+        https://www.emacswiki.org/emacs/emacs-w3m
+                https://www.emacswiki.org/emacs/w3m
+            https://github.com/emacs-w3m/emacs-w3m
+}}}
+Translate-Shell {{{
+  https://github.com/xuchunyang/translate-shell.el
+    https://www.emacswiki.org/emacs/GoTranslate
+}}}
+vimish fold {{{
+Vim Folding In Evil (**) {{{
+https://emacs.stackexchange.com/questions/14781/how-can-i-replicate-vims-code-folding
+    https://github.com/magnars/fold-this.elttps://github.com/magnars/fold-this.el
+https://github.com/matsievskiysv/vimish-fold @@ __
+[ https://github.com/matsievskiysv/vimish-fold/blob/master/vimish-fold.el ]
+}}}
+    +Org Mode Vimish Fold
+}}}
+Org Roam {{{
+  https://www.youtube.com/watch?v=AyhPmypHDEw
+
+  https://www.orgroam.com/manual.html
+}}}
+'emacs anki' (=org drill) {{{
+
+  Org-Drill
+    https://orgmode.org/worg/org-contrib/org-drill.html
+    https://github.com/louietan/org-drill
+      https://numbersmithy.com/spaced-repetition-in-emacs-org-mode/
+    search: anki like flashcards practice in emacs
+      https://tools2study.com/en/learn/anki-alternatives/
+    emacs anki
+      https://github.com/aytung/emacs-anki/blob/master/emacs.el
+}}}
+emacspeak(!) {{{
+  https://www.emacswiki.org/emacs/EmacSpeak
+
+http://emacspeak.sourceforge.net/
+https://www.emacswiki.org/emacs/EmacSpeak
+https://github.com/tvraman/emacspeak
+http://tvraman.github.io/emacspeak/manual/
+}}}
+draw svg/xpm(?) graphics {{{
+}}}
+Videos/Graphics in Emacs {{{
+  https://github.com/emacs-eaf/emacs-application-framework [****]
+}}}
+markdown mode {{{
+  https://jblevins.org/projects/markdown-mode/
+    https://leanpub.com/markdown-mode [**]
+}}}
+irc {{{
+irc in emacs
+    https://www.emacswiki.org/emacs/ERC
+}}}
+.  latex/context {{{
+  AUCTeX
+  https://www.emacswiki.org/emacs/AUCTeX
+}}}
+texinfo {{{
+  https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.pdf
+}}}
+(ddoc ??) {{{
+}}}
+EXWM {{{
+  https://wiki.archlinux.org/title/EXWM
+  https://www.youtube.com/watch?v=f7xB2fFk1tQ&list=PLEoMzSkcN8oNPbEMYEtswOVTvq7CVddCS
+}}}
+. bongo (+amarok etc) {{{
+https://www.emacswiki.org/emacs/BongoHacks
+https://protesilaos.com/codelog/2020-08-06-emacs-bongo-extras/
+    https://github.com/dbrock/bongo
+https://robinst.github.io/taglib-ruby/
+
+https://www.emacswiki.org/emacs/MusicPlayers
+https://github.com/dbrock/bongo
+https://github.com/dbrock/bongo/blob/master/bongo.el
+https://www.emacswiki.org/emacs/Bongo
+https://www.emacswiki.org/emacs/EMMS
+  https://www.emacswiki.org/emacs/amarok.el
+}}}
+
+
+searches lifted from 'weblinks' {{{
+https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode
+
+https://www.gnu.org/software/emacs/manual/html_mono/cl.html
+
+https://www.emacswiki.org/emacs/ElispCookbook
+https://www.emacswiki.org/emacs/EmacsNiftyTricks
+    https://www.emacswiki.org/emacs/EmacsCrashTips
+https://wiki.call-cc.org/emacs emacs chicken-scheme
+    https://www.inmotionhosting.com/support/edu/emacs/dired/
+
+http://cl-cookbook.sourceforge.net/emacs-ide.html
+
+emacs guile: paredit, geiser
+
+vim|emacs as a python ide
+https://rapphil.github.io/vim-python-ide/
+        https://peach-melpa.org/themes/eziam-theme
+https://realpython.com/emacs-the-best-python-editor/
+Emacs Edit PHP (!!)
+    https://github.com/emacs-php/php-mode
+http://xahlee.info/emacs/emacs/emacs_init_index.html
+
+http://paulgraham.com/avg.html  #about clisp
+    Search: Emacs Lisp Cheat Sheet
+    How to Learn Emacs: 2 Hand Drawn CheatSheets ***
+        https://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/
+
+.emacs lisp (ref, etc) {{{
+    https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
+    https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
+    https://duckduckgo.com/?q=emacs+lisp+functions+reference+list&t=newext&atb=v332-1&ia=web
+        https://www.math.utah.edu/docs/info/elisp_12.html
+    https://stackoverflow.com/questions/559634/emacs-lisp-function-guide
+    https://ftp.gnu.org/old-gnu/Manuals/elisp-manual-20-2.5/html_chapter/elisp_12.html
+    https://www.math.utah.edu/docs/info/emacs-lisp-intro_8.html
+    https://stackoverflow.com/questions/605785/how-do-i-get-a-list-of-emacs-lisp-non-interactive-functions
+}}}
+        https://www.newcomplexlight.org/emacs-lisp-nano-cheat-sheet/
+    https://www.masteringemacs.org/article/emacs-builtin-elisp-cheat-sheet
+        https://www.dunebook.com/best-emacs-plugins/
+    http://xahlee.info/emacs/emacs/elisp_format.html
+
+            --
+                https://github.com/hlissner/doom-emacs
+                https://github.com/hlissner/doom-emacs/blob/master/docs/getting_started.org
+
+    https://www.emacswiki.org/emacs/ElispCookbook
+https://www.emacswiki.org/emacs/SiteMap
+
+    https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-lilypond.html  (***(!!))
+                    https://www.emacswiki.org/emacs/AutoCompleteSources
+Emacs: Evil Install(*), package-man,  insert image*, imagemode,  open file w. ext. progr, JS in Emacs(**), WebDev in Emacs,  dlang-mode, ly-mode! {{{
+
+https://github.com/emacs-evil/evil
+    https://www.emacswiki.org/emacs/ELPA
+                        https://github.com/technomancy/package.el
+    https://readthedocs.org/projects/evil/downloads/pdf/latest/
+----
+https://github.com/emacs-evil/evil-collection
+
+SystemCrafters (=video list) {{{
+
+    https://www.youtube.com/c/SystemCrafters/videos?view=0&sort=da&flow=grid
+
+    ___start(=emacs(!!))
+
+30:49
+Now playing
+Introduction to Functional Programming with F# - Part 1 [Episode 001]
+102K views5 years ago
+
+17:45
+Now playing
+Records and Discriminated Unions - F# Part 2 [Episode 002]
+24K views5 years ago
+
+43:19
+Now playing
+Functional Game Logic with State Pipelines - F# Part 3 [Episode 003]
+23K views5 years ago
+
+26:33
+Now playing
+Functional Concurrency with the Actor Model - F# Part 4 [Episode 004]
+12K views5 years ago
+
+1:03:23
+Now playing
+Parsing Text with Combinators - F# Part 5 [Episode 005]
+12K views5 years ago
+
+1:14:03
+Now playing
+Live-Coding a BrowserSource Overlay Server for OBS
+1.4K viewsStreamed 1 year ago
+
+1:01:01
+Now playing
+Stream Hacking: Custom OBS Overlay Server
+749 viewsStreamed 1 year ago
+
+1:29:16
+Now playing
+Stream Hacking: Fetching Live Stream Details with YouTube Data API
+2.1K viewsStreamed 1 year ago
+
+1:24:20
+Now playing
+Stream Hacking: Creating a Live Data Channel for Custom OBS Overlay
+635 viewsStreamed 1 year ago
+
+1:06:38
+Now playing
+Stream Hacking: Creating a Live Chat Widget for our OBS Overlay
+786 viewsStreamed 1 year ago
+
+    ___start
+
+58:30
+Now playing
+Emacs From Scratch #1 - Getting Started with a Basic Usable Configuration
+74K viewsStreamed 1 year ago
+    https://www.youtube.com/watch?v=74zOY-vgkyw&t=253s
+----
+- systemcreated init-file for emacs:  ~/.emacs (=??)
+- create clean init-file:  touch init.el
+ - open clean emacs-session:  emacs -q -l init.el
+
+
+54:42
+Now playing
+Emacs From Scratch #2 - Adding Helpful UI Improvements
+24K viewsStreamed 1 year ago
+    https://www.youtube.com/watch?v=IspAZtNTslY
+
+59:26
+Now playing
+Emacs From Scratch #3 - Key Bindings and Evil
+20K viewsStreamed 1 year ago
+
+1:01:25
+Now playing
+Emacs From Scratch #4 - Projectile and Magit
+18K viewsStreamed 1 year ago
+
+47:37
+Now playing
+Emacs From Scratch #5 - Org Mode Basics
+24K viewsStreamed 1 year ago
+
+1:01:51
+Now playing
+Emacs From Scratch #6 - Organize Your Life with Org Mode
+22K viewsStreamed 1 year ago
+
+56:03
+Now playing
+Emacs From Scratch #7 - Configure Everything with Org Babel
+13K viewsStreamed 11 months ago
+
+48:30
+Now playing
+Emacs Tips - How to Show Reminders for Org Mode Tasks
+4.9K viewsStreamed 11 months ago
+
+1:04:44
+Now playing
+Emacs From Scratch #8 - Build Your Own IDE with lsp-mode
+30K viewsStreamed 11 months ago
+
+32:24
+Now playing
+Emacs Tips - How to Create Your Own Color Theme
+4.4K viewsStreamed 11 months ago
+
+1:03:26
+Now playing
+Emacs From Scratch #9 - Learn to Love the Terminal Modes
+11K viewsStreamed 11 months ago
+
+37:32
+Now playing
+Emacs Tips - How to Use File and Directory Local Variables
+2.9K viewsStreamed 11 months ago
+
+56:23
+Now playing
+Emacs From Scratch #10 - Effortless File Management with Dired
+12K viewsStreamed 11 months ago
+
+50:00
+Now playing
+Emacs IDE - How to Debug Your Code with dap-mode
+13K viewsStreamed 11 months ago
+
+1:08:16
+Now playing
+Emacs Desktop Environment #1 - Getting Started with EXWM
+20K viewsStreamed 11 months ago
+
+31:38
+Now playing
+Emacs Tips - How to Give Presentations with Org Mode
+10K viewsStreamed 10 months ago
+
+51:44
+Now playing
+Emacs Desktop Environment #2 - Improving the EXWM Experience
+5.1K viewsStreamed 10 months ago
+1:05:50
+Now playing
+Emacs IDE - Python Development Configuration
+18K viewsStreamed 10 months ago
+
+52:28
+Now playing
+Optimizing Window Placement in EXWM - Emacs Desktop Environment #3
+2.6K viewsStreamed 10 months ago
+
+50:10
+Now playing
+How to Create and Manage Multiple Windows - Emacs Tips
+4K viewsStreamed 10 months ago
+
+40:23
+Now playing
+Using Multiple Monitors in EXWM - Emacs Desktop Environment #4
+1.9K viewsStreamed 10 months ago
+
+19:00
+Now playing
+Organize Your Windows with the Tab Bar in Emacs 27
+6K views10 months ago
+
+15:01
+Now playing
+Dynamic Tiling Windows like dwm in Emacs with Edwina
+3.4K views9 months ago
+
+39:11
+Now playing
+The Perfect Panel: Integrating Polybar with Emacs - Emacs Desktop Environment #5
+4.8K viewsStreamed 9 months ago
+
+35:36
+Now playing
+Unlock the Power of the Daemon with emacsclient
+4.9K views9 months ago
+
+32:45
+Now playing
+Give Emacs Psychic Completion Powers with prescient.el
+4K views9 months ago
+
+5:22
+Now playing
+Happy Holidays, and plans for 2021!
+850 views9 months ago
+
+29:57
+Now playing
+Enabling Desktop Notifications with Dunst - Emacs Desktop Environment #6
+1.9K views9 months ago
+
+25:35
+Now playing
+Teach Emacs to Keep Your Folders Clean
+3.3K views9 months ago
+
+1:01:53
+Now playing
+Streamline Your E-mail Management with mu4e - Emacs Mail
+10K viewsStreamed 9 months ago
+
+26:39
+Now playing
+5 Reasons to Learn Emacs in 2021
+44K views9 months ago
+
+28:25
+Now playing
+Managing Multiple Email Accounts with mu4e and mbsync - Emacs Mail
+3.2K views9 months ago
+
+39:52
+Now playing
+Introduction to Emacs Lisp - Learning Emacs Lisp #1
+20K viewsStreamed 9 months ago
+
+38:14
+Now playing
+How to Encrypt Your Passwords with Emacs
+4.7K views9 months ago
+
+26:31
+Now playing
+What is System Crafting?
+2.5K views9 months ago
+
+1:16:13
+Now playing
+Types, Conditionals, and Loops - Learning Emacs Lisp #2
+8.6K viewsStreamed 8 months ago
+
+42:38
+Now playing
+Compose and Send Email with Emacs - Emacs Mail #3
+4.3K views8 months ago
+
+17:18
+Now playing
+The Basics of Dotfiles
+5.1K views8 months ago
+
+1:02:53
+Now playing
+Defining Functions and Commands - Learning Emacs Lisp #3
+5.4K viewsStreamed 8 months ago
+
+29:13
+Now playing
+Enhance Your Email with Org Mode - Emacs Mail #4
+4.1K views8 months ago
+
+16:23
+Now playing
+How to Create a Dotfiles Folder
+4.6K views8 months ago
+
+59:37
+Now playing
+Defining Variables and Scopes - Learning Emacs Lisp #4
+3.4K viewsStreamed 8 months ago
+
+41:56
+Now playing
+Craft an Email Workflow with Org Mode
+3.7K views8 months ago
+
+1:58:00
+Now playing
+System Crafters Live! - Emacs Startup Speed, Emacs News, Q&A
+3.3K viewsStreamed 8 months ago
+
+18:27
+Now playing
+Keeping Your Emacs Packages Up To Date - Emacs From Scratch #11
+2.6K views8 months ago
+
+1:57:58
+Now playing
+System Crafters Live! - Emacs Future in Danger?, Config Hacking, Q&A
+5.7K viewsStreamed 8 months ago
+
+58:14
+Now playing
+How to Cut Emacs Start Up Time in Half! - Emacs From Scratch #12
+4.7K views7 months ago
+
+44:58
+Now playing
+Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior
+4.1K views7 months ago
+
+1:55:06
+Now playing
+System Crafters Live! - Is Lisp a dead language? • Emacs Lisp Hacking • Q&A
+3.1K viewsStreamed 7 months ago
+
+2:01:52
+Now playing
+System Crafters Live! - Should you do everything in Emacs? • Becoming a Lisp Ninja • Q&A
+2.7K viewsStreamed 7 months ago
+
+1:03:07
+Now playing
+Reading and Writing Buffers in Practice - Learning Emacs Lisp #5
+4K views7 months ago
+
+2:02:09
+Now playing
+System Crafters Live! - Emacs Native Comp will change *everything* • Trying out Eglot • Q&A
+6K viewsStreamed 7 months ago
+
+1:11:56
+Now playing
+The Absolute Beginner's Guide to Emacs
+50K views7 months ago
+
+1:55:46
+Now playing
+System Crafters Live! - What is GNU? • Is Sourcehut the future? • Q&A
+2.7K viewsStreamed 7 months ago
+
+51:50
+Now playing
+An Introduction to GNU Guix
+16K views6 months ago
+
+2:05:29
+Now playing
+System Crafters Live! - Static Websites with Emacs, Org Mode, and Sourcehut • Episode planning • Q&A
+2.6K viewsStreamed 6 months ago
+
+1:22:52
+Now playing
+Managing Files and Directories in Practice - Learning Emacs Lisp #6
+2.9K views6 months ago
+
+2:03:29
+Now playing
+System Crafters Live! - Gemini: The Hackers' Web • Dotfile Detective • Q&A
+2.3K viewsStreamed 6 months ago
+
+36:22
+Now playing
+Efficient Movement with Emacs Key Bindings - Emacs Essentials #2
+5.5K views6 months ago
+
+2:06:57
+Now playing
+System Crafters Live! - Dotfile Detective: tecosaur • Emacs News • Q&A
+2.3K viewsStreamed 6 months ago
+
+44:59
+Now playing
+Installing the GNU Guix Package Manager - Craft Your System with GNU Guix #2
+4.3K views6 months ago
+
+2:06:24
+Now playing
+System Crafters Live! - Ranking the Open Source Licenses • Live Hacking: Guile Scheme • Q&A
+1.9K viewsStreamed 6 months ago
+
+50:20
+Now playing
+Creating Custom Minor Modes - Learning Emacs Lisp #7
+2.4K views6 months ago
+
+2:02:40
+Now playing
+System Crafters Live! - I'm creating a new Lisp • Emacs News • Q&A
+3.1K viewsStreamed 5 months ago
+
+2:19:50
+Now playing
+System Crafters Live! - Lisp Compiler Progress • Live Lisp Hacking • Q&A
+1.7K viewsStreamed 5 months ago
+
+28:34
+Now playing
+Efficient Text Selection with Emacs Key Bindings - Emacs Essentials #3
+4.7K views5 months ago
+
+2:11:27
+Now playing
+System Crafters Live! - Trying New Emacs Packages: Vertico and Corfu • Emacs Lisp Hacking • Q&A
+3.1K viewsStreamed 5 months ago
+
+40:47
+Now playing
+Everyday Package Management with GNU Guix
+3.1K views5 months ago
+
+2:03:57
+Now playing
+System Crafters Live! - Should you use pre-made Emacs configs? • Emacs News
+1.9K viewsStreamed 5 months ago
+
+35:34
+Now playing
+Using Package Channels in GNU Guix - Craft Your System with Guix #4
+1.7K views5 months ago
+
+1:59:37
+Now playing
+System Crafters Live! - Building lsp-mode configurations • Emacs News
+2.5K viewsStreamed 5 months ago
+
+18:55
+Now playing
+Streamline Your Emacs Completions with Vertico
+7.9K views4 months ago
+
+25:37
+Now playing
+Doom Emacs or Spacemacs? Use both with Chemacs2!
+5.2K views4 months ago
+
+1:59:18
+Now playing
+System Crafters Live! - Replacing Ivy and Counsel with Vertico and Consult
+3.3K viewsStreamed 4 months ago
+
+2:11:12
+Now playing
+System Crafters Live! - Taking a look at Magit 3.0 • Streaming with Emacs Lisp
+2.8K viewsStreamed 4 months ago
+
+24:49
+Now playing
+Chat Like the 90's in Emacs with ERC
+3.5K views4 months ago
+
+2:01:56
+Now playing
+System Crafters Live! - Improving the IRC Experience in ERC
+1.3K viewsStreamed 4 months ago
+
+2:07:38
+Now playing
+System Crafters Live! - The Challenges of System Crafting
+2.2K viewsStreamed 4 months ago
+
+51:36
+Now playing
+Installing Guix as a Complete GNU/Linux System
+7.3K views4 months ago
+
+1:55:27
+Now playing
+System Crafters Live! - So you've installed GNU Guix, now what?
+2.4K viewsStreamed 3 months ago
+
+2:00:39
+Now playing
+System Crafters Live! - Text Adventuring in Emacs
+2.2K viewsStreamed 3 months ago
+
+32:51
+Now playing
+An Introduction to the Ultimate Git Interface, Magit!
+11K views3 months ago
+
+42:48
+Now playing
+straight.el: Advanced Emacs Package Management
+4.7K views3 months ago
+
+56:39
+Now playing
+9 Techniques to Boost Your Git Workflow with Magit
+6.2K views3 months ago
+
+1:58:00
+Now playing
+System Crafters Live! - Do we really need use-package in Emacs?
+2.4K viewsStreamed 2 months ago
+
+28:31
+Now playing
+Declutter Your Buffer Lists in Emacs with Perspective.el
+5.4K views2 months ago
+
+1:57:15
+Now playing
+System Crafters Live! - Is Emacs intimidating for beginners?
+3.1K viewsStreamed 2 months ago
+
+34:19
+Now playing
+Getting Started with Org Roam - Build a Second Brain in Emacs
+32K views2 months ago
+
+2:00:53
+Now playing
+System Crafters Live! - The Future of System Crafters
+2.4K viewsStreamed 2 months ago
+
+0:59
+Now playing
+Emacs Has a Built-in Pomodoro Timer?? #Shorts
+8.5K views2 months ago
+
+1:59:04
+Now playing
+System Crafters Live! - Can You Apply Zettelkasten in Emacs?
+4.8K viewsStreamed 2 months ago
+
+31:06
+Now playing
+Capturing Notes Efficiently in Emacs with Org Roam __
+11K views2 months ago
+
+2:02:23
+Now playing
+System Crafters Live! - Emacs Package Potluck (Trying Your Suggestions!)
+2.6K viewsStreamed 2 months ago
+
+2:09:11
+Now playing
+System Crafters Live! - Can We Fix a Bug in Emacs?
+2K viewsStreamed 1 month ago
+
+16:50
+Now playing
+Org Roam: The Best Way to Keep a Journal in Emacs
+10K views1 month ago
+
+2:04:54
+Now playing
+System Crafters Live! - We Need to Talk About EXWM
+3.1K viewsStreamed 1 month ago
+
+2:00:26
+Now playing
+Improving EXWM #1 // Hack Sessions
+2.3K viewsStreamed 1 month ago
+
+1:57:52
+Now playing
+System Crafters Live! - Exploring the Org Roam DB API
+2.1K viewsStreamed 1 month ago
+
+25:45
+Now playing
+Fix Your Git Commits Like a Rebase Expert with Magit
+3.4K views1 month ago
+
+2:01:07
+Now playing
+Improving EXWM #2 // Hack Sessions
+1.3K viewsStreamed 1 month ago
+
+2:00:56
+Now playing
+System Crafters Live! - Emacs Package Potluck: The Sequel
+1.6K viewsStreamed 1 month ago
+
+2:08:13
+Now playing
+System Crafters Live! - Integrating Nushell with Emacs
+2.5K viewsStreamed 1 month ago
+
+29:45
+Now playing
+5 Org Roam Hacks for Better Productivity in Emacs
+6.4K views1 month ago
+
+1:53:47
+Now playing
+Improving EXWM #3 // Hack Sessions
+1.2K viewsStreamed 4 weeks ago
+
+48:27
+Now playing
+System Crafters Live! - The Many Varieties of Emacs
+2.2K viewsStreamed 3 weeks ago
+
+1:07:42
+Now playing
+System Crafters Live! - The Many Varieties of Emacs (Part 2)
+1.4K viewsStreamed 3 weeks ago
+
+16:34
+Now playing
+Give Your Dotfiles a Home with GNU Stow
+3.5K views3 weeks ago
+
+2:08:23
+Now playing
+System Crafters Live! - Investigating use-package Alternatives
+1.4K viewsStreamed 2 weeks ago
+
+30:40
+Now playing
+Build Your Website with Org Mode
+6K views2 weeks ago
+
+1:09:55
+Now playing
+"Inverse Literate" Emacs Configurations - Hack Sessions
+1.9K viewsStreamed 2 weeks ago
+
+43:29
+Now playing
+"Inverse Literate" Emacs Configurations (Part 2) - Hack Sessions
+781 viewsStreamed 2 weeks ago
+
+1:56:14
+Now playing
+System Crafters Live! - A First Look at Guix Home
+2.1K viewsStreamed 1 week ago
+
+1:58:56
+Now playing
+Sharing Your Configuration with Guix Home - Hack Sessions
+859 viewsStreamed 1 week ago
+
+1:52:25
+Now playing
+System Crafters Live! - Comparing Project.el to Projectile
+1.6K viewsStreamed 6 days ago
+
+31:40
+Now playing
+Automated Org Mode Website Publishing with GitHub or SourceHut
+1.7K views2 days ago
+
+}}}
+some nice col.schemes:  https://emacsair.me/2017/09/01/magit-walk-through/  +  peach melpa(!)
+    https://github.com/abo-abo/swiper
+
+image mode | insert image into text buffer emacs            https://stackoverflow.com/questions/9780124/insert-image-into-text-buffer#9783413
+ --
+'open pdf w. evince in emacs'       https://stackoverflow.com/questions/25109968/in-emacs-how-to-open-file-in-external-program-without-errors#25124808
+        emacs webkit(!)     https://trac.webkit.org/wiki/WebKitGTK  (+search: xwidget emacs)
+            https://trac.webkit.org/wiki/WebKitEmacsTips
+
+https://www.dunebook.com/best-emacs-themes/
+        
+    https://masteringemacs.org/article/complete-guide-mastering-eshell
+        https://www.gnu.org/software/emacs/manual/html_mono/eshell.html
+
+https://orgmode.org/worg/org-tutorials/non-beamer-presentations.html#orgeda3a76
+
+https://www.gnu.org/software/emacs/manual/html_mono/cl.html
+
+        https://www.gnu.org/software/emms/manual/#Quickstart-Guide
+https://www.quora.com/What-are-some-of-the-most-useful-extensions-for-Emacs?share=1
+
+https://tess.oconnor.cx/2005/09/editing-javascript-in-emacs
+    js2 mode
+    https://steve-yegge.blogspot.com/2008/03/js2-mode-new-javascript-mode-for-emacs.html
+https://www.emacswiki.org/emacs/Js2Mode
+----
+https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode/blob/master/d-mode.el
+
+https://fransiska.github.io/emacs/2017/08/21/web-development-in-emacs
+https://linuxhint.com/best-web-development-emacs-plugins/
+
+}}}
+        https://github.com/nsceaux/lyqi         http://www.geoffhorton.com/lilymacs.html        https://lilypond.org/doc/v2.21/Documentation/usage/text-editor-support.html
+          https://github.com/mjago/Emacs/blob/master/lilypond/lilypond-mode.el  **
+.((  (evil install  ))  + evil-man(!)) + Emacs|SystemCrafters(**)   mu4e {{{
+https://github.com/emacs-evil/evil
+https://readthedocs.org/projects/evil/downloads/pdf/latest/
+https://melpa.org/#/getting-started
+https://evil.readthedocs.io/en/latest/overview.html
+https://www.emacswiki.org/emacs/Evil
+
+    systemcrafters: emacs       https://www.youtube.com/c/SystemCrafters/videos
+        ----
+        emacs and evil          https://www.youtube.com/watch?v=xaZMwNELaJY&t=3004s
+        a basic usable conf     https://www.youtube.com/watch?v=74zOY-vgkyw&t=2s
+        get started w. org roam     https://www.youtube.com/watch?v=AyhPmypHDEw&t=488s
+
+https://www.djcbsoftware.nl/code/mu/mu4e/index.html
+    http://cachestocaches.com/2017/3/complete-guide-email-emacs-using-mu-and-/
+            https://www.emacswiki.org/emacs/mu4e
+https://matt.hackinghistory.ca/2016/11/18/sending-html-mail-with-mu4e/
+https://learnings.desipenguin.com/post/sending-rich-text-emails-with-mu4e/
+https://www.djcbsoftware.nl/code/mu/mu4e/Sending-mail.html
+    https://www.djcbsoftware.nl/code/mu/mu4e/Writing-messages.html
+    --
+https://www.djcbsoftware.nl/code/mu/mu4e/Dired.html  (=attach files (**))
+
+    search: emacs speech synthesis
+        https://www.emacswiki.org/emacs/FestivalSpeechSynthesisSystem
+        https://www.emacswiki.org/emacs/EmacSpeak
+        https://github.com/gromnitsky/read-aloud.el
+        https://darkshadow.io/2020/08/01/speech-synthesis-on-linux.html
+
+}}}
+https://www.emacswiki.org/emacs/ElispCookbook
+        https://www.emacswiki.org/emacs/ExampleConfigurations
+https://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_node/emacs_toc.html     #EMACS MANUAL
+                https://learnxinyminutes.com/docs/elisp/
+    Elisp Tutorial part 1 Intro (etc) ***(*)        https://www.youtube.com/watch?v=CH0RUrO_oww
+https://www.emacswiki.org/emacs/LearnEmacsLisp
+    http://ergoemacs.org/emacs/elisp.html
+    https://www.emacswiki.org/emacs/SiteMap
+                    https://www.youtube.com/c/XahLee/videos
+
+edi xml w. emacs|vim (+xmlhacks) {{{
+    https://www.inmotionhosting.com/support/edu/emacs/nxml-mode/
+    https://etutorials.org/XML/xml+hacks/Chapter+2.+Creating+XML+Documents/Hack+13+Edit+XML+with+Vim/
+editing xml with vim emmet
+xml hacks *****     https://www.amazon.com/XML-Hacks-Industrial-Strength-Tips-Tools-ebook-dp-B004D4YI8O/dp/B004D4YI8O/ref=mt_other?_encoding=UTF8&me=&qid=&asin=B004D4YI8O&revisionId=&format=2&depth=1
+    https://www.openoffice.org/sl/ooobox/dokumentacija/Prednosti_formata_OOo.pdf
+    https://www.oreilly.com/library/view/xml-hacks/0596007116/ch02s04.html
+}}}
+
+    ----
+emacs as an ide     https://stackoverflow.com/questions/63421/using-emacs-as-an-ide
+        org-ql **       search: top emacs tips,  https://www.systutorials.com/emacs-tips-and-howtos/
+emacs outline mode      https://www.emacswiki.org/emacs/OutlineMode
+    https://orgmode.org/worg/org-contrib/org-drill.html  #'anki in org-mode' **
+cool emacs projects
+
+https://github.com/emacs-tw/awesome-emacs
+
+
+                    https://www.gnu.org/manual/
+        https://www.gnu.org/software/gnusound/Documentation/
+
+        https://github.com/atilaneves?tab=repositories
+Emacs as C++ IDE
+    https://irreal.org/blog/?p=4670
+    https://github.com/atilaneves/cmake-ide
+        https://nilsdeppe.com/posts/emacs-c++-ide
+
+}}}
+
+
+https://neovim.io/doc/user/channel.html
+https://dev.to/mr_destructive/vim-for-competitive-programming-3ai8
+  https://www.makeuseof.com/best-vim-plugins/
+https://www.tabnine.com/blog/vim-code-completion-for-any-language/
+https://mattermost.com/blog/how-to-install-and-set-up-neovim-for-code-editing/
+  https://vonheikemen.github.io/devlog/tools/neovim-plugins-to-get-started/
+https://github.com/neovim/neovim/wiki/Plugin-UI-architecture
+  https://github.com/neovim/neovim/wiki/Plugin-UI-architecture
+
+vim:fdm=marker:fdl=0:
