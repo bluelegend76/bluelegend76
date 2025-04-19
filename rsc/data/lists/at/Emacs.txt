@@ -1,4 +1,5 @@
 ~/bin/scripts/at/at.Emacs.bash
+
 https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
 Per N: Emacs-Dlang-UBUNTUINSTALL 2024 {{{
   Fork + Download PN GitLab Repo
@@ -5285,3 +5286,4 @@ https://mattermost.com/blog/how-to-install-and-set-up-neovim-for-code-editing/
 https://github.com/neovim/neovim/wiki/Plugin-UI-architecture
   https://github.com/neovim/neovim/wiki/Plugin-UI-architecture
 
+vim:fdm=marker:fdl=0:

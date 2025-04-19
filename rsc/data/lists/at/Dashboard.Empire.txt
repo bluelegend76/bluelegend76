@@ -14,10 +14,13 @@ Vanki LearnQna ----
 ~/Desktop/Scratch.txt
 
 
+    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
+
 multimedia:
     gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
 Vim/Emacs:
-    ....
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Vim.txt ../ref/comp/editor/vim/Vim-Tocs.txt ../ref/comp/editor/vim/vim_excommands-functions.txt ../ref/comp/editor/vim/vimscrhardw-quickindex.txt ../ref/comp/editor/vim/vim-patternregex.txt
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Emacs.txt ../ref/comp/editor/emacs/elisp_refman.txt ../ref/comp/editor/emacs/emacs-mastextend.check.txt ../ref/comp/editor/emacs/Em1-notes_x2.txt ../ref/comp/editor/emacs/orgman-emacs.index.txt ../ref/comp/editor/emacs/emacs-dired.txt ../ref/comp/editor/emacs/emacsman1.index.txt ../ref/comp/editor/emacs/emacsrefcard-org.txt ../ref/comp/editor/emacs/emacsrefcard-shortessential.txt ../ref/comp/editor/emacs/emacsrefcard-Long.txt
 
 file/media:
     gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt

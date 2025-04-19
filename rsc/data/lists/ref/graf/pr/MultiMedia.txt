@@ -1323,8 +1323,6 @@ Obs Studio (Win)
 ~/Dropbox/rsc/data/lists/at/Blender.g.txt
 ~/Dropbox/rsc/data/lists/ref/comp/sysadm/cmdl-fu.shell.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/au-transcribe/Py-VoiceCompute-Intro_2018.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/py/ipy/ipy-interactive-comp_2013.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/distro/NixGuix/NixpkgsRefman.txt
 ~/Dropbox/rsc/Doks/phone/graf/pr/Blender/blender-refman_pythonscripting.txt
 ~/Dropbox/rsc/Doks/phone/graf/vid/vidaudcompr.txt
 

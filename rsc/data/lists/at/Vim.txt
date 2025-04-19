@@ -1,4 +1,5 @@
 ~/bin/scripts/at/at.Vim.bash
+    ___pickout
 ~/Dropbox/rsc/data/lists/ref/comp/VimJutsu-secretsofthemasters.txt
 Ocaml Merlin  https://ocaml.github.io/merlin/editor/vim/
 ___ptools
@@ -11823,6 +11824,7 @@ list available fonts gvim {{{
   set guifont=Consolas:h10
 }}}
 
+
 .   #### I N D E X / O M R Å D E N ####  {{{
 ___VIMINDEX
 
@@ -15703,6 +15705,7 @@ https://ubuntuforums.org/showthread.php?t=2177596
 
 
         Speciella escapesekvenserna (<args> för alla arguments t.ex. *** ) {{{
+___pickout
             Replacement text
 
             The replacement text for a user defined command is scanned for special escape
@@ -17299,6 +17302,18 @@ ftplugin/<filetype>_<name>.vim
 
 
    }}}
+
+Mappable Characters + "follow my leader" {{{
+    d Ent, c Ent
+    d up, c up (??)
+
+    q Ent (etc)  q[
+
+      q1, etc(??)
+
+    @0 etc (*)
+}}}
+
 Ptools 2022+ {{{
 ___ptools
 
@@ -18485,17 +18500,6 @@ fr. egna rc(practvim): cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/
 
         <t_%9>      Spec.tecken =Print Screen (**(*))
 
-
-"follow my leader" (=interesting 'in between'-keys for mapping) (**) {{{
-    d Ent, c Ent
-    d up, c up (??)
-
-    q Ent (etc)  q[
-
-      q1, etc(??)
-
-    @0 etc (*)
-}}}
 
     tpope personal config (!!(**))
         sensible
@@ -23440,6 +23444,7 @@ writefile({object}, {fname} [, {flags}]) (@)
 
 
 }}}
+
 . 'Cookbook/Önskelista Vanliga Uppgifter' [LEGACY = PULL EXAMPLES + REFERENCE GOOD HEADINGS AS AOI-LIST(!!)] {{{
 
         options
@@ -41098,4 +41103,4 @@ http://iccf-holland.org/click5.html
 
 }}}
 
-vim: fdm=marker:fdl=0:
+vim:fdm=marker:fdl=0:
