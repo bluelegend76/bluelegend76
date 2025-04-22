@@ -2,7 +2,7 @@
 gvim ~/.vimrc
 gvim ~/_vimrc
 
-gvim ~/Dropbox/Udt/rsc/data/lists/Tagged/{vimscr-ibmtuts.Tags1,vdocs-Usr41.Tags1,lvimscrhard.Tags2}.txt
+gvim -p ~/Dropbox/Udt/rsc/data/lists/Tagged/{vimscr-ibmtuts.Tags1,vdocs-Usr41.Tags1,lvimscrhard.Tags2}.txt
 gvim -O ~/Dropbox/rsc/{Doks/phone/Comp/editor/vim/neovimLua.Tags1,data/lists/ref/comp/nvim-lua}.txt
 ~/Dropbox/tmp/yvidstranscribe-05-vimpluginwpython.txt
 

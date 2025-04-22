@@ -1,6 +1,7 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
+Functional Algos
 SML ----
 ~/Empire/Doks/Comp/lang/ml/cheatsh-qref/mlstd.cheatsh.docx
             (*Declarations:*)

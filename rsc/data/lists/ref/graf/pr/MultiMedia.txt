@@ -4,6 +4,45 @@ vim: fdm=indent:fdl=2:
 Anki
                         . ~/gdrive/rsc/data/lists/ref/comp/pr/Ankiman-Cookbook.txt
                         ~/Dropbox/rsc/Doks/phone/learn/ankiman2021plus.txt
+                        ----
+                        card
+                            .
+                            a question and answer-pair
+                        deck
+                            .
+                            a group of cards (=each can have different settings, e.g. how many cards to show per day)
+                            can contain sub-decks (separated by '::')
+                            [decks =for holding broad categories of cards]
+                        note
+                            .
+                            a related collection of information (e.g. 'french: bonjour, english: hello, page: #12')
+                            [=each type of note can have one or more card-types]
+                        field
+                            .
+                            each piece of information on/in a note
+                             click the 'fields...'-button while adding/editing notes
+                        card-type
+                            .
+                            ="which fields should be displayed on the front or back of each card"
+                            +=as soon as a card-type has been created, every time you add a new note, a card will be created based on that card-type
+                            +add/edit card-types, click the "cards..."-button while adding/editing notes
+                        template (or card-templates)
+                            .
+                            (each card-type has two templates: one for the Q and one for the A)
+                            Q: {{French}}
+                            A: {{English}}<br>
+                               Page #{{Page}}
+                            = (card-templates) tell Anki which fields should appear on the front and back of your card, and countrol which cards will be generated when certain fields have text in them
+                        note-types
+                            .
+                        ----
+
+Reveal.js  (@@)
+                ----
+                .
+impress.js
+                ----
+                .
 
 Gimp
             ---- Gimp Regular
@@ -1310,13 +1349,6 @@ yt-dlp
                     yt-dlp --download-sections "*00:00:20-00:02:00" -x --audio-format mp3 "https://www.youtube.com/watch?v=QjB3qextZbQ&list=OLAK5uy_kkL5jD6ELJzI6o9x3eJO2x87d-PzELkVY&index=22"
                     This example downloads the audio between 1 minute and 1 minute and 30 seconds.
 fontforge
-                ----
-                .
-
-Reveal.js  (@@)
-                ----
-                .
-impress.js
                 ----
                 .
 

@@ -1140,15 +1140,150 @@ some middleware that is added automatically  (**)
     the routing-middleware
     and the endpoint-middleware
     --
-    aspdnc_inact2023-p51_85.
+    aspdnc_inact2023-p51_85..
     }}}
     ----
 
     ----
-9
+endpoint that defines a lambda to run for GET-requests to the /person path, + returns a C#-record  ****
+{{{
+    app.MapGet("/", () => "Hello World!");
+    app.MapGet("/person", () => new Person("Andrew", "Lock"));
+    
+    You've already seen the default
+    "Hello World!" endpoint.
+    When you send a GET request to /,
+    the routing-middleware selects the
+    "Hello World!" endpoint.
+    The request continues down the
+    middleware-pipeline until it
+    reaches the endpoint-middleware,
+    which executes the lambda and
+    returns the string value in the
+    response-body.
+    
+    N@The other endpoint defines a
+    lambda to run for GET-requests to
+    the /person-path, but it returns a
+    C#-record instead of a string. When
+    you return a C#-object from a
+    minimal API endpoint, the object is
+    serialized to JSON automatically
+    and returned in the response-body,
+    as you saw in figure 3.8. In
+    chapter 6 you'll learn how to
+    customize this response, as well as
+    return other types of responses.
+    --
+    aspdnc_inact2023-p52_86.
+    }}}
+N@All services, both framework- and custom application-services, must be ____ to be able to be accessed later in your application  ***(!)
+{{{
+    registered with the WebApplicationBuilder by means of the Services-property,
+    --
+    aspdnc_inact2023-p54_88.
+    }}}
+middleware defines how ____  *(*)
+{{{
+    your application responds to requests
+    --
+    aspdnc_inact2023-p54_88..
+    }}}
+With minimal APIs, ____ is used to generate a response.
+{{{
+    a simple function
+    --
+    aspdnc_inact2023-p54_88..
+    }}}
+    ----
+
+Ch. 4 - Handling requests with the middleware pipeline
+
+    ----
+one common/important thing that can be handled with middleware
+{{{
+    exceptions
+    --
+    aspdnc_inact2023-p55_89..
+    }}}
+two common/useful middlewares for this
+{{{
+    - N@DeveloperExceptionPageMiddleware
+      - Provides quick error-feedback
+      when building an application
+    - ExceptionHandlerMiddleware -
+      Provides a generic error-page in
+      production so that you don't leak
+      any sensitive details
+    --
+    aspdnc_inact2023-p56_90...
+    }}}
+N@In ASP.NET Core, middleware (technically) is ____  ***(!!)
+{{{
+    N@In ASP.NET Core, middleware
+    is a C#-class<1> that can handle an
+    HTTP-request or -response.
+    
+        1: Technically, middleware needs
+        to be a function
+          (as you'll see in chapter 31)
+        but it's common to implement
+        middleware as a
+        C#-class with a single method.
+    --
+    aspdnc_inact2023-p56_90...
+    }}}
+The most important piece of middleware in most ASP.NET Core applications is the ____-class  ***
+{{{
+    the EndpointMiddleware-class.
+    This class normally generates all your
+    HTML and JavaScript Object Notation
+    (JSON) responses, and is the focus
+    of most of this book
+    --
+    aspdnc_inact2023-p57_91.
+    }}}
+.
+{{{
+    - N@Adding standard
+      security-headers to the response
+    --
+    aspdnc_inact2023-p58_92.
+    }}}
+authentication-middleware
 {{{
     
     --
-    aspdnc_inact2023-p51_85.
+    aspdnc_inact2023-p58_92.
+    }}}
+chain of responsibility-pattern  (**)
+{{{
+    if auth.middleware says user is not authorized,
+        the endpoint never sees the request
+    (+short-circuiting pipelines +terminal middleware)
+    --
+    aspdnc_inact2023-p58_92...
+    }}}
+the bidirectionality of the request-pipeline (!)
+{{{
+    
+    --
+    aspdnc_inact2023-p59_93.
+    }}}
+    ----
+
+    ----
+HttpContext
+{{{
+    constructed for each request
+    + used as a sort of storage-box for a single request
+    --
+    aspdnc_inact2023-p59_93.
+    }}}
+2
+{{{
+    
+    --
+    aspdnc_inact2023-p59_93.
     }}}
 

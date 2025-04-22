@@ -73,12 +73,10 @@ Juce/+Distrho
                         .
 pymidi
 Csound
-                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/blue.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csound-virtualsoundprocess_2000.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundBook.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/blue.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csoundqt.txt
-                        ~/gdrive/rsc/Doks/taskuj/Misc/scoll-csound/scoll-compose.pdf
-                        ~/gdrive/rsc/Doks/taskuj/Misc/scoll-csound/scoll-compose.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/man-tut/csound-flossman_2011.txt
                         ----
 SCollider IDE
@@ -305,6 +303,8 @@ SCollider IDE
 SCollider
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/scoll-mapvisu.tagged.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollBook.txt
+                        ~/gdrive/rsc/Doks/taskuj/Misc/scoll-csound/scoll-compose.txt
+                        ~/gdrive/rsc/Doks/taskuj/Misc/scoll-csound/scoll-compose.pdf
 scoll:python
 scoll:clojure (Overtone)
                 Overtone Cheat Sheet 0.9.1

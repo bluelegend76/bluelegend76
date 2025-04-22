@@ -4,33 +4,103 @@ set fdm=indent fdl=2 guifont=*
 PowerPoint
 LOffice Impress
 
+Obsidian
+                        ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt
+                            ~/Dropbox/Udt/rsc/data/lists/
+                        ~/Empire/Doks/Comp/lang/markup/MD/md-obsidian.txt
 Pandoc
-Reveal.js
+Reveal.js ____
                     ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
-                        ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs.Tags1.txt
                     ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
+                        ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs.Tags1.txt
+                                ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
+                                ~/Dropbox/rsc/Doks/phone/graf/anim/revealjs.txt
+                                ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
+                          ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.pdf
+                        ----
+                        ~/Dropbox/Udt/rsc/doks/graf/present/reveal/md2revealjs-withpandoc.txt
+                        ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs-tutorial.txt
+                            ~/Empire/Doks/Comp/lang/webdev/js/present/md2revealjs-withpandoc.pdf
+                            ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.txt
+                                ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.pdf
+                        ~/Dropbox/Udt/rsc/doks/graf/present/impress/imprjs.txt
+                            ~/Empire/Comp/lang/webdev/imprjs_aux.txt
+                            ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
+                        ----
+
+                            --
+                    Markdown + Pandoc = Reveal ----
+                        Yes, absolutely! Using Markdown with Pandoc to create Reveal.js presentations is an excellent and highly recommended workflow. Here's why and how it benefits you:
+
+                        Advantages of Markdown + Pandoc:
+
+                            Content Focus:
+                                Markdown lets you concentrate on writing your content without getting bogged down in HTML markup.
+                                This is particularly useful for text-heavy presentations.
+                            Rapid Prototyping:
+                                You can quickly create a basic structure and outline of your presentation in Markdown.
+                                Pandoc handles the conversion to Reveal.js, saving you significant time.
+                            Clean and Readable Source:
+                                Markdown files are easy to read and maintain, even for complex presentations.
+                            Version Control Friendly:
+                                Markdown files are plain text, making them ideal for version control systems like Git.
+                                Tracking changes and collaborating becomes much easier.
+                            Flexibility:
+                                Pandoc is incredibly versatile and supports a wide range of input and output formats.
+                                This means you can easily convert your Markdown presentations to other formats if needed (e.g., PDF, HTML).
+                            Separation of Concerns:
+                                You separate content creation (Markdown) from presentation styling and layout (Reveal.js).
+                                This makes it easier to update content without affecting the presentation's design.
+
+                        Workflow Outline: ____ ____
+
+                            Write in Markdown:
+                                Use Markdown syntax to create your slides, headings, lists, images, and other content.
+                                Use horizontal rules (---) to separate slides.
+                            Pandoc Conversion:
+                                Use the Pandoc command-line tool to convert your Markdown file to a Reveal.js HTML file.
+                                You can specify Reveal.js options and themes in the Pandoc command.
+                            Reveal.js Customization:
+                                Open the generated HTML file in WebStorm or your preferred editor.
+                                Add custom CSS, JavaScript, and Reveal.js features to enhance the presentation.
+                                Fine-tune transitions, backgrounds, and other visual elements.
+                            Iterate and Refine:
+                                Continue to refine your Markdown content and Reveal.js customizations until you're satisfied.
+
+                        Example Pandoc Command:
+
+                        pandoc -t revealjs -s input.md -o output.html --variable revealjs-url=reveal.js
+
+                            input.md: Your Markdown file.
+                            output.html: The generated Reveal.js HTML file.
+                            --variable revealjs-url=reveal.js: This is important, it tells pandoc where to find the reveal.js files. You will have to download reveal.js, and place it in a location that pandoc can access, relative to the output.html file.
+
+                        Tips:
+
+                            Explore Pandoc's Reveal.js options to customize the conversion process.
+                            Use CSS to create a consistent and visually appealing theme.
+                            Leverage Reveal.js plugins to add advanced features.
+
+                        In conclusion, using Markdown with Pandoc provides a solid foundation for creating Reveal.js presentations. It streamlines the content creation process and allows you to focus on delivering a compelling message.
                     ----
-                    ~/Dropbox/Udt/rsc/doks/graf/present/reveal/md2revealjs-withpandoc.txt
-                    ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs-tutorial.txt
+                            https://revealjs.com/config/
+                        transitions
+                            https://revealjs.com/transitions/
+                          vert. slides
+                            https://revealjs.com/vertical-slides/
+                        fragments
+                            https://revealjs.com/fragments/
+                        code-fencing
+                            https://revealjs.com/code/
+                        images, videos
+                        animated gifs
+                            Include same way as regular html
+                            https://revealjs.com/media/
+                        speaker-notes
+                            https://revealjs.com/speaker-view/
+                        Jump to slide-num
+                            g, num, Enter
                     ----
-                        https://revealjs.com/config/
-                    transitions
-                        https://revealjs.com/transitions/
-                      vert. slides
-                        https://revealjs.com/vertical-slides/
-                    fragments
-                        https://revealjs.com/fragments/
-                    code-fencing
-                        https://revealjs.com/code/
-                    images, videos
-                    animated gifs
-                        Include same way as regular html
-                        https://revealjs.com/media/
-                    speaker-notes
-                        https://revealjs.com/speaker-view/
-                    Jump to slide-num
-                        g, num, Enter
-                    .
                     Absolutely! Here's a list of 15-20 Reveal.js features that can help you create visually engaging presentations, going beyond the basics:
                         Core Features & Transitions ----
                         [v] Horizontal and Vertical Slides: Create complex layouts with nested slides.
@@ -57,59 +127,14 @@ Reveal.js
                         [v] Animated gifs: Add animated gifs.
 
                         These features can help you create presentations that are not only informative but also visually appealing and engaging. Remember to use these features thoughtfully and avoid overwhelming your audience with too many effects.
-                Markdown + Pandoc = Reveal ----
-                    Yes, absolutely! Using Markdown with Pandoc to create Reveal.js presentations is an excellent and highly recommended workflow. Here's why and how it benefits you:
-
-                    Advantages of Markdown + Pandoc:
-
-                        Content Focus:
-                            Markdown lets you concentrate on writing your content without getting bogged down in HTML markup.
-                            This is particularly useful for text-heavy presentations.
-                        Rapid Prototyping:
-                            You can quickly create a basic structure and outline of your presentation in Markdown.
-                            Pandoc handles the conversion to Reveal.js, saving you significant time.
-                        Clean and Readable Source:
-                            Markdown files are easy to read and maintain, even for complex presentations.
-                        Version Control Friendly:
-                            Markdown files are plain text, making them ideal for version control systems like Git.
-                            Tracking changes and collaborating becomes much easier.
-                        Flexibility:
-                            Pandoc is incredibly versatile and supports a wide range of input and output formats.
-                            This means you can easily convert your Markdown presentations to other formats if needed (e.g., PDF, HTML).
-                        Separation of Concerns:
-                            You separate content creation (Markdown) from presentation styling and layout (Reveal.js).
-                            This makes it easier to update content without affecting the presentation's design.
-
-                    Workflow Outline: ____ ____
-
-                        Write in Markdown:
-                            Use Markdown syntax to create your slides, headings, lists, images, and other content.
-                            Use horizontal rules (---) to separate slides.
-                        Pandoc Conversion:
-                            Use the Pandoc command-line tool to convert your Markdown file to a Reveal.js HTML file.
-                            You can specify Reveal.js options and themes in the Pandoc command.
-                        Reveal.js Customization:
-                            Open the generated HTML file in WebStorm or your preferred editor.
-                            Add custom CSS, JavaScript, and Reveal.js features to enhance the presentation.
-                            Fine-tune transitions, backgrounds, and other visual elements.
-                        Iterate and Refine:
-                            Continue to refine your Markdown content and Reveal.js customizations until you're satisfied.
-
-                    Example Pandoc Command:
-
-                    pandoc -t revealjs -s input.md -o output.html --variable revealjs-url=reveal.js
-
-                        input.md: Your Markdown file.
-                        output.html: The generated Reveal.js HTML file.
-                        --variable revealjs-url=reveal.js: This is important, it tells pandoc where to find the reveal.js files. You will have to download reveal.js, and place it in a location that pandoc can access, relative to the output.html file.
-
-                    Tips:
-
-                        Explore Pandoc's Reveal.js options to customize the conversion process.
-                        Use CSS to create a consistent and visually appealing theme.
-                        Leverage Reveal.js plugins to add advanced features.
-
-                    In conclusion, using Markdown with Pandoc provides a solid foundation for creating Reveal.js presentations. It streamlines the content creation process and allows you to focus on delivering a compelling message.
+                    ----
+                    ____ 
+                    ___ represents one slide
+                        .
+                        the section-element (+it can be repeated indefititely
+                    multiple section-elements inside another section shows up as ___
+                        .
+                        vertical slides
 Impress.js
                         ~/Dropbox/Udt/rsc/doks/graf/present/impress/imprjs.txt
                         ----
@@ -254,6 +279,7 @@ Sphinx  <raw|Overview>
                     Excellent for Technical Documentation: Particularly well-suited for documenting software projects, APIs, and other technical topics.
                     Large and Active Community: A strong community provides extensive documentation, tutorials, and support.
                     Customization: Highly customizable through themes, extensions, and configuration options.
+
 Markdown
                         https://www.markdownguide.org/basic-syntax/
                         header                    #
@@ -1019,6 +1045,8 @@ GitHub-flavor Markdown (GFM)
                 emojis --  including shortcodes
                 :smile:
 Mermaid
+                ~/Dropbox/rsc/Doks/phone/Comp/lang/markup/mermaid.txt
+                ----
                 Let's switch tacks slightly with a question on another topic: Could you give me a quick overview about some common constructs in Mermaid (used for constructing UML diagrams and the like), and maybe also list some of the common constructs and features as a list?
 
                 Mermaid is a powerful tool for generating diagrams using a simple and concise text syntax. Here's a breakdown of some common constructs:
@@ -1351,6 +1379,7 @@ vim json-tools
                 https://dev.to/mfilej/quickly-format-and-manipulate-json-in-vim-using-jq-2963
                 https://rafaelleru.github.io/blog/json-magic-vim/
                 https://gist.github.com/christoomey/880c87192c8f005bcdb5
+Emacs Json-tools
 Context
 texinfo
 Docbook

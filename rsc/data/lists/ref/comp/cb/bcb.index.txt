@@ -113,6 +113,7 @@ META.SHELL: bash, dash, termux, pshell, xonsh, nushell
 MS Windows Terminal
 ___WindowsTerminal_Themes
   ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
+
     ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
                 close window  a-f4
                 copy text  c-c, c-Ins, cs-c, Enter
@@ -834,7 +835,502 @@ bcb (**(!))
 
                     Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
-tracker + tinysparql
+arch tracker + tinysparql
+                        ___gnometracker_sparql
+                        - Great! Another question: Could
+                          you give me a VERY quick overview
+                          (that also involves some code and
+                          practical examples) of using
+                          Tracker (I think it's called
+                          Gnome Tracker, but there may also
+                          be some minimal versions) and
+                          also using the SPARQL language
+                          for obtaining some useful
+                          information concerning files etc?
+                          I.e. I have been using the Bash
+                          and the Shell to good effect for
+                          text-files, but I would really
+                          like to enhance that workflow if
+                          possible for other files and
+                          file-types as well. Note also: My
+                          currently installed primary
+                          operating system is Arch Linux.
+
+                        You're right, the file indexing and
+                        search tool in GNOME is called
+                        Tracker. It uses a semantic
+                        database to store information about
+                        your files and allows querying this
+                        data using SPARQL (SPARQL Protocol
+                        and RDF Query Language). Here's a
+                        quick overview with practical
+                        examples relevant to your Arch
+                        Linux system:
+
+                        1. Tracker Overview:
+
+                        - Indexing: Tracker automatically
+                          indexes your files and their
+                          metadata (like file type, size,
+                          modification date, tags, EXIF
+                          data for images, etc.). It runs
+                          in the background.
+                        - Database: The indexed information
+                          is stored in a local database
+                          (typically SQLite).
+                        - tracker3: On modern Arch Linux
+                          systems, you'll likely be using
+                          tracker3 (the latest version).
+                          Older systems might have tracker.
+                          You can check with tracker3
+                          --version or tracker --version.
+                        - tracker3 sparql: This is the
+                          command-line tool you'll use to
+                          execute SPARQL queries against
+                          the Tracker database.
+
+                        2. SPARQL Basics for Tracker:
+
+                        SPARQL is a query language for RDF
+                        (Resource Description Framework), a
+                        way of representing information as
+                        subject-predicate-object triples.
+                        Tracker represents your files and
+                        their metadata in this format.
+
+                        - PREFIX: Used to define namespaces
+                          for commonly used vocabularies
+                          (ontologies) that describe file
+                          metadata. Tracker uses its own
+                          vocabulary.
+                        - SELECT: Specifies the variables
+                          you want to retrieve in your
+                          query results. Variables are
+                          prefixed with ?.
+                        - WHERE: Defines the patterns
+                          (triples) that the data must
+                          match.
+
+                        3. Practical Examples:
+
+                        Let's assume you want to find some
+                        information about image files in
+                        your ~/Pictures directory.
+
+                        Example 1: Finding all image file
+                        names in your Pictures directory:
+
+                        PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+                        PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+                        PREFIX nmm: <http://www.semanticdesktop.org/ontologies/2007/09/nmm#>
+                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                        PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+                        SELECT ?filename
+                        WHERE {
+                          ?file a nfo:FileDataObject ;
+                                nie:url ?uri ;
+                                nfo:fileName ?filename .
+                          FILTER regex(?uri, "^file:///home/yourusername/Pictures/")
+                          FILTER regex(?filename, ".(jpg|jpeg|png)$", "i") # Case-insensitive match for common image extensions
+                        }
+
+                        To execute this, replace
+                        yourusername and run in your
+                        terminal:
+
+                        tracker3 sparql -q "$(cat <<'EOF'
+                        PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+                        PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+                        PREFIX nmm: <http://www.semanticdesktop.org/ontologies/2007/09/nmm#>
+                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                        PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+                        SELECT ?filename
+                        WHERE {
+                          ?file a nfo:FileDataObject ;
+                                nie:url ?uri ;
+                                nfo:fileName ?filename .
+                          FILTER regex(?uri, "^file:///home/yourusername/Pictures/")
+                          FILTER regex(?filename, ".(jpg|jpeg|png)$", "i")
+                        }
+                        EOF
+                        )"
+
+                        Explanation:
+
+                        - We define prefixes for the
+                          Tracker ontology.
+                        - We select the ?filename.
+                        - In the WHERE clause:
+                          - ?file a nfo:FileDataObject .:
+                            We look for resources that are
+                            file data objects.
+                          - ?file nie:url ?uri .: We get
+                            the file URI.
+                          - ?file nfo:fileName ?filename .:
+                            We get the file name.
+                          - FILTER regex(?uri,
+                            "^file:///home/yourusername/Pictures/"):
+                            We filter results to only
+                            include files whose URI starts
+                            with your Pictures directory.
+                          - FILTER regex(?filename,
+                            ".(jpg|jpeg|png)$", "i"): We
+                            further filter to only include
+                            files with common image
+                            extensions (case-insensitive).
+
+                        Example 2: Finding recently
+                        modified documents (e.g., .odt,
+                        .docx, .pdf) in your Documents
+                        directory:
+
+                        PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+                        PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                        PREFIX purl: <http://purl.org/dc/elements/1.1/>
+                        PREFIX nao: <http://www.semanticdesktop.org/ontologies/2007/08/nao#>
+
+                        SELECT ?filename ?modified
+                        WHERE {
+                          ?doc a nfo:Document ;
+                               nie:url ?uri ;
+                               nfo:fileName ?filename ;
+                               nao:lastModified ?modified .
+                          FILTER regex(?uri, "^file:///home/yourusername/Documents/")
+                          FILTER regex(?filename, ".(odt|docx|pdf)$", "i")
+                        }
+                        ORDER BY DESC(?modified)
+                        LIMIT 10
+
+                        Execute similarly using tracker3
+                        sparql -q "...".
+
+                        Explanation:
+
+                        - We look for resources that are
+                          nfo:Document.
+                        - We retrieve the ?filename and
+                          ?modified (last modification
+                          date).
+                        - We filter by the Documents
+                          directory and common document
+                          extensions.
+                        - ORDER BY DESC(?modified) sorts
+                          the results by the last modified
+                          date in descending order (most
+                          recent first).
+                        - LIMIT 10 restricts the output to
+                          the top 10 results.
+
+                        Example 3: Finding files tagged
+                        with a specific tag (assuming you
+                        use a tagging application that
+                        integrates with Tracker):
+
+                        PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+                        PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+                        PREFIX tags: <http://www.semanticdesktop.org/ontologies/2007/05/tags#>
+                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+                        SELECT ?filename ?tagName
+                        WHERE {
+                          ?file a nfo:FileDataObject ;
+                                nie:url ?uri ;
+                                nfo:fileName ?filename ;
+                                tags:hasTag ?tag .
+                          ?tag rdfs:label ?tagName .
+                          FILTER (?tagName = "your_tag") # Replace "your_tag" with the actual tag
+                        }
+
+                        Enhancing your Workflow:
+
+                        - Scripting: You can embed these
+                          tracker3 sparql commands within
+                          your Bash scripts to automate
+                          file searches and information
+                          retrieval based on various
+                          criteria.
+                        - Custom Queries: Explore the
+                          Tracker ontology (you can find
+                          documentation online) to discover
+                          more properties you can query
+                          (e.g., file size, MIME type, EXIF
+                          metadata for images, etc.).
+                        - Integration with other tools: You
+                          could potentially pipe the output
+                          of SPARQL queries to other
+                          command-line tools for further
+                          processing.
+
+                        Minimal Versions of Tracker:
+
+                        While tracker3 is the current
+                        standard, there might be minimal
+                        installations or alternative
+                        frontends. However, the core
+                        indexing service and the ability to
+                        query via SPARQL are fundamental to
+                        Tracker's functionality. You'll
+                        likely be interacting with the same
+                        underlying database and query
+                        language regardless of the specific
+                        desktop environment or minimal
+                        installation.
+
+                        Key Takeaway:
+
+                        Tracker and SPARQL provide a
+                        powerful way to query your files
+                        based on their metadata, going
+                        beyond simple filename matching.
+                        While the SPARQL syntax might have
+                        a learning curve, your programming
+                        background will definitely help you
+                        grasp the concepts and construct
+                        useful queries to enhance your file
+                        management workflow on Arch Linux.
+                        Remember to explore the Tracker
+                        ontology documentation for more
+                        advanced querying possibilities.
+                        github.com
+
+                        github.com
+                        Your saved info
+                        Info you asked Gemini to save
+
+
+                        - Would it also be possible to
+                          enhance the use and effect of
+                          Tracker and SPARQL using other
+                          solutions, primarily I'm thinking
+                          in my case of using other and
+                          more powerful
+                          programming-languages than Bash,
+                          such as Python, F#, etc?
+
+                        Yes, absolutely! Using more
+                        powerful programming languages like
+                        Python or F# can significantly
+                        enhance the use and effect of
+                        Tracker and SPARQL, offering
+                        greater flexibility, automation,
+                        and integration possibilities
+                        compared to pure Bash scripting.
+                        Here's how:
+
+                        1. Python:
+
+                        Python has excellent libraries for
+                        interacting with external processes
+                        and handling structured data,
+                        making it a strong candidate for
+                        enhancing your Tracker workflow.
+
+                        Executing tracker3 sparql: You can
+                        use Python's subprocess module to
+                        execute tracker3 sparql commands
+                        and capture their output. This
+                        allows you to dynamically generate
+                        SPARQL queries within your Python
+                        scripts based on various
+                        conditions.
+
+                        import subprocess
+                        import json
+
+                        def run_tracker_sparql(query):
+                            process = subprocess.run(
+                                ['tracker3', 'sparql', '-q', query],
+                                capture_output=True,
+                                text=True,
+                                check=True  # Raise an exception for non-zero exit codes
+                            )
+                            # Assuming Tracker outputs results in a parsable format (e.g., TSV, JSON - though JSON might require a specific output format flag if available)
+                            # For simplicity, let's assume tab-separated values for now and you'd parse accordingly
+                            results = [line.split('\t') for line in process.stdout.strip().split('\n')]
+                            if results and results[0]:
+                                headers = results[0]
+                                data = [dict(zip(headers, row)) for row in results[1:]]
+                                return data
+                            return []
+
+                        query = """
+                        PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+                        PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+                        SELECT ?filename ?modified
+                        WHERE {
+                          ?doc a nfo:Document ;
+                               nie:url ?uri ;
+                               nfo:fileName ?filename ;
+                               nfo:lastModified ?modified .
+                          FILTER regex(?uri, "^file:///home/yourusername/Documents/")
+                          FILTER regex(?filename, ".(pdf)$", "i")
+                        }
+                        ORDER BY DESC(?modified)
+                        LIMIT 5
+                        """
+
+                        recent_pdfs = run_tracker_sparql(query)
+                        if recent_pdfs:
+                            print("Recent PDF documents:")
+                            for pdf in recent_pdfs:
+                                print(f"- {pdf['filename']} (Modified: {pdf['modified']})")
+                        else:
+                            print("No recent PDFs found.")
+
+                        Data Processing and Analysis:
+                        Python's rich ecosystem of
+                        libraries (like pandas,
+                        collections) allows you to easily
+                        process and analyze the data
+                        retrieved from Tracker. You can
+                        perform more complex filtering,
+                        sorting, aggregation, and
+                        visualization of your file
+                        metadata.
+
+                        Integration with Other Systems:
+                        Python can seamlessly integrate
+                        Tracker data with other
+                        applications, APIs, or databases.
+                        For example, you could:
+
+                        - Create a web interface to search
+                          your files using Tracker.
+                        - Automate file organization tasks
+                          based on Tracker metadata.
+                        - Generate reports on your file
+                          usage patterns.
+
+                        More Complex Logic: Python allows
+                        you to implement more intricate
+                        logic for generating SPARQL queries
+                        dynamically based on user input or
+                        other program states.
+
+                        2. F#:
+
+                        F#, as a functional-first language
+                        on the .NET platform, also offers
+                        powerful capabilities for this
+                        task.
+
+                        Executing External Processes:
+                        Similar to Python's subprocess, F#
+                        provides ways to execute external
+                        commands and capture their output
+                        (e.g., using Process.Start).
+
+                        open System.Diagnostics
+
+                        let runTrackerSparql query =
+                            let process = new Process()
+                            process.StartInfo.FileName <- "tracker3"
+                            process.StartInfo.Arguments <- $"-q \"{query}\""
+                            process.StartInfo.RedirectStandardOutput <- true
+                            process.StartInfo.UseShellExecute <- false
+                            process.StartInfo.CreateNoWindow <- true
+                            process.Start() |> ignore
+                            let output = process.StandardOutput.ReadToEnd().Split('\n')
+                            process.WaitForExit()
+                            // Further parsing of 'output' would be needed based on Tracker's output format
+                            output
+
+                        let query = """
+                        PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+                        PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+                        SELECT ?filename ?fileSize
+                        WHERE {
+                          ?file a nfo:FileDataObject ;
+                                 nie:url ?uri ;
+                                 nfo:fileName ?filename ;
+                                 nfo:fileSize ?fileSize .
+                          FILTER (?fileSize > 10000000) # Find files larger than 10MB
+                        }
+                        """
+
+                        let largeFiles = runTrackerSparql query
+                        printfn "Large files:"
+                        largeFiles |> Array.iter (printfn "%s") // Simple printing, more parsing needed
+
+                        - Strong Typing and Functional
+                          Paradigm: F#'s strong typing and
+                          functional nature can lead to
+                          more robust and maintainable code
+                          for processing and manipulating
+                          the structured data from Tracker.
+                        - .NET Ecosystem: Access to the
+                          extensive .NET libraries allows
+                          for sophisticated data handling,
+                          networking, and UI development if
+                          you want to build more elaborate
+                          tools around Tracker.
+                        - Pattern Matching: F#'s powerful
+                          pattern matching capabilities can
+                          be very useful for parsing and
+                          extracting specific information
+                          from the results returned by
+                          Tracker.
+
+                        General Advantages of Using Higher-Level Languages:
+
+                        - Abstraction: They provide
+                          higher-level abstractions, making
+                          it easier to work with the data
+                          and implement complex logic
+                          compared to the more direct
+                          command execution in Bash.
+                        - Error Handling: Robust error
+                          handling mechanisms are available
+                          to gracefully manage potential
+                          issues during query execution or
+                          data processing.
+                        - Code Organization: Languages like
+                          Python and F# encourage better
+                          code organization and modularity,
+                          making your scripts easier to
+                          understand, maintain, and extend.
+                        - Libraries and Ecosystems: Access
+                          to a vast number of libraries for
+                          tasks like data parsing (JSON,
+                          CSV, etc.), data analysis, web
+                          development, and more.
+
+                        In summary, while Bash is useful
+                        for simple command-line
+                        interactions, using Python or F#
+                        allows you to:
+
+                        - Dynamically generate and execute
+                          more complex SPARQL queries.
+                        - Parse and process the results
+                          from Tracker in a structured and
+                          efficient way.
+                        - Integrate Tracker data with other
+                          systems and applications.
+                        - Build more sophisticated tools
+                          and workflows around your file
+                          metadata.
+
+                        Choosing between Python and F#
+                        often comes down to personal
+                        preference and the specific
+                        requirements of your project.
+                        Python has a larger and more
+                        diverse ecosystem for
+                        general-purpose scripting and data
+                        science, while F# offers the
+                        benefits of strong typing and a
+                        functional paradigm within the .NET
+                        ecosystem. Both are excellent
+                        choices for enhancing your
+                        interaction with Tracker and SPARQL
+                        beyond the capabilities of basic
+                        shell scripting.
 Termux
                     ~/Dropbox/Udt/rsc/data/lists/Tagged/Termux.Tags2.txt 
                         ../ref/comp/sysadm/Termux.Tags1.txt
