@@ -1,0 +1,3 @@
+vim:fdm=indent:fdl=2:
+set fdm=indent fdl=2
+

@@ -584,11 +584,11 @@ set syntax=fsharp textwidth=47 nosi ai nojs shiftwidth=2 | colors ron
             It is designed to be kept close for
             those times when you need to jog
             your memory on something like loops
-            or object expressions. Everything
+            or object-expressions. Everything
             is designed to be used with the
-            #light syntax directive. If you
+            #light syntax-directive. If you
             type any of these lines directly
-            into the interactive command shell,
+            into the interactive command-shell,
             be sure to follow them up with two
             semicolons ";;". If you have any
             comments, corrections or suggested
@@ -599,12 +599,12 @@ set syntax=fsharp textwidth=47 nosi ai nojs shiftwidth=2 | colors ron
             1 - Comments
 
             There are a few different kinds of
-            comments in F#. Comment blocks,
+            comments in F#. Comment-blocks,
             which are placed between (* and *)
             markers.
 
             Line by line comments which follow
-            // until the end of a line and xml
+            // until the end of a line, and xml
             doc comments which follow /// and
             allow the programmer to place
             comments in xml tags that can be

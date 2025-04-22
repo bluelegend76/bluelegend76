@@ -5,16 +5,50 @@ __
                 ----
                 .
 
+        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/midi/midiman.txt
+        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/midi/modernmidi-sequencing_2020.txt
 midish
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/midish/midish.txt
+                        .
 seq24
+mma
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/mma.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/mma-tut.txt
 timidity-extras
+Audacity
 AnSynthesis
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/synthcookb.txt
+                        ----
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/auprogr-book_2011.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/musiccompute-unconv_2017.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/refinesound-synthesguide_2013.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/synthprogr-powtools.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/synthprogr-powtools_2004.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/syntkorgdw6000_manual.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/thesynthesizer_2014.txt
+                        ----
+baudline
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/baudline.txt
+                        .
 Logic X
-Ardour
+Ardour  +LUA **
 Rosegarden
+                        ~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/hydrog_roseg.vanki.txt
+                        .
+hydrogen
 MuseScore 4
+                        ~/Dropbox/rsc/data/lists/keys.shortc/mscore3.shortckeys.tagged.txt
+                        ~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/Mscore3.vdeck.txt
+                        ~/Dropbox/rsc/data/lists/keys.shortc/mscore3/mscore3.shortckeys.txt
+                        ----
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/mscore3.man.raw.txt
+                        ~/Dropbox/rsc/data/lists/ref/comp/mu/mscore3-keys.txt
+                                ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zz_mscore3.txt
+                        ~/Dropbox/rsc/data/lists/ptools/mscore3.sort.txt
+                        ~/Dropbox/rsc/data/lists/ptools/mscore3.txt
+                        ~/Dropbox/rsc/data/lists/learnqna/vanki/Mscore3.vdeck.txt
+Muse
 lmms,  flstudio mobile
- Audacity
 calf/lv, ladspa
 guitarix
 rakarrack
@@ -22,16 +56,31 @@ PureData
 
   btmixer / alto s6
 maudio audiophile / focusrite scarlett
-baudline
 yourock-guitar
 qsynth
 zynaddsubfx
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zynaddsubfx/zynaddsubfx-man_2020.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zynaddsubfx/zynaddsubfx-man.txt
  Linuxsynths
  yousician, jellynote
  Irig
 
+Clam
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/ClamFramework.txt
+                        .
+Juce/+Distrho
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/Juce-startw.txt
+                        .
 pymidi
 Csound
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/blue.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csound-virtualsoundprocess_2000.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundBook.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csoundqt.txt
+                        ~/gdrive/rsc/Doks/taskuj/Misc/scoll-csound/scoll-compose.pdf
+                        ~/gdrive/rsc/Doks/taskuj/Misc/scoll-csound/scoll-compose.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/man-tut/csound-flossman_2011.txt
+                        ----
 SCollider IDE
                 ~/Dropbox/rsc/data/lists/ref/ScolliderIDE-Shortcuts.pdf
                 Themes: Dark, Dracula (etc)
@@ -254,6 +303,8 @@ SCollider IDE
                 Wrap Text  (__)
                     Wrap lines wider than the post window
 SCollider
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/scoll-mapvisu.tagged.txt
+                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollBook.txt
 scoll:python
 scoll:clojure (Overtone)
                 Overtone Cheat Sheet 0.9.1
@@ -722,4 +773,6 @@ scoll:clojure (Overtone)
                     Revision: 0.9.1.2, Date: 17th December, 2013
                     Sam Aaron (sam.aaron gmail com)
 Nyq
+                        ~/Hämtningar/nyqsrc322.zip
+                        .
 

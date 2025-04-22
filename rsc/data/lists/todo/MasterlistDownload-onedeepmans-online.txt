@@ -38,7 +38,11 @@ https://www.noongarboodjar.com.au/wp-content/uploads/2017/
 
 
 ___start
+https://suave.io/
 MongoDB Compass ____ ____
+    https://www.mongodb.com/docs/compass/current/install/
+    https://www.mongodb.com/docs/atlas/
+      https://www.mongodb.com/try/download/atlascli
 https://github.com/fsprojects/FsUnit
 https://www.reactiveui.net/
 Figma {{{

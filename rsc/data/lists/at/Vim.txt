@@ -1,8 +1,10 @@
 ~/bin/scripts/at/at.Vim.bash
+gvim ~/.vimrc
+gvim ~/_vimrc
 
-~/Dropbox/Udt/rsc/data/lists/Tagged/vimscr-ibmtuts.Tags1.txt 
-~/Dropbox/Udt/rsc/data/lists/Tagged/vdocs-Usr41.Tags1.txt
-~/Dropbox/Udt/rsc/data/lists/Tagged/lvimscrhard.Tags2.xt
+gvim ~/Dropbox/Udt/rsc/data/lists/Tagged/{vimscr-ibmtuts.Tags1,vdocs-Usr41.Tags1,lvimscrhard.Tags2}.txt
+gvim -O ~/Dropbox/rsc/{Doks/phone/Comp/editor/vim/neovimLua.Tags1,data/lists/ref/comp/nvim-lua}.txt
+~/Dropbox/tmp/yvidstranscribe-05-vimpluginwpython.txt
 
     ___pickout
 ~/Dropbox/rsc/data/lists/ref/comp/VimJutsu-secretsofthemasters.txt
@@ -56,6 +58,7 @@ vim over emacs:
     - mobile/android
     - folding
     - translate-shell
+
 vim-submode [**], 'vim space'
 TODO: CHECKLIST INTEREST =FROM 'PRACTICAL VIM' TOC[!!]
 ___practmodhardw_etc2023_summer(=2st) [**]
@@ -17309,14 +17312,22 @@ ftplugin/<filetype>_<name>.vim
    }}}
 
 Mappable Characters + "follow my leader" {{{
-    d Ent, c Ent
-    d up, c up (??)
+    c:
+        cd cs cq c. c<tab>
+        c<Space>
+    d:
+        d Ent, c Ent
+        d up, c up (??)
 
-    q Ent (etc)  q[
+        q Ent (etc)  q[
 
-      q1, etc(??)
+        q1, etc(??)
 
-    @0 etc (*)
+        @0 etc (*)
+
+    g
+
+    z
 }}}
 
 Ptools 2022+ {{{

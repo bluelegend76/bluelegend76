@@ -1281,6 +1281,11 @@ ocaml dune opam
 # --
 # https://github.com/FStarLang/FStar/blob/master/INSTALL.md#prerequisites-working-ocaml-setup
 
+#### yay -Ss mongodb-compass
+yay -S mongodb-compass
+# mongodb-compass &
+
+
 # opam update
 # opam upgrade
 # [!!] opam install core ****!!

@@ -15,8 +15,9 @@ Vanki LearnQna ----
 
 
     ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
+~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
 
-multimedia:
+multimedia (incl. Anki):
     gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
 Vim/Emacs:
     gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Vim.txt ../ref/comp/editor/vim/Vim-Tocs.txt ../ref/comp/editor/vim/vim_excommands-functions.txt ../ref/comp/editor/vim/vimscrhardw-quickindex.txt ../ref/comp/editor/vim/vim-patternregex.txt
@@ -32,16 +33,24 @@ markdown etc:
     gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
 
 scripting / Web ----  TODO: HTML, CSS, ETC
-    gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
+    gvim -p ../ref/comp/cb/pycb.txt ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
+    Python.prl.txt
+Clangs (c, cpp, dlang):
+    cppDlang.prl.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
 FUNCT =LISP, F#, ML, ...:
+
+Db:
+  gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
+
 
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
 
 LANG-DB 1:
   gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
+
 }}}
 
 c:/Users/SEDAALB2/Desktop/Scratch.txt
@@ -943,29 +952,24 @@ Buckey's Godot
 office.Overview [2]  # write summary|overview {{{
 
 ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
+
 cd ~/Dropbox/Udt/rsc/data/lists/Tagged/
-  Termux.Tags2.txt 
-vimscr-ibmtuts.Tags1.txt 
-vdocs-Usr41.Tags1.txt
-lvimscrhard.Tags2.xt
-
-LVIMSCR-HARDW
-PRACT-VIM, Vim-Tips
-
-Reveal.js|Impress.js  __
-Spectre Console  __ {{{
-  ~/gdrive/SpectreConsole.tags1.txt
+Uman, PRACT-VIM, Vim-Tips  ¤¤¤
+    Reveal.js|Impress.js  __ ¤¤¤
+Spectre Console  __ ¤¤
+. {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
 }}}
   iPython(*)
   Xonsh
   CsRx 3, Rx.Net;  Csharp Tips (etc)
 Android-Scripting + Termux ****  __  ¤¤
-F# [Overview and Concepts]  +Cloj.
-  FuncPy **
-  Anki
-  ----
-Py Webscraping
-Avalonia  __
+F# [Overview and Concepts]  +Cloj.  ¤¤¤
+  FuncPy **  ¤¤¤
+  Anki  ¤¤¤
+  ----  ¤¤¤
+Py Webscraping  ¤¤
+Avalonia  __  ¤¤¤
     [CsFunct 3]
 
 }}}
@@ -1064,7 +1068,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
   }}}
   ----
-    REVEAL, IMPRESS  __  ¤¤
+    REVEAL, IMPRESS  __ ¤¤¤
     . {{{
   ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
   ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
@@ -1088,13 +1092,15 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
             ~/Empire/Comp/lang/webdev/imprjs_aux.txt
             ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
     }}}
-  android scripting  [Termux + Rclone]
+  android scripting [Termux + Rclone] ¤¤¤
   . {{{
     ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
   }}}
   ASP.NET CORE MVC __ (++Web APIs)  ¤¤
   . {{{
     gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+----
+~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
 
 
     gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
@@ -1106,7 +1112,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore7-Pro-10e_2023.txt
         rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-WebAPI_2023.txt
   }}}
-  + Cs-Tips 70, Cs DesPatts, Xunit-Patts
+  + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
   . {{{
     cd ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/
 
@@ -1127,7 +1133,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     csfunct.tags1.txt
     functional-cs.Tags1.txt
   }}}
-  XUnit + 'Prop.based Testing'
+  XUnit + 'Prop.based Testing'  ¤¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/XunitPatts.txt
     ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt
@@ -1135,24 +1141,19 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     touch ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt
     ln -s ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt ~/Empire/Doks/Comp/PROGR/test/
   }}}
-  FuncPy  ¤
-  . {{{
-    ~/gdrive/FuncPy.binder.Tags1.txt
-  }}}
-  SSH  ¤¤
+  FuncPy  ¤¤¤
+  SSH  ¤¤¤
   . {{{
     ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
   }}}
-  py/f# (etc) sysadm  #  ¤
+  py/f# (etc) sysadm  #  ¤¤¤
   . {{{
       PyProgr
     ~/Empire/Doks/Comp/lang/py/sysadm/py-unlin-sysadm.txt
       ~/Empire/Doks/Comp/lang/py/sysadm/propysysadmin.txt
   }}}
-  JupNotebooks, polyglot notebooks, Pandas(etc)
+  JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
   . {{{
-      ~/gdrive/JupNoteb.binder.Tags1.txt
-
         https://learn.microsoft.com/en-us/training/modules/polyglot-notebooks/
         https://code.visualstudio.com/docs/languages/polyglot
   }}}
@@ -1161,14 +1162,14 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 
         ~/gdrive/rsc/Doks/phone/Comp/datasci/py/pydatawrangl-clean_2022.txt
     }}}
-  Obsidian __ @  MLEARN**(+)  ¤¤
+  Obsidian __ @  MLEARN**(+)  ¤¤¤
   . {{{
     gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
 
     cp ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt ~/Dropbox/Udt/
     ~/Empire/lang/markup/MD/md-obsidian.txt
   }}}
-    vimscripting + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
+    Vimscripting + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
@@ -1177,28 +1178,21 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}
   Termux  __  @@  ¤¤
-  . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/Termux.Tags1.txt
-  }}}
   Mpv-Docs  ¤¤ | Yt-Downl
   . {{{
     ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
   }}}
-  AVALONIA  ¤¤
+  AVALONIA  ¤¤(¤)
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
 
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/gdrive/rsc/Doks/taskuj/LIA2/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
   }}}
-  NuShell  _  ¤(¤)
-  . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_docs-book.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
-
-    ~/Empire/Doks/Comp/lang/webdev/db/relational/mysql-maria/mysql-nushell_2009.txt
-  }}}
-  Wsl
+  NuShell  _  ¤¤(¤)
+  Wsl  ¤¤
   . {{{
     ~/gdrive/rsc/Doks/taskuj/WSL/*.txt
 
@@ -1210,46 +1204,34 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
       . {{{
       }}}
   ----
-  GraphQL(!)  #
+  GraphQL(!)  # ¤
   . {{{
   }}}
-    sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤
-    . {{{
-      ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/sqlitebrowser-docs.txt
-    }}}
-    MongoDB Compass / MongoDB Realm  @@  ¤
+    sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤¤¤
+    MongoDB Compass / MongoDB Realm  @@  ¤¤(¤)
     . {{{
     }}}
-  Rx.Net  ¤
+  Reason + PureScript  ¤¤
   . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/RxDotnet-2e_2024.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/ReasonRescriptBuckle-Docs.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/bucklescript-cb.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml-qsguide_2019.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml2.txt
+
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-functweb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-lenses_2018.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-functweb_2017.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
   }}}
-  REACT (+Mongo)  ##  _Clean_  ¤¤
+  Java|Cloj Semantic-Web  ¤¤
   . {{{
-    gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
-    [+Material UI]
-
-
-    cp ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/
-
-    cp ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
+    ~/Empire/Doks/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
   }}}
-    Bash|Dash-Mans
-  . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
-  }}}
-  Puppet
-  Mojo  TODO:OCR
-  Devops
-  . {{{
-    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
-    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
-
-    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
-    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
-  }}}
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤
+Anki  ¤¤¤
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
@@ -1270,25 +1252,41 @@ FUNPROFIT
     https://mallibone.com/post/fsharp-scripting
 
   }}}
+  Rx.Net  ¤
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/RxDotnet-2e_2024.txt
+  }}}
+  REACT (+Mongo)  ##  _Clean_  ¤¤
+  . {{{
+    gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
+    [+Material UI]
+
+
+    cp ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/
+
+    cp ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/freec-0{3_frontendlibs,5_nodemong-apimicros}.txt
+  }}}
+    Bash|Dash-Mans  ¤¤(¤)
+  . {{{
+    Bluebash, Bcb, ....
+        Rute, ABSG, ....
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
+  }}}
+  Puppet
+  Mojo  TODO:OCR
+  Devops
+  . {{{
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+  }}}
   Roslyn (+Analysis|CodeGen)
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
-  }}}
-  Reason + PureScript  ¤
-  . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/ReasonRescriptBuckle-Docs.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/bucklescript-cb.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml-qsguide_2019.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml2.txt
-
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-functweb_2017.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-lenses_2018.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-functweb_2017.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
   }}}
   AzDevops
   . {{{
@@ -1298,10 +1296,6 @@ FUNPROFIT
     ~/Empire/Doks/Comp/PROGR/projman/azdevops/azuredev-guide_2019.txt
     ~/Empire/Doks/Comp/PROGR/projman/azdevops/azuredevops-begguide.mini.txt
     ~/Empire/Doks/Comp/PROGR/projman/azdevops/azure-prodaccel.txt
-  }}}
-  Java|Cloj Semantic-Web  ¤
-  . {{{
-    ~/Empire/Doks/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
   }}}
 
   ~/Dropbox/rsc/Doks/phone/Comp/sysadm/win/PshellforSysadms_2020.txt
@@ -1541,6 +1535,7 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
+Pegged ¤¤¤
 Pegged, Tsv-Utils, Perlstyle-Regex {{{
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/pegged/peg-slides.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/pegged/Pegged.txt
@@ -1552,16 +1547,16 @@ Pegged, Tsv-Utils, Perlstyle-Regex {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/tsvutils/TsvUtils2.txt
 }}}
 ----
-Org-Man
+Org-Man  ¤¤¤
 SASS+Compass {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
 }}}
-AnkiMan (+Renskriv ___office)
+AnkiMan (+Renskriv ___office)  ¤¤¤
   festival
-  CsFunct 3(??__)
+  CsFunct 3(??__)  ¤¤¤
 Tiny Scheme, GimpScheme-Plugins  (GimpPy)
             Samsung Notes (+Phone/Tablet)
-            Nyxt (+qutebrowser/'hackers browser')
+            Nyxt (+qutebrowser/'hackers browser')  ¤¤
 
 Termux
     PowerShell[!]  WSL ____
@@ -8131,7 +8126,12 @@ https://www.mongodb.com/docs/atlas/device-sdks/sdk/kotlin/  # atlas realm - andr
 GEMINI NEWER {{{
 ___FSHARP_DATASTRUCTURES
 ___gnometracker_sparql
-___zzzz
+___revealimpress_vsNewer
+___ThreeJs
+___ReasonPure_vsTypescript
+___MorrowindSCRIPTING=pacman -S openmw
+___Nyxt_LispProgramming
+
 ___csharp_records_recordstructs
 ___revealjs_mobileclicker
 ___MapGisEtc__FsharpAvaloniaFabulfablesuave
@@ -8995,7 +8995,11 @@ You're in luck! Morrowind modding, while having roots in older technology, has e
 
 Core Techniques and Tools:
 
-    The Elder Scrolls Construction Set (CS): This is the official modding tool released by Bethesda. It's the primary interface for:
+    The Elder Scrolls Construction
+    Set (CS): This is the official
+    modding tool released by
+    Bethesda. It's the primary
+    interface for: '
         Object Editing: Modifying existing game assets like items, creatures, NPCs, spells, factions, etc. This involves changing properties through a graphical interface.
         World Editing: Creating and altering landmasses, interiors, and exteriors. This is done through a visual editor.
         Dialogue Editing: Writing and structuring conversations between NPCs. This involves creating topics, responses, and conditions for them to appear.
@@ -9781,8 +9785,461 @@ potentially feeding it into Python
 for more advanced machine learning
 analysis.
 
+- Another quick question: We've
+  talked about using Tracker and
+  Tinysparql before, i.e. to
+  extract information about files
+  and such in a file-system, but it
+  seems like the tools I should use
+  on a newer Arch-system are
+  localsearch and tinysparql. Could
+  we repeat some of the examples of
+  extracting information using
+  Sparql and friends so I don't get
+  hung up on the older syntax and
+  names?
 
-___zzzz
+Ah, you're right! My apologies for the outdated information. The landscape of desktop search and metadata management on Linux, especially on rolling releases like Arch, does evolve. You're correct that localsearch and tinysparql are the relevant tools now, effectively replacing Tracker and its associated components in many modern Arch setups.
+
+Let's revisit some examples of extracting information using SPARQL with tinysparql and the data indexed by localsearch.
+
+Understanding the Shift:
+
+    Tracker (Older): Tracker was a comprehensive semantic desktop search framework that used its own database and SPARQL endpoint.
+    localsearch (Newer): localsearch is a more lightweight and focused file indexing and search utility. It also exposes its data via a SPARQL endpoint, often using a similar, but not identical, ontology to Tracker.
+    tinysparql: This is a lightweight SPARQL client that can query SPARQL endpoints, including the one provided by localsearch.
+
+Key Differences to Keep in Mind:
+
+    Ontology: The specific vocabulary (classes and properties) used by localsearch might differ slightly from Tracker's ontology (e.g., nie: and nfo:). You'll need to explore the localsearch ontology to construct your queries correctly.
+    Endpoint: The SPARQL endpoint URL might be different. Typically, it's something like http://localhost:8080/sparql. You'll need to confirm this in your localsearch configuration or documentation.
+
+Example Queries with tinysparql and localsearch (Illustrative):
+
+Let's assume localsearch is running and its SPARQL endpoint is at http://localhost:8080/sparql. We'll also assume some common properties, but you might need to adapt these based on the actual localsearch ontology.
+
+1. Finding all audio files:
+Bash
+
+tinysparql -u http://localhost:8080/sparql \
+  "SELECT ?uri ?name WHERE {
+    ?uri a <http://purl.org/ontology/lv2/core#AudioPort> ;
+         <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileName> ?name .
+  }"
+
+Explanation:
+
+    -u http://localhost:8080/sparql: Specifies the SPARQL endpoint URL.
+    SELECT ?uri ?name WHERE { ... }: Selects the URI of the resource and its file name.
+    ?uri a <http://purl.org/ontology/lv2/core#AudioPort> .: This line attempts to find resources that are of the type "AudioPort". Note: You'll need to verify the actual class used by localsearch for audio files. It might be something like <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#Audio> or a similar term.
+    ?uri <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileName> ?name .: This retrieves the file name associated with the audio file. Again, confirm the exact property used by localsearch for file names. It might be nfo:fileName or a similar term.
+
+2. Finding all files modified in the last 7 days:
+
+This is a bit trickier as it relies on how localsearch stores modification times. You might need to look for properties related to file system attributes.
+Bash
+
+tinysparql -u http://localhost:8080/sparql \
+  "SELECT ?uri ?name ?modified WHERE {
+    ?uri <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileName> ?name ;
+         <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileLastModified> ?modified .
+    FILTER (?modified > (NOW() - xsd:dayTimeDuration('P7D')))
+  }"
+
+Explanation:
+
+    We select the URI, file name, and modification time.
+    We filter the results to include only those where the fileLastModified property is greater than 7 days ago. Again, verify the exact property name for last modification in localsearch's ontology.
+    xsd:dayTimeDuration('P7D'): Represents a duration of 7 days.
+
+3. Finding all text files containing a specific word:
+
+This kind of content-based search might be more involved and depend on whether localsearch indexes file content and how it exposes that information.
+Bash
+
+# This is a more speculative example and might not be directly supported
+tinysparql -u http://localhost:8080/sparql \
+  "SELECT ?uri ?name WHERE {
+    ?uri a <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#PlainTextDocument> ;
+         <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileName> ?name ;
+         <http://example.org/ontology/content> ?content . # Hypothetical content property
+    FILTER CONTAINS (?content, 'your_word')
+  }"
+
+Explanation:
+
+    This assumes a hypothetical property <http://example.org/ontology/content> that might represent the text content of a file. localsearch might not expose file content in this way by default.
+    FILTER CONTAINS (?content, 'your_word'): Filters for files whose content contains the specified word.
+
+How to Discover the localsearch Ontology:
+
+The most crucial step is to understand the vocabulary used by localsearch. Here's how you can try to discover it:
+
+    Consult the localsearch Documentation: The official documentation for localsearch on Arch Linux or its project website should be your primary resource. Look for information on its data model, ontology, and SPARQL endpoint.
+
+    Example Queries in Documentation: The documentation might provide example SPARQL queries that illustrate the classes and properties used.
+
+    Introspection (If Possible): Some SPARQL endpoints allow you to query the schema itself. You might be able to run queries to list all available classes and properties. For example:
+    Bash
+
+tinysparql -u http://localhost:8080/sparql \
+  "SELECT DISTINCT ?type WHERE { ?s a ?type . }"
+
+Bash
+
+    tinysparql -u http://localhost:8080/sparql \
+      "SELECT DISTINCT ?p WHERE { ?s ?p ?o . }"
+
+    These queries will list all the distinct types (classes) and properties used in the indexed data.
+
+Putting It All Together:
+
+To effectively use tinysparql with localsearch:
+
+    Ensure localsearch is running and indexing your files.
+    Identify the correct SPARQL endpoint URL for localsearch.
+    Explore the localsearch ontology to find the classes and properties relevant to your queries. This might involve consulting documentation or using introspection queries.
+    Construct your SPARQL queries using the correct vocabulary.
+    Execute your queries using tinysparql against the localsearch endpoint.
+
+Remember that the specific ontology used by localsearch is key. The examples above are illustrative and might require adjustments based on what localsearch actually exposes. Good luck exploring the semantic data of your Arch system!
+
+That's really interesting. From what I can gather here, in some sense these tools are kind of a development and vast improvement over using find and suchlike Bash/Unix
+
+You've absolutely nailed a core concept here. localsearch (and previously Tracker) combined with SPARQL represent a significant leap in functionality and conceptual sophistication compared to traditional command-line tools like find and grep (and even locate).
+
+Here's why you're right:
+
+Limitations of find and Similar Tools:
+
+    Primarily File-System Centric: find operates directly on the file system structure. You search based on file names, types, sizes, modification dates, and permissions. It doesn't inherently understand the content or the metadata embedded within the files (beyond basic file system attributes).
+    String-Based Search (with grep): For content searching, you typically pipe the output of find (or use other tools) to grep, which performs pattern matching on the raw text content. This is powerful but doesn't understand the meaning or the structure of the data.
+    Limited Metadata Awareness: While you can use tools like exiftool or mediainfo to extract metadata, integrating this into a complex search workflow with find and grep can be cumbersome.
+    Lack of Semantic Understanding: These tools don't inherently understand the relationships between files or the types of information they contain in a structured way. For example, find doesn't "know" that a .mp3 file is an audio file with an artist and a title.
+
+Advantages of localsearch and SPARQL:
+
+    Semantic Understanding: localsearch indexes files and attempts to understand their type and extract metadata (artist, title, genre for audio; author, title for documents; etc.). This information is stored in a structured way using an ontology (a defined set of classes and properties).
+    Structured Queries with SPARQL: SPARQL allows you to ask much more sophisticated questions based on this structured metadata. Instead of just searching for a filename, you can ask for "all audio files by a specific artist" or "all documents containing a certain keyword and created after a specific date."
+    Relationship Navigation: Because the data is structured as a graph of resources and their relationships, SPARQL can traverse these relationships. For example, you could potentially query for "all albums by the artist who created this song."
+    Type-Aware Searching: You can specifically search for resources of a certain type (e.g., audio files, documents, images) based on their semantic classification.
+    More Expressive Filtering: SPARQL offers powerful filtering capabilities based on data types, ranges, and logical conditions.
+    Extensibility: The underlying ontology can be extended to include new types of files and metadata.
+
+Analogy:
+
+Think of it like searching a library:
+
+    find and grep are like walking through the shelves and looking at the spines (filenames) or quickly skimming pages for a keyword. You have to manually understand the context and relationships.
+    localsearch and SPARQL are like having a librarian who has cataloged all the books with detailed information (author, genre, publication date, subject) in a structured database. You can ask the librarian very specific questions, and they can efficiently retrieve the relevant items based on their understanding of the data.
+
+In Conclusion:
+
+localsearch and SPARQL provide a more abstract and semantically rich way to interact with your file system's information. They move beyond simple string matching on filenames and content to understanding the meaning of the data. While the initial setup and learning curve might be a bit steeper than basic command-line tools, the power and flexibility they offer for information retrieval and management are significantly greater, especially as your data becomes more diverse and your search needs become more complex. You're essentially working with a local semantic web of your files!
+
+- Can those tools also interact with knowledge-bases like Wikidata to some or even great effect, or would I use and integrate other tools for that? And, if the first case is true, could you give me some examples?
+
+That's an excellent and forward-thinking question! You're hitting on the potential for bridging your local digital world with the vast, interconnected knowledge of the Semantic Web.
+
+Can localsearch and tinysparql directly interact with knowledge bases like Wikidata?
+
+Not directly in the way they interact with the locally indexed file system. localsearch is designed to index and query local file metadata. Its SPARQL endpoint exposes information about your local files based on its configured ontologies.  
+
+tinysparql is a SPARQL client. It can query any SPARQL endpoint, provided it has network access to it. Wikidata provides a public SPARQL endpoint at https://query.wikidata.org/sparql.  
+
+Therefore, the interaction would typically involve using tinysparql to query the Wikidata SPARQL endpoint separately from querying the localsearch endpoint.
+
+However, there are ways you could integrate information from Wikidata with your local file metadata, often requiring some intermediary steps or custom scripting:
+
+Potential Integration Strategies:
+
+    Manual Enrichment: You could manually tag your local files with identifiers (like Wikidata QIDs) and then use these identifiers in separate tinysparql queries against Wikidata to fetch more information.
+
+    Scripted Integration: You could write scripts (e.g., in Python) that:
+        Query localsearch to get metadata about a local file (e.g., artist name from an audio file).
+        Use this information to query the Wikidata SPARQL endpoint to find the corresponding entity (e.g., the Wikidata QID for that artist).
+        Potentially store the Wikidata QID back as a custom tag in your local file metadata (if the tagging format allows) or in a separate database that links local files to Wikidata entities.
+        Use the Wikidata QID to retrieve further information from Wikidata.
+
+    Ontology Mapping (More Advanced): In theory, you could try to map concepts in the localsearch ontology to concepts in Wikidata's ontology (Wikibase). This would be a complex task but could potentially allow for more integrated queries, perhaps through a mediating service or a custom SPARQL endpoint that federates queries. This is likely beyond the scope of typical usage for localsearch and tinysparql out of the box.
+
+Examples of Separate tinysparql Queries Against Wikidata:
+
+Let's say you have a local MP3 file by the artist "The Beatles." You could use localsearch to find the file and get the artist name. Then, using tinysparql (or any other SPARQL client), you could query Wikidata:
+Bash
+
+tinysparql -u https://query.wikidata.org/sparql \
+  "SELECT ?beatles ?beatlesLabel ?formationDate WHERE {
+    ?beatles rdfs:label 'The Beatles'@en .
+    OPTIONAL { ?beatles wdt:P571 ?formationDate . } # P571 is the property for 'inception'
+    SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
+  }"
+
+Explanation:
+
+    -u https://query.wikidata.org/sparql: Specifies the Wikidata SPARQL endpoint.
+    ?beatles rdfs:label 'The Beatles'@en .: Finds the Wikidata entity with the English label "The Beatles."
+    OPTIONAL { ?beatles wdt:P571 ?formationDate . }: Optionally retrieves the formation date (P571) of The Beatles.
+    SERVICE wikibase:label { ... }: Fetches human-readable labels for the entities in the specified languages.
+
+Another Example: Finding albums by The Beatles:
+Bash
+
+tinysparql -u https://query.wikidata.org/sparql \
+  "SELECT ?album ?albumLabel ?publicationDate WHERE {
+    ?beatles rdfs:label 'The Beatles'@en .
+    ?album wdt:P175 ?beatles .       # P175 is the property for 'performer'
+    ?album wdt:P577 ?publicationDate . # P577 is the property for 'publication date'
+    SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
+  }"
+
+Explanation:
+
+    ?album wdt:P175 ?beatles .: Finds entities (albums) where The Beatles are the performer.
+    ?album wdt:P577 ?publicationDate .: Retrieves the publication date of the album.
+
+Integrating These Concepts:
+
+Imagine a script that:
+
+    Uses tinysparql to query localsearch for all MP3 files with "Beatles" in the artist tag.
+    For each file, extracts the artist name.
+    Uses the artist name to query Wikidata (as in the first example) to get the Wikidata QID for "The Beatles."
+    Uses the QID to then query Wikidata for albums by The Beatles (as in the second example).
+    Perhaps displays this information alongside the local file information.
+
+Conclusion:
+
+While localsearch and tinysparql don't directly perform federated queries across your local index and Wikidata in a single step, tinysparql can certainly be used to query Wikidata independently. The real power comes from your ability to bridge the gap through scripting and potentially by enriching your local file metadata with identifiers from knowledge bases like Wikidata. This allows you to leverage the vast structured knowledge of Wikidata to enhance your understanding and organization of your local digital content. It's a powerful concept for building more intelligent and interconnected personal knowledge management systems.
+LocalSearch - GNOME
+Source icon
+gnome.pages.gitlab.gnome.org
+Tsparql – 3.0: Overview - GNOME
+Source icon
+gnome.pages.gitlab.gnome.org
+
+And could you also hint how Sumo and Vampire (I think the prover is called, and maybe some other tools as well) could be used in this context?
+
+You're bringing up some more advanced and specialized tools from the realm of automated reasoning and knowledge representation! Let's explore how Sumo, Vampire (the theorem prover), and potentially other related tools could be relevant in the context of integrating local file metadata with knowledge bases like Wikidata, although their application might be more involved and less direct than using tinysparql.
+
+Understanding the Tools:
+
+    Sumo (Suggested Upper Merged Ontology): SUMO is a large, formal ontology that aims to provide a structured and comprehensive representation of general knowledge. It defines a hierarchy of concepts and relations. Its goal is to be a foundation for building more specific ontologies and knowledge-based systems.
+    Vampire: Vampire is a powerful automated theorem prover for first-order logic. It takes logical formulas as input and tries to determine if they are logically valid (always true) or satisfiable (true in some interpretation).
+    Other Related Tools: You might also be thinking of Semantic Web Rule Language (SWRL) reasoners or other types of logical inference engines.
+
+How They Could Be Used (Potentially):
+
+The integration of these tools with localsearch and Wikidata would likely involve more complex knowledge engineering and reasoning tasks rather than direct querying of the data itself. Here are some potential, albeit advanced, scenarios:
+
+    Ontology Alignment and Mapping:
+        You could use SUMO as a high-level ontology to try and align or map the ontologies used by localsearch and Wikidata (Wikibase). For example, you might try to find correspondences between a localsearch class like AudioFile and a Wikidata class related to musical works, or between properties like artist and Wikidata's performer property.
+        Theorem provers like Vampire could potentially be used to reason about the consistency and implications of these ontology mappings. If you define the mappings as logical axioms, Vampire could help you determine if the combined knowledge base is logically sound.
+
+    Rule-Based Inference and Enrichment:
+        You could use a rule language (like SWRL, potentially implemented on top of a system that integrates localsearch and Wikidata data) along with a reasoner to infer new knowledge. For example, you could define rules like: "If a local file has an artist who is also listed as a composer in Wikidata, then infer that the local file might be a musical work composed by that artist."
+        Vampire could potentially be used as the underlying logical engine for such a rule-based system, although it's primarily a theorem prover rather than a forward-chaining rule engine.
+
+    Knowledge Graph Integration and Reasoning:
+        You could imagine a system where the metadata from localsearch and the data from Wikidata are represented as a unified knowledge graph. SUMO could provide a foundational layer for this graph.
+        A theorem prover like Vampire could then be used to perform logical queries and inferences over this integrated knowledge graph. For example, you might ask: "Find all local musical works whose composers were born in the same city as the performer of another local musical work." This would require reasoning across both local metadata and Wikidata knowledge.
+
+Challenges and Considerations:
+
+    Complexity: These tools are powerful but have a steep learning curve and require a strong understanding of logic, ontologies, and knowledge representation.
+    Data Heterogeneity: The ontologies and data models used by localsearch and Wikidata are different. Aligning them and reasoning consistently across them is a significant challenge.
+    Scalability: Reasoning over large knowledge bases like Wikidata can be computationally expensive.
+    Tool Integration: Building a system that effectively integrates localsearch data, Wikidata, SUMO, and a theorem prover like Vampire would require significant software engineering effort. There isn't likely to be an out-of-the-box solution.
+    SUMO's Scope: While SUMO is broad, it might not have detailed enough representations for all the specific types of entities and relationships you'd find in local file metadata or Wikidata. You might need to extend or map to more specialized ontologies.
+
+In Summary:
+
+While tinysparql provides a direct way to query the SPARQL endpoints of localsearch and Wikidata separately, tools like SUMO and Vampire operate at a different level of abstraction, focusing on formal knowledge representation and logical reasoning. Their use in this context would likely involve:
+
+    Formalizing the ontologies and mappings between localsearch and Wikidata.
+    Defining logical rules or axioms that relate local file metadata to broader knowledge in Wikidata.
+    Using a theorem prover (like Vampire) or a rule engine to perform inferences and answer complex queries over the integrated knowledge.
+
+This is a more research-oriented and advanced approach. For most practical purposes of integrating local file metadata with Wikidata, scripting with a language like Python to query both endpoints and process the results is likely to be more straightforward. However, if you have a strong interest in formal knowledge representation and reasoning, exploring the potential of tools like SUMO and Vampire in this domain could lead to very powerful and semantically rich applications.
+
+Oh and sorry, one more question connected to the previous one: Which programming languages and connected utilities (i.e. I'm thinking tools like Jena and Sesame for Java for instance) could be used to good effect with the previous tools (localsearch and tinysparql)? And you do not have to mention only the most obvious one, but you can of course exclude the more obscure and less supported ones - i.e. I want to get an overview of my options
+
+That's a great follow-up question, aiming to bridge the gap between the command-line tools (localsearch, tinysparql) and more programmatic approaches for knowledge graph interaction! Here's an overview of programming languages and associated libraries/utilities that you could use effectively:
+
+1. Python:
+
+    Libraries:
+        rdflib: This is a very popular and versatile Python library for working with RDF (Resource Description Framework), the foundation of Semantic Web technologies. It allows you to parse and serialize RDF in various formats (like Turtle, XML, N3), create and manipulate RDF graphs, and execute SPARQL queries against local or remote endpoints. You could use rdflib to query the localsearch endpoint (via HTTP) and the Wikidata endpoint.
+        SPARQLWrapper: Another excellent Python library specifically designed for querying remote SPARQL endpoints (like localsearch and Wikidata). It simplifies the process of sending queries and handling results in various formats (JSON, XML).
+        requests: A general-purpose HTTP library in Python. You could use it to interact with the SPARQL endpoints directly, although rdflib and SPARQLWrapper provide higher-level abstractions for SPARQL.
+    Why Python is a good choice: Python has a large and active community, extensive libraries for data manipulation and web interaction, and is relatively easy to learn and use. Its strong presence in data science and knowledge representation makes it well-suited for this task.
+
+2. Java:
+
+    Libraries/Frameworks:
+        Apache Jena: As you mentioned, Jena is a comprehensive Java framework for building Semantic Web applications. It provides APIs for creating and managing RDF graphs (in-memory or persistent), reasoning over RDF data, and querying using SPARQL (both local and remote endpoints). You could use Jena to interact with localsearch and Wikidata SPARQL endpoints.
+        Eclipse RDF4J (formerly Sesame): Another powerful Java framework similar to Jena, offering APIs for RDF storage, querying (SPARQL), reasoning, and working with various RDF formats. It's a robust and widely used option.
+    Why Java is a good choice: Java is a mature and enterprise-ready language with strong performance and scalability. Jena and RDF4J are well-established and feature-rich frameworks for Semantic Web development. If you have a Java background or plan to build larger-scale applications, these are excellent options.
+
+3. JavaScript (Node.js):
+
+    Libraries:
+        sparql-http-client: A JavaScript library for querying SPARQL endpoints over HTTP. It's lightweight and specifically designed for this purpose.
+        n3: A JavaScript library for parsing and serializing RDF in various formats. You could use it to process the results from SPARQL queries.
+        rdf-js ecosystem: A collection of JavaScript specifications and libraries for working with RDF, offering interoperability between different tools.
+    Why JavaScript is a good choice: If you are comfortable with JavaScript or are building web-based applications that need to interact with your local metadata or Wikidata, Node.js provides a server-side JavaScript environment that can leverage these libraries.
+
+4. C# (.NET):
+
+    Libraries:
+        dotNetRDF: A comprehensive .NET library for working with RDF data, including parsing, serialization, querying (SPARQL), and reasoning. It's a well-maintained and powerful option for .NET developers.
+    Why C# is a good choice: If you are working within the .NET ecosystem, dotNetRDF provides a solid foundation for interacting with Semantic Web data and SPARQL endpoints.
+
+5. Other Options (Less Common but Potentially Useful):
+
+    Ruby: Libraries like RDF.rb provide capabilities for working with RDF and SPARQL.
+    PHP: Frameworks like EasyRdf offer functionalities for handling RDF and querying SPARQL endpoints.
+    Lisp (e.g., Clojure): While perhaps less mainstream for general web interaction, Lisp dialects have a strong history in symbolic computation and knowledge representation, and libraries exist for RDF and SPARQL.
+
+Considerations for Choosing a Language and Tools:
+
+    Your Existing Skills: Leverage the programming languages you are already familiar with to minimize the learning curve.
+    Project Scope: For simple scripts and data exploration, Python might be the quickest to get started with. For larger applications or if you have specific performance requirements, Java or C# might be more suitable. JavaScript is relevant for web-based solutions.
+    Community and Documentation: Consider the availability of documentation, tutorials, and community support for the chosen language and libraries. Python, Java, and JavaScript generally have very active communities.
+    Specific Library Features: Evaluate the features offered by the libraries (e.g., SPARQL query capabilities, RDF graph manipulation, reasoning support) based on your project's needs.
+
+In the context of localsearch and tinysparql:
+
+You would primarily use the HTTP querying capabilities of the chosen language's libraries (like rdflib or SPARQLWrapper in Python, Jena's remote endpoint access in Java, etc.) to send SPARQL queries to the localsearch endpoint (just as tinysparql does from the command line). You would then parse and process the results within your chosen programming language.
+
+For interacting with Wikidata, you would use the same libraries but point them to the Wikidata SPARQL endpoint (https://query.wikidata.org/sparql).
+
+The power of using a programming language comes in the ability to automate tasks, integrate data from multiple sources, perform more complex data manipulation and analysis on the results, and build custom applications around this data.
+
+By choosing a language and its associated Semantic Web libraries, you can move beyond simple command-line queries and create sophisticated workflows that leverage both your local file metadata and the vast knowledge contained in resources like Wikidata.
+
+Both F# and Clojure are high on my list, because of their focus on and strength in the datascience-field (apart from the more obvious Python of course), and their script-like properties, i.e. testing at the REPL, etc
+
+Excellent choices! F# and Clojure are indeed powerful languages with strong ties to data science and offer excellent interactive development experiences through their REPLs. Let's explore how you could use them with localsearch and Wikidata:
+
+1. F#:
+
+    Libraries:
+        FSharp.Data.Sparql: This library provides functionality for querying SPARQL endpoints from F#. It allows you to construct and execute SPARQL queries and process the results.
+        .NET System.Net.Http: F# can seamlessly use the standard .NET libraries, including those for making HTTP requests. You could use this directly to interact with the SPARQL endpoints, although FSharp.Data.Sparql offers a more specialized approach for SPARQL.
+        FSharp.Data: While primarily known for working with structured data formats like JSON and XML, it might have utilities that could be helpful in processing the results returned by SPARQL endpoints (often in JSON or XML).
+        FSharpx.DataStructures: Offers functional data structures that can be beneficial for working with the graph-like nature of RDF data.
+    Why F# is a good choice:
+        Functional Paradigm: F#'s strong emphasis on functional programming can lead to concise and expressive code for data manipulation and transformation, which is crucial when dealing with structured data from SPARQL queries.
+        Strong Typing: The static typing of F# helps catch errors early and ensures code correctness, especially important when dealing with structured data and ontologies.
+        .NET Interoperability: F# has excellent interoperability with the .NET ecosystem, giving you access to a vast range of libraries and tools if needed.
+        REPL-Driven Development: F#'s interactive REPL (F# Interactive) is fantastic for experimenting with queries and data processing in real-time.
+
+Example (Conceptual - might require minor adjustments based on the exact FSharp.Data.Sparql API):
+F#
+
+#r "nuget: FSharp.Data.Sparql"
+
+open FSharp.Data.Sparql
+
+let localSearchEndpoint = "http://localhost:8080/sparql"
+let wikidataEndpoint = "https://query.wikidata.org/sparql"
+
+// Querying localsearch for audio files (conceptual)
+let queryLocalSearch =
+    sparql {
+        select [ "uri"; "name" ]
+        where {
+            pattern "?uri" "a" "<http://purl.org/ontology/lv2/core#AudioPort>"
+            pattern "?uri" "<http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileName>" "?name"
+        }
+    }
+
+let resultLocalSearch = Sparql.query localSearchEndpoint queryLocalSearch
+
+// Processing the results
+resultLocalSearch
+|> Seq.iter (fun row -> printfn "URI: %s, Name: %s" (row.["uri"] : string) (row.["name"] : string))
+
+// Querying Wikidata for The Beatles' formation date
+let queryWikidata =
+    sparql {
+        select [ "?formationDate" ]
+        where {
+            pattern "?beatles" "rdfs:label" "'The Beatles'@en"
+            pattern "?beatles" "wdt:P571" "?formationDate"
+        }
+    }
+
+let resultWikidata = Sparql.query wikidataEndpoint queryWikidata
+
+// Processing Wikidata results
+resultWikidata
+|> Seq.iter (fun row ->
+    match row.TryGet("formationDate") with
+    | Some date -> printfn "The Beatles formed on: %s" (date : string)
+    | None -> printfn "Formation date not found."
+)
+
+2. Clojure:
+
+    Libraries:
+        clj-http: A widely used HTTP client library for Clojure, essential for making requests to the SPARQL endpoints.
+        cheshire: A fast JSON parsing and generation library, as SPARQL results are often returned in JSON.
+        xml-zip: For parsing XML results, if the SPARQL endpoint returns data in XML format.
+        Libraries for RDF and SPARQL (less mainstream but exist): While Clojure doesn't have a dominant "Jena/RDF4J equivalent" in terms of a large, all-encompassing framework, there are libraries like semantic-web or clojure-rdf that provide tools for working with RDF data structures and potentially SPARQL query construction (though often you might interact with endpoints directly via HTTP).
+    Why Clojure is a good choice:
+        Lisp Heritage and Flexibility: Clojure's Lisp syntax and dynamic nature allow for highly expressive and flexible code, well-suited for data manipulation and working with diverse data structures.
+        Immutability and Concurrency: Clojure's focus on immutable data structures and robust concurrency primitives can be advantageous when dealing with potentially large datasets from knowledge bases.
+        REPL-Driven Development: Clojure's excellent REPL allows for interactive exploration and testing of your code and queries.
+        Strong in Data Processing: Clojure has a strong presence in data engineering and processing, making it a natural fit for working with structured data from SPARQL endpoints.
+
+Example (Conceptual):
+Clojure
+
+(require '[clj-http.client :as client])
+(require '[cheshire.core :as json])
+
+(def local-search-endpoint "http://localhost:8080/sparql")
+(def wikidata-endpoint "https://query.wikidata.org/sparql")
+
+;; Querying localsearch for audio files (conceptual - might need more manual SPARQL construction)
+(def local-search-query (str "SELECT ?uri ?name WHERE {"
+                             "?uri a <http://purl.org/ontology/lv2/core#AudioPort> ."
+                             "?uri <http://www.semanticdesktop.org/ontologies/2007/03/nepomuk-file-ontology#fileName> ?name ."
+                             "}"))
+
+(let [response (client/get local-search-endpoint {:query-params {:query local-search-query} :accept :json})]
+  (when (= (:status response) 200)
+    (let [body (json/decode (:body response) true)]
+      (doseq [binding (get-in body [:results :bindings])]
+        (println (str "URI: " (get-in binding [:uri :value]) ", Name: " (get-in binding [:name :value])))))))
+
+;; Querying Wikidata for The Beatles' formation date (conceptual) '
+(def wikidata-query (str "SELECT ?formationDate WHERE {"
+                          "?beatles rdfs:label 'The Beatles'@en ."
+                          "?beatles wdt:P571 ?formationDate ."
+                          "}"))
+
+(let [response (client/get wikidata-endpoint {:query-params {:query wikidata-query :format "application/sparql-results+json"} :accept :json})]
+  (when (= (:status response) 200)
+    (let [body (json/decode (:body response) true)]
+      (doseq [binding (get-in body [:results :bindings])]
+        (println (str "The Beatles formed on: " (get-in binding [:formationDate :value])))))))
+
+Key Takeaways:
+
+    Both F# and Clojure are excellent choices due to their functional nature, strong data processing capabilities, and interactive REPLs.
+    F# has a dedicated FSharp.Data.Sparql library that simplifies SPARQL interaction.
+    Clojure relies more on general HTTP libraries (clj-http) and JSON/XML parsing (cheshire, xml-zip) for interacting with SPARQL endpoints, with some less mainstream libraries for more direct RDF manipulation.
+    With both languages, you would construct your SPARQL queries as strings and then use the HTTP libraries to send them to the localsearch and Wikidata endpoints.
+    You would then parse the response (typically JSON or XML) to extract the data you need.
+
+Choosing between F# and Clojure often comes down to personal preference regarding syntax, the specific strengths of their respective ecosystems (.NET vs. JVM), and the availability of libraries that directly meet your needs. Both are powerful tools for tackling this kind of data integration task.
+
+
+___revealimpress_vsNewer
+
 - Another small question (and this
   is really for a very brief
   overview): I have been
@@ -9901,6 +10358,8 @@ While completely rolling your own offers the absolute pinnacle of potential for 
 
 Think of Reveal.js as a very capable canvas and set of tools that, with enough skill and effort in CSS and JavaScript, can be transformed into a platform for truly breathtaking presentations. Rolling your own is like building the canvas and tools from raw materials – incredibly rewarding but also significantly more demanding.
 
+
+
 Just for tickling my curiosity on another subject (i.e. I've always been fascinated by languages), could you give me an example of a hieroglyph that is common in Egyptian writing - say for a word like bread, give the hieroglyph or several hieroglyphs that would be required to write the Egyptian word 'bread' and give them as Unicode glyphs, and then also give me IPA for how to pronounce it, i.e. most notably the consonants, but if you can find it you can include the vowels as well
 
 This is a fun question! Let's delve into some ancient Egyptian.
@@ -9949,6 +10408,8 @@ Let me know if you'd like the code point for any other hieroglyphs!
 Your saved info
 Info you asked Gemini to save
 
+
+___ThreeJs
 Back just quickly to Reveal.js and presentations: I guess another option that might be interesting to use (at least in some contexts) is using Three.js for some visual effects etc. Could you just comment on that quickly, and I'll follow up with more questions as needed?
 
 That's a very insightful thought! Integrating Three.js with Reveal.js opens up a realm of truly astonishing and immersive visual effects for your presentations. Here's a quick comment on that possibility:
@@ -9976,6 +10437,8 @@ In essence, while it requires more technical expertise, combining Three.js with 
 
 Feel free to ask if you have more specific questions about how this integration might work or what kind of effects are achievable!
 
+
+___ReasonPure_vsTypescript
 Fantastic. I'll note that for now, and I would like to turn to another question just quickly: If I know and can use ReasonML/ReScript/BuckleScript and PureScript, would that obviate my need to learn and write TypeScript? I.e. I'm not against learning a bit or even more about TypeScript (and learning the others also carries with it a learning-curve), but it would be interesting to get an opinion on
 
 That's a very pertinent question, and the short answer is: largely, yes, your knowledge of ReasonML/ReScript/BuckleScript and PureScript can obviate the need to learn and write TypeScript for many (but not all) scenarios.
@@ -10049,6 +10512,8 @@ Conclusion:
 
 While strong static typing significantly enhances code reliability and reduces the surface area for certain types of bugs, it's not a silver bullet that completely replaces unit testing. Unit tests remain a crucial tool for verifying the correctness of your application's logic, handling edge cases, managing side effects, and ensuring overall robustness. Think of strong typing as a powerful first line of defense that catches many potential issues early, allowing your unit tests to focus on the more complex and behavior-specific aspects of your code. You'll likely write fewer unit tests focused on type-related errors, but you'll still need tests to ensure your code does what it's supposed to do.
 
+
+___MorrowindSCRIPTING=1/2
 A question (when it comes to scripting Morrowind and OpenMorrowind with Lua): When I read about it I see something called Tes3 UI mentioned. Is that a separate or standalone UI framework, or what? Could you tell me more about it?
 
 You've hit on a key component of Lua scripting within Morrowind and especially OpenMW: Tes3 UI.
@@ -10095,7 +10560,105 @@ You're very welcome! I'm glad I could help clarify Tes3 UI for you. If you delve
 Feel free to ask if any more questions arise as you explore! Happy modding!
 
 
+___MorrowindSCRIPTING ____
+Yes, I'm absolutely with you! You want a practical, step-by-step guide to writing and testing your first OpenMW Lua script. Let's break it down:
 
+1. Setting Up Your OpenMW Configuration:
+
+First, you need to ensure OpenMW is set up to recognize your custom content, including Lua scripts.
+
+    openmw.cfg File: This is the main configuration file for OpenMW. You'll need to locate it. The location varies depending on your operating system:
+        Linux: Usually in ~/.config/openmw/openmw.cfg
+        Windows: Typically in C:\Users\<YourUsername>\Documents\My Games\OpenMW\openmw.cfg
+        macOS: Often in ~/.config/openmw/openmw.cfg
+
+    Adding Your Custom Data Directory: You'll want a dedicated directory for your mod files, including Lua scripts. Let's create one. For example, in your home directory, create a folder named OpenMWMods/MyFirstLuaMod.
+
+    Editing openmw.cfg: Open openmw.cfg with a text editor. Look for the data= lines. You need to add a line pointing to your new mod directory. Make sure it appears before any lines pointing to the original Morrowind data files if you want your mod to potentially override vanilla content (though for a first script, the order might not be critical).
+    Ini, TOML
+
+data="~/.config/openmw/OpenMWMods/MyFirstLuaMod" ; Replace with your actual path
+data="/path/to/your/Morrowind/Data Files"
+
+(Adjust the paths to match your system.)
+
+Enabling Content Files (for potential ESP/ESM dependencies later): If your Lua script eventually interacts with specific game objects defined in an ESP or ESM file, you'll need to enable those in the content= section of openmw.cfg. For a purely Lua-driven mod initially, you might not need this right away.
+Ini, TOML
+
+    content="/path/to/your/Morrowind/Data Files/Morrowind.esm"
+    content="/path/to/your/Morrowind/Data Files/Tribunal.esm"
+    content="/path/to/your/Morrowind/Data Files/Bloodmoon.esm"
+    ; content="path/to/your/some_mod.esp"
+
+2. Creating Your First Lua Script:
+
+    Inside the OpenMWMods/MyFirstLuaMod directory you created, create a new text file and name it something descriptive, for example, my_first_script.lua.
+
+    Open my_first_script.lua with a text editor and let's put some basic code in it. This simple script will print a message to the OpenMW console when the game starts.
+    Lua
+
+    -- This script will run when the game is initialized.
+
+    local function onGameInit()
+        print("Hello from my first OpenMW Lua script!")
+        -- You can add more complex logic here later.
+    end
+
+    -- Register the onGameInit function to be called when the game initializes.
+    openmw.event.register(openmw.event.gameInitialized, onGameInit)
+
+        local function onGameInit(): This defines a function named onGameInit.
+        print("..."): This Lua function will output the text within the quotes to the OpenMW console.
+        openmw.event.register(openmw.event.gameInitialized, onGameInit): This is the crucial part. It tells OpenMW to execute the onGameInit function when the gameInitialized event occurs (i.e., when the game has finished loading).
+
+3. Telling OpenMW to Load Your Lua Script:
+
+There are a couple of ways to tell OpenMW to load and run your Lua script:
+
+    Using an .omwscripts File (Recommended for Organization):
+
+        Inside your OpenMWMods/MyFirstLuaMod directory, create a new text file named scripts.omwscripts.
+
+        Open scripts.omwscripts and add the path to your Lua script file (relative to your mod's data directory):
+
+        my_first_script.lua
+
+        OpenMW will automatically look for and load Lua scripts listed in .omwscripts files within its data directories.
+
+    Directly in openmw.cfg (Less Organized for Multiple Scripts):
+
+        You can also directly specify Lua scripts in the [Scripts] section of your openmw.cfg file:
+        Ini, TOML
+
+        [Scripts]
+        script=OpenMWMods/MyFirstLuaMod/my_first_script.lua
+
+        However, using .omwscripts files is generally cleaner for managing multiple scripts as your mod grows.
+
+4. Running OpenMW and Checking the Console:
+
+    Launch OpenMW. Load a save game or start a new game.
+    Once you are in the game world, open the OpenMW console. The default key to open the console is usually the ~ (tilde) key, located below the Esc key.
+    If everything is set up correctly, you should see the message "Hello from my first OpenMW Lua script!" printed in the console.
+
+Congratulations! You've run your first OpenMW Lua script.
+
+Next Steps and Ideas:
+
+    Explore the OpenMW Lua API: The official OpenMW documentation (https://openmw.readthedocs.io/en/latest/reference/lua-scripting/index.html) is your best resource. It details all the functions and events you can use to interact with the game world.
+    Experiment with Events: Try registering functions for other events, like actorCreated, cellChanged, itemAdded, etc., to see when they trigger.
+    Interact with Game Objects: Use functions like openmw.world.findObject("unique_object_id") to get references to specific in-game objects and then use other API functions to modify their properties (e.g., position, health, inventory). You'll need to know the object IDs from the Morrowind Construction Set (or OpenMW-CS).
+    Create Custom Functions: Write your own Lua functions to encapsulate logic and make your scripts more organized.
+    Look at Examples: The openmw-lua-examples repository on GitLab (https://gitlab.com/ptmikheev/openmw-lua-examples) is a treasure trove of practical examples.
+
+Remember to keep your Lua scripts organized within your mod's data directory. As you create more scripts, you can have multiple .lua files listed in your scripts.omwscripts file.
+
+Have fun exploring the possibilities of OpenMW Lua scripting! Let me know if you have any more questions as you delve deeper.
+
+
+
+
+___Nyxt_LispProgramming
 Could you give me an idea of something interesting we could create using the Nyxt browser and some Lisp coding? I know the potential is quite vast, so maybe we could explore some interesting ideas at the conceptual level of some plugins one could build to get started?
 
 That's a great question! Nyxt's extensibility via Lisp opens up a lot of fascinating possibilities. Here are a few conceptual plugin ideas that could be interesting to build, ranging from practical to more experimental:
@@ -10150,6 +10713,11 @@ To begin exploring these ideas, you could start by:
     Leveraging the Common Lisp ecosystem: Explore the vast array of libraries available for tasks like web scraping, API interaction, natural language processing, and data manipulation.
 
 Remember, the beauty of Nyxt is its flexibility. These are just starting points, and your own creativity and specific needs can lead to even more unique and powerful plugins. Good luck with your Lisp explorations in Nyxt!
+
+
+
+
+
 
 }}}
 

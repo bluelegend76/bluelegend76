@@ -1958,7 +1958,7 @@ stat datasci || mlearn-ai {{{
   }}}
   }}}
 }}}
-  ..\..\..\JupNoteb.binder.Tags1.txt
+  ../../../JupNoteb.binder.Tags1.txt
 --
 @@ scripting / web {{{
 . {{{
@@ -1968,6 +1968,7 @@ h5, c3  Todo (=at top of scripting**(??))
 }}}
   ____
   gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
+  gvim -c '/.*@.*' -p ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/cb/{python,jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
   gvim -p ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
     gvim -c '/.*@.*' -p ~/Dropbox/rsc/data/lists/ref/comp/cb/{jscb,h5c3,jqcb,phpcb,luacb,elixir}.txt
 

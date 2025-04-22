@@ -1,7 +1,20 @@
 vim:fdm=indent:fdl=2:
 set fdm=indent fdl=1
-___defrru_freq
+      ~/Dropbox/rsc/Doks/Lang/Shorth/gregg-irish.txt
+
+___defrru_freq; TODO=ADD EXTRA FREQ-FILES TO GITHUB[****!!]
+    ___phrases_1isUniverb ___PickStart
+    ___defrru_phras
 ___block3(=words)
+    -- Fr
+    https://www.youtube.com/results?search_query=france+24+la+guerre+en+ukraine+aujourd%27hui
+    https://www.youtube.com/watch?v=FafEGtTPXPg
+    https://www.youtube.com/watch?v=5DxxZj0e3J4
+    -- De
+      https://www.youtube.com/watch?v=ycMEH-K75VY  #waldner - ma lin
+    https://www.youtube.com/watch?v=ejKL55fXtgI
+    https://www.youtube.com/watch?v=q9hq9UA9seI
+    https://www.youtube.com/watch?v=hAkwQq3qoa0
 
 ___phrases_1isUniverb
 
@@ -64,520 +77,6 @@ TODO ====== START DESIGNING SQLITE DATABASE FOR LANGDB[!!!!] ======
     ..
 LISTS (=freqs phrases books)
     ~/Dropbox/rsc/data/lists/ref/lang/sv.freq.main.txt
-    ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.txt
-                Vanliga uttryck
-                - när man träffar någon
-                1:1 God morgon. God dag. God natt.
-                1:2 Hej. Hej då. Adjö.
-                1:3 Vi ses.
-                evince -p 8 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-                1:4 Jag heter ___
-                1:5 Vad heter Ni? Vad heter du?
-                1:6 Hur står det till?
-                1:7 Tack, det är bra.
-                1:8 Och hur står det till själv?
-                1:9 Talar Ni engelska/franska/tyska/spanska?
-                1:10 Får jag presentera Er för herr ___/fru ___/fröken ___
-                1:11 Det var trevligt att träffas.
-                1:12 Tack för en trevlig dag.
-                1:13 Jag hoppas att vi ses igen.
-                1:14 Gratulerar på födelsedagen.
-                1:15 Lycka till!
-
-                Räkneord
-                - grundtalen
-                2:1 Noll, ett, två, tre, fyra, fem, sex.
-                2:2 Sju, åtta, nio, tio, elva, tolv.
-                2:3 Tretton, fjorton, femton, sexton.
-                2:4 Sjutton, arton, nitton.
-                2:5 Tjugo, trettio, fyrtio.
-                2:6 Femtio, sextio, sjuttio, åttio.
-                2:7 Åttioen, åttiotvå, åttiotre, åttiofyra, åttiofem.
-                2:8 Nittio, nittioen, nittiotvå, nittiotre, nittiofyra.
-                2:9 Nittiofem, nittiosex, nittiosju, nittioåtta, nittionio.
-                2:10 Etthundra, femhundra, ettusen.
-                2:11 Ettusentvåhundra, tvåtusen, en miljon.
-
-                Räkneord
-                - ordningstalen
-                3:1 Den första, den andra, den tredje.
-                3:2 Den fjärde, den femte, den sjätte.
-                3:3 Den sjunde, den åttonde, den nionde.
-                3:4 Den tionde, den elfte, den tolfte.
-                3:5 Den tjugonde, den tjugoförsta.
-                3:6 Den trettionde, den trettioförsta.
-                3:7 En fjärdedel, en halv, tre fjärdedelar, en hel.
-
-                Tiden
-                4:1 Hur mycket är klockan?
-                4:2 Klockan är tolv.
-                4:3 Den är fem över ett.
-                4:4 Tio över två. Kvart över tre.
-                4:5 Tjugo över fyra på eftermiddagen.
-                4:6 Fem i halv sex. Halv sex.
-                4:7 Tjugo i sju på kvällen.
-                4:8 Kvart i åtta på morgonen.
-                4:9 Tio i tio på kvällen.
-                4:10 Tidigt på morgonen. Mitt på dagen.
-                4:11 Sent på kvällen. Mitt i natten.
-                4:12 I dag. I eftermiddag. I kväll.
-                4:13 I natt. I morgon bitti.
-                4:14 Om en timme. Om två dagar. Nästa helg.
-                4:15 Om en vecka. Om två månader. Om ett år.
-                4:16 I går. I förrgår.
-                4:17 För en timme sedan. För två dagar sedan.
-                4:18 Förra veckan. Förra månaden. För ett år sedan.
-
-                Veckans dagar
-                5:1 Vad är det för dag i dag?
-                5:2 Måndag, tisdag, onsdag, torsdag.
-                5:3 Fredag, lördag, söndag.
-                5:4 Idag är det fredag.
-                5:5 I morgon är det lördag.
-                5:6 I övermorgon är det söndag.
-                5:7 Det är sju dagar i en vecka.
-                5:8 Det är helgdag idag.
-                5:9 Helg. Veckoslut.
-
-                Månaderna
-                6:1 Januari, februari, mars, april.
-                6:2 Maj, juni, juli, augusti.
-                6:3 September, oktober, november, december.
-                6:4 Vilket datum är det i dag?
-                6:5 Det är den 22 juni.
-                6:6 Jag fyller år den 31 juli.
-                6:7 Det går tolv månader på ett år.
-
-                Årstiderna
-                7:1 Vår, sommar, höst, vinter.
-                7:2 Förra sommaren var vi i Grekland.
-                7:3 I vinter ska vi åka till Alperna.
-                Vädret 8:1
-                Det är kallt/varmt.  8:2
-                Det är varmare än i går.
-                8:3 Det regnar/snöar.
-                8:4 Det är soligt/molnigt.
-                8:5 Det är dimmigt/blåsigt.
-                8:6 Vad blir det för väder i morgon?
-                8:7 Jag tror att det blir vackert väder.
-                8:8 Jag tror att det blir dåligt väder.
-                8:9 Det är stormvarning/lavinfara.
-                8:10 Vilken underbar dag!
-                8:11 Väderleksrapport.
-
-                Färgerna
-                9:1 Svart, vit, grå, röd, blå, grön.
-                9:2 Gul, brun, lila, rosa, orange.
-                9:3 Hon har ljusblå ögon.
-                9:4 Han har mörkbrunt hår.
-
-                Med tåg
-                10:1 Var ligger järnvägsstationen?
-                10:2 Var kan jag köpa biljetter?
-                10:3 Jag skulle vilja byta den här biljetten.
-                10:4 När går nästa tåg till ___?
-                10:5 Jag skulle vilja ha en biljett till ___
-                10:6 Jag skulle vilja ha en sittplatsbiljett/en sovvagnsbiljett.
-                10:7 Rökare. Icke rökare. Fönsterplats.
-                10:8 Enkel resa. Tur och retur.
-                10:9 Första klass. Andra klass.
-                10:10 Stannar tåget i ___?
-                10:11 Måste jag byta tåg?
-                10:12 Från vilken plattform avgår tåget?
-                10:13 Hur kommer jag till spår nr ___?
-                10:14 Finns det restaurangvagn?
-                10:15 Vad kostar en barnbiljett?
-                10:16 Finns det förvaringsboxar på stationen?
-                10:17 Ingång. Utgång. Plattform. Spår.
-                10:18 Information. Effektförvaring. Toalett.
-                10:19 Konduktör. Tidtabell.
-
-                Med flyg
-                11:1 Jag vill flyga till ___
-                11:2 När går flyget?
-                11:3 Vad kostar resan?
-                11:4 Hur lång tid tar det att flyga till ___?
-                11:5 När måste jag checka in?
-                11:6 Hur mycket bagage får man ha med sig?
-                11:7 Serveras det måltider ombord?
-                11:8 Går det buss till flygplatsen?
-
-                På flygplatsen
-                12:1 Charterresa. Reguljärflyg. Apexbiljett.
-                12:2 Flygvärdinna. Steward. Pilot.
-                12:3 Ankomst. Avgång. Flight. Gate.
-                12:4 Avångstid. Försening. Inställt.
-                12:5 Min väska har kommit bort.
-                12:6 Varifrån går flygbussarna?
-                12:7 Hur kommer jag in till city?
-                12:8 Information. Incheckning. Bagage.
-                12:9 Inrikesflyg. Utrikesflyg.
-                12:10 Passagerare. Sista utrop. Gå ombord.
-
-                I passkontrollen/I tullen
-                13:1 Får jag se Ert pass/Ert visum?
-                13:2 Vad är syftet med Er resa?
-                13:3 Jag är här på semester.
-                13:4 Jag är här i affärer.
-                13:5 Jag ska stanna i två dagar/i en vecka/i en månad.
-                13:6 Har Ni något att förtulla?
-                13:7 Jag har inget att förtulla.
-                13:8 Jag har varor att förtulla.
-                13:9 Jag skulle vilja kontrollera Ert bagage.
-                13:10 Pass. Tullavgift. Tulltjänsteman.
-
-                På hotellet
-                14:1 Mitt namn är ___
-                14:2 Jag har reserverat ett enkelrum/ett dubbelrum.
-                14:3 Jag skulle vilja ha ett rum med dusch/med bad.
-                14:4 Jag stannar bara en natt.
-                14:5 Jag vill stanna tre nätter/två veckor.
-                14:6 Jag skulle vilja ha ett rum med havsutsikt.
-                14:7 Har rummet badrum/balkong?
-                14:8 Ingår frukost i priset?
-                14:9 När serverar ni frukost?
-                14:10 Vill Ni vara snäll och fylla i blanketten!
-                14:11 Förnamn. Efternamn.
-                14:12 Födelsedatum. Yrke. Adress.
-                14:13 Var snäll och skriv under här.
-                14:14 Var ligger hissen?
-                14:15 Kan ni ställa in en extra säng?
-                14:16 Hur mycket kostar helpension/halvpension?
-                14:17 Har ni något billigare?
-                14:18 Jag är inte nöjd med rummet.
-                14:19 Rummet är för litet.
-                14:20 Det är för bullrigt/för kallt/för varmt.
-                14:21 Jag skulle vilja byta till ett större rum.
-                14:22 Var snäll och väck mig klockan sju i morgon bitti.
-                14:23 Var kan jag parkera min bil?
-                14:24 Finns det luftkonditionering?
-                14:25 Har ni centralvärme?
-                14:26 Finns det telefon på rummet?
-                14:27 Kan jag få nyckeln till mitt rum?
-                14:28 Mitt rumsnummer är ___
-                14:29 Jag har glömt mitt rumsnummer.
-                14:30 Kudde. Täcke. Filt.
-                14:31 Lakan. Örngott. Handduk. Toalettpapper.
-                14:32 Pool. Bastu. Solarium. Motionsrum.
-                14:33 Reception. Nödutgång. Rumsservice.
-
-                Frukost
-                15:1 Jag skulle vilja ha kaffe med mjölk/utan mjölk.
-                15:2 Kan jag få lite mer kaffe, tack?
-                15:3 Jag skulle vilja ha te med mjölk/med citron/med socker.
-                15:4 Juice. Bröd. Rostat bröd. Smör.
-                15:5 Ost. Skinka. Marmelad. Yoghurt.
-                15:6 Kan jag få bacon och ägg?
-                15:7 Hårdkokt ägg. Löskokt ägg. Stekt ägg. Äggröra. Omelett.
-                15:8 Müsli. Cornflakes. Frukt.
-
-                Hyra bil
-                16:1 Jag skulle vilja hyra en bil.
-                16:2 Jag behöver den för en dag/för en vecka.
-                16:3 Hur mycket kostar det per dag/per kilometer?
-                16:4 Ingår bensin?
-                16:5 Är den helförsäkrad?
-                16:6 Hur mycket måste vi deponera?
-                16:7 Här är mitt körkort.
-
-                På bilverkstaden/
-                På bensinstationen
-                17:1 Min bil är trasig.
-                17:2 Var finns närmaste bilverkstad?
-                17:3 Jag behöver en bärgningsbil.
-                17:4 Har Ni tid att reparera min bil?
-                17:5 Det är något fel på bromsarna/på strålkastarna/på
-                kopplingen/ på kylarsytemet/på motorn.
-                17:6 Kan Ni laga avgassystemet/punkteringen?
-                17:7 Bromsljuset är trasigt.
-                17:8 Jag vill ha full tank.
-                17:9 Vill Ni vara snäll och kolla olja och luftryck?
-                17:10 Jag behöver motorolja/spolarvätska/kylarvätska.
-                17:11 Har Ni vindrutetorkare till min bil?
-                17:12 Jag behöver ett nytt däck.
-                17:13 Blyfri bensin.
-
-                Med buss
-                18:1 Vilken buss skall jag ta för att komma till ___?
-                18:2 Hur ofta går bussen?
-                30
-                18:3 Var snäll och säg till var jag skall stiga av.
-                18:4 Hur lång tid tar det med buss till ___?
-                18:5 Spårvagn.
-
-                Med tunnelbana
-                19:1 Var ligger närmaste tunnelbanestation?
-                19:2 Har Ni en karta över tunnelbanan?
-                19:3 Går det här tåget till ___?
-                19:4 Var ska jag stiga av för att komma till ___?
-                19:5 Måste jag byta tåg?
-
-                Med taxi
-                20:1 Var kan jag få tag i en taxi?
-                20:2 Vill Ni vara snäll och beställa en taxi åt mig?
-                20:3 Är den här taxin ledig?
-                20:4 Kan du köra mig till ___?
-                20:5 Var snäll och stanna här.
-                20:6 Jag har mycket bråttom.
-                20:7 Hur mycket kostar det till flygplatsen?
-                20:8 Behåll växeln.
-
-                Väginformation
-                21:1 Var finns närmaste bank/post/apotek/
-                polisstation/bensinstation?
-                21:2 Ursäkta, hur går jag för att komma till stranden?
-                21:3 Ursäkta, i vilken riktning ligger torget?
-                21:4 Gå bara rakt fram ___
-                21:5  ___tills du kommer till en bro/en rondell.
-                21:6 Gå över gatan och ner för trapporna.
-                21:7 Ta till höger vid nästa trafikljus.
-                21:8 Ta till vänster vid nästa korsning.
-                21:9 Fortsätt rakt fram tills du ser en kyrka.
-                21:10 Hur långt är det till ___?
-                21:11 Var någonstans ligger ___?
-                21:12 Där borta!
-                21:13 Hur kommer jag snabbast till ___?
-                21:14 Är det här rätt väg till ___?
-                21:15 Hur kommer jag till den här adressen?
-
-                Allmänna fraser
-                - när man behöver hjälp
-                22:1 Ursäkta, kan Ni hjälpa mig?
-                22:2 Jag har gått vilse.
-                22:3 Ursäkta, hur kommer jag till ___?
-                22:4 Var kan jag hitta en toalett?
-                22:5 Förlåt, men jag förstår inte.
-                22:6 Kan ni tala långsammare?
-                22:7 Var kan jag växla pengar?
-                22:8 Tack så mycket för hjälpen.
-
-                På banken
-                23:1 Jag skulle vilja växla pengar.
-                23:2 Jag skulle vilja lösa in mina resecheckar.
-                23:3 Jag vill överföra pengar från min bank i ___
-                23:4 Jag har beställt pengar från min bank i ___
-                23:5 Mitt kontonummer är ___
-                23:6 Växelkurs. Valuta. Kontanter.
-                23:7 ID-kort. Legitimation
-                23:8 Bankerna har stängt.
-                23:9 När är banken öppen?
-
-                På posten
-                24:1 Hur mycket kostar det att skicka ett vykort/ett brev till ___?
-                24:2 Kan jag få frimärken till de här vykorten?
-                24:3 När öppnar/stänger posten?
-                24:4 Jag vill skicka det här brevet express/rekommenderat.
-                24:5 Jag skulle vilja skicka det här brevet med flyg.
-                24:6 Finns det något poste restante-brev till mig?
-                24:7 Var finns det en brevlåda?
-                24:8 Kuvert. Adress. Avsändare. Frimärke. Flygpost.
-
-                Att telefonera
-                25:1 Jag skulle vilja ringa till ___
-                25:2 Har ni en telefonkatalog?
-                25:3 Jag skulle vilja ringa ett lokalsamtal/ett rikssamtal.
-                25:4 Jag skulle vilja ringa till utlandet.
-                25:5 Linjen är upptagen. Var snäll och försök igen.
-                25:6 Goddag, mitt namn är ___
-                25:7 Jag skulle vilja tala med ___
-                25:8 Ett ögonblick.
-                25:9 Jag kan inte höra vad Ni säger.
-                25:10 Var snäll och lämna ett meddelande.
-                25:11 Hur var namnet?
-                25:12 Kan ni be honom ringa?
-                25:13 Kan ni be henne ringa?
-                25:14 Mitt telefonnummer är ___
-                25:15 Finns det en telefonkiosk i närheten?
-                25:16 Telefonen är trasig.
-
-                Allmänna fraser
-                - när man umgås
-                26:1 Vill ni följa med oss till ___?
-                26:2 Får jag bjuda dig på middag/på en drink?
-                26:3 Ja, tack. Nej, tack.
-                26:4 Tack, men jag kan tyvärr inte komma.
-                26:5 Jag hoppas att du inte tar illa upp.
-                26:6 Välkommen/välkomna.
-                26:7 Har du något emot att jag röker?
-                26:8 Jag är hungrig/törstig/trött.
-                26:9 Tack så mycket. Varsågod.
-                26:10 För all del. Det var så lite. Ingen orsak.
-                26:11 Ursäkta. Jag är ledsen. Förlåt.
-
-                På restaurangen
-                27:1 Kan ni rekommendera en bra restaurang/
-                en fiskrestaurang/ en billig restaurang?
-                27:2 Jag skulle vilja ha ett bord för två.
-                27:3 Har ni ett ledigt bord vid fönstret?
-                27:4 Vi vill sitta utomhus.
-                27:5 Vi skulle vilja sitta nära dansgolvet.
-                27:6 Jag har reserverat ett bord, mitt namn är ___
-                27:7 Den här vägen, varsågod!
-                27:8 Kan jag få matsedeln/vinlistan?
-                27:9 Har ni barnportioner?
-                27:10 Kan vi få beställa?
-                27:11 Kan ni rekommendera någon fiskrätt/kötträtt?
-                27:12 Har ni några specialiteter att rekommendera?
-                27:13 Har ni vegetariska rätter?
-                27:14 Jag skulle vilja ha soppa till förrätt.
-                27:15 Jag skulle vilja ha kyckling till varmrätt.
-                27:16 Jag skulle vilja ha glass/ost/frukt till efterrätt.
-                27:17 Kan vi få två kaffe, tack?
-                27:18 Vad vill ni dricka?
-                27:19 En flaska rödvin och två flaskor mineralvatten, tack.
-                27:20 En tallrik. Ett glas.
-                27:21 En kniv. En gaffel. En sked.
-                27:22 En servett. En askkopp.
-                27:23 Det här glaset är inte rent.
-                27:24 Var snäll och ge mig salt och peppar.
-                27:25 Tack, det var mycket gott.
-                27:26 Kan jag/vi få betala?
-                27:27 Är dricksen inräknad?
-                27:28 Moms tillkommer.
-                27:29 Hur dags stänger ni?
-
-                Mat
-                28:1 Oxkött. Fläskkött. Kalvkött. Fårkött. Lammkött.
-                28:2 Köttfärs. Korv. Njure. Lever.
-                28:3 Biff. Stek. Kotlett.
-                28:4 Kokt. Grillad. Stekt. Ugnstekt.
-                28:5 Friterad. Panerad. Rökt. Gratinerad.
-                28:6 Välstekt. Medium. Blodig.
-                28:7 Torsk. Tonfisk. Rödspätta. Forell.
-                28:8 Karp. Sjötunga. Lax. Bläckfisk.
-                28:9 Hummer. Krabba. Räkor. Musslor. Ostron. Sniglar.
-                28:10 Fasan. Höns. Kyckling. Anka. Kalkon. Gås.
-                28:11 Rådjur. Vildsvin. Hare.
-                28:12 Sås. Sky. Majonnäs.
-                28:13 Kokt potatis. Stekt potatis. Bakad potatis.
-                28:14 Potatismos. Pommes frites. Pasta. Ris.
-                28:15 Blandad sallad. Tomatsallad. Salladsdressing.
-                28:16 Sallad. Tomat. Paprika. Aubergine.
-                28:17 Sparris. Spenat. Avocado. Ärtor. Majs.
-                28:18 Salt. Peppar. Persilja. Lök. Vitlök.
-                28:19 Senap. Ketchup.
-                28:20 Äpple. Päron. Apelsin. Banan. Plommon.
-                28:21 Druvor. Ananas. Melon. Grapefrukt. Citron.
-                28:22 Jordgubbar. Hallon. Körsbär. Blåbär.
-
-                Dryck
-                29:1 Vatten. Mineralvatten.
-                29:2 Mineralvatten med kolsyra/utan kolsyra.
-                29:3 Jag vill ha ett fylligt rött vin/ett lätt rött vin.
-                29:4 Vitt vin/halvtorrt/torrt/sött/mousserande.
-                29:5 Rosévin.
-                29:6 Öl.
-                29:7 Kaffe. Te. Juice. Läskedryck. Is.
-
-                Inköp och shopping
-                30:1 Vad heter det här?
-                30:2 Vad kostar det?
-                30:3 Var kan jag köpa film till min kamera?
-                30:4 Var kan jag köpa batterier till min freestyle?
-                30:5 Nål. Tråd. Sax.
-                30:6 Hårschampo. Tandkräm. Tandborste.
-                30:7 Tvål. Bomull. Solkräm.
-                30:8 Plastpåsar. Kapsylöppnare. Paraply.
-                30:9 Fotoaffär. Souvenirbutik. Varuhus.
-                30:10 Bokhandel. Loppmarknad. Antikvitetsaffär.
-                30:11 Var ligger det största shoppingcentret?
-                30:12 Var finns det något varuhus?
-                30:13 Kan Ni hjälpa mig?
-                30:14 Vill Ni ha hjälp?
-                30:15 Nej, tack, jag vill bara titta.
-                30:16 Hur mycket kostar det?
-                30:17 Kan jag få prova det här?
-                30:18 Var ligger provrummet?
-                30:19 Jag skulle vilja köpa ett par byxor/ett par jeans.
-                30:20 Jag skulle vilja köpa en klänning/en blus/en kjol/
-                en kappa.
-                30:21 Jag skulle vilja köpa en skjorta/en kostym/en tröja/
-                en jacka/ en rock.
-                30:22 Jag skulle vilja ha en storlek större/en storlek mindre.
-                30:23 Bomull. Ylle. Linne. Siden.
-                30:24 Syntetfiber. Skinn. Mocka.
-                30:25 Skor. Sandaler. Stövlar.
-                30:26 Plånbok. Handväska. Resväska. Skärp.
-                30:27 Trosor. Kalsonger. BH.
-                30:28 Strumpor. Nylonstrumpor.
-                30:29 Kan jag få en bärkasse?
-                30:30 Kan jag betala med resecheck?
-                30:31 Kan jag betala med kontokort?
-                30:32 Kan jag få ett kvitto, tack?
-                30:33 Det var allt, tack.
-                30:34 Realisation.
-
-                Hos doktorn
-                31:1 Jag har ont i huvudet/i halsen/i öronen.
-                31:2 Jag har ont i magen/i ryggen/i hjärtat.
-                31:3 Jag mår illa.
-                31:4 Jag har feber/diarré/förstoppning.
-                31:5 Det är ingenting allvarligt.
-                31:6 Du har drabbats av solsting/av matförgiftning.
-                31:7 Jag är diabetiker.
-                31:8 Jag har astma.
-                31:9 Jag är allergisk mot penicillin.
-
-                På apoteket
-                32:1 Var liggger närmaste apotek?
-                32:2 Kan du rekommendera något mot solbränna/
-                mot förkylning/ mot diarré?
-                32:3 Jag behöver hostmedicin/huvudvärkstabletter/
-                sömntabletter.
-                32:4 Recept/receptfritt.
-                32:5 Bindor. Tamponger. Kondomer.
-
-                Allmänna fraser
-                - i nödsituationer
-                33:1 Det är viktigt.
-                33:2 Hjälp!
-                33:3 Jag har blivit rånad/bestulen!
-                33:4 Kalla på polis/på ambulans/på brandkår.
-                33:5 Det har hänt en olycka.
-                33:6 Jag måste till sjukhus.
-                33:7 Jag behöver kontakta min ambassad.
-
-                På stranden
-                34:1 Jag vill hyra ett parasoll/en solstol/en windsurfingbräda.
-                34:2 Finns det badvakt?
-                34:3 Finns det farliga strömmar?
-                34:4 Hur varmt är det i vattnet?
-                34:5 Var kan jag byta om?
-
-                Nöjen
-                35:1 Jag skulle vilja ha en biljett till en föreställning i kväll.
-                35:2 Finns det två biljetter till föreställningen i morgon?
-                35:3 Jag skulle vilja ha en plats på parkett/på balkong.
-                35:4 Vilken tid börjar föreställningen?
-                35:5 Det är tyvärr utsålt.
-                35:6 Var ligger operan/konserthuset?
-                35:7 Vilka tider har museet öppet?
-                35:8 Kan ni rekommendera en bra nattklubb?
-                35:9 Finns det något bra diskotek i närheten?
-                35:10 Konstgalleri. Museum. Teater. Bio. Cirkus.
-
-                Utflykter
-                36:1 Var ligger turistbyrån/turistinformationen?
-                36:2 Vad finns det för rundturer?
-                36:3 Vad kostar det?
-                36:4 Vilken tid startar rundturen?
-                36:5 Varifrån utgår den?
-                36:6 När kommer vi tillbaka?
-                36:7 Finns det någon karta?
-                36:8 Jag skulle vilja besöka katedralen/slottet/
-                botaniska trädgården.
-
-                Sport
-                37:1 Jag spelar golf.
-                37:2 Spelar du tennis?
-                37:3 Var finns närmaste golfbana?
-                37:4 Kan jag hyra golfklubbor/en slalomutrustning/en cykel?
-                37:5 Jag vill se en tennismatch/en fotbollsmatch/
-                en ishockeymatch/ en boxningsmatch.
-                37:6 När börjar matchen?
-                37:7 Tennisracket. Tennisboll.
-                37:8 Golfklubba. Golfboll.
-                37:9 Skidor. Stavar. Pjäxor.
     --
     ~/Dropbox/rsc/data/lists/ref/lang/en.freq.main.txt (wiktionary)
     --
@@ -19458,7 +18957,11 @@ LISTS (=freqs phrases books)
 ___defrru_freq
 set fdm=indent fdl=3
 set fdm=indent fdl=2
-    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/freqar.txt
+
+    gvim -p ~/Dropbox/rsc/data/lists/ref/lang/freq/2/{Freq-Fra,Freq-De,Freq-Spa,Freq-Chin,Freq-Fars,freq-tur}.txt -c '/___start2'
+        Freq-Ru
+    ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/freqar.txt  # or ~/Dropbox/ instead
+
         ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/freqar.pdf
     ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Chin.pdf
     ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-De.pdf
@@ -75997,6 +75500,520 @@ ___phrases_1isUniverb ___PickStart
                 Tennisracket. Tennisboll.
                 Golfklubba. Golfboll.
                 Skidor. Stavar. Pjäxor.
+  ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.txt
+                Vanliga uttryck
+                - när man träffar någon
+                1:1 God morgon. God dag. God natt.
+                1:2 Hej. Hej då. Adjö.
+                1:3 Vi ses.
+                evince -p 8 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
+                1:4 Jag heter ___
+                1:5 Vad heter Ni? Vad heter du?
+                1:6 Hur står det till?
+                1:7 Tack, det är bra.
+                1:8 Och hur står det till själv?
+                1:9 Talar Ni engelska/franska/tyska/spanska?
+                1:10 Får jag presentera Er för herr ___/fru ___/fröken ___
+                1:11 Det var trevligt att träffas.
+                1:12 Tack för en trevlig dag.
+                1:13 Jag hoppas att vi ses igen.
+                1:14 Gratulerar på födelsedagen.
+                1:15 Lycka till!
+
+                Räkneord
+                - grundtalen
+                2:1 Noll, ett, två, tre, fyra, fem, sex.
+                2:2 Sju, åtta, nio, tio, elva, tolv.
+                2:3 Tretton, fjorton, femton, sexton.
+                2:4 Sjutton, arton, nitton.
+                2:5 Tjugo, trettio, fyrtio.
+                2:6 Femtio, sextio, sjuttio, åttio.
+                2:7 Åttioen, åttiotvå, åttiotre, åttiofyra, åttiofem.
+                2:8 Nittio, nittioen, nittiotvå, nittiotre, nittiofyra.
+                2:9 Nittiofem, nittiosex, nittiosju, nittioåtta, nittionio.
+                2:10 Etthundra, femhundra, ettusen.
+                2:11 Ettusentvåhundra, tvåtusen, en miljon.
+
+                Räkneord
+                - ordningstalen
+                3:1 Den första, den andra, den tredje.
+                3:2 Den fjärde, den femte, den sjätte.
+                3:3 Den sjunde, den åttonde, den nionde.
+                3:4 Den tionde, den elfte, den tolfte.
+                3:5 Den tjugonde, den tjugoförsta.
+                3:6 Den trettionde, den trettioförsta.
+                3:7 En fjärdedel, en halv, tre fjärdedelar, en hel.
+
+                Tiden
+                4:1 Hur mycket är klockan?
+                4:2 Klockan är tolv.
+                4:3 Den är fem över ett.
+                4:4 Tio över två. Kvart över tre.
+                4:5 Tjugo över fyra på eftermiddagen.
+                4:6 Fem i halv sex. Halv sex.
+                4:7 Tjugo i sju på kvällen.
+                4:8 Kvart i åtta på morgonen.
+                4:9 Tio i tio på kvällen.
+                4:10 Tidigt på morgonen. Mitt på dagen.
+                4:11 Sent på kvällen. Mitt i natten.
+                4:12 I dag. I eftermiddag. I kväll.
+                4:13 I natt. I morgon bitti.
+                4:14 Om en timme. Om två dagar. Nästa helg.
+                4:15 Om en vecka. Om två månader. Om ett år.
+                4:16 I går. I förrgår.
+                4:17 För en timme sedan. För två dagar sedan.
+                4:18 Förra veckan. Förra månaden. För ett år sedan.
+
+                Veckans dagar
+                5:1 Vad är det för dag i dag?
+                5:2 Måndag, tisdag, onsdag, torsdag.
+                5:3 Fredag, lördag, söndag.
+                5:4 Idag är det fredag.
+                5:5 I morgon är det lördag.
+                5:6 I övermorgon är det söndag.
+                5:7 Det är sju dagar i en vecka.
+                5:8 Det är helgdag idag.
+                5:9 Helg. Veckoslut.
+
+                Månaderna
+                6:1 Januari, februari, mars, april.
+                6:2 Maj, juni, juli, augusti.
+                6:3 September, oktober, november, december.
+                6:4 Vilket datum är det i dag?
+                6:5 Det är den 22 juni.
+                6:6 Jag fyller år den 31 juli.
+                6:7 Det går tolv månader på ett år.
+
+                Årstiderna
+                7:1 Vår, sommar, höst, vinter.
+                7:2 Förra sommaren var vi i Grekland.
+                7:3 I vinter ska vi åka till Alperna.
+                Vädret 8:1
+                Det är kallt/varmt.  8:2
+                Det är varmare än i går.
+                8:3 Det regnar/snöar.
+                8:4 Det är soligt/molnigt.
+                8:5 Det är dimmigt/blåsigt.
+                8:6 Vad blir det för väder i morgon?
+                8:7 Jag tror att det blir vackert väder.
+                8:8 Jag tror att det blir dåligt väder.
+                8:9 Det är stormvarning/lavinfara.
+                8:10 Vilken underbar dag!
+                8:11 Väderleksrapport.
+
+                Färgerna
+                9:1 Svart, vit, grå, röd, blå, grön.
+                9:2 Gul, brun, lila, rosa, orange.
+                9:3 Hon har ljusblå ögon.
+                9:4 Han har mörkbrunt hår.
+
+                Med tåg
+                10:1 Var ligger järnvägsstationen?
+                10:2 Var kan jag köpa biljetter?
+                10:3 Jag skulle vilja byta den här biljetten.
+                10:4 När går nästa tåg till ___?
+                10:5 Jag skulle vilja ha en biljett till ___
+                10:6 Jag skulle vilja ha en sittplatsbiljett/en sovvagnsbiljett.
+                10:7 Rökare. Icke rökare. Fönsterplats.
+                10:8 Enkel resa. Tur och retur.
+                10:9 Första klass. Andra klass.
+                10:10 Stannar tåget i ___?
+                10:11 Måste jag byta tåg?
+                10:12 Från vilken plattform avgår tåget?
+                10:13 Hur kommer jag till spår nr ___?
+                10:14 Finns det restaurangvagn?
+                10:15 Vad kostar en barnbiljett?
+                10:16 Finns det förvaringsboxar på stationen?
+                10:17 Ingång. Utgång. Plattform. Spår.
+                10:18 Information. Effektförvaring. Toalett.
+                10:19 Konduktör. Tidtabell.
+
+                Med flyg
+                11:1 Jag vill flyga till ___
+                11:2 När går flyget?
+                11:3 Vad kostar resan?
+                11:4 Hur lång tid tar det att flyga till ___?
+                11:5 När måste jag checka in?
+                11:6 Hur mycket bagage får man ha med sig?
+                11:7 Serveras det måltider ombord?
+                11:8 Går det buss till flygplatsen?
+
+                På flygplatsen
+                12:1 Charterresa. Reguljärflyg. Apexbiljett.
+                12:2 Flygvärdinna. Steward. Pilot.
+                12:3 Ankomst. Avgång. Flight. Gate.
+                12:4 Avångstid. Försening. Inställt.
+                12:5 Min väska har kommit bort.
+                12:6 Varifrån går flygbussarna?
+                12:7 Hur kommer jag in till city?
+                12:8 Information. Incheckning. Bagage.
+                12:9 Inrikesflyg. Utrikesflyg.
+                12:10 Passagerare. Sista utrop. Gå ombord.
+
+                I passkontrollen/I tullen
+                13:1 Får jag se Ert pass/Ert visum?
+                13:2 Vad är syftet med Er resa?
+                13:3 Jag är här på semester.
+                13:4 Jag är här i affärer.
+                13:5 Jag ska stanna i två dagar/i en vecka/i en månad.
+                13:6 Har Ni något att förtulla?
+                13:7 Jag har inget att förtulla.
+                13:8 Jag har varor att förtulla.
+                13:9 Jag skulle vilja kontrollera Ert bagage.
+                13:10 Pass. Tullavgift. Tulltjänsteman.
+
+                På hotellet
+                14:1 Mitt namn är ___
+                14:2 Jag har reserverat ett enkelrum/ett dubbelrum.
+                14:3 Jag skulle vilja ha ett rum med dusch/med bad.
+                14:4 Jag stannar bara en natt.
+                14:5 Jag vill stanna tre nätter/två veckor.
+                14:6 Jag skulle vilja ha ett rum med havsutsikt.
+                14:7 Har rummet badrum/balkong?
+                14:8 Ingår frukost i priset?
+                14:9 När serverar ni frukost?
+                14:10 Vill Ni vara snäll och fylla i blanketten!
+                14:11 Förnamn. Efternamn.
+                14:12 Födelsedatum. Yrke. Adress.
+                14:13 Var snäll och skriv under här.
+                14:14 Var ligger hissen?
+                14:15 Kan ni ställa in en extra säng?
+                14:16 Hur mycket kostar helpension/halvpension?
+                14:17 Har ni något billigare?
+                14:18 Jag är inte nöjd med rummet.
+                14:19 Rummet är för litet.
+                14:20 Det är för bullrigt/för kallt/för varmt.
+                14:21 Jag skulle vilja byta till ett större rum.
+                14:22 Var snäll och väck mig klockan sju i morgon bitti.
+                14:23 Var kan jag parkera min bil?
+                14:24 Finns det luftkonditionering?
+                14:25 Har ni centralvärme?
+                14:26 Finns det telefon på rummet?
+                14:27 Kan jag få nyckeln till mitt rum?
+                14:28 Mitt rumsnummer är ___
+                14:29 Jag har glömt mitt rumsnummer.
+                14:30 Kudde. Täcke. Filt.
+                14:31 Lakan. Örngott. Handduk. Toalettpapper.
+                14:32 Pool. Bastu. Solarium. Motionsrum.
+                14:33 Reception. Nödutgång. Rumsservice.
+
+                Frukost
+                15:1 Jag skulle vilja ha kaffe med mjölk/utan mjölk.
+                15:2 Kan jag få lite mer kaffe, tack?
+                15:3 Jag skulle vilja ha te med mjölk/med citron/med socker.
+                15:4 Juice. Bröd. Rostat bröd. Smör.
+                15:5 Ost. Skinka. Marmelad. Yoghurt.
+                15:6 Kan jag få bacon och ägg?
+                15:7 Hårdkokt ägg. Löskokt ägg. Stekt ägg. Äggröra. Omelett.
+                15:8 Müsli. Cornflakes. Frukt.
+
+                Hyra bil
+                16:1 Jag skulle vilja hyra en bil.
+                16:2 Jag behöver den för en dag/för en vecka.
+                16:3 Hur mycket kostar det per dag/per kilometer?
+                16:4 Ingår bensin?
+                16:5 Är den helförsäkrad?
+                16:6 Hur mycket måste vi deponera?
+                16:7 Här är mitt körkort.
+
+                På bilverkstaden/
+                På bensinstationen
+                17:1 Min bil är trasig.
+                17:2 Var finns närmaste bilverkstad?
+                17:3 Jag behöver en bärgningsbil.
+                17:4 Har Ni tid att reparera min bil?
+                17:5 Det är något fel på bromsarna/på strålkastarna/på
+                kopplingen/ på kylarsytemet/på motorn.
+                17:6 Kan Ni laga avgassystemet/punkteringen?
+                17:7 Bromsljuset är trasigt.
+                17:8 Jag vill ha full tank.
+                17:9 Vill Ni vara snäll och kolla olja och luftryck?
+                17:10 Jag behöver motorolja/spolarvätska/kylarvätska.
+                17:11 Har Ni vindrutetorkare till min bil?
+                17:12 Jag behöver ett nytt däck.
+                17:13 Blyfri bensin.
+
+                Med buss
+                18:1 Vilken buss skall jag ta för att komma till ___?
+                18:2 Hur ofta går bussen?
+                30
+                18:3 Var snäll och säg till var jag skall stiga av.
+                18:4 Hur lång tid tar det med buss till ___?
+                18:5 Spårvagn.
+
+                Med tunnelbana
+                19:1 Var ligger närmaste tunnelbanestation?
+                19:2 Har Ni en karta över tunnelbanan?
+                19:3 Går det här tåget till ___?
+                19:4 Var ska jag stiga av för att komma till ___?
+                19:5 Måste jag byta tåg?
+
+                Med taxi
+                20:1 Var kan jag få tag i en taxi?
+                20:2 Vill Ni vara snäll och beställa en taxi åt mig?
+                20:3 Är den här taxin ledig?
+                20:4 Kan du köra mig till ___?
+                20:5 Var snäll och stanna här.
+                20:6 Jag har mycket bråttom.
+                20:7 Hur mycket kostar det till flygplatsen?
+                20:8 Behåll växeln.
+
+                Väginformation
+                21:1 Var finns närmaste bank/post/apotek/
+                polisstation/bensinstation?
+                21:2 Ursäkta, hur går jag för att komma till stranden?
+                21:3 Ursäkta, i vilken riktning ligger torget?
+                21:4 Gå bara rakt fram ___
+                21:5  ___tills du kommer till en bro/en rondell.
+                21:6 Gå över gatan och ner för trapporna.
+                21:7 Ta till höger vid nästa trafikljus.
+                21:8 Ta till vänster vid nästa korsning.
+                21:9 Fortsätt rakt fram tills du ser en kyrka.
+                21:10 Hur långt är det till ___?
+                21:11 Var någonstans ligger ___?
+                21:12 Där borta!
+                21:13 Hur kommer jag snabbast till ___?
+                21:14 Är det här rätt väg till ___?
+                21:15 Hur kommer jag till den här adressen?
+
+                Allmänna fraser
+                - när man behöver hjälp
+                22:1 Ursäkta, kan Ni hjälpa mig?
+                22:2 Jag har gått vilse.
+                22:3 Ursäkta, hur kommer jag till ___?
+                22:4 Var kan jag hitta en toalett?
+                22:5 Förlåt, men jag förstår inte.
+                22:6 Kan ni tala långsammare?
+                22:7 Var kan jag växla pengar?
+                22:8 Tack så mycket för hjälpen.
+
+                På banken
+                23:1 Jag skulle vilja växla pengar.
+                23:2 Jag skulle vilja lösa in mina resecheckar.
+                23:3 Jag vill överföra pengar från min bank i ___
+                23:4 Jag har beställt pengar från min bank i ___
+                23:5 Mitt kontonummer är ___
+                23:6 Växelkurs. Valuta. Kontanter.
+                23:7 ID-kort. Legitimation
+                23:8 Bankerna har stängt.
+                23:9 När är banken öppen?
+
+                På posten
+                24:1 Hur mycket kostar det att skicka ett vykort/ett brev till ___?
+                24:2 Kan jag få frimärken till de här vykorten?
+                24:3 När öppnar/stänger posten?
+                24:4 Jag vill skicka det här brevet express/rekommenderat.
+                24:5 Jag skulle vilja skicka det här brevet med flyg.
+                24:6 Finns det något poste restante-brev till mig?
+                24:7 Var finns det en brevlåda?
+                24:8 Kuvert. Adress. Avsändare. Frimärke. Flygpost.
+
+                Att telefonera
+                25:1 Jag skulle vilja ringa till ___
+                25:2 Har ni en telefonkatalog?
+                25:3 Jag skulle vilja ringa ett lokalsamtal/ett rikssamtal.
+                25:4 Jag skulle vilja ringa till utlandet.
+                25:5 Linjen är upptagen. Var snäll och försök igen.
+                25:6 Goddag, mitt namn är ___
+                25:7 Jag skulle vilja tala med ___
+                25:8 Ett ögonblick.
+                25:9 Jag kan inte höra vad Ni säger.
+                25:10 Var snäll och lämna ett meddelande.
+                25:11 Hur var namnet?
+                25:12 Kan ni be honom ringa?
+                25:13 Kan ni be henne ringa?
+                25:14 Mitt telefonnummer är ___
+                25:15 Finns det en telefonkiosk i närheten?
+                25:16 Telefonen är trasig.
+
+                Allmänna fraser
+                - när man umgås
+                26:1 Vill ni följa med oss till ___?
+                26:2 Får jag bjuda dig på middag/på en drink?
+                26:3 Ja, tack. Nej, tack.
+                26:4 Tack, men jag kan tyvärr inte komma.
+                26:5 Jag hoppas att du inte tar illa upp.
+                26:6 Välkommen/välkomna.
+                26:7 Har du något emot att jag röker?
+                26:8 Jag är hungrig/törstig/trött.
+                26:9 Tack så mycket. Varsågod.
+                26:10 För all del. Det var så lite. Ingen orsak.
+                26:11 Ursäkta. Jag är ledsen. Förlåt.
+
+                På restaurangen
+                27:1 Kan ni rekommendera en bra restaurang/
+                en fiskrestaurang/ en billig restaurang?
+                27:2 Jag skulle vilja ha ett bord för två.
+                27:3 Har ni ett ledigt bord vid fönstret?
+                27:4 Vi vill sitta utomhus.
+                27:5 Vi skulle vilja sitta nära dansgolvet.
+                27:6 Jag har reserverat ett bord, mitt namn är ___
+                27:7 Den här vägen, varsågod!
+                27:8 Kan jag få matsedeln/vinlistan?
+                27:9 Har ni barnportioner?
+                27:10 Kan vi få beställa?
+                27:11 Kan ni rekommendera någon fiskrätt/kötträtt?
+                27:12 Har ni några specialiteter att rekommendera?
+                27:13 Har ni vegetariska rätter?
+                27:14 Jag skulle vilja ha soppa till förrätt.
+                27:15 Jag skulle vilja ha kyckling till varmrätt.
+                27:16 Jag skulle vilja ha glass/ost/frukt till efterrätt.
+                27:17 Kan vi få två kaffe, tack?
+                27:18 Vad vill ni dricka?
+                27:19 En flaska rödvin och två flaskor mineralvatten, tack.
+                27:20 En tallrik. Ett glas.
+                27:21 En kniv. En gaffel. En sked.
+                27:22 En servett. En askkopp.
+                27:23 Det här glaset är inte rent.
+                27:24 Var snäll och ge mig salt och peppar.
+                27:25 Tack, det var mycket gott.
+                27:26 Kan jag/vi få betala?
+                27:27 Är dricksen inräknad?
+                27:28 Moms tillkommer.
+                27:29 Hur dags stänger ni?
+
+                Mat
+                28:1 Oxkött. Fläskkött. Kalvkött. Fårkött. Lammkött.
+                28:2 Köttfärs. Korv. Njure. Lever.
+                28:3 Biff. Stek. Kotlett.
+                28:4 Kokt. Grillad. Stekt. Ugnstekt.
+                28:5 Friterad. Panerad. Rökt. Gratinerad.
+                28:6 Välstekt. Medium. Blodig.
+                28:7 Torsk. Tonfisk. Rödspätta. Forell.
+                28:8 Karp. Sjötunga. Lax. Bläckfisk.
+                28:9 Hummer. Krabba. Räkor. Musslor. Ostron. Sniglar.
+                28:10 Fasan. Höns. Kyckling. Anka. Kalkon. Gås.
+                28:11 Rådjur. Vildsvin. Hare.
+                28:12 Sås. Sky. Majonnäs.
+                28:13 Kokt potatis. Stekt potatis. Bakad potatis.
+                28:14 Potatismos. Pommes frites. Pasta. Ris.
+                28:15 Blandad sallad. Tomatsallad. Salladsdressing.
+                28:16 Sallad. Tomat. Paprika. Aubergine.
+                28:17 Sparris. Spenat. Avocado. Ärtor. Majs.
+                28:18 Salt. Peppar. Persilja. Lök. Vitlök.
+                28:19 Senap. Ketchup.
+                28:20 Äpple. Päron. Apelsin. Banan. Plommon.
+                28:21 Druvor. Ananas. Melon. Grapefrukt. Citron.
+                28:22 Jordgubbar. Hallon. Körsbär. Blåbär.
+
+                Dryck
+                29:1 Vatten. Mineralvatten.
+                29:2 Mineralvatten med kolsyra/utan kolsyra.
+                29:3 Jag vill ha ett fylligt rött vin/ett lätt rött vin.
+                29:4 Vitt vin/halvtorrt/torrt/sött/mousserande.
+                29:5 Rosévin.
+                29:6 Öl.
+                29:7 Kaffe. Te. Juice. Läskedryck. Is.
+
+                Inköp och shopping
+                30:1 Vad heter det här?
+                30:2 Vad kostar det?
+                30:3 Var kan jag köpa film till min kamera?
+                30:4 Var kan jag köpa batterier till min freestyle?
+                30:5 Nål. Tråd. Sax.
+                30:6 Hårschampo. Tandkräm. Tandborste.
+                30:7 Tvål. Bomull. Solkräm.
+                30:8 Plastpåsar. Kapsylöppnare. Paraply.
+                30:9 Fotoaffär. Souvenirbutik. Varuhus.
+                30:10 Bokhandel. Loppmarknad. Antikvitetsaffär.
+                30:11 Var ligger det största shoppingcentret?
+                30:12 Var finns det något varuhus?
+                30:13 Kan Ni hjälpa mig?
+                30:14 Vill Ni ha hjälp?
+                30:15 Nej, tack, jag vill bara titta.
+                30:16 Hur mycket kostar det?
+                30:17 Kan jag få prova det här?
+                30:18 Var ligger provrummet?
+                30:19 Jag skulle vilja köpa ett par byxor/ett par jeans.
+                30:20 Jag skulle vilja köpa en klänning/en blus/en kjol/
+                en kappa.
+                30:21 Jag skulle vilja köpa en skjorta/en kostym/en tröja/
+                en jacka/ en rock.
+                30:22 Jag skulle vilja ha en storlek större/en storlek mindre.
+                30:23 Bomull. Ylle. Linne. Siden.
+                30:24 Syntetfiber. Skinn. Mocka.
+                30:25 Skor. Sandaler. Stövlar.
+                30:26 Plånbok. Handväska. Resväska. Skärp.
+                30:27 Trosor. Kalsonger. BH.
+                30:28 Strumpor. Nylonstrumpor.
+                30:29 Kan jag få en bärkasse?
+                30:30 Kan jag betala med resecheck?
+                30:31 Kan jag betala med kontokort?
+                30:32 Kan jag få ett kvitto, tack?
+                30:33 Det var allt, tack.
+                30:34 Realisation.
+
+                Hos doktorn
+                31:1 Jag har ont i huvudet/i halsen/i öronen.
+                31:2 Jag har ont i magen/i ryggen/i hjärtat.
+                31:3 Jag mår illa.
+                31:4 Jag har feber/diarré/förstoppning.
+                31:5 Det är ingenting allvarligt.
+                31:6 Du har drabbats av solsting/av matförgiftning.
+                31:7 Jag är diabetiker.
+                31:8 Jag har astma.
+                31:9 Jag är allergisk mot penicillin.
+
+                På apoteket
+                32:1 Var liggger närmaste apotek?
+                32:2 Kan du rekommendera något mot solbränna/
+                mot förkylning/ mot diarré?
+                32:3 Jag behöver hostmedicin/huvudvärkstabletter/
+                sömntabletter.
+                32:4 Recept/receptfritt.
+                32:5 Bindor. Tamponger. Kondomer.
+
+                Allmänna fraser
+                - i nödsituationer
+                33:1 Det är viktigt.
+                33:2 Hjälp!
+                33:3 Jag har blivit rånad/bestulen!
+                33:4 Kalla på polis/på ambulans/på brandkår.
+                33:5 Det har hänt en olycka.
+                33:6 Jag måste till sjukhus.
+                33:7 Jag behöver kontakta min ambassad.
+
+                På stranden
+                34:1 Jag vill hyra ett parasoll/en solstol/en windsurfingbräda.
+                34:2 Finns det badvakt?
+                34:3 Finns det farliga strömmar?
+                34:4 Hur varmt är det i vattnet?
+                34:5 Var kan jag byta om?
+
+                Nöjen
+                35:1 Jag skulle vilja ha en biljett till en föreställning i kväll.
+                35:2 Finns det två biljetter till föreställningen i morgon?
+                35:3 Jag skulle vilja ha en plats på parkett/på balkong.
+                35:4 Vilken tid börjar föreställningen?
+                35:5 Det är tyvärr utsålt.
+                35:6 Var ligger operan/konserthuset?
+                35:7 Vilka tider har museet öppet?
+                35:8 Kan ni rekommendera en bra nattklubb?
+                35:9 Finns det något bra diskotek i närheten?
+                35:10 Konstgalleri. Museum. Teater. Bio. Cirkus.
+
+                Utflykter
+                36:1 Var ligger turistbyrån/turistinformationen?
+                36:2 Vad finns det för rundturer?
+                36:3 Vad kostar det?
+                36:4 Vilken tid startar rundturen?
+                36:5 Varifrån utgår den?
+                36:6 När kommer vi tillbaka?
+                36:7 Finns det någon karta?
+                36:8 Jag skulle vilja besöka katedralen/slottet/
+                botaniska trädgården.
+
+                Sport
+                37:1 Jag spelar golf.
+                37:2 Spelar du tennis?
+                37:3 Var finns närmaste golfbana?
+                37:4 Kan jag hyra golfklubbor/en slalomutrustning/en cykel?
+                37:5 Jag vill se en tennismatch/en fotbollsmatch/
+                en ishockeymatch/ en boxningsmatch.
+                37:6 När börjar matchen?
+                37:7 Tennisracket. Tennisboll.
+                37:8 Golfklubba. Golfboll.
+                37:9 Skidor. Stavar. Pjäxor.
   .  ~/Dropbox/rsc/Doks/Lang/fr/FRPHRAS.txt
     ~/Empire/Doks/Lang/fr/fragymn01.txt
     ~/Empire/Doks/Lang/fr/fragymn-4böckeravancplusövnbok.txt
@@ -76007,6 +76024,7 @@ ___phrases_1isUniverb ___PickStart
     ~/Empire/Doks/Lang/fr/fradict-pict.txt
     ~/Empire/Doks/Lang/fr/FRPHRAS.txt
   ~/Empire/Doks/Lang/de/lang-ty_ty-sv.txt  _de_
+___defrru_phras
     ~/Empire/Doks/Lang/de/lang-ty_ty-sv.pdf
                 Guten Morgen.
                 Guten Tag.

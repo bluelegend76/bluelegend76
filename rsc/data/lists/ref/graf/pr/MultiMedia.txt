@@ -1,6 +1,10 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
+Anki
+                        . ~/gdrive/rsc/data/lists/ref/comp/pr/Ankiman-Cookbook.txt
+                        ~/Dropbox/rsc/Doks/phone/learn/ankiman2021plus.txt
+
 Gimp
             ---- Gimp Regular
                 .
@@ -1289,6 +1293,7 @@ ffmpeg  (from Blender at-index (etc))  @(@!)
                         ---- ----
 yt-dlp
                 ~/Dropbox/rsc/Doks/phone/Comp/media/ytdlp-man.txt
+                ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
 
                 Now that yt-dlp is installed, you can use it from the command line. Here are a few basic examples:
 
