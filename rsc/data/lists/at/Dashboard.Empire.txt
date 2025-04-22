@@ -6,7 +6,6 @@ set fdm=marker syn= guifont=* | colors ron
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
-- Progr.langs-Db(!)
 TODO ADD 1 = STARTUPS 1 {{{
 
 Vanki LearnQna ----
@@ -40,8 +39,7 @@ Clangs (c, cpp, dlang):
     cppDlang.prl.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
-Funct =Lisp, F#, ML:
-    gvim -p ../ref/comp/cb/clispcb.txt ../ref/comp/cb/schemecb.txt ../ref/comp/cb/clojure.txt ../ref/comp/cb/haskell.txt ../ref/comp/cb/sml-ocaml.txt ../ref/comp/cb/fs.txt
+FUNCT =LISP, F#, ML, ...:
 
 Db:
   gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
@@ -304,6 +302,9 @@ LangsDb.legacy ----
                                                    |
   or LangDb1.list.txt -----------------------------+
   [+charAlfa]
+  . {{{
+    mada, wareware (no), sore de
+  }}}
 
 ~/gdrive/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
 
@@ -406,16 +407,14 @@ dft curr 2023 {{{
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
 \v\@([^ ]?)+
 
-Datasci@ + MLEARN[!!!!] @Webscrape / @GoogleHacks
+V I M  +  E M A C S
 
-VIM + EMACS
-    Tracker + SparQl
     Gremlin + Neptune
         'MuLäroplans-Träden' **(!!)
         ----
         netrw (**)
         JavaScript Functional
-        Elixir, Ocaml
+        Elixir, Ocaml, F# DomainModeling
     Abe Kotlin
 Py/F# Sysadm. + Devops[!!]
       [Dlang-proj + PhobosNext|Per Nordl.]
@@ -430,6 +429,7 @@ Blue + Scoll.  +Analog Synth.
     Nsplitdiff (+Soc.Framg)
 Nushell
         Git, Github Projects  @GithubDocs @GitActions
+Datasci@ + MLEARN[!!!!] @Webscrape / @GoogleHacks
     Xml (+xaml, faml, etc)
   'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
   refact, legacycode, TDD(etc) @  +C-CppFunct
@@ -455,6 +455,7 @@ algos
         Bash + Termux (+vim-bash) (etc)
 Linux (Android etc) + Sys-Structure, Sysprogr
     Cypher,
+SparQL
     Pshell + Choco
 Inkscape (+Rita och skriva för Online-Undervisning  @@
 - websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
@@ -1063,15 +1064,43 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 }}}
 
   winterminal  ¤ [=profiles, AWS-shell, etc **]
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
+  }}}
   ----
-    REVEAL, IMPRESS  __ ¤¤¤¤
+    REVEAL, IMPRESS  __ ¤¤¤
+    . {{{
+  ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
+  ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
+
+      Docs:
+      ~/Dropbox/rsc/Doks/phone/graf/anim/revealjs.txt
+      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
+      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
+
+      Intro-Book:
+          ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.pdf
+
+      ~/Empire/Doks/Comp/lang/webdev/js/present/md2revealjs-withpandoc.pdf
+      ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.txt
+          ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.pdf
+
+      ~/Dropbox/Udt/rsc/doks/graf/present/impress/imprjs.txt
+      --
+      cp ~/Empire/graf/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
+      cp ~/Empire/graf/pr/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
+            ~/Empire/Comp/lang/webdev/imprjs_aux.txt
+            ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
+    }}}
   android scripting [Termux + Rclone] ¤¤¤
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
+  }}}
   ASP.NET CORE MVC __ (++Web APIs)  ¤¤
   . {{{
     gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
 ----
-~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
-    ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
+~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
 
 
     gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
@@ -1104,7 +1133,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     csfunct.tags1.txt
     functional-cs.Tags1.txt
   }}}
-  Cpp UnitTesting (Google)
   XUnit + 'Prop.based Testing'  ¤¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/XunitPatts.txt
@@ -1113,15 +1141,18 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     touch ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt
     ln -s ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt ~/Empire/Doks/Comp/PROGR/test/
   }}}
-  FuncPy  ¤¤¤¤
+  FuncPy  ¤¤¤
   SSH  ¤¤¤
+  . {{{
+    ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
+  }}}
   py/f# (etc) sysadm  #  ¤¤¤
   . {{{
       PyProgr
     ~/Empire/Doks/Comp/lang/py/sysadm/py-unlin-sysadm.txt
-    ~/Empire/Doks/Comp/lang/py/sysadm/propysysadmin.txt
+      ~/Empire/Doks/Comp/lang/py/sysadm/propysysadmin.txt
   }}}
-  JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤¤
+  JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
   . {{{
         https://learn.microsoft.com/en-us/training/modules/polyglot-notebooks/
         https://code.visualstudio.com/docs/languages/polyglot
@@ -1131,17 +1162,22 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 
         ~/gdrive/rsc/Doks/phone/Comp/datasci/py/pydatawrangl-clean_2022.txt
     }}}
-  Obsidian __ @  MLEARN**(+)  ¤¤¤¤
+  Obsidian __ @  MLEARN**(+)  ¤¤¤
   . {{{
     gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/mlearn/{mlearnapps-ideatoprod_2020.tags1,mlearn-mobprojs_2018,mlearn-scikitkerastflow-2e_2019,py-aiproj-uprunning_2018}.txt
 
+    cp ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt ~/Dropbox/Udt/
+    ~/Empire/lang/markup/MD/md-obsidian.txt
   }}}
-    Vimscripting + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤¤
+    Vimscripting + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
+    . {{{
+      [Video-transcription + Taylor's Wiki]
+    }}}
   Xonshell  __  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}
-  Termux  __  @@  ¤¤¤¤
+  Termux  __  @@  ¤¤
   Mpv-Docs  ¤¤ | Yt-Downl
   . {{{
     ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
@@ -1155,7 +1191,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/gdrive/rsc/Doks/taskuj/LIA2/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
   }}}
-  NuShell  _  (¤¤¤)¤
+  NuShell  _  ¤¤(¤)
   Wsl  ¤¤
   . {{{
     ~/gdrive/rsc/Doks/taskuj/WSL/*.txt
@@ -1190,12 +1226,12 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
   }}}
-  Java|Cloj Semantic-Web  +tracker/tinysparql ¤¤
+  Java|Cloj Semantic-Web  ¤¤
   . {{{
     ~/Empire/Doks/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
   }}}
 Anki  ¤¤¤
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤¤
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
@@ -8103,6 +8139,305 @@ ___Emacs_listchange_colorschemes
 
 
 ___FSHARP_DATASTRUCTURES
+Another question: I would like to get your help with looking at and drilling F# data-structures, essentially to the point where I 'get it'. Would you be able to help me with that, and do you have any ideas about how it could be done? + If I then have some ideas about how we could improve on that scheme, we can discuss it.
+
+Excellent! I'm glad to hear you've got Common Lisp working in Emacs again.
+
+I'd be happy to help you understand F# data structures. It's a fascinating language with a strong focus on immutability and functional programming, which leads to some elegant and powerful data structures.
+
+Here's a potential approach we could take to "drill down" and help you "get it":
+
+Phase 1: Foundational Concepts
+
+    Core Concepts of Immutability and Functional Programming: Before diving into specific data structures, we should briefly touch upon the core principles that heavily influence their design in F#:
+        Immutability: Data structures, once created, cannot be changed in place. Operations typically return new, modified copies.
+        Functional Programming: Emphasis on functions as first-class citizens, avoiding side effects, and using expressions over statements.
+
+    Basic F# Types as Building Blocks: We can start with the fundamental types and how they relate to building more complex structures:
+        Tuples: Fixed-size, ordered collections of elements (potentially of different types). We can explore how to create, access elements (using fst, snd, and pattern matching), and their common use cases.
+        Records: Similar to tuples but with named fields. We can discuss their advantages in terms of clarity and how to create and access fields.
+        Discriminated Unions: Powerful for representing data that can be one of several distinct cases, each potentially holding different data. We can look at defining them, creating instances, and using pattern matching to handle different cases.
+
+Phase 2: Key F# Data Structures
+
+    Lists (list):
+        Characteristics: Ordered, immutable collections of elements of the same type.
+        Creation: Using [] and the :: (cons) operator.
+        Common Operations: head, tail, length, map, filter, fold, reduce, and recursion-based processing.
+        Performance Considerations: Understanding the implications of immutability for operations like adding or removing elements (often creating new lists).
+
+    Arrays (array):
+        Characteristics: Fixed-size, mutable collections of elements of the same type.
+        Creation: Using [| ... |].
+        Common Operations: Accessing elements by index, slicing, and the mutable nature (important to contrast with lists).
+        Performance Considerations: Efficient for random access and in-place modifications when mutability is needed.
+
+    Sequences (seq):
+        Characteristics: Logical series of elements that are computed on demand (lazy evaluation).
+        Creation: Using sequence expressions (seq { ... }).
+        Common Operations: Similar to lists (map, filter, fold), but operations are often deferred.
+        Benefits: Handling potentially infinite sequences and improving performance when not all elements need to be computed.
+
+    Maps (Map):
+        Characteristics: Immutable collections of key-value pairs, where keys are unique and ordered.
+        Creation: Using Map.empty and Map.add.
+        Common Operations: ContainsKey, TryFind, Add, Remove.
+        Underlying Implementation (briefly): Often implemented as balanced binary trees, which provides logarithmic time complexity for most operations.
+
+    Sets (Set):
+        Characteristics: Immutable collections of unique, unordered elements.
+        Creation: Using Set.empty and Set.add.
+        Common Operations: Contains, Add, Remove, set operations (union, intersection, difference).
+        Underlying Implementation (briefly): Similar to maps, often implemented using balanced binary trees.
+
+Phase 3: "Getting It" - Interactive Exploration and Examples
+
+For each data structure, we can:
+
+    Look at simple code examples: Illustrating creation and basic operations.
+    Discuss use cases: When would you choose a list over an array? When are sequences beneficial?
+    Explore the implications of immutability: How do you "modify" an immutable list?
+    Compare and contrast: Highlight the differences and similarities between different data structures.
+    Work through small, practical scenarios: For example, processing a list of numbers, looking up values in a map, or filtering elements in a sequence.
+
+Phase 4: Your Ideas for Improvement
+
+Once we've gone through the basics, I'd be very interested to hear your ideas on how we could improve this learning process. Perhaps you have specific areas you'd like to focus on more deeply, or you have a particular learning style that we can cater to.
+
+How we can proceed:
+
+We can tackle one data structure at a time. For each one, I can provide:
+
+    A concise explanation of its characteristics.
+    Code examples in F#.
+    Discussion of common operations and use cases.
+    Answers to your specific questions.
+
+Does this initial plan sound good to you? Where would you like to start? Perhaps with the foundational concepts or directly with the list type? I'm open to your preferences!
+Your saved info
+Info you asked Gemini to save
+
+Code we also before I give you more instructions run the same kind of overview of more advanced structures, like discriminated unions and such?
+
+Yes, absolutely! I think that's a great idea. Seeing some code examples of the foundational concepts, especially tuples, records, and discriminated unions, will provide a solid base before we dive into the more complex collection types.
+
+Let's do a quick code-focused overview of tuples, records, and discriminated unions in F#:
+
+1. Tuples:
+
+    Characteristics: Fixed-size, ordered collection of elements that can be of different types.
+    Syntax: Elements are separated by commas within parentheses.
+
+F#
+
+// Creating tuples
+let person = ("Alice", 30, true)
+let coordinates = (10.5, -2.3)
+let mixedData = (1, "hello", 3.14, 'c')
+
+// Accessing elements (using fst, snd for pairs, or pattern matching for larger tuples)
+let name = fst person // "Alice"
+let age = snd (snd (1, (2, 3))) // 3 (less readable for larger tuples)
+
+// Better way to access elements: Pattern Matching
+let (name', age', isEmployed) = person
+printfn "Name: %s, Age: %d, Employed: %b" name' age' isEmployed
+
+let (x, y) = coordinates
+printfn "X: %f, Y: %f" x y
+
+    Use Cases: Returning multiple values from a function, simple grouping of related data.
+
+2. Records:
+
+    Characteristics: Similar to tuples but with named fields, providing better readability and clarity.
+    Syntax: Defined using the type keyword followed by the record name and field definitions within curly braces {}.
+
+F#
+
+// Defining a record type
+type Person = { Name: string; Age: int; IsEmployed: bool }
+
+// Creating record instances
+let person1 = { Name = "Bob"; Age = 25; IsEmployed = false }
+let person2 = { Name = "Charlie"; Age = 35; IsEmployed = true }
+
+// Accessing record fields using dot notation
+let name1 = person1.Name // "Bob"
+let age2 = person2.Age   // 35
+
+// Creating a new record with updated values (immutability in action)
+let olderPerson1 = { person1 with Age = 26 }
+printfn "Original age: %d, New age: %d" person1.Age olderPerson1.Age
+
+// Pattern matching with records
+let printPerson person =
+    printfn "Name: %s, Age: %d" person.Name person.Age
+
+printPerson person1
+
+    Use Cases: Representing structured data with meaningful names for fields, making code more self-documenting.
+
+3. Discriminated Unions:
+
+    Characteristics: Represent a value that can be one of several distinct cases, each potentially holding different types of data.
+    Syntax: Defined using the type keyword followed by the union name and the different cases separated by |. Each case can optionally hold data.
+
+F#
+
+// Defining a discriminated union type
+type Result<'T, 'Error> =
+    | Success of 'T
+    | Failure of 'Error
+
+type Shape =
+    | Circle of radius: float
+    | Rectangle of width: float * height: float
+    | Square of side: float
+
+// Creating instances of the discriminated union
+let successResult = Success 42
+let errorResult = Failure "Something went wrong"
+let circle = Circle 5.0
+let rectangle = Rectangle (4.0, 6.0)
+let square = Square 3.0
+
+// Pattern matching to handle different cases
+let printResult result =
+    match result with
+    | Success value -> printfn "Result: %A" value
+    | Failure error -> printfn "Error: %s" error
+
+printResult successResult
+printResult errorResult
+
+let area shape =
+    match shape with
+    | Circle r -> System.Math.PI * r * r
+    | Rectangle (w, h) -> w * h
+    | Square s -> s * s
+
+printfn "Circle area: %f" (area circle)
+printfn "Rectangle area: %f" (area rectangle)
+printfn "Square area: %f" (area square)
+
+    Use Cases: Representing data that can be in different states (e.g., success/failure), modeling algebraic data types, creating flexible and type-safe ways to handle different data structures within a single type.
+
+Key Takeaways:
+
+    Immutability is central: Notice how "modifying" a record creates a new record. Tuples and discriminated unions are inherently immutable.
+    Pattern matching is powerful: It's a fundamental way to work with these data structures, allowing you to easily access their components and handle different cases in a type-safe manner.
+    Type safety: F#'s strong type system ensures that you're working with the data as intended based on its defined structure.
+
+Do these code examples and explanations of tuples, records, and discriminated unions make sense? Would you like to explore any of them in more detail before we move on to the collection types like lists and arrays? Let me know your thoughts!
+
+
+___csharp_records_recordstructs
+Could you tell me just a bit about records and record-structs (at least that's what I think they're called) in C#, and maybe you could also tell me a bit about their use-cases?
+
+You're right! C# has both record types (introduced in C# 9) and struct types (which have been around much longer). record struct is a further combination introduced in C# 10. Let's break down each of these in C#:
+
+1. record types (C# 9 and later):
+
+    Value-based equality: Unlike classes where equality by default checks for reference equality (whether two variables point to the same object in memory), records provide value-based equality. This means two record instances are considered equal if all their property values are the same.
+    Concise syntax for immutable data: Records are designed to make it easier to create immutable data transfer objects (DTOs) or data-centric types. They have a concise syntax for defining properties in the primary constructor.
+    with expression for non-destructive mutation: Records support a with expression that allows you to create a new record instance based on an existing one, but with some properties changed. This is a way to achieve a form of "mutation" while maintaining immutability of the original record.
+    Built-in ToString(): Records automatically generate a useful ToString() method that displays the property names and their values.
+    Deconstruction: Records automatically support deconstruction, allowing you to easily extract the values of their properties into separate variables.
+    Inheritance: Records can inherit from other records or classes.
+
+Syntax Example:
+C#
+
+// Concise syntax with primary constructor
+public record Person(string FirstName, string LastName, int Age);
+
+// Creating instances
+Person person1 = new Person("Alice", "Smith", 30);
+Person person2 = new Person("Alice", "Smith", 30);
+
+// Value-based equality
+Console.WriteLine(person1 == person2); // Output: True
+
+// with expression (non-destructive "mutation")
+Person olderPerson = person1 with { Age = 31 };
+Console.WriteLine(person1);      // Output: Person { FirstName = Alice, LastName = Smith, Age = 30 }
+Console.WriteLine(olderPerson);  // Output: Person { FirstName = Alice, LastName = Smith, Age = 31 }
+
+// Deconstruction
+var (firstName, lastName, age) = person1;
+Console.WriteLine($"{firstName} {lastName} is {age} years old."); // Output: Alice Smith is 30 years old.
+
+Use Cases for record types:
+
+    Data Transfer Objects (DTOs): Representing data being passed between different parts of an application or across API boundaries. Their value-based equality makes it easy to compare if the data is the same.
+    Immutable Data Structures: Situations where you want to ensure that once an object is created, its state cannot be changed (except by creating a new instance with modifications using with). This can improve predictability and help avoid certain types of bugs.
+    Domain Entities with Value Semantics: When you want entities to be considered the same if their attributes are the same, rather than based on object identity.
+    Functional Programming Paradigms: Records align well with functional programming concepts that emphasize immutability.
+    Configuration Objects: Representing application settings where immutability can be beneficial.
+
+2. struct types (C# 1.0 and later):
+
+    Value types: Structs are value types, meaning that variables of a struct type directly contain the data of the struct, rather than a reference to the data (which is the case with classes and records by default).
+    Stored on the stack (typically): Structs are usually allocated on the stack, which can offer performance benefits for small, short-lived objects by avoiding garbage collection overhead.
+    Default equality based on all fields: Structs also provide value-based equality by default, comparing all their fields. However, you can override the Equals method and == operator if needed.
+    Mutable by default: Unlike records, structs are mutable by default. You can change the values of their fields after creation.
+    No inheritance (except from System.ValueType): Structs cannot inherit from other classes or structs (other than implicitly inheriting from System.ValueType).
+
+Syntax Example:
+C#
+
+public struct Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+}
+
+Point point1 = new Point { X = 10, Y = 20 };
+Point point2 = point1; // Creates a copy (value type behavior)
+point2.X = 30;
+
+Console.WriteLine(point1); // Output: { X = 10, Y = 20 }
+Console.WriteLine(point2); // Output: { X = 30, Y = 20 }
+
+Use Cases for struct types:
+
+    Small, Value-Oriented Types: Representing simple data structures like points, coordinates, colors, or numerical values where the overhead of a reference type might be undesirable.
+    Performance-Critical Scenarios: When the allocation and deallocation costs of reference types become significant, using structs can sometimes offer performance improvements (though this should be carefully profiled).
+    Interoperability with Unmanaged Code: Structs are often used when interacting with native libraries or COM components.
+
+3. record struct types (C# 10 and later):
+
+    Combination of record and struct: record struct combines the value-based equality, concise syntax, with expression, and built-in members of a record with the value type semantics and stack allocation (typically) of a struct.
+    Value type with record-like features: It's essentially a value type that gets all the convenient features of a reference record.
+
+Syntax Example:
+C#
+
+public record struct Measurement(double Value, string Unit);
+
+Measurement m1 = new Measurement(10.5, "cm");
+Measurement m2 = new Measurement(10.5, "cm");
+
+Console.WriteLine(m1 == m2); // Output: True (value-based equality)
+
+Measurement m3 = m1 with { Value = 12.0 };
+Console.WriteLine(m1); // Output: Measurement { Value = 10.5, Unit = cm }
+Console.WriteLine(m3); // Output: Measurement { Value = 12, Unit = cm }
+
+Use Cases for record struct types:
+
+    Value-Based Data Transfer Objects (DTOs) where stack allocation is desired: For small DTOs that are frequently created and destroyed, using a record struct can potentially reduce garbage collection pressure.
+    Immutable Value Types with Concise Syntax: When you need the benefits of immutability and the syntactic sugar of records but want value type semantics.
+    Performance-Sensitive Scenarios with Immutable Data: If you have immutable data structures that are small and frequently used, record struct can be a good choice for potential performance gains.
+
+In summary:
+
+    Use record (reference type) when you need value-based equality, concise syntax for potentially more complex immutable data, and the benefits of reference types (like inheritance).
+    Use struct (value type) for small, simple value-oriented types where the overhead of a reference type might be a concern and mutability is acceptable or desired.
+    Use record struct (value type) when you want the value-based equality and concise syntax of records but also the value type semantics (potential stack allocation and reduced garbage collection) for smaller, immutable data structures.
+
+The choice between these often depends on the specific requirements of your application, the size and complexity of the data, and performance considerations.
 
 
 ___revealjs_mobileclicker
@@ -8728,6 +9063,502 @@ In Summary:
 
 For someone with programming experience looking to mod Morrowind, you should focus on understanding the TES Script within the Construction Set. Then, I highly recommend learning Lua to leverage the power of the Morrowind Script Extender (MWSE). While C++ and graphics programming are relevant for the underlying engine and creating entirely new rendering features, they are not typically required for creating most types of gameplay and content mods. Your programming skills will be very valuable in mastering the scripting aspects of Morrowind modding.
 
+
+___gnometracker_sparql
+- Great! Another question: Could
+  you give me a VERY quick overview
+  (that also involves some code and
+  practical examples) of using
+  Tracker (I think it's called
+  Gnome Tracker, but there may also
+  be some minimal versions) and
+  also using the SPARQL language
+  for obtaining some useful
+  information concerning files etc?
+  I.e. I have been using the Bash
+  and the Shell to good effect for
+  text-files, but I would really
+  like to enhance that workflow if
+  possible for other files and
+  file-types as well. Note also: My
+  currently installed primary
+  operating system is Arch Linux.
+
+You're right, the file indexing and
+search tool in GNOME is called
+Tracker. It uses a semantic
+database to store information about
+your files and allows querying this
+data using SPARQL (SPARQL Protocol
+and RDF Query Language). Here's a
+quick overview with practical
+examples relevant to your Arch
+Linux system:
+
+1. Tracker Overview:
+
+- Indexing: Tracker automatically
+  indexes your files and their
+  metadata (like file type, size,
+  modification date, tags, EXIF
+  data for images, etc.). It runs
+  in the background.
+- Database: The indexed information
+  is stored in a local database
+  (typically SQLite).
+- tracker3: On modern Arch Linux
+  systems, you'll likely be using
+  tracker3 (the latest version).
+  Older systems might have tracker.
+  You can check with tracker3
+  --version or tracker --version.
+- tracker3 sparql: This is the
+  command-line tool you'll use to
+  execute SPARQL queries against
+  the Tracker database.
+
+2. SPARQL Basics for Tracker:
+
+SPARQL is a query language for RDF
+(Resource Description Framework), a
+way of representing information as
+subject-predicate-object triples.
+Tracker represents your files and
+their metadata in this format.
+
+- PREFIX: Used to define namespaces
+  for commonly used vocabularies
+  (ontologies) that describe file
+  metadata. Tracker uses its own
+  vocabulary.
+- SELECT: Specifies the variables
+  you want to retrieve in your
+  query results. Variables are
+  prefixed with ?.
+- WHERE: Defines the patterns
+  (triples) that the data must
+  match.
+
+3. Practical Examples:
+
+Let's assume you want to find some
+information about image files in
+your ~/Pictures directory.
+
+Example 1: Finding all image file
+names in your Pictures directory:
+
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+PREFIX nmm: <http://www.semanticdesktop.org/ontologies/2007/09/nmm#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+SELECT ?filename
+WHERE {
+  ?file a nfo:FileDataObject ;
+        nie:url ?uri ;
+        nfo:fileName ?filename .
+  FILTER regex(?uri, "^file:///home/yourusername/Pictures/")
+  FILTER regex(?filename, ".(jpg|jpeg|png)$", "i") # Case-insensitive match for common image extensions
+}
+
+To execute this, replace
+yourusername and run in your
+terminal:
+
+tracker3 sparql -q "$(cat <<'EOF'
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+PREFIX nmm: <http://www.semanticdesktop.org/ontologies/2007/09/nmm#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+SELECT ?filename
+WHERE {
+  ?file a nfo:FileDataObject ;
+        nie:url ?uri ;
+        nfo:fileName ?filename .
+  FILTER regex(?uri, "^file:///home/yourusername/Pictures/")
+  FILTER regex(?filename, ".(jpg|jpeg|png)$", "i")
+}
+EOF
+)"
+
+Explanation:
+
+- We define prefixes for the
+  Tracker ontology.
+- We select the ?filename.
+- In the WHERE clause:
+  - ?file a nfo:FileDataObject .:
+    We look for resources that are
+    file data objects.
+  - ?file nie:url ?uri .: We get
+    the file URI.
+  - ?file nfo:fileName ?filename .:
+    We get the file name.
+  - FILTER regex(?uri,
+    "^file:///home/yourusername/Pictures/"):
+    We filter results to only
+    include files whose URI starts
+    with your Pictures directory.
+  - FILTER regex(?filename,
+    ".(jpg|jpeg|png)$", "i"): We
+    further filter to only include
+    files with common image
+    extensions (case-insensitive).
+
+Example 2: Finding recently
+modified documents (e.g., .odt,
+.docx, .pdf) in your Documents
+directory:
+
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX purl: <http://purl.org/dc/elements/1.1/>
+PREFIX nao: <http://www.semanticdesktop.org/ontologies/2007/08/nao#>
+
+SELECT ?filename ?modified
+WHERE {
+  ?doc a nfo:Document ;
+       nie:url ?uri ;
+       nfo:fileName ?filename ;
+       nao:lastModified ?modified .
+  FILTER regex(?uri, "^file:///home/yourusername/Documents/")
+  FILTER regex(?filename, ".(odt|docx|pdf)$", "i")
+}
+ORDER BY DESC(?modified)
+LIMIT 10
+
+Execute similarly using tracker3
+sparql -q "...".
+
+Explanation:
+
+- We look for resources that are
+  nfo:Document.
+- We retrieve the ?filename and
+  ?modified (last modification
+  date).
+- We filter by the Documents
+  directory and common document
+  extensions.
+- ORDER BY DESC(?modified) sorts
+  the results by the last modified
+  date in descending order (most
+  recent first).
+- LIMIT 10 restricts the output to
+  the top 10 results.
+
+Example 3: Finding files tagged
+with a specific tag (assuming you
+use a tagging application that
+integrates with Tracker):
+
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+PREFIX tags: <http://www.semanticdesktop.org/ontologies/2007/05/tags#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?filename ?tagName
+WHERE {
+  ?file a nfo:FileDataObject ;
+        nie:url ?uri ;
+        nfo:fileName ?filename ;
+        tags:hasTag ?tag .
+  ?tag rdfs:label ?tagName .
+  FILTER (?tagName = "your_tag") # Replace "your_tag" with the actual tag
+}
+
+Enhancing your Workflow:
+
+- Scripting: You can embed these
+  tracker3 sparql commands within
+  your Bash scripts to automate
+  file searches and information
+  retrieval based on various
+  criteria.
+- Custom Queries: Explore the
+  Tracker ontology (you can find
+  documentation online) to discover
+  more properties you can query
+  (e.g., file size, MIME type, EXIF
+  metadata for images, etc.).
+- Integration with other tools: You
+  could potentially pipe the output
+  of SPARQL queries to other
+  command-line tools for further
+  processing.
+
+Minimal Versions of Tracker:
+
+While tracker3 is the current
+standard, there might be minimal
+installations or alternative
+frontends. However, the core
+indexing service and the ability to
+query via SPARQL are fundamental to
+Tracker's functionality. You'll
+likely be interacting with the same
+underlying database and query
+language regardless of the specific
+desktop environment or minimal
+installation.
+
+Key Takeaway:
+
+Tracker and SPARQL provide a
+powerful way to query your files
+based on their metadata, going
+beyond simple filename matching.
+While the SPARQL syntax might have
+a learning curve, your programming
+background will definitely help you
+grasp the concepts and construct
+useful queries to enhance your file
+management workflow on Arch Linux.
+Remember to explore the Tracker
+ontology documentation for more
+advanced querying possibilities.
+github.com
+
+github.com
+Your saved info
+Info you asked Gemini to save
+
+
+- Would it also be possible to
+  enhance the use and effect of
+  Tracker and SPARQL using other
+  solutions, primarily I'm thinking
+  in my case of using other and
+  more powerful
+  programming-languages than Bash,
+  such as Python, F#, etc?
+
+Yes, absolutely! Using more
+powerful programming languages like
+Python or F# can significantly
+enhance the use and effect of
+Tracker and SPARQL, offering
+greater flexibility, automation,
+and integration possibilities
+compared to pure Bash scripting.
+Here's how:
+
+1. Python:
+
+Python has excellent libraries for
+interacting with external processes
+and handling structured data,
+making it a strong candidate for
+enhancing your Tracker workflow.
+
+Executing tracker3 sparql: You can
+use Python's subprocess module to
+execute tracker3 sparql commands
+and capture their output. This
+allows you to dynamically generate
+SPARQL queries within your Python
+scripts based on various
+conditions.
+
+import subprocess
+import json
+
+def run_tracker_sparql(query):
+    process = subprocess.run(
+        ['tracker3', 'sparql', '-q', query],
+        capture_output=True,
+        text=True,
+        check=True  # Raise an exception for non-zero exit codes
+    )
+    # Assuming Tracker outputs results in a parsable format (e.g., TSV, JSON - though JSON might require a specific output format flag if available)
+    # For simplicity, let's assume tab-separated values for now and you'd parse accordingly
+    results = [line.split('\t') for line in process.stdout.strip().split('\n')]
+    if results and results[0]:
+        headers = results[0]
+        data = [dict(zip(headers, row)) for row in results[1:]]
+        return data
+    return []
+
+query = """
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+SELECT ?filename ?modified
+WHERE {
+  ?doc a nfo:Document ;
+       nie:url ?uri ;
+       nfo:fileName ?filename ;
+       nfo:lastModified ?modified .
+  FILTER regex(?uri, "^file:///home/yourusername/Documents/")
+  FILTER regex(?filename, ".(pdf)$", "i")
+}
+ORDER BY DESC(?modified)
+LIMIT 5
+"""
+
+recent_pdfs = run_tracker_sparql(query)
+if recent_pdfs:
+    print("Recent PDF documents:")
+    for pdf in recent_pdfs:
+        print(f"- {pdf['filename']} (Modified: {pdf['modified']})")
+else:
+    print("No recent PDFs found.")
+
+Data Processing and Analysis:
+Python's rich ecosystem of
+libraries (like pandas,
+collections) allows you to easily
+process and analyze the data
+retrieved from Tracker. You can
+perform more complex filtering,
+sorting, aggregation, and
+visualization of your file
+metadata.
+
+Integration with Other Systems:
+Python can seamlessly integrate
+Tracker data with other
+applications, APIs, or databases.
+For example, you could:
+
+- Create a web interface to search
+  your files using Tracker.
+- Automate file organization tasks
+  based on Tracker metadata.
+- Generate reports on your file
+  usage patterns.
+
+More Complex Logic: Python allows
+you to implement more intricate
+logic for generating SPARQL queries
+dynamically based on user input or
+other program states.
+
+2. F#:
+
+F#, as a functional-first language
+on the .NET platform, also offers
+powerful capabilities for this
+task.
+
+Executing External Processes:
+Similar to Python's subprocess, F#
+provides ways to execute external
+commands and capture their output
+(e.g., using Process.Start).
+
+open System.Diagnostics
+
+let runTrackerSparql query =
+    let process = new Process()
+    process.StartInfo.FileName <- "tracker3"
+    process.StartInfo.Arguments <- $"-q \"{query}\""
+    process.StartInfo.RedirectStandardOutput <- true
+    process.StartInfo.UseShellExecute <- false
+    process.StartInfo.CreateNoWindow <- true
+    process.Start() |> ignore
+    let output = process.StandardOutput.ReadToEnd().Split('\n')
+    process.WaitForExit()
+    // Further parsing of 'output' would be needed based on Tracker's output format
+    output
+
+let query = """
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+SELECT ?filename ?fileSize
+WHERE {
+  ?file a nfo:FileDataObject ;
+         nie:url ?uri ;
+         nfo:fileName ?filename ;
+         nfo:fileSize ?fileSize .
+  FILTER (?fileSize > 10000000) # Find files larger than 10MB
+}
+"""
+
+let largeFiles = runTrackerSparql query
+printfn "Large files:"
+largeFiles |> Array.iter (printfn "%s") // Simple printing, more parsing needed
+
+- Strong Typing and Functional
+  Paradigm: F#'s strong typing and
+  functional nature can lead to
+  more robust and maintainable code
+  for processing and manipulating
+  the structured data from Tracker.
+- .NET Ecosystem: Access to the
+  extensive .NET libraries allows
+  for sophisticated data handling,
+  networking, and UI development if
+  you want to build more elaborate
+  tools around Tracker.
+- Pattern Matching: F#'s powerful
+  pattern matching capabilities can
+  be very useful for parsing and
+  extracting specific information
+  from the results returned by
+  Tracker.
+
+General Advantages of Using Higher-Level Languages:
+
+- Abstraction: They provide
+  higher-level abstractions, making
+  it easier to work with the data
+  and implement complex logic
+  compared to the more direct
+  command execution in Bash.
+- Error Handling: Robust error
+  handling mechanisms are available
+  to gracefully manage potential
+  issues during query execution or
+  data processing.
+- Code Organization: Languages like
+  Python and F# encourage better
+  code organization and modularity,
+  making your scripts easier to
+  understand, maintain, and extend.
+- Libraries and Ecosystems: Access
+  to a vast number of libraries for
+  tasks like data parsing (JSON,
+  CSV, etc.), data analysis, web
+  development, and more.
+
+In summary, while Bash is useful
+for simple command-line
+interactions, using Python or F#
+allows you to:
+
+- Dynamically generate and execute
+  more complex SPARQL queries.
+- Parse and process the results
+  from Tracker in a structured and
+  efficient way.
+- Integrate Tracker data with other
+  systems and applications.
+- Build more sophisticated tools
+  and workflows around your file
+  metadata.
+
+Choosing between Python and F#
+often comes down to personal
+preference and the specific
+requirements of your project.
+Python has a larger and more
+diverse ecosystem for
+general-purpose scripting and data
+science, while F# offers the
+benefits of strong typing and a
+functional paradigm within the .NET
+ecosystem. Both are excellent
+choices for enhancing your
+interaction with Tracker and SPARQL
+beyond the capabilities of basic
+shell scripting.
 
 
 - One quick follow-up along those
@@ -9682,6 +10513,147 @@ Conclusion:
 While strong static typing significantly enhances code reliability and reduces the surface area for certain types of bugs, it's not a silver bullet that completely replaces unit testing. Unit tests remain a crucial tool for verifying the correctness of your application's logic, handling edge cases, managing side effects, and ensuring overall robustness. Think of strong typing as a powerful first line of defense that catches many potential issues early, allowing your unit tests to focus on the more complex and behavior-specific aspects of your code. You'll likely write fewer unit tests focused on type-related errors, but you'll still need tests to ensure your code does what it's supposed to do.
 
 
+___MorrowindSCRIPTING=1/2
+A question (when it comes to scripting Morrowind and OpenMorrowind with Lua): When I read about it I see something called Tes3 UI mentioned. Is that a separate or standalone UI framework, or what? Could you tell me more about it?
+
+You've hit on a key component of Lua scripting within Morrowind and especially OpenMW: Tes3 UI.
+
+Tes3 UI is NOT a separate or standalone UI framework in the traditional sense that you might think of something like Qt or GTK. Instead, it's a specific set of Lua bindings and functions provided by the OpenMW engine that allow Lua scripts to interact with and manipulate the game's existing user interface (UI) elements and create new ones.
+
+Think of it as an API layer that exposes the underlying Morrowind/OpenMW UI system to Lua scripts.
+
+Here's a more detailed breakdown:
+
+Key Aspects of Tes3 UI:
+
+    Accessing Existing UI Elements: Tes3 UI provides functions that allow Lua scripts to find, access, and modify properties of existing UI elements that are part of the game's standard interface (e.g., inventory windows, dialogue boxes, menus, HUD elements). You can change their position, size, text, visibility, and even attach custom Lua scripts to their events (like button clicks).
+    Creating New UI Elements: More powerfully, Tes3 UI enables Lua scripts to create entirely new UI elements from scratch. This includes things like:
+        Windows: Custom pop-up windows for displaying information or gathering input.
+        Labels: For displaying text.
+        Buttons: For triggering actions when clicked.
+        Images: For displaying textures.
+        Scrollbars: For navigating large lists or content.
+        Input Fields: For allowing players to enter text.
+        Panels: For grouping and organizing other UI elements.
+    Layout and Positioning: Tes3 UI provides mechanisms for defining the layout and positioning of UI elements, often using relative or absolute coordinates and anchoring.
+    Event Handling: A crucial aspect of Tes3 UI is its event handling system. You can attach Lua functions to various events that occur on UI elements (e.g., onMouseClicked, onValueChanged, onMouseEnter). This allows your scripts to respond to player interactions with the UI.
+    Data Binding (to some extent): While not a full data-binding framework like in modern UI libraries, Tes3 UI allows you to dynamically update UI elements based on game state or script variables.
+    Integration with Game Systems: Tes3 UI is tightly integrated with the OpenMW engine, allowing your UI scripts to interact with game objects, variables, and functions. For example, a custom UI could display player stats, track quest progress, or trigger in-game actions.
+
+In the Context of Morrowind (via MWSE) vs. OpenMW:
+
+    OpenMW: Tes3 UI is a core feature of OpenMW's Lua scripting capabilities. It's a well-defined and actively developed API that allows for significant UI modding.
+    Morrowind (via MWSE): The Morrowind Script Extender (MWSE) also provides some UI manipulation capabilities through Lua, but it's generally less comprehensive and more focused on extending the existing UI rather than creating entirely new systems from scratch compared to OpenMW's Tes3 UI. MWSE's UI extensions often work by hooking into existing game functions and memory.
+
+Think of it this way:
+
+    Vanilla Morrowind scripting: Limited to in-world interactions and some basic message boxes.
+    MWSE Lua scripting: Extends the in-world scripting and offers some ways to modify the existing UI.
+    OpenMW Lua scripting with Tes3 UI: Provides a dedicated and powerful framework for creating entirely new and complex user interfaces within the game.
+
+In summary, Tes3 UI is the set of Lua tools provided by OpenMW that empowers modders to create custom user interfaces and interact deeply with the game's UI elements using Lua scripts. It's a key reason why UI modding in OpenMW is significantly more flexible and powerful than in vanilla Morrowind.
+
+Very helpful and informative! Thanks
+
+You're very welcome! I'm glad I could help clarify Tes3 UI for you. If you delve into Morrowind or OpenMW modding with Lua, you'll find Tes3 UI to be a very powerful tool.
+
+Feel free to ask if any more questions arise as you explore! Happy modding!
+
+
+___MorrowindSCRIPTING ____
+Yes, I'm absolutely with you! You want a practical, step-by-step guide to writing and testing your first OpenMW Lua script. Let's break it down:
+
+1. Setting Up Your OpenMW Configuration:
+
+First, you need to ensure OpenMW is set up to recognize your custom content, including Lua scripts.
+
+    openmw.cfg File: This is the main configuration file for OpenMW. You'll need to locate it. The location varies depending on your operating system:
+        Linux: Usually in ~/.config/openmw/openmw.cfg
+        Windows: Typically in C:\Users\<YourUsername>\Documents\My Games\OpenMW\openmw.cfg
+        macOS: Often in ~/.config/openmw/openmw.cfg
+
+    Adding Your Custom Data Directory: You'll want a dedicated directory for your mod files, including Lua scripts. Let's create one. For example, in your home directory, create a folder named OpenMWMods/MyFirstLuaMod.
+
+    Editing openmw.cfg: Open openmw.cfg with a text editor. Look for the data= lines. You need to add a line pointing to your new mod directory. Make sure it appears before any lines pointing to the original Morrowind data files if you want your mod to potentially override vanilla content (though for a first script, the order might not be critical).
+    Ini, TOML
+
+data="~/.config/openmw/OpenMWMods/MyFirstLuaMod" ; Replace with your actual path
+data="/path/to/your/Morrowind/Data Files"
+
+(Adjust the paths to match your system.)
+
+Enabling Content Files (for potential ESP/ESM dependencies later): If your Lua script eventually interacts with specific game objects defined in an ESP or ESM file, you'll need to enable those in the content= section of openmw.cfg. For a purely Lua-driven mod initially, you might not need this right away.
+Ini, TOML
+
+    content="/path/to/your/Morrowind/Data Files/Morrowind.esm"
+    content="/path/to/your/Morrowind/Data Files/Tribunal.esm"
+    content="/path/to/your/Morrowind/Data Files/Bloodmoon.esm"
+    ; content="path/to/your/some_mod.esp"
+
+2. Creating Your First Lua Script:
+
+    Inside the OpenMWMods/MyFirstLuaMod directory you created, create a new text file and name it something descriptive, for example, my_first_script.lua.
+
+    Open my_first_script.lua with a text editor and let's put some basic code in it. This simple script will print a message to the OpenMW console when the game starts.
+    Lua
+
+    -- This script will run when the game is initialized.
+
+    local function onGameInit()
+        print("Hello from my first OpenMW Lua script!")
+        -- You can add more complex logic here later.
+    end
+
+    -- Register the onGameInit function to be called when the game initializes.
+    openmw.event.register(openmw.event.gameInitialized, onGameInit)
+
+        local function onGameInit(): This defines a function named onGameInit.
+        print("..."): This Lua function will output the text within the quotes to the OpenMW console.
+        openmw.event.register(openmw.event.gameInitialized, onGameInit): This is the crucial part. It tells OpenMW to execute the onGameInit function when the gameInitialized event occurs (i.e., when the game has finished loading).
+
+3. Telling OpenMW to Load Your Lua Script:
+
+There are a couple of ways to tell OpenMW to load and run your Lua script:
+
+    Using an .omwscripts File (Recommended for Organization):
+
+        Inside your OpenMWMods/MyFirstLuaMod directory, create a new text file named scripts.omwscripts.
+
+        Open scripts.omwscripts and add the path to your Lua script file (relative to your mod's data directory):
+
+        my_first_script.lua
+
+        OpenMW will automatically look for and load Lua scripts listed in .omwscripts files within its data directories.
+
+    Directly in openmw.cfg (Less Organized for Multiple Scripts):
+
+        You can also directly specify Lua scripts in the [Scripts] section of your openmw.cfg file:
+        Ini, TOML
+
+        [Scripts]
+        script=OpenMWMods/MyFirstLuaMod/my_first_script.lua
+
+        However, using .omwscripts files is generally cleaner for managing multiple scripts as your mod grows.
+
+4. Running OpenMW and Checking the Console:
+
+    Launch OpenMW. Load a save game or start a new game.
+    Once you are in the game world, open the OpenMW console. The default key to open the console is usually the ~ (tilde) key, located below the Esc key.
+    If everything is set up correctly, you should see the message "Hello from my first OpenMW Lua script!" printed in the console.
+
+Congratulations! You've run your first OpenMW Lua script.
+
+Next Steps and Ideas:
+
+    Explore the OpenMW Lua API: The official OpenMW documentation (https://openmw.readthedocs.io/en/latest/reference/lua-scripting/index.html) is your best resource. It details all the functions and events you can use to interact with the game world.
+    Experiment with Events: Try registering functions for other events, like actorCreated, cellChanged, itemAdded, etc., to see when they trigger.
+    Interact with Game Objects: Use functions like openmw.world.findObject("unique_object_id") to get references to specific in-game objects and then use other API functions to modify their properties (e.g., position, health, inventory). You'll need to know the object IDs from the Morrowind Construction Set (or OpenMW-CS).
+    Create Custom Functions: Write your own Lua functions to encapsulate logic and make your scripts more organized.
+    Look at Examples: The openmw-lua-examples repository on GitLab (https://gitlab.com/ptmikheev/openmw-lua-examples) is a treasure trove of practical examples.
+
+Remember to keep your Lua scripts organized within your mod's data directory. As you create more scripts, you can have multiple .lua files listed in your scripts.omwscripts file.
+
+Have fun exploring the possibilities of OpenMW Lua scripting! Let me know if you have any more questions as you delve deeper.
 
 
 
@@ -9746,256 +10718,6 @@ Remember, the beauty of Nyxt is its flexibility. These are just starting points,
 
 
 
-
-}}}
-Morrowind Scripting {{{
-___MorrowindSCRIPTING=1/2
-A question (when it comes to scripting Morrowind and OpenMorrowind with Lua): When I read about it I see something called Tes3 UI mentioned. Is that a separate or standalone UI framework, or what? Could you tell me more about it?
-
-You've hit on a key component of Lua scripting within Morrowind and especially OpenMW: Tes3 UI.
-
-Tes3 UI is NOT a separate or standalone UI framework in the traditional sense that you might think of something like Qt or GTK. Instead, it's a specific set of Lua bindings and functions provided by the OpenMW engine that allow Lua scripts to interact with and manipulate the game's existing user interface (UI) elements and create new ones.
-
-Think of it as an API layer that exposes the underlying Morrowind/OpenMW UI system to Lua scripts.
-
-Here's a more detailed breakdown:
-
-Key Aspects of Tes3 UI:
-
-    Accessing Existing UI Elements: Tes3 UI provides functions that allow Lua scripts to find, access, and modify properties of existing UI elements that are part of the game's standard interface (e.g., inventory windows, dialogue boxes, menus, HUD elements). You can change their position, size, text, visibility, and even attach custom Lua scripts to their events (like button clicks).
-    Creating New UI Elements: More powerfully, Tes3 UI enables Lua scripts to create entirely new UI elements from scratch. This includes things like:
-        Windows: Custom pop-up windows for displaying information or gathering input.
-        Labels: For displaying text.
-        Buttons: For triggering actions when clicked.
-        Images: For displaying textures.
-        Scrollbars: For navigating large lists or content.
-        Input Fields: For allowing players to enter text.
-        Panels: For grouping and organizing other UI elements.
-    Layout and Positioning: Tes3 UI provides mechanisms for defining the layout and positioning of UI elements, often using relative or absolute coordinates and anchoring.
-    Event Handling: A crucial aspect of Tes3 UI is its event handling system. You can attach Lua functions to various events that occur on UI elements (e.g., onMouseClicked, onValueChanged, onMouseEnter). This allows your scripts to respond to player interactions with the UI.
-    Data Binding (to some extent): While not a full data-binding framework like in modern UI libraries, Tes3 UI allows you to dynamically update UI elements based on game state or script variables.
-    Integration with Game Systems: Tes3 UI is tightly integrated with the OpenMW engine, allowing your UI scripts to interact with game objects, variables, and functions. For example, a custom UI could display player stats, track quest progress, or trigger in-game actions.
-
-In the Context of Morrowind (via MWSE) vs. OpenMW:
-
-    OpenMW: Tes3 UI is a core feature of OpenMW's Lua scripting capabilities. It's a well-defined and actively developed API that allows for significant UI modding.
-    Morrowind (via MWSE): The Morrowind Script Extender (MWSE) also provides some UI manipulation capabilities through Lua, but it's generally less comprehensive and more focused on extending the existing UI rather than creating entirely new systems from scratch compared to OpenMW's Tes3 UI. MWSE's UI extensions often work by hooking into existing game functions and memory.
-
-Think of it this way:
-
-    Vanilla Morrowind scripting: Limited to in-world interactions and some basic message boxes.
-    MWSE Lua scripting: Extends the in-world scripting and offers some ways to modify the existing UI.
-    OpenMW Lua scripting with Tes3 UI: Provides a dedicated and powerful framework for creating entirely new and complex user interfaces within the game.
-
-In summary, Tes3 UI is the set of Lua tools provided by OpenMW that empowers modders to create custom user interfaces and interact deeply with the game's UI elements using Lua scripts. It's a key reason why UI modding in OpenMW is significantly more flexible and powerful than in vanilla Morrowind.
-
-Very helpful and informative! Thanks
-
-You're very welcome! I'm glad I could help clarify Tes3 UI for you. If you delve into Morrowind or OpenMW modding with Lua, you'll find Tes3 UI to be a very powerful tool.
-
-Feel free to ask if any more questions arise as you explore! Happy modding!
-
-
-
-
-
-___MorrowindSCRIPTING ____
-Yes, I'm absolutely with you! You
-want a practical, step-by-step
-guide to writing and testing your
-first OpenMW Lua script. Let's
-break it down:
-
-1. Setting Up Your OpenMW Configuration:
-
-First, you need to ensure OpenMW is
-set up to recognize your custom
-content, including Lua scripts.
-
-openmw.cfg File: This is the main
-configuration file for OpenMW.
-You'll need to locate it. The
-location varies depending on your
-operating system: '
-
-- Linux: Usually in
-  ~/.config/openmw/openmw.cfg
-- Windows: Typically in
-  C:\Users\<YourUsername>\Documents\My
-  Games\OpenMW\openmw.cfg
-- macOS: Often in
-  ~/.config/openmw/openmw.cfg
-
-Adding Your Custom Data Directory:
-
-You'll want a dedicated directory
-for your mod-files, including
-Lua-scripts. Let's create one. For
-example, in your home directory,
-create a folder named
-OpenMWMods/MyFirstLuaMod.
-
-Editing openmw.cfg: Open openmw.cfg
-with a text editor. Look for the
-data= lines. You need to add a line
-pointing to your new mod directory.
-Make sure it appears before any
-lines pointing to the original
-Morrowind data files if you want
-your mod to potentially override
-vanilla content (though for a first
-script, the order might not be
-critical).
-
-Ini, TOML
-
-data="~/.config/openmw/OpenMWMods/MyFirstLuaMod" ; Replace with your actual path
-data="/path/to/your/Morrowind/Data Files"
-
-(Adjust the paths to match your system.)
-
-Enabling Content-Files (for
-potential ESP/ESM-dependencies
-later): If your Lua-script
-eventually interacts with specific
-game-objects defined in an ESP- or
-ESM-file, you'll need to enable
-those in the content= section of
-openmw.cfg. For a purely Lua-driven
-mod initially, you might not need
-this right away. '
-
-Ini, TOML
-
-content="/path/to/your/Morrowind/Data Files/Morrowind.esm"
-content="/path/to/your/Morrowind/Data Files/Tribunal.esm"
-content="/path/to/your/Morrowind/Data Files/Bloodmoon.esm"
-; content="path/to/your/some_mod.esp"
-
-2. Creating Your First Lua Script:
-
-Inside the OpenMWMods/MyFirstLuaMod
-directory you created, create a new
-text file and name it something
-descriptive, for example,
-my_first_script.lua.
-
-- Open my_first_script.lua with a
-  text editor and let's put some
-  basic code in it. This simple
-  script will print a message to
-  the OpenMW console when the game
-  starts. '
-
--- This script will run when the game is initialized.
-
-local function onGameInit()
-    print("Hello from my first OpenMW Lua script!")
-    -- You can add more complex logic here later.
-end
-
--- Register the onGameInit function to be called when the game initializes.
-openmw.event.register(openmw.event.gameInitialized, onGameInit)
-
-- local function onGameInit(): This
-  defines a function named
-  onGameInit.
-- print("..."): This Lua function
-  will output the text within the
-  quotes to the OpenMW console.
-- openmw.event.register(openmw.event.gameInitialized,
-  onGameInit): This is the crucial
-  part. It tells OpenMW to execute
-  the onGameInit function when the
-  gameInitialized event occurs
-  (i.e., when the game has finished
-  loading).
-
-3. Telling OpenMW to Load Your Lua Script:
-
-There are a couple of ways to tell OpenMW to load and run your Lua script:
-
-    Using an .omwscripts File (Recommended for Organization):
-
-        Inside your OpenMWMods/MyFirstLuaMod directory, create a new text file named scripts.omwscripts.
-
-        Open scripts.omwscripts and
-        add the path to your Lua
-        script file (relative to
-        your mod's data directory):
-        '
-
-        my_first_script.lua
-
-        OpenMW will automatically look for and load Lua scripts listed in .omwscripts files within its data directories.
-
-    Directly in openmw.cfg (Less Organized for Multiple Scripts):
-
-        You can also directly specify Lua scripts in the [Scripts] section of your openmw.cfg file:
-        Ini, TOML
-
-        [Scripts]
-        script=OpenMWMods/MyFirstLuaMod/my_first_script.lua
-
-        However, using .omwscripts files is generally cleaner for managing multiple scripts as your mod grows.
-
-4. Running OpenMW and Checking the Console:
-
-- Launch OpenMW. Load a save game
-  or start a new game.
-- Once you are in the game world,
-  open the OpenMW console. The
-  default key to open the console
-  is usually the ~ (tilde) key,
-  located below the Esc key.
-
-If everything is set up correctly,
-you should see the message "Hello
-from my first OpenMW Lua script!"
-printed in the console.
-
-Congratulations! You've run your
-first OpenMW Lua script. '
-
-Next Steps and Ideas:
-
-- Explore the OpenMW Lua API: The
-  official OpenMW documentation
-  (https://openmw.readthedocs.io/en/latest/reference/lua-scripting/index.html)
-  is your best resource. It details
-  all the functions and events you
-  can use to interact with the game
-  world.
-- Experiment with Events: Try
-  registering functions for other
-  events, like actorCreated,
-  cellChanged, itemAdded, etc., to
-  see when they trigger.
-- Interact with Game Objects: Use
-  functions like
-  openmw.world.findObject("unique_object_id")
-  to get references to specific
-  in-game objects and then use
-  other API functions to modify
-  their properties (e.g., position,
-  health, inventory). You'll need
-  to know the object IDs from the
-  Morrowind Construction Set (or
-  OpenMW-CS). '
-- Create Custom Functions: Write
-  your own Lua-functions to
-  encapsulate logic and make your
-  scripts more organized.
-- Look at Examples: The
-  openmw-lua-examples repository on
-  GitLab
-  (https://gitlab.com/ptmikheev/openmw-lua-examples)
-  is a treasure trove of practical
-  examples.
-
-Remember to keep your Lua scripts organized within your mod's data directory. As you create more scripts, you can have multiple .lua files listed in your scripts.omwscripts file.
-
-Have fun exploring the possibilities of OpenMW Lua scripting! Let me know if you have any more questions as you delve deeper.
 
 }}}
 
