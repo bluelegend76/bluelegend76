@@ -6,6 +6,7 @@ set fdm=marker syn= guifont=* | colors ron
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/*
 TODO ADD 1 = STARTUPS 1 {{{
 
 Vanki LearnQna ----
@@ -405,7 +406,7 @@ dft curr 2023 {{{
     }}}
 
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
-\v\@([^ ]?)+
+/v\@([^ ]?)+
 
 V I M  +  E M A C S
 
