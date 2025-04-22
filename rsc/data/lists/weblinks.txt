@@ -11552,6 +11552,7 @@ https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/TruckComUpdater  #Projec
 https://www.figma.com/design/gOoCKGMNZNJnjdwfuaRsru/WH-Production-%7C-Handover?node-id=257-21911  # TC Updater Figma-Mockup
     https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25684/Installer-Service  # Sync-client overview +/= requirements-wiki
 ----
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Package-syncing.md  # Including Mermaid
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing  # Pong(=Sequence)-diagram - Rendered
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Documentation/TruckCom-WH/WH-Sync/Installer-Service.md&_a=preview  # more broken down overview
     https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_search?text=mermaid&type=wiki&pageSize=25&filters=Project%7BTMHMS_TruckCom_Platform%7D  truckcom mermaid diagrams

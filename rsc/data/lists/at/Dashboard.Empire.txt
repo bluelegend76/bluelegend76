@@ -62,127 +62,127 @@ fb, social {{{
 }}}
 .    2025-04-02 ---- (pres. halvtid) - Toy:Tmhe {{{
 
-[[Arkitekt som är sin egen administratör/bygger sin egen environment]]
+[[Nexvgrxg fbz äe fva rtra nqzvavfgengöe/olttre fva rtra raivebazrag]]
 
 ---
-"Du har en väldigt speciell stil..."
-- doktorn
-- prof.
-- 'memento'
-- Conan the librarian
-    [kampsport + extremt teoretiska ämnen (språk, bet.vetenskap, psykologi, k-teori]
+"Qh une ra iäyqvtg fcrpvryy fgvy..."
+- qbxgbea
+- cebs.
+- 'zrzragb'
+- Pbana gur yvoenevna
+    [xnzcfcbeg + rkgerzg grbergvfxn äzara (fceåx, org.irgrafxnc, cflxbybtv, x-grbev]
 
 ---
-'Du har en välsignelse eller en förbannelse, lite beroende på vem det är som tittar.
-8 av 10 ser nån som är spretig och kaotisk. Övriga 2 ser något unikt och spännande.'
+'Qh une ra iäyfvtaryfr ryyre ra söeonaaryfr, yvgr orebraqr cå irz qrg äe fbz gvggne.
+8 ni 10 fre aåa fbz äe fcergvt bpu xnbgvfx. Öievtn 2 fre aåtbg havxg bpu fcäaanaqr.'
 
-- Du har visat intresse och otrolig förmåga
-- Du ska inte sluta! Du är ju som gjord för det här!
-- Ditt inlärningssystem är både spännande och mycket(!) genomtänkt
+- Qh une ivfng vagerffr bpu bgebyvt söezåtn
+- Qh fxn vagr fyhgn! Qh äe wh fbz twbeq söe qrg uäe!
+- Qvgg vayäeavatfflfgrz äe oåqr fcäaanaqr bpu zlpxrg(!) trabzgäaxg
 
-"Den enda skillnaden på mig och en galning är att jag inte är galen."
-
----
-Brainstorming + behöver ofta en väldigt bred vy/bild/överblick
-
+"Qra raqn fxvyyanqra cå zvt bpu ra tnyavat äe ngg wnt vagr äe tnyra."
 
 ---
-Nu kör vi! (behöver inte mycket handhållning/styrning)
-
----
-+ Vad är det som tatt tid? (man funderar också själv)
-
-[misstag?]
-- tog det ganska makligt
-    (behövde ju komma igen(!))
-- la tid på att lära känna folk (+hålla mig väl med min 'värd')
-- Återuppta träning (efter mer än 2 år)
-
-- bygga tooling + Starta upp egna ref.systemet på Win
-    [+insåg häromdan att den failat]
-
-(olika medicinska + admin.problem, olika arbetsstationer, seg laptop, möten, ...)
+Oenvafgbezvat + oruöire bsgn ra iäyqvtg oerq il/ovyq/öireoyvpx
 
 
 ---
-## Syftet med en LIA?
-- lärdom
-- kontakter
-  - kanske(!) också en anställning
-
-- "Vi förstod verkligen inte mycket eller gjorde många knop i början"
+Ah xöe iv! (oruöire vagr zlpxrg unaquåyyavat/fgleavat)
 
 ---
-- var inte rädd för att fråga --> du frågar väldigt mycket
-    <--> du frågar för lite
-- det finns inga dumma frågor
-    <--> vad är det för en dum fråga
-- det ska inte presteras nåt visst här
-    <--> värst vad långsamt det går
++ Inq äe qrg fbz gngg gvq? (zna shaqrene bpxfå fwäyi)
+
+[zvffgnt?]
+- gbt qrg tnafxn znxyvtg
+    (oruöiqr wh xbzzn vtra(!))
+- yn gvq cå ngg yäen xäaan sbyx (+uåyyn zvt iäy zrq zva 'iäeq')
+- Ågrehccgn geäavat (rsgre zre äa 2 åe)
+
+- olttn gbbyvat + Fgnegn hcc rtan ers.flfgrzrg cå Jva
+    [+vafåt uäebzqna ngg qra snvyng]
+
+(byvxn zrqvpvafxn + nqzva.ceboyrz, byvxn neorgffgngvbare, frt yncgbc, zögra, ...)
+
 
 ---
-handler
-service
-utilities
-helper
-worker
-builder
-provider
-expediatior
+## Flsgrg zrq ra YVN?
+- yäeqbz
+- xbagnxgre
+  - xnafxr(!) bpxfå ra nafgäyyavat
+
+- "Iv söefgbq irexyvtra vagr zlpxrg ryyre twbeqr zåatn xabc v oöewna"
+
+---
+- ine vagr eäqq söe ngg seåtn --> qh seåtne iäyqvtg zlpxrg
+    <--> qh seåtne söe yvgr
+- qrg svaaf vatn qhzzn seåtbe
+    <--> inq äe qrg söe ra qhz seåtn
+- qrg fxn vagr cerfgrenf aåg ivffg uäe
+    <--> iäefg inq yåatfnzg qrg tåe
+
+---
+unaqyre
+freivpr
+hgvyvgvrf
+urycre
+jbexre
+ohvyqre
+cebivqre
+rkcrqvngvbe
  ... (?)
 
 ---
-- Det här var inte alldeles tydligt/lätt att begripa sig på
-- Tricket (för företaget vid en LIA) är att hitta saker relaterat till produktionsflödet
-- Om en LIA blir satt i produktionsflödet/att läsa produktionskod och om de inte kan det då har de misslyckats, ett sånt upplägg är jag kritisk till.
+- Qrg uäe ine vagr nyyqryrf glqyvtg/yägg ngg ortevcn fvt cå
+- Gevpxrg (söe söergntrg ivq ra YVN) äe ngg uvggn fnxre eryngreng gvyy cebqhxgvbafsyöqrg
+- Bz ra YVN oyve fngg v cebqhxgvbafsyöqrg/ngg yäfn cebqhxgvbafxbq bpu bz qr vagr xna qrg qå une qr zvffylpxngf, rgg fåag hccyätt äe wnt xevgvfx gvyy.
 
-(validering el. tillfälle att lära sig)
-
-
-- hinner inte göra något arbete =kan använda som ex-jobb
+(inyvqrevat ry. gvyysäyyr ngg yäen fvt)
 
 
----
-Vad vill vi åstadkomma?
-
----
-vad tycker ni? vad ska jag fokusera på?
-
-- Fokusera på att visa framfötterna tekniskt?
-- Fokusera på det sociala + visa sina sociala+artistiska kvalitéer?
+- uvaare vagr töen aåtbg neorgr =xna naiäaqn fbz rk-wboo
 
 
 ---
-De fyra fula orden
-    m-zvffunaqry  r-eåa  u-hgalggwnaqr|fynineorgr  f-söearqevat
-    [+zra nyyn äe iäyqvtg glqyvtn zrq ivyxn qrg äe fbz une/äe qr fxlyqvtn:
-    - aåtba
-    - vatra
+Inq ivyy iv åfgnqxbzzn?
 
-"Man är ju ändå bara människa (så länge man står upp)"
+---
+inq glpxre av? inq fxn wnt sbxhfren cå?
+
+- Sbxhfren cå ngg ivfn senzsöggrean grxavfxg?
+- Sbxhfren cå qrg fbpvnyn + ivfn fvan fbpvnyn+negvfgvfxn xinyvgére?
 
 
 ---
-tre alternativ:
-- ändra uppgifter (för att komma in i gänget/produktionsflödet bättre)
-- pausa + återkomma
-- dyka ner + stänga locket
+Qr slen shyn beqra
+    z-misshandel  e-rån  h-utnyttjande|slavarbete  s-förnedring
+    [+men alla är väldigt tydliga med vilka det är som har/är de skyldiga:
+    - någon
+    - ingen
+
+"Zna äe wh äaqå onen zäaavfxn (få yäatr zna fgåe hcc)"
+
+
+---
+ger nygreangvi:
+- äaqen hcctvsgre (söe ngg xbzzn va v täatrg/cebqhxgvbafsyöqrg oägger)
+- cnhfn + ågrexbzzn
+- qlxn are + fgäatn ybpxrg
 --
-- hoppa av
+- ubccn ni
 
 }}}
 cbfgzbegrz yvn2 jvgu Fnaql {{{
 
-Jag gjorde några stilistiska fel i början
+Wnt twbeqr aåten fgvyvfgvfxn sry v oöewna
 
-kul energisk prick (+yvig inlärningsstil, +sen på bollen)
+xhy raretvfx cevpx (+livt vayäeavatffgvy, +fra cå obyyra)
 
-  la för mycket tid på att vara en trevlig, lustig prick
+  yn söe zlpxrg gvq cå ngg inen ra geriyvt, yhfgvt cevpx
 
-Jag gjorde några otaktiska/ostrategiska val i början
+Wnt twbeqr aåten bgnxgvfxn/bfgengrtvfxn iny v oöewna
 
 
-Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett team
+Wnt une yäeg zvt aåten ivxgvtn yrxgvbare bz zvt fwäyi bpu zva erfn gvyy rgg grnz
 
 }}}
 .'The Four Dangers' {{{
@@ -191,9 +191,13 @@ Jag har lärt mig några viktiga lektioner om mig själv och min resa till ett t
 }}}
         N-teatern/Nationalsånger 2  YOUTUBE
 Scratch-Area + todoscratch/'hänglista' + Daily {{{
+
 TODO: STYTR-MALL.TXT till TELEFONEN
     (+Senare: BOLLTRÄNINGSMALLAR.TXT inkl. Beskrivningarna)
-- KALKERA/TRANSKRIBERA UT RSKRIFT STENOANTECKNINGARNA 1 *****
+
+- Snabbkik på build/pipeline-process (10-15 min max)
+- Utgång/Träff i veckan/nästa vecka
+ - Policy kika in när krasslig
 
 - freecommander accelerator-keys + cleanup
 - sista 5 linux-kommandon: gemini-sök ('Xonsh el. Bash för Linux-Sysadmin?')
@@ -215,9 +219,12 @@ TODO: STYTR-MALL.TXT till TELEFONEN
      + interface
      + IServiceCollection
      compare 2 checksums
+
     = Från Updater-koden kunna läsa av/avgöra vilken version av TCC som är installerat på datorn (=inte kunna hantera paket med choco etc)
     = Bästa sätt att ta reda på om TC är installerat  (=när/hur kan jag avgöra att det inte är installerat? - +=vilka platser att kolla på)
-    - LISTA/FÖRSLAG: FRAMTIDA FEATURES ATT KUNNA LÄGGA TILL I FRAMTIDEN
+    - LISTA/FÖRSLAG: FEATURES ATT KUNNA LÄGGA TILL I FRAMTIDEN
++ Mermaid-koden för/från Wikin
+
 - Ny Vanki-Deck DotNet Core 23 (*)
 ---- store
 - begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas
