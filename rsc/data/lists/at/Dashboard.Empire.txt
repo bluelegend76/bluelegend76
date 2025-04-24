@@ -415,30 +415,32 @@ dft curr 2023 {{{
     \v\@([^ ]?)+
 
 Termux  __  @@  ¤¤¤
-Vimscripting (+Elisp Startwith)
-    + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
-Obsidian __ @  MLEARN**(+)  ¤¤¤
-----
+VIMSCRIPT x4 (+Elisp Startwith)
+  OrgMode
 JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
+Obsidian __ @ +MLEARN: FIRST DOKS + formulas w. Obsidian Md/Latex[!!]  _  ¤¤¤
+mermaid md
 Py/F# Sysadm. + Devops[!!]  ¤¤¤
 datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
 FuncPy  ¤¤¤
-    Lua (OpenMw, Mpv, NeoVim)
-Bcb, Bluebash  ¤¤  + PShell,  ASM 1 (+binalys)  ¤
+    Lua (OpenMw, Mpv, NeoVim, Ardour)
+Bcb, Bluebash  ¤¤¤  LINSYS: debbib
 
-Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)   @@
-REVEAL, IMPRESS  __ ¤¤¤
-    Latex Beamer
-.  tracker/localsearch + Sparql
-    winterminal  ¤ [=profiles, AWS-shell, etc **]
 Android Scripting [+Rclone] ¤¤¤
-    ASP.NET CORE MVC __ (++Web APIs)  ¤¤
+    ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤
   + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
-AVALONIA  ¤¤(¤)
+AVALONIA (+Maui)  ¤¤(¤)  Spectre Console
     XUnit, Cpp Gtest + 'Prop.based Testing'  ¤¤
-Dlang [Ali, +Learning, Cb]
+Dlang [Ali, +Learning, Cb]  +Pegged  ¤¤¤
 SSH  ¤¤¤
 NuShell  _  ¤¤(¤)
+ASM 1 (+binalys)  ¤¤
+Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)   @@  ¤¤¤
+REVEAL, IMPRESS  __ ¤¤¤
+    Latex Beamer
+Tracker/Localsearch + Sparql  ¤¤
+    winterminal  ¤ [=profiles, AWS-shell, etc **]
+Blue + CSound +Analog Synth. ¤¤¤  Nyq, Scoll  muHask*(*), Midi  @  Chuck  ORCH/POPROCK-ARR (etc)
     Xonshell  __  ¤
 Bash/Dash-Mans {{{
     Bluebash, Bcb, ....
@@ -447,34 +449,62 @@ Bash/Dash-Mans {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
   }}}
 Mpv-Docs  ¤¤ | Yt-Downl
-
+    + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
 Gremlin + Neptune
   'MuLäroplans-Träden' **(!!)
-LINSYS: debbib
-  Blue + Scoll.  +Analog Synth.  Nyq, Csound, Scoll  muHask*(*), Midi  @  Chuck
-Abe Kotlin
-
-  Flutter+Dart    @
-    WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
+WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
   wappdev.js eloquent.js  +h5g / three.js (w.gamedev)
     Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
-
+Abe Kotlin  ¤¤
+(gimp etc) C Py Scm (!!)  ¤¤¤
+Anki  ¤¤¤
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+Datasci@ + Pandas[!!] @Webscrape ¤¤¤ / @GoogleHacks
+refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤
+@xsane, font(forge)/Scribus  ¤¤¤
+    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
+    Mojo  ¤¤¤
+    Devops, CI @  ¤¤¤
+algos
+        Scribus
+    CSS + Sass/Compass
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/DlangWiki-FunctionalGarden.txt
 ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
     TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
   CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
 ----
-    Maui / AVALONIA  __  ¤¤
+  Flutter+Dart    @
+  GraphQL(!)  # ¤
+    sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤¤¤
+MongoDB Compass  ¤¤¤ / MongoDB Realm  @@  ¤¤(¤)
+  REACT (+Mongo)  ##  _Clean_  ¤¤¤
+Java|Cloj Semantic-Web  ¤¤
+  Devops
+  . {{{
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+  }}}
+  Roslyn (+Analysis|CodeGen)
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
+  }}}
+MidiCpp-Guy[!!]  h5g**  Listking ¤¤¤  jQuery(Cb), FREEC Compl,
+@Greasmonk, ¤¤¤ Ffox-plugins, Nyxt, lynx  pyweb(Pyramid),
+    Xml ¤¤¤ (+xaml, faml, etc)
+@c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips ¤¤¤
 C# DotNet Core MVC + Blazor, Cs Funct 3
     Puppet Lang + Patterns(etc)
     FuncPy  [_Renskriv_]  __  Py/F# SysAdmin  ¤
             Mpv-Docs  Yt-Dlp  ¤
 'linuxcommands core' [=Gemini-Q]  ¤[¤]
-MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _  ¤
-    JuPyter/Polyglot(?) Notebooks (etc)  __  ¤¤
-F# - TOCs + Concepts,  Fabulous (Fable, Suave)  _
+    JuPyter/Polyglot(?) Notebooks (etc)  __  ¤¤¤
+F# - TOCs + Concepts,  Fabulous (Fable, Suave)  ¤¤¤
 
-  Reason + PureScript  ¤¤
+  Reason + PureScript  ¤¤¤ ___onroad=maybye  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
     ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
@@ -489,88 +519,52 @@ F# - TOCs + Concepts,  Fabulous (Fable, Suave)  _
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
     ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
   }}}
-
-Music With JavaScript *  __
+Music With JavaScript ('Coding with Music')*  __ ¤¤¤
+Db:s + Ontologies(!) ¤¤¤
 
 Bash/Dash-Mans  ¤
-XUnit Patts  __  ¤¤
 Roslyn + Analysis/CodeGen  __
-(Veracrypt)  + Puppet  __  ¤¤
+(Veracrypt)  + Puppet  __  ¤¤ {{{
+
+
+
+}}}
     Nix Master
-Devops + Python (+iPy/Xonsh) ; F# Devops  _
+Devops + Python (+iPy/Xonsh) ; F# Devops  _ ¤¤¤
   Vim PyPlugins  __ | VIMSCRIPT (x4)  + Emacs[!!]  _  ¤
-Reason + PureScript  ___onroad=maybye  ¤
- LEARN REACT  [__]  [+=OldNotes 1]    Sass  ¤¤
-
+ LEARN REACT  [__]  [+=OldNotes 1]   Sass  ¤¤
 Docker + Kubernetes + Azure Devops + GithubActions  __
-    Gremlin (+Neptune)  _  ¤
   ----  Anki Redone  (+Vanki Vimtouch 1.0 / VimJutsu)  ¤
-    Arch Linux
+  Arch Linux
+Lyn-Sys + Yocto + C/C++ Embed
 
-Xonsh  _  ¤
+
+    Nsplitdiff (+Soc.Framg)
+    + PShell
+----
+Rx.Net  ¤
+Mojo  TODO:OCR
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
 
-  GraphQL(!)  # ¤
-    sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤¤¤
-    MongoDB Compass / MongoDB Realm  @@  ¤¤(¤)
-  Reason + PureScript  ¤¤
-Java|Cloj Semantic-Web  ¤¤
-Anki  ¤¤¤
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
-  Rx.Net  ¤
-  REACT (+Mongo)  ##  _Clean_  ¤¤
-  Mojo  TODO:OCR
-  Devops
-  . {{{
-    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
-    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
-
-    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
-    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
-  }}}
-  Roslyn (+Analysis|CodeGen)
-  . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
-  }}}
-
-Datasci@ + MLEARN[!!!!] @Webscrape / @GoogleHacks
-  'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
   Git, Github Projects  @GithubDocs @GitActions
 sed (+py/dlang etc)
-refact, legacycode, TDD(etc) @  +C-CppFunct
 
     netrw (**)
         JavaScript Functional
         Elixir, Ocaml
-      [Dlang-proj + PhobosNext|Per Nordl.]
+  [Dlang-proj + PhobosNext|Per Nordl.]
         vlang, Go, Ring
         Cloj. + Java
 (+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
     ----
-        lynx  pyweb,  @Greasmonk
-    Nsplitdiff (+Soc.Framg)
-    Xml (+xaml, faml, etc)
-  @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips
             flux, xmonad, openb, ice, awes
-  Puppet
+  Puppet w. puppet-lang
     --
     Aws(+dynamo), Docker, Kubernetes  CyberSec  @
-  börja kolla quincy l-länkar @  +Stanford etc
-React (FreeCodeCamp)
+börja kolla quincy l-länkar @  +Stanford etc
         Pluralsight, w3school, w3resources
         kotlin/jetpack progr-videos(!!)
-        (gimp etc) Py (!!)
-@xsane, font(forge)/Scribus
-    HTML, HTTP/TCPIP + 'The Web'
-    Mojo
-    Devops, CI @
             PHP + funct.
-algos
-        Scribus
-    CSS + Sass/Compass
-        pyfunct(!) 1+2
-        Bash + Termux (+vim-bash) (etc)
 Linux (Android etc) + Sys-Structure, Sysprogr
     Cypher,
 SparQL
@@ -1016,14 +1010,61 @@ Samsung Notes [!(!)]
 
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
-
     @ = Clean/Focus On
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
     Pegged, Tsv-Utils, Perlstyle-Regex
-SSH
-NuShell
+SSH {{{
+  ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
+}}}
+NuShell  ¤¤¤
+SemWeb + Sparql  ¤¤¤ {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/webdataapi-forknowlgraphs_2021.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/knowlgraphs-linkeddata-largeorgs_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semweb-structdata_2015.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semwebRDFSPARQL.txt
+    . {{{
+            ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebRDFSPARQL--1.txt
+    }}}
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semweb-datamanage-qprocess_2011.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn_2011.txt
+    . {{{
+            ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn.txt
+            ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn--1.txt
+            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql-learn_2011--1.txt
+    }}}
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
+    . {{{
+            ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semanticweb-clojjava.txt
+    }}}
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql.txt
+    . {{{
+            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql--1.txt
+    }}}
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql1.cheats.txt
+    . {{{
+            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql.cheats.txt
+    }}}
+
+https://www.w3.org/TR/2012/REC-owl2-primer-20121211/
+https://en.wikipedia.org/wiki/SPARQL
+https://medium.com/@tokyoyugen/understanding-the-web-ontology-language-owl-a-deep-dive-a46abbcafec1
+    ~/Empire/Doks/Comp/lang/webdev/db/semweb/owl-intro.txt
+Sparql Cheat sheet pdf
+
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/graphdata-semweb-libsguide_2015.txt
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch_2012.txt
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebtechnols-handb_2011.txt
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semantic-web-grundlagen_2008.txt
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebprogr_2009.txt
+        . {{{
+            ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebprogr-or_2009.txt
+        }}}
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/social-semantic-web-web-20-was-nun_2009.txt
+        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch-te_2007.txt
+}}}
+
 
 
 Buckey's Godot
@@ -1035,6 +1076,7 @@ Spectre Console  __ ¤¤
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
 }}}
+
 
 
 ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
@@ -1143,6 +1185,8 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
 
+CSOUND-BOOK
+
   winterminal  ¤ [=profiles, AWS-shell, etc **]
   . {{{
     ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
@@ -1204,11 +1248,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     touch ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt
     ln -s ~/Dropbox/rsc/Doks/phone/Comp/PROGR/test/PropbasedTesting.txt ~/Empire/Doks/Comp/PROGR/test/
   }}}
-  FuncPy  ¤¤¤
-  SSH  ¤¤¤
-  . {{{
-    ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
-  }}}
   py/f# (etc) sysadm  #  ¤¤¤
   . {{{
       PyProgr
@@ -1254,173 +1293,282 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
 
 
-A quick question: Could you help me
-set up and get started with
-Avalonia? What I mean by this is
-that I have been tasked with
-building a GUI for my software-team
-(using C# and related
-technologies), and we would like to
-test Avalonia. I'm using Rider as
-my primary IDE, and I ran into some
-trouble the first time I fiddled
-with it, but that time I tried to
-set up a solution for truly
-platform apps, and I have a hunch
-that if I only focus on Windows
-desktop as a target, things will go
-a lot smoother.
+- A quick question: Could you help
+  me set up and get started with
+  Avalonia? What I mean by this is
+  that I have been tasked with
+  building a GUI for my
+  software-team (using C# and
+  related technologies), and we
+  would like to test Avalonia. I'm
+  using Rider as my primary IDE,
+  and I ran into some trouble the
+  first time I fiddled with it, but
+  that time I tried to set up a
+  solution for truly platform apps,
+  and I have a hunch that if I only
+  focus on Windows desktop as a
+  target, things will go a lot
+  smoother.
 
-Ah, a fellow Rider enthusiast venturing into the world of Avalonia! It's a fantastic choice for building cross-platform .NET GUIs, and even focusing on Windows desktop initially is a smart move to get your feet wet. Let's get you set up and started.
+Ah, a fellow Rider enthusiast
+venturing into the world of
+Avalonia! It's a fantastic choice
+for building cross-platform .NET
+GUIs, and even focusing on Windows
+desktop initially is a smart move
+to get your feet wet. Let's get you
+set up and started.
 
-Here's a step-by-step guide to creating your first Avalonia application targeting Windows Desktop using Rider:
+Here's a step-by-step guide to
+creating your first Avalonia
+application targeting Windows
+Desktop using Rider:
 
-1. Install the Avalonia Rider Plugin (if you haven't already):
+1. Install the Avalonia Rider
+Plugin (if you haven't already):
 
-    Open Rider.
-    Go to File > Settings (or Rider > Preferences on macOS).
-    Navigate to Plugins.
-    In the Marketplace tab, search for "Avalonia UI".
-    Install the Avalonia UI plugin by JetBrains.
-    Restart Rider when prompted. This plugin provides project templates, XAML code completion, and other helpful features.
+- Open Rider.
+- Go to File > Settings (or Rider >
+  Preferences on macOS).
+- Navigate to Plugins.
+- In the Marketplace tab, search
+  for "Avalonia UI".
+- Install the Avalonia UI plugin by
+  JetBrains.
+- Restart Rider when prompted. This
+  plugin provides project
+  templates, XAML code completion,
+  and other helpful features.
 
 2. Create a New Avalonia Project:
 
-    In Rider, click New Solution.
-    In the "New Project" window, look for the Avalonia section in the left-hand menu.
-    Select Avalonia App.
-    Choose a project template. For a basic Windows desktop application, the default Avalonia App template is a good starting point. It will create a cross-platform project, but we'll configure it for Windows specifically in the next steps.
-    Name your project (e.g., MyDesktopApp) and choose a location.
-    Click Create.
+- In Rider, click New Solution.
+- In the "New Project" window, look
+  for the Avalonia section in the
+  left-hand menu.
+- Select Avalonia App.
+- Choose a project template. For a
+  basic Windows desktop
+  application, the default Avalonia
+  App template is a good starting
+  point. It will create a
+  cross-platform project, but we'll
+  configure it for Windows
+  specifically in the next steps.
+- Name your project (e.g.,
+  MyDesktopApp) and choose a
+  location.
+- Click Create.
 
-3. Modify the Project for Windows Desktop Specifics (Optional, but can simplify initial setup):
+3. Modify the Project for Windows
+Desktop Specifics (Optional, but
+can simplify initial setup):
 
-By default, the Avalonia App template targets multiple platforms. To focus solely on Windows Desktop for now, you can adjust the project file (.csproj).
+By default, the Avalonia App
+template targets multiple
+platforms. To focus solely on
+Windows Desktop for now, you can
+adjust the project file (.csproj).
 
-    In the Solution Explorer, find your project file (MyDesktopApp.csproj).
+- In the Solution Explorer, find
+  your project file
+  (MyDesktopApp.csproj).
+- Double-click it to open it in the
+  editor.
+- You'll see a <TargetFrameworks>
+  tag that likely includes net8.0,
+  net8.0-android, net8.0-ios,
+  net8.0-linux, net8.0-macos, and
+  net8.0-windows.
+- For now, simplify this to only
+  target Windows Desktop:
 
-    Double-click it to open it in the editor.
+  <TargetFramework>net8.0-windows</TargetFramework>
 
-    You'll see a <TargetFrameworks> tag that likely includes net8.0, net8.0-android, net8.0-ios, net8.0-linux, net8.0-macos, and net8.0-windows.
+  (Replace net8.0 with your target
+  .NET version if it's different).
 
-    For now, simplify this to only target Windows Desktop:
-    XML
+- Remove the <TargetFrameworks> tag
+  if it exists and replace it with
+  the single <TargetFramework> tag
+  above.
+- Save the csproj file. Rider might
+  prompt you to reload the project;
+  click Yes.
 
-    <TargetFramework>net8.0-windows</TargetFramework>
+  Note: While this simplifies the
+  initial build, remember that one
+  of Avalonia's strengths is
+  cross-platform development. Once
+  you're comfortable, you can
+  easily add other target
+  frameworks back to the project
+  file.
 
-    (Replace net8.0 with your target .NET version if it's different).
+4. Explore the Basic Project
+Structure:
 
-    Remove the <TargetFrameworks> tag if it exists and replace it with the single <TargetFramework> tag above.
+- App.axaml: This file defines the
+  application's resources, styles,
+  and the entry point.
+- App.axaml.cs: This is the
+  code-behind for App.axaml.
+- MainWindow.axaml: This is your
+  main window's XAML file, defining
+  its layout and UI elements.
+- MainWindow.axaml.cs: This is the
+  code-behind for MainWindow.axaml,
+  where you'll handle the logic and
+  interactions for your main
+  window.
+- Program.cs: This is the main
+  entry point of your application.
 
-    Save the csproj file. Rider might prompt you to reload the project; click Yes.
+5. Run Your First Avalonia
+Application:
 
-    Note: While this simplifies the initial build, remember that one of Avalonia's strengths is cross-platform development. Once you're comfortable, you can easily add other target frameworks back to the project file.
-
-4. Explore the Basic Project Structure:
-
-    App.axaml: This file defines the application's resources, styles, and the entry point.
-    App.axaml.cs: This is the code-behind for App.axaml.
-    MainWindow.axaml: This is your main window's XAML file, defining its layout and UI elements.
-    MainWindow.axaml.cs: This is the code-behind for MainWindow.axaml, where you'll handle the logic and interactions for your main window.
-    Program.cs: This is the main entry point of your application.
-
-5. Run Your First Avalonia Application:
-
-    In Rider, ensure your newly created project is selected in the Solution Explorer.
-    Click the Run button (the green triangle) in the toolbar.
-    Rider should build and launch your basic Avalonia application, which will display an empty window (or a window with a default "Welcome to Avalonia!" TextBlock if you used the standard template).
+- In Rider, ensure your newly
+  created project is selected in
+  the Solution Explorer.
+- Click the Run button (the green
+  triangle) in the toolbar.
+- Rider should build and launch
+  your basic Avalonia application,
+  which will display an empty
+  window (or a window with a
+  default "Welcome to Avalonia!"
+  TextBlock if you used the
+  standard template).
 
 6. Start Building Your UI with XAML:
 
-    Open MainWindow.axaml. This is where you'll design your user interface using Avalonia's XAML (Extensible Application Markup Language).
+- Open MainWindow.axaml. This is
+  where you'll design your user
+  interface using Avalonia's XAML
+  (Extensible Application Markup
+  Language).
+- Avalonia's XAML is similar to WPF
+  or UWP XAML, so if you have
+  experience with those, you'll
+  feel somewhat familiar.
+- Example: Replace the content of
+  the <Window> tag in
+  MainWindow.axaml with the
+  following simple layout:
 
-    Avalonia's XAML is similar to WPF or UWP XAML, so if you have experience with those, you'll feel somewhat familiar.
+  <Window xmlns="https://github.com/avaloniaui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+          x:Class="MyDesktopApp.MainWindow"
+          Title="My First Avalonia App">
 
-    Example: Replace the content of the <Window> tag in MainWindow.axaml with the following simple layout:
-    XML
+      <StackPanel Margin="20">
+          <TextBlock Text="Welcome to Avalonia on Windows Desktop!" FontSize="20" FontWeight="Bold" />
+          <Button Content="Click Me!" Click="ButtonClick" Margin="0,10,0,0" />
+          <TextBlock x:Name="OutputText" Text="" Margin="0,10,0,0" />
+      </StackPanel>
 
-    <Window xmlns="https://github.com/avaloniaui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-            mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-            x:Class="MyDesktopApp.MainWindow"
-            Title="My First Avalonia App">
+  </Window>
 
-        <StackPanel Margin="20">
-            <TextBlock Text="Welcome to Avalonia on Windows Desktop!" FontSize="20" FontWeight="Bold" />
-            <Button Content="Click Me!" Click="ButtonClick" Margin="0,10,0,0" />
-            <TextBlock x:Name="OutputText" Text="" Margin="0,10,0,0" />
-        </StackPanel>
-
-    </Window>
-
-    Save MainWindow.axaml.
+- Save MainWindow.axaml.
 
 7. Add Code-Behind Logic (C#):
 
-    Open MainWindow.axaml.cs.
+- Open MainWindow.axaml.cs.
+- Add the ButtonClick event handler
+  for the button we defined in the
+  XAML:
 
-    Add the ButtonClick event handler for the button we defined in the XAML:
-    C#
+  using Avalonia.Controls;
+  using Avalonia.Interactivity;
 
-    using Avalonia.Controls;
-    using Avalonia.Interactivity;
+  namespace MyDesktopApp {
+    public partial class MainWindow : Window {
+      private TextBlock OutputText;
 
-    namespace MyDesktopApp
-    {
-        public partial class MainWindow : Window
-        {
-            private TextBlock OutputText;
+      public MainWindow() {
+        InitializeComponent();
+        OutputText = this.FindControl<TextBlock>("OutputText");
+      }
 
-            public MainWindow()
-            {
-                InitializeComponent();
-                OutputText = this.FindControl<TextBlock>("OutputText");
-            }
-
-            private void ButtonClick(object sender, RoutedEventArgs e)
-            {
-                OutputText.Text = "Button clicked!";
-            }
-        }
+      private void ButtonClick(object sender, RoutedEventArgs e) {
+        OutputText.Text = "Button clicked!";
+      }
     }
+  }
 
-    Save MainWindow.axaml.cs.
+- Save MainWindow.axaml.cs.
 
 8. Run the Application Again:
 
-    Click the Run button in Rider. You should now see a window with a "Welcome" text, a button, and when you click the button, the "OutputText" TextBlock will update.
+- Click the Run button in Rider.
+  You should now see a window with
+  a "Welcome" text, a button, and
+  when you click the button, the
+  "OutputText" TextBlock will
+  update.
 
-Troubleshooting Tips for Rider and Avalonia:
 
-    Ensure the Avalonia Plugin is Enabled: Double-check in Rider's settings that the Avalonia UI plugin is installed and enabled. Sometimes, a restart of Rider is necessary after installing a plugin.
-    Check Project Dependencies: Look at the "Dependencies" section in your Solution Explorer. You should see the core Avalonia NuGet packages (e.g., Avalonia.Desktop, Avalonia). If they are missing or have errors, try restoring NuGet packages (Right-click on the solution > Restore NuGet Packages).
-    XAML Errors: Rider usually provides good error highlighting in the XAML editor. Pay close attention to any red squiggly lines, which often indicate syntax errors or missing namespaces.
-    Build Errors: Check the "Build" output in Rider for any compilation errors in your C# code.
-    Target Framework: Make sure your project's target framework in the .csproj file is correctly set to net8.0-windows (or your desired .NET version for Windows).
-    Clean and Rebuild: If you encounter strange issues, try cleaning your solution (Build > Clean Solution) and then rebuilding it (Build > Rebuild Solution).
-    Restart Rider: Sometimes, a simple restart of Rider can resolve temporary glitches.
+Troubleshooting Tips for Rider and Avalonia:  ___hm_eng
 
-By following these steps, you should be able to successfully set up and run your first Avalonia application targeting Windows Desktop in Rider. From here, you can start exploring the vast array of Avalonia controls, layout panels, data binding, styling, and more to build the GUI your team needs. Good luck, and don't hesitate to ask if you run into further questions!
+- Ensure the Avalonia Plugin is
+  Enabled: Double-check in Rider's
+  settings that the Avalonia UI
+  plugin is installed and enabled.
+  Sometimes, a restart of Rider is
+  necessary after installing a
+  plugin.
+- Check Project Dependencies: Look
+  at the "Dependencies" section in
+  your Solution Explorer. You
+  should see the core Avalonia
+  NuGet packages (e.g.,
+  Avalonia.Desktop, Avalonia). If
+  they are missing or have errors,
+  try restoring NuGet packages
+  (Right-click on the solution >
+  Restore NuGet Packages).
+- XAML Errors: Rider usually
+  provides good error highlighting
+  in the XAML editor. Pay close
+  attention to any red squiggly
+  lines, which often indicate
+  syntax errors or missing
+  namespaces.
+- Build Errors: Check the "Build"
+  output in Rider for any
+  compilation errors in your C#
+  code.
+- Target Framework: Make sure your
+  project's target framework in the
+  .csproj file is correctly set to
+  net8.0-windows (or your desired
+  .NET version for Windows).
+- Clean and Rebuild: If you
+  encounter strange issues, try
+  cleaning your solution (Build >
+  Clean Solution) and then
+  rebuilding it (Build > Rebuild
+  Solution).
+- Restart Rider: Sometimes, a
+  simple restart of Rider can
+  resolve temporary glitches.
 
-Very nice, and I will test it VERY shortly. Just a quick side-question when it comes to modding Morrowind with OpenMW and Lua: Could you give me some more detail on how to get started, i.e. things like 'To test this, make sure you have these config-files in these places. Start up a new Lua-file and try out by putting this stuff in the file. Then call it by doing this'. Are you with me?
-
-Yes, I'm absolutely with you! You want a practical, step-by-step guide to writing and testing your first OpenMW Lua script. Let's break it down:
-
-1. Setting Up Your OpenMW Configuration:
-
-First, you need to ensure OpenMW is set up to recognize your custom content, including Lua scripts.
-
-    openmw.cfg File: This is the main configuration file for OpenMW. You'll need to locate it. The location varies depending on your operating system:
-        Linux: Usually in ~/.config/openmw/openmw.cfg
-        Windows: Typically in C:\Users\<YourUsername>\Documents\My Games\OpenMW\openmw.cfg
-        macOS: Often in ~/.config/openmw/openmw.cfg
-
-    Adding Your Custom Data Directory: You'll want a dedicated directory for your mod files, including Lua scripts. Let's create one. For example, in your home directory, create a folder named OpenMWMods/MyFirstLuaMod.
-
-    Editing openmw.cfg: Open openmw.cfg with a text editor. Look for the data= lines. You need to add a line pointing to your new mod
-
+By following these steps, you
+should be able to successfully set
+up and run your first Avalonia
+application targeting Windows
+Desktop in Rider. From here, you
+can start exploring the vast array
+of Avalonia controls, layout
+panels, data binding, styling, and
+more to build the GUI your team
+needs. Good luck, and don't
+hesitate to ask if you run into
+further questions!
 
   }}}
   NuShell  _  ¤¤(¤)
