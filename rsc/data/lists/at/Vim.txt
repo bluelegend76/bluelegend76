@@ -17334,7 +17334,38 @@ Mappable Characters + "follow my leader" {{{
 Ptools 2022+ {{{
 ___ptools
 
+clip/copy/export/redirect vim output to clipboard/file {{{
 
+Ah, a practical need! You can definitely do that directly within Vim. Here are a couple of simple ways to get that list into your other text file:
+
+Method 1: Using the Clipboard
+
+This is probably the quickest for pasting into another open file.
+
+    Run the :ls command in Vim.
+    Select the output of :ls with your mouse.
+    Copy the selected text to your clipboard (usually Ctrl+C on Windows/Linux, Cmd+C on macOS).
+    Switch to your other text file in Vim and paste (usually Ctrl+V on Windows/Linux, Cmd+V on macOS)
+
+
+Method 2: Redirecting the Output to a Temporary File
+
+This is useful if you want to save the list for later or if the clipboard method isn't working as expected.
+
+    Run the following command in Vim:
+    Vim Script
+
+    :redir! > /tmp/open_files.txt | silent ls | redir END
+
+        :redir! > /tmp/open_files.txt: This redirects all subsequent command output to a new file named open_files.txt in the /tmp directory. The ! overwrites the file if it already exists. Feel free to change the path and filename if you prefer.
+        silent ls: This executes the :ls command, and silent prevents the :ls output from also appearing in your Vim command line.
+        redir END: This stops the redirection of command output.
+    Open the /tmp/open_files.txt file (or your chosen path) in Vim using :edit /tmp/open_files.txt.
+    You can then copy the contents of this file and paste them into your other text file.
+
+Either of these methods should get that list of open files into your other text file for logging! Let me know if you have any other Vim wrangling you need assistance with.
+
+}}}
 GVim Windows (Fonts, Actions) {{{
 
   if has("gui_running")

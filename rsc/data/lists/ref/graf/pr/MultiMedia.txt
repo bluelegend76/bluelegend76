@@ -37,10 +37,10 @@ Anki
                             .
                         ----
 
-Reveal.js  (@@)
+    Reveal.js  (@@)
                 ----
                 .
-impress.js
+    impress.js
                 ----
                 .
 

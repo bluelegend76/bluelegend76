@@ -1,5 +1,5 @@
 vim:fdm=indent:fdl=2:
-set fdm=indent fdl=2
+set fdm=indent fdl=2 syn=lua
 
 ~/Dropbox/rsc/data/lists/ref/comp/lang/lua/vlc_lua.txt  TODO(=input all module methods) !!
 
@@ -2760,7 +2760,7 @@ https://www.lua.org/manual/5.3/
             
 
 derek banas lua
-            ~/Empire/rsc/code/lua/test.lua
+            ~/Empire/rsc/code/lua/test.lua "
 
             Cheat Sheet From the Video
             -- Prints to the screen (Can end with semicolon)

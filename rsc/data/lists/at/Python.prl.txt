@@ -10,14 +10,15 @@ Ref-doks to add to 'Dashboard Startup' {{{
 ##   starts with cb:s
 
 ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/PyStdLib.txt
-~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/PyPackagesIndex-pypi.txt
+  ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/pystdlib3.txt
 
 ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/lpy01.ref.txt
 ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/lpy03-09.reviewcmp.ref.txt
 ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/lpy03-09.reviewcmp.txt
 
+~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/PyPackagesIndex-pypi.txt
 
-  ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/pystdlib3.txt
+
 ~/RiderProjects/bluelegend76/rsc/data/lists/ref/comp/lang/py/pyessref-beaz.txt
   ## ~/Empire/Doks/Comp/lang/py/pylibs-shoulduse.txt
     # ~/Empire/Doks/Comp/lang/py/ref/pyessref-bea.pdf

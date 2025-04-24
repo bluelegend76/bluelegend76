@@ -835,7 +835,7 @@ bcb (**(!))
 
                     Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
 
-arch tracker + tinysparql
+arch tracker/localsearch + tinysparql
                         ___gnometracker_sparql
                         - Great! Another question: Could
                           you give me a VERY quick overview

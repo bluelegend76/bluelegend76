@@ -8,7 +8,93 @@ Obsidian
                         ~/Dropbox/rsc/Doks/phone/Comp/pr/Obsidian.txt
                             ~/Dropbox/Udt/rsc/data/lists/
                         ~/Empire/Doks/Comp/lang/markup/MD/md-obsidian.txt
+
 Pandoc
+                            A quick question: Could you give me some direction on what pandoc can be used for, and what I'm thinking specifically of is other uses than the of course obvious, namely converting between different formats?
+
+                            That's a great question! While Pandoc is indeed the go-to tool for converting between a vast array of document formats, its capabilities extend far beyond simple format shifting. Here are some other interesting uses of Pandoc:  
+
+                            1. Document Generation and Automation:
+
+                                Creating multiple output formats from a single source: Write your document (e.g., in Markdown) once and use Pandoc to generate a PDF, HTML website, Word document, EPUB book, or even slides (Beamer, PowerPoint, etc.) without needing to reformat everything manually. This is incredibly useful for creating consistent content across different platforms or for different audiences.
+                                    Example: You could write lecture notes in Markdown and then generate both a nicely formatted PDF for printing and an HTML version for your course website.   
+
+                             
+                            Automated publishing workflows: Pandoc can be integrated into scripts and Makefiles to automate document generation as part of a larger workflow. For instance, you could automatically rebuild your website or documentation whenever the source files are updated.
+
+                                Example: A script could monitor a directory for changes in Markdown files and automatically convert them to HTML and update the website.
+
+                             
+                            Generating reports from data: With the help of filters (see below), you can process data (e.g., from CSV files) and generate formatted reports in various output formats.
+
+                                Example: You could have a CSV file with sales figures and use a Pandoc filter to create a well-structured report in LaTeX or a simple HTML table.
+
+                             
+
+                            2. Content Manipulation and Transformation:
+
+                                Applying filters to modify content: Pandoc has a powerful filter system that allows you to write scripts (in Lua, Python, etc.) to manipulate the abstract syntax tree (AST) of the document during conversion. This opens up a wide range of possibilities:
+                                    Cross-referencing: Automatically number and create links to figures, tables, and equations. Tools like pandoc-crossref leverage this.   
+
+                            Citation processing: Manage and format citations and bibliographies according to various styles. pandoc-citeproc is a prime example.  
+                            Including content conditionally: Implement logic to include or exclude certain parts of the document based on variables or conditions.
+                            Generating diagrams: Embed diagrams described in textual formats (like Mermaid or Graphviz) directly into your documents.  
+
+                                Custom formatting: Apply specific formatting rules that might not be directly supported by the input or output format.
+
+                             
+                            Working with document metadata: Pandoc can read and process metadata embedded in your documents (e.g., in YAML frontmatter in Markdown). You can use this metadata to control the output (e.g., setting the title, author, date) or pass it to filters for further processing.
+
+                                Example: You could define a documentclass field in your Markdown metadata and have a filter use that to select a specific LaTeX document class during PDF generation.
+
+                             
+
+                                Creating document diffs: Tools like pandiff use Pandoc to create meaningful, prose-aware diffs between different versions of documents, even if they are in different formats.
+
+                            3. Academic and Scholarly Writing:
+
+                                Simplified authoring in preferred formats: Researchers can write in Markdown (which is less visually distracting than LaTeX) and then use Pandoc to generate the required LaTeX or PDF for submission.   
+
+                            Consistent bibliographies: Pandoc's citation management ensures consistent formatting of citations and bibliographies across different output formats and journal styles.  
+                            Generating presentations with embedded code and equations: Create dynamic presentations (e.g., using Beamer or reveal.js) from Markdown that can include LaTeX math and syntax-highlighted code.  
+
+                            4. Web Development:
+
+                                Generating static websites: Pandoc can be used to convert Markdown files into well-structured HTML pages, making it a simple static site generator, especially for smaller websites or documentation.
+                                Converting rich text from the web: You can often grab HTML content from websites and convert it to a cleaner Markdown format for editing or archiving.
+
+                            In essence, Pandoc is more than just a translator; it's a powerful tool for document manipulation, automation, and content workflow. Its flexibility, especially through the use of filters and metadata, allows you to adapt it to a wide variety of tasks beyond simple format conversion. If you have specific content processing needs in mind, exploring Pandoc's filter capabilities is highly recommended!   
+                            -----
+                            Nice! Another quick question: I'm thinking of an approach for me to learn more about Context (i.e. the document production format - similar to LaTeX), and since Pandoc can handle conversion between so many different formats, could one approach be to write my documents in Markdown and then convert them to Context (if Pandoc can convert into that format of course), as a way of teaching myself a bit more about Context. + By the way, can Pandoc convert from LaTeX to Context as well?
+
+                            Absolutely! Here's how you can leverage Pandoc and Markdown to learn about ConTeXt:
+
+                            Pandoc Supports Context Output:
+                            Great news! Pandoc indeed supports conversion to ConTeXt (.tex) format. You can use the -t context option to specify the output format as ConTeXt.
+
+                            Learning Through Conversion:
+                            Writing your documents in Markdown and then converting them to ConTeXt using Pandoc can be a valuable learning approach. Here's how:
+
+                            Start with Markdown: Write your document in Markdown, taking advantage of its simplicity and ease of use.
+                            Convert to ConTeXt: Use the following command to convert your Markdown file (e.g., document.md) to ConTeXt (e.g., document.tex):
+                            Bash
+                            pandoc document.md -t context -o document.tex
+                            Examine the ConTeXt Code: Open the generated document.tex file. This file will contain the ConTeXt code representing your Markdown document. You can then:
+                            Analyze the code structure: This will give you insights into how ConTeXt achieves formatting and layout.
+                            Research specific elements: Look up unfamiliar ConTeXt commands and syntax online to understand their functionalities.
+                            Compare with Markdown: Compare the Markdown syntax you used with the corresponding ConTeXt code to see how they translate into typesetting instructions.
+                            Additional Tips:
+
+                            Start Simple: Begin with basic Markdown elements like headings, paragraphs, and bold/italics. Observe how ConTeXt translates these elements.
+                            Gradually Increase Complexity: As you get comfortable, introduce more advanced Markdown features like tables, code blocks, and images. Analyze how ConTeXt handles these elements.
+                            Explore Resources: Complement your learning by exploring online resources like the ConTeXt Wiki (https://en.wikipedia.org/wiki/Context) and official documentation (https://tug.org/pracjourn/2005-2/peter/).
+                            Pandoc and LaTeX Conversion:
+                            Yes, Pandoc also supports conversion between LaTeX and ConTeXt. You can use the -t context option to convert a LaTeX document (.tex) to ConTeXt format.
+
+                            Overall, using Pandoc as a bridge between Markdown and ConTeXt can be a valuable way to learn the intricacies of ConTeXt and its approach to document creation.
+                            -----
+
+----
 Reveal.js ____
                     ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
                     ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
