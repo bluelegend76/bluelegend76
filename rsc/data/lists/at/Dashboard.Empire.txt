@@ -13,6 +13,12 @@ Vanki LearnQna ----
 
 ~/Desktop/Scratch.txt
 
+PROGR ----
+  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
+Clangs (C, Cpp, CSharp, Dlang) ----
+  cppDlang.prl.txt
+Web/Mobile/Cloud ----
+
 
     ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
 ~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
@@ -35,8 +41,6 @@ markdown etc:
 scripting / Web ----  TODO: HTML, CSS, ETC
     gvim -p ../ref/comp/cb/pycb.txt ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
     Python.prl.txt
-Clangs (c, cpp, dlang):
-    cppDlang.prl.txt
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
 FUNCT =LISP, F#, ML, ...:
@@ -45,11 +49,28 @@ Db:
   gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
 
 
+    'ful som stryk'
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  // maybe add 'främord' etc
+
+
+Langs1 Ref-lists ----  __
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  --
+  ~/gdrive/rsc/media/pic-graphics/shorth/
 
 LANG-DB 1:
   gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
+LangsDb.legacy ----
+  gvim -p ../ref/lang/dandict2mini.txt ../../db/langdb.legacy.list/langdb.txt
+                                                   ^
+                                                   |
+  or LangDb1.list.txt -----------------------------+
+  [+charAlfa]
+  . {{{
+    mada, wareware (no), sore de
+  }}}
 
 }}}
 
@@ -290,28 +311,7 @@ mpv --start=00:13:00 --speed=1.65 ~/Video/Peter-L-20250227_102445.mp4 ~/Video/Pe
 
 Keyboard Shortcuts.Db1(...) ----
     .
-PROGR ----
-  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
-Clangs (C, Cpp, CSharp, Dlang) ----
-  TODO: INCLUDE INTO BLUELEGEND76
-  TODO --"--
-Web/Mobile/Cloud ----
 
-    'ful som stryk'
-Langs1 Ref-lists ----  __
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-  // maybe add 'främord' etc
-  --
-  ~/gdrive/rsc/media/pic-graphics/shorth/
-LangsDb.legacy ----
-  gvim -p ../ref/lang/dandict2mini.txt ../../db/langdb.legacy.list/langdb.txt
-                                                   ^
-                                                   |
-  or LangDb1.list.txt -----------------------------+
-  [+charAlfa]
-  . {{{
-    mada, wareware (no), sore de
-  }}}
 
 ~/gdrive/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
 
@@ -412,37 +412,148 @@ dft curr 2023 {{{
     }}}
 
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
-\v\@([^ ]?)+
+    \v\@([^ ]?)+
 
-V I M  +  E M A C S
+Termux  __  @@  ¤¤¤
+Vimscripting (+Elisp Startwith)
+    + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
+Obsidian __ @  MLEARN**(+)  ¤¤¤
+----
+JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
+Py/F# Sysadm. + Devops[!!]  ¤¤¤
+datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
+FuncPy  ¤¤¤
+    Lua (OpenMw, Mpv, NeoVim)
+Bcb, Bluebash  ¤¤  + PShell,  ASM 1 (+binalys)  ¤
 
-    Gremlin + Neptune
-        'MuLäroplans-Träden' **(!!)
-        ----
-        netrw (**)
+Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)   @@
+REVEAL, IMPRESS  __ ¤¤¤
+    Latex Beamer
+.  tracker/localsearch + Sparql
+    winterminal  ¤ [=profiles, AWS-shell, etc **]
+Android Scripting [+Rclone] ¤¤¤
+    ASP.NET CORE MVC __ (++Web APIs)  ¤¤
+  + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
+AVALONIA  ¤¤(¤)
+    XUnit, Cpp Gtest + 'Prop.based Testing'  ¤¤
+Dlang [Ali, +Learning, Cb]
+SSH  ¤¤¤
+NuShell  _  ¤¤(¤)
+    Xonshell  __  ¤
+Bash/Dash-Mans {{{
+    Bluebash, Bcb, ....
+        Rute, ABSG, ....
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
+  }}}
+Mpv-Docs  ¤¤ | Yt-Downl
+
+Gremlin + Neptune
+  'MuLäroplans-Träden' **(!!)
+LINSYS: debbib
+  Blue + Scoll.  +Analog Synth.  Nyq, Csound, Scoll  muHask*(*), Midi  @  Chuck
+Abe Kotlin
+
+  Flutter+Dart    @
+    WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
+  wappdev.js eloquent.js  +h5g / three.js (w.gamedev)
+    Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/DlangWiki-FunctionalGarden.txt
+ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
+    TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
+  CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
+----
+    Maui / AVALONIA  __  ¤¤
+C# DotNet Core MVC + Blazor, Cs Funct 3
+    Puppet Lang + Patterns(etc)
+    FuncPy  [_Renskriv_]  __  Py/F# SysAdmin  ¤
+            Mpv-Docs  Yt-Dlp  ¤
+'linuxcommands core' [=Gemini-Q]  ¤[¤]
+MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _  ¤
+    JuPyter/Polyglot(?) Notebooks (etc)  __  ¤¤
+F# - TOCs + Concepts,  Fabulous (Fable, Suave)  _
+
+  Reason + PureScript  ¤¤
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/ReasonRescriptBuckle-Docs.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/bucklescript-cb.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml-qsguide_2019.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml2.txt
+
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-functweb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-lenses_2018.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-functweb_2017.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
+    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
+  }}}
+
+Music With JavaScript *  __
+
+Bash/Dash-Mans  ¤
+XUnit Patts  __  ¤¤
+Roslyn + Analysis/CodeGen  __
+(Veracrypt)  + Puppet  __  ¤¤
+    Nix Master
+Devops + Python (+iPy/Xonsh) ; F# Devops  _
+  Vim PyPlugins  __ | VIMSCRIPT (x4)  + Emacs[!!]  _  ¤
+Reason + PureScript  ___onroad=maybye  ¤
+ LEARN REACT  [__]  [+=OldNotes 1]    Sass  ¤¤
+
+Docker + Kubernetes + Azure Devops + GithubActions  __
+    Gremlin (+Neptune)  _  ¤
+  ----  Anki Redone  (+Vanki Vimtouch 1.0 / VimJutsu)  ¤
+    Arch Linux
+
+Xonsh  _  ¤
+    Choco (+Puppet) + PowerShell (+AutoHotKeys)
+
+  GraphQL(!)  # ¤
+    sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤¤¤
+    MongoDB Compass / MongoDB Realm  @@  ¤¤(¤)
+  Reason + PureScript  ¤¤
+Java|Cloj Semantic-Web  ¤¤
+Anki  ¤¤¤
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+  Rx.Net  ¤
+  REACT (+Mongo)  ##  _Clean_  ¤¤
+  Mojo  TODO:OCR
+  Devops
+  . {{{
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+  }}}
+  Roslyn (+Analysis|CodeGen)
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
+  }}}
+
+Datasci@ + MLEARN[!!!!] @Webscrape / @GoogleHacks
+  'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
+  Git, Github Projects  @GithubDocs @GitActions
+sed (+py/dlang etc)
+refact, legacycode, TDD(etc) @  +C-CppFunct
+
+    netrw (**)
         JavaScript Functional
-        Elixir, Ocaml, F# DomainModeling
-    Abe Kotlin
-Py/F# Sysadm. + Devops[!!]
+        Elixir, Ocaml
       [Dlang-proj + PhobosNext|Per Nordl.]
         vlang, Go, Ring
         Cloj. + Java
-  datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
-              (+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
+(+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
     ----
-LINSYS:  debbib
-Blue + Scoll.  +Analog Synth.
         lynx  pyweb,  @Greasmonk
     Nsplitdiff (+Soc.Framg)
-Nushell
-        Git, Github Projects  @GithubDocs @GitActions
-Datasci@ + MLEARN[!!!!] @Webscrape / @GoogleHacks
     Xml (+xaml, faml, etc)
-  'Coding with Music'  MidiCpp-Guy[!!]  h5g**  Listking   jQuery(Cb), FREEC Compl,
-  refact, legacycode, TDD(etc) @  +C-CppFunct
   @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips
             flux, xmonad, openb, ice, awes
-        sed (+py/dlang etc)
+  Puppet
     --
     Aws(+dynamo), Docker, Kubernetes  CyberSec  @
   börja kolla quincy l-länkar @  +Stanford etc
@@ -457,14 +568,13 @@ React (FreeCodeCamp)
             PHP + funct.
 algos
         Scribus
-    CSS + Compass
+    CSS + Sass/Compass
         pyfunct(!) 1+2
         Bash + Termux (+vim-bash) (etc)
 Linux (Android etc) + Sys-Structure, Sysprogr
     Cypher,
 SparQL
     Pshell + Choco
-Inkscape (+Rita och skriva för Online-Undervisning  @@
 - websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
         Audacity
 @AnlSynthesis + Midi@ + Keyb.Synths
@@ -496,15 +606,8 @@ Samsung Notes [!(!)]
         ~/Dropbox/rsc/data/lists/learnqna/vanki/lynx.txt
   HCJP-5e  
   C (modern, hardway, etc) + Lin(etc) sysArchit. **  @@
-    Dlang [Ali, +Learning, Cb]
-    Flutter+Dart    @
     Elixir(**!)     @
     C# + 'ciss' (etc)     F#(??)
-    WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
-  wappdev.js eloquent.js
-  +h5g / three.js (w.gamedev)
-    Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
-    Nyq, Csound, Scoll  muHask*(*), Midi  @  Chuck
     SICP (etc, ...)   @
   JFx(!) + Clj   @
     --
@@ -591,7 +694,7 @@ Samsung Notes [!(!)]
               2022-04-19 ti - 20.15: Vaccin-dos 2 (!!)
                 Bollen + Sty.trän.
                 Samsung Notes(!(!))
-                NextCloud(!! Puh)   (Obsidian??)
+                NextCloud(!! Puh)
                 PROGRAMMING 'Concepts of Prl' + Algos + HTDP/SICP + Softw.Design + 'Beaut./Pragm/Clean-x3' + 'Mozart'-book
                 GameDev(*) (=agk++ (**)) (Unity, React 4, agk(), Godot, ..)
                 - PyAux (=PyProgr + Lib  +  blendpy, stats, datasci, (etc etc))  @@
@@ -914,59 +1017,29 @@ Samsung Notes [!(!)]
 ---- Win-Overview =x3 ----
 Office.Rush [1]  # rush through + take review/notes {{{
 
-@ = Clean/Focus On
+    @ = Clean/Focus On
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
-            Pegged, Tsv-Utils, Perlstyle-Regex
-            ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/DlangWiki-FunctionalGarden.txt
-    ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
-TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
-  CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
-----
-Maui / AVALONIA  __  ¤¤
-C# DotNet Core MVC + Blazor, Cs Funct 3
-    ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/dotnet/DnFramew_p34.txt
-    Puppet Lang + Patterns(etc)
-    FuncPy  [_Renskriv_]  __  Py/F# SysAdmin  ¤
-    Nushell, Xonsh  _  ¤
-    Choco (+Puppet) + PowerShell (+AutoHotKeys)
-            Mpv-Docs  Yt-Dlp  ¤
-'linuxcommands core' [=Gemini-Q]  ¤[¤]
-MLEARN: FIRST DOKS  + formulas w. Obsidian Md/Latex[!!]  _  ¤
-    JuPyter/Polyglot(?) Notebooks (etc)  __  ¤¤
-F# - TOCs + Concepts,  Fabulous (Fable, Suave)  _
-Bash/Dash-Mans  ¤
-XUnit Patts  __  ¤¤
-Roslyn + Analysis/CodeGen  __
-SSH (Veracrypt)  + Puppet  __  ¤¤
-    Nix Master
-Devops + Python (+iPy/Xonsh) ; F# Devops  _
-  Vim PyPlugins  __ | VIMSCRIPT (x4)  + Emacs[!!]  _  ¤
-Reason + PureScript  ___onroad=maybye  ¤
- LEARN REACT  [__]  [+=OldNotes 1]    Sass  ¤¤
+    Pegged, Tsv-Utils, Perlstyle-Regex
+SSH
+NuShell
 
-Bcb, Bluebash  ¤¤  + PShell,  ASM 1 (+binalys)  ¤
-Docker + Kubernetes + Azure Devops + GithubActions  __
-    Gremlin (+Neptune)  _  ¤
-  ----  Anki Redone  (+Vanki Vimtouch 1.0 / VimJutsu)  ¤
-    Arch Linux
 
-Music With JavaScript *  __
 Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
 }}}
 office.Overview [2]  # write summary|overview {{{
 
-~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
-
-cd ~/Dropbox/Udt/rsc/data/lists/Tagged/
-Uman, PRACT-VIM, Vim-Tips  ¤¤¤
-    Reveal.js|Impress.js  __ ¤¤¤
 Spectre Console  __ ¤¤
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
 }}}
+
+
+~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
+Uman, PRACT-VIM, Vim-Tips  ¤¤¤
+    Reveal.js|Impress.js  __ ¤¤¤
   iPython(*)
   Xonsh
   CsRx 3, Rx.Net;  Csharp Tips (etc)
@@ -1077,32 +1150,15 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   ----
     REVEAL, IMPRESS  __ ¤¤¤
     . {{{
-  ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
-  ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
-
-      Docs:
-      ~/Dropbox/rsc/Doks/phone/graf/anim/revealjs.txt
-      ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags1.txt
-      ~/gdrive/rsc/Doks/taskuj/mmedia/present/revealjs.Tags1.txt
-
-      Intro-Book:
-          ~/Empire/Doks/Comp/lang/webdev/js/present/js-reveal.pdf
-
-      ~/Empire/Doks/Comp/lang/webdev/js/present/md2revealjs-withpandoc.pdf
-      ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.txt
-          ~/gdrive/rsc/data/lists/ref/comp/lang/webdev/js/revealjs-tutorial.pdf
-
       ~/Dropbox/Udt/rsc/doks/graf/present/impress/imprjs.txt
-      --
-      cp ~/Empire/graf/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
-      cp ~/Empire/graf/pr/imprjs.txt ~/Dropbox/Udt/rsc/doks/graf/present/impress/
             ~/Empire/Comp/lang/webdev/imprjs_aux.txt
             ~/Empire/Comp/lang/webdev/js/present/imprjs.txt
     }}}
-  android scripting [Termux + Rclone] ¤¤¤
+  android scripting [Rclone] ¤¤¤
   . {{{
     ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
   }}}
+  Termux  __  @@  ¤¤¤
   ASP.NET CORE MVC __ (++Web APIs)  ¤¤
   . {{{
     gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
@@ -1184,7 +1240,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
   }}}
-  Termux  __  @@  ¤¤
   Mpv-Docs  ¤¤ | Yt-Downl
   . {{{
     ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
@@ -1197,6 +1252,176 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/gdrive/rsc/Doks/taskuj/LIA2/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
     ~/Empire/Doks/Comp/lang/clangs/csharp/gui/xaml-avalonia/Avalonia.txt
+
+
+A quick question: Could you help me
+set up and get started with
+Avalonia? What I mean by this is
+that I have been tasked with
+building a GUI for my software-team
+(using C# and related
+technologies), and we would like to
+test Avalonia. I'm using Rider as
+my primary IDE, and I ran into some
+trouble the first time I fiddled
+with it, but that time I tried to
+set up a solution for truly
+platform apps, and I have a hunch
+that if I only focus on Windows
+desktop as a target, things will go
+a lot smoother.
+
+Ah, a fellow Rider enthusiast venturing into the world of Avalonia! It's a fantastic choice for building cross-platform .NET GUIs, and even focusing on Windows desktop initially is a smart move to get your feet wet. Let's get you set up and started.
+
+Here's a step-by-step guide to creating your first Avalonia application targeting Windows Desktop using Rider:
+
+1. Install the Avalonia Rider Plugin (if you haven't already):
+
+    Open Rider.
+    Go to File > Settings (or Rider > Preferences on macOS).
+    Navigate to Plugins.
+    In the Marketplace tab, search for "Avalonia UI".
+    Install the Avalonia UI plugin by JetBrains.
+    Restart Rider when prompted. This plugin provides project templates, XAML code completion, and other helpful features.
+
+2. Create a New Avalonia Project:
+
+    In Rider, click New Solution.
+    In the "New Project" window, look for the Avalonia section in the left-hand menu.
+    Select Avalonia App.
+    Choose a project template. For a basic Windows desktop application, the default Avalonia App template is a good starting point. It will create a cross-platform project, but we'll configure it for Windows specifically in the next steps.
+    Name your project (e.g., MyDesktopApp) and choose a location.
+    Click Create.
+
+3. Modify the Project for Windows Desktop Specifics (Optional, but can simplify initial setup):
+
+By default, the Avalonia App template targets multiple platforms. To focus solely on Windows Desktop for now, you can adjust the project file (.csproj).
+
+    In the Solution Explorer, find your project file (MyDesktopApp.csproj).
+
+    Double-click it to open it in the editor.
+
+    You'll see a <TargetFrameworks> tag that likely includes net8.0, net8.0-android, net8.0-ios, net8.0-linux, net8.0-macos, and net8.0-windows.
+
+    For now, simplify this to only target Windows Desktop:
+    XML
+
+    <TargetFramework>net8.0-windows</TargetFramework>
+
+    (Replace net8.0 with your target .NET version if it's different).
+
+    Remove the <TargetFrameworks> tag if it exists and replace it with the single <TargetFramework> tag above.
+
+    Save the csproj file. Rider might prompt you to reload the project; click Yes.
+
+    Note: While this simplifies the initial build, remember that one of Avalonia's strengths is cross-platform development. Once you're comfortable, you can easily add other target frameworks back to the project file.
+
+4. Explore the Basic Project Structure:
+
+    App.axaml: This file defines the application's resources, styles, and the entry point.
+    App.axaml.cs: This is the code-behind for App.axaml.
+    MainWindow.axaml: This is your main window's XAML file, defining its layout and UI elements.
+    MainWindow.axaml.cs: This is the code-behind for MainWindow.axaml, where you'll handle the logic and interactions for your main window.
+    Program.cs: This is the main entry point of your application.
+
+5. Run Your First Avalonia Application:
+
+    In Rider, ensure your newly created project is selected in the Solution Explorer.
+    Click the Run button (the green triangle) in the toolbar.
+    Rider should build and launch your basic Avalonia application, which will display an empty window (or a window with a default "Welcome to Avalonia!" TextBlock if you used the standard template).
+
+6. Start Building Your UI with XAML:
+
+    Open MainWindow.axaml. This is where you'll design your user interface using Avalonia's XAML (Extensible Application Markup Language).
+
+    Avalonia's XAML is similar to WPF or UWP XAML, so if you have experience with those, you'll feel somewhat familiar.
+
+    Example: Replace the content of the <Window> tag in MainWindow.axaml with the following simple layout:
+    XML
+
+    <Window xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+            x:Class="MyDesktopApp.MainWindow"
+            Title="My First Avalonia App">
+
+        <StackPanel Margin="20">
+            <TextBlock Text="Welcome to Avalonia on Windows Desktop!" FontSize="20" FontWeight="Bold" />
+            <Button Content="Click Me!" Click="ButtonClick" Margin="0,10,0,0" />
+            <TextBlock x:Name="OutputText" Text="" Margin="0,10,0,0" />
+        </StackPanel>
+
+    </Window>
+
+    Save MainWindow.axaml.
+
+7. Add Code-Behind Logic (C#):
+
+    Open MainWindow.axaml.cs.
+
+    Add the ButtonClick event handler for the button we defined in the XAML:
+    C#
+
+    using Avalonia.Controls;
+    using Avalonia.Interactivity;
+
+    namespace MyDesktopApp
+    {
+        public partial class MainWindow : Window
+        {
+            private TextBlock OutputText;
+
+            public MainWindow()
+            {
+                InitializeComponent();
+                OutputText = this.FindControl<TextBlock>("OutputText");
+            }
+
+            private void ButtonClick(object sender, RoutedEventArgs e)
+            {
+                OutputText.Text = "Button clicked!";
+            }
+        }
+    }
+
+    Save MainWindow.axaml.cs.
+
+8. Run the Application Again:
+
+    Click the Run button in Rider. You should now see a window with a "Welcome" text, a button, and when you click the button, the "OutputText" TextBlock will update.
+
+Troubleshooting Tips for Rider and Avalonia:
+
+    Ensure the Avalonia Plugin is Enabled: Double-check in Rider's settings that the Avalonia UI plugin is installed and enabled. Sometimes, a restart of Rider is necessary after installing a plugin.
+    Check Project Dependencies: Look at the "Dependencies" section in your Solution Explorer. You should see the core Avalonia NuGet packages (e.g., Avalonia.Desktop, Avalonia). If they are missing or have errors, try restoring NuGet packages (Right-click on the solution > Restore NuGet Packages).
+    XAML Errors: Rider usually provides good error highlighting in the XAML editor. Pay close attention to any red squiggly lines, which often indicate syntax errors or missing namespaces.
+    Build Errors: Check the "Build" output in Rider for any compilation errors in your C# code.
+    Target Framework: Make sure your project's target framework in the .csproj file is correctly set to net8.0-windows (or your desired .NET version for Windows).
+    Clean and Rebuild: If you encounter strange issues, try cleaning your solution (Build > Clean Solution) and then rebuilding it (Build > Rebuild Solution).
+    Restart Rider: Sometimes, a simple restart of Rider can resolve temporary glitches.
+
+By following these steps, you should be able to successfully set up and run your first Avalonia application targeting Windows Desktop in Rider. From here, you can start exploring the vast array of Avalonia controls, layout panels, data binding, styling, and more to build the GUI your team needs. Good luck, and don't hesitate to ask if you run into further questions!
+
+Very nice, and I will test it VERY shortly. Just a quick side-question when it comes to modding Morrowind with OpenMW and Lua: Could you give me some more detail on how to get started, i.e. things like 'To test this, make sure you have these config-files in these places. Start up a new Lua-file and try out by putting this stuff in the file. Then call it by doing this'. Are you with me?
+
+Yes, I'm absolutely with you! You want a practical, step-by-step guide to writing and testing your first OpenMW Lua script. Let's break it down:
+
+1. Setting Up Your OpenMW Configuration:
+
+First, you need to ensure OpenMW is set up to recognize your custom content, including Lua scripts.
+
+    openmw.cfg File: This is the main configuration file for OpenMW. You'll need to locate it. The location varies depending on your operating system:
+        Linux: Usually in ~/.config/openmw/openmw.cfg
+        Windows: Typically in C:\Users\<YourUsername>\Documents\My Games\OpenMW\openmw.cfg
+        macOS: Often in ~/.config/openmw/openmw.cfg
+
+    Adding Your Custom Data Directory: You'll want a dedicated directory for your mod files, including Lua scripts. Let's create one. For example, in your home directory, create a folder named OpenMWMods/MyFirstLuaMod.
+
+    Editing openmw.cfg: Open openmw.cfg with a text editor. Look for the data= lines. You need to add a line pointing to your new mod
+
+
   }}}
   NuShell  _  ¤¤(¤)
   Wsl  ¤¤
@@ -1218,21 +1443,6 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
     MongoDB Compass / MongoDB Realm  @@  ¤¤(¤)
     . {{{
     }}}
-  Reason + PureScript  ¤¤
-  . {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml2.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/ReasonRescriptBuckle-Docs.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/bucklescript-cb.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml-qsguide_2019.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/compilesto/reasonml/reasonml2.txt
-
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-functweb_2017.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/pscript/purescript-lenses_2018.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-functweb_2017.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-getstarted.txt
-    ~/Empire/Doks/Comp/lang/webdev/js/pure/purescript-lenses_2018.txt
-  }}}
   Java|Cloj Semantic-Web  ¤¤
   . {{{
     ~/Empire/Doks/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
@@ -10243,6 +10453,1120 @@ Key Takeaways:
     You would then parse the response (typically JSON or XML) to extract the data you need.
 
 Choosing between F# and Clojure often comes down to personal preference regarding syntax, the specific strengths of their respective ecosystems (.NET vs. JVM), and the availability of libraries that directly meet your needs. Both are powerful tools for tackling this kind of data integration task.
+
+
+___tracker_sparql_Arch
+- So I have a fun little task for
+  us: I'm hoping to be able to use
+  the Arch-version of Tracker in
+  tandem with TinySparql to replace
+  (at least for some usages) the
+  Unix find-utility. Could you help
+  me adopt a couple of common
+  use-cases where find may
+  traditionally be utilized (i.e.
+  find 10 largest files, list all
+  files modified yesterday, etc)
+  using Sparql and with
+  programming-language examples in
+  Python, and F#. Could we do that?
+
+This sounds like a fascinating
+project! Leveraging Tracker and
+TinySparql could indeed offer a
+more semantic approach to file
+system queries compared to the
+traditional find utility. Let's
+explore how we can translate some
+common find use cases into SPARQL
+queries and then implement them in
+Python and F#.
+
+First, we need to understand how
+Tracker represents file system
+information. Tracker uses
+ontologies to describe metadata
+about files and directories. Key
+classes and properties you'll
+likely encounter include:
+
+- nfo:FileDataObject: Represents a file.
+- nfo:Directory: Represents a directory.
+- nfo:fileName: The name of the file.
+- nfo:fileSize: The size of the file in bytes.
+- nfo:lastModified: The last modification timestamp of the file.
+- nie:url: The URI (Uniform Resource Identifier) of the file.
+
+You'll need to ensure that Tracker
+is running and has indexed the
+relevant parts of your file system
+for these queries to work.
+TinySparql will then be used to
+query Tracker's data store using
+SPARQL.
+
+Let's tackle your specific use
+cases:
+
+- 1. Find the 10 largest files
+
+SPARQL Query:
+
+SELECT ?uri ?name ?size
+WHERE {
+  ?uri a nfo:FileDataObject ;
+       nfo:fileName ?name ;
+       nfo:fileSize ?size .
+}
+ORDER BY DESC(?size)
+LIMIT 10
+
+This query selects the URI, name,
+and size of all nfo:FileDataObject
+instances (files), orders them in
+descending order based on their
+nfo:fileSize, and then limits the
+result to the top 10.
+
+Python Example:
+
+from SPARQLWrapper import SPARQLWrapper, JSON
+from datetime import datetime, timedelta
+
+# Replace with the actual TinySparql endpoint URL if different
+sparql = SPARQLWrapper("http://localhost:9090/sparql")
+sparql.setQuery("""
+    SELECT ?uri ?name ?size
+    WHERE {
+      ?uri a nfo:FileDataObject ;
+           nfo:fileName ?name ;
+           nfo:fileSize ?size .
+    }
+    ORDER BY DESC(?size)
+    LIMIT 10
+""")
+sparql.setReturnFormat(JSON)
+
+try:
+    results = sparql.query().convert()
+    print("Top 10 Largest Files:")
+    for result in results["results"]["bindings"]:
+        uri = result["uri"]["value"]
+        name = result["name"]["value"]
+        size = int(result["size"]["value"])
+        print(f"- Name: {name}, Size: {size} bytes, URI: {uri}")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+F# Example:
+
+You'll need to add a NuGet package
+for SPARQL-querying, such as
+DotNetRDF.
+
+open VDS.RDF
+open VDS.RDF.Query
+
+// Replace with the actual TinySparql endpoint URL if different
+let sparqlEndpoint = Uri "http://localhost:9090/sparql"
+let queryString = """
+    SELECT ?uri ?name ?size
+    WHERE {
+      ?uri a nfo:FileDataObject ;
+           nfo:fileName ?name ;
+           nfo:fileSize ?size .
+    }
+    ORDER BY DESC(?size)
+    LIMIT 10
+"""
+
+try
+    use client = new SparqlQueryProcessor(new RemoteEndpoint(sparqlEndpoint))
+    let results = client.ProcessQuery(queryString) :?> SparqlResultSet
+
+    printfn "Top 10 Largest Files:"
+    for result in results.Results do
+        let uri = result.GetLiteralValue "uri"
+        let name = result.GetLiteralValue "name"
+        let size = int (result.GetLiteralValue "size")
+        printfn $"- Name: {name}, Size: {size} bytes, URI: {uri}"
+except e ->
+    printfn $"An error occurred: {e.Message}"
+
+2. List all files modified yesterday
+
+To achieve this, we need to work
+with the nfo:lastModified property,
+which stores a timestamp. We'll
+need to construct a SPARQL query
+that filters files based on whether
+their last modified date falls
+within yesterday's date range.
+
+SPARQL Query:
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?uri ?name ?modified
+WHERE {
+  ?uri a nfo:FileDataObject ;
+       nfo:fileName ?name ;
+       nfo:lastModified ?modified .
+  FILTER (?modified >= xsd:dateTime('%yesterday_start%') && ?modified < xsd:dateTime('%today_start%'))
+}
+
+Here, %yesterday_start% and
+%today_start% are placeholders that
+need to be replaced with the
+appropriate ISO 8601 formatted date
+and time for the beginning of
+yesterday and the beginning of
+today, respectively.
+
+Python Example:
+
+from SPARQLWrapper import SPARQLWrapper, JSON
+from datetime import datetime, timedelta
+
+sparql = SPARQLWrapper("http://localhost:9090/sparql")
+
+yesterday = datetime.now().date() - timedelta(days=1)
+today = datetime.now().date()
+
+yesterday_start = yesterday.isoformat() + "T00:00:00Z"
+today_start = today.isoformat() + "T00:00:00Z"
+
+query = f"""
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?uri ?name ?modified
+    WHERE {{
+      ?uri a nfo:FileDataObject ;
+           nfo:fileName ?name ;
+           nfo:lastModified ?modified .
+      FILTER (?modified >= xsd:dateTime('{yesterday_start}') && ?modified < xsd:dateTime('{today_start}'))
+    }}
+"""
+sparql.setQuery(query)
+sparql.setReturnFormat(JSON)
+
+try:
+    results = sparql.query().convert()
+    print(f"Files modified on {yesterday.strftime('%Y-%m-%d')}:")
+    for result in results["results"]["bindings"]:
+        uri = result["uri"]["value"]
+        name = result["name"]["value"]
+        modified = result["modified"]["value"]
+        print(f"- Name: {name}, Modified: {modified}, URI: {uri}")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+F# Example:
+
+open VDS.RDF
+open VDS.RDF.Query
+open System
+
+let sparqlEndpoint = Uri "http://localhost:9090/sparql"
+
+let yesterday = DateTime.Now.Date - TimeSpan.FromDays(1.0)
+let today = DateTime.Now.Date
+
+let yesterdayStart = yesterday.ToString("yyyy-MM-dd") + "T00:00:00Z"
+let todayStart = today.ToString("yyyy-MM-dd") + "T00:00:00Z"
+
+let queryString = sprintf """
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?uri ?name ?modified
+    WHERE {
+      ?uri a nfo:FileDataObject ;
+           nfo:fileName ?name ;
+           nfo:lastModified ?modified .
+      FILTER (?modified >= xsd:dateTime('%s') && ?modified < xsd:dateTime('%s'))
+    }
+""" yesterdayStart todayStart
+
+try
+    use client = new SparqlQueryProcessor(new RemoteEndpoint(sparqlEndpoint))
+    let results = client.ProcessQuery(queryString) :?> SparqlResultSet
+
+    printfn $"Files modified on {yesterday.ToString("yyyy-MM-dd")}:"
+    for result in results.Results do
+        let uri = result.GetLiteralValue "uri"
+        let name = result.GetLiteralValue "name"
+        let modified = result.GetLiteralValue "modified"
+        printfn $"- Name: {name}, Modified: {modified}, URI: {uri}"
+except e ->
+    printfn $"An error occurred: {e.Message}"
+
+General Considerations and Potential Enhancements:
+
+- TinySparql Endpoint: Make sure to
+  replace
+  "http://localhost:9090/sparql"
+  with the actual endpoint URL of
+  your TinySparql instance if it's
+  configured differently.
+- Ontology Variations: The exact
+  properties and classes used by
+  Tracker might slightly vary
+  depending on the version and any
+  extensions. You might need to
+  explore the Tracker ontology to
+  find the most accurate
+  properties. Tools like
+  virtuoso-vad (if you have a
+  Virtuoso instance connected to
+  Tracker) or simply querying for
+  the relevant types and properties
+  can be helpful.
+- Error Handling: The provided code
+  includes basic try...except
+  blocks. You might want to add
+  more robust error handling for
+  network issues, SPARQL query
+  errors, etc.
+- More find Use Cases: You can
+  adapt these examples for other
+  find functionalities:
+  - Finding files by name: Use a
+    FILTER with the regex()
+    function on nfo:fileName.
+  - Finding directories: Query for
+    instances of nfo:Directory.
+  - Finding files of a certain
+    type: Tracker might have
+    properties linking files to
+    their MIME types (e.g., using
+    nie:mimeType). You can filter
+    based on these.
+  - Combining criteria: Use AND and
+    OR within the WHERE clause or
+    FILTER expressions to combine
+    multiple conditions.
+- Performance: For very large file
+  systems, the performance of
+  SPARQL queries might differ from
+  find. It's worth testing and
+  optimizing your queries if
+  performance becomes an issue.
+- Integration with Other Tools: The
+  semantic nature of Tracker's data
+  opens up possibilities for
+  integration with other semantic
+  web tools and reasoning engines.
+
+This exploration provides a
+starting point for using Tracker
+and TinySparql as a replacement for
+find. As you delve deeper, you'll
+likely discover more sophisticated
+ways to query and analyze your file
+system data using the power of
+semantic web technologies. Good
+luck with your project!
+
+
+- Great. Could you sketch out for
+  me a couple of cases and
+  use-cases where Tracker and
+  Sparql really shines, i.e. stuff
+  and querying that simply cannot
+  be done or be done nearly as
+  easily with find and like
+  utilities?
+
+You've hit on a key point! While
+find is excellent for basic file
+system traversal based on names,
+sizes, and timestamps, Tracker and
+SPARQL unlock a realm of more
+sophisticated and semantically-rich
+queries that are either impossible
+or incredibly cumbersome with
+traditional tools. Here are a
+couple of scenarios where Tracker
+and SPARQL truly shine:
+
+1. Querying based on file content
+and metadata relationships
+
+Imagine you want to find all
+documents that mention a specific
+keyword and were authored by a
+particular person and are related
+to a specific project (perhaps
+indicated by a tag or a directory
+structure).
+
+Why this is hard with find:
+
+- find primarily operates on file
+  system attributes like name,
+  size, type, and timestamps.
+- To search within file content,
+  you'd typically need to pipe the
+  output of find to another utility
+  like grep, which processes each
+  file individually.
+- Establishing relationships
+  between files and concepts like
+  authors or projects based solely
+  on file system structure or
+  naming conventions is brittle and
+  unreliable.
+
+How Tracker and SPARQL excel:
+
+Tracker can be extended with
+extractors that pull metadata from
+file content (e.g., author from
+document metadata, keywords,
+topics). This information is then
+stored semantically. You can define
+relationships between files and
+other entities.
+
+Hypothetical Tracker Ontology
+Extension:
+
+Let's imagine Tracker has been
+extended with properties like:
+
+- dc:creator: The author of a
+  document.
+- dc:subject: Keywords or topics
+  associated with the document.
+- ex:relatedToProject: A custom
+  property linking a file to a
+  project.
+
+SPARQL Query:
+
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ex: <http://example.org/ontology#>
+
+SELECT ?uri ?name
+WHERE {
+  ?uri a nfo:FileDataObject ;
+       nfo:fileName ?name ;
+       dc:creator "John Doe" ;
+       dc:subject "Artificial Intelligence" ;
+       ex:relatedToProject "Project Chimera" .
+}
+
+This single SPARQL query directly
+retrieves files that satisfy all
+three conditions based on their
+extracted metadata and
+relationships. Achieving this with
+find and standard command-line
+tools would involve a complex chain
+of commands, potentially requiring
+parsing different metadata formats
+and making assumptions about how
+project relationships are encoded
+in the file system. 2.
+Context-aware and semantic file
+retrieval
+
+Consider a scenario where you want
+to find all presentations you
+worked on recently that are related
+to a specific client.
+
+Why this is hard with find:
+
+- find can filter by modification
+  date, but understanding what
+  constitutes "recently" might
+  require complex time
+  calculations.
+- Associating files with a "client"
+  is not a standard file system
+  attribute. You might rely on
+  directory names or naming
+  conventions, which are
+  error-prone.
+
+How Tracker and SPARQL excel:
+
+If Tracker (or an extension) can
+associate files with context (e.g.,
+through tagging, semantic links to
+contacts, or relationships inferred
+from activity logs), SPARQL can
+leverage this information.
+
+Hypothetical Tracker Data:
+
+Imagine Tracker has indexed
+information about your activities
+and can link files to contacts or
+tags.
+
+SPARQL Query:
+
+PREFIX nfo: <http://www.semanticdesktop.org/ontologies/2007/03/nfo#>
+PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/nie#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX tag: <http://www.holygoat.co.uk/owl/redwood/0.1/tags/>
+
+SELECT ?uri ?name ?modified
+WHERE {
+  ?uri a nfo:FileDataObject ;
+       nfo:fileName ?name ;
+       dcterms:modified ?modified ;
+       nie:keyword [ tag:label "presentation" ] ;
+       nie:relatedTo [ a <http://example.org/ontology#Client> ; <http://example.org/ontology#clientName> "Acme Corp" ] .
+  FILTER (?modified >= (NOW() - xsd:dayTimeDuration("P30D"))) # Files modified in the last 30 days
+}
+ORDER BY DESC(?modified)
+
+This query finds files that are
+tagged as "presentation" and
+related to a client named "Acme
+Corp", and were modified within the
+last 30 days. The semantic
+relationships and the ability to
+query based on concepts ("client")
+rather than just file system
+properties are powerful advantages.
+
+Key Advantages Summarized:
+
+- Semantic Relationships: SPARQL
+  can traverse and query based on
+  relationships between files and
+  other entities (authors,
+  projects, clients, topics), which
+  are not inherently part of the
+  file system structure.
+- Content-Based Queries: If Tracker
+  extractors are in place, you can
+  query based on metadata embedded
+  within files (author, keywords,
+  etc.) without needing to parse
+  each file individually with
+  external tools.
+- Contextual Awareness: By
+  extending Tracker's ontology and
+  data, you can perform queries
+  based on context that is not
+  directly encoded in the file
+  system (e.g., files related to a
+  specific event or activity).
+- Structured and Standardized
+  Queries: SPARQL provides a
+  standardized and powerful query
+  language that can handle complex
+  conditions and joins across
+  different types of metadata.
+- Extensibility: Tracker's
+  architecture allows for extending
+  its ontology and data extractors
+  to incorporate new types of
+  metadata and relationships
+  relevant to specific use cases.
+
+While setting up the necessary
+ontologies and extractors might
+require initial effort, the power
+and flexibility gained in querying
+and managing your files
+semantically can be a significant
+advantage for knowledge workers and
+anyone dealing with large amounts
+of interconnected information.
+You're essentially moving from a
+purely structural view of your
+files to a more meaningful and
+interconnected understanding of
+your digital assets.
+
+
+- I've been asking a couple of
+  questions lately about using
+  localsearch (I think it's called
+  - a version of the Gnome Tracker)
+  and TinySparql as an
+  ontology-aware replacement (at
+  least in some cases) for the Unix
+  find-utility. I have seen some
+  code and I have managed to follow
+  along reasonably (at least at a
+  high level). Could you give me
+  some idea though of what it would
+  take to develop or extend the
+  basic ontologies a bit? You see,
+  what I'm not entirely clear on is
+  what skills and what
+  understanding is required to
+  develop or extend those?
+
+- I have a folder of books and
+  documents that pertain to RDF and
+  ontologies, and I've gotten some
+  example code from you, but it
+  seems that to be effective with
+  localsearch and TinySparql, one
+  would have to have (preferably at
+  least) a mid-level grasp of how
+  to tweak and create ontologies,
+  i.e. beyond the code written in
+  Sparql and other more common
+  programming-languages that
+  leverage them.
+
+To effectively develop or extend
+ontologies for use with tools like
+localsearch and TinySparql, you'll
+need a blend of conceptual
+understanding and practical skills.
+Here's a breakdown of the key
+areas:
+
+Foundational Knowledge
+
+- 1. Understanding of RDF (Resource Description Framework):
+
+- Triples: The fundamental building
+  block of RDF, consisting of a
+  subject, predicate, and object.
+  For example, in the triple
+  `ex:Book1 ex:hasAuthor
+  ex:JohnDoe`, `ex:Book1` is the
+  subject, `ex:hasAuthor` is the
+  predicate, and `ex:JohnDoe` is
+  the object.
+- URIs (Uniform Resource
+  Identifiers): Used to uniquely
+  identify resources (subjects,
+  predicates, and some objects).
+  Think of them as web addresses
+  for things.
+- Literals: Represent data values
+  like strings, numbers, and dates.
+  In the example above, if the
+  author's name was represented as
+  a simple string, it would be a
+  literal: `ex:Book1 ex:title "The
+  Great Adventure"`.
+- Blank Nodes: Used to represent
+  resources without a specific URI,
+  useful for describing anonymous
+  or existentially quantified
+  entities.
+- RDF Graphs: Collections of RDF
+  triples.
+- Serialization Formats:
+  Familiarity with common RDF
+  serialization formats like Turtle
+  (.ttl), RDF/XML (.rdf), and
+  JSON-LD (.jsonld) is helpful for
+  reading and writing ontology
+  files.
+
+- 2. Understanding of Ontologies:
+
+- Classes (Concepts): Represent
+  categories of things in a domain
+  (e.g., Book, Author, Genre).
+- Properties (Relationships):
+  Define how classes and
+  individuals are related to each
+  other (e.g., hasAuthor, hasGenre,
+  publicationDate).
+- Individuals (Instances): Specific
+  entities that belong to a class
+  (e.g., "The Lord of the Rings" is
+  an individual of the class Book,
+  "J.R.R. Tolkien" is an individual
+  of the class Author).
+- Relationships between Classes:
+  Understanding concepts like
+  subclass-superclass relationships
+  (e.g., Novel is a subclass of
+  Book) and disjointness.
+- Property Characteristics: Knowing
+  about property types like object
+  properties (linking resources to
+  other resources) and datatype
+  properties (linking resources to
+  literals), as well as their
+  characteristics like
+  transitivity, symmetry, and
+  inverse properties.
+- Axioms and Constraints:
+  Understanding how to define rules
+  and restrictions within an
+  ontology to ensure data
+  consistency and enable reasoning
+  (e.g., "Every book must have at
+  least one author").
+
+- 3. Knowledge of Ontology Languages:
+
+- RDFS (RDF Schema): A basic
+  vocabulary for describing RDF
+  vocabularies, allowing you to
+  define classes, properties, and
+  hierarchies.
+- OWL (Web Ontology Language): A
+  more expressive language than
+  RDFS, providing more advanced
+  features for defining complex
+  relationships, properties, and
+  logical constraints. Familiarity
+  with different OWL sub-languages
+  (like OWL DL, OWL Lite, OWL Full)
+  and their
+  expressiveness/reasoning
+  trade-offs is beneficial.
+
+- 4. Understanding of Semantic Principles:
+
+- Meaning and Interpretation: How
+  terms in an ontology are intended
+  to be understood and how they
+  relate to real-world concepts.
+- Consistency and Coherence:
+  Ensuring that the ontology
+  doesn't contain logical
+  contradictions and that its
+  definitions make sense within the
+  domain.
+- Interoperability: Designing
+  ontologies that can be easily
+  integrated with other data
+  sources and ontologies.
+- Reusability: Leveraging existing
+  ontologies and vocabularies where
+  appropriate to avoid reinventing
+  the wheel and to promote
+  interoperability. Popular
+  vocabularies include Dublin Core,
+  FOAF (Friend of a Friend), and
+  schema.org.
+
+
+Practical Skills
+
+- 1. Ontology Development Tools:
+
+- Protégé: A widely used, free, and
+  open-source desktop tool for
+  building and editing ontologies
+  in OWL and RDF. It provides a
+  graphical interface for creating
+  classes, properties, and
+  individuals, as well as reasoning
+  capabilities.
+- TopBraid Composer: A commercial
+  tool with advanced features for
+  enterprise-level ontology
+  development, integration with
+  databases, and collaborative
+  work.
+- WebVOWL: A web-based
+  visualization tool for
+  ontologies, useful for
+  understanding the structure and
+  relationships within an ontology.
+- Command-line tools and libraries:
+  Depending on your programming
+  preferences, you might find
+  Python libraries like rdflib
+  useful for programmatically
+  working with RDF and ontologies.
+
+- 2. SPARQL (SPARQL Protocol and RDF Query Language):
+
+- While you mentioned this is a
+  "more common programming-language
+  that leverages" ontologies, a
+  deeper understanding of SPARQL is
+  crucial for querying and
+  manipulating data described by
+  your ontologies, which is exactly
+  what TinySparql does. You'll need
+  to be comfortable with:
+
+  - Basic graph patterns (SELECT,
+    WHERE clauses).
+  - Different types of joins (e.g.,
+    INNER JOIN, OPTIONAL).
+  - Filtering and ordering results.
+  - Constructing new RDF graphs
+    from queries (CONSTRUCT).
+  - Updating RDF graphs (UPDATE -
+    though less commonly needed for
+    basic ontology tweaking).
+
+- 3. Data Modeling Skills:
+
+- The ability to translate
+  real-world concepts and
+  relationships into a formal
+  ontology structure. This involves
+  identifying key entities, their
+  attributes, and the relationships
+  between them.
+- Understanding different data
+  modeling paradigms and how they
+  apply to ontology design.
+
+- 4. Domain Knowledge:
+
+- A good understanding of the
+  domain you are modeling is
+  essential for creating a relevant
+  and accurate ontology. In your
+  case, your collection of books
+  and documents on RDF and
+  ontologies provides a starting
+  point for the domain of
+  "documents about semantic web
+  technologies."
+
+
+How to Get Started and Progress
+
+Given your existing resources and
+interest, here's a possible path to
+develop these skills:
+
+- 1. Deep Dive into Your Resources:
+  Systematically go through your
+  books and documents on RDF and
+  ontologies. Focus on the
+  fundamental concepts of RDF,
+  RDFS, and OWL. Pay attention to
+  examples of how different
+  relationships and constraints are
+  modeled.
+- 2. Experiment with Protégé:
+  Download and start using Protégé.
+  Try to model simple domains you
+  are familiar with (e.g., your
+  book collection). Create classes
+  for books, authors, and genres,
+  and define properties like title,
+  author, genre, and publication
+  year.
+- 3. Explore Existing Ontologies:
+  Browse online repositories of
+  ontologies (e.g., LOV - Linked
+  Open Vocabularies). Examine how
+  established ontologies model
+  concepts related to documents,
+  publications, or library science.
+  Try to understand their design
+  choices and how they reuse
+  existing vocabularies.
+- 4. Practice SPARQL: Use a SPARQL
+  endpoint (many are available
+  online) or the SPARQL query
+  interface in Protégé to query
+  data described by existing
+  ontologies. Start with simple
+  queries and gradually move to
+  more complex ones involving
+  joins, filters, and different
+  graph patterns.
+- 5. Relate to Your Use Case: Think
+  specifically about how you want
+  to use localsearch and TinySparql
+  to find information in your
+  document collection. What kinds
+  of questions do you want to be
+  able to answer? This will help
+  you identify the key concepts and
+  relationships you need to model
+  in your ontology. For example,
+  you might want to find all
+  documents about a specific RDF
+  concept written after a certain
+  date.
+- 6. Iterative Development:
+  Ontology development is often an
+  iterative process. Start with a
+  basic model, test it with sample
+  data and queries, and then refine
+  and extend it based on your needs
+  and understanding.
+- 7. Consider Extending Existing
+  Schemas: Instead of starting from
+  scratch, think about whether
+  existing schemas or vocabularies
+  (like Dublin Core for document
+  metadata) can be extended to fit
+  your specific requirements. This
+  promotes interoperability.
+
+By gradually building your
+understanding of the underlying
+principles and gaining hands-on
+experience with ontology
+development tools and query
+languages, you can move beyond
+simply using existing ontologies to
+effectively tweaking and creating
+your own to enhance your
+information retrieval capabilities
+with localsearch and TinySparql.
+Your existing interest and
+resources are a great starting
+point!
+
+
+- How about Dlang, F#, Common Lisp,
+  and Clojure? Could any of them be
+  used somewhere in this part of
+  the chain without 'too much
+  contortion' if you know what I
+  mean?
+
+Yes, absolutely! D, F#, Common
+Lisp, and Clojure can indeed be
+used in the ontology development
+and interaction chain without
+excessive contortion, each bringing
+its own strengths. Let's explore
+how:
+
+D
+
+- Strengths: D is a systems programming language with high performance, low-level capabilities, and modern features like metaprogramming and compile-time function execution. It offers a good balance between performance and expressiveness.
+
+- Potential Use:
+  - Building custom tools: If you
+    need to develop highly
+    optimized tools for parsing and
+    processing large ontology files
+    (in formats like RDF/XML or
+    even potentially SUO-KIF if a
+    parser is written), D's
+    performance could be
+    advantageous.
+  - Interfacing with C libraries:
+    Many Semantic Web libraries and
+    theorem provers have C
+    interfaces. D's excellent C
+    interoperability (ABI
+    compatibility) allows you to
+    easily wrap and utilize these
+    libraries.
+  - Developing specialized
+    reasoning engines or rule-based
+    systems: D's metaprogramming
+    features could be used to
+    implement custom inference
+    mechanisms or rule engines that
+    operate on ontological data.
+
+- Considerations: The D ecosystem
+  for Semantic Web technologies
+  might be smaller compared to more
+  mainstream languages like Python
+  or Java. You might need to invest
+  more effort in creating bindings
+  or libraries if existing ones are
+  limited.
+
+
+F#
+
+- Strengths: F# is a
+  functional-first language that
+  runs on the .NET platform. It
+  offers strong typing,
+  immutability, and excellent
+  support for asynchronous and
+  parallel programming. Its concise
+  syntax and powerful type
+  inference can lead to more robust
+  and maintainable code.
+
+- Potential Use:
+
+  - Building robust and type-safe
+    ontology processing pipelines:
+    F#'s strong typing system can
+    help catch errors early when
+    working with complex
+    ontological structures.
+  - Developing data integration and
+    transformation tools: F#'s
+    functional paradigm is
+    well-suited for data
+    manipulation tasks, making it
+    useful for transforming and
+    integrating data from various
+    sources into an ontological
+    format.
+  - Creating reasoning engines or
+    rule-based systems: F#'s
+    support for pattern matching
+    and algebraic data types makes
+    it elegant for implementing
+    inference rules and logical
+    reasoning over ontologies.
+  - Interoperability with .NET
+    libraries: The .NET ecosystem
+    has libraries for RDF
+    processing (though perhaps not
+    as extensive as in Python or
+    Java). F# can seamlessly
+    interoperate with these
+    libraries.
+
+- Considerations: The F# community
+  in the Semantic Web domain might
+  be smaller than in other areas of
+  .NET development.
+
+
+Common Lisp
+
+- Strengths: Common Lisp is a
+  powerful and highly flexible
+  dynamic programming language with
+  a rich history in AI and
+  knowledge representation. It
+  excels in symbolic computation,
+  metaprogramming (macros), and
+  building complex systems.
+
+- Potential Use:
+
+- Direct manipulation of symbolic
+  representations: Given that
+  SUO-KIF has a Lisp-like syntax,
+  Common Lisp is a natural fit for
+  parsing, analyzing, and
+  manipulating SUMO directly.
+- Developing advanced reasoning
+  systems: Lisp's expressiveness
+  and support for symbolic AI make
+  it well-suited for implementing
+  sophisticated inference engines
+  and knowledge-based systems that
+  operate on ontologies.
+- Building custom ontology editors
+  and tools: Lisp's metaprogramming
+  capabilities allow for the
+  creation of domain-specific
+  languages and tools tailored for
+  ontology development.
+- Integration with existing
+  Lisp-based AI and knowledge
+  representation projects: If you
+  are working with legacy systems
+  or projects in this domain, Lisp
+  might be a valuable choice.
+
+- Considerations: While powerful,
+  Common Lisp has a steeper
+  learning curve for those
+  unfamiliar with functional and
+  symbolic programming paradigms.
+  The ecosystem for Semantic Web
+  standards might require more
+  effort to integrate with compared
+  to more mainstream languages.
+
+
+Clojure
+
+- Strengths: Clojure is a modern
+  dialect of Lisp that runs on the
+  Java Virtual Machine (JVM). It
+  combines the power of Lisp with
+  concurrency features,
+  immutability by default, and
+  seamless Java interoperability.
+
+- Potential Use:
+
+  - Building scalable and
+    concurrent ontology processing
+    systems: Clojure's concurrency
+    features make it suitable for
+    handling large and distributed
+    ontological datasets.
+  - Leveraging the Java ecosystem:
+    Clojure can readily use Java
+    libraries for RDF processing
+    (like Apache Jena and Sesame),
+    providing access to a wealth of
+    existing tools and standards.
+  - Developing functional and
+    data-oriented ontology
+    applications: Clojure's
+    emphasis on immutability and
+    functional programming can lead
+    to cleaner and more
+    maintainable code for working
+    with structured data like
+    ontologies.
+  - Interacting with semantic
+    databases (Triplestores): Many
+    triplestores have Java clients
+    that can be easily used from
+    Clojure.
+
+- Considerations: While Clojure has
+  good support for the JVM
+  ecosystem, the direct community
+  and library support specifically
+  for SUO-KIF might be less mature.
+
+
+In summary:
+
+- D: Good for performance-critical
+  tasks and interfacing with
+  C-libraries. Might require more
+  effort for building a full
+  Semantic Web workflow.
+- F#: Excellent for building
+  robust, type-safe, and concurrent
+  ontology-processing pipelines,
+  with good interoperability with
+  the .NET-ecosystem.
+- Common Lisp: A natural fit for
+  direct manipulation of SUO-KIF
+  and building advanced reasoning
+  systems, leveraging its symbolic
+  AI-capabilities.
+- Clojure: Strong for building
+  scalable, concurrent, and
+  functional ontology-applications
+  by leveraging the Java ecosystem
+  and its RDF-libraries.
+
+All four languages offer unique
+advantages and can be used
+effectively in the ontology development and interaction chain
+without "too much contortion,"
+depending on your specific needs
+and the existing tools and
+libraries you intend to use. The
+"best" choice often comes down to
+your team's expertise, the
+performance-requirements, and the
+level of integration needed with
+other systems or libraries. You
+might find that for certain
+specialized tasks, these languages
+offer more elegant or performant
+solutions compared to more
+mainstream options.
+
+
 
 
 ___revealimpress_vsNewer

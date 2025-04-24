@@ -1,5 +1,11 @@
 ~/bin/scripts/at/at.Emacs.bash
 
+emacs over vim:
+    - several code syntaxes active
+    - pdf-tools
+    - org-mode
+    - image/graphics in txt-files
+
 https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
 Per N: Emacs-Dlang-UBUNTUINSTALL 2024 {{{
   Fork + Download PN GitLab Repo
@@ -291,11 +297,6 @@ I hope this helps!
    - Personal (vimlike) Keybindings
   - Slime
 ___ElispStartwith
-emacs over vim:
-    - image in txt-files
-    - pdf-tools
-    - org-mode
-    - simult. code syntaxes
 
 Jump between declaration/definition and implementation
   # function, method, class, symbol (and other code elements) ----

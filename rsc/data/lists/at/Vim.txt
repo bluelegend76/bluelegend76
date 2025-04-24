@@ -1,4 +1,11 @@
 ~/bin/scripts/at/at.Vim.bash
+
+vim over emacs:
+    - mobile/android
+    - folding
+    - translate-shell
+    - several keys as mappings
+
 gvim ~/.vimrc
 gvim ~/_vimrc
 
@@ -52,12 +59,6 @@ Jump between declaration/definition and implementation
 -- Vim
 go to declaration  gd  
 go to implementation  gD
-
-
-vim over emacs:
-    - mobile/android
-    - folding
-    - translate-shell
 
 vim-submode [**], 'vim space'
 TODO: CHECKLIST INTEREST =FROM 'PRACTICAL VIM' TOC[!!]
