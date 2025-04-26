@@ -11,6 +11,9 @@
 #              /##.~   ~.##\  #   %#e" #  #
 #             /.^         ^.\ 
 
+# Main/Daily updating via Pacman/Yay:
+# sudo pacman -Syu; yay -Syu
+
 # ____
 #
 # Format external drive to ExFat (Lin/Win/Mac compatability):
