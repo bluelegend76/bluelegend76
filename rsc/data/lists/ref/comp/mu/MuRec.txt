@@ -1,6 +1,8 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
+~/Dropbox/rsc/data/lists/at/muRecord.txt
+
 __
                 ----
                 .
@@ -11,6 +13,8 @@ midish
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/midish/midish.txt
                         .
 seq24
+                            ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/seq24/seq24-manual.txt
+                            ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/seq24/seq24-uman.txt
 mma
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/mma.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/mma-tut.txt
@@ -30,8 +34,17 @@ AnSynthesis
 baudline
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/baudline.txt
                         .
-Logic X
+Logic X  TODO!!
 Ardour  +LUA **
+                            ~/Dropbox/rsc/Doks/ardour-2.8.3-bindings-x.pdf
+                            ~/Dropbox/rsc/data/lists/ref/comp/pr/mu/ardour/Ardour-KeyShortc.txt
+                            ----
+                            ~/Dropbox/rsc/Doks/phone/Comp/mu/rec/Ardour6-Man.txt
+                            ~/Dropbox/rsc/Doks/phone/Comp/mu/rec/ardour-man.txt
+                            ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/mu/Ardour.vdeck.txt
+                            ----
+                            ~/Dropbox/rsc/data/lists/ref/comp/pr/mu/ardour/ardour-luaclasses.txt
+                            ----
 Rosegarden
                         ~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/hydrog_roseg.vanki.txt
                         .
@@ -49,6 +62,8 @@ MuseScore 4
                         ~/Dropbox/rsc/data/lists/learnqna/vanki/Mscore3.vdeck.txt
 Muse
 lmms,  flstudio mobile
+                            https://docs.lmms.io/user-manual/getting-started/installation
+                            .
 calf/lv, ladspa
 guitarix
 rakarrack
@@ -56,7 +71,7 @@ PureData
 
   btmixer / alto s6
 maudio audiophile / focusrite scarlett
-yourock-guitar
+yourock-guitar  ____
 qsynth
 zynaddsubfx
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zynaddsubfx/zynaddsubfx-man_2020.txt

@@ -88,7 +88,7 @@ HttpContext
 the 'strangler fig'-pattern
 
 
-----
+    ----
 new//what asp.net core mvc brings (over predec.)
 {{{
     baking in current best practices such as
@@ -1280,10 +1280,102 @@ HttpContext
     --
     aspdnc_inact2023-p59_93.
     }}}
+Access HttpContext-object with middleware + Use of  (**)
+{{{
+    N@All middleware has access to
+    the HttpContext for a request.
+    
+    N@It can use this object to
+    determine
+    - whether the request contains any user credentials
+    - to identify which page the request is attempting to access
+    - to fetch any posted data, for example.
+    
+    Then it can use these
+    details to determine how to
+    handle the request.
+    --
+    aspdnc_inact2023-p59_93..
+    }}}
+When the application finishes processing the request, it _____  [**]
+{{{
+    When the application
+    finishes processing the request,
+    
+    it updates the HttpContext with
+    an appropriate response
+    and returns it through the middleware
+    pipeline
+    to the web server.
+    
+    Then the ASP.NET Core web server
+    converts the representation to a
+    raw HTTP-response and sends it
+    back to the reverse proxy, which
+    forwards it to the user's
+    browser.
+    --
+    aspdnc_inact2023-p59_93..
+    }}}
+The fundamental source of behavior of your app is provided by ____  ***!
+{{{
+    Middleware + the middleware pipeline
+    
+    = it is responsible for
+     .
+    responding to any HTTP-requests
+    it receives.
+    --
+    aspdnc_inact2023-p59_93...
+    }}}
+Requests are passed to the middleware pipeline as ____  **!!
+{{{
+    = as HttpContext-objects
+    --
+    aspdnc_inact2023-p59_93...
+    }}}
+Behind the scenes, the middleware pipeline in ASP.NET Core is simply ____  **(*)
+{{{
+    Behind the scenes, the
+    middleware pipeline in ASP.NET
+    Core is simply a chain of method
+    calls, with each middleware
+    function calling the next in the
+    pipeline.
+    --
+    aspdnc_inact2023-p60_94.
+    }}}
+____ can be useful occasionally when you're setting up your application (to ensure that it's processing requests without errors)  *
+{{{
+    Adding a holding-page
+    --
+    aspdnc_inact2023-p61_95...
+    }}}
+list of middleware included by default
+{{{
+    http://mng.bz/Gyxq
+    --
+    aspdnc_inact2023-p61_95...
+    }}}
+    ----
+
+    ----
+adding a holding-page
+{{{
+    WelcomePageMiddleware (=added via middleware)
+    --
+    aspdnc_inact2023-p62_96.
+    }}}
 2
 {{{
     
     --
-    aspdnc_inact2023-p59_93.
+    aspdnc_inact2023-p62_96...
+    }}}
+3
+{{{
+    
+    --
+    aspdnc_inact2023-p62_96...
     }}}
 

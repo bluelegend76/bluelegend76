@@ -1,7 +1,7 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
-Anki
+Anki  ____
                         . ~/gdrive/rsc/data/lists/ref/comp/pr/Ankiman-Cookbook.txt
                         ~/Dropbox/rsc/Doks/phone/learn/ankiman2021plus.txt
                         ----
@@ -36,6 +36,42 @@ Anki
                         note-types
                             .
                         ----
+
+                        ____
+                        TODO: INPUT Q-TAGGED AREAS FROM ANKIMAN 2021++
+
+                        ---- Anki-Client
+                        file ----
+                        switch profile  cs-p, a_fs
+                        --
+                        import...  cs-i, a_fi
+                        export...  c-e, a_fe
+                        create backup  a_fb
+                        revert to backup  a_fr
+                        --
+                        exit  c-q, a_fx
+                        edit ----
+                        undo  c-z
+                        view ----
+                        toggle full-screen  f11, a_vf
+                        zoom in / zoom out  a_vi / a_vo
+                        reset zoom  c-0
+                        tools ----
+                        study deck...  /
+                        create filtered deck...  f
+                        --
+                        check database  a_tc
+                        check media  a_tm
+                        empty cards...
+                        --
+                        add-ons  cs-a
+                        --
+                        manage note-types  cs-n
+                        preferences  c-p, a_t
+                        help ----
+                        guide  f1, a_hg
+                        support anki  a_hs
+                        about  a_ha
 
     Reveal.js  (@@)
                 ----
