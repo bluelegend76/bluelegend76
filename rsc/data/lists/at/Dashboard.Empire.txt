@@ -1202,11 +1202,13 @@ CSOUND-BOOK
     ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
   }}}
   Termux  __  @@  ¤¤¤
-  ASP.NET CORE MVC __ (++Web APIs)  ¤¤
+  ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤¤
   . {{{
+      gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.Tags1.txt
     gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
 ----
-~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
+    ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
+~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/AspDnc-Inact2023.vdeck.txt
 
 
     gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
