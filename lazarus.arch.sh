@@ -445,19 +445,21 @@ read -p "Again, only continue for full Music/Media install. Continue?: "
 
 sudo pacman -S rosegarden
 # Audacity __
-muse
+# musescore: = runs with 'mscore'
 sudo pacman -S musescore
+yay -S muse-sounds-manager-bin
 # TODO: MUSESCORE 4 (+MScore4 Hub)
-wget https://musescore.org/en/download/musescore-x86_64.AppImage \
-  # TODO: MAY HAVE TO USE GLOB FOR RENAMING MS4 RELIABLY(!!)
-    && mv ~/MuseScore-4.0.2.230651545-x86_64.AppImage ~/musescore4
-    && chmod +x ~/musescore4 \
-    && sudo mv ~/musescore4 /usr/bin/
-    # && sudo mv ~/musescore4 /opt/ \
-    # && chmod u+x ~/musescore4 \
-#@@__ wget https://pub-c7a32e5b5d834ec9aeef400105452a42.r2.dev/Muse_Hub.deb \
-    && sudo dpkg -i ~/Muse_Hub.deb
-read -p "[+Open 'Muse Hub' and select/install 'Muse Sounds': "
+# wget https://musescore.org/en/download/musescore-x86_64.AppImage \
+#   # TODO: MAY HAVE TO USE GLOB FOR RENAMING MS4 RELIABLY(!!)
+#     && mv ~/MuseScore-4.0.2.230651545-x86_64.AppImage ~/musescore4
+#     && chmod +x ~/musescore4 \
+#     && sudo mv ~/musescore4 /usr/bin/
+#     # && sudo mv ~/musescore4 /opt/ \
+#     # && chmod u+x ~/musescore4 \
+# #@@__ wget https://pub-c7a32e5b5d834ec9aeef400105452a42.r2.dev/Muse_Hub.deb \
+#     && sudo dpkg -i ~/Muse_Hub.deb
+# read -p "[+Open 'Muse Hub' and select/install 'Muse Sounds': "
+
 # midieditor {{{
 #       http://www.midieditor.org/
 #   wget https://github.com/markusschwenk/midieditor/releases/download/3.3.0/midieditor_3.3.0-1-amd64.deb

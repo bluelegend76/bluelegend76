@@ -6,6 +6,46 @@ set fdm=marker syn= guifont=* | colors ron
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+Anmäln. YH/BUV {{{
+'Dirt-List' (etc) ----
+
+LÄRAREN SOM KLANTAT SIG SITTER KVAR, UB IGNORERAT ATT _ GODKÄNT FELAKTIG KOD, LEDNINGEN INTE REAGERAT PÅ DET (+UTTRYCKT OGILLANDE ÅT UB:S AGERANDE, MEN INTE PÅ NÅGOT SÄTT SANKTIONERAT)
+
+Zocom + Eva, måns (+alvaro):
+
+Gun:
+- jag skiter i om du hittat att en lärare godkänt felaktig/ej fungerande kod
+Joak:
+- inga probl. att _ inte svarar
+- vi hörde oss för med resten av gruppen
+Ch:
+- Inte hört av sig på en månad
+
+oscar, jonas, micke
+
+3 referenser: Abe, MYH, Alex
+
+}}}
+Calendar + Dailies {{{
+
+2025 {{{
+  general [=PULL IN EXPLANATIONS FROM BELOW (=SLOW WORK-LAPTOP, ETC)]
+  .... {{{
+    - Färre/Gjort färre timmar på plats
+    - Fysåterhämtning
+    - Soc. samvaro och kontakter
+    - Hålla (sig) väl med 'hyresvärden'
+    - Prata med Martin et al (=undersöka fler möjligheter)
+  Totalgenomgång + VankiDecks för AspDnc Inact2023  [=flera heldagar]
+  }}}
+
+  fri-sun  2025-04-25 - 2025-04-27 {{{
+    .
+  }}}
+}}}
+
+}}}
+
 TODO ADD 1 = STARTUPS 1 {{{
 
 Vanki LearnQna ----
@@ -250,12 +290,6 @@ TODO: STYTR-MALL.TXT till TELEFONEN
 ---- store
 - begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas
     - hälsat på SW 5
-  .... {{{
-    - Färre/Gjort färre timmar på plats
-    - Fysåterhämtning
-    - Soc. samvaro och kontakter
-    - Hålla (sig) väl med 'hyresvärden'
-  }}}
 - CAN-skissen (+Manual)
 ---- Vad Lärt?
 - Framkant i Planering
@@ -1013,6 +1047,27 @@ Office.Rush [1]  # rush through + take review/notes {{{
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+  . {{{
+gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
+
+    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
+      https://suave.io/
+
+  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
+
+
+    F# for Devops ----
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work-2//
+
+    https://mallibone.com/post/fsharp-scripting
+
+  }}}
     Pegged, Tsv-Utils, Perlstyle-Regex
 SSH {{{
   ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
@@ -1063,9 +1118,23 @@ Sparql Cheat sheet pdf
         ~/Empire/Doks/Comp/lang/webdev/db/semweb/social-semantic-web-web-20-was-nun_2009.txt
         ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch-te_2007.txt
 }}}
+Wsl  ¤¤
+  . {{{
+    ~/gdrive/rsc/Doks/taskuj/WSL/*.txt
+
+    gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
+
+    */
+  }}}
+----
+Inkscape + 'Graphics'
 
 
-
+  Roslyn (+Analysis|CodeGen)
+  . {{{
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
+  }}}
 Buckey's Godot
         ~/Empire/Doks/learn/speedread.txt
 }}}
@@ -1075,7 +1144,8 @@ Spectre Console  __ ¤¤
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
 }}}
-
+  TODO ANKI: = add Q-tags for Major Wish-Areas[!!]
+~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
 
 
 ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
@@ -1184,7 +1254,7 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
 
-CSOUND-BOOK
+CSOUND-BOOK (+Csound FlossMan)
 
   winterminal  ¤ [=profiles, AWS-shell, etc **]
   . {{{
@@ -1204,13 +1274,14 @@ CSOUND-BOOK
   Termux  __  @@  ¤¤¤
   ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤¤
   . {{{
-      gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.Tags1.txt
-    gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+  ~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt  ___vdeck
+  --
+  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
+
+
+        gvim ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.Tags1.txt
+    ## ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
 ----
-    ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt
-~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/AspDnc-Inact2023.vdeck.txt
-
-
     gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
 
     ~/Dropbox/rsc/Doks/taskuj/LIA2/DotNetCore/
@@ -1573,14 +1644,6 @@ further questions!
 
   }}}
   NuShell  _  ¤¤(¤)
-  Wsl  ¤¤
-  . {{{
-    ~/gdrive/rsc/Doks/taskuj/WSL/*.txt
-
-    gvim ~/Empire/Doks/Comp/sysadm/lin/wsl/*.txt
-
-    */
-  }}}
       Graph, MSAL
       . {{{
       }}}
@@ -1901,7 +1964,7 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
-Pegged ¤¤¤
+Pegged  ¤¤¤
 Pegged, Tsv-Utils, Perlstyle-Regex {{{
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/pegged/peg-slides.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/pegged/Pegged.txt
@@ -1914,19 +1977,19 @@ Pegged, Tsv-Utils, Perlstyle-Regex {{{
 }}}
 ----
 Org-Man  ¤¤¤
-SASS+Compass {{{
+SASS+Compass  ¤¤¤ {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
 }}}
-AnkiMan (+Renskriv ___office)  ¤¤¤
+                                AnkiMan (+Renskriv ___office)  ¤¤¤
   festival
-  CsFunct 3(??__)  ¤¤¤
+  CsFunct 3(??__)  ¤¤(¤)
 Tiny Scheme, GimpScheme-Plugins  (GimpPy)
             Samsung Notes (+Phone/Tablet)
             Nyxt (+qutebrowser/'hackers browser')  ¤¤
 
-Termux
+                                Termux
     PowerShell[!]  WSL ____
-  AndroidProgr (+Kotlin??)
+AndroidProgr (+Kotlin??)
   ----
 
     MAUI (=Office)  [Kotlin + Funct.] {{{
