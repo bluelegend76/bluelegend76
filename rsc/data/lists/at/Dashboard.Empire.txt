@@ -84,6 +84,7 @@ scripting / Web ----  TODO: HTML, CSS, ETC  ¤¤¤
 System (incl. C#):
     gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
 FUNCT =LISP, F#, ML, ...:
+    gvim -p ../ref/comp/cb/clispcb.txt ../ref/comp/cb/schemecb.txt ../ref/comp/cb/clojure.txt ../ref/comp/cb/haskell.txt ../ref/comp/cb/sml-ocaml.txt ../ref/comp/cb/fs.txt
 
 Db:
   gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
@@ -1047,7 +1048,7 @@ Office.Rush [1]  # rush through + take review/notes {{{
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
 gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
 
@@ -1068,7 +1069,8 @@ gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
     https://mallibone.com/post/fsharp-scripting
 
   }}}
-    Pegged, Tsv-Utils, Perlstyle-Regex
+
+  Pegged, Tsv-Utils, Perlstyle-Regex
 SSH {{{
   ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
 }}}
@@ -1964,6 +1966,8 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
+WSL (1+2)
+  AspDnc + WebAPI (Tocs)
 Pegged  ¤¤¤
 Pegged, Tsv-Utils, Perlstyle-Regex {{{
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/pegged/peg-slides.txt
@@ -1975,7 +1979,11 @@ Pegged, Tsv-Utils, Perlstyle-Regex {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/tsvutils/TsvUtils1.txt
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/tsvutils/TsvUtils2.txt
 }}}
+====
+F# Suave
+Define Ontologies (=OWL etc)
 ----
+
 Org-Man  ¤¤¤
 SASS+Compass  ¤¤¤ {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
