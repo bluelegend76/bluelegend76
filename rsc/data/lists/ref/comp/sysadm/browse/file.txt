@@ -6,210 +6,207 @@ TODO: NEW FILE = WM:s [*****]
 
 Kde Connect
 XFCE4  TODO: SET WINCOMMANDS-TRIGGER TO WIN-KEY
-            https://defkey.com/xfce-shortcuts#
-                Window Manipulation ----
-                Alt + Space
-                Window operations menu
-                    Esc
-                Dismiss/cancel dialog
-                    Alt + Tab
-                Switch to next window
-                    ↑  Shift + Alt + Tab
-                Switch to previous window
-                    Super + Tab
-                Next window of current application
-                    Alt + F4
-                Close window
-                    Alt + F7
-                Move window
-                    Alt + F8
-                Resize window
-                    Alt + F9
-                Hide window
-                    Alt + F10
-                Maximize window
-                    Alt + Shift + Page Down
-                Raise/lower window
-                    Alt + F11
-                Toggle fullscreen
-                    Alt + F12
-                Toggle above
-                    Ctrl + Alt + D
-                Show desktop
+                            https://defkey.com/xfce-shortcuts#
+                                Window Manipulation ----
+                                Alt + Space
+                                Window operations menu
+                                    Esc
+                                Dismiss/cancel dialog
+                                    Alt + Tab
+                                Switch to next window
+                                    ↑  Shift + Alt + Tab
+                                Switch to previous window
+                                    Super + Tab
+                                Next window of current application
+                                    Alt + F4
+                                Close window
+                                    Alt + F7
+                                Move window
+                                    Alt + F8
+                                Resize window
+                                    Alt + F9
+                                Hide window
+                                    Alt + F10
+                                Maximize window
+                                    Alt + Shift + Page Down
+                                Raise/lower window
+                                    Alt + F11
+                                Toggle fullscreen
+                                    Alt + F12
+                                Toggle above
+                                    Ctrl + Alt + D
+                                Show desktop
 
-                Move window to workplace ----
-                    Alt + F6
-                Stick window (show in all workspace)
-                    Alt + F5
-                Maximize window horizontally
-                    Ctrl + Alt + End
-                Move window to next workspace
-                    Ctrl + Alt + Home
-                Move window to previous workspace
-                    Ctrl + Alt + Num 1
-                Move window to workspace 1
-                    Ctrl + Alt + Num 2
-                Move window to workspace 2
-                    Ctrl + F1
+                                Move window to workspace ----
+                                    Alt + F6
+                                Stick window (show in all workspace)
+                                    Alt + F5
+                                Maximize window horizontally
+                                    Ctrl + Alt + End
+                                Move window to next workspace
+                                    Ctrl + Alt + Home
+                                Move window to previous workspace
+                                    Ctrl + Alt + Num 1
+                                Move window to workspace 1
+                                    Ctrl + Alt + Num 2
+                                Move window to workspace 2
+                                    Ctrl + F1
 
-                Switching Workspace ----
-                … to F9: Switch to workspace 1-9
-                    Ctrl + Alt + ←  →
-                Next/Previous workspace
-                    Ctrl + Alt + ↑
-                Upper workspace
-                    Ctrl + Alt + ↓
-                Bottom workspace
-                    Ctrl + Alt + ←
-                Left workspace
-                    Ctrl + Alt + →
-                Right workspace
-                    Ctrl + F1
-                Go to workspace 1
-                    Ctrl + F2
-                Go to workspace 2
-                    Alt + Insert
-                Add a workspace
-                    Alt + Del
-                Delete last workspace
-                    Ctrl + Alt + Del
-                Lock the screen
-                    Super + F
-                Application shortcuts ----
-                File manager
-                    Super + M
-                Mail reader
-                    Ctrl + Alt + T
-                Terminal emulator
-                    or Super + T
-                    Super + W
-                Web browser
-                    Super + 4
-                LibreOffice Calc
-                    Super + 3
-                LibreOffice Writer
-                    Super + E
-                Mousepad
-                    Super + 1
-                Parole
-                    Super + R
-                App Finder
-                    Alt + F1
-                Popup applications menu
-                    Ctrl + Esc
-                Whisker menu
-                    Print Screen
-                xfce4-screenshooter -f
-                    Alt + Print Screen
-                xfce4-screenshooter -w
-                    Ctrl + Alt + L
-                Start xflock4
-                    or Ctrl + Alt + Del
-                    Alt + F2
-                Start xfrun4
-                    Ctrl + Alt + Esc
-                Start xkill
-                    Super + P
-                XF86Display xfce4-display-settings --minimal
-                    Super + P
-                Show context mMenu. xfdesktop --menu
-                    Super + P
-                Lock screen. xflock4
-                    Super + P
-                Start prompt to run command. xfrun4
-                Mouse wheel ----
-                Hover your mouse over the taskbar, then scroll mouse wheel to cycle windows.
-                Advertisement
-                Hover your mouse over empty space on desktop, then scroll mouse wheel to cycle workspaces
-            ----
-              https://stackoverflow.com/questions/42526711/is-there-a-list-of-commands-for-keyboard-shortcuts-in-xfce-4
-            ----
-            https://tutorialtactic.com/blog/xfce-shortcuts/
-            Window Manipulation Shortcuts ----
-                Window operations menu
-                    Alt + Spacebar
-                Next window of the current application
-                    Super + Tab
-            Move window
-                Alt + F7
-            Resize window
-                Alt + F8
-                Hide window
-                    Alt + F9
-                Maximize window
-                    Alt + F10
-            Raise/lower window  sa-PgUp/sa-PgDn
-                Toggle fullscreen
-                    Alt + F11
-                Toggle above
-                    Alt + F12
-                Show desktop  ca-d
-            Move the window to workplace Shortcuts ----
-            Stick window (show in all workspaces)  Alt + F6
-                Maximize window horizontally
-                    Alt + F5
-        Move window to next/prev workspace  ca-end / ca-home
-            Move window to workspace 1 (2, etc)
-                ca-1  (ca-2 ...)
-            Switching workspace Shortcuts ----
-                Switch to workspace 1-9
-                    a-f1 .. a-f9
-                Next / Prev. workspace
-                    ca-right / ca-left
-                Upper workspace
-                    Ctrl + Alt + Up Arrow Key
-                Bottom workspace
-                    Ctrl + Alt + Down Arrow Key
-                Left workspace
-                    Ctrl + Alt + Left Arrow key
-                Right workspace
-                    Ctrl + Alt + Right Arrow Key
-                Go to workspace 1 (2, etc)
-                    c-f1  (c-f2 ...)
-            Add a workspace  a-Ins
-                Delete last workspace
-                    Alt + Delete
-                Lock the screen
-                    Ctrl + Alt + Delete
-            Application Shortcuts ----
-                File manager
-                    Super + F
-                Mail reader
-                    Super + M
-            Terminal emulator  ca-t
-                Web browser
-                    Super + W
-                LibreOffice Calc
-                    Super + 4
-                LibreOffice Writer
-                    Super + 5
-                Mousepad
-                    Super + E
-                Parole
-                    Super + 1
-            App Finder  w-r
-                Popup applications menu
-                    Alt + F1
-              Whisker menu  c-Esc
-                xfce4-screenshooter -f
-                    PrintScreen
-                xfce4-screenshooter -w
-                    Alt + Print Screen key
-                Start xflock4
-                    Ctrl + Alt + L
-                Start xfrun4
-                    a-f2
-              Start xkill
-                    ca-Esc
-            Other Shortcuts ----
-                XF86Display xfce4-display-settings –minimal
-                    w-p
-                Show context mMenu. xfdesktop –menu
-                    Super + P
-                Lock screen. xflock4
-                    Super + P
-                Start prompt to run command. xfrun4
-                    w-p
+                                Switching Workspace ----
+                                … to F9: Switch to workspace 1-9
+                                    Ctrl + Alt + ←  →
+                                Next/Previous workspace
+                                    Ctrl + Alt + ↑
+                                Upper workspace
+                                    Ctrl + Alt + ↓
+                                Bottom workspace
+                                    Ctrl + Alt + ←
+                                Left workspace
+                                    Ctrl + Alt + →
+                                Right workspace
+                                    Ctrl + F1
+                                Go to workspace 1
+                                    Ctrl + F2
+                                Go to workspace 2
+                                    Alt + Insert
+                        Add Workspaces  Applications > Settings > Workspaces
+                        Delete a workspace  a-Del
+                                Delete last workspace
+                                    Ctrl + Alt + Del
+                                Lock the screen
+                                    Super + F
+                    Application shortcuts ----
+                                File manager
+                                    Super + M
+                                Mail reader
+                                    Ctrl + Alt + T
+                                Terminal emulator
+                                    or Super + T
+                                    Super + W
+                                Web browser
+                                    Super + 4
+                                LibreOffice Calc
+                                    Super + 3
+                                LibreOffice Writer
+                                    Super + E
+                                Mousepad
+                                    Super + 1
+                                Parole
+                                    Super + R
+                                App Finder
+                                    Alt + F1
+                                Popup applications menu
+                                    Ctrl + Esc
+                                Whisker menu
+                                    Print Screen
+                                xfce4-screenshooter -f
+                                    Alt + Print Screen
+                                xfce4-screenshooter -w
+                                    Ctrl + Alt + L
+                                Start xflock4
+                                    or Ctrl + Alt + Del
+                                    Alt + F2
+                        Start xfrun4  Ctrl + Alt + Esc
+                        Start xkill  Super + P
+                                XF86Display xfce4-display-settings --minimal
+                                    Super + P
+                                Show context mMenu. xfdesktop --menu
+                                    Super + P
+                                Lock screen. xflock4
+                                    Super + P
+                                Start prompt to run command. xfrun4
+                    Mouse wheel ----
+                                Hover your mouse over the taskbar, then scroll mouse wheel to cycle windows.
+                                Advertisement
+                                Hover your mouse over empty space on desktop, then scroll mouse wheel to cycle workspaces
+                            ----
+                              https://stackoverflow.com/questions/42526711/is-there-a-list-of-commands-for-keyboard-shortcuts-in-xfce-4
+                            ----
+                            https://tutorialtactic.com/blog/xfce-shortcuts/
+                    Window Manipulation Shortcuts ----
+                                Window operations menu
+                                    Alt + Spacebar
+                                Next window of the current application
+                                    Super + Tab
+                            Move window
+                                Alt + F7
+                            Resize window
+                                Alt + F8
+                                Hide window
+                                    Alt + F9
+                                Maximize window
+                                    Alt + F10
+                            Raise/lower window  sa-PgUp/sa-PgDn
+                                Toggle fullscreen
+                                    Alt + F11
+                                Toggle above
+                                    Alt + F12
+                                Show desktop  ca-d
+                    Move the window to workplace Shortcuts ----
+                        Stick window (show in all workspaces)  Alt + F6
+                                Maximize window horizontally
+                                    Alt + F5
+                        Move window to next/prev workspace  ca-end / ca-home
+                        Move window to workspace 1 (2, etc)  ca-k1  (ca-k2 ...)
+                    Switching workspace Shortcuts ----
+                                Switch to workspace 1-9
+                                    a-f1 .. a-f9
+                                Next / Prev. workspace
+                                    ca-right / ca-left
+                                Upper workspace
+                                    Ctrl + Alt + Up Arrow Key
+                                Bottom workspace
+                                    Ctrl + Alt + Down Arrow Key
+                                Left workspace
+                                    Ctrl + Alt + Left Arrow key
+                                Right workspace
+                                    Ctrl + Alt + Right Arrow Key
+                                Go to workspace 1 (2, etc)
+                                    c-f1  (c-f2 ...)
+                            Add a workspace  a-Ins
+                                Delete last workspace
+                                    Alt + Delete
+                                Lock the screen
+                                    Ctrl + Alt + Delete
+                    Application Shortcuts ----
+                                File manager
+                                    Super + F
+                                Mail reader
+                                    Super + M
+                            Terminal emulator  ca-t
+                                Web browser
+                                    Super + W
+                                LibreOffice Calc
+                                    Super + 4
+                                LibreOffice Writer
+                                    Super + 5
+                                Mousepad
+                                    Super + E
+                                Parole
+                                    Super + 1
+                            App Finder  w-r
+                                Popup applications menu
+                                    Alt + F1
+                              Whisker menu  c-Esc
+                                xfce4-screenshooter -f
+                                    PrintScreen
+                                xfce4-screenshooter -w
+                                    Alt + Print Screen key
+                                Start xflock4
+                                    Ctrl + Alt + L
+                                Start xfrun4
+                                    a-f2
+                              Start xkill
+                                    ca-Esc
+                    Other Shortcuts ----
+                                XF86Display xfce4-display-settings –minimal
+                                    w-p
+                                Show context mMenu. xfdesktop –menu
+                                    Super + P
+                                Lock screen. xflock4
+                                    Super + P
+                                Start prompt to run command. xfrun4
+                                    w-p
 Fluxbox
 
 WinKeys  @@   ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
