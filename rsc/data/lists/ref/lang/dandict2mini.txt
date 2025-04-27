@@ -1,5 +1,5 @@
-set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
+set fdm=indent fdl=2
 ___zzzz
 
 split word fr. word-categ + insert ';' before last word(=the answer-word)

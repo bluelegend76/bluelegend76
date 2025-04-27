@@ -6,38 +6,57 @@ set fdm=marker syn= guifont=* | colors ron
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+mini todo/bring (etc) {{{
+Today:
+- Bet. räkningar
+
+
+inköp: 9V-batt + laddare
+  + Gatu-Förstärkare
+
+  - Text/Bladvändar-pedalen
+  - Barytongitarren (+Capo)
+}}}
 Anmäln. YH/BUV {{{
+
 'Dirt-List' (etc) ----
 
-YÄENERA FBZ XYNAGNG FVT FVGGRE XINE, HO VTABERENG NGG _ TBQXÄAG SRYNXGVT XBQ, YRQAVATRA VAGR ERNTRENG CÅ QRG (+HGGELPXG BTVYYNAQR ÅG HO:F NTRENAQR, ZRA VAGR CÅ AÅTBG FÄGG FNAXGVBARENG)
+'Som en knasig korsning mellan ett dagis och en sekt.'
+LÄRAREN SOM KLANTAT SIG SITTER KVAR, UB IGNORERAT ATT _ GODKÄNT FELAKTIG KOD, LEDNINGEN INTE REAGERAT PÅ DET (+UTTRYCKT OGILLANDE ÅT UB:S AGERANDE, MEN INTE PÅ NÅGOT SÄTT SANKTIONERAT)
 
-Mbpbz + Rin, zåaf (+nyineb):
-- ivyy vagr refäggn ryrire/ineane ryrire söe ngg nazäyn (äira bz qr eåxng vyyn hg)
-- söeföxre (iåeqfyöfg) cehgn are fvan yäener
-  - vatra eägg gvyy unaqyrqavat haqre fbzznera bz ryri xhttng (+qrg une Tha. tbqxäag)
+Zocom + Eva, måns (+alvaro):
+- vill inte ersätta elever/varnar elever för att anmäla (även om de råkat illa ut)
+- försöker (vårdslöst) pruta ner sina lärare
+  - ingen rätt till handledning (under sommaren + framåt) om elev kuggat (+det har Gun. godkänt)
 
-- svpx gn va rkgrea uwäyc (fbz wboonqr tengvf) (+OREÄGGN ZRE)
-- gvyyonxf gvyy yätfgn slf- + cflx-yätr
+- fick ta in extern hjälp (som jobbade gratis) (+BERÄTTA MER)
+- tillbaks till lägsta fys- + psyk-läge
 
-Tha:
-- wnt fxvgre v bz qh uvggng ngg ra yäener tbqxäag srynxgvt/rw shatrenaqr xbq
-  - söeföxre så ryrire ngg töen uraarf wboo (så gnt v unaqyrqner + zrqqryn sry)
-Wbnx:
-- vatn ceboy. ngg _ vagr finene
-- iv uöeqr bff söe zrq erfgra ni tehccra
-Pu:
-- Vagr uöeg ni fvt cå ra zåanq
-  - btvyyne T.f senzsneg, zra uba fvggre xine
-- une vagr haqreföxg ry. gngg gnt v Nqnz + nayvgne ubabz sbegsnenaqr
-- 'ercerf. une genxnff. zvt' (vasöe xynffra): qr naqen glpxre una shaxne oen, +iv xna vagr fnaxgvbaren ra ryri fbz orgre fvt vyyn
+Båda utb.ledarna + två lärare vägrat att koppla in extrahjälp, spec. hon huvudansvarig, och trots att hon själv i den diskussionen SJÄLV PÅPEKAT(!) att personen i fråga hade 'dokumenterade inlärningssvårigheter'
 
-bfpne, wbanf, zvpxr
+Gun:
+- jag skiter i om du hittat att en lärare godkänt felaktig/ej fungerande kod
+  - försöker få elever att göra hennes jobb (få tag i handledare + meddela fel)
+  - visste om probl. med handl. + försökte täcka över (o favoriserade därigenom en argsint elev som hon var rädd för)
+  [vet om probl. + försökt täcka över (täcka upp för sin kollega Eva) + inte minsta orolig för granskningen (=nämnde det som att det var väl inget särskilt)]
+Joak:
+- inga probl. att _ inte svarar
+- vi hörde oss för med resten av gruppen
+Ch:
+- Inte hört av sig på en månad
+  - ogillar G.s framfart, men hon sitter kvar
+- har inte undersökt el. tatt tag i Adam + anlitar honom fortfarande
+- 'repres. har trakass. mig' (inför klassen): de andra tycker han funkar bra, +vi kan inte sanktionera en elev som beter sig illa
 
-3 ersrerafre: Nor, ZLU, Nyrk
+oscar, jonas, micke
+
+3 referenser: Abe, MYH, Alex
 
 
-Uhe zrane qh/xynffra ngg wnt 'eåxng' unzan hgnasöe?
-aåten äe nafinevtn söe qrg, bz få fgben qryne ni xynffra, ry. äe qrg qr orelxgnqr 'aåtba' bpu 'vatra'?
+Hur menar du/klassen att jag 'råkat' hamna utanför?
++Det var efter Oscar fryst ute mig som...
+    några är ansvariga för det, om så stora delar av klassen,
+    el. är det de beryktade 'någon' och 'ingen'?
 
 }}}
 Calendar + Dailies {{{
@@ -116,9 +135,8 @@ Langs1 Ref-lists ----  __
   ~/gdrive/rsc/media/pic-graphics/shorth/
 
 LANG-DB 1:
-  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt
-LangsDb.legacy ----
-  gvim -p ../ref/lang/dandict2mini.txt ../../db/langdb.legacy.list/langdb.txt
+  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt ../ref/lang/dandict2mini.txt
+                                           LangsDb.legacy ----
                                                    ^
                                                    |
   or LangDb1.list.txt -----------------------------+
@@ -1087,55 +1105,56 @@ gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
 
   }}}
 
-  Pegged, Tsv-Utils, Perlstyle-Regex
 SSH {{{
   ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
 }}}
 NuShell  ¤¤¤
 SemWeb + Sparql  ¤¤¤ {{{
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/webdataapi-forknowlgraphs_2021.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/knowlgraphs-linkeddata-largeorgs_2017.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semweb-structdata_2015.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semwebRDFSPARQL.txt
-    . {{{
-            ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebRDFSPARQL--1.txt
-    }}}
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semweb-datamanage-qprocess_2011.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn_2011.txt
-    . {{{
-            ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn.txt
-            ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn--1.txt
-            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql-learn_2011--1.txt
-    }}}
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
-    . {{{
-            ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semanticweb-clojjava.txt
-    }}}
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql.txt
-    . {{{
-            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql--1.txt
-    }}}
-    ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql1.cheats.txt
-    . {{{
-            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql.cheats.txt
-    }}}
 
 https://www.w3.org/TR/2012/REC-owl2-primer-20121211/
 https://en.wikipedia.org/wiki/SPARQL
 https://medium.com/@tokyoyugen/understanding-the-web-ontology-language-owl-a-deep-dive-a46abbcafec1
-    ~/Empire/Doks/Comp/lang/webdev/db/semweb/owl-intro.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/owl-intro.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/webdataapi-forknowlgraphs_2021.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/knowlgraphs-linkeddata-largeorgs_2017.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semweb-structdata_2015.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semwebRDFSPARQL.txt
+  . {{{
+          ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebRDFSPARQL--1.txt
+  }}}
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semweb-datamanage-qprocess_2011.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn_2011.txt
+  . {{{
+          ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn.txt
+          ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql-learn--1.txt
+          ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql-learn_2011--1.txt
+  }}}
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
+  . {{{
+          ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/semanticweb-clojjava.txt
+  }}}
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql.txt
+  . {{{
+          ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql--1.txt
+  }}}
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/sparql1.cheats.txt
+    . {{{
+            ~/Empire/Doks/Comp/lang/webdev/db/semweb/sparql.cheats.txt
+    }}}
+
 Sparql Cheat sheet pdf
 
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/graphdata-semweb-libsguide_2015.txt
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch_2012.txt
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebtechnols-handb_2011.txt
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semantic-web-grundlagen_2008.txt
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebprogr_2009.txt
-        . {{{
-            ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebprogr-or_2009.txt
-        }}}
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/social-semantic-web-web-20-was-nun_2009.txt
-        ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch-te_2007.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/graphdata-semweb-libsguide_2015.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch_2012.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebtechnols-handb_2011.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/semantic-web-grundlagen_2008.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebprogr_2009.txt
+  . {{{
+      ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebprogr-or_2009.txt
+  }}}
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/social-semantic-web-web-20-was-nun_2009.txt
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch-te_2007.txt
 }}}
 Wsl  ¤¤
   . {{{
@@ -1165,6 +1184,11 @@ Spectre Console  __ ¤¤
 }}}
   TODO ANKI: = add Q-tags for Major Wish-Areas[!!]
 ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
+Mermaid [****] {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/markup/mermaid.txt
+}}}
+
+Pegged, Tsv-Utils, Perlstyle-Regex
 
 
 ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
@@ -1185,6 +1209,9 @@ Avalonia  __  ¤¤¤
 }}}
     -- office.Slog ___index=3 [3] {{{
 ____ __
+
+VTOUCH-UTILS + VANKI (Rider/Android-git Revamp 1.0) [****] ____
+
 .     . {{{
 Reduce down rectangular file-block to gvim one-liner
   @r: 

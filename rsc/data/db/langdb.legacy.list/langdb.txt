@@ -2,6 +2,11 @@ vim:fdm=indent:fdl=2:
 set fdm=indent fdl=1
       ~/Dropbox/rsc/Doks/Lang/Shorth/gregg-irish.txt
 
+~/Dropbox/rsc/data/lists/learnqna/vanki/decks/lang/langdb1-legacy.txt
+
+___TAB
+___TAB1 ___TAB2
+
 ___defrru_freq; TODO=ADD EXTRA FREQ-FILES TO GITHUB[****!!]
     ___phrases_1isUniverb ___PickStart
     ___defrru_phras
@@ -18958,7 +18963,7 @@ LISTS (=freqs phrases books)
      |
       201-300: https://translate.google.com/#view=home&op=translate&sl=de&tl=en&text=ohne
 
-___defrru_freq
+___TAB=aux1 ___defrru_freq
 set fdm=indent fdl=3
 set fdm=indent fdl=2
 
@@ -72355,7 +72360,7 @@ freqs-lists 2, 3
     med/utan
     lite/mycket
 
-___block2(=word-categories)
+___TAB=aux2 ___block2(=word-categories)
 set foldmethod=indent foldlevel=0
 ___PickStart
 dan isl de fra es ru  ar ukr
@@ -74866,9 +74871,10 @@ pick=startoff   #unless|om (...) inte
             37:7 Tennisracket. Tennisboll.
             37:8 Golfklubba. Golfboll.
             37:9 Skidor. Stavar. Pjäxor.
-___phrases_1isUniverb ___PickStart
+___TAB1 ___phrases_1isUniverb ___PickStart
+  __SV__
   ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.txt  _sv_
-                    evince -p 8 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
+_ evince -p 8 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
                     Vanliga uttryck – när man träffar någon
                 God morgon.
                 God dag.
@@ -76018,6 +76024,8 @@ ___phrases_1isUniverb ___PickStart
                 37:7 Tennisracket. Tennisboll.
                 37:8 Golfklubba. Golfboll.
                 37:9 Skidor. Stavar. Pjäxor.
+  -----
+  __FR__
   .  ~/Dropbox/rsc/Doks/Lang/fr/FRPHRAS.txt
     ~/Empire/Doks/Lang/fr/fragymn01.txt
     ~/Empire/Doks/Lang/fr/fragymn-4böckeravancplusövnbok.txt
@@ -76027,7 +76035,9 @@ ___phrases_1isUniverb ___PickStart
     ~/Empire/Doks/Lang/fr/frabooklet.txt
     ~/Empire/Doks/Lang/fr/fradict-pict.txt
     ~/Empire/Doks/Lang/fr/FRPHRAS.txt
+  __DE__
   ~/Empire/Doks/Lang/de/lang-ty_ty-sv.txt  _de_
+_ evince -p 8 ~/Empire/Doks/Lang/de/lang-ty_ty-sv.pdf &
 ___defrru_phras
     ~/Empire/Doks/Lang/de/lang-ty_ty-sv.pdf
                 Guten Morgen.
@@ -76611,7 +76621,9 @@ ___defrru_phras
                 Tennisschläger. Tennisball.
                 Golfschläger. Golfball.
                 Ski. Skistöcke. Skischuhe.
+  __RU__
   ~/Empire/Doks/Lang/ru/lang-ry_ry-sv.txt  _ru_  will be  budit   free, freedom  svaboda
+_ evince -p Sek1:9 ~/Empire/Doks/Lang/ru/lang-ry_ry-sv.pdf &
     ~/Empire/Doks/Lang/ru/lang-ry_ry-sv.txt
                 Доброе утро.
                 Добрый день.
@@ -77276,453 +77288,7 @@ ___defrru_phras
   ~/Empire/Doks/Lang/misc/Slav/ukr/ukr-lplan.txt
     ...
 
-___block3(=words)
-set foldmethod=indent foldlevel=0
-Tags
-    _c          word category
-    _\a\a       language
-        base tags --   #='Big 9' + some extra
-            https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-            _sv_
-            _en_
-            _is_
-            _da_
-            _fr_
-            _de_
-            _es_
-            _ru_
-            _ar_
-            _zh_-CN
-            _ja_
-            _ga_
-            _el_
-            _fa_
-            _he_
-            _hi_
-            _uk_
-            _ms_
-            _mg_
-            _tl_
-        store --
-            sv
-            en
-            da
-            is
-             no
-             fo  #faeroese
-            --
-            fr
-            de
-            es
-            ru
-            ar
-            zh-CN
-            ja
-            --
-            pt-BR
-            tr
-             uk
-             pl
-            hr   #croatian
-            ga   #irish
-            el   #greek
-            fa
-            ms   #malay
-              TODO: TAGALOG
-            cy
-            it
-            fi
-            he   #hebrew
-            hi
-             mg   #malagasy
-            th   #thai
-            tl   #tagalog
-            mi   #maori
-            qu   #quechua
-            yua  #yucatek maya
-    _e          entry [=the en|sv translation]
-
-    Possibly Reversing tags to 'c_':
-        .,$s/\v<_\C(\l)>/\1_/gc
-                ---------
-greets | making friends (+professions, encounters)  _c
-    yes | ja  _e
-        _sv_
-        _en_
-        _is_
-        _da_
-        _fr_
-        _de_
-        _es_
-        _ru_
-        _ar_
-        _zh_-CN
-        _ja_
-        _ga_
-        _el_
-        _fa_
-        _he_
-        _hi_
-        _uk_
-        _ms_
-        _mg_
-        _tl_
-    no | nej  _e
-    hello  _e
-    1:2 Hej.
-    good morning/afternoon  _e
-    1:1 God morgon.
-    good evening/night  _e
-    God dag.
-    God natt.
-    Nice to meet you  _e
-    1:11 Det var trevligt att träffas.
-    Hej då.
-    Adjö.
-    How are you? | Hur står det till?  _e
-    Im fine | Tack det är bra  _e
-    ok  (ok?)   #ar:tammaam  _e
-    And how are you? | Och hur står det till själv?  _e
-    introduce  _e
-    My name is ___ | Jag heter ___  _e
-    Whats your name? | Vad heter du?  _e
-    Whats your name? | Vad heter Ni?  _e
-    Where are you from?  _e
-    - när man träffar någon
-    1:3 Vi ses.
-    evince -p 9 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-    1:9 Talar Ni engelska/franska/tyska/spanska?
-    1:10 Får jag presentera Er för herr ___/fru ___/fröken ___
-    1:12 Tack för en trevlig dag.
-    1:13 Jag hoppas att vi ses igen.
-    1:14 Gratulerar på födelsedagen.
-    1:15 Lycka till!
-    --
-communic / understand **  _c
-    i speak english  _e
-    do you speak english?  _e
-    i don't understand  _e
-    speak more slowly please  _e
-    could you repeat that?  _e
-    what does this mean?  _e _S
-        ""cette a dire comment?""  _fr_
-    det betyder/innebär ___
-        "cet a dire ___  _fr_
-    how do you say __/this in lang X?  _e _S
-    write it  _e
-    please point to the phrase here / in the book?  _e _S
-'friends/presentation'  _c
-            Allmänna fraser
-            - när man umgås
-            26:1 Vill ni följa med oss till ___?
-            26:2 Får jag bjuda dig på middag/på en drink?
-            26:3 Ja, tack. Nej, tack.
-            26:4 Tack, men jag kan tyvärr inte komma.
-            26:5 Jag hoppas att du inte tar illa upp.
-            26:6 Välkommen/välkomna.
-            26:7 Har du något emot att jag röker?
-            26:8 Jag är hungrig/törstig/trött.
-            evince -p 42 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            26:9 Tack så mycket. Varsågod.
-            26:10 För all del. Det var så lite. Ingen orsak.
-            26:11 Ursäkta. Jag är ledsen. Förlåt.
-locat|'demonstrat' +objects/pointers(='this one')  [+left, right]  _c
-    where  _
-    when  _
-    which  _
-    who
-    how
-    here / there  _e
-    this / that  _e
-    left / right  _e
-pronom | family/relations  _c
-    I  _e
-    you  _e
-    he  _e
-    she  _e
-    it  _e
-    we  _e
-    ni|you  _e
-    they  _e
-    father/mother  _e
-    son/daughter  _e
-    brother/sister  _e
-    grandfather/grandmother  _e
-Adject [=properties] **(!)  _c
-    lätt/svår  _e
-    otäck(t)       #ru: straSna  _e
-    big / small  _e
-    strong / weak  _e
-    cold / warm  _e
-Verb  _c
-    want (to)  _e
-    can  _e
-    speak / say  _e
-    ask  _e
-     shout / laugh / cry  _e
-    have/own  _e
-    see  _e
-    hear  _e
-    do  _e
-    hold(grasp)  _e
-    go/travel to / arrive / return  _e
-    know / remember  _e
-    think  _e
-    want  _e
-    read / write  _e
-    start / continue / stop  _e
-    live / live in  _e
-    work  _e
-    give / take  / put  _e
-    buy / sell  _e
-.colors  _c
-    white  _e
-    black  _e
-    red  _e
-    green  _e
-    blue  _e
-    yellow  _e
-    gray  _e
-    orange  _e
-    purple  _e
-.weather  _c
-    wind(y)  _e
-    rain  _e
-    cloud  _e
-    sun  _e
-    moon  _e
-            Det är kallt/varmt.  8:2
-            Det är varmare än i går.
-            evince -p 17 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            8:3 Det regnar/snöar.
-            8:4 Det är soligt/molnigt.
-            8:5 Det är dimmigt/blåsigt.
-            8:6 Vad blir det för väder i morgon?
-            8:7 Jag tror att det blir vackert väder.
-            8:8 Jag tror att det blir dåligt väder.
-            8:9 Det är stormvarning/lavinfara.
-            8:10 Vilken underbar dag!
-            8:11 Väderleksrapport.
-prepos (*)  _c
-    med / utan  #ry:bez  _e
-    i / på  _e
-    till / från  _e
-      _e
-    bara/enbart  _e
-    almost / exactly  _e
-nums + time  _c
-    1 .. 10  _e
-    20 .. 100  _e
-    1000  _e
-            Räkneord
-            - grundtalen
-            2:1 Noll, ett, två, tre, fyra, fem, sex.
-            2:2 Sju, åtta, nio, tio, elva, tolv.
-            2:3 Tretton, fjorton, femton, sexton.
-            2:4 Sjutton, arton, nitton.
-            2:5 Tjugo, trettio, fyrtio.
-            2:6 Femtio, sextio, sjuttio, åttio.
-            2:7 Åttioen, åttiotvå, åttiotre, åttiofyra, åttiofem.
-            2:8 Nittio, nittioen, nittiotvå, nittiotre, nittiofyra.
-            evince -p 11 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            2:9 Nittiofem, nittiosex, nittiosju, nittioåtta, nittionio.
-            2:10 Etthundra, femhundra, ettusen.
-            2:11 Ettusentvåhundra, tvåtusen, en miljon.
-            Räkneord
-            - ordningstalen
-            3:1 Den första, den andra, den tredje.
-            3:2 Den fjärde, den femte, den sjätte.
-            3:3 Den sjunde, den åttonde, den nionde.
-            3:4 Den tionde, den elfte, den tolfte.
-            3:5 Den tjugonde, den tjugoförsta.
-            evince -p 12 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            3:6 Den trettionde, den trettioförsta.
-            3:7 En fjärdedel, en halv, tre fjärdedelar, en hel.
-            Tiden
-            4:1 Hur mycket är klockan?
-            4:2 Klockan är tolv.
-            4:3 Den är fem över ett.
-            4:4 Tio över två. Kvart över tre.
-            4:5 Tjugo över fyra på eftermiddagen.
-            4:6 Fem i halv sex. Halv sex.
-            evince -p 13 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            4:7 Tjugo i sju på kvällen.
-            4:8 Kvart i åtta på morgonen.
-            4:9 Tio i tio på kvällen.
-            4:10 Tidigt på morgonen. Mitt på dagen.
-            4:11 Sent på kvällen. Mitt i natten.
-            4:12 I dag. I eftermiddag. I kväll.
-            4:13 I natt. I morgon bitti.
-            4:14 Om en timme. Om två dagar. Nästa helg.
-            4:15 Om en vecka. Om två månader. Om ett år.
-            4:16 I går. I förrgår.
-            evince -p 14 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            4:17 För en timme sedan. För två dagar sedan.
-            4:18 Förra veckan. Förra månaden. För ett år sedan.
-            Veckans dagar
-            5:1 Vad är det för dag i dag?
-            5:2 Måndag, tisdag, onsdag, torsdag.
-            5:3 Fredag, lördag, söndag.
-            5:4 Idag är det fredag.
-            5:5 I morgon är det lördag.
-            5:6 I övermorgon är det söndag.
-            evince -p 15 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            5:7 Det är sju dagar i en vecka.
-            5:8 Det är helgdag idag.
-            5:9 Helg. Veckoslut.
-            Månaderna
-            6:1 Januari, februari, mars, april.
-            6:2 Maj, juni, juli, augusti.
-            6:3 September, oktober, november, december.
-            6:4 Vilket datum är det i dag?
-            6:5 Det är den 22 juni.
-            evince -p 16 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            6:6 Jag fyller år den 31 juli.
-            6:7 Det går tolv månader på ett år.
-            Årstiderna
-            7:1 Vår, sommar, höst, vinter.
-            7:2 Förra sommaren var vi i Grekland.
-            7:3 I vinter ska vi åka till Alperna.
-    now  _e
-    later  _e
-    before | innan
-        _sv_
-        _en_
-        _is_
-        _da_
-        avant _fr_
-        _de_
-        _es_
-        _ru_
-        _ar_
-        _zh_-CN
-        _ja_
-        _ga_
-        _el_
-        _fa_
-        _he_
-        _hi_
-        _uk_
-        _ms_
-        _mg_
-        _tl_
-    after  _e
-    today / yesterday / tomorrow  _e
-    day / week / month  _e
-    monday .. sunday  _e
-    n oclock  _e
-    half past  _e
-    hour / minute / second  _e
-    half / quarter / PARTS  #1/3 etc  _e
-conjuncts | modifiers (=much, absolutely/definitely, probably, maybe)  +exclams  _c
-    if          ry:esli  _e
-    eller|or    ry:ili  ar:aw
-    men | but
-        de:aber
-        ru:a
-        es:pero
-    som|which  _e  ry:katoryj
-    all/everything  _e  _t//_m
-        kull        _e _ar
-        ry:v(e)sjå, v(e)sje
-    varje | every
-        kazjdyj     _ry
-    just/only
-    --  _e
-    of course  _e
-    faktiskt|actually  _e
-        jp:jitsu ha
-.if, why, because, should, have to (...)  _c
-    why         ry:patchemo  _e
-    because  _e
-        limaadha  _ar_
-    förmodligen|probably  _e
-        min al-maHtamel  _ar_
-    enligt uppgift[=det sägs att]|allegedly  _c
-    tydligen|apparently
-     uppenbarligen
-    should/ought to  _e
-    have to/must  _e
-    don't have to|not necessary  _e
-    --
-problems  _c
-help | accidents/injuries  _c
-    help  _e
-    .  _e
-            Allmänna fraser
-            - när man behöver hjälp
-            22:1 Ursäkta, kan Ni hjälpa mig?
-            22:2 Jag har gått vilse.
-            22:3 Ursäkta, hur kommer jag till ___?
-            22:4 Var kan jag hitta en toalett?
-            22:5 Förlåt, men jag förstår inte.
-            22:6 Kan ni tala långsammare?
-            22:7 Var kan jag växla pengar?
-            22:8 Tack så mycket för hjälpen.
-.travel  _c
-    ticket  _e
-    when does __ leave?  _e
-geograph (+'sightseeing')  _c
-    stad  _e
-    flod  _e
-    sjö  _e
-.materials  _c
-    earth  _e
-    water  _e
-    wood  _e
-'directions' (**)  _c
-    north  _e
-    south  _e
-    west  _e
-    east  _e
-            Väginformation
-            21:1 Var finns närmaste bank/post/apotek/
-            polisstation/bensinstation?
-            21:2 Ursäkta, hur går jag för att komma till stranden?
-            21:3 Ursäkta, i vilken riktning ligger torget?
-            21:4 Gå bara rakt fram ___
-            21:5  ___tills du kommer till en bro/en rondell.
-            21:6 Gå över gatan och ner för trapporna.
-            21:7 Ta till höger vid nästa trafikljus.
-            21:8 Ta till vänster vid nästa korsning.
-            evince -p 35 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-            21:9 Fortsätt rakt fram tills du ser en kyrka.
-            21:10 Hur långt är det till ___?
-            21:11 Var någonstans ligger ___?
-            21:12 Där borta!
-            21:13 Hur kommer jag snabbast till ___?
-            21:14 Är det här rätt väg till ___?
-            21:15 Hur kommer jag till den här adressen?
-            evince -p 36 ~/Empire/Doks/Lang/ru/lang-ry_sv-ry.pdf &
-.stores(!)  _c
-.health  _c
-    head  _e
-    face  _e
-    arm / leg  _e
-    hand  _e
-    heart  _e
-abstract | concepts | philo  _c
-    life  _e
-    power  _e
-    knowledge  _e
-    justice  _e
-
-idioms.whimsical(??|!)
-    en snigel på ögat
-  https://www.omniglot.com/language/idioms/index.php
-Idioms/Sayings [**]
-    Ana ugglor i mossen, Här ligger en hund begraven  I smell a rat
-    snustorrt  bone dry
-    Det spöregnar / Regnet står som spön i backen, hällregn, skyfall  Raining cats and dogs #Terrential Downfall/downpour
-    Lätt som en plätt  It's a piece of cake
-    Each to their own  #tycke och smak =var och en har sina egna favoriter/sätt
-    thorn in the side  nagel i ögat
-    vilket ben ska stå på, fr:which foot to dance with
-    utbrott/frispel, (throw the) toys out the pram[=barnvagnen]
-    I'm in two minds (about this)  Jag är kluven
-    I slutändan/Till syvende och sist  At the end of the day
-    kontentan  the bottom line
-    Vara på tårna  Be on the balls of your feet
-    Vara en magnet för  Be a lightning-rod for
-    Föll/Gick i fällan  Walked right into that one
+ar phrasebook
+jp phrasebook
+ kin phrasebook
 

@@ -1,5 +1,6 @@
 set foldmethod=indent foldlevel=0
 vim:fdm=indent:fdl=0:
+___zzzz
 ___basicoperations
 ___DataStructs
             files.legacy
@@ -2588,6 +2589,7 @@ Modules|Imports|Read|Source     _c
         ·       _ps_
         ·       _r_
 Collections|Data Structures     _c
+___zzzz
 ___DataStructs
         ref: Data Structures
             I'm trying to make a list for
@@ -2948,11 +2950,14 @@ ___DataStructs
             ·       _fth_
             ·       _ps_
             ·       _r_
-        lists   array
-        assoc. arrays   = hash  dictionary
+
+
+        array           list
+        assoc. array    hash, map, dictionary
                 _p-typeconsist=_homog|_heterog[=pref]
                 _p-mutab=_mut|_immut
                 _p-access=seq_bypos|bykey [+random-access]
+
 
         Clojure
             Vector
@@ -2987,6 +2992,12 @@ ___DataStructs
             ----
             Record
               { value : "string"; x: 2 }
+
+            Discrim. Union
+            Array
+            seq
+            map
+            set
         OCaml
             ----
             Hash table

@@ -86,6 +86,7 @@ Does that distinction make sense?
 p4_38: anc vs aspn1 = a simplified hosting-model
 HttpContext
 the 'strangler fig'-pattern
+route-groups
 
 
     ----
@@ -1366,16 +1367,744 @@ adding a holding-page
     --
     aspdnc_inact2023-p62_96.
     }}}
-2
+some on how this simple app is built (and passing of requests)
 {{{
+    The request passes to the ASP.NET Core web-server,
+    which n@builds a representation of the request and
+    passes it to the middleware pipeline.
     
+    (+then the WelcomePageMiddleware)
+    
+    + This response passes back to the
+    ASP.NET Core web server, n@which
+    forwards it to the reverse proxy
+    and then to the user to display in
+    their browser.
     --
     aspdnc_inact2023-p62_96...
+    }}}
+You build up the middleware pipeline in ASP.NET Core by _____  ***(*)
+{{{
+    calling methods on WebApplication
+    (which implements IApplicationBuilder)
+    
+    (+ concerning Builder etc
+      w. 'app.Run()' )
+    --
+    aspdnc_inact2023-p63_97...
+    }}}
+This convention of creating an extension-method for each piece of middleware and starting the method-name with Use is designed to improve discoverability when you add middleware to your application<2>  BUT (=what is the downside? + tip on that)
+{{{
+    The downside to this approach is that it can hide exactly which middleware is being added to the pipeline.
+    When the answer isn't clear, I typically search for the source code of the extension method directly in GitHub (https://github.com/aspnet/aspnetcore).
+    --
+    aspdnc_inact2023-p64_98.
+    }}}
+By convention, extension-methods to add middleware to the pipeline start with ___
+{{{
+    Use
+    --
+    aspdnc_inact2023-p64_98.
+    }}}
+6
+{{{
+    (you can use) for a full application: a
+    static-file application. n@most web
+    applications, including those with
+    dynamic content, serve some pages
+    by using static files. images,
+    javascript, and css stylesheets are
+    normally saved to disk during
+    development and are served up when
+    requested from the special wwwroot
+    folder of your project, normally as
+    part of a full html page request.
+    --
+    aspdnc_inact2023-p64_98...
+    }}}
+7
+{{{
+    Definition: By default, the
+    wwwroot-folder is the only folder
+    in your application that ASP.NET
+    Core will serve files from. n@It
+    doesn't serve files from other
+    folders for security reasons. The
+    wwwroot-folder in an ASP.NET Core
+    project is typically deployed as
+    is to production, including all
+    the files and folders it
+    contains.
+    --
+    aspdnc_inact2023-p65_99.
+    }}}
+You can use ____ to serve static files from the wwwroot folder when requested, as shown in figure 4.7
+{{{
+    StaticFileMiddleware
+    --
+    aspdnc_inact2023-p65_99.
+    }}}
+    ----
+
+    ----
+In this section you'll see how to combine several standard middleware components to form a pipeline  [****]
+{{{
+    N@As before, you do this in Program.cs
+    by adding middleware to the WebApplication-object.
+    --
+    aspdnc_inact2023-p68_102..
+    }}}
+Figure 4.10 A simple minimal API application. The application uses only four pieces of middleware: ____  [****]
+{{{
+    routing-middleware
+        to choose the endpoint to run,
+    
+    endpoint-middleware
+        to generate the response from a Razor Page,
+    
+    static-file middleware
+        to serve image files,
+    
+    exception-handler middleware
+        to capture any errors.
+    --
+    aspdnc_inact2023-p68_102...
+    }}}
+The addition of middleware to WebApplication to form the pipeline should be familiar to you now, but several points are worth noting in this example  (** **)
+{{{
+    - Middleware is added with
+      Use*()-methods.
+    - MapGet defines an endpoint, not
+      middleware. It defines the
+      endpoints that the routing and
+      endpoint middleware can use.
+    - WebApplication automatically adds
+      some middleware to the pipeline,
+      such as the EndpointMiddleware.
+    - The order of the Use*()-method
+      calls is important and defines
+      the order of the middleware
+      pipeline.
+    --
+    aspdnc_inact2023-p69_103..
+    }}}
+Tip: You can define the endpoints for your app by using MapGet() anywhere in Program.cs before the call to app.Run(), n@but ____  **(*)
+{{{
+    the calls are typically placed after the middleware pipeline definition.
+    --
+    aspdnc_inact2023-p69_103...
+    }}}
+Everything has trade-offs, of course, and for WebApplication the trade-off is that ____  **
+{{{
+    it's harder to understand exactly what's in your middleware pipeline
+    without having deep knowledge of the framework-code itself.
+    
+    Luckily, you don't need to worry
+    about the middleware that
+    WebApplication adds for the most
+    part. If you're new to ASP.NET
+    Core, generally you can accept
+    that WebApplication will add the
+    middleware only when it's
+    necessary and safe to do so.
+    --
+    aspdnc_inact2023-p70_104..
+    }}}
+The routing-middleware attempts to ____  *(*)
+{{{
+    find an endpoint that will handle the request.
+    --
+    aspdnc_inact2023-p71_105..
+    }}}
+Shortcircuiting of the mw-pipeline can (=lead to/have the benefit/implic. that)
+{{{
+    if so,
+    
+    it can short-circuit
+    the pipeline and avoid the
+    unnecessary call to the
+    RoutingMiddleware.
+    --
+    aspdnc_inact2023-p72_106.
+    }}}
+8
+{{{
+    N@None of the other middleware is run for
+    the request, so the endpoint middleware
+    does not get a chance to handle the request.
+    --
+    aspdnc_inact2023-p74_108...
+    }}}
+    ----
+
+    ----
+The design-philosophy for ASP.NET Core is that every feature is opt-in. So ____  **(*)
+{{{
+    = because error-handling is a feature,
+    you need to enable it explicitly in your application.
+    --
+    aspdnc_inact2023-p75_109.
+    }}}
+NullReferenceException is thrown when ____  (and can be alleviated by ____)
+{{{
+    when you attempt to access a variable that hasn't been initialized<3>.
+    
+    3: N@NN@C# 8.0 introduced
+    non-nullable reference types,
+    which provide a way to handle
+    null values more clearly, with
+    the promise of finally ridding
+    .NET of NullReferenceExceptions!
+    --
+    aspdnc_inact2023-p75_109.
+    }}}
+4.3.1 N@Viewing exceptions in development:  **
+{{{
+    When you're developing an
+    application, you typically want
+    access to as much information as
+    possible when an error occurs
+    somewhere in your app. For that
+    reason, Microsoft provides
+    DeveloperExceptionPageMiddleware,
+    which you can add to your
+    middleware pipeline by using
+    
+    app.UseDeveloperExceptionPage();
+    
+    (+note: WebApplication adds it
+    automatically when you're in the
+    Development-environment)
+    --
+    aspdnc_inact2023-p76_110..
+    }}}
+4
+{{{
+    When an exception is thrown and
+    propagates up the pipeline to this
+    middleware, it's captured. Then the
+    middleware generates a friendly
+    HTML-page, which it returns with a
+    500 status-code, as shown in figure
+    4.15. This page contains a variety
+    of details about the request and
+    the exception, including the
+    NNN@n@exception stack-trace; the
+    source code at the line the
+    exception occurred; and details on
+    the request, such as any cookies or
+    headers that were sent.
+    --
+    aspdnc_inact2023-p76_110...
+    }}}
+5
+{{{
+    Having these details available when
+    an error occurs is invaluable for
+    debugging a problem, but they also
+    represent a security risk if used
+    incorrectly. N@You should never
+    return more details about your
+    application to users than
+    absolutely necessary, so you should
+    use DeveloperExceptionPage only
+    when developing your application.
+    The clue is in the name!
+    --
+    aspdnc_inact2023-p76_110...
+    }}}
+6
+{{{
+    Warning: n@Never use the
+    developer exception page when
+    running in production. Doing so
+    is a security risk, as it could
+    publicly reveal details about
+    your application's code, making
+    you an easy target for attackers.
+    WebApplication uses the correct
+    behavior by default and adds the
+    middleware only when running in
+    development.
+    --
+    aspdnc_inact2023-p76_110...
+    }}}
+If the developer exception page isn't appropriate for production use, what should you use instead?
+{{{
+    Luckily, NN@you can use another
+    type of general-purpose
+    error-handling middleware in production:
+    ExceptionHandlerMiddleware.
+    --
+    aspdnc_inact2023-p77_111..
+    }}}
+8
+{{{
+    about the error. N@For a minimal
+    API application, that response (en error or exception(??))
+    could be JSON or plain text, as
+    shown in figure 4.16.
+    --
+    aspdnc_inact2023-p77_111...
+    }}}
+For Razor Pages apps, you can create ____  ***
+{{{
+    = a custom error response,
+    such as the one shown in figure 4.17.
+    You maintain the look and
+    feel of the application by using
+    the same header, displaying the
+    currently logged-in user, and
+    displaying an appropriate message
+    to the user instead of full details
+    on the exception.
+    --
+    aspdnc_inact2023-p77_111...
+    }}}
+    ----
+
+    ----
+1
+{{{
+    N@Dynamic details such as the current
+    user can be shown on the error page.
+    --
+    aspdnc_inact2023-p78_112.
+    }}}
+2
+{{{
+    Figure 4.17 N@N@A custom error page created by ExceptionHandlerMiddleware. The custom error page
+    can have the same look and feel as the rest of the application by reusing elements such as the header and
+    footer. More important, you can easily control the error-details displayed to users.
+    --
+    aspdnc_inact2023-p78_112...
     }}}
 3
 {{{
+    Figure 4.18 shows what happens when
+    ExceptionHandlerMiddleware handles
+    an exception. It shows the flow of
+    events when the minimal API
+    endpoint for the "/" path generates
+    an exception. HM@HM@The final
+    response returns an error status
+    code but also provides an
+    error-string, using the
+    "/error"-endpoint.
+    --
+    aspdnc_inact2023-p79_113...
+    }}}
+The sequence of events when an unhandled exception occurs somewhere in the middleware-pipeline (or in an endpoint) after ExceptionHandlerMiddleware is as follows:
+{{{
+    - 1. A piece of middleware throws
+      an exception.
+    - 2. ExceptionHandlerMiddleware
+      catches the exception.
+    - 3. Any partial response that has
+      been defined is cleared.
+    - 4. The ExceptionHandlerMiddleware
+      overwrites the request path with
+      the provided error-handling path.
+    - 5. The middleware sends the
+      request back down the pipeline,
+      as though the original request
+      had been for the error-handling
+      path.
+    - 6. The middleware pipeline
+      generates a new response as
+      normal.
+    - 7. When the response gets back to
+      ExceptionHandlerMiddleware, it
+      modifies the status code to a
+      500-error and continues to pass
+      the response up the pipeline to
+      the web-server.
+    --
+    aspdnc_inact2023-p79_113...
+    }}}
+One of the main advantages of reexecuting the pipeline for Razor Page apps is _____
+{{{
+    = the ability to have
+    your error-messages integrated into
+    your normal site-layout, as shown
+    in figure 4.17.
+    --
+    aspdnc_inact2023-p81_115.
+    }}}
+6
+{{{
+    aware of some gotchas.  N@First,
+    middleware can modify a response
+    generated farther down the pipeline
+    only if the response hasn't yet
+    been sent to the client. This
+    situation can be a problem if, for
+    example, an error occurs while
+    ASP.NET Core is sending a static
+    file to a client. In that case,
+    ASP.NET Core may start streaming
+    bytes to the client immediately for
+    performance reasons.  n@When that
+    --
+    aspdnc_inact2023-p81_115..
+    }}}
+7
+{{{
+    performance reasons.  n@When that
+    happens, the error-handling
+    middleware won't be able to run, as
+    it can't reset the response.
+    
+    Generally speaking, you can't do
+    much about this problem, but it's
+    something to be aware of.
+    --
+    aspdnc_inact2023-p81_115..
+    }}}
+A more common problem occurs when the error-handling path throws an error during the reexecution of the pipeline. NN@Imagine that there's a bug in the code that generates the menu at the top of the page in a Razor Pages app:
+{{{
+    - 1. When the user reaches your
+      home page, the code for
+      generating the menu bar throws an
+      exception.
+    - 2. The exception propagates up
+      the middleware pipeline.
+    - 3. When reached,
+      ExceptionHandlerMiddleware
+      captures it, and the pipe is
+      reexecuted, using the
+      error-handling path.
+    - 4. When the error page executes,
+      it attempts to generate the menu
+      bar for your app, which again
+      throws an exception.
+    - 5. The exception propagates up
+      the middleware-pipeline.
+    - 6. ExceptionHandlerMiddleware has
+      already tried to intercept a
+      request, so it lets the error
+      propagate all the way to the top
+      of the middleware-pipeline.
+    - 7. The web server returns a raw
+      500 error, as though there were
+      no error-handling middleware at
+      all.
+    --
+    aspdnc_inact2023-p81_115...
+    }}}
+    ----
+
+    ----
+Thanks to this problem, it's often good practice to ____
+{{{
+    make your error-handling pages as simple as possible to reduce the possibility that errors will occur.
+    --
+    aspdnc_inact2023-p81_115...
+    }}}
+2
+{{{
+    Warning: NN@N@If your
+    error-handling path generates an
+    error, the user will see a
+    generic browser-error. It's often
+    better to use a static error-page
+    that always works than a dynamic
+    page that risks throwing more
+    errors. You can see an
+    alternative approach using a
+    custom error-handling function in
+    this post: http://mng.bz/0Kmx.
+    --
+    aspdnc_inact2023-p82_116.
+    }}}
+Another consideration when building minimal API applications is that you generally don't want to return HTML. Returning an HTML page to an application that's expecting JSON could easily break it.
+{{{
+    NN@N@Instead, the HTTP 500 status
+    code and a JSON body describing the
+    error are more useful to a
+    consuming application. Luckily,
+    ASP.NET Core allows you to do
+    exactly this when you create
+    minimal APIs and web API
+    controllers.
+    --
+    aspdnc_inact2023-p82_116.
+    }}}
+Microsoft provides some common middleware, and ____
+{{{
+    many third-party options are available on NuGet and GitHub.
+    --
+    aspdnc_inact2023-p83_117...
+    }}}
+Chapter 3 - Creating a JSON API with minimal APIs
+{{{
+    - Creating a minimal API
+      application to return JSON to
+      clients
+    - Generating responses with IResult
+    - Using filters to perform common
+      actions like validation
+    - N@Organizing your APIs with
+      route-groups
+    --
+    aspdnc_inact2023-p84_118.
+    }}}
+6
+{{{
+    already seen.  You'll explore some
+    basic routing-concepts and N@N@show
+    how values can be extracted from
+    the URL automatically.  Then you'll
+    --
+    aspdnc_inact2023-p84_118...
+    }}}
+7
+{{{
+    In section 5.3 you'll learn about
+    the different return types you can
+    use with minimal APIs. N@You'll see
+    how to use the Results and
+    TypedResults helper classes to
+    easily create HTTP responses that
+    use status codes like 201 Created
+    and 404 Not Found.
+    
+    You'll also
+    learn how to follow web standards
+    for describing your errors by using
+    the built-in support for
+    HM@Problem-Details.
+    --
+    aspdnc_inact2023-p85_119.
+    }}}
+Section 5.4 introduces one of the big features added to minimal APIs in .NET 7: filters.
+{{{
+    You can
+    use filters to build a mini
+    pipeline (similar to the middleware-pipeline from chapter 4) for each
+    of your endpoints. Like middleware,
+    filters are great for extracting
+    common code from your endpoint-handlers, making your handlers
+    easier to read.
+    --
+    aspdnc_inact2023-p85_119.
+    }}}
+    ----
+
+    ----
+In conjunction with filters, ____ address many of the common complaints raised against minimal APIs when they were released in .NET 6.  **
+{{{
+    route-groups
+    --
+    aspdnc_inact2023-p85_119..
+    }}}
+Traditional web-applications handle requests by _____  ***!
+{{{
+    = returning HTML, which is displayed to the user in a web-browser
+    
+    = You can easily build
+    applications like that by using
+    Razor Pages to generate HTML with
+    Razor templates, as you'll learn in
+    part 2 of this book. This approach
+    --
+    aspdnc_inact2023-p85_119..
+    }}}
+3
+{{{
+    Client-side single-page
+    applications (SPAs) have become
+    popular in recent years with the
+    development of frameworks such as
+    Angular, React, and Vue. NN@These
+    frameworks typically use JavaScript
+    running in a web-browser to
+    generate the HTML that users see
+    and interact with. The server sends
+    this initial JavaScript to the
+    browser when the user first reaches
+    the app. N@The user's browser loads
+    the JavaScript and initializes the
+    SPA before loading any application
+    data from the server.
+    
+    (+later addition of SPA framework is Blazor Webassembly)
+    --
+    aspdnc_inact2023-p85_119...
+    }}}
+Definition: An HTTP-API (=does what and is structured how?)  ****
+{{{
+    = exposes multiple URLs via HTTP
+    that can be used to access or
+    change data on a server.
+    
+    It typically returns data using the
+    JSON format. HTTP-APIs are
+    sometimes called web-APIs, but as
+    web API refers to a specific
+    technology in ASP.NET Core, in
+    this book I use HTTP-API to refer
+    to the generic concept.
+    --
+    aspdnc_inact2023-p86_120...
+    }}}
+These days, mobile applications are common and, from the server-application's point of view (they ...)
+{{{
+    These days, mobile applications are
+    common and, from the
+    server-application's point of view,
+    similar to client-side SPAs. A
+    mobile application typically
+    communicates with a
+    server-application by using an
+    HTTP-API, receiving data in JSON
+    format, just like an SPA. Then it
+    modifies the application's UI
+    depending on the data it receives.
+    --
+    aspdnc_inact2023-p86_120...
+    }}}
+That's all there is to an HTTP API: it ____  ****(*)
+{{{
+    = it exposes endpoints
+    (URLs) that client-applications can
+    send requests to and retrieve data
+    from. These endpoints are used to
+    --
+    aspdnc_inact2023-p87_121..
+    }}}
+7
+{{{
+    Note: You have even more options
+    when it comes to creating APIs in
+    ASP.NET Core. NN@You can create
+    remote procedure call APIs using
+    gRPC, for example, NN@or provide
+    an alternative style of HTTP API
+    using the GraphQL standard. I
+    don't cover those technologies in
+    this book, but you can read about
+    gRPC at
+    https://docs.microsoft.com/aspnet/core/grpc
+    and find out about GraphQL in
+    NN@Building Web APIs with ASP.NET
+    Core, by Valerio De Sanctis
+    (Manning, 2023).
+    --
+    aspdnc_inact2023-p87_121...
+    }}}
+In part 3, you'll learn how to use Razor Pages to create server-rendered applications instead of minimal APIs.  Server-rendered applications can be highly productive. They're generally recommended when ____  ***!
+{{{
+    you have
+    no need to call your application
+    from outside a web-browser
+    
+    or when
+    you don't want or need to make the
+    effort of configuring a client-side
+    application.
+    --
+    aspdnc_inact2023-p88_122.
+    }}}
+    ----
+
+    ----
+5.1 What is an HTTP API, and when should you use one?
+{{{
+    = when you need to access your app from outside a web-browser (??)
+    --
+        aspdnc_inact2023-p88_122...
+    }}}
+(if you) need an HTTP-API for your application, creating one is easy, (since) ____
+{{{
+    it's the default application type in ASP.NET Core!
+    --
+    aspdnc_inact2023-p88_122...
+    }}}
+'ways to NN@handle multiple HTTP-verbs'
+{{{
+    ??
+    --
+    aspdnc_inact2023-p88_122...
+    }}}
+May be a good description of what routing does
+{{{
+    =  5.2.1 Extracting values from the URL with routing
+    --
+    aspdnc_inact2023-p89_123.
+    }}}
+The 'person'-API and why it may not be too useful (+how to make it more useful)
+{{{
+    These two APIs correspond to the
+    paths / and /person, respectively.
+    This basic functionality is useful,
+    but typically you need some of your
+    APIs to be more dynamic. It's
+    unlikely, for example, that the
+    /person-API would be useful in
+    practice, as it always returns the
+    same Person-object. NN@What might
+    be more useful is an API to which
+    you can provide the user's first
+    name, and the API returns all the
+    users with that name.
+    
+    You can achieve this goal
+    by using parameterized routes for
+    your API definitions. You can
+    create a parameter in a minimal API
+    route using the expression
+    {someValue}, where someValue is any
+    name you choose. The value will be
+    extracted from the request URL's
+    path and can be used in the lambda
+    function endpoint.
+    --
+    aspdnc_inact2023-p89_123.
+    }}}
+a 'route-template'  ***
+{{{
+    If you create an API using the
+    route-template /person/{name}, for
+    example, and send a request to the
+    path /person/Andrew, the name
+    parameter will have the value
+    "Andrew". You can use this feature
+    to build more useful APIs, such as
+    the one shown in the following
+    listing.
+    
+    
+    Listing 5.1 A minimal API that uses a value from the URL
+    
+    WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+    WebApplication app = builder.Build();
+    
+    // Creates a list of people as the
+    // data for the API
+    var people = new List<Person> {
+      new("Tom", "Hanks"),
+      new("Denzel", "Washington"),
+      new("Leondardo", "DiCaprio"),
+      new("Al", "Pacino"),
+      new("Morgan", "Freeman"),
+    };
+    
+    // The route is parameterized to extract
+    // the name from the URL.
+    app.MapGet("/person/{name}", (string name) =>
+      // The extracted value can be injected into
+      // the lambda handler.
+      people.Where(p => p.FirstName.StartsWith(name)));
+    --
+    aspdnc_inact2023-p89_123...
+    }}}
+7
+{{{
     
     --
-    aspdnc_inact2023-p62_96...
+    aspdnc_inact2023-p89_123...
     }}}
+
+
 
