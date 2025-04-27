@@ -396,6 +396,7 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
             }}}
         }}}
     - fun jokes stories (+quotes)  @  =DO+SET CATEGORIES [!![!!]]  [+Welsh etc(!)]
+    LittBooks / Lyrics
 
     UNIVERSITY VIDEOS: STANFORD[!!]  + QUINCY LARSON-LINKS [!!!!]  @@!(!)
     C (modern + hardw.)  +Sys.Archit.
@@ -477,13 +478,17 @@ Bcb, Bluebash  ¤¤¤  LINSYS: debbib
 Android Scripting [+Rclone] ¤¤¤
     ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤
   + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
+    . {{{
+    @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips ¤¤¤
+    C# DotNet Core MVC + Blazor, Cs Funct 3
+    }}}
 AVALONIA (+Maui)  ¤¤(¤)  Spectre Console
     XUnit, Cpp Gtest + 'Prop.based Testing'  ¤¤
 Dlang [Ali, +Learning, Cb]  +Pegged  ¤¤¤
 SSH  ¤¤¤
 NuShell  _  ¤¤(¤)
 ASM 1 (+binalys)  ¤¤
-Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)   @@  ¤¤¤
+Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
 REVEAL, IMPRESS  __ ¤¤¤
     Latex Beamer
 Tracker/Localsearch + Sparql  ¤¤
@@ -543,10 +548,7 @@ Java|Cloj Semantic-Web  ¤¤
 MidiCpp-Guy[!!]  h5g**  Listking ¤¤¤  jQuery(Cb), FREEC Compl,
 @Greasmonk, ¤¤¤ Ffox-plugins, Nyxt, lynx  pyweb(Pyramid),
     Xml ¤¤¤ (+xaml, faml, etc)
-@c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips ¤¤¤
-C# DotNet Core MVC + Blazor, Cs Funct 3
     Puppet Lang + Patterns(etc)
-    FuncPy  [_Renskriv_]  __  Py/F# SysAdmin  ¤
             Mpv-Docs  Yt-Dlp  ¤
 'linuxcommands core' [=Gemini-Q]  ¤[¤]
     JuPyter/Polyglot(?) Notebooks (etc)  __  ¤¤¤

@@ -1519,7 +1519,6 @@ Gemini: F# Data-Structures
             
             http://a6systems.com
 
-
 learn x in y minutes
                             // single line comments use a double slash
                             (* multi line comments use (* . . . *) pair
