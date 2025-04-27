@@ -6,6 +6,16 @@ emacs over vim:
     - org-mode
     - image/graphics in txt-files
 
+~/Dropbox/rsc/samples/code/orgmode-test.org 
+
+~/Empire/Doks/Comp/editor/emacs/masteringemacs-v3.txt    #mickey peterson
+~/Empire/Doks/Comp/editor/emacs/emacsextend.txt          #glickstein
+~/Empire/Doks/Comp/editor/emacs/elisp/Elisp-IntroTo.txt
+    ~/Empire/Doks/Comp/editor/emacs/Emacs01-Learning3_534.txt
+    ~/Empire/Doks/Comp/editor/emacs/sams-emacs-in24h.txt
+        ~/Empire/Doks/Comp/editor/emacs/hackemacs.txt
++Vanki-decks
+
 https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
 Per N: Emacs-Dlang-UBUNTUINSTALL 2024 {{{
   Fork + Download PN GitLab Repo
