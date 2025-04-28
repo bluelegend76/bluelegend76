@@ -1,5 +1,6 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
+___calendarnow
 ^[^:]\+:
 
     +React.txt
@@ -17,64 +18,215 @@ inköp: 9V-batt + laddare
   - Text/Bladvändar-pedalen
   - Barytongitarren (+Capo)
 }}}
+scratch {{{
+  U.Whfgrt. aäzaqr aåtbg fbz yvxanqr zva fvghngvba zlpxrg (=wboonqr fwäyi cå qvfcynlra, unqr vatn xbyyrtbe, xhaqr vagr obyyn bpu yäeqr fvt vagr få zlpxrg)
+}}}
 Anmäln. YH/BUV {{{
+Xnabavaglt seåa:
+- c.g, N.J, T.W, P.W, 
 
-'Dirt-List' (etc) ----
-
-'Som en knasig korsning mellan ett dagis och en sekt.'
-LÄRAREN SOM KLANTAT SIG SITTER KVAR, UB IGNORERAT ATT _ GODKÄNT FELAKTIG KOD, LEDNINGEN INTE REAGERAT PÅ DET (+UTTRYCKT OGILLANDE ÅT UB:S AGERANDE, MEN INTE PÅ NÅGOT SÄTT SANKTIONERAT)
-
-Zocom + Eva, måns (+alvaro):
-- vill inte ersätta elever/varnar elever för att anmäla (även om de råkat illa ut)
-- försöker (vårdslöst) pruta ner sina lärare
-  - ingen rätt till handledning (under sommaren + framåt) om elev kuggat (+det har Gun. godkänt)
-
-- fick ta in extern hjälp (som jobbade gratis) (+BERÄTTA MER)
-- tillbaks till lägsta fys- + psyk-läge
-
-Båda utb.ledarna + två lärare vägrat att koppla in extrahjälp, spec. hon huvudansvarig, och trots att hon själv i den diskussionen SJÄLV PÅPEKAT(!) att personen i fråga hade 'dokumenterade inlärningssvårigheter'
-
-Gun:
-- jag skiter i om du hittat att en lärare godkänt felaktig/ej fungerande kod
-  - försöker få elever att göra hennes jobb (få tag i handledare + meddela fel)
-  - visste om probl. med handl. + försökte täcka över (o favoriserade därigenom en argsint elev som hon var rädd för)
-  [vet om probl. + försökt täcka över (täcka upp för sin kollega Eva) + inte minsta orolig för granskningen (=nämnde det som att det var väl inget särskilt)]
-Joak:
-- inga probl. att _ inte svarar
-- vi hörde oss för med resten av gruppen
-Ch:
-- Inte hört av sig på en månad
-  - ogillar G.s framfart, men hon sitter kvar
-- har inte undersökt el. tatt tag i Adam + anlitar honom fortfarande
-- 'repres. har trakass. mig' (inför klassen): de andra tycker han funkar bra, +vi kan inte sanktionera en elev som beter sig illa
-
-oscar, jonas, micke
-
-3 referenser: Abe, MYH, Alex
+    XBAGNXG ZRQ CREAVYYN
+oyri få arexöeq C.T.N. söergntrg bpu fxbyna  
+fxbyna(=söefg söergntrg) une vagr twbeg qrg qr fxn
+wnt une sågg töen/uwäycn gvyy
+fra vagr oyvivg onpxnq ni fxbyna
+    [nyyineyvt buäyfn +unqr erqna ceboy.]
+fxbyna une fra vagr onpxng hcc zvt
++wnt une sågg wntn rsgre qrz söe ngg så unaqyrqa. ngg gäpxn hcc
+(+söeyäatqn sevfgre c.t.n. nyyg rkgenwboo wnt sågg töen)
 
 
-Hur menar du/klassen att jag 'råkat' hamna utanför?
-+Det var efter Oscar fryst ute mig som...
-    några är ansvariga för det, om så stora delar av klassen,
-    el. är det de beryktade 'någon' och 'ingen'?
+'Qveg-Yvfg' (rgp) ----
+
+    shfxnaqr faåynaqr söergnt, +ryrire sågg gäpxn hcc, 
+wnt une sågg zva hgovyqavat söefgöeq ni hgo.fnzbeqanera + fra oyvivg hgselfg bpu genxnffrenq ni ryrire
+
+Vatra(!) haqreivfavat ry. ågrexbccyvat cå fbpvnyn nfcrxgre (vaxy. vatra rkgenuwäyc (raf gvyy) cref. fbz oru./zrq qbxhzragrenqr orubi)
+
+'Fbz ra xanfvt xbefavat zryyna rgg qntvf bpu ra frxg.'
+YÄENERA FBZ XYNAGNG FVT FVGGRE XINE, HO VTABERENG NGG _ TBQXÄAG SRYNXGVT XBQ, YRQAVATRA VAGR ERNTRENG CÅ QRG (+HGGELPXG BTVYYNAQR ÅG HO:F NTRENAQR, ZRA VAGR CÅ AÅTBG FÄGG FNAXGVBARENG)
+
+Mbpbz + Rin, zåaf (+nyineb):
+- ivyy vagr refäggn ryrire/ineane ryrire söe ngg nazäyn (äira bz qr eåxng vyyn hg)
+- söeföxre (iåeqfyöfg) cehgn are fvan yäener
+  - vatra eägg gvyy unaqyrqavat (haqre fbzznera + senzåg) bz ryri xhttng (+qrg une Tha. tbqxäag)
+
+- svpx gn va rkgrea uwäyc (fbz wboonqr tengvf) (+OREÄGGN ZRE)
+- gvyyonxf gvyy yätfgn slf- + cflx-yätr
+
+Oåqn hgo.yrqnean + giå yäener iäteng ngg xbccyn va rkgenuwäyc, fcrp. uba uhihqnafinevt, bpu gebgf ngg uba fwäyi v qra qvfxhffvbara FWÄYI CÅCRXNG(!) ngg crefbara v seåtn unqr 'qbxhzragrenqr vayäeavatffiåevturgre'
+
+Tha:
+- wnt fxvgre v bz qh uvggng ngg ra yäener tbqxäag srynxgvt/rw shatrenaqr xbq
+  - söeföxre så ryrire ngg töen uraarf wboo (så gnt v unaqyrqner + zrqqryn sry)
+  - ivffgr bz ceboy. zrq unaqy. + söeföxgr gäpxn öire (b snibevfrenqr qäevtrabz ra netfvag ryri fbz uba ine eäqq söe)
+  [irg bz ceboy. + söeföxg gäpxn öire (gäpxn hcc söe fva xbyyrtn Rin) + vagr zvafgn bebyvt söe tenafxavatra (=aäzaqr qrg fbz ngg qrg ine iäy vatrg fäefxvyg)]
+Wbnx:
+- vatn ceboy. ngg _ vagr finene
+- iv uöeqr bff söe zrq erfgra ni tehccra
+Pu:
+- Vagr uöeg ni fvt cå ra zåanq
+  - btvyyne T.f senzsneg, zra uba fvggre xine
+- une vagr haqreföxg ry. gngg gnt v Nqnz + nayvgne ubabz sbegsnenaqr
+- 'ercerf. une genxnff. zvt' (vasöe xynffra): qr naqen glpxre una shaxne oen, +iv xna vagr fnaxgvbaren ra ryri fbz orgre fvt vyyn
+
+bfpne, wbanf, zvpxr
+
+3 ersrerafre: Nor, ZLU, Nyrk
+
+
+Uhe zrane qh/xynffra ngg wnt 'eåxng' unzan hgnasöe?
++Qrg ine rsgre Bfpne selfg hgr zvt fbz...
+    aåten äe nafinevtn söe qrg, bz få fgben qryne ni xynffra,
+    ry. äe qrg qr orelxgnqr 'aåtba' bpu 'vatra'?
 
 }}}
 Calendar + Dailies {{{
+    ___calendarnow
 
 2025 {{{
   general [=PULL IN EXPLANATIONS FROM BELOW (=SLOW WORK-LAPTOP, ETC)]
   .... {{{
+    - söka annat jobb(??)
+
     - Färre/Gjort färre timmar på plats
     - Fysåterhämtning
     - Soc. samvaro och kontakter
     - Hålla (sig) väl med 'hyresvärden'
+
     - Prata med Martin et al (=undersöka fler möjligheter)
   Totalgenomgång + VankiDecks för AspDnc Inact2023  [=flera heldagar]
   }}}
 
   fri-sun  2025-04-25 - 2025-04-27 {{{
-    .
+    - sur dator + gnällig synktjänst
+    - Få ut saker/data via web-API:t
+        + Parallellt läser på om att lägga till saker m. Builder mm
+    Ska fixa med en hash
   }}}
+
+v 18 ----
+hänglista
+- LÄSA IGENOM UNITTESTERNA
+  2025-04-28 må {{{
+  - ordna upp några commits (="Vem har gjort det här")
+      = extra-prints inlagda vid koll med brorsan
+  - behövde också besöka Apoteket
+  - Tvungen att kontakta skolan
+              [+träff/möte med Måns?]
+  - enkät från/kontakt med myh angående utbildningen (+vem beslutar om vite)
+        +kontakta rektorn (som inte kontaktat mig tillbaks =tatt tag i eleverna än? + nytt slutdatum för min del)
+        jag har inte fått nån återkoppling om att eleverna fått nån påbackning ang. utfrysningen/arna?
+        Gimp + 'Hamnat utanför?'
+            bekräfta =är Adam W kvar?
+        varför har jag inte fått någon ursäkt/kommentar från inblandade + flera elever?
+  }}}
+  2025-04-29 ti {{{
+___calendarnow
+      - stördes en del av tråkig värk
+
+  - ordna upp några commits (="Vem har gjort det här")
+  - Tvungen att kontakta skolan (+förbereda för en anmälan till MYH)
+    - behövde också besöka Apoteket
+  - Kolla material m. Erik ----------------------------------+
+    - kolla över önskemål från handledaren/Abe               |
+    + läser parallellt i 'Dnc In Action 2023'                |
+  ----                                                       |
+  Förfrågan möte med Peter ----                              |
+                                                             |
+                                                             |
+  - installer shall run exe-file as a process (silently) <---+
+  - KUNNA/TESTA ANROPA WEB-API:T OCH FÅ UT VERSIONSNUMMER MM FRÅN ENDPOINT
+  L. Malm: 'Hur kan vi testköra en endpoint för att få tillbaks ett versionsnummer?'
+      Kunna testköra sina Endpoints: Postman (=vanligast)
+      - TESTA I SWAGGER
+      - FÖRSLAG/STRATEGI: BYGG GRUNDFUNKTIONALITET I WEB-API:T MED CONTROLLERS; SENARE: BRYT UT FUNKTIONALITEN MER EXAKT TILL FÄRDIG KLASSTRUKTUR
+  Abbe: 'Ska funktionalitet i Core användas/replikeras för att läsa av versionsnummer'(????)
+  ----
+  281351: Create tokenServiceHandler for getting client access-token
+  281111: Create http-client for handling batch-requests to graph
+281103: Create http-client for handling requests to sharepoint
+281370: Retrieve user group-memberships
+280792: Handling file-information in Updater
+280793: Handle process running in Updater
+        Launch installer-files downloaded with Updater
+281574: Handle retrieval of application-index
+281578: Handle retrieval of currently installed application-version
+281582: Handle downloading application-installers
+
+      Håller på med två implementationer just nu
+  }}}
+  2025-04-30 ons {{{
+  }}}
+    Ingen träff med Ludvig
+Boka snack med Pernilla
+
+---- Maj
+v 19
+  2025-05-05 må {{{
+  }}}
+  2025-05-06 ti {{{
+  }}}
+  2025-05-07 ons {{{
+  }}}
+  2025-05-08 to {{{
+  }}}
+  2025-05-09 fre {{{
+  }}}
+
+v 20
+  2025-05-12 må {{{
+  }}}
+  2025-05-13 ti {{{
+  }}}
+  2025-05-14 ons {{{
+  }}}
+  2025-05-15 to {{{
+  }}}
+  2025-05-16 fre {{{
+  }}}
+v 21
+  2025-05-19 må {{{
+  }}}
+  2025-05-20 ti {{{
+  }}}
+  2025-05-21 ons {{{
+  }}}
+  2025-05-22 to {{{
+  }}}
+    - redovisningar i Ua
+  2025-05-23 fre {{{
+  }}}
+v 22
+  2025-05-26 må {{{
+  }}}
+  2025-05-27 ti {{{
+  }}}
+  2025-05-28 ons {{{
+  }}}
+  2025-05-29 to {{{
+  }}}
+  2025-05-30 fre {{{
+  }}}
+
+---- Juni
+v 23
+  2025-06-02 må {{{
+  }}}
+  2025-06-03 ti {{{
+  }}}
+  2025-06-04 ons {{{
+  }}}
+  2025-06-05 to {{{
+  }}}
+
+v 23
+  2025-06-06 må
+  2025-06-07 ti
+  2025-06-08 ons
+  2025-06-09 to
+  2025-06-10 fre
+
 }}}
 
 }}}

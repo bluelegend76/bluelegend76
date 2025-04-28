@@ -11,6 +11,11 @@ Läs Igenom Enhetstester för TruckCom Updater + TruckCom Core
    - CAN<<=TAKE PICTURE>>
 ==============================
 
+https://outlook.office365.com/book/ToyotaMaterialHandlingSwedenAB@tmhe.onmicrosoft.com/
+    Daniel Albertsson
+    daniel.albertsson@toyota-industries.eu
+    0706903379
+
 Learning React {{{
     +Hooks, Functional Components
 
