@@ -4,7 +4,7 @@ ___zzzz
 
 [TODO: =REFMAN COMPLETE TO 'CHECKABLE REFLIST(??)(****)']
 
-~/Dropbox/Udt/rsc/data/lists/Tagged/vimscr-ibmtuts.Tags1.txt
+~/Dropbox/Udt/rsc/data/lists/Tagged/vimscr-ibmtuts.Tags1.txt  ¤¤¤
                             - cutoff version for document
                                 7.2 or higher
                             - vim: get version
@@ -12,21 +12,24 @@ ___zzzz
                             - 'vim offers an integrated debugger' (??)
                             - :h vim-script-intro
                             - save a backup of current file  :call MyBackupFunc(expand('%'), {'all':1, 'save':'recent'})  (=sourcing files / calling functions)
+                            ___zzzz
                             - mapping  :nmap \b :call MyBackupFunc(expand('%'), { 'all': 1 })<CR>
-~/Dropbox/Udt/rsc/data/lists/Tagged/vdocs-Usr41.Tags1.txt
+                                (the most common way to invoke Vim-scripts is by creating new keyboard-mappings)
+~/Dropbox/Udt/rsc/data/lists/Tagged/vdocs-Usr41.Tags1.txt  ¤¤¤
                         .
                                 ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/Man2021plus-01uman.usr41.txt
                                 ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/z_vdocs-Usr41.txt
                                 ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/z_vdocs-Eval.txt
                                 ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/Man2021plus-02refman.eval.txt
-~/Dropbox/Udt/rsc/data/lists/Tagged/lvimscrhard.Tags2.txt
+~/Dropbox/Udt/rsc/data/lists/Tagged/lvimscrhard.Tags2.txt  ¤¤¤
 ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/vdocs-aucmds.txt
   ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/zzz_autocmd.txt
   ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/vdocs_0autocmd-vim.txt
-~/Dropbox/rsc/Doks/phone/Comp/editor/vim/vimhack.txt
-~/Dropbox/rsc/Doks/phone/Comp/editor/vim/viml-prim.txt
+EVAL[!]  [¤¤]
+~/Dropbox/rsc/Doks/phone/Comp/editor/vim/viml-prim.txt  ¤¤(¤)
+~/Dropbox/rsc/Doks/phone/Comp/editor/vim/vimhack.txt  ¤¤
 
-~/Dropbox/rsc/Doks/phone/Comp/editor/vim/neovimLua.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/editor/vim/neovimLua.Tags1.txt  ¤¤¤
 + 1 dok
 
         ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/vimlikepro.txt

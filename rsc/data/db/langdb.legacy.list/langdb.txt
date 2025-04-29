@@ -2,10 +2,13 @@ vim:fdm=indent:fdl=2:
 set fdm=indent fdl=1
       ~/Dropbox/rsc/Doks/Lang/Shorth/gregg-irish.txt
 
+___TAB2
 ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/lang/langdb1-legacy.txt
 
-___TAB
-___TAB1 ___TAB2
+   ___TAB
+___TAB1
+___TAB2
+___freq
 
 ___defrru_freq; TODO=ADD EXTRA FREQ-FILES TO GITHUB[****!!]
     ___phrases_1isUniverb ___PickStart
@@ -18963,6 +18966,7 @@ LISTS (=freqs phrases books)
      |
       201-300: https://translate.google.com/#view=home&op=translate&sl=de&tl=en&text=ohne
 
+___freq=1/2
 ___TAB=aux1 ___defrru_freq
 set fdm=indent fdl=3
 set fdm=indent fdl=2
@@ -45328,7 +45332,6 @@ P00
 
                     evince -p 26 ~/Empire/Doks/Lang/ru/freqry.pdf &
 
-
                     ~/dropbox-legacy/ocrbooks/ruswords-freqry2.txt
 
                     TODO MAKRON(****):
@@ -45337,62 +45340,7 @@ P00
                         batch of Char.Corrections (=lat.alpha 2 cyr.alpha)
                             @e, @o  m.fl. (**)
                     nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
-		#=sök (+markera) alla cyrill. tecken (=ej punct. ***)
                         'Various Cuts' (='rensa slut/resten efter ry. ordet mm/olikn) (*)
-
-                    sätta 'é'-accenter på betonade vokaltecknen (=görs senare):
-                        i e ja a o y (ju)
-                @i: /\vи|й
-rи́/[\u0401\u0410-\u044f\u0451]
-                @e: /\vе|ё
-rе́/[\u0401\u0410-\u044f\u0451]
-                 ja
-                @a: fаrа́/[\u0401\u0410-\u044f\u0451]
-                @o: /\vб|о
-rо́/[\u0401\u0410-\u044f\u0451]
-                @u: fуrу́/[\u0401\u0410-\u044f\u0451]
-                @j: fюrю́/[\u0401\u0410-\u044f\u0451]
-                @y: fыrы́/[\u0401\u0410-\u044f\u0451]
-                @f: /\vэ|Э
-rэ́/[\u0401\u0410-\u044f\u0451]
-
-                    @e: fеrё
-
-                    evince -p 26 ~/Empire/Doks/Lang/ru/freqry.pdf &
-                ___STARTLAST2020
-                        @n: /^"
-                        @a: O,ppu
-                    nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
-
-:
-
-
-                    NEXT/LAST OCR(***)(apr2020):
-                      - infoga sistasista ry fraserna (*) + ersätt latbokst.orden(*)
-                      - ta bort(!) + infoga alla jå
-                            - klipp '-' i vissa eng. ord (*/??)
-                            (+EV. LATINISERAT UTTAL (**))
-                         - infoga betoningstecknen ry
-
-                    2 ST. MAKRONA: KLIPP ENG-ORDS_RAD + NÄSTA RAD
-                        +EN =STANNA PÅ RADEN (=om flera eng-ord)(**)
-
-                    @a: A ; zjzmzo
-
-ddp-Jzt
-                    @b: zjzmzo
-
-ddp-Jzt
-                    @c: A ; zjzmzo
-
-ddp-Jzt
-
-                    (Numrering klar: =till ca s 50(**))
-                     @n: "zyaW
-P00
-                    Klipp "+ + Fånga som Block(**!)
-                     @y: "+pG$d"_dGgt
-
 
                 235 песня ; song
                 236 имя ; (first) name
@@ -56044,6 +55992,7 @@ P00
                 10000 ярый ; furious, raging | fervent, rabid
     ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Ru.txt
     --
+___freq=2/2
     ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Spa.txt  @  __lang-3=es
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_spa.txt
       info guix **(!!)
@@ -65867,6 +65816,7 @@ freqs-lists 2, 3
             //  Date stamp: 2015-03-10
             //  Format: rank [tab] lemma [tab] corpus frequency [tab] window size [new line]
             //	For an explanation of what the columns mean, visit http://www.lexiconista.com/datasets/frequency-ga/
+
             1	an	1338874	25
             2	bí	1194301	28
             3	ar	898707	38

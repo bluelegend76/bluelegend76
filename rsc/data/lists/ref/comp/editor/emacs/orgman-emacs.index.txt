@@ -1,879 +1,880 @@
 vim:fdm=indent:fdl=2:
 set fdm=indent fdl=2
 
-~/Empire/Doks/Comp/editor/emacs/cheatsh-qref/emacsrefcard_org01.pdf
-                            Org-Mode Reference Card (1/2) (for version 7.8.11)
-                            Getting Started
-                            To read the on-line documentation try
-                            M-x org-info
-                        Visibility Cycling ----
-                            rotate current subtree between states
-                            TAB
-                            rotate entire buffer between states
-                            S-TAB
-                            restore property-dependent startup visibility C-u C-u TAB
-                            show the whole file, including drawers
-                            C-u C-u C-u TAB
-                            reveal context around point
-                            C-c C-r
-                        Motion ----
-                            next/previous heading
-                            next/previous heading, same level
-                            backward to higher level heading
-                            jump to another place in document
-                            previous/next plain list item
-                            C-c C-n/p
-                            C-c C-f/b
-                            C-c C-u
-                            C-c C-j
-                            S-UP/DOWN
-                            [2]
-                        Structure Editing ----
-                            insert new heading/item at current level
-                            M-RET
-                            insert new heading after subtree
-                            C-RET
-                            insert new TODO entry/checkbox item
-                            M-S-RET
-                            insert TODO entry/ckbx after subtree
-                            C-S-RET
-                            turn (head)line into item, cycle item type
-                            C-c -
-                            turn item/line into headline
-                            C-c *
-                            promote/demote heading
-                            M-LEFT/RIGHT
-                            promote/demote current subtree
-                            M-S-LEFT/RIGHT
-                            move subtree/list item up/down
-                            M-S-UP/DOWN
-                            sort subtree/region/plain-list
-                            C-c ^
-                            clone a subtree
-                            C-c C-x c
-                            copy visible text
-                            C-c C-x v
-                            kill/copy subtree
-                            C-c C-x C-w/M-w
-                            yank subtree
-                            C-c C-x C-y or C-y
-                            narrow buffer to subtree / widen
-                            C-x n s/w
-                        Capture - Refile - Archiving ----
-                            capture a new item (C-u C-u = goto last)
-                            refile subtree (C-u C-u = goto last)
-                            archive subtree using the default command
-                            move subtree to archive file
-                            toggle ARCHIVE tag / to ARCHIVE sibling
-                            force cycling of an ARCHIVEd tree
-                            C-c c
-                            [1]
-                            C-c C-w
-                            C-c C-x C-a
-                            C-c C-x C-s
-                            C-c C-x a/A
-                            C-TAB
-                        Filtering and Sparse Trees ----
-                            construct a sparse tree by various criteria
-                            view TODO’s in sparse tree
-                            global TODO list in agenda mode
-                            time sorted view of current org file
-                            C-c /
-                            C-c / t/T
-                            C-c a t
-                            C-c a L
-                            [1]
-                        Tables ----
-                            Creating a table
-                            just start typing, e.g.
-                            |Name|Phone|Age RET |- TAB
-                            convert region to table
-                            C-c |
-                            ... separator at least 3 spaces
-                            C-3 C-c |
-                            Commands available inside tables
-                            The following commands work when the cursor is inside a table.
-                            Outside of tables, the same keys may have other functionality.
-                            Re-aligning and field motion
-                            re-align the table without moving the cursor C-c C-c
-                            re-align the table, move to next field
-                            TAB
-                            move to previous field
-                            S-TAB
-                            re-align the table, move to next row
-                            RET
-                            move to beginning/end of field
-                            M-a/e
-                            Row and column editing
-                            move the current column left
-                            M-LEFT/RIGHT
-                            kill the current column
-                            M-S-LEFT
-                            insert new column to left of cursor position
-                            M-S-RIGHT
-                            move the current row up/down
-                            M-UP/DOWN
-                            kill the current row or horizontal line
-                            M-S-UP
-                            insert new row above the current row
-                            M-S-DOWN
-                            insert hline below (C-u : above) current row C-c -
-                            insert hline and move to line below it
-                            C-c RET
-                            sort lines in region
-                            C-c ^
-                            Regions
-                            cut/copy/paste rectangular region
-                            C-c C-x C-w/M-w/C-y
-                            fill paragraph across selected cells
-                            C-c C-q
-                            Miscellaneous
-                            to limit column width to N characters, use
-                            ...| <N> |...
-                            edit the current field in a separate window
-                            C-c ‘
-                            make current field fully visible
-                            C-u TAB
-                            export as tab-separated file
-                            M-x org-table-export
-                            import tab-separated file
-                            M-x org-table-import
-                            sum numbers in current column/rectangle
-                            C-c +
-                            Tables created with the table.el package
-                            insert a new table.el table
-                            C-c ~
-                            recognize existing table.el table
-                            C-c C-c
-                            convert table (Org-mode ↔ table.el)
-                            C-c ~
-                            Spreadsheet
-                            Formulas typed in field are executed by TAB, RET and C-c C-c.
-                            = introduces a column formula, := a field formula.
-                            Example: Add Col1 and Col2
-                            |=$1+$2 |
-                            ... with printf format specification
-                            |=$1+$2;%.2f|
-                            ... with constants from constants.el
-                            |=$1/$c/$cm |
-                            sum from 2nd to 3rd hline
-                            |:=vsum(@II..@III)|
-                            apply current column formula
-                            | = |
-                            set and eval column formula
-                            C-c =
-                            set and eval field formula
-                            C-u C-c =
-                            re-apply all stored equations to current line C-c *
-                            re-apply all stored equations to entire table
-                            C-u C-c *
-                            iterate table to stability
-                            C-u C-u C-c *
-                            C-#
-                            rotate calculation mark through # * ! ˆ $
-                            show line, column, formula reference
-                            C-c ?
-                            toggle grid / debugger
-                            C-c }/{
-                            Formula Editor
-                            edit formulas in separate buffer
-                            exit and install new formulas
-                            exit, install, and apply new formulas
-                            abort
-                            toggle reference style
-                            pretty-print Lisp formula
-                            complete Lisp symbol
-                            shift reference point
-                            shift test line for column references
-                            scroll the window showing the table
-                            toggle table coordinate grid
-                            C-c ’
-                            C-c C-c
-                            C-u C-c C-c
-                            C-c C-q
-                            C-c C-r
-                            TAB
-                            M-TAB
-                            S-cursor
-                            M-up/down
-                            M-S-up/down
-                            C-c }
-                        Links ----
-                            globally store link to the current location
-                            insert a link (TAB completes stored links)
-                            insert file link with file name completion
-                            edit (also hidden part of) link at point
-                            open file links in emacs
-                            ...force open in emacs/other window
-                            open link at point
-                            ...force open in emacs/other window
-                            record a position in mark ring
-                            jump back to last followed link(s)
-                            find next link
-                            find previous link
-                            edit code snippet of file at point
-                            toggle inline display of linked images
-                            C-c l
-                            [1]
-                            C-c C-l
-                            C-u C-c C-l
-                            C-c C-l
-                            C-c C-o
-                            C-u C-c C-o
-                            mouse-1/2
-                            mouse-3
-                            C-c %
-                            C-c &
-                            C-c C-x C-n
-                            C-c C-x C-p
-                            C-c ’
-                            C-c C-x C-v
-                        Working with Code (Babel) ----
-                            execute code block at point
-                            open results of code block at point
-                            check code block at point for errors
-                            insert a header argument with completion
-                            view expanded body of code block at point
-                            view information about code block at point
-                            go to named code block
-                            go to named result
-                            go to the head of the current code block
-                            go to the next code block
-                            go to the previous code block
-                            demarcate a code block
-                            execute the next key sequence in the code
-                            edit buffer
-                            execute all code blocks in current buffer
-                            execute all code blocks in current subtree
-                            tangle code blocks in current file
-                            tangle code blocks in supplied file
-                            ingest all code blocks in supplied file into the
-                            Library of Babel
-                            switch to the session of the current code block
-                            load the current code block into a session
-                            view sha1 hash of the current code block
-                            C-c C-c
-                            C-c C-o
-                            C-c C-v c
-                            C-c C-v j
-                            C-c C-v v
-                            C-c C-v I
-                            C-c C-v g
-                            C-c C-v r
-                            C-c C-v u
-                            C-c C-v n
-                            C-c C-v p
-                            C-c C-v d
-                            C-c C-v x
-                            C-c C-v b
-                            C-c C-v s
-                            C-c C-v t
-                            C-c C-v f
-                            C-c C-v i
-                            C-c C-v z
-                            C-c C-v l
-                            C-c C-v a
-                        Completion ----
-                            In-buffer completion completes TODO keywords at headline
-                            start, TeX macros after "\", option keywords after "#-", TAGS
-                            after ":", and dictionary words elsewhere.
-                            complete word at point
-                            M-TABOrg-Mode Reference Card (2/2)
-                            (for version 7.8.11)
-                            TODO Items and Checkboxes
-                            rotate the state of the current item
-                            C-c C-t
-                            select next/previous state
-                            S-LEFT/RIGHT
-                            select next/previous set
-                            C-S-LEFT/RIGHT
-                            toggle ORDERED property
-                            C-c C-x o
-                            view TODO items in a sparse tree
-                            C-c C-v
-                            view 3rd TODO keyword’s sparse tree
-                            C-3 C-c C-v
-                            set the priority of the current item
-                            C-c , [ABC]
-                            remove priority cookie from current item
-                            C-c , SPC
-                            raise/lower priority of current item
-                            S-UP/DOWN [2]
-                            insert new checkbox item in plain list
-                            M-S-RET
-                            toggle checkbox(es) in region/entry/at point C-c C-x C-b
-                            toggle checkbox at point
-                            C-c C-c
-                            update checkbox statistics (C-u : whole file) C-c #
-                        Tags ----
-                            set tags for current heading
-                            realign tags in all headings
-                            create sparse tree with matching tags
-                            globally (agenda) match tags at cursor
-                            C-c C-q
-                            C-u C-c C-q
-                            C-c \
-                            C-c C-o
-                        Properties and Column View ----
-                            set property/effort
-                            C-c C-x p/e
-                            special commands in property lines
-                            C-c C-c
-                            next/previous allowed value
-                            S-left/right
-                            turn on column view
-                            C-c C-x C-c
-                            capture columns view in dynamic block
-                            C-c C-x i
-                            quit column view
-                            q
-                            show full value
-                            v
-                            edit value
-                            e
-                            next/previous allowed value
-                            n/p or S-left/right
-                            edit allowed values list
-                            a
-                            make column wider/narrower
-                            > / <
-                            move column left/right
-                            M-left/right
-                            add new column
-                            M-S-right
-                            Delete current column
-                            M-S-left
-                        Timestamps ----
-                            prompt for date and insert timestamp
-                            C-c .
-                            like C-c . but insert date and time format
-                            C-u C-c .
-                            like C-c . but make stamp inactive
-                            C-c !
-                            insert DEADLINE timestamp
-                            C-c C-d
-                            insert SCHEDULED timestamp
-                            C-c C-s
-                            create sparse tree with all deadlines due
-                            C-c / d
-                            the time between 2 dates in a time range
-                            C-c C-y
-                            change timestamp at cursor ±1 day
-                            S-RIGHT/LEFT
-                            [2]
-                            change year/month/day at cursor by ±1
-                            S-UP/DOWN [2]
-                            access the calendar for the current date
-                            C-c >
-                            insert timestamp matching date in calendar C-c <
-                            access agenda for current date
-                            C-c C-o
-                            select date while prompted
-                            mouse-1/RET
-                            toggle custom format display for dates/times C-c C-x C-t
-                            Clocking time
-                            start clock on current item
-                            stop/cancel clock on current item
-                            display total subtree times
-                            remove displayed times
-                            insert/update table with clock report
-                            C-c C-x C-i
-                            C-c C-x C-o/x
-                            C-c C-x C-d
-                            C-c C-c
-                            C-c C-x C-r
-                        Agenda Views ----
-                            add/move current file to front of agenda
-                            C-c [
-                            remove current file from your agenda
-                            C-c ]
-                            cycle through agenda file list
-                            C-’
-                            set/remove restriction lock
-                            C-c C-x </>
-                            compile agenda for the current week
-                            C-c a a
-                            [1]
-                            compile global TODO list
-                            C-c a t
-                            [1]
-                            compile TODO list for specific keyword
-                            C-c a T
-                            [1]
-                            match tags, TODO kwds, properties
-                            C-c a m
-                            [1]
-                            match only in TODO entries
-                            C-c a M
-                            [1]
-                            find stuck projects
-                            C-c a #
-                            [1]
-                            show timeline of current org file
-                            C-c a L
-                            [1]
-                            configure custom commands
-                            C-c a C
-                            [1]
-                            agenda for date at cursor
-                            C-c C-o
-                            Commands available in an agenda buffer
-                            View Org file
-                            show original location of item
-                            SPC/mouse-3
-                            show and recenter window
-                            L
-                            goto original location in other window
-                            TAB/mouse-2
-                            goto original location, delete other windows RET
-                            show subtree in indirect buffer, ded. frame
-                            C-c C-x b
-                            toggle follow-mode
-                            F
-                            Change display
-                            delete other windows
-                            o
-                            view mode dispatcher
-                            v
-                            switch to day/week/month/year/def view
-                            d w vm vy vSP
-                            toggle diary entries / time grid / habits
-                            D / G / K
-                            toggle entry text / clock report
-                            E / R
-                            toggle display of logbook entries
-                            l / v l/L/c
-                            toggle inclusion of archived trees/files
-                            v a/A
-                            refresh agenda buffer with any changes
-                            r / g
-                            filter with respect to a tag
-                            /
-                            save all org-mode buffers
-                            s
-                            display next/previous day,week,...
-                            f / b
-                            goto today / some date (prompt)
-                            . / j
-                            Remote editing
-                            digit argument
-                            0-9
-                            change state of current TODO item
-                            t
-                            kill item and source
-                            C-k
-                            archive default
-                            $ / a
-                            refile the subtree
-                            C-c C-w
-                            set/show tags of current headline
-                            : / T
-                            set effort property (prefix=nth)
-                            e
-                            set / compute priority of current item
-                            , / P
-                            raise/lower priority of current item
-                            S-UP/DOWN [2]
-                            run an attachment command
-                            C-c C-a
-                            schedule/set deadline for this item
-                            C-c C-s/d
-                            change timestamp one day earlier/later S-LEFT/RIGHT
-                            [2]
-                            change timestamp to today
-                            >
-                            insert new entry into diary
-                            i
-                            start/stop/cancel the clock on current item
-                            jump to running clock entry
-                            mark / unmark / execute bulk action
-                            Misc
-                            follow one or offer all links in current entry
-                            Calendar commands
-                            find agenda cursor date in calendar
-                            compute agenda for calendar cursor date
-                            show phases of the moon
-                            show sunrise/sunset times
-                            show holidays
-                            convert date to other calendars
-                            Quit and Exit
-                            quit agenda, remove agenda buffer
-                            exit agenda, remove all agenda buffers
-                            I / O / X
-                            J
-                            m / u / B
-                            C-c C-o
-                            c
-                            c
-                            M
-                            S
-                            H
-                            C
-                            q
-                            x
-                        LaTeX and cdlatex-mode ----
-                            preview LaTeX fragment
-                            expand abbreviation (cdlatex-mode)
-                            insert/modify math symbol (cdlatex-mode)
-                            insert citation using RefTeX
-                            C-c C-x C-l
-                            TAB
-                            ‘ / ’
-                            C-c C-x [
-                            Exporting and Publishing
-                            Exporting creates files with extensions .txt and .html in the
-                            current directory. Publishing puts the resulting file into some
-                            other place.
-                            export/publish dispatcher
-                            C-c C-e
-                            export visible part only
-                            C-c C-e v
-                            insert template of export options
-                            C-c C-e t
-                            toggle fixed width for entry or region
-                            C-c :
-                            toggle pretty display of scripts, entities
-                            C-c C-x \
-                            Comments: Text not being exported
-                            Lines starting with # and subtrees starting with COMMENT
-                            are never exported.
-                            toggle COMMENT keyword on entry
-                            C-c ;
-                            Dynamic Blocks
-                            update dynamic block at point
-                            update all dynamic blocks
-                            C-c C-x C-u
-                            C-u C-c C-x C-u
-                        Notes ----
-                            [1] This is only a suggestion for a binding of this command.
-                            Choose your own key as shown under ACTIVATION.
-                            [2] Keybinding affected by org-support-shift-select and also
-                            org-replace-disputed-keys.
-                            Copyright c 2012 Free Software Foundation, Inc.
-                            v7.8.11 for Org-Mode 7.8.11, 2012
-                            Author: Philip Rooke
-                            based on refcard design and format by Stephen Gildea
-                            Permission is granted to make and distribute copies of this card pro-
-                            vided the copyright notice and this permission notice are preserved on
-                            all copies.
+~/Empire/Doks/Comp/editor/emacs/cheatsh-qref/emacsrefcard_org01.pdf  ¤¤¤
+                                Org-Mode Reference Card (1/2) (for version 7.8.11)
+                                Getting Started
+                                To read the on-line documentation try
+                                M-x org-info
+                            Visibility Cycling ----
+                                rotate current subtree between states
+                                TAB
+                                rotate entire buffer between states
+                                S-TAB
+                                restore property-dependent startup visibility C-u C-u TAB
+                                show the whole file, including drawers
+                                C-u C-u C-u TAB
+                                reveal context around point
+                                C-c C-r
+                            Motion ----
+                                next/previous heading
+                                next/previous heading, same level
+                                backward to higher level heading
+                                jump to another place in document
+                                previous/next plain list item
+                                C-c C-n/p
+                                C-c C-f/b
+                                C-c C-u
+                                C-c C-j
+                                S-UP/DOWN
+                                [2]
+                            Structure Editing ----
+                                insert new heading/item at current level
+                                M-RET
+                                insert new heading after subtree
+                                C-RET
+                                insert new TODO entry/checkbox item
+                                M-S-RET
+                                insert TODO entry/ckbx after subtree
+                                C-S-RET
+                                turn (head)line into item, cycle item type
+                                C-c -
+                                turn item/line into headline
+                                C-c *
+                                promote/demote heading
+                                M-LEFT/RIGHT
+                                promote/demote current subtree
+                                M-S-LEFT/RIGHT
+                                move subtree/list item up/down
+                                M-S-UP/DOWN
+                                sort subtree/region/plain-list
+                                C-c ^
+                                clone a subtree
+                                C-c C-x c
+                                copy visible text
+                                C-c C-x v
+                                kill/copy subtree
+                                C-c C-x C-w/M-w
+                                yank subtree
+                                C-c C-x C-y or C-y
+                                narrow buffer to subtree / widen
+                                C-x n s/w
+                            Capture - Refile - Archiving ----
+                                capture a new item (C-u C-u = goto last)
+                                refile subtree (C-u C-u = goto last)
+                                archive subtree using the default command
+                                move subtree to archive file
+                                toggle ARCHIVE tag / to ARCHIVE sibling
+                                force cycling of an ARCHIVEd tree
+                                C-c c
+                                [1]
+                                C-c C-w
+                                C-c C-x C-a
+                                C-c C-x C-s
+                                C-c C-x a/A
+                                C-TAB
+                            Filtering and Sparse Trees ----
+                                construct a sparse tree by various criteria
+                                view TODO’s in sparse tree
+                                global TODO list in agenda mode
+                                time sorted view of current org file
+                                C-c /
+                                C-c / t/T
+                                C-c a t
+                                C-c a L
+                                [1]
+                            Tables ----
+                                Creating a table
+                                just start typing, e.g.
+                                |Name|Phone|Age RET |- TAB
+                                convert region to table
+                                C-c |
+                                ... separator at least 3 spaces
+                                C-3 C-c |
+                                Commands available inside tables
+                                The following commands work when the cursor is inside a table.
+                                Outside of tables, the same keys may have other functionality.
+                                Re-aligning and field motion
+                                re-align the table without moving the cursor C-c C-c
+                                re-align the table, move to next field
+                                TAB
+                                move to previous field
+                                S-TAB
+                                re-align the table, move to next row
+                                RET
+                                move to beginning/end of field
+                                M-a/e
+                                Row and column editing
+                                move the current column left
+                                M-LEFT/RIGHT
+                                kill the current column
+                                M-S-LEFT
+                                insert new column to left of cursor position
+                                M-S-RIGHT
+                                move the current row up/down
+                                M-UP/DOWN
+                                kill the current row or horizontal line
+                                M-S-UP
+                                insert new row above the current row
+                                M-S-DOWN
+                                insert hline below (C-u : above) current row C-c -
+                                insert hline and move to line below it
+                                C-c RET
+                                sort lines in region
+                                C-c ^
+                                Regions
+                                cut/copy/paste rectangular region
+                                C-c C-x C-w/M-w/C-y
+                                fill paragraph across selected cells
+                                C-c C-q
+                                Miscellaneous
+                                to limit column width to N characters, use
+                                ...| <N> |...
+                                edit the current field in a separate window
+                                C-c ‘
+                                make current field fully visible
+                                C-u TAB
+                                export as tab-separated file
+                                M-x org-table-export
+                                import tab-separated file
+                                M-x org-table-import
+                                sum numbers in current column/rectangle
+                                C-c +
+                                Tables created with the table.el package
+                                insert a new table.el table
+                                C-c ~
+                                recognize existing table.el table
+                                C-c C-c
+                                convert table (Org-mode ↔ table.el)
+                                C-c ~
+                                Spreadsheet
+                                Formulas typed in field are executed by TAB, RET and C-c C-c.
+                                = introduces a column formula, := a field formula.
+                                Example: Add Col1 and Col2
+                                |=$1+$2 |
+                                ... with printf format specification
+                                |=$1+$2;%.2f|
+                                ... with constants from constants.el
+                                |=$1/$c/$cm |
+                                sum from 2nd to 3rd hline
+                                |:=vsum(@II..@III)|
+                                apply current column formula
+                                | = |
+                                set and eval column formula
+                                C-c =
+                                set and eval field formula
+                                C-u C-c =
+                                re-apply all stored equations to current line C-c *
+                                re-apply all stored equations to entire table
+                                C-u C-c *
+                                iterate table to stability
+                                C-u C-u C-c *
+                                C-#
+                                rotate calculation mark through # * ! ˆ $
+                                show line, column, formula reference
+                                C-c ?
+                                toggle grid / debugger
+                                C-c }/{
+                                Formula Editor
+                                edit formulas in separate buffer
+                                exit and install new formulas
+                                exit, install, and apply new formulas
+                                abort
+                                toggle reference style
+                                pretty-print Lisp formula
+                                complete Lisp symbol
+                                shift reference point
+                                shift test line for column references
+                                scroll the window showing the table
+                                toggle table coordinate grid
+                                C-c ’
+                                C-c C-c
+                                C-u C-c C-c
+                                C-c C-q
+                                C-c C-r
+                                TAB
+                                M-TAB
+                                S-cursor
+                                M-up/down
+                                M-S-up/down
+                                C-c }
+                            Links ----
+                                globally store link to the current location
+                                insert a link (TAB completes stored links)
+                                insert file link with file name completion
+                                edit (also hidden part of) link at point
+                                open file links in emacs
+                                ...force open in emacs/other window
+                                open link at point
+                                ...force open in emacs/other window
+                                record a position in mark ring
+                                jump back to last followed link(s)
+                                find next link
+                                find previous link
+                                edit code snippet of file at point
+                                toggle inline display of linked images
+                                C-c l
+                                [1]
+                                C-c C-l
+                                C-u C-c C-l
+                                C-c C-l
+                                C-c C-o
+                                C-u C-c C-o
+                                mouse-1/2
+                                mouse-3
+                                C-c %
+                                C-c &
+                                C-c C-x C-n
+                                C-c C-x C-p
+                                C-c ’
+                                C-c C-x C-v
+                            Working with Code (Babel) ----
+                                execute code block at point
+                                open results of code block at point
+                                check code block at point for errors
+                                insert a header argument with completion
+                                view expanded body of code block at point
+                                view information about code block at point
+                                go to named code block
+                                go to named result
+                                go to the head of the current code block
+                                go to the next code block
+                                go to the previous code block
+                                demarcate a code block
+                                execute the next key sequence in the code
+                                edit buffer
+                                execute all code blocks in current buffer
+                                execute all code blocks in current subtree
+                                tangle code blocks in current file
+                                tangle code blocks in supplied file
+                                ingest all code blocks in supplied file into the
+                                Library of Babel
+                                switch to the session of the current code block
+                                load the current code block into a session
+                                view sha1 hash of the current code block
+                                C-c C-c
+                                C-c C-o
+                                C-c C-v c
+                                C-c C-v j
+                                C-c C-v v
+                                C-c C-v I
+                                C-c C-v g
+                                C-c C-v r
+                                C-c C-v u
+                                C-c C-v n
+                                C-c C-v p
+                                C-c C-v d
+                                C-c C-v x
+                                C-c C-v b
+                                C-c C-v s
+                                C-c C-v t
+                                C-c C-v f
+                                C-c C-v i
+                                C-c C-v z
+                                C-c C-v l
+                                C-c C-v a
+                            Completion ----
+                                In-buffer completion completes TODO keywords at headline
+                                start, TeX macros after "\", option keywords after "#-", TAGS
+                                after ":", and dictionary words elsewhere.
+                                complete word at point
+                                M-TABOrg-Mode Reference Card (2/2)
+                                (for version 7.8.11)
+                                TODO Items and Checkboxes
+                                rotate the state of the current item
+                                C-c C-t
+                                select next/previous state
+                                S-LEFT/RIGHT
+                                select next/previous set
+                                C-S-LEFT/RIGHT
+                                toggle ORDERED property
+                                C-c C-x o
+                                view TODO items in a sparse tree
+                                C-c C-v
+                                view 3rd TODO keyword’s sparse tree
+                                C-3 C-c C-v
+                                set the priority of the current item
+                                C-c , [ABC]
+                                remove priority cookie from current item
+                                C-c , SPC
+                                raise/lower priority of current item
+                                S-UP/DOWN [2]
+                                insert new checkbox item in plain list
+                                M-S-RET
+                                toggle checkbox(es) in region/entry/at point C-c C-x C-b
+                                toggle checkbox at point
+                                C-c C-c
+                                update checkbox statistics (C-u : whole file) C-c #
+                            Tags ----
+                                set tags for current heading
+                                realign tags in all headings
+                                create sparse tree with matching tags
+                                globally (agenda) match tags at cursor
+                                C-c C-q
+                                C-u C-c C-q
+                                C-c \
+                                C-c C-o
+                            Properties and Column View ----
+                                set property/effort
+                                C-c C-x p/e
+                                special commands in property lines
+                                C-c C-c
+                                next/previous allowed value
+                                S-left/right
+                                turn on column view
+                                C-c C-x C-c
+                                capture columns view in dynamic block
+                                C-c C-x i
+                                quit column view
+                                q
+                                show full value
+                                v
+                                edit value
+                                e
+                                next/previous allowed value
+                                n/p or S-left/right
+                                edit allowed values list
+                                a
+                                make column wider/narrower
+                                > / <
+                                move column left/right
+                                M-left/right
+                                add new column
+                                M-S-right
+                                Delete current column
+                                M-S-left
+                            Timestamps ----
+                                prompt for date and insert timestamp
+                                C-c .
+                                like C-c . but insert date and time format
+                                C-u C-c .
+                                like C-c . but make stamp inactive
+                                C-c !
+                                insert DEADLINE timestamp
+                                C-c C-d
+                                insert SCHEDULED timestamp
+                                C-c C-s
+                                create sparse tree with all deadlines due
+                                C-c / d
+                                the time between 2 dates in a time range
+                                C-c C-y
+                                change timestamp at cursor ±1 day
+                                S-RIGHT/LEFT
+                                [2]
+                                change year/month/day at cursor by ±1
+                                S-UP/DOWN [2]
+                                access the calendar for the current date
+                                C-c >
+                                insert timestamp matching date in calendar C-c <
+                                access agenda for current date
+                                C-c C-o
+                                select date while prompted
+                                mouse-1/RET
+                                toggle custom format display for dates/times C-c C-x C-t
+                                Clocking time
+                                start clock on current item
+                                stop/cancel clock on current item
+                                display total subtree times
+                                remove displayed times
+                                insert/update table with clock report
+                                C-c C-x C-i
+                                C-c C-x C-o/x
+                                C-c C-x C-d
+                                C-c C-c
+                                C-c C-x C-r
+                            Agenda Views ----
+                                add/move current file to front of agenda
+                                C-c [
+                                remove current file from your agenda
+                                C-c ]
+                                cycle through agenda file list
+                                C-’
+                                set/remove restriction lock
+                                C-c C-x </>
+                                compile agenda for the current week
+                                C-c a a
+                                [1]
+                                compile global TODO list
+                                C-c a t
+                                [1]
+                                compile TODO list for specific keyword
+                                C-c a T
+                                [1]
+                                match tags, TODO kwds, properties
+                                C-c a m
+                                [1]
+                                match only in TODO entries
+                                C-c a M
+                                [1]
+                                find stuck projects
+                                C-c a #
+                                [1]
+                                show timeline of current org file
+                                C-c a L
+                                [1]
+                                configure custom commands
+                                C-c a C
+                                [1]
+                                agenda for date at cursor
+                                C-c C-o
+                                Commands available in an agenda buffer
+                                View Org file
+                                show original location of item
+                                SPC/mouse-3
+                                show and recenter window
+                                L
+                                goto original location in other window
+                                TAB/mouse-2
+                                goto original location, delete other windows RET
+                                show subtree in indirect buffer, ded. frame
+                                C-c C-x b
+                                toggle follow-mode
+                                F
+                                Change display
+                                delete other windows
+                                o
+                                view mode dispatcher
+                                v
+                                switch to day/week/month/year/def view
+                                d w vm vy vSP
+                                toggle diary entries / time grid / habits
+                                D / G / K
+                                toggle entry text / clock report
+                                E / R
+                                toggle display of logbook entries
+                                l / v l/L/c
+                                toggle inclusion of archived trees/files
+                                v a/A
+                                refresh agenda buffer with any changes
+                                r / g
+                                filter with respect to a tag
+                                /
+                                save all org-mode buffers
+                                s
+                                display next/previous day,week,...
+                                f / b
+                                goto today / some date (prompt)
+                                . / j
+                                Remote editing
+                                digit argument
+                                0-9
+                                change state of current TODO item
+                                t
+                                kill item and source
+                                C-k
+                                archive default
+                                $ / a
+                                refile the subtree
+                                C-c C-w
+                                set/show tags of current headline
+                                : / T
+                                set effort property (prefix=nth)
+                                e
+                                set / compute priority of current item
+                                , / P
+                                raise/lower priority of current item
+                                S-UP/DOWN [2]
+                                run an attachment command
+                                C-c C-a
+                                schedule/set deadline for this item
+                                C-c C-s/d
+                                change timestamp one day earlier/later S-LEFT/RIGHT
+                                [2]
+                                change timestamp to today
+                                >
+                                insert new entry into diary
+                                i
+                                start/stop/cancel the clock on current item
+                                jump to running clock entry
+                                mark / unmark / execute bulk action
+                                Misc
+                                follow one or offer all links in current entry
+                                Calendar commands
+                                find agenda cursor date in calendar
+                                compute agenda for calendar cursor date
+                                show phases of the moon
+                                show sunrise/sunset times
+                                show holidays
+                                convert date to other calendars
+                                Quit and Exit
+                                quit agenda, remove agenda buffer
+                                exit agenda, remove all agenda buffers
+                                I / O / X
+                                J
+                                m / u / B
+                                C-c C-o
+                                c
+                                c
+                                M
+                                S
+                                H
+                                C
+                                q
+                                x
+                            LaTeX and cdlatex-mode ----
+                                preview LaTeX fragment
+                                expand abbreviation (cdlatex-mode)
+                                insert/modify math symbol (cdlatex-mode)
+                                insert citation using RefTeX
+                                C-c C-x C-l
+                                TAB
+                                ‘ / ’
+                                C-c C-x [
+                                Exporting and Publishing
+                                Exporting creates files with extensions .txt and .html in the
+                                current directory. Publishing puts the resulting file into some
+                                other place.
+                                export/publish dispatcher
+                                C-c C-e
+                                export visible part only
+                                C-c C-e v
+                                insert template of export options
+                                C-c C-e t
+                                toggle fixed width for entry or region
+                                C-c :
+                                toggle pretty display of scripts, entities
+                                C-c C-x \
+                                Comments: Text not being exported
+                                Lines starting with # and subtrees starting with COMMENT
+                                are never exported.
+                                toggle COMMENT keyword on entry
+                                C-c ;
+                                Dynamic Blocks
+                                update dynamic block at point
+                                update all dynamic blocks
+                                C-c C-x C-u
+                                C-u C-c C-x C-u
+                            Notes ----
+                                [1] This is only a suggestion for a binding of this command.
+                                Choose your own key as shown under ACTIVATION.
+                                [2] Keybinding affected by org-support-shift-select and also
+                                org-replace-disputed-keys.
+                                Copyright c 2012 Free Software Foundation, Inc.
+                                v7.8.11 for Org-Mode 7.8.11, 2012
+                                Author: Philip Rooke
+                                based on refcard design and format by Stephen Gildea
+                                Permission is granted to make and distribute copies of this card pro-
+                                vided the copyright notice and this permission notice are preserved on
+                                all copies.
 
+~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.tags1.txt  ¤¤¤
 Table of Contents
-              1 Introduction  p1
-            1.1 Summary  p1
-            1.2 Installation  p1
-            1.3 Activation  p2
-            1.4 Feedback  p3
-            1.5 Typesetting Conventions Used in this Manual  p4
-              2 Document Structure  p6
-            2.1 Headlines  p6
-            2.2 Visibility Cycling.  p6
-            2.2.1 Global and local cycling  p6
-            2.2.2 Initial visibility  p8
-            2.2.3 Catching invisible edits  p8
-            2.3 Motion  p8
-            2.4 Structure Editing  p9
-            2.5 Sparse Trees  p11
-            2.6 Plain Lists  p12
-            2.7 Drawers.  p15
-            2.8 Blocks  p15
-              3 Tables  p16
-            3.1 Built-in Table Editor  p16
-            3.2 Column Width and Alignment  p20
-            3.3 Column Groups  p21
-            3.4 The Orgtbl Minor Mode  p21
-            3.5 The Spreadsheet  p22
-            3.5.1 References  p22
-            3.5.2 Formula syntax for Calc  p24
-            3.5.3 Emacs Lisp forms as formulas  p26
-            3.5.4 Durations and time values  p27
-            3.5.5 Field and range formulas  p27
-            3.5.6 Column formulas  p28
-            3.5.7 Lookup functions  p28
-            3.5.8 Editing and debugging formulas  p29
-            3.5.9 Updating the table  p31
-            3.5.10 Advanced features  p32
-            3.6 Org Plot  p33
-             --
-              4 Hyperlinks  p36
-            4.1 Link Format  p36
-            4.2 Internal Links  p37
-            4.3 Radio Targets  p38
-            4.4 External Links  p38
-            4.5 Handling Links  p40
-            4.6 Using Links Outside Org  p43
-            4.7 Link Abbreviations  p43
-            4.8 Search Options in File Links  p44
-            4.9 Custom Searches  p45
-              5 TODO Items  p46
-            5.1 Basic TODO Functionality  p46
-            5.2 Extended Use of TODO Keywords  p47
-            5.2.1 TODO keywords as workflow states  p47
-            5.2.2 TODO keywords as types  p47
-            5.2.3 Multiple keyword sets in one file  p48
-            5.2.4 Fast access to TODO states  p49
-            5.2.5 Setting up keywords for individual files  p49
-            5.2.6 Faces for TODO keywords  p49
-            5.2.7 TODO dependencies  p50
-            5.3 Progress Logging  p51
-            5.3.1 Closing items  p51
-            5.3.2 Tracking TODO state changes  p51
-            5.3.3 Tracking your habits  p53
-            5.4 Priorities  p54
-            5.5 Breaking Down Tasks into Subtasks  p55
-            5.6 Checkboxes  p56
-              6 Tags  p59
-            6.1 Tag Inheritance  p59
-            6.2 Setting Tags  p59
-            6.3 Tag Hierarchy  p62
-            6.4 Tag Searches  p63
-              7 Properties and Columns  p64
-            7.1 Property Syntax  p64
-            7.2 Special Properties  p66
-            7.3 Property Searches  p66
-            7.4 Property Inheritance  p67
-            7.5 Column View  p68
-            7.5.1 Defining columns  p68
-            7.5.1.1 Scope of column definitions  p68
-            7.5.1.2 Column attributes  p68
-            7.5.2 Using column view  p70
-            7.5.3 Capturing column view  p71
-             --
-              8 Dates and Times  p73
-            8.1 Timestamps  p73
-            8.2 Creating Timestamps  p74
-            8.2.1 The date/time prompt  p75
-            8.2.2 Custom time format  p77
-            8.3 Deadlines and Scheduling  p77
-            8.3.1 Inserting deadlines or schedules  p79
-            8.3.2 Repeated tasks  p79
-            8.4 Clocking Work Time  p81
-            8.4.1 Clocking commands  p81
-            8.4.2 The clock table  p83
-            8.4.3 Resolving idle time and continuous clocking  p86
-            8.5 Effort Estimates  p88
-            8.6 Taking Notes with a Relative Timer  p89
-              9 Refiling and Archiving  p90
-            9.1 Refile and Copy  p90
-            9.2 Archiving  p91
-            9.2.1 Moving a tree to an archive file  p91
-            9.2.2 Internal archiving  p91
-              10 Capture and Attachments  p93
-            10.1 Capture  p93
-            10.1.1 Setting up capture  p93
-            10.1.2 Using capture  p93
-            10.1.3 Capture templates  p94
-            10.1.3.1 Template elements  p94
-            10.1.3.2 Template expansion  p97
-            10.1.3.3 Templates in contexts  p99
-            10.2 Attachments  p99
-            10.2.1 Attachment defaults and dispatcher  p100
-            10.2.2 Attachment options  p101
-            10.2.3 Attachment links.  p102
-            10.2.4 Automatic version-control with Git  p103
-            10.2.5 Attach from Dired  p103
-            10.3 RSS Feeds  p103
-              11 Agenda Views  p105
-            11.1 Agenda Files  p105
-            11.2 The Agenda Dispatcher  p106
-            11.3 The Built-in Agenda Views  p107
-            11.3.1 Weekly/daily agenda  p107
-            11.3.2 The global TODO list  p110
-            11.3.3 Matching tags and properties  p111
-            11.3.4 Search view  p113
-            11.3.5 Stuck projects  p113
-            11.4 Presentation and Sorting  p114
-             --
-            11.4.1 Categories  p114
-            11.4.2 Time-of-day specifications  p114
-            11.4.3 Sorting of agenda items  p115
-            11.4.4 Filtering/limiting agenda items  p116
-            11.5 Commands in the Agenda Buffer  p119
-            11.6 Custom Agenda Views  p126
-            11.6.1 Storing searches  p127
-            11.6.2 Block agenda  p128
-            11.6.3 Setting options for custom commands  p128
-            11.7 Exporting Agenda Views  p129
-            11.8 Using Column View in the Agenda  p131
-              12 Markup for Rich Contents  p133
-            12.1 Paragraphs  p133
-            12.2 Emphasis and Monospace  p133
-            12.3 Subscripts and Superscripts  p134
-            12.4 Special Symbols  p134
-            12.5 Embedded LATEX  p135
-            12.5.1 LATEX fragments  p135
-            12.5.2 Previewing LATEX fragments  p136
-            12.5.3 Using CDLATEX to enter math  p136
-            12.6 Literal Examples  p137
-            12.7 Images  p139
-            12.8 Captions  p140
-            12.9 Horizontal Rules  p140
-            12.10 Creating Footnotes  p140
-              13 Exporting  p142
-            13.1 The Export Dispatcher  p142
-            13.2 Export Settings  p143
-            13.3 Table of Contents  p146
-            13.4 Include Files  p147
-            13.5 Macro Replacement  p148
-            13.6 Comment Lines  p150
-            13.7 ASCII/Latin-1/UTF-8 export  p150
-            13.8 Beamer Export  p152
-            13.8.1 Beamer export commands  p152
-            13.8.2 Beamer specific export settings  p152
-            13.8.3 Frames and Blocks in Beamer  p153
-            13.8.4 Beamer specific syntax  p154
-            13.8.5 Editing support  p155
-            13.8.6 A Beamer example  p155
-            13.9 HTML Export  p155
-            13.9.1 HTML export commands  p156
-            13.9.2 HTML specific export settings  p156
-            13.9.3 HTML doctypes  p157
-            13.9.4 HTML preamble and postamble  p158
-            13.9.5 Quoting HTML tags  p158
-             --
-            13.9.6 Headlines in HTML export  p158
-            13.9.7 Links in HTML export  p159
-            13.9.8 Tables in HTML export  p159
-            13.9.9 Images in HTML export  p160
-            13.9.10 Math formatting in HTML export  p160
-            13.9.11 Text areas in HTML export  p161
-            13.9.12 CSS support  p161
-            13.9.13 JavaScript supported display of web pages  p162
-            13.10 LATEX Export  p163
-            13.10.1 LATEX/PDF export commands  p163
-            13.10.2 LATEX specific export settings  p164
-            13.10.3 LATEX header and sectioning structure  p165
-            13.10.4 Quoting LATEX code  p166
-            13.10.5 Tables in LATEX export  p166
-            13.10.6 Images in LATEX export  p168
-            13.10.7 Plain lists in LATEX export  p169
-            13.10.8 Source blocks in LATEX export  p169
-            13.10.9 Example blocks in LATEX export  p170
-            13.10.10 Special blocks in LATEX export  p170
-            13.10.11 Horizontal rules in LATEX export  p171
-            13.11 Markdown Export  p171
-            13.12 OpenDocument Text Export  p171
-            13.12.1 Pre-requisites for ODT export  p171
-            13.12.2 ODT export commands  p172
-            13.12.3 ODT specific export settings  p172
-            13.12.4 Extending ODT export  p172
-            13.12.5 Applying custom styles  p173
-            13.12.6 Links in ODT export  p173
-            13.12.7 Tables in ODT export  p174
-            13.12.8 Images in ODT export  p174
-            13.12.9 Math formatting in ODT export  p176
-            13.12.9.1 LATEX math snippets  p176
-            13.12.9.2 MathML and OpenDocument formula files  p177
-            13.12.10 Labels and captions in ODT export  p177
-            13.12.11 Literal examples in ODT export  p177
-            13.12.12 Advanced topics in ODT export  p177
-            13.13 Org Export  p182
-            13.14 Texinfo Export  p182
-            13.14.1 Texinfo export commands  p182
-            13.14.2 Texinfo specific export settings  p183
-            13.14.3 Texinfo file header  p183
-            13.14.4 Texinfo title and copyright page  p184
-            13.14.5 Info directory file  p184
-            13.14.6 Headings and sectioning structure  p184
-            13.14.7 Indices  p185
-            13.14.8 Quoting Texinfo code  p185
-            13.14.9 Plain lists in Texinfo export  p186
-            13.14.10 Tables in Texinfo export  p186
-             --
-            13.14.11 Images in Texinfo export  p186
-            13.14.12 Quotations in Texinfo export  p187
-            13.14.13 Special blocks in Texinfo export  p187
-            13.14.14 A Texinfo example  p187
-            13.15 iCalendar Export  p189
-            13.16 Other Built-in Back-ends  p190
-            13.17 Advanced Export Configuration  p190
-            13.18 Export in Foreign Buffers  p193
-            13.18.1 Exporting to minimal HTML  p193
-              14 Publishing  p194
-            14.1 Configuration  p194
-            14.1.1 The variable org-publish-project-alist  p194
-            14.1.2 Sources and destinations for files  p194
-            14.1.3 Selecting files  p195
-            14.1.4 Publishing action  p195
-            14.1.5 Options for the exporters  p196
-            14.1.6 Publishing links  p200
-            14.1.7 Generating a sitemap  p200
-            14.1.8 Generating an index  p202
-            14.2 Uploading Files  p202
-            14.3 Sample Configuration  p202
-            14.3.1 Example: simple publishing configuration  p202
-            14.3.2 Example: complex publishing configuration  p203
-            14.4 Triggering Publication  p204
-              15 Working with Source Code  p205
-            15.1 Features Overview  p205
-            15.2 Structure of Code Blocks  p206
-            15.3 Using Header Arguments  p207
-            15.4 Environment of a Code Block  p209
-            15.5 Evaluating Code Blocks  p215
-            15.6 Results of Evaluation  p218
-            15.7 Exporting Code Blocks  p223
-            15.8 Extracting Source Code  p224
-            15.9 Languages  p225
-            15.10 Editing Source Code  p226
-            15.11 Noweb Reference Syntax  p227
-            15.12 Library of Babel  p231
-            15.13 Key bindings and Useful Functions  p231
-            15.14 Batch Execution  p232
-             --
-              16 Miscellaneous  p233
-            16.1 Completion  p233
-            16.2 Structure Templates  p233
-            16.3 Speed Keys  p234
-            16.4 A Cleaner Outline View  p234
-            16.4.1 Org Indent Mode  p235
-            16.4.2 Hard indentation  p235
-            16.5 Execute commands in the active region  p236
-            16.6 Dynamic Headline Numbering  p236
-            16.7 The Very Busy C-c C-c Key  p236
-            16.8 Summary of In-Buffer Settings  p237
-            16.9 Org Syntax  p240
-            16.10 Context Dependent Documentation  p240
-            16.11 Escape Character  p241
-            16.12 Code Evaluation and Security Issues  p241
-            16.13 Interaction with Other Packages  p242
-            16.13.1 Packages that Org cooperates with  p242
-            16.13.2 Packages that conflict with Org mode  p243
-            16.14 Using Org on a TTY  p244
-            16.15 Protocols for External Access  p245
-            16.15.1 The store-link protocol  p245
-            16.15.2 The capture protocol  p246
-            16.15.3 The open-source protocol  p246
-            16.16 Org Crypt  p247
-            16.17 Org Mobile  p248
-            16.17.1 Setting up the staging area  p248
-            16.17.2 Pushing to the mobile application  p249
-            16.17.3 Pulling from the mobile application  p249
-              Appendix A Hacking  p251
-            A.1 Hooks  p251
-            A.2 Add-on Packages  p251
-            A.3 Adding Hyperlink Types  p251
-            A.4 Adding Export Back-ends  p253
-            A.5 Tables in Arbitrary Syntax  p253
-            A.5.1 Radio tables  p253
-            A.5.2 A LATEX example of radio tables  p254
-            A.5.3 Translator functions  p256
-            A.6 Dynamic Blocks  p256
-            A.7 Special Agenda Views  p257
-            A.8 Speeding Up Your Agendas  p259
-            A.9 Extracting Agenda Information  p259
-            A.10 Using the Property API  p261
-            A.11 Using the Mapping API  p262
-              --
-            Appendix B History and Acknowledgments  p264
-            B.1 From Carsten  p264
-            B.2 From Bastien  p265
-            B.3 List of Contributions  p265
-              Appendix C GNU Free Documentation License  p269
-            C.1 ADDENDUM: How to use this License for your documents  p276
+                              1 Introduction  p1
+                            1.1 Summary  p1
+                            1.2 Installation  p1
+                            1.3 Activation  p2
+                            1.4 Feedback  p3
+                            1.5 Typesetting Conventions Used in this Manual  p4
+                              2 Document Structure  p6
+                            2.1 Headlines  p6
+                            2.2 Visibility Cycling.  p6
+                            2.2.1 Global and local cycling  p6
+                            2.2.2 Initial visibility  p8
+                            2.2.3 Catching invisible edits  p8
+                            2.3 Motion  p8
+                            2.4 Structure Editing  p9
+                            2.5 Sparse Trees  p11
+                            2.6 Plain Lists  p12
+                            2.7 Drawers.  p15
+                            2.8 Blocks  p15
+                              3 Tables  p16
+                            3.1 Built-in Table Editor  p16
+                            3.2 Column Width and Alignment  p20
+                            3.3 Column Groups  p21
+                            3.4 The Orgtbl Minor Mode  p21
+                            3.5 The Spreadsheet  p22
+                            3.5.1 References  p22
+                            3.5.2 Formula syntax for Calc  p24
+                            3.5.3 Emacs Lisp forms as formulas  p26
+                            3.5.4 Durations and time values  p27
+                            3.5.5 Field and range formulas  p27
+                            3.5.6 Column formulas  p28
+                            3.5.7 Lookup functions  p28
+                            3.5.8 Editing and debugging formulas  p29
+                            3.5.9 Updating the table  p31
+                            3.5.10 Advanced features  p32
+                            3.6 Org Plot  p33
+                             --
+                              4 Hyperlinks  p36
+                            4.1 Link Format  p36
+                            4.2 Internal Links  p37
+                            4.3 Radio Targets  p38
+                            4.4 External Links  p38
+                            4.5 Handling Links  p40
+                            4.6 Using Links Outside Org  p43
+                            4.7 Link Abbreviations  p43
+                            4.8 Search Options in File Links  p44
+                            4.9 Custom Searches  p45
+                              5 TODO Items  p46
+                            5.1 Basic TODO Functionality  p46
+                            5.2 Extended Use of TODO Keywords  p47
+                            5.2.1 TODO keywords as workflow states  p47
+                            5.2.2 TODO keywords as types  p47
+                            5.2.3 Multiple keyword sets in one file  p48
+                            5.2.4 Fast access to TODO states  p49
+                            5.2.5 Setting up keywords for individual files  p49
+                            5.2.6 Faces for TODO keywords  p49
+                            5.2.7 TODO dependencies  p50
+                            5.3 Progress Logging  p51
+                            5.3.1 Closing items  p51
+                            5.3.2 Tracking TODO state changes  p51
+                            5.3.3 Tracking your habits  p53
+                            5.4 Priorities  p54
+                            5.5 Breaking Down Tasks into Subtasks  p55
+                            5.6 Checkboxes  p56
+                              6 Tags  p59
+                            6.1 Tag Inheritance  p59
+                            6.2 Setting Tags  p59
+                            6.3 Tag Hierarchy  p62
+                            6.4 Tag Searches  p63
+                              7 Properties and Columns  p64
+                            7.1 Property Syntax  p64
+                            7.2 Special Properties  p66
+                            7.3 Property Searches  p66
+                            7.4 Property Inheritance  p67
+                            7.5 Column View  p68
+                            7.5.1 Defining columns  p68
+                            7.5.1.1 Scope of column definitions  p68
+                            7.5.1.2 Column attributes  p68
+                            7.5.2 Using column view  p70
+                            7.5.3 Capturing column view  p71
+                             --
+                              8 Dates and Times  p73
+                            8.1 Timestamps  p73
+                            8.2 Creating Timestamps  p74
+                            8.2.1 The date/time prompt  p75
+                            8.2.2 Custom time format  p77
+                            8.3 Deadlines and Scheduling  p77
+                            8.3.1 Inserting deadlines or schedules  p79
+                            8.3.2 Repeated tasks  p79
+                            8.4 Clocking Work Time  p81
+                            8.4.1 Clocking commands  p81
+                            8.4.2 The clock table  p83
+                            8.4.3 Resolving idle time and continuous clocking  p86
+                            8.5 Effort Estimates  p88
+                            8.6 Taking Notes with a Relative Timer  p89
+                              9 Refiling and Archiving  p90
+                            9.1 Refile and Copy  p90
+                            9.2 Archiving  p91
+                            9.2.1 Moving a tree to an archive file  p91
+                            9.2.2 Internal archiving  p91
+                              10 Capture and Attachments  p93
+                            10.1 Capture  p93
+                            10.1.1 Setting up capture  p93
+                            10.1.2 Using capture  p93
+                            10.1.3 Capture templates  p94
+                            10.1.3.1 Template elements  p94
+                            10.1.3.2 Template expansion  p97
+                            10.1.3.3 Templates in contexts  p99
+                            10.2 Attachments  p99
+                            10.2.1 Attachment defaults and dispatcher  p100
+                            10.2.2 Attachment options  p101
+                            10.2.3 Attachment links.  p102
+                            10.2.4 Automatic version-control with Git  p103
+                            10.2.5 Attach from Dired  p103
+                            10.3 RSS Feeds  p103
+                              11 Agenda Views  p105
+                            11.1 Agenda Files  p105
+                            11.2 The Agenda Dispatcher  p106
+                            11.3 The Built-in Agenda Views  p107
+                            11.3.1 Weekly/daily agenda  p107
+                            11.3.2 The global TODO list  p110
+                            11.3.3 Matching tags and properties  p111
+                            11.3.4 Search view  p113
+                            11.3.5 Stuck projects  p113
+                            11.4 Presentation and Sorting  p114
+                             --
+                            11.4.1 Categories  p114
+                            11.4.2 Time-of-day specifications  p114
+                            11.4.3 Sorting of agenda items  p115
+                            11.4.4 Filtering/limiting agenda items  p116
+                            11.5 Commands in the Agenda Buffer  p119
+                            11.6 Custom Agenda Views  p126
+                            11.6.1 Storing searches  p127
+                            11.6.2 Block agenda  p128
+                            11.6.3 Setting options for custom commands  p128
+                            11.7 Exporting Agenda Views  p129
+                            11.8 Using Column View in the Agenda  p131
+                              12 Markup for Rich Contents  p133
+                            12.1 Paragraphs  p133
+                            12.2 Emphasis and Monospace  p133
+                            12.3 Subscripts and Superscripts  p134
+                            12.4 Special Symbols  p134
+                            12.5 Embedded LATEX  p135
+                            12.5.1 LATEX fragments  p135
+                            12.5.2 Previewing LATEX fragments  p136
+                            12.5.3 Using CDLATEX to enter math  p136
+                            12.6 Literal Examples  p137
+                            12.7 Images  p139
+                            12.8 Captions  p140
+                            12.9 Horizontal Rules  p140
+                            12.10 Creating Footnotes  p140
+                              13 Exporting  p142
+                            13.1 The Export Dispatcher  p142
+                            13.2 Export Settings  p143
+                            13.3 Table of Contents  p146
+                            13.4 Include Files  p147
+                            13.5 Macro Replacement  p148
+                            13.6 Comment Lines  p150
+                            13.7 ASCII/Latin-1/UTF-8 export  p150
+                            13.8 Beamer Export  p152
+                            13.8.1 Beamer export commands  p152
+                            13.8.2 Beamer specific export settings  p152
+                            13.8.3 Frames and Blocks in Beamer  p153
+                            13.8.4 Beamer specific syntax  p154
+                            13.8.5 Editing support  p155
+                            13.8.6 A Beamer example  p155
+                            13.9 HTML Export  p155
+                            13.9.1 HTML export commands  p156
+                            13.9.2 HTML specific export settings  p156
+                            13.9.3 HTML doctypes  p157
+                            13.9.4 HTML preamble and postamble  p158
+                            13.9.5 Quoting HTML tags  p158
+                             --
+                            13.9.6 Headlines in HTML export  p158
+                            13.9.7 Links in HTML export  p159
+                            13.9.8 Tables in HTML export  p159
+                            13.9.9 Images in HTML export  p160
+                            13.9.10 Math formatting in HTML export  p160
+                            13.9.11 Text areas in HTML export  p161
+                            13.9.12 CSS support  p161
+                            13.9.13 JavaScript supported display of web pages  p162
+                            13.10 LATEX Export  p163
+                            13.10.1 LATEX/PDF export commands  p163
+                            13.10.2 LATEX specific export settings  p164
+                            13.10.3 LATEX header and sectioning structure  p165
+                            13.10.4 Quoting LATEX code  p166
+                            13.10.5 Tables in LATEX export  p166
+                            13.10.6 Images in LATEX export  p168
+                            13.10.7 Plain lists in LATEX export  p169
+                            13.10.8 Source blocks in LATEX export  p169
+                            13.10.9 Example blocks in LATEX export  p170
+                            13.10.10 Special blocks in LATEX export  p170
+                            13.10.11 Horizontal rules in LATEX export  p171
+                            13.11 Markdown Export  p171
+                            13.12 OpenDocument Text Export  p171
+                            13.12.1 Pre-requisites for ODT export  p171
+                            13.12.2 ODT export commands  p172
+                            13.12.3 ODT specific export settings  p172
+                            13.12.4 Extending ODT export  p172
+                            13.12.5 Applying custom styles  p173
+                            13.12.6 Links in ODT export  p173
+                            13.12.7 Tables in ODT export  p174
+                            13.12.8 Images in ODT export  p174
+                            13.12.9 Math formatting in ODT export  p176
+                            13.12.9.1 LATEX math snippets  p176
+                            13.12.9.2 MathML and OpenDocument formula files  p177
+                            13.12.10 Labels and captions in ODT export  p177
+                            13.12.11 Literal examples in ODT export  p177
+                            13.12.12 Advanced topics in ODT export  p177
+                            13.13 Org Export  p182
+                            13.14 Texinfo Export  p182
+                            13.14.1 Texinfo export commands  p182
+                            13.14.2 Texinfo specific export settings  p183
+                            13.14.3 Texinfo file header  p183
+                            13.14.4 Texinfo title and copyright page  p184
+                            13.14.5 Info directory file  p184
+                            13.14.6 Headings and sectioning structure  p184
+                            13.14.7 Indices  p185
+                            13.14.8 Quoting Texinfo code  p185
+                            13.14.9 Plain lists in Texinfo export  p186
+                            13.14.10 Tables in Texinfo export  p186
+                             --
+                            13.14.11 Images in Texinfo export  p186
+                            13.14.12 Quotations in Texinfo export  p187
+                            13.14.13 Special blocks in Texinfo export  p187
+                            13.14.14 A Texinfo example  p187
+                            13.15 iCalendar Export  p189
+                            13.16 Other Built-in Back-ends  p190
+                            13.17 Advanced Export Configuration  p190
+                            13.18 Export in Foreign Buffers  p193
+                            13.18.1 Exporting to minimal HTML  p193
+                              14 Publishing  p194
+                            14.1 Configuration  p194
+                            14.1.1 The variable org-publish-project-alist  p194
+                            14.1.2 Sources and destinations for files  p194
+                            14.1.3 Selecting files  p195
+                            14.1.4 Publishing action  p195
+                            14.1.5 Options for the exporters  p196
+                            14.1.6 Publishing links  p200
+                            14.1.7 Generating a sitemap  p200
+                            14.1.8 Generating an index  p202
+                            14.2 Uploading Files  p202
+                            14.3 Sample Configuration  p202
+                            14.3.1 Example: simple publishing configuration  p202
+                            14.3.2 Example: complex publishing configuration  p203
+                            14.4 Triggering Publication  p204
+                              15 Working with Source Code  p205
+                            15.1 Features Overview  p205
+                            15.2 Structure of Code Blocks  p206
+                            15.3 Using Header Arguments  p207
+                            15.4 Environment of a Code Block  p209
+                            15.5 Evaluating Code Blocks  p215
+                            15.6 Results of Evaluation  p218
+                            15.7 Exporting Code Blocks  p223
+                            15.8 Extracting Source Code  p224
+                            15.9 Languages  p225
+                            15.10 Editing Source Code  p226
+                            15.11 Noweb Reference Syntax  p227
+                            15.12 Library of Babel  p231
+                            15.13 Key bindings and Useful Functions  p231
+                            15.14 Batch Execution  p232
+                             --
+                              16 Miscellaneous  p233
+                            16.1 Completion  p233
+                            16.2 Structure Templates  p233
+                            16.3 Speed Keys  p234
+                            16.4 A Cleaner Outline View  p234
+                            16.4.1 Org Indent Mode  p235
+                            16.4.2 Hard indentation  p235
+                            16.5 Execute commands in the active region  p236
+                            16.6 Dynamic Headline Numbering  p236
+                            16.7 The Very Busy C-c C-c Key  p236
+                            16.8 Summary of In-Buffer Settings  p237
+                            16.9 Org Syntax  p240
+                            16.10 Context Dependent Documentation  p240
+                            16.11 Escape Character  p241
+                            16.12 Code Evaluation and Security Issues  p241
+                            16.13 Interaction with Other Packages  p242
+                            16.13.1 Packages that Org cooperates with  p242
+                            16.13.2 Packages that conflict with Org mode  p243
+                            16.14 Using Org on a TTY  p244
+                            16.15 Protocols for External Access  p245
+                            16.15.1 The store-link protocol  p245
+                            16.15.2 The capture protocol  p246
+                            16.15.3 The open-source protocol  p246
+                            16.16 Org Crypt  p247
+                            16.17 Org Mobile  p248
+                            16.17.1 Setting up the staging area  p248
+                            16.17.2 Pushing to the mobile application  p249
+                            16.17.3 Pulling from the mobile application  p249
+                              Appendix A Hacking  p251
+                            A.1 Hooks  p251
+                            A.2 Add-on Packages  p251
+                            A.3 Adding Hyperlink Types  p251
+                            A.4 Adding Export Back-ends  p253
+                            A.5 Tables in Arbitrary Syntax  p253
+                            A.5.1 Radio tables  p253
+                            A.5.2 A LATEX example of radio tables  p254
+                            A.5.3 Translator functions  p256
+                            A.6 Dynamic Blocks  p256
+                            A.7 Special Agenda Views  p257
+                            A.8 Speeding Up Your Agendas  p259
+                            A.9 Extracting Agenda Information  p259
+                            A.10 Using the Property API  p261
+                            A.11 Using the Mapping API  p262
+                              --
+                            Appendix B History and Acknowledgments  p264
+                            B.1 From Carsten  p264
+                            B.2 From Bastien  p265
+                            B.3 List of Contributions  p265
+                              Appendix C GNU Free Documentation License  p269
+                            C.1 ADDENDUM: How to use this License for your documents  p276
 
-            17 Main Index  p277
-            18 Key Index  p286
-            19 Command and Function Index  p291
-            20 Variable Index  p295
+                            17 Main Index  p277
+                            18 Key Index  p286
+                            19 Command and Function Index  p291
+                            20 Variable Index  p295
 
 emacs Org-Mode - Notes 1 2020-2021
           ####	evince -p 4 ~/gdrive/Doks/em.org.pdf &
@@ -3182,7 +3183,7 @@ Org Keyb.Shortcuts
 
                 Z
                 z . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
-Org Commands & Functions
+Org Commands & Functions  ¤¤(¤)
                     evince -p 301 ~/Empire/Doks/Comp/editor/emacs/orgmode-man.pdf &
 
                 Chapter 19: Command and Function Index

@@ -107,6 +107,315 @@ META.PackMan: apt/aptitude/dpkg, pacman/yay, choco, nix, pkg[Termux]  pip,  yum,
                 Security Best Practices:
                     Learn about security best practices for package management.
                     This includes using trusted repositories, verifying package signatures, and keeping the package manager and system up-to-date.
+pkg (termux)  ¤¤
+                                Could you provide me with a quick list of some useful commands one could run with pkg in Termux? I.e. right now I only know about pkg install package, and pkg update. It would be really nice to get a quick-list or overview of something between 15 and 30 commands (although the upper bound of 30 might be pushing it a little bit, but I think you understand what I'm after here). Since I'm a developer as well as a power-user on Linux and at least to some extent on Windows-systems, I'd really like to include my Android-device into my daily workflow as much as possible.
+
+                                Absolutely! Expanding your pkg command knowledge in Termux will significantly enhance your Android development and power-user experience. Here's a list of useful pkg commands, along with explanations, to get you started:
+
+                                Basic Package Management:
+                                    pkg update:
+                                        Updates the package lists from the repositories.
+                                    pkg upgrade:
+                                        Upgrades installed packages to their latest versions.
+                                    pkg install <package>:
+                                        Installs the specified package.
+                                    pkg uninstall <package>:
+                                        Uninstalls the specified package.
+                                    pkg search <package>:
+                                        Searches for packages matching the given name or description.
+                                    pkg list-installed:
+                                        Lists all installed packages.
+                                    pkg show <package>:
+                                        Displays detailed information about a package.
+                                    pkg clean:
+                                        Removes downloaded package files from the cache.
+                                Repository Management:
+                                    pkg repo:
+                                        Lists enabled repositories.
+                                    pkg repo add <repository>:
+                                        Adds a new repository.
+                                    pkg repo remove <repository>:
+                                        Removes a repository.
+                                Package Information and Dependencies:
+                                    pkg depends <package>:
+                                        Shows the dependencies of a package.
+                                    pkg rdepends <package>:
+                                        Shows the reverse dependencies of a package (packages that depend on it).
+                                Utilities and Maintenance:
+                                    pkg fix:
+                                        Attempts to fix broken package dependencies.
+                                    pkg autoremove:
+                                        Removes automatically installed packages that are no longer needed.
+                                    pkg cache clean:
+                                        Cleans the local repository cache.
+                                Advanced Operations:
+                                    pkg reinstall <package>:
+                                        Reinstalls a package.
+                                    pkg audit:
+                                        Audits installed packages for security vulnerabilities.
+                                    pkg verify <package>:
+                                        Verifies the integrity of an installed package.
+                                Termux Specific:
+                                    pkg login:
+                                        Login to Termux repository (if needed).
+                                    pkg logout:
+                                        Logout of Termux repository (if needed).
+                                Using apt Directly (for more advanced operations):
+                                    apt update:
+                                        Same as pkg update.
+                                    apt upgrade:
+                                        Same as pkg upgrade.
+                                    apt search <package>:
+                                        More comprehensive search than pkg search.
+                                    apt show <package>:
+                                        Same as pkg show.
+                                    apt autoremove:
+                                        Same as pkg autoremove.
+                                    apt install --reinstall <package>:
+                                        Reinstalls a package.
+                                    apt list --installed:
+                                        Lists installed packages.
+                                    apt policy <package>:
+                                        Shows the installation candidate and versions available.
+
+                                Important Notes:
+
+                                    Root Access: pkg commands do not require root access.
+                                    Termux Environment: Ensure your Termux environment is properly configured.
+                                    Internet Connection: Most pkg commands require an active internet connection.
+                                    Help: Use pkg --help or man pkg for more information.
+
+                                By mastering these pkg commands, you'll be well on your way to maximizing the potential of Termux on your Android device.
+
+                                - Could you also create another quick-list or overview for me? What I'm looking for is a list similar to the 'these are the 20 most useful pkg-commands for you to know' but concerning termux-commands, i.e. what other commands would be very good for me to know alongside termux-change-repo?
+
+                                You got it! Here's a list of essential Termux-specific commands beyond termux-change-repo that will significantly enhance your workflow:
+
+                                Essential Termux Commands:
+
+                                    termux-setup-storage:
+                                        Grants Termux access to your device's internal storage. This is crucial for working with files outside of Termux's home directory.
+                                    termux-change-repo:
+                                        As discussed, allows you to select a different mirror for package downloads.
+                                    termux-reset:
+                                        Resets Termux to its initial state, clearing all data and installed packages. Use with caution!
+                                    termux-wake-lock:
+                                        Prevents your device from going to sleep while Termux is running. Useful for long-running tasks.
+                                    termux-wake-unlock:
+                                        Reverses the effect of termux-wake-lock, allowing your device to sleep.
+                                    termux-battery-status:
+                                        Displays information about your device's battery status.
+                                    termux-clipboard-get:
+                                        Retrieves the contents of the Android clipboard and prints it to the terminal.
+                                    termux-clipboard-set <text>:
+                                        Sets the Android clipboard to the specified text.
+                                    termux-dialog:
+                                        Displays a dialog box with various options (e.g., input, confirmation). This allows you to create simple GUI interactions from the command line.
+                                    termux-notification:
+                                        Sends a notification to the Android notification bar.
+                                    termux-vibrate:
+                                        Causes the device to vibrate.
+                                    termux-telephony-cell-info:
+                                        Displays information about cellular network cells.
+                                    termux-telephony-signal-strength:
+                                        Displays the current cellular signal strength.
+                                    termux-wifi-connectioninfo:
+                                        Displays information about the current Wi-Fi connection.
+                                    termux-wifi-scaninfo:
+                                        Scans for nearby Wi-Fi networks and displays their information.
+                                    termux-location:
+                                        Retrieves the device's current location.
+                                    termux-camera-photo:
+                                        Takes a photo using the device's camera.
+                                    termux-camera-video:
+                                        Records a video using the device's camera.
+                                    termux-torch:
+                                        Toggles the device's flashlight (torch).
+                                    termux-fingerprint:
+                                        Uses the device's fingerprint sensor for authentication.
+                                    termux-sms-send:
+                                        Sends an SMS message.
+                                    termux-contact-list:
+                                        Lists contacts from your device.
+                                    termux-microphone-record:
+                                        Records audio using the device's microphone.
+                                    termux-media-player:
+                                        Plays audio or video files.
+
+                                Key Points:
+
+                                    Permissions: Many of these commands require specific permissions. You'll be prompted to grant permissions when you run them for the first time.
+                                    Termux API: These commands are part of the Termux API, which allows Termux to interact with Android's hardware and software features.
+                                    Scripting: You can combine these commands in shell scripts to automate tasks.
+                                    Help: Use command --help or man command for more information about each command.
+                                    Termux Wiki: The Termux Wiki has excellent documentation on these commands and the Termux API.
+
+                                These commands will allow you to leverage the full power of your Android device from the Termux command line.
+
+                                ----
+                                Absolutely perfect. Another quick follow-up: Are there some repositories that are not necessarily set or included by default on Android-devices that are good or even essential for real power-users to have installed in Termux, i.e. a very short list of some that would be recommended for the daily workflow of a programmer such as myself?
+
+                                You're asking a great question! While Termux provides a solid base repository, there are a few additional repositories that can significantly enhance your experience as a programmer and power user. Here's a concise list of recommended repositories, along with considerations:
+
+                                1. Termux Science Repository (termux-science-repo):
+
+                                    Purpose: Provides scientific computing tools, libraries, and applications.
+                                    Why It's Useful:
+                                        If you work with data analysis, numerical computation, or scientific programming, this repository is invaluable.
+                                        Includes packages like Python libraries (NumPy, SciPy, Pandas), R, and other scientific tools.   
+
+                                    How to Add:
+                                        pkg install termux-tools-repo
+                                        then
+                                        pkg install science-repo
+                                    Considerations:
+                                        This repository can be quite large, so ensure you have sufficient storage space.
+
+                                2. Termux Unstable Repository (termux-unstable-repo):
+
+                                    Purpose: Contains the latest versions of packages, including those that are still in development or testing.
+                                    Why It's Useful:
+                                        If you need the most up-to-date versions of tools or libraries, this repository can be helpful.
+                                        Useful for testing new features or bug fixes.
+                                    How to Add:
+                                        pkg install unstable-repo
+                                    Considerations:
+                                        Packages in the unstable repository may be less stable than those in the default repository.
+                                        Use with caution, and be prepared for potential issues.
+
+                                3. Termux Tools Repository (termux-tools-repo):
+
+                                    Purpose: Contains tools that help with package management, and other termux related tools.
+                                    Why it's useful:
+                                        This Repo is needed to enable the science repository.
+                                    How to add:
+                                        pkg install termux-tools-repo
+
+                                General Recommendations:
+
+                                    Prioritize Stability:
+                                        For most daily tasks, the default Termux repository provides a stable and reliable experience.
+                                    Add Repositories as Needed:
+                                        Only add repositories that you genuinely need to avoid cluttering your package list and potentially introducing conflicts.
+                                    Stay Updated:
+                                        Regularly run pkg update and pkg upgrade to keep your packages up-to-date.
+                                    Documentation:
+                                        Always read the documentation for any repository before adding it to your Termux setup.
+
+                                By adding these repositories judiciously, you can tailor your Termux environment to your specific programming and power-user needs.
+
+                                                Quick question with regards to running pkg update and pkg upgrade in Termux: If I get the following error-message/advice:
+
+                                No mirror or mirror group selected. You might want to select one by running 'termux-change-repo'
+
+                                Could you give me some advice?
+
+                                Yes, that error message is very clear and points to a straightforward solution. Here's what it means and how to fix it:
+
+                                Understanding the Error:
+
+                                    Termux Mirrors: Termux uses repositories (mirrors) to download package files. These mirrors are servers that host the package files.
+                                    No Mirror Selected: The error message means that your Termux installation hasn't been configured to use a specific mirror.
+                                    termux-change-repo: This is a Termux utility that allows you to select a mirror.
+
+                                How to Fix the Issue:
+
+                                    Run termux-change-repo:
+                                        Open your Termux terminal.
+                                        Type termux-change-repo and press Enter.
+
+                                    Select a Mirror:
+                                        The utility will present you with a menu of available mirrors.
+                                        Choose a mirror that is geographically close to you for better download speeds.
+                                        You can also select the default mirror.
+                                        Use the arrow keys to navigate and press Enter to select.
+
+                                    Update Package Lists:
+                                        After selecting a mirror, run pkg update again to refresh the package lists.
+
+                                    Upgrade Packages:
+                                        If you want to upgrade your installed packages, run pkg upgrade.
+
+                                Why Mirrors Are Important:
+
+                                    Download Speed: Mirrors closer to your location generally provide faster download speeds.
+                                    Reliability: If one mirror is down, you can switch to another.
+                                    Load Balancing: Mirrors help distribute the load on Termux servers.
+
+                                Troubleshooting:
+
+                                    Network Connection: Ensure you have a stable internet connection.
+                                    Firewall/VPN: If you're using a firewall or VPN, it might be blocking access to the mirrors.
+                                    Repository Issues: In rare cases, there might be temporary issues with the Termux repositories.
+
+                                By following these steps, you should be able to select a mirror and resolve the error.
+
+                                From what I can gather (based on your answer here), it would be a good and recommended step to take to select a mirror, but (at least that's how I interpret your answer) it is not absolutely crucial, but more of a recommendation?
+
+                                You're interpreting my answer correctly! Let's clarify:
+
+                                    It's Highly Recommended, Not Absolutely Crucial (Initially):
+                                        When you first install Termux, it often has a default mirror pre-configured. So, pkg update and pkg upgrade might work initially.
+                                        However, that default mirror might not be the optimal one for your location or network conditions.
+                                        Therefore, the error message prompting you to use termux-change-repo is a strong recommendation to improve your Termux experience.
+
+                                    Why It Becomes More Crucial Over Time:
+                                        Performance: As Termux repositories update and grow, using a geographically close mirror becomes increasingly important for faster downloads.
+                                        Reliability: If the default mirror experiences issues or goes offline, you won't be able to update or install packages without selecting a new mirror.
+                                        Avoiding Future Problems: By proactively selecting a mirror, you prevent potential issues down the line.
+
+                                    In Essence:
+                                        Termux might function without explicitly selecting a mirror, but it's not a reliable long-term strategy.
+                                        Taking the time to run termux-change-repo is a simple step that can significantly improve your Termux experience.
+
+                                So, while Termux might "work" without it, it's definitely a best practice to select a mirror.
+
+
+                                A very quick question about Termux on Android: Is it a full Bash shell, or is it maybe closer to (or maybe even is) a version of Ash or Dash? What I'm thinking is that that will be valuable information when it comes to what kind of scripts and commands can be run?
+
+                                It's great you're thinking about the specifics of the shell environment in Termux, as that definitely impacts script compatibility. Here's a breakdown:
+
+                                    Termux and Bash:
+                                        By default, Termux provides Bash. So, you can expect a fairly full-featured Bash environment.
+                                        Termux also allows you to install and use other shells, such as Zsh, Fish, and others. So it is very flexible.
+                                        Therefore, it is accurate to say that Termux can provide a full bash shell.
+                                    Regarding Ash/Dash:
+                                        While Ash and Dash are lighter-weight shells, they are not the default in Termux.
+                                        These shells are designed for efficiency, and they might lack some of the advanced features of Bash.
+                                        It is important to remember that the default shell in termux is bash.
+                                    Implications for Scripts:
+                                        If you write scripts that rely on Bash-specific features, they should generally work in Termux.
+                                        However, if you're aiming for maximum portability, sticking to POSIX-compliant shell scripting is always a good practice. That way your scripts will run on most unix like systems.   
+
+                                        Because termux has the ability to install many different shells, it is possible to use, ash, dash, or many other shells, but bash is the default.
+
+                                In summary, you can generally treat Termux as having a full Bash shell environment, but it's also capable of running other shells.
+
+                                Is NuShell and Xonshell also available on Android, even through Termux?
+
+                                It's great you're exploring the landscape of modern shells! Here's what I found regarding NuShell and Xonsh in the context of Termux on Android:
+
+                                    Xonsh:
+                                        Yes, Xonsh is generally available within Termux.
+                                        As the Termux wiki states, "Xonsh is a Python-powered, cross-platform, Unix-gazing shell language and command prompt."   
+
+                                    Because Xonsh is heavily python based, if you can get python working in termux, you can get xonsh working.
+                                    You can typically install it using pip install xonsh within your Termux environment.
+
+                                NuShell (Nu):
+
+                                    Yes, Nushell is also available within Termux.   
+
+                                Information found from the Nushell website, and from various forms, shows that Nushell has been made to work within the Termux environment.  
+                                There can be some complexity in the installation of Nushell, as it can require the rust programming language to be installed. But there are also pre built binaries available.  
+                                So in short, Nushell is able to be installed and used within Termux.  
+
+                                Key points:
+
+                                    Termux's package management and its ability to run various programming language environments (like Python and Rust) make it possible to use these modern shells.
+                                    Keep in mind that running resource-intensive shells on a mobile device might have performance implications.
+
+                                I hope this helps!
 Bash2PShell
 META.SHELL: bash, dash, termux, pshell, xonsh, nushell
 
@@ -114,7 +423,7 @@ MS Windows Terminal
 ___WindowsTerminal_Themes
   ~/gdrive/rsc/Doks/taskuj/winterminal-tipstricksprodhacks_2021.Tags1.txt
 
-    ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+    ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
                 close window  a-f4
                 copy text  c-c, c-Ins, cs-c, Enter
                 paste  c-v, s-Ins, cs-v
@@ -254,7 +563,7 @@ ___WindowsTerminal_Themes
                 Azure Cloud [az interactive], Google Cloud [gcloud interactive], AWS [aws-shell]
 PShell
 ----
-bcb (**(!))
+bcb (**(!))  ¤¤(¤)
             1. Beginning Bash
             1.1 Decoding the Prompt
             1.2 Showing Where You Are
@@ -617,6 +926,7 @@ bcb (**(!))
             Who Do I Turn To?
 ~/Empire/Doks/Comp/sysadm/lin/shell/bcb.pdf
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/BashSysadm/0_bcb.txt
+Bluebash Tagged  ¤¤(¤)
 'Basic Bash-list' (30 commands) (+later: Bash2PShell) | Ash|Dash
                     Excellent! We've added nm, objdump, ldd, ar, strip, ranlib, size, strings, and dd to the primary list. whatis and apropos are added to the "par for the course" list.
 
@@ -834,8 +1144,9 @@ bcb (**(!))
                     Key Takeaway:
 
                     Dash is great for speed, efficiency, and portability, especially for simple scripts. Bash is more powerful and feature-rich, making it better for interactive use and complex scripts.  Understanding the differences will help you choose the right shell for the job.  If you're writing a script that needs to be portable, sticking to POSIX features (and thus making it compatible with Dash) is usually a good idea.  If you need Bash-specific features, then use Bash, but be aware that the script might not work on systems that don't have Bash.
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt  ¤¤(¤)
 
-arch tracker/localsearch + tinysparql
+arch tracker/localsearch + tinysparql  (+ONTOLOGIES =OWL ETC)
                         ___gnometracker_sparql
                         - Great! Another question: Could
                           you give me a VERY quick overview
@@ -1331,984 +1642,671 @@ arch tracker/localsearch + tinysparql
                         interaction with Tracker and SPARQL
                         beyond the capabilities of basic
                         shell scripting.
-Termux
-                    ~/Dropbox/Udt/rsc/data/lists/Tagged/Termux.Tags2.txt 
-                        ../ref/comp/sysadm/Termux.Tags1.txt
-                        .
-                    ----
-                    termux pkg
-                        Could you provide me with a quick list of some useful commands one could run with pkg in Termux? I.e. right now I only know about pkg install package, and pkg update. It would be really nice to get a quick-list or overview of something between 15 and 30 commands (although the upper bound of 30 might be pushing it a little bit, but I think you understand what I'm after here). Since I'm a developer as well as a power-user on Linux and at least to some extent on Windows-systems, I'd really like to include my Android-device into my daily workflow as much as possible.
-
-                        Absolutely! Expanding your pkg command knowledge in Termux will significantly enhance your Android development and power-user experience. Here's a list of useful pkg commands, along with explanations, to get you started:
-
-                        Basic Package Management:
-                            pkg update:
-                                Updates the package lists from the repositories.
-                            pkg upgrade:
-                                Upgrades installed packages to their latest versions.
-                            pkg install <package>:
-                                Installs the specified package.
-                            pkg uninstall <package>:
-                                Uninstalls the specified package.
-                            pkg search <package>:
-                                Searches for packages matching the given name or description.
-                            pkg list-installed:
-                                Lists all installed packages.
-                            pkg show <package>:
-                                Displays detailed information about a package.
-                            pkg clean:
-                                Removes downloaded package files from the cache.
-                        Repository Management:
-                            pkg repo:
-                                Lists enabled repositories.
-                            pkg repo add <repository>:
-                                Adds a new repository.
-                            pkg repo remove <repository>:
-                                Removes a repository.
-                        Package Information and Dependencies:
-                            pkg depends <package>:
-                                Shows the dependencies of a package.
-                            pkg rdepends <package>:
-                                Shows the reverse dependencies of a package (packages that depend on it).
-                        Utilities and Maintenance:
-                            pkg fix:
-                                Attempts to fix broken package dependencies.
-                            pkg autoremove:
-                                Removes automatically installed packages that are no longer needed.
-                            pkg cache clean:
-                                Cleans the local repository cache.
-                        Advanced Operations:
-                            pkg reinstall <package>:
-                                Reinstalls a package.
-                            pkg audit:
-                                Audits installed packages for security vulnerabilities.
-                            pkg verify <package>:
-                                Verifies the integrity of an installed package.
-                        Termux Specific:
-                            pkg login:
-                                Login to Termux repository (if needed).
-                            pkg logout:
-                                Logout of Termux repository (if needed).
-                        Using apt Directly (for more advanced operations):
-                            apt update:
-                                Same as pkg update.
-                            apt upgrade:
-                                Same as pkg upgrade.
-                            apt search <package>:
-                                More comprehensive search than pkg search.
-                            apt show <package>:
-                                Same as pkg show.
-                            apt autoremove:
-                                Same as pkg autoremove.
-                            apt install --reinstall <package>:
-                                Reinstalls a package.
-                            apt list --installed:
-                                Lists installed packages.
-                            apt policy <package>:
-                                Shows the installation candidate and versions available.
-
-                        Important Notes:
-
-                            Root Access: pkg commands do not require root access.
-                            Termux Environment: Ensure your Termux environment is properly configured.
-                            Internet Connection: Most pkg commands require an active internet connection.
-                            Help: Use pkg --help or man pkg for more information.
-
-                        By mastering these pkg commands, you'll be well on your way to maximizing the potential of Termux on your Android device.
-
-                        - Could you also create another quick-list or overview for me? What I'm looking for is a list similar to the 'these are the 20 most useful pkg-commands for you to know' but concerning termux-commands, i.e. what other commands would be very good for me to know alongside termux-change-repo?
-
-                        You got it! Here's a list of essential Termux-specific commands beyond termux-change-repo that will significantly enhance your workflow:
-
-                        Essential Termux Commands:
-
-                            termux-setup-storage:
-                                Grants Termux access to your device's internal storage. This is crucial for working with files outside of Termux's home directory.
-                            termux-change-repo:
-                                As discussed, allows you to select a different mirror for package downloads.
-                            termux-reset:
-                                Resets Termux to its initial state, clearing all data and installed packages. Use with caution!
-                            termux-wake-lock:
-                                Prevents your device from going to sleep while Termux is running. Useful for long-running tasks.
-                            termux-wake-unlock:
-                                Reverses the effect of termux-wake-lock, allowing your device to sleep.
-                            termux-battery-status:
-                                Displays information about your device's battery status.
-                            termux-clipboard-get:
-                                Retrieves the contents of the Android clipboard and prints it to the terminal.
-                            termux-clipboard-set <text>:
-                                Sets the Android clipboard to the specified text.
-                            termux-dialog:
-                                Displays a dialog box with various options (e.g., input, confirmation). This allows you to create simple GUI interactions from the command line.
-                            termux-notification:
-                                Sends a notification to the Android notification bar.
-                            termux-vibrate:
-                                Causes the device to vibrate.
-                            termux-telephony-cell-info:
-                                Displays information about cellular network cells.
-                            termux-telephony-signal-strength:
-                                Displays the current cellular signal strength.
-                            termux-wifi-connectioninfo:
-                                Displays information about the current Wi-Fi connection.
-                            termux-wifi-scaninfo:
-                                Scans for nearby Wi-Fi networks and displays their information.
-                            termux-location:
-                                Retrieves the device's current location.
-                            termux-camera-photo:
-                                Takes a photo using the device's camera.
-                            termux-camera-video:
-                                Records a video using the device's camera.
-                            termux-torch:
-                                Toggles the device's flashlight (torch).
-                            termux-fingerprint:
-                                Uses the device's fingerprint sensor for authentication.
-                            termux-sms-send:
-                                Sends an SMS message.
-                            termux-contact-list:
-                                Lists contacts from your device.
-                            termux-microphone-record:
-                                Records audio using the device's microphone.
-                            termux-media-player:
-                                Plays audio or video files.
-
-                        Key Points:
-
-                            Permissions: Many of these commands require specific permissions. You'll be prompted to grant permissions when you run them for the first time.
-                            Termux API: These commands are part of the Termux API, which allows Termux to interact with Android's hardware and software features.
-                            Scripting: You can combine these commands in shell scripts to automate tasks.
-                            Help: Use command --help or man command for more information about each command.
-                            Termux Wiki: The Termux Wiki has excellent documentation on these commands and the Termux API.
-
-                        These commands will allow you to leverage the full power of your Android device from the Termux command line.
-
-                        ----
-                        Absolutely perfect. Another quick follow-up: Are there some repositories that are not necessarily set or included by default on Android-devices that are good or even essential for real power-users to have installed in Termux, i.e. a very short list of some that would be recommended for the daily workflow of a programmer such as myself?
-
-                        You're asking a great question! While Termux provides a solid base repository, there are a few additional repositories that can significantly enhance your experience as a programmer and power user. Here's a concise list of recommended repositories, along with considerations:
-
-                        1. Termux Science Repository (termux-science-repo):
-
-                            Purpose: Provides scientific computing tools, libraries, and applications.
-                            Why It's Useful:
-                                If you work with data analysis, numerical computation, or scientific programming, this repository is invaluable.
-                                Includes packages like Python libraries (NumPy, SciPy, Pandas), R, and other scientific tools.   
-
-                            How to Add:
-                                pkg install termux-tools-repo
-                                then
-                                pkg install science-repo
-                            Considerations:
-                                This repository can be quite large, so ensure you have sufficient storage space.
-
-                        2. Termux Unstable Repository (termux-unstable-repo):
-
-                            Purpose: Contains the latest versions of packages, including those that are still in development or testing.
-                            Why It's Useful:
-                                If you need the most up-to-date versions of tools or libraries, this repository can be helpful.
-                                Useful for testing new features or bug fixes.
-                            How to Add:
-                                pkg install unstable-repo
-                            Considerations:
-                                Packages in the unstable repository may be less stable than those in the default repository.
-                                Use with caution, and be prepared for potential issues.
-
-                        3. Termux Tools Repository (termux-tools-repo):
-
-                            Purpose: Contains tools that help with package management, and other termux related tools.
-                            Why it's useful:
-                                This Repo is needed to enable the science repository.
-                            How to add:
-                                pkg install termux-tools-repo
-
-                        General Recommendations:
-
-                            Prioritize Stability:
-                                For most daily tasks, the default Termux repository provides a stable and reliable experience.
-                            Add Repositories as Needed:
-                                Only add repositories that you genuinely need to avoid cluttering your package list and potentially introducing conflicts.
-                            Stay Updated:
-                                Regularly run pkg update and pkg upgrade to keep your packages up-to-date.
-                            Documentation:
-                                Always read the documentation for any repository before adding it to your Termux setup.
-
-                        By adding these repositories judiciously, you can tailor your Termux environment to your specific programming and power-user needs.
-
-                                        Quick question with regards to running pkg update and pkg upgrade in Termux: If I get the following error-message/advice:
-
-                        No mirror or mirror group selected. You might want to select one by running 'termux-change-repo'
-
-                        Could you give me some advice?
-
-                        Yes, that error message is very clear and points to a straightforward solution. Here's what it means and how to fix it:
-
-                        Understanding the Error:
-
-                            Termux Mirrors: Termux uses repositories (mirrors) to download package files. These mirrors are servers that host the package files.
-                            No Mirror Selected: The error message means that your Termux installation hasn't been configured to use a specific mirror.
-                            termux-change-repo: This is a Termux utility that allows you to select a mirror.
-
-                        How to Fix the Issue:
-
-                            Run termux-change-repo:
-                                Open your Termux terminal.
-                                Type termux-change-repo and press Enter.
-
-                            Select a Mirror:
-                                The utility will present you with a menu of available mirrors.
-                                Choose a mirror that is geographically close to you for better download speeds.
-                                You can also select the default mirror.
-                                Use the arrow keys to navigate and press Enter to select.
-
-                            Update Package Lists:
-                                After selecting a mirror, run pkg update again to refresh the package lists.
-
-                            Upgrade Packages:
-                                If you want to upgrade your installed packages, run pkg upgrade.
-
-                        Why Mirrors Are Important:
-
-                            Download Speed: Mirrors closer to your location generally provide faster download speeds.
-                            Reliability: If one mirror is down, you can switch to another.
-                            Load Balancing: Mirrors help distribute the load on Termux servers.
-
-                        Troubleshooting:
-
-                            Network Connection: Ensure you have a stable internet connection.
-                            Firewall/VPN: If you're using a firewall or VPN, it might be blocking access to the mirrors.
-                            Repository Issues: In rare cases, there might be temporary issues with the Termux repositories.
-
-                        By following these steps, you should be able to select a mirror and resolve the error.
-
-                        From what I can gather (based on your answer here), it would be a good and recommended step to take to select a mirror, but (at least that's how I interpret your answer) it is not absolutely crucial, but more of a recommendation?
-
-                        You're interpreting my answer correctly! Let's clarify:
-
-                            It's Highly Recommended, Not Absolutely Crucial (Initially):
-                                When you first install Termux, it often has a default mirror pre-configured. So, pkg update and pkg upgrade might work initially.
-                                However, that default mirror might not be the optimal one for your location or network conditions.
-                                Therefore, the error message prompting you to use termux-change-repo is a strong recommendation to improve your Termux experience.
-
-                            Why It Becomes More Crucial Over Time:
-                                Performance: As Termux repositories update and grow, using a geographically close mirror becomes increasingly important for faster downloads.
-                                Reliability: If the default mirror experiences issues or goes offline, you won't be able to update or install packages without selecting a new mirror.
-                                Avoiding Future Problems: By proactively selecting a mirror, you prevent potential issues down the line.
-
-                            In Essence:
-                                Termux might function without explicitly selecting a mirror, but it's not a reliable long-term strategy.
-                                Taking the time to run termux-change-repo is a simple step that can significantly improve your Termux experience.
-
-                        So, while Termux might "work" without it, it's definitely a best practice to select a mirror.
-
-
-                        A very quick question about Termux on Android: Is it a full Bash shell, or is it maybe closer to (or maybe even is) a version of Ash or Dash? What I'm thinking is that that will be valuable information when it comes to what kind of scripts and commands can be run?
-
-                        It's great you're thinking about the specifics of the shell environment in Termux, as that definitely impacts script compatibility. Here's a breakdown:
-
-                            Termux and Bash:
-                                By default, Termux provides Bash. So, you can expect a fairly full-featured Bash environment.
-                                Termux also allows you to install and use other shells, such as Zsh, Fish, and others. So it is very flexible.
-                                Therefore, it is accurate to say that Termux can provide a full bash shell.
-                            Regarding Ash/Dash:
-                                While Ash and Dash are lighter-weight shells, they are not the default in Termux.
-                                These shells are designed for efficiency, and they might lack some of the advanced features of Bash.
-                                It is important to remember that the default shell in termux is bash.
-                            Implications for Scripts:
-                                If you write scripts that rely on Bash-specific features, they should generally work in Termux.
-                                However, if you're aiming for maximum portability, sticking to POSIX-compliant shell scripting is always a good practice. That way your scripts will run on most unix like systems.   
-
-                                Because termux has the ability to install many different shells, it is possible to use, ash, dash, or many other shells, but bash is the default.
-
-                        In summary, you can generally treat Termux as having a full Bash shell environment, but it's also capable of running other shells.
-
-                        Is NuShell and Xonshell also available on Android, even through Termux?
-
-                        It's great you're exploring the landscape of modern shells! Here's what I found regarding NuShell and Xonsh in the context of Termux on Android:
-
-                            Xonsh:
-                                Yes, Xonsh is generally available within Termux.
-                                As the Termux wiki states, "Xonsh is a Python-powered, cross-platform, Unix-gazing shell language and command prompt."   
-
-                            Because Xonsh is heavily python based, if you can get python working in termux, you can get xonsh working.
-                            You can typically install it using pip install xonsh within your Termux environment.
-
-                        NuShell (Nu):
-
-                            Yes, Nushell is also available within Termux.   
-
-                        Information found from the Nushell website, and from various forms, shows that Nushell has been made to work within the Termux environment.  
-                        There can be some complexity in the installation of Nushell, as it can require the rust programming language to be installed. But there are also pre built binaries available.  
-                        So in short, Nushell is able to be installed and used within Termux.  
-
-                        Key points:
-
-                            Termux's package management and its ability to run various programming language environments (like Python and Rust) make it possible to use these modern shells.
-                            Keep in mind that running resource-intensive shells on a mobile device might have performance implications.
-
-                        I hope this helps!
-                    ==== ==== ====
-                    TERMUX + TERMUX-API + RCLONE/DROPBOX (ETC) ----
-                                    - Great. A quick question about using
-                                      Termux on Android: I was very happy
-                                      that I could install NeoVim on Termux
-                                      (and I've researched a bit about being
-                                      able to access and edit text-files
-                                      stored in Dropbox or Google Drive from
-                                      my phone using Vim), but, one thing I
-                                      found both hard to understand and
-                                      solve was that my Vim-installations on
-                                      Termux were difficult to work with
-                                      because it was difficult to figure out
-                                      how to access the general drive on
-                                      Android (i.e. /storage and such) from
-                                      the Termux and NeoVim folders. What I
-                                      mean is, that if I can't figure out
-                                      how to locate and access the folder
-                                      NeoVim and/or Termux by default stores
-                                      their files in and vice versa (i.e.
-                                      not being able to figure out how to
-                                      reach the broader file system from
-                                      NeoVim and Termux), then it becomes
-                                      quite hard to do anything useful, if
-                                      you know what I mean?
-
-                                    You've hit upon a common hurdle for many
-                                    Termux users! Accessing the broader
-                                    Android file system from Termux and
-                                    NeoVim can be a bit tricky due to
-                                    Android's security model. Here's a
-                                    breakdown of the challenges and
-                                    solutions:
-
-                                    Understanding the Challenges:
-
-                                    - Android's Sandboxing: Android isolates
-                                      apps for security reasons. Termux, by
-                                      default, operates within its own
-                                      isolated environment. This means it
-                                      has limited access to the rest of your
-                                      device's storage.
-                                    __ __ [__]
-                                    - Permissions: You need to grant Termux
-                                      the necessary permissions to access
-                                      external storage.
-                                    - Storage-Locations: The way Android
-                                      exposes storage has changed over time,
-                                      making it a bit confusing.
-
-                                    Solutions:
-
-                                    ____ ____
-                                    - Grant Storage Permissions:
-
-                                    This is the most crucial step. You need
-                                    to explicitly grant Termux permission to
-                                    access your device's storage.
-
-                                    - Open the Termux app.
-
-                            - Run the command: termux-setup-storage  __X
-                                    - A permission dialog will appear. Grant
-                                      Termux access to your storage.
-                            This creates a storage directory within your Termux home directory (~).
-                            Navigating the storage Directory:
-                            After granting permissions, you can navigate to your device's storage using the storage-directory.
-                            Inside storage, you'll find:
-                            - dcim: For photos and videos.
-                            - downloads: For downloaded files.
-                            - movies: For movies.
-                            - pictures: For pictures.
-                            ____
-                            - shared: This is the most important
-                              one. It points to your device's main
-                              "internal storage" or "shared
-                              storage".
-                            Therefore, to access your general drive, you will have to cd storage/shared
-                            Accessing NeoVim Files:
-                            ____
-                            - By default, NeoVim's configuration files (like init.vim or init.lua) are typically located in ~/.config/nvim.  __X
-                            - You can use cd ~/.config/nvim to navigate to this directory.
-                            ____
-                            - To be able to edit files in your general android storage, you will have to navigate from your home directory, into the storage folder, and then further into the shared folder, using
-                            cd storage/shared
-                                    Symlinks (Optional):
-                            - If you find navigating through storage/shared cumbersome, you can create symbolic links to commonly used directories.
+Termux  ¤¤¤¤
+                            .    ../ref/comp/sysadm/Termux.Tags1.txt
+                            ~/Dropbox/Udt/rsc/data/lists/Tagged/Termux.Tags2.txt 
+.  TERMUX + TERMUX-API + RCLONE/DROPBOX (ETC) ----
+                                            - Great. A quick question about using
+                                              Termux on Android: I was very happy
+                                              that I could install NeoVim on Termux
+                                              (and I've researched a bit about being
+                                              able to access and edit text-files
+                                              stored in Dropbox or Google Drive from
+                                              my phone using Vim), but, one thing I
+                                              found both hard to understand and
+                                              solve was that my Vim-installations on
+                                              Termux were difficult to work with
+                                              because it was difficult to figure out
+                                              how to access the general drive on
+                                              Android (i.e. /storage and such) from
+                                              the Termux and NeoVim folders. What I
+                                              mean is, that if I can't figure out
+                                              how to locate and access the folder
+                                              NeoVim and/or Termux by default stores
+                                              their files in and vice versa (i.e.
+                                              not being able to figure out how to
+                                              reach the broader file system from
+                                              NeoVim and Termux), then it becomes
+                                              quite hard to do anything useful, if
+                                              you know what I mean?
+
+                                            You've hit upon a common hurdle for many
+                                            Termux users! Accessing the broader
+                                            Android file system from Termux and
+                                            NeoVim can be a bit tricky due to
+                                            Android's security model. Here's a
+                                            breakdown of the challenges and
+                                            solutions:
+
+                                            Understanding the Challenges:
+
+                                            - Android's Sandboxing: Android isolates
+                                              apps for security reasons. Termux, by
+                                              default, operates within its own
+                                              isolated environment. This means it
+                                              has limited access to the rest of your
+                                              device's storage.
+                                            __ __ [__]
+                                            - Permissions: You need to grant Termux
+                                              the necessary permissions to access
+                                              external storage.
+                                            - Storage-Locations: The way Android
+                                              exposes storage has changed over time,
+                                              making it a bit confusing.
+
+                                            Solutions:
+
+                                            ____ ____
+                                            - Grant Storage Permissions:
+
+                                            This is the most crucial step. You need
+                                            to explicitly grant Termux permission to
+                                            access your device's storage.
+
+                                            - Open the Termux app.
+
+                                    - Run the command: termux-setup-storage  __X
+                                            - A permission dialog will appear. Grant
+                                              Termux access to your storage.
+                                    This creates a storage directory within your Termux home directory (~).
+                                    Navigating the storage Directory:
+                                    After granting permissions, you can navigate to your device's storage using the storage-directory.
+                                    Inside storage, you'll find:
+                                    - dcim: For photos and videos.
+                                    - downloads: For downloaded files.
+                                    - movies: For movies.
+                                    - pictures: For pictures.
                                     ____
-                            For example, to create a symlink to your Downloads folder:
-                            ln -s ~/storage/shared/Download ~/Downloads  __X
-                            Then, you can simply use cd ~/Downloads to access your Downloads folder.
-                                    Using termux-open:
+                                    - shared: This is the most important
+                                      one. It points to your device's main
+                                      "internal storage" or "shared
+                                      storage".
+                                    Therefore, to access your general drive, you will have to cd storage/shared
+                                    Accessing NeoVim Files:
+                                    ____
+                                    - By default, NeoVim's configuration files (like init.vim or init.lua) are typically located in ~/.config/nvim.  __X
+                                    - You can use cd ~/.config/nvim to navigate to this directory.
+                                    ____
+                                    - To be able to edit files in your general android storage, you will have to navigate from your home directory, into the storage folder, and then further into the shared folder, using
+                                    cd storage/shared
+                                            Symlinks (Optional):
+                                    - If you find navigating through storage/shared cumbersome, you can create symbolic links to commonly used directories.
+                                            ____
+                                    For example, to create a symlink to your Downloads folder:
+                                    ln -s ~/storage/shared/Download ~/Downloads  __X
+                                    Then, you can simply use cd ~/Downloads to access your Downloads folder.
+                                            Using termux-open:
 
-                                    ____ ____ ____
-                            termux-open is a Termux utility that allows you to open files with the appropriate Android app.
-                            For example, to open a PDF file in your Downloads folder:
-                            termux-open ~/storage/shared/Download/my_document.pdf  __X __X
-                                    Cloud Storage (Dropbox, Google Drive):
+                                            ____ ____ ____
+                                    termux-open is a Termux utility that allows you to open files with the appropriate Android app.
+                                    For example, to open a PDF file in your Downloads folder:
+                                    termux-open ~/storage/shared/Download/my_document.pdf  __X __X
+                                            Cloud Storage (Dropbox, Google Drive):
 
-                                    For cloud storage, you'll likely need to
-                                    use third-party tools or scripts.
+                                            For cloud storage, you'll likely need to
+                                            use third-party tools or scripts.
 
-                                    There are ways to mount cloud storage
-                                    using rclone or other tools, but this
-                                    can be more complex.
+                                            There are ways to mount cloud storage
+                                            using rclone or other tools, but this
+                                            can be more complex.
 
-                                    For simpler usage, you may want to
-                                    download files from your cloud storage
-                                    to your local storage, edit them with
-                                    NeoVim, and then upload them back.
+                                            For simpler usage, you may want to
+                                            download files from your cloud storage
+                                            to your local storage, edit them with
+                                            NeoVim, and then upload them back.
 
-                                    Example Workflow:
-                            - Grant Termux storage permissions: termux-setup-storage
-                            - Navigate to your Downloads folder: cd ~/storage/shared/Download
-                            - Open a text file with NeoVim: nvim my_text_file.txt
-                            - Edit the file.  - Save and exit NeoVim.
-                            - (Optional) Upload the file back to your cloud storage.
-                                    By following these steps, you should be
-                                    able to effectively access and manage
-                                    your files within Termux and NeoVim.
+                                            Example Workflow:
+                                    - Grant Termux storage permissions: termux-setup-storage
+                                    - Navigate to your Downloads folder: cd ~/storage/shared/Download
+                                    - Open a text file with NeoVim: nvim my_text_file.txt
+                                    - Edit the file.  - Save and exit NeoVim.
+                                    - (Optional) Upload the file back to your cloud storage.
+                                            By following these steps, you should be
+                                            able to effectively access and manage
+                                            your files within Termux and NeoVim.
 
-                                    - That is absolutely awesome! For quite
-                                      a long time I've labored under the
-                                      impression that this was a bit of an
-                                      unsolvable problem. What I would
-                                      really like to do (and it has become a
-                                      big part of my everyday workflow) is
-                                      being able to access and edit
-                                      different text-files (that I have
-                                      stored in Dropbox or Google Drive)
-                                      from my Android device using Vim
-                                      and/or NeoVim. Being able to do so and
-                                      being able to sync directly (without
-                                      having to go through the rigamarole of
-                                      downloading the files to the device,
-                                      and then send them up separately)
-                                      would be an absolute game-changer as
-                                      far as I'm concerned.
+                                            - That is absolutely awesome! For quite
+                                              a long time I've labored under the
+                                              impression that this was a bit of an
+                                              unsolvable problem. What I would
+                                              really like to do (and it has become a
+                                              big part of my everyday workflow) is
+                                              being able to access and edit
+                                              different text-files (that I have
+                                              stored in Dropbox or Google Drive)
+                                              from my Android device using Vim
+                                              and/or NeoVim. Being able to do so and
+                                              being able to sync directly (without
+                                              having to go through the rigamarole of
+                                              downloading the files to the device,
+                                              and then send them up separately)
+                                              would be an absolute game-changer as
+                                              far as I'm concerned.
 
-                                    I understand completely! Seamlessly
-                                    editing cloud-stored text files with
-                                    Vim/NeoVim on Android is a highly
-                                    desirable workflow. While direct,
-                                    real-time syncing like a desktop
-                                    environment isn't quite as
-                                    straightforward on Android, here's a
-                                    breakdown of methods and tools that can
-                                    get you very close, minimizing the
-                                    "rigmarole" you mentioned:
+                                            I understand completely! Seamlessly
+                                            editing cloud-stored text files with
+                                            Vim/NeoVim on Android is a highly
+                                            desirable workflow. While direct,
+                                            real-time syncing like a desktop
+                                            environment isn't quite as
+                                            straightforward on Android, here's a
+                                            breakdown of methods and tools that can
+                                            get you very close, minimizing the
+                                            "rigmarole" you mentioned:
 
-                                    - 1. Rclone (Recommended for Robust Syncing):
+                                            - 1. Rclone (Recommended for Robust Syncing):
 
-                                    What it is: rclone is a command-line
-                                    program to manage files on cloud
-                                    storage. It supports a vast array of
-                                    cloud services, including Dropbox and
-                                    Google Drive.
+                                            What it is: rclone is a command-line
+                                            program to manage files on cloud
+                                            storage. It supports a vast array of
+                                            cloud services, including Dropbox and
+                                            Google Drive.
 
-                                    How it helps: You can use rclone to:
-                            ==== ==== ====
-                            - Mount cloud storage as a local directory: This is the closest you'll get to real-time syncing. Changes made in NeoVim are immediately reflected in the cloud.
-                            - Sync files and folders: You can manually or automatically sync changes between your Termux storage and cloud storage.
-                                    Setup:
-                            Install rclone in Termux: pkg install rclone  __X
-                            Configure rclone for your cloud service:
-                            rclone config  __X
-                            This will guide you through authenticating with Dropbox or Google Drive.
+                                            How it helps: You can use rclone to:
+                                    ==== ==== ====
+                                    - Mount cloud storage as a local directory: This is the closest you'll get to real-time syncing. Changes made in NeoVim are immediately reflected in the cloud.
+                                    - Sync files and folders: You can manually or automatically sync changes between your Termux storage and cloud storage.
+                                            Setup:
+                                    Install rclone in Termux: pkg install rclone  __X
+                                    Configure rclone for your cloud service:
+                                    rclone config  __X
+                                    This will guide you through authenticating with Dropbox or Google Drive.
 
-                                    Mount your cloud storage:
-                            rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
-                                    (replace my_dropbox with your configured remote name).
+                                            Mount your cloud storage:
+                                    rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+                                            (replace my_dropbox with your configured remote name).
 
-                                    Now, you can access your Dropbox files in ~/dropbox.
+                                            Now, you can access your Dropbox files in ~/dropbox.
 
+                                            Advantages:
+
+                                            - Real-time syncing (when mounted).
+                                            - Reliable and powerful.
+                                            - Supports many cloud services.
+
+                                            Disadvantages:
+
+                                            - Requires some command-line knowledge.
+                                            - Mounting can be resource-intensive.
+                                    2. TERMUX-API AND CLOUD STORAGE APPS:  ___SEEMORE
+                                    What it is: Termux-API allows you to interact with Android's system features.
+                                            How it helps: You can use it to:
+                                            Trigger file downloads from cloud apps (Dropbox, Google Drive) using intents.
+                                            Trigger file uploads back to cloud apps.
+                                            Setup:
+                                    Install Termux-API: pkg install termux-api  [[__X]]
+                                            Install the Dropbox or Google Drive app on your Android device.
+                                            .
+                                    Use termux-open with intents to download or upload files.
                                     Advantages:
-
-                                    - Real-time syncing (when mounted).
-                                    - Reliable and powerful.
-                                    - Supports many cloud services.
+                                    Leverages existing cloud-app functionality.
+                                    Simpler than rclone for basic file-operations.
 
                                     Disadvantages:
+                                    Not real-time syncing.
+                                    Requires manual triggering of downloads and uploads.
+                                    Limited control over syncing.
+                                            ____ ____ ____ ____
+                                            3. Git (for Text Files):
+
+                                                How it helps: If your text files are code or configuration files, you can use Git to manage them.
+                                                Setup:
+                                                    Install Git in Termux: pkg install git
+                                                    Create a Git repository on GitHub, GitLab, or Bitbucket.
+                                                    Clone the repository to your Termux storage.
+                                                    Edit files with NeoVim.
+                                                    Commit and push changes to the remote repository.
+                                                Advantages:
+                                                    Version control.
+                                                    Collaborative editing.
+                                                    Relatively easy to sync changes.
+                                                Disadvantages:
+                                                    Not ideal for non-code files.
+                                                    Requires some Git knowledge.
+
+                                            4. Syncthing (Peer-to-Peer Syncing):
+
+                                                What it is: Syncthing is a peer-to-peer file synchronization tool.
+                                                How it helps: You can sync files between your Android device and other devices (like your computer) without relying on a central cloud service.
+                                                Setup:
+                                                    Install Syncthing on your Android device (via F-Droid or the Play Store) and on your computer.
+                                                    Configure Syncthing to share the desired folders.
+                                                    Edit files in Termux, and Syncthing will automatically sync them.
+                                                Advantages:
+                                                    Decentralized.
+                                                    Secure.
+                                                    Cross-platform.
+                                                Disadvantages:
+                                                    Requires devices to be online to sync.
+                                                    More complex setup than basic cloud syncing.
+
+                                            Recommended Workflow (Rclone):
+                                          ____ ____ ____ ____
+                                    For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
+                                                Install and Configure rclone.
+                                                .
+                                    config:
+                                    Mount your cloud storage:
+                                    rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+                                    dropbox_termux ----^
+                                    Navigate to your mounted directory: cd ~/dropbox/path/to/my/files
+                                    Edit files with NeoVim: nvim my_file.txt
+                                    Changes are automatically synced.
+
+                                            - The only thing I have left is to
+                                              determine what the 'my_dropbox' value
+                                              corresponds to on my particular
+                                              Android device and/or cloud-services.
+                                              The cloud-services relevant in my case
+                                              are Dropbox and Google Drive. Could
+                                              you therefore give me some more
+                                              guidance or information concerning how
+                                              I can determine the respective values
+                                              I would need to replace the
+                                              'my_dropbox' dummy-value with on my
+                                              device and cloud-services?
+
+                                            You're very close! The my_dropbox: part
+                                            of the rclone mount command refers to
+                                            the name of your rclone remote
+                                            configuration. You need to configure
+                                            rclone to connect to your Dropbox or
+                                            Google Drive account first. Here's how
+                                            to do that:
+
+                                            1. Configure Rclone Remotes:
+
+                                        - Open Termux: Launch your Termux app on
+                                              your Android device.
+
+                                        - Run rclone config: This command will
+                                              start the interactive rclone
+                                              configuration process.
+                                    ====
+                                    rclone config  __X
+
+                                            Create a New Remote:
+                                        You'll be prompted to create a new remote.
+                                    Choose n for "new remote."  __X
+                                        Enter a name for your remote. This is what will replace my_dropbox in your mount command. For example:
+                                    For Dropbox: 'my_dropbox' = dropbox_termux
+                                        For Google Drive: gdrive_termux
+                                                    Select the storage type:
+                                    For Dropbox: Choose Dropbox.
+                                        For Google Drive: Choose Google Drive.
+                                                    Follow the on-screen instructions:
+                                    Rclone will guide you through the authentication process. It will likely open a web browser to your Dropbox or Google Drive account, where you'll grant rclone access.
+                                        If Termux is unable to open a browser, the rclone configuration
+                                        will provide you with a URL, that you will need to copy and paste into a
+                                        browser on another device.
+                                    After authorizing rclone, you will be provided with a code, that you will then paste back into the Termux terminal.
+                                    You'll be asked various configuration questions.  In most cases, the default options are fine. Once the configuration is complete, rclone will save your remote settings.
+                                        2. Use the Remote Name in Your Mount Command:
+
+                                        Now that you've configured your remotes, you can use their names in your rclone mount command:
+                                    mounting:
+                                    For Dropbox:
+                                    rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes  __X
+                                            For Google Drive:
+                                        rclone mount gdrive_termux: ~/gdrive --vfs-cache-mode writes
+                                                Replace ~/dropbox and ~/gdrive with the desired mount point in your Termux file system.
 
-                                    - Requires some command-line knowledge.
-                                    - Mounting can be resource-intensive.
-                            2. TERMUX-API AND CLOUD STORAGE APPS:  ___SEEMORE
-                            What it is: Termux-API allows you to interact with Android's system features.
-                                    How it helps: You can use it to:
-                                    Trigger file downloads from cloud apps (Dropbox, Google Drive) using intents.
-                                    Trigger file uploads back to cloud apps.
-                                    Setup:
-                            Install Termux-API: pkg install termux-api  [[__X]]
-                                    Install the Dropbox or Google Drive app on your Android device.
-                                    .
-                            Use termux-open with intents to download or upload files.
-                            Advantages:
-                            Leverages existing cloud-app functionality.
-                            Simpler than rclone for basic file-operations.
-
-                            Disadvantages:
-                            Not real-time syncing.
-                            Requires manual triggering of downloads and uploads.
-                            Limited control over syncing.
-                                    ____ ____ ____ ____
-                                    3. Git (for Text Files):
-
-                                        How it helps: If your text files are code or configuration files, you can use Git to manage them.
-                                        Setup:
-                                            Install Git in Termux: pkg install git
-                                            Create a Git repository on GitHub, GitLab, or Bitbucket.
-                                            Clone the repository to your Termux storage.
-                                            Edit files with NeoVim.
-                                            Commit and push changes to the remote repository.
-                                        Advantages:
-                                            Version control.
-                                            Collaborative editing.
-                                            Relatively easy to sync changes.
-                                        Disadvantages:
-                                            Not ideal for non-code files.
-                                            Requires some Git knowledge.
-
-                                    4. Syncthing (Peer-to-Peer Syncing):
-
-                                        What it is: Syncthing is a peer-to-peer file synchronization tool.
-                                        How it helps: You can sync files between your Android device and other devices (like your computer) without relying on a central cloud service.
-                                        Setup:
-                                            Install Syncthing on your Android device (via F-Droid or the Play Store) and on your computer.
-                                            Configure Syncthing to share the desired folders.
-                                            Edit files in Termux, and Syncthing will automatically sync them.
-                                        Advantages:
-                                            Decentralized.
-                                            Secure.
-                                            Cross-platform.
-                                        Disadvantages:
-                                            Requires devices to be online to sync.
-                                            More complex setup than basic cloud syncing.
-
-                                    Recommended Workflow (Rclone):
-                                  ____ ____ ____ ____
-                            For the most seamless experience, I recommend using rclone with the mount command. This will allow you to treat your cloud storage as a local directory.
-                                        Install and Configure rclone.
-                                        .
-                            config:
-                            Mount your cloud storage:
-                            rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
-                            dropbox_termux ----^
-                            Navigate to your mounted directory: cd ~/dropbox/path/to/my/files
-                            Edit files with NeoVim: nvim my_file.txt
-                            Changes are automatically synced.
-
-                                    - The only thing I have left is to
-                                      determine what the 'my_dropbox' value
-                                      corresponds to on my particular
-                                      Android device and/or cloud-services.
-                                      The cloud-services relevant in my case
-                                      are Dropbox and Google Drive. Could
-                                      you therefore give me some more
-                                      guidance or information concerning how
-                                      I can determine the respective values
-                                      I would need to replace the
-                                      'my_dropbox' dummy-value with on my
-                                      device and cloud-services?
-
-                                    You're very close! The my_dropbox: part
-                                    of the rclone mount command refers to
-                                    the name of your rclone remote
-                                    configuration. You need to configure
-                                    rclone to connect to your Dropbox or
-                                    Google Drive account first. Here's how
-                                    to do that:
-
-                                    1. Configure Rclone Remotes:
-
-                                - Open Termux: Launch your Termux app on
-                                      your Android device.
-
-                                - Run rclone config: This command will
-                                      start the interactive rclone
-                                      configuration process.
-                            ====
-                            rclone config  __X
-
-                                    Create a New Remote:
-                                You'll be prompted to create a new remote.
-                            Choose n for "new remote."  __X
-                                Enter a name for your remote. This is what will replace my_dropbox in your mount command. For example:
-                            For Dropbox: 'my_dropbox' = dropbox_termux
-                                For Google Drive: gdrive_termux
-                                            Select the storage type:
-                            For Dropbox: Choose Dropbox.
-                                For Google Drive: Choose Google Drive.
-                                            Follow the on-screen instructions:
-                            Rclone will guide you through the authentication process. It will likely open a web browser to your Dropbox or Google Drive account, where you'll grant rclone access.
-                                If Termux is unable to open a browser, the rclone configuration
-                                will provide you with a URL, that you will need to copy and paste into a
-                                browser on another device.
-                            After authorizing rclone, you will be provided with a code, that you will then paste back into the Termux terminal.
-                            You'll be asked various configuration questions.  In most cases, the default options are fine. Once the configuration is complete, rclone will save your remote settings.
-                                2. Use the Remote Name in Your Mount Command:
+                                            Explanation:
 
-                                Now that you've configured your remotes, you can use their names in your rclone mount command:
-                            mounting:
-                            For Dropbox:
-                            rclone mount dropbox_termux: ~/dropbox --vfs-cache-mode writes  __X
-                                    For Google Drive:
-                                rclone mount gdrive_termux: ~/gdrive --vfs-cache-mode writes
-                                        Replace ~/dropbox and ~/gdrive with the desired mount point in your Termux file system.
-
-                                    Explanation:
+                                            rclone config: This command sets up the connection between rclone and your cloud storage service. It stores your authentication credentials and other configuration settings.
+                                            Remote Name: The name you give your remote during the rclone config process is how rclone identifies your cloud storage connection.
+                                    rclone mount remote_name:local_mount_point: This command mounts your cloud storage as a local directory in Termux.  __?
 
-                                    rclone config: This command sets up the connection between rclone and your cloud storage service. It stores your authentication credentials and other configuration settings.
-                                    Remote Name: The name you give your remote during the rclone config process is how rclone identifies your cloud storage connection.
-                            rclone mount remote_name:local_mount_point: This command mounts your cloud storage as a local directory in Termux.  __?
+                                            Important Notes:
 
-                                    Important Notes:
+                                            Authentication: Rclone uses OAuth 2.0 for authentication, which is a secure way to grant access to your cloud storage.
+                                            Permissions: Ensure that Termux has the necessary permissions to access your file system.
+                                    Background Process: rclone mount runs as a background process. If you close Termux, the mount will be unmounted. You may need to use nohup or tmux to keep the mount running in the background.
+                                            VFS Cache Mode: The --vfs-cache-mode writes option is important for writing files to your mounted cloud storage. It caches data locally to improve performance.
 
-                                    Authentication: Rclone uses OAuth 2.0 for authentication, which is a secure way to grant access to your cloud storage.
-                                    Permissions: Ensure that Termux has the necessary permissions to access your file system.
-                            Background Process: rclone mount runs as a background process. If you close Termux, the mount will be unmounted. You may need to use nohup or tmux to keep the mount running in the background.
-                                    VFS Cache Mode: The --vfs-cache-mode writes option is important for writing files to your mounted cloud storage. It caches data locally to improve performance.
+                                            By following these steps, you'll be able to mount your Dropbox and Google Drive accounts in Termux and access your cloud files directly from your Android device.
 
-                                    By following these steps, you'll be able to mount your Dropbox and Google Drive accounts in Termux and access your cloud files directly from your Android device.
+                                            This approach provides the closest experience to working with local files, with the added benefit of cloud syncing.
 
-                                    This approach provides the closest experience to working with local files, with the added benefit of cloud syncing.
+                                            Remember to choose the approach that best suits your needs and technical comfort level.
 
-                                    Remember to choose the approach that best suits your needs and technical comfort level.
+                                            - A quick question with regard to using rclone through Termux for getting instant (or near instant) sync between Dropbox, Google Drive (etc) files on an Android device and the cloud: Is there a way to specify only a particular folder inside my Google Drive or Dropbox folder system? What I mean is, if I would connect the whole of my Dropbox or Google Drive folders, that would be too much storage for my Android device to handle.
+                                    Specify a particular folder within your Google Drive or Dropbox structure when using rclone with Termux on Android. This allows you to sync only the relevant files and avoid overwhelming your device's storage.
+                                            Here's how you can achieve this:
 
-                                    - A quick question with regard to using rclone through Termux for getting instant (or near instant) sync between Dropbox, Google Drive (etc) files on an Android device and the cloud: Is there a way to specify only a particular folder inside my Google Drive or Dropbox folder system? What I mean is, if I would connect the whole of my Dropbox or Google Drive folders, that would be too much storage for my Android device to handle.
-                            Specify a particular folder within your Google Drive or Dropbox structure when using rclone with Termux on Android. This allows you to sync only the relevant files and avoid overwhelming your device's storage.
-                                    Here's how you can achieve this:
+                                            1. Specifying the Remote Path:
 
-                                    1. Specifying the Remote Path:
+                                            When configuring your rclone remote, you define the "remote" as a combination of the remote name and the path within that remote. For example:
 
-                                    When configuring your rclone remote, you define the "remote" as a combination of the remote name and the path within that remote. For example:
+                                                If your Google Drive remote is named "gdrive" and you want to sync the folder "MySyncFolder" within your Drive, you would use "gdrive:MySyncFolder" as the remote path.
+                                    If your Dropbox remote is named "dropbox" and you want to sync the folder "Documents/Important", you'd use "dropbox:Documents/Important".
+                                            2. Using the rclone sync or rclone copy commands:
 
-                                        If your Google Drive remote is named "gdrive" and you want to sync the folder "MySyncFolder" within your Drive, you would use "gdrive:MySyncFolder" as the remote path.
-                            If your Dropbox remote is named "dropbox" and you want to sync the folder "Documents/Important", you'd use "dropbox:Documents/Important".
-                                    2. Using the rclone sync or rclone copy commands:
+                                            When using rclone sync or rclone copy, you specify the source and destination paths. To sync a specific folder, you would use the remote path you defined in step 1.
 
-                                    When using rclone sync or rclone copy, you specify the source and destination paths. To sync a specific folder, you would use the remote path you defined in step 1.
+                                            Example using Google Drive:
+                                            Bash
 
-                                    Example using Google Drive:
-                                    Bash
+                                            rclone sync gdrive:MySyncFolder /storage/shared/MySyncFolder
 
-                                    rclone sync gdrive:MySyncFolder /storage/shared/MySyncFolder
+                                            This command will:
 
-                                    This command will:
+                                                rclone sync: Sync the files.
+                                                gdrive:MySyncFolder: Specifies the "MySyncFolder" folder within the "gdrive" remote.
+                                                /storage/shared/MySyncFolder: Specifies the local directory on your Android device where you want to sync the files.
 
-                                        rclone sync: Sync the files.
-                                        gdrive:MySyncFolder: Specifies the "MySyncFolder" folder within the "gdrive" remote.
-                                        /storage/shared/MySyncFolder: Specifies the local directory on your Android device where you want to sync the files.
+                                            Example using Dropbox:
+                                            Bash
+                                    rclone sync//copy dropbox:Documents/Important /storage/shared/ImportantDocuments  __X
+                                            This command will:
 
-                                    Example using Dropbox:
-                                    Bash
-                            rclone sync//copy dropbox:Documents/Important /storage/shared/ImportantDocuments  __X
-                                    This command will:
+                                                rclone copy: copy the files.
+                                                dropbox:Documents/Important: Specifies the "Documents/Important" folder within the "dropbox" remote.
+                                                /storage/shared/ImportantDocuments: Specifies the local directory on your Android device where you want to copy the files.
 
-                                        rclone copy: copy the files.
-                                        dropbox:Documents/Important: Specifies the "Documents/Important" folder within the "dropbox" remote.
-                                        /storage/shared/ImportantDocuments: Specifies the local directory on your Android device where you want to copy the files.
+                                            Important Considerations:
 
-                                    Important Considerations:
+                                                Remote Configuration:
+                                                    Ensure you have correctly configured your rclone remotes for Google Drive and Dropbox using rclone config.
+                                                Local Path:
+                                                    Choose a local path on your Android device that has sufficient storage space.
+                                                Permissions:
+                                                    Termux needs appropriate permissions to access the local storage directories.
 
-                                        Remote Configuration:
-                                            Ensure you have correctly configured your rclone remotes for Google Drive and Dropbox using rclone config.
-                                        Local Path:
-                                            Choose a local path on your Android device that has sufficient storage space.
-                                        Permissions:
-                                            Termux needs appropriate permissions to access the local storage directories.
+                                    Sync vs. Copy:
+                                    rclone sync makes the destination identical to the source, deleting files in the destination that are not present in the source.
+                                    rclone copy copies files from the source to the destination without deleting any files in the destination.
+                                    Filters:
+                                    Rclone also allows you to add filters to your commands. This allows for even more fine grained control. You can specify file types to include or exclude.
+                                            By specifying the correct remote path, you can easily sync only the necessary folders and keep your Android device's storage manageable.
 
-                            Sync vs. Copy:
-                            rclone sync makes the destination identical to the source, deleting files in the destination that are not present in the source.
-                            rclone copy copies files from the source to the destination without deleting any files in the destination.
-                            Filters:
-                            Rclone also allows you to add filters to your commands. This allows for even more fine grained control. You can specify file types to include or exclude.
-                                    By specifying the correct remote path, you can easily sync only the necessary folders and keep your Android device's storage manageable.
+                                            - I have no problem at all having to mount, use cli-commands and the like - a big part of my daily workflow is built around exactly that.
 
-                                    - I have no problem at all having to mount, use cli-commands and the like - a big part of my daily workflow is built around exactly that.
+                                            Excellent! If you're comfortable with the command line and mounting file systems, rclone will be your best friend for syncing cloud files with Termux. Here's a more detailed guide to get you set up and working efficiently:
 
-                                    Excellent! If you're comfortable with the command line and mounting file systems, rclone will be your best friend for syncing cloud files with Termux. Here's a more detailed guide to get you set up and working efficiently:
 
+                                            - 1. Installing and Configuring Rclone:
 
-                                    - 1. Installing and Configuring Rclone:
+                                            Install:
 
-                                    Install:
+                                            ____ ____ ____ [____]
+                                    pkg update && pkg install rclone
 
-                                    ____ ____ ____ [____]
-                            pkg update && pkg install rclone
+                                            Configure:
+                                    rclone config
+                                    press n
+                                            This will walk you through the process
+                                            of setting up a new remote.
 
-                                    Configure:
-                            rclone config
-                            press n
-                                    This will walk you through the process
-                                    of setting up a new remote.
+                                            - Choose the cloud service you want to
+                                              use (e.g., Dropbox, Google Drive).
+                                            - You'll need to authenticate with your
+                                              cloud account. rclone will guide you
+                                              through this.
+                                            - Give your remote a name (e.g.,
+                                              mydropbox, mygoogledrive).
+                                            - When finished, verify that your remote
+                                              is configured correctly with rclone
+                                              listremotes.
 
-                                    - Choose the cloud service you want to
-                                      use (e.g., Dropbox, Google Drive).
-                                    - You'll need to authenticate with your
-                                      cloud account. rclone will guide you
-                                      through this.
-                                    - Give your remote a name (e.g.,
-                                      mydropbox, mygoogledrive).
-                                    - When finished, verify that your remote
-                                      is configured correctly with rclone
-                                      listremotes.
+                                            - 2. Mounting Cloud Storage:
 
-                                    - 2. Mounting Cloud Storage:
+                                            Create a mount point:
 
-                                    Create a mount point:
+                                            mkdir ~/cloud
 
-                                    mkdir ~/cloud
+                                            This creates a directory in your home
+                                            folder where you'll mount your cloud
+                                            storage.
 
-                                    This creates a directory in your home
-                                    folder where you'll mount your cloud
-                                    storage.
+                                            Mount the remote:
 
-                                    Mount the remote:
+                                            rclone mount mydropbox: ~/cloud --vfs-cache-mode writes
 
-                                    rclone mount mydropbox: ~/cloud --vfs-cache-mode writes
+                                            Replace mydropbox with the name of your configured remote.
 
-                                    Replace mydropbox with the name of your configured remote.
+                                            --vfs-cache-mode writes is important. It enables caching and allows you to write changes directly to the mounted directory.
+                                    __X If you have issues with the mount, consider adding --daemon to run it in the background.
+                                    rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
 
-                                    --vfs-cache-mode writes is important. It enables caching and allows you to write changes directly to the mounted directory.
-                            __X If you have issues with the mount, consider adding --daemon to run it in the background.
-                            rclone mount my_dropbox: ~/dropbox --vfs-cache-mode writes
+                                            Fantastic. I really feel (and that is actually not an understatement) that a whole new world is about to be opened here for me (with respect to my daily dev- and computer-workflow).
 
-                                    Fantastic. I really feel (and that is actually not an understatement) that a whole new world is about to be opened here for me (with respect to my daily dev- and computer-workflow).
+                                            With those cheerful accolades out of the way (if I'm not mixing my metaphors here, if you know what I mean), I'd like to ask a quick follow-up: Let's say I have gotten all of my setup through and the real-time syncing of Dropbox and/or Google Drive to and from my Android device is working; Do I also need to perform an unmount operation with rclone before I close my Android Termux-session, or will that be handled automatically when I close Termux or shut down my Android-device?
 
-                                    With those cheerful accolades out of the way (if I'm not mixing my metaphors here, if you know what I mean), I'd like to ask a quick follow-up: Let's say I have gotten all of my setup through and the real-time syncing of Dropbox and/or Google Drive to and from my Android device is working; Do I also need to perform an unmount operation with rclone before I close my Android Termux-session, or will that be handled automatically when I close Termux or shut down my Android-device?
+                                            You're absolutely right, the potential for workflow enhancement with rclone on Android is huge!
 
-                                    You're absolutely right, the potential for workflow enhancement with rclone on Android is huge!
+                                            Regarding unmounting, it's generally a good practice to manually unmount your rclone mounts before closing Termux or shutting down your Android device, though it's not strictly required in all cases. Here's a breakdown:
 
-                                    Regarding unmounting, it's generally a good practice to manually unmount your rclone mounts before closing Termux or shutting down your Android device, though it's not strictly required in all cases. Here's a breakdown:
+                                            Why Manual Unmounting Is Recommended:
 
-                                    Why Manual Unmounting Is Recommended:
+                                            Clean Shutdown: Manually unmounting ensures that all pending write operations are completed and that the mount is cleanly disconnected. This reduces the risk of data corruption or incomplete file transfers.
+                                            Resource Management: Unmounting releases the resources used by the mount, which can be important for system stability, especially on resource-constrained devices like Android phones.
+                                            Avoiding Potential Issues: While Android and Termux are generally good at cleaning up resources, there's always a chance of unexpected behavior if a mount is abruptly terminated.
+                                                        Unmounting:
 
-                                    Clean Shutdown: Manually unmounting ensures that all pending write operations are completed and that the mount is cleanly disconnected. This reduces the risk of data corruption or incomplete file transfers.
-                                    Resource Management: Unmounting releases the resources used by the mount, which can be important for system stability, especially on resource-constrained devices like Android phones.
-                                    Avoiding Potential Issues: While Android and Termux are generally good at cleaning up resources, there's always a chance of unexpected behavior if a mount is abruptly terminated.
-                                                Unmounting:
+                                                        fusermount -u ~/cloud
 
-                                                fusermount -u ~/cloud
+                                                        Use this command when you're finished
+                                                        using the mount.
 
-                                                Use this command when you're finished
-                                                using the mount.
+                                            Question: If rclone can be used to mount cloud-drives such as Dropbox and Google Drive, could I perhaps also use rclone to unmount from the cloud-systems? I.e. since there seem to be some problems that are at least for the moment difficult to solve concerning fusermount, that seems to be a better solution to look for
 
-                                    Question: If rclone can be used to mount cloud-drives such as Dropbox and Google Drive, could I perhaps also use rclone to unmount from the cloud-systems? I.e. since there seem to be some problems that are at least for the moment difficult to solve concerning fusermount, that seems to be a better solution to look for
+                                            You're on the right track! While fusermount -u is the standard way to unmount FUSE filesystems (which rclone uses), rclone itself also provides a command specifically for unmounting.
 
-                                    You're on the right track! While fusermount -u is the standard way to unmount FUSE filesystems (which rclone uses), rclone itself also provides a command specifically for unmounting.
+                                            Yes, you can use rclone mount --vfs-cache-mode writes --umount to unmount cloud drives.
 
-                                    Yes, you can use rclone mount --vfs-cache-mode writes --umount to unmount cloud drives.
+                                            Here's how it works and why it's a good alternative:
 
-                                    Here's how it works and why it's a good alternative:
+                                            Using rclone mount --umount:
 
-                                    Using rclone mount --umount:
+                                                Command Structure:
+                                            rclone mount --umount <mount_point>
+                                            Replace <mount_point> with the directory where you mounted your cloud drive (e.g., ~/dropbox, ~/gdrive).
 
-                                        Command Structure:
-                                    rclone mount --umount <mount_point>
-                                    Replace <mount_point> with the directory where you mounted your cloud drive (e.g., ~/dropbox, ~/gdrive).
+                                                Example:
+                                    rclone mount --umount ~/dropbox  __X
+                                            Advantages of Using rclone mount --umount:
 
-                                        Example:
-                            rclone mount --umount ~/dropbox  __X
-                                    Advantages of Using rclone mount --umount:
+                                            Direct Control:
+                                                It's a direct command to rclone, ensuring that rclone itself handles the unmounting process.
+                                            Consistency:
+                                                It maintains consistency within the rclone ecosystem.
+                                            Potentially More Reliable:
+                                                If you're experiencing issues with fusermount, using rclone's own unmount command can be a more reliable option.
+                                            Simplicity:
+                                                It is a very simple command.
 
-                                    Direct Control:
-                                        It's a direct command to rclone, ensuring that rclone itself handles the unmounting process.
-                                    Consistency:
-                                        It maintains consistency within the rclone ecosystem.
-                                    Potentially More Reliable:
-                                        If you're experiencing issues with fusermount, using rclone's own unmount command can be a more reliable option.
-                                    Simplicity:
-                                        It is a very simple command.
+                                            Why This Is a Good Alternative:
 
-                                    Why This Is a Good Alternative:
+                                                Troubleshooting fusermount Issues:
+                                                    If you're encountering difficulties with fusermount on Termux, using rclone mount --umount bypasses those potential problems.
+                                                Scripting:
+                                                    It's easy to incorporate rclone mount --umount into shell scripts for automated unmounting.
 
-                                        Troubleshooting fusermount Issues:
-                                            If you're encountering difficulties with fusermount on Termux, using rclone mount --umount bypasses those potential problems.
-                                        Scripting:
-                                            It's easy to incorporate rclone mount --umount into shell scripts for automated unmounting.
+                                            Important Notes:
 
-                                    Important Notes:
+                                                Permissions: Ensure that you have the necessary permissions to unmount the directory.
+                                                Background Processes: If you're running rclone as a background process, make sure to use the appropriate commands to terminate it before unmounting.
 
-                                        Permissions: Ensure that you have the necessary permissions to unmount the directory.
-                                        Background Processes: If you're running rclone as a background process, make sure to use the appropriate commands to terminate it before unmounting.
+                                            Therefore, using rclone mount --umount is a very good and valid alternative to fusermount -u, and is the recommended way to unmount rclone mounts.
+                                            ____ ____ ____ ____
+                                            - 3. Automating the Mount (Optional):
 
-                                    Therefore, using rclone mount --umount is a very good and valid alternative to fusermount -u, and is the recommended way to unmount rclone mounts.
-                                    ____ ____ ____ ____
-                                    - 3. Automating the Mount (Optional):
+                                            Termux Boot Script: You can create a
+                                            script that automatically mounts your
+                                            cloud storage when Termux starts.
 
-                                    Termux Boot Script: You can create a
-                                    script that automatically mounts your
-                                    cloud storage when Termux starts.
+                                            Create a script (e.g., mount_cloud.sh)
+                                            in your home directory:
+                                    #!/bin/bash
+                                    rclone mount mydropbox: ~/cloud --vfs-cache-mode writes --daemon
 
-                                    Create a script (e.g., mount_cloud.sh)
-                                    in your home directory:
-                            #!/bin/bash
-                            rclone mount mydropbox: ~/cloud --vfs-cache-mode writes --daemon
+                                            Make the script executable:
+                                    chmod +x mount_cloud.sh
+                                    Add the script to your Termux .bashrc or .zshrc file:
+                                    echo "~/mount_cloud.sh" >> ~/.bashrc
 
-                                    Make the script executable:
-                            chmod +x mount_cloud.sh
-                            Add the script to your Termux .bashrc or .zshrc file:
-                            echo "~/mount_cloud.sh" >> ~/.bashrc
+                                            Now, your cloud storage should mount
+                                            automatically when you open Termux.
+                                    - 4. NeoVim Workflow:
+                                    Navigate to your mounted directory:
+                                    cd ~/cloud/path/to/your/files
+                                    Open files with NeoVim:
+                                    nvim my_file.txt
 
-                                    Now, your cloud storage should mount
-                                    automatically when you open Termux.
-                            - 4. NeoVim Workflow:
-                            Navigate to your mounted directory:
-                            cd ~/cloud/path/to/your/files
-                            Open files with NeoVim:
-                            nvim my_file.txt
+                                            Save and exit:
 
-                                    Save and exit:
+                                            Changes are automatically synced to your
+                                            cloud storage.
 
-                                    Changes are automatically synced to your
-                                    cloud storage.
+                                            - 5. Tips and Best Practices:
+                                    - Background Mounting: Use the --daemon
+                                              option with rclone mount to run the
+                                              mount in the background. This allows
+                                              you to close the terminal window
+                                              without unmounting.
+                                            - Caching: The --vfs-cache-mode writes
+                                              option is essential for a smooth
+                                              experience. It caches files locally,
+                                              reducing network latency.
+                                            - Network Stability: A stable internet
+                                              connection is crucial for reliable
+                                              syncing.
+                                            - Error Handling: If you encounter
+                                              errors, check the rclone logs for more
+                                              information.
+                                            - Resource Usage: Mounting cloud storage
+                                              can consume system resources. Monitor
+                                              your device's performance and adjust
+                                              settings if necessary.
 
-                                    - 5. Tips and Best Practices:
-                            - Background Mounting: Use the --daemon
-                                      option with rclone mount to run the
-                                      mount in the background. This allows
-                                      you to close the terminal window
-                                      without unmounting.
-                                    - Caching: The --vfs-cache-mode writes
-                                      option is essential for a smooth
-                                      experience. It caches files locally,
-                                      reducing network latency.
-                                    - Network Stability: A stable internet
-                                      connection is crucial for reliable
-                                      syncing.
-                                    - Error Handling: If you encounter
-                                      errors, check the rclone logs for more
-                                      information.
-                                    - Resource Usage: Mounting cloud storage
-                                      can consume system resources. Monitor
-                                      your device's performance and adjust
-                                      settings if necessary.
+                                            By using rclone and mounting your cloud
+                                            storage, you can create a seamless and
+                                            efficient workflow for editing your
+                                            cloud-stored text files with NeoVim on
+                                            Termux.
 
-                                    By using rclone and mounting your cloud
-                                    storage, you can create a seamless and
-                                    efficient workflow for editing your
-                                    cloud-stored text files with NeoVim on
-                                    Termux.
+                                            - Also, I guess I could use both Vim and
+                                              NeoVim from the Termux command-line
+                                              and run Termux-commands from the two
+                                              editors' respective command-lines
+                                              directly too, right?
 
-                                    - Also, I guess I could use both Vim and
-                                      NeoVim from the Termux command-line
-                                      and run Termux-commands from the two
-                                      editors' respective command-lines
-                                      directly too, right?
+                                            Yes, absolutely! You can indeed use both
+                                            Vim and NeoVim from the Termux command
+                                            line, and you can also execute Termux
+                                            commands directly from within those
+                                            editors. This is a powerful feature that
+                                            allows you to integrate your editing
+                                            workflow with the rest of your Termux
+                                            environment.  
 
-                                    Yes, absolutely! You can indeed use both
-                                    Vim and NeoVim from the Termux command
-                                    line, and you can also execute Termux
-                                    commands directly from within those
-                                    editors. This is a powerful feature that
-                                    allows you to integrate your editing
-                                    workflow with the rest of your Termux
-                                    environment.  
+                                            Here's how it works:
 
-                                    Here's how it works:
+                                            - 1. Running Vim/NeoVim from the Termux
+                                              Command Line:
 
-                                    - 1. Running Vim/NeoVim from the Termux
-                                      Command Line:
+                                            This is straightforward. Just type vim
+                                            or nvim followed by the filename (if you
+                                            want to open a specific file) and press
+                                            Enter.
 
-                                    This is straightforward. Just type vim
-                                    or nvim followed by the filename (if you
-                                    want to open a specific file) and press
-                                    Enter.
+                                            vim my_file.txt
+                                            nvim my_script.py
 
-                                    vim my_file.txt
-                                    nvim my_script.py
+                                            vim (to open Vim without a specific file)
+                                            nvim (to open NeoVim without a specific file)
 
-                                    vim (to open Vim without a specific file)
-                                    nvim (to open NeoVim without a specific file)
+                                            - 2. Running Termux Commands from Vim/NeoVim:
 
-                                    - 2. Running Termux Commands from Vim/NeoVim:
+                                            Both Vim and NeoVim have a command mode
+                                            where you can execute shell commands.   
 
-                                    Both Vim and NeoVim have a command mode
-                                    where you can execute shell commands.   
+                                            To run a Termux command, use the :!
+                                            prefix followed by the command.
 
-                                    To run a Termux command, use the :!
-                                    prefix followed by the command.
+                                            Example: Listing directory contents:
 
-                                    Example: Listing directory contents:
+                                            In Vim/NeoVim command mode, type :!ls
+                                            and press Enter.
 
-                                    In Vim/NeoVim command mode, type :!ls
-                                    and press Enter.
+                                            The output of the ls command will be
+                                            displayed in a temporary window.
 
-                                    The output of the ls command will be
-                                    displayed in a temporary window.
+                                            Example: Running a Python script:
 
-                                    Example: Running a Python script:
+                                            :!python my_script.py
 
-                                    :!python my_script.py
+                                            Example: Compiling a C program:
 
-                                    Example: Compiling a C program:
+                                            :!gcc my_program.c -o my_program
 
-                                    :!gcc my_program.c -o my_program
+                                            Example: Checking the date:
 
-                                    Example: Checking the date:
+                                            :!date
 
-                                    :!date
+                                            - 3. Using termux-open from Vim/NeoVim:
 
-                                    - 3. Using termux-open from Vim/NeoVim:
+                                            You can also use termux-open to open
+                                            files with the appropriate Android app
+                                            from within Vim/NeoVim.
 
-                                    You can also use termux-open to open
-                                    files with the appropriate Android app
-                                    from within Vim/NeoVim.
+                                            :!termux-open my_document.pdf
+                                            (=opens the PDF in your default PDF viewer)
 
-                                    :!termux-open my_document.pdf
-                                    (=opens the PDF in your default PDF viewer)
+                                            - 4. Using the output of Termux commands
+                                              in Vim/NeoVim:
 
-                                    - 4. Using the output of Termux commands
-                                      in Vim/NeoVim:
+                                            You can capture the output of a Termux
+                                            command and insert it into your
+                                            Vim/NeoVim buffer.
 
-                                    You can capture the output of a Termux
-                                    command and insert it into your
-                                    Vim/NeoVim buffer.
+                                            :r !date
+                                              (inserts the current date and time at the cursor position)
+                                            :r !ls
+                                              (inserts the directory listing at the cursor position)
 
-                                    :r !date
-                                      (inserts the current date and time at the cursor position)
-                                    :r !ls
-                                      (inserts the directory listing at the cursor position)
+                                            - 5. Using Pipes:
 
-                                    - 5. Using Pipes:
+                                            You can combine Termux commands with
+                                            pipes to perform more complex
+                                            operations.
 
-                                    You can combine Termux commands with
-                                    pipes to perform more complex
-                                    operations.
+                                            :!grep "pattern" my_file.txt | sort
+                                              (searches for a pattern in a file and sorts the results)
 
-                                    :!grep "pattern" my_file.txt | sort
-                                      (searches for a pattern in a file and sorts the results)
+                                            Why this is useful:
 
-                                    Why this is useful:
+                                            - Integrated Workflow: You can
+                                              seamlessly switch between editing and
+                                              running commands without leaving your
+                                              editor.
+                                            - Automation: You can create custom
+                                              mappings or functions in Vim/NeoVim to
+                                              automate common tasks.   
 
-                                    - Integrated Workflow: You can
-                                      seamlessly switch between editing and
-                                      running commands without leaving your
-                                      editor.
-                                    - Automation: You can create custom
-                                      mappings or functions in Vim/NeoVim to
-                                      automate common tasks.   
+                                            - Development: It's particularly useful
+                                              for software development, where you
+                                              often need to compile, run, and test
+                                              code.
+                                            - System Administration: You can perform
+                                              system administration tasks directly
+                                              from your editor.
 
-                                    - Development: It's particularly useful
-                                      for software development, where you
-                                      often need to compile, run, and test
-                                      code.
-                                    - System Administration: You can perform
-                                      system administration tasks directly
-                                      from your editor.
-
-                                    This integration makes Vim/NeoVim even
-                                    more powerful in the Termux environment.
-                    ----
-SSH
+                                            This integration makes Vim/NeoVim even
+                                            more powerful in the Termux environment.
+SSH  ¤¤
                         Could you give me direction as to which chapters to read and focus on? I.e. what I'm thinking is that some chapters contain absolutely essential knowledge, and some might be good to take a quick look or glance at, but not absolutely critical or paramount to study in detail.
                         ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
-Tasker
-                        ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
-                        .
+Tasker  ¤¤¤
+                            ~/gdrive/rsc/Doks/taskuj/AndroidProgr/android-scriptautomation.Tags1.txt
+                            .
 Vbox
-VeraCrypt
-VNC/Remote Desktop
+ VeraCrypt
+VNC/Remote Desktop  ¤¤
 WLan
 
-Nu-Shell
+Nu-Shell  ¤¤(¤)
                         ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_docs-book.txt
 https://www.nushell.sh/cookbook/book/  #or migrate to sysadmin(!!)

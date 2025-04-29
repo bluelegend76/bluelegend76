@@ -38,6 +38,8 @@ https://www.noongarboodjar.com.au/wp-content/uploads/2017/
 
 
 ___start
+  https://kivy.org/doc/stable/
+  https://docs.lmms.io/user-manual/getting-started/installation
 https://suave.io/
 MongoDB Compass ____ ____
     https://www.mongodb.com/docs/compass/current/install/

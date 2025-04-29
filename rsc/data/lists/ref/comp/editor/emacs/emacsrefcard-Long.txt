@@ -1,7 +1,7 @@
 vim:fdm=indent:fdl=6:
 set foldmethod=indent foldlevel=2
 
-~/Empire/Doks/Comp/editor/emacs/cheatsh-qref/emacs-refcard_long--HIGHLIGHTS_2021.pdf
+~/Empire/Doks/Comp/editor/emacs/cheatsh-qref/emacs-refcard_long--HIGHLIGHTS_2021.pdf  ¤¤¤¤
                             .
                             open or click a graphical icon
                             emacs& RET

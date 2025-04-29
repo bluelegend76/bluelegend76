@@ -238,15 +238,16 @@ Vanki LearnQna ----
 
 ~/Desktop/Scratch.txt
 
+
+    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
+~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
+
 PROGR ----
   gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
 Clangs (C, Cpp, CSharp, Dlang) ----
   cppDlang.prl.txt
 Web/Mobile/Cloud ----
 
-
-    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
-~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
 
 multimedia (incl. Anki):
     gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
@@ -549,8 +550,13 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
     ---- 'MINIS|DAILIES' ---- ___index=0 {{{
     LEETCODE ETC(+SCRIPT-FU) CODE-PROBLEMS __ ****
             KAPA FILER/MAPPAR I LEGACY (=5 per dag) !!(! *****)
+VIMSCRIPT x4 (+Elisp Startwith)
+Termux  __  @@
+  OrgMode
+JupNotebooks, polyglot notebooks,  Pandas(etc)
+F# w. Datastructures
     Saol 1/Bevingat/Ordspr. =Clean  @ +Idioms/Litt  arlang 1  +LangDb Prios 1-100(!) →
-        Bevingat (Quotes, etc)
+      Bevingat (Quotes, etc)
     . {{{
       - vta-apps Docs: Dualist
     }}}

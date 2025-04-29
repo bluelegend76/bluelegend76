@@ -6,6 +6,9 @@ let mapleader=","
 " TODO: LEFT/RIGHT = MOVE BETW. SENTENCES (MAYBE: VMARK SENTENCE)
 " TODO: A-Left/A-Right = Decrease/Increase Foldlevel [****]
 " z1/a1, z2/a2 etc = set foldlevel to 1,2 etc [??]
+" Visual m-marks (+easy moving betw. with Arrow-keys (or the like))
+" NEW: FLIP BACKW/FORW - SEARCH-HISTORY(=Active Searchpattern), V-HIGHLIGHTS (=maybe with hotkey for saving a partic. highlight)
+"   [activate mode  + ca-up/down (or the like)]
 
 " TODO: VIM SPELL, VIM COLORS
 " INVESTIGATE: INSTALLING AND USING VUNDLE/PLUG FOR HANDLING VIM-PLUGINS
