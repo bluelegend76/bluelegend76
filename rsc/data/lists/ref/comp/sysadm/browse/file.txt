@@ -915,17 +915,18 @@ freecommander
                     File: View external  s-f3
                     File: Wipe  cs-f8
                 Edit ----
-                    Edit: Copy  c-c
+                    Edit: Copy  a_ec, c-c
+                    Edit: Paste  a_ep, c-v
+                    Edit: Cut  a_eu, c-x
                             Edit: Copy file name to clipboard (8.3)
                             Edit: Copy file path to clipboard (8.3)
                             Edit: Copy file path to clipboard (UNC)
                             Edit: Copy file path to clipboard (Web)
-                    Edit: Copy full name as text  a-Ins
-                    Edit: Copy full path as text  ca-Ins
+                    Edit: Copy full name as text  a_ey, a-Ins
+                    Edit: Copy full path as text  a_eh, ca-Ins
                             Edit: Copy full path as text (8.3)
                             Edit: Copy full path as text (UNC)
                             Edit: Copy full path as text (Web)
-                            Edit: Cut  c-x
                 Select ----
                     Edit: Select files with same extension  a_ee, a-k+  ____
                     --
@@ -933,14 +934,14 @@ freecommander
                     Edit: Invert selection - only files  a_en, c-k*
                      Edit: Save selection in file  a_ev
                     Edit: Load selection from file  a_eo
-                            Edit: Paste  c-v
-                    Edit: Select all files  c-k/  # or c-k+
-                    Edit: Select group...  k+
+                    Edit: Select all files  a_es, c-k/  # or c-k+
+                    Edit: Select group...  a_eg, k+
                             Edit: Select same in other pane  a_e,m
-                            Edit: Select all  c-a
-                            Edit: Unselect all  c_k-
-                    Edit: Unselect files with same extension  a_k-
-                    Edit: Unselect group...  k-
+                            Edit: Select all  a_ea, c-a
+                            Edit: Unselect all  a_el, c_k-
+                    Edit: Unselect files with same extension  a_ef, a_k-
+                    Edit: Unselect group...  a_et, k-
+                ___zzzz
                 Folder ----
                             Folder: Add current folder  cs-v
                             .

@@ -93,6 +93,8 @@ Calendar + Dailies {{{
     - Fysåterhämtning
     - Soc. samvaro och kontakter
     - Hålla (sig) väl med 'hyresvärden'
+  - Inte helt van att jobba i kontorslagsflödet - mycket möten och 'start-stop'
+  + högt dokumentationskrav, eftersom jag jobbat avskuret = inte ihop med nån
 
     - Prata med Martin et al (=undersöka fler möjligheter)
   Totalgenomgång + VankiDecks för AspDnc Inact2023  [=flera heldagar]
@@ -122,27 +124,50 @@ hänglista
         varför har jag inte fått någon ursäkt/kommentar från inblandade + flera elever?
   }}}
   2025-04-29 ti {{{
-___calendarnow
       - stördes en del av tråkig värk
 
   - ordna upp några commits (="Vem har gjort det här")
   - Tvungen att kontakta skolan (+förbereda för en anmälan till MYH)
     - behövde också besöka Apoteket
-  - Kolla material m. Erik ----------------------------------+
-    - kolla över önskemål från handledaren/Abe               |
-    + läser parallellt i 'Dnc In Action 2023'                |
-  ----                                                       |
-  Förfrågan möte med Peter ----                              |
-                                                             |
-                                                             |
-  - installer shall run exe-file as a process (silently) <---+
+  - Kolla material m. Erik
+    - kolla över önskemål från handledaren/Abe
+    + läser parallellt i 'Dnc In Action 2023'
+  ----
+  Förfrågan möte med Peter ----
+
+      'Håller på med två implementationer just nu'
+  }}}
+  2025-04-30 ons {{{
+___calendarnow
+
+        - ordna upp några commits (="Vem har gjort det här")
+  - Kolla material m. Erik
+        + läser parallellt i 'Dnc In Action 2023'
+  (eftermiddags)Möte med Peter (+Henrik)
+  - planering/undersökning filformat exjobbsrapport + pres.
+  ----
+  - Tvungen att kontakta skolan (+förbereda för en anmälan till MYH)
+  - kolla över önskemål från handledaren/Abe
+
+t a s k - i n s t r u c t i o n s {{{
+
+280794: Create installation-functionality handler in Updater {{{
+  - installer shall run exe-file as a process (silently)
+      (+= Kolla material m. Erik)
   - KUNNA/TESTA ANROPA WEB-API:T OCH FÅ UT VERSIONSNUMMER MM FRÅN ENDPOINT
   L. Malm: 'Hur kan vi testköra en endpoint för att få tillbaks ett versionsnummer?'
       Kunna testköra sina Endpoints: Postman (=vanligast)
       - TESTA I SWAGGER
       - FÖRSLAG/STRATEGI: BYGG GRUNDFUNKTIONALITET I WEB-API:T MED CONTROLLERS; SENARE: BRYT UT FUNKTIONALITEN MER EXAKT TILL FÄRDIG KLASSTRUKTUR
-  Abbe: 'Ska funktionalitet i Core användas/replikeras för att läsa av versionsnummer'(????)
-  ----
+  Abbe: 'Ska funktionalitet i Core användas/replikeras för att <<läsa av versionsnummer>>'(????)
+
+  Calculate checksum for file 1 (exe) + diff.sized exe
+
+- TC Core är installerat.
+  Hur hittar och läser vi av versions-nummer (och path?) för ett installerat program?
+  --
+  Kolla i Windows Registry = ska innehålla 
+}}}
   281351: Create tokenServiceHandler for getting client access-token
   281111: Create http-client for handling batch-requests to graph
 281103: Create http-client for handling requests to sharepoint
@@ -154,9 +179,10 @@ ___calendarnow
 281578: Handle retrieval of currently installed application-version
 281582: Handle downloading application-installers
 
-      Håller på med två implementationer just nu
-  }}}
-  2025-04-30 ons {{{
+show updater-client in 'system-tray'
+
+}}}
+
   }}}
     Ingen träff med Ludvig
 Boka snack med Pernilla
@@ -555,6 +581,8 @@ Termux  __  @@
   OrgMode
 JupNotebooks, polyglot notebooks,  Pandas(etc)
 F# w. Datastructures
+----
+CSound (et al)  +Recording(!)
     Saol 1/Bevingat/Ordspr. =Clean  @ +Idioms/Litt  arlang 1  +LangDb Prios 1-100(!) →
       Bevingat (Quotes, etc)
     . {{{
@@ -1562,6 +1590,7 @@ CSOUND-BOOK (+Csound FlossMan)
   AVALONIA  ¤¤(¤)
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
+___SystemTray_SimpleAvaloniaGUIProgram
 
 
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/manning-morebooks/dotnetcore-inact-2e_mauiavalonia.txt
@@ -2467,6 +2496,75 @@ Immo0`ov0"my  #pre: set reg. 'm' to '1. '  +  macro sets marker 'o'
 
 
 GEMINI NEWEST  [Termux PKG, ] {{{
+
+VERACRYPT - SECURE FOLDER {{{
+
+Let's say I wanted to create a
+directory to hold some files and
+directories protected by VeraCrypt
+and a strong algorithm, could you
+guide me through the process so I
+have a checklist?
+
+Absolutely! Securing your files and directories with VeraCrypt and a strong algorithm is a great way to protect your data. Here's a checklist you can follow to guide you through the process:
+
+VeraCrypt Directory Protection Checklist:
+
+1. Preparation:
+
+- [ ] Download and Install VeraCrypt: If you haven't already, download the latest version of VeraCrypt from its official website (be sure to verify the download signature). Install it on your system.
+- [ ] Identify Files/Directories: Clearly identify the specific files and directories you want to protect within this VeraCrypt volume.
+- [ ] Determine Volume Size: Estimate the total size of the files and directories you intend to store, plus some extra space for future additions. This will determine the size of your VeraCrypt volume.
+- [ ] Choose a Secure Location for the Volume File: Decide where you will save the VeraCrypt volume file itself. This file will act as a container for your encrypted data. Choose a location that is not easily accessible or obvious.
+
+2. Creating the VeraCrypt Volume:
+
+- [ ] Launch VeraCrypt: Open the VeraCrypt application.
+- [ ] Click "Create Volume": This will open the Volume Creation Wizard.
+- [ ] Select "Create an encrypted file container": This is the appropriate option for creating a file-based volume to hold your directories and files. Click "Next."
+- [ ] Choose Volume Location: Click "Select File..." and browse to the location where you want to save your VeraCrypt volume file. Give it a descriptive name (e.g., "SecureData.hc"). Click "Save" and then "Next."
+- [ ] Encryption Algorithm:
+  - [ ] Select a Strong Algorithm: Choose a robust encryption algorithm from the list. AES is a widely trusted and strong standard. Serpent and Twofish are also excellent choices. Consider researching the strengths and weaknesses of different algorithms if you have specific security requirements.
+  - [ ] Select a Hash Algorithm: Choose a strong hash algorithm. SHA-512 and Whirlpool are good options. The hash algorithm is used for key derivation and integrity checks. Click "Next."
+- [ ] Volume Size: Enter the size you determined in Step 1. Make sure it's large enough to accommodate your data. Click "Next."
+- [ ] Volume Password:
+  - [ ] Create a Strong Password: This is the most crucial step. Your password should be long, complex (a mix of uppercase and lowercase letters, numbers, and symbols), and unique. Avoid using personal information or dictionary words.
+  - [ ] Consider Using a Keyfile (Optional but Recommended for Enhanced Security): A keyfile is a separate file that acts as an additional factor for authentication. If you choose to use one, select a secure location to store it, separate from your VeraCrypt volume.
+  - [ ] Confirm Password: Re-enter your password to ensure it's typed correctly. Click "Next."
+- [ ] File System: Choose a file system for your VeraCrypt volume. NTFS is generally a good choice for compatibility with Windows. FAT32 has broader compatibility but may have file size limitations. Click "Next."
+- [ ] Wipe Mode (Optional but Recommended for Enhanced Security): If desired, select a wipe mode. This will overwrite the disk space allocated for the volume to make data recovery more difficult. Be aware that this can significantly increase the volume creation time.
+- [ ] Generate Random Data: Move your mouse randomly within the wizard window. This helps VeraCrypt generate strong cryptographic keys. Continue until the progress bar is full.
+- [ ] Click "Format": This will create your VeraCrypt volume. Warning: This process will erase any existing data in the specified volume file.
+- [ ] Close the Wizard: Once the formatting is complete, click "OK" and then "Exit."
+
+3. Using Your VeraCrypt Volume:
+
+- [ ] Mount the Volume:
+  - [ ] In the VeraCrypt main window, select an available drive letter.
+  - [ ] Click "Select File..." and browse to your VeraCrypt volume file. Click "Open."
+  - [ ] Click "Mount."
+  - [ ] Enter your password (and select your keyfile if you used one).
+  - [ ] Click "OK."
+- [ ] Access Your Encrypted Directory: Once mounted, a new drive letter will appear in your file explorer. This represents your decrypted VeraCrypt volume.
+- [ ] Create Your Protected Directory (or Directories): Inside the mounted VeraCrypt volume (the new drive letter), create the directory (or directories) where you will store your sensitive files.
+- [ ] Move/Copy Files and Directories: Move or copy the files and directories you want to protect into the newly created directory(ies) within the mounted VeraCrypt volume.
+- [ ] Unmount the Volume: When you are finished working with your protected files, it's crucial to unmount the VeraCrypt volume.
+  - [ ] In the VeraCrypt main window, select the mounted volume.
+  - [ ] Click "Dismount."
+  - [ ] Alternatively, you can right-click on the mounted drive letter in your file explorer and select "Dismount VeraCrypt Volume."
+
+4. Important Security Practices:
+
+- [ ] Remember Your Password (and Keep Your Keyfile Safe): If you lose your password or keyfile, you will likely lose access to your encrypted data permanently. Consider using a secure password manager to store your password. Keep your keyfile in a secure location, separate from your computer if possible.
+- [ ] Regular Backups: While VeraCrypt protects your data from unauthorized access, it doesn't protect against data loss due to hardware failure or other unforeseen events. Regularly back up your VeraCrypt volume to a separate secure location.
+- [ ] Keep VeraCrypt Updated: Ensure you are using the latest version of VeraCrypt to benefit from security updates and bug fixes.
+- [ ] Be Cautious of Malware: Malware can potentially log keystrokes or compromise your system in other ways. Use a reputable antivirus program and practice safe computing habits.
+- [ ] Consider Hidden Volumes (Advanced): For an extra layer of security, VeraCrypt allows you to create hidden volumes within a standard volume. This can provide plausible deniability. However, setting up and managing hidden volumes is more complex.
+
+By following this checklist, you should be able to create a VeraCrypt volume with a strong algorithm to protect your sensitive directories and files. Remember that the security of your data ultimately depends on the strength of your password and the security practices you follow. Let me know if you have any specific questions along the way!
+
+}}}
+
 
 Android + Windows: =SVDVORAK UTILITY {{{
 
@@ -12471,6 +12569,12 @@ Remember, the beauty of Nyxt is its flexibility. These are just starting points,
 
 
 
+
+}}}
+----
+INSTRUMENTALISM(Apps) {{{
+
+Voc.Exercises
 
 }}}
 
