@@ -7,6 +7,75 @@ ___calendarnow
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+TODO ADD 1 = STARTUPS 1 {{{
+
+Vanki LearnQna ----
+  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
+
+~/Desktop/Scratch.txt
+
+
+    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
+~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
+
+PROGR ----
+  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
+Clangs (C, Cpp, CSharp, Dlang) ----
+  cppDlang.prl.txt
+Web/Mobile/Cloud ----
+
+
+multimedia (incl. Anki):
+    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
+Vim/Emacs:  ¤¤¤
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Vim.txt ../ref/comp/editor/vim/Vim-Tocs.txt ../ref/comp/editor/vim/vim_excommands-functions.txt ../ref/comp/editor/vim/vimscrhardw-quickindex.txt ../ref/comp/editor/vim/vim-patternregex.txt
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Emacs.txt ../ref/comp/editor/emacs/elisp_refman.txt ../ref/comp/editor/emacs/emacs-mastextend.check.txt ../ref/comp/editor/emacs/Em1-notes_x2.txt ../ref/comp/editor/emacs/orgman-emacs.index.txt ../ref/comp/editor/emacs/emacs-dired.txt ../ref/comp/editor/emacs/emacsman1.index.txt ../ref/comp/editor/emacs/emacsrefcard-org.txt ../ref/comp/editor/emacs/emacsrefcard-shortessential.txt ../ref/comp/editor/emacs/emacsrefcard-Long.txt
+
+file/media:
+    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
+sysadm:  TODO: ADD WIN-TERMINAL  ¤¤¤
+    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
+markdown etc:  ¤¤¤
+    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
+[git, test/deploy]:
+    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
+
+scripting / Web ----  TODO: HTML, CSS, ETC  ¤¤¤
+    gvim -p ../ref/comp/cb/pycb.txt ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
+    Python.prl.txt
+System (incl. C#):
+    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
+FUNCT =LISP, F#, ML, ...:
+    gvim -p ../ref/comp/cb/clispcb.txt ../ref/comp/cb/schemecb.txt ../ref/comp/cb/clojure.txt ../ref/comp/cb/haskell.txt ../ref/comp/cb/sml-ocaml.txt ../ref/comp/cb/fs.txt
+
+Db:
+  gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
+
+
+    'ful som stryk'
+LANG1-REFS 1: (+maybe LangDb1)
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  // maybe add 'främord' etc
+
+
+Langs1 Ref-lists ----  __
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  --
+  ~/gdrive/rsc/media/pic-graphics/shorth/
+
+LANG-DB 1:
+  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt ../ref/lang/dandict2mini.txt
+                                           LangsDb.legacy ----
+                                                   ^
+                                                   |
+  or LangDb1.list.txt -----------------------------+
+  [+charAlfa]
+  . {{{
+    mada, wareware (no), sore de
+  }}}
+
+}}}
+
 mini todo/bring (etc) {{{
 Today:
 - Bet. räkningar
@@ -22,63 +91,103 @@ scratch {{{
   U.Whfgrt. aäzaqr aåtbg fbz yvxanqr zva fvghngvba zlpxrg (=wboonqr fwäyi cå qvfcynlra, unqr vatn xbyyrtbe, xhaqr vagr obyyn bpu yäeqr fvt vagr få zlpxrg)
 }}}
 Anmäln. YH/BUV {{{
-Xnabavaglt seåa:
-- c.g, N.J, T.W, P.W, 
 
-    XBAGNXG ZRQ CREAVYYN
-oyri få arexöeq C.T.N. söergntrg bpu fxbyna  
-fxbyna(=söefg söergntrg) une vagr twbeg qrg qr fxn
-wnt une sågg töen/uwäycn gvyy
-fra vagr oyvivg onpxnq ni fxbyna
-    [nyyineyvt buäyfn +unqr erqna ceboy.]
-fxbyna une fra vagr onpxng hcc zvt
-+wnt une sågg wntn rsgre qrz söe ngg så unaqyrqa. ngg gäpxn hcc
-(+söeyäatqn sevfgre c.t.n. nyyg rkgenwboo wnt sågg töen)
+MYH Tillsyn ----
+
+Kanonintyg från:
+- p.t, A.W, G.J, C.J, 
+
+G {{{
+    Att en av era (om inte den) duktigaste
+    + som har gjort så mycket för er
+    +Det är jag som har varit er kvalitetsansvarig  i över ett halvår
+(och som redan har fys. problem att beakta) ska köras så fullst. i bott
+
+Hej G
+Jag har begärt in några 'second opinions' som du skulle kalla det
+på ditt ledarskap
+oavsett det
+nånting viktigt i ditt l./din arbetsbeskrivning som du har missat
+
+= Du jobbar för mig, och jag är 
+
+jag ska inte behöva plikta med min hälsa för att du inte kan stava till vänskapskorruption (Eva har försäkrat dig om att allt är fint på Zocom)
+
+}}}
+Ch {{{
+Hur menar du/klassen att jag 'råkat' hamna utanför?
++Det var efter Oscar fryst ute mig som...
+    några är ansvariga för det, om så stora delar av klassen,
+    el. är det de beryktade 'någon' och 'ingen'?
+Jag kommer förmodl. behöva gå i terapi efter det här
+-----
+Ni (och Zocom) kommer behöva lägga den tid och de pengar som krävs (=extra handledning, terapi o psykol. hjälp, mm) för att jag ska (kunna) komma igenom detta med ett godkänt (+MYCKET goda intyg, bl.a. som kompensation för _)  [=annars kommer jag att gå ut i rikstäckande media med vad jag har råkat ut för]
+
+}}}
+Brev till Gisela Fernandez {{{
+
+Hej Gisela.Eftersom det förekommit utfrysning och t.o.m. trakasserier av mig - och det dessutom (främst) av en av representanterna (senast jag pratade med rektorn så menade han att 'de andra i klassen tycker han funkar bra' + 'vi har inget sätt/inte rätt att sanktionera någon/en elev') så på vad jag förstår så sitter den här personen fortfarande kvar i ledningsgruppen/som representant.
+
+Apropå ledningsgrupp: De två klassrepresentanter vi har nu
+
+Den ena har sagt 'Jag vet att skolan är åt h-v, men det skiter jag i (du får kämpa själv)' + Blev därefter (när jag hade avgått) tillfrågad om han ville bli huvudrepresentant, till vilket han tackade ja. Den andra har suttit och garvat/hånlett och skickat meddelanden till någon när jag kommer in och ställer frågor, och t.o.m. vid ett tillfälle när jag kommit in och det hörs tydligt att jag är totalt körd i bott.
+De två sitter (åtminstone såvitt jag vet) fortfarande som klassens representanter.
+Källan till problemen med utbildningen är att skolan har anlitat ett utbildningsföretag som tummar på kvalitén = ger lärare o handledare för dåligt med resurser för att utföra _ vilket t.o.m. gått ut över elevers utbildning, hälsa, ekonomi.Eva Foresti (ansvarig för lärarna på utb.företaget) har dock lyckats smila in sig hos Gunilla Jacobsson (skolans utb.ledare), och Gunilla har slagit dövörat till, samtidigt som hon försökt dölja problem + lärt sig att om hon visar en taggig attityd mot personer som kommer och klagar, så slutar folk komma och klaga.
+har därför försökt att hålla sin 'goda kollega' om ryggen
+
+}}}
+
+    KONTAKT MED PERNILLA
+blev så nerkörd P.G.A. företaget och skolan  
+skolan(=först företaget) har inte gjort det de ska
+jag har fått göra/hjälpa till
+sen inte blivit backad av skolan
+    [allvarlig ohälsa +hade redan probl.]
+skolan har sen inte backat upp mig
++jag har fått jaga efter dem för att få handledn. att täcka upp
+(+förlängda frister p.g.a. allt extrajobb jag fått göra)
 
 
-'Qveg-Yvfg' (rgp) ----
+'Dirt-List' (etc) ----
 
-    shfxnaqr faåynaqr söergnt, +ryrire sågg gäpxn hcc, 
-wnt une sågg zva hgovyqavat söefgöeq ni hgo.fnzbeqanera + fra oyvivg hgselfg bpu genxnffrenq ni ryrire
+    fuskande snålande företag, +elever fått täcka upp, 
+jag har fått min utbildning förstörd av utb.samordnaren + sen blivit utfryst och trakasserad av elever
 
-Vatra(!) haqreivfavat ry. ågrexbccyvat cå fbpvnyn nfcrxgre (vaxy. vatra rkgenuwäyc (raf gvyy) cref. fbz oru./zrq qbxhzragrenqr orubi)
+Ingen(!) undervisning el. återkoppling på sociala aspekter (inkl. ingen extrahjälp (ens till) pers. som beh./med dokumenterade behov)
 
-'Fbz ra xanfvt xbefavat zryyna rgg qntvf bpu ra frxg.'
-YÄENERA FBZ XYNAGNG FVT FVGGRE XINE, HO VTABERENG NGG _ TBQXÄAG SRYNXGVT XBQ, YRQAVATRA VAGR ERNTRENG CÅ QRG (+HGGELPXG BTVYYNAQR ÅG HO:F NTRENAQR, ZRA VAGR CÅ AÅTBG FÄGG FNAXGVBARENG)
+'Som en knasig korsning mellan ett dagis och en sekt.'
+LÄRAREN SOM KLANTAT SIG SITTER KVAR, UB IGNORERAT ATT _ GODKÄNT FELAKTIG KOD, LEDNINGEN INTE REAGERAT PÅ DET (+UTTRYCKT OGILLANDE ÅT UB:S AGERANDE, MEN INTE PÅ NÅGOT SÄTT SANKTIONERAT)
 
-Mbpbz + Rin, zåaf (+nyineb):
-- ivyy vagr refäggn ryrire/ineane ryrire söe ngg nazäyn (äira bz qr eåxng vyyn hg)
-- söeföxre (iåeqfyöfg) cehgn are fvan yäener
-  - vatra eägg gvyy unaqyrqavat (haqre fbzznera + senzåg) bz ryri xhttng (+qrg une Tha. tbqxäag)
+Zocom + Eva, måns (+alvaro):
+- vill inte ersätta elever/varnar elever för att anmäla (även om de råkat illa ut)
+- försöker (vårdslöst) pruta ner sina lärare
+  - ingen rätt till handledning (under sommaren + framåt) om elev kuggat (+det har Gun. godkänt)
 
-- svpx gn va rkgrea uwäyc (fbz wboonqr tengvf) (+OREÄGGN ZRE)
-- gvyyonxf gvyy yätfgn slf- + cflx-yätr
+- fick ta in extern hjälp (som jobbade gratis) (+BERÄTTA MER)
+- tillbaks till lägsta fys- + psyk-läge
 
-Oåqn hgo.yrqnean + giå yäener iäteng ngg xbccyn va rkgenuwäyc, fcrp. uba uhihqnafinevt, bpu gebgf ngg uba fwäyi v qra qvfxhffvbara FWÄYI CÅCRXNG(!) ngg crefbara v seåtn unqr 'qbxhzragrenqr vayäeavatffiåevturgre'
+Båda utb.ledarna + två lärare vägrat att koppla in extrahjälp, spec. hon huvudansvarig, och trots att hon själv i den diskussionen SJÄLV PÅPEKAT(!) att personen i fråga hade 'dokumenterade inlärningssvårigheter'
 
-Tha:
-- wnt fxvgre v bz qh uvggng ngg ra yäener tbqxäag srynxgvt/rw shatrenaqr xbq
-  - söeföxre så ryrire ngg töen uraarf wboo (så gnt v unaqyrqner + zrqqryn sry)
-  - ivffgr bz ceboy. zrq unaqy. + söeföxgr gäpxn öire (b snibevfrenqr qäevtrabz ra netfvag ryri fbz uba ine eäqq söe)
-  [irg bz ceboy. + söeföxg gäpxn öire (gäpxn hcc söe fva xbyyrtn Rin) + vagr zvafgn bebyvt söe tenafxavatra (=aäzaqr qrg fbz ngg qrg ine iäy vatrg fäefxvyg)]
-Wbnx:
-- vatn ceboy. ngg _ vagr finene
-- iv uöeqr bff söe zrq erfgra ni tehccra
-Pu:
-- Vagr uöeg ni fvt cå ra zåanq
-  - btvyyne T.f senzsneg, zra uba fvggre xine
-- une vagr haqreföxg ry. gngg gnt v Nqnz + nayvgne ubabz sbegsnenaqr
-- 'ercerf. une genxnff. zvt' (vasöe xynffra): qr naqen glpxre una shaxne oen, +iv xna vagr fnaxgvbaren ra ryri fbz orgre fvt vyyn
-
-bfpne, wbanf, zvpxr
-
-3 ersrerafre: Nor, ZLU, Nyrk
+Gun:
+- jag skiter i om du hittat att en lärare godkänt felaktig/ej fungerande kod  @
+  - försöker få elever att göra hennes jobb (få tag i handledare + meddela fel)
+  - visste om probl. med handl. + försökte täcka över (o favoriserade därigenom en argsint elev som hon var rädd för)
+  [vet om probl. + försökt täcka över (täcka upp för sin kollega Eva) + inte minsta orolig för granskningen (=nämnde det som att det var väl inget särskilt)]
+Joak:
+- inga probl. att _ inte svarar
+- vi hörde oss för med resten av gruppen
 
 
-Uhe zrane qh/xynffra ngg wnt 'eåxng' unzan hgnasöe?
-+Qrg ine rsgre Bfpne selfg hgr zvt fbz...
-    aåten äe nafinevtn söe qrg, bz få fgben qryne ni xynffra,
-    ry. äe qrg qr orelxgnqr 'aåtba' bpu 'vatra'?
+Ch:
+- Inte hört av sig på en månad
+    - ogillar G.s framfart, men hon sitter kvar
+- har inte undersökt el. tatt tag i Adam + anlitar honom fortfarande
+- 'repres. har trakass. mig' (inför klassen): de andra tycker han funkar bra, +vi kan inte sanktionera en elev som beter sig illa
+
+
+oscar, jonas, micke
+
+3 referenser: Abe, MYH, Alex
 
 }}}
 Calendar + Dailies {{{
@@ -140,14 +249,16 @@ hänglista
   2025-04-30 ons {{{
 ___calendarnow
 
-        - ordna upp några commits (="Vem har gjort det här")
   - Kolla material m. Erik
         + läser parallellt i 'Dnc In Action 2023'
-  (eftermiddags)Möte med Peter (+Henrik)
-  - planering/undersökning filformat exjobbsrapport + pres.
-  ----
-  - Tvungen att kontakta skolan (+förbereda för en anmälan till MYH)
+  (eftermiddags)Möte med Henrik + Erik
+        - planering/undersökning filformat exjobbsrapport + pres.
+  - Tvungen att kontakta skolan
+  (+förbereda för en anmälan till MYH)
   - kolla över önskemål från handledaren/Abe
+        sammanställa frågor från Abbe/Ludvig
+  - Möte (Sandy, 
+  ----
 
 t a s k - i n s t r u c t i o n s {{{
 
@@ -160,13 +271,14 @@ t a s k - i n s t r u c t i o n s {{{
       - TESTA I SWAGGER
       - FÖRSLAG/STRATEGI: BYGG GRUNDFUNKTIONALITET I WEB-API:T MED CONTROLLERS; SENARE: BRYT UT FUNKTIONALITEN MER EXAKT TILL FÄRDIG KLASSTRUKTUR
   Abbe: 'Ska funktionalitet i Core användas/replikeras för att <<läsa av versionsnummer>>'(????)
+Hur vet vi att ett program är installerat
 
-  Calculate checksum for file 1 (exe) + diff.sized exe
+  Calculate checksum for file 1 (exe) + diff.sized exe (or other established practice for how to calculate)
 
 - TC Core är installerat.
   Hur hittar och läser vi av versions-nummer (och path?) för ett installerat program?
   --
-  Kolla i Windows Registry = ska innehålla 
+  Kolla i Windows Registry = ska innehålla ____
 }}}
   281351: Create tokenServiceHandler for getting client access-token
   281111: Create http-client for handling batch-requests to graph
@@ -254,75 +366,6 @@ v 23
   2025-06-10 fre
 
 }}}
-
-}}}
-
-TODO ADD 1 = STARTUPS 1 {{{
-
-Vanki LearnQna ----
-  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
-
-~/Desktop/Scratch.txt
-
-
-    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
-~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
-
-PROGR ----
-  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
-Clangs (C, Cpp, CSharp, Dlang) ----
-  cppDlang.prl.txt
-Web/Mobile/Cloud ----
-
-
-multimedia (incl. Anki):
-    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
-Vim/Emacs:  ¤¤¤
-    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Vim.txt ../ref/comp/editor/vim/Vim-Tocs.txt ../ref/comp/editor/vim/vim_excommands-functions.txt ../ref/comp/editor/vim/vimscrhardw-quickindex.txt ../ref/comp/editor/vim/vim-patternregex.txt
-    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Emacs.txt ../ref/comp/editor/emacs/elisp_refman.txt ../ref/comp/editor/emacs/emacs-mastextend.check.txt ../ref/comp/editor/emacs/Em1-notes_x2.txt ../ref/comp/editor/emacs/orgman-emacs.index.txt ../ref/comp/editor/emacs/emacs-dired.txt ../ref/comp/editor/emacs/emacsman1.index.txt ../ref/comp/editor/emacs/emacsrefcard-org.txt ../ref/comp/editor/emacs/emacsrefcard-shortessential.txt ../ref/comp/editor/emacs/emacsrefcard-Long.txt
-
-file/media:
-    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
-sysadm:  TODO: ADD WIN-TERMINAL  ¤¤¤
-    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
-markdown etc:  ¤¤¤
-    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
-[git, test/deploy]:
-    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
-
-scripting / Web ----  TODO: HTML, CSS, ETC  ¤¤¤
-    gvim -p ../ref/comp/cb/pycb.txt ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
-    Python.prl.txt
-System (incl. C#):
-    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
-FUNCT =LISP, F#, ML, ...:
-    gvim -p ../ref/comp/cb/clispcb.txt ../ref/comp/cb/schemecb.txt ../ref/comp/cb/clojure.txt ../ref/comp/cb/haskell.txt ../ref/comp/cb/sml-ocaml.txt ../ref/comp/cb/fs.txt
-
-Db:
-  gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
-
-
-    'ful som stryk'
-LANG1-REFS 1: (+maybe LangDb1)
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-  // maybe add 'främord' etc
-
-
-Langs1 Ref-lists ----  __
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-  --
-  ~/gdrive/rsc/media/pic-graphics/shorth/
-
-LANG-DB 1:
-  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt ../ref/lang/dandict2mini.txt
-                                           LangsDb.legacy ----
-                                                   ^
-                                                   |
-  or LangDb1.list.txt -----------------------------+
-  [+charAlfa]
-  . {{{
-    mada, wareware (no), sore de
-  }}}
 
 }}}
 
