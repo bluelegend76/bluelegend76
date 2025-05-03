@@ -908,7 +908,7 @@ freecommander
                             .
                     File: Search in folders...  c-f7
                     File: Search  a-f7
-                            File: Split...  cs-i  # el. cs-l
+                            File: Split...  a_Enter s, cs-i  # el. cs-l
                             File: Unpack  a-f6
                     File: Verify MD5-checksums
                     File: View  f3
