@@ -1666,43 +1666,131 @@ Termux  ¤¤¤¤
                             remove package AND modified conf-files
                                 .
                                 apt purge package
-                            ___zzzz
 
-                            T@pkg autoclean
+                            Remove outdated .deb-files from the cache
+                                .
+                                pkg autoclean
+                            Remove all .deb-files from the cache
+                                .
+                                pkg clean
 
-                              Remove outdated .deb-files from
-                              the cache.
+                            Show information about specific package
+                                .
+                                pkg show <package>
+                            Search package by query  _
+                                .
+                                pkg search <query>
+                            List files installed by specified package  __
+                                .
+                                pkg files <package>
 
-                            T@pkg clean
+                            List all available packages
+                                .
+                                pkg list-all
+                            List currently installed packages  _
+                                .
+                                pkg list-installed
+                            Re-install specified package
+                                .
+                                pkg reinstall <package>
 
-                              Remove all .deb-files from the
-                              cache.
+                            The main Termux repository is accessible through
+                                .
+                                https://packages.termux.org/apt/termux-main/.
+                            optional repos (which provide content on specific topics)
+                                .
+                                can be enabled by installing packages with name ending in -repo.
+                            some/current optional repos
+                                .
+                                game-packages
+                                  pkg install game-repo
+                                science-packages
+                                  pkg install science-repo
+                                termux-root-packages
+                                  pkg install root-repo
+                                x11-packages (Android 7+ only)
+                                  pkg install x11-repo
 
-                            pkg files <package>
+                            Public keys for verifying signatures
+                                .
+                                provided in package termux-keyring
 
-                              List files installed by specified
-                              package.
+                            pick a termux apt-repo mirror
+                                .
+                                by using the utility termux-change-repo
 
-                            pkg list-all
+                            create own repository
+                                .
+                                use termux-apt-repo from cmdline + Github-Pages as hosting
 
-                              List all available packages.
+                            add repo for scipy, gcc and other packages (**)
+                                .
+                                curl -LO https://its-pointless.github.io/setup-pointless-repo.sh
+                                bash setup-pointless-repo.sh
 
-                            pkg list-installed
+                            [mechanics of previos install
+                                .
+                                the script essentially
+                                - installs gnupg on your device
+                                - downloads and adds a public key to your apt keychain
+                                (ensuring that all subsequent downloads are from the same source)
+                            <<cross-compiling>>
+                            progr.environments with their own pack.managers(=??)
+                                .
+                                node.js, rust (=cargo)
 
-                              List currently installed
-                              packages.
+                            [IRC Weechat in Termux]
+                                .
+                                .
+                            ----
+                            obtaining a Termux-build
+                                .
+                                through F-Droid
 
-                            pkg reinstall <package>
+                            Termux addons ----
+                            Access Android and Chrome hardware features  __ _
+                                .
+                                Termux:API
 
-                              Re-install specified package.
+                            Run script(s) when your device boots  __
+                                .
+                                Termux:Boot
 
-                            pkg search <query>
+                            run Termux in a floating window
+                                .
+                                Termux:Float
 
-                              Search package by query.
+                            have color-schemes and powerline-ready fonts customize the appearance of the termux terminal
+                                .
+                                Termux:Styling
 
-                            pkg show <package>
+                            Q@N@An easy way to call Termux-executables from Tasker and compatible apps
+                                .
+                                Termux:Tasker
 
-                              Show information about specific package.
+                            start small scriptlets from the home screen
+                                .
+                                Termux:Widget
+
+                            the terminal-emulator is basically ____
+                                .
+                                an application that launches the command-line program by using system-call execve(2) and redirecting standard input, output and error-streams onto the display.
+
+                            common/popular rooting-tool
+                                .
+                                Magisk
+
+                            Termux is neither a virtual machine nor ...
+
+                            ---- Te
+                            termux cannot install package-files into standard directories such as /bin, /etc, /usr or /var, because ____
+                                .
+                                The operating system does not provide full access to its file systems
+                            solution (i.e. where termux-files are installed) **
+                                .
+                                a private application-directory located at
+                                /data/data/com.termux/files/usr
+
 
 .  TERMUX + TERMUX-API + RCLONE/DROPBOX (ETC) ----
                                             - Great. A quick question about using

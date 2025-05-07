@@ -1,4 +1,7 @@
 ~/bin/scripts/at/at.Emacs.bash
+~/.emacs.d/init.el
+
+emacs-30.1 ~/Dropbox/rsc/samples/code/orgmode-test.org &
 
 emacs over vim:
     - several code syntaxes active
@@ -6,7 +9,145 @@ emacs over vim:
     - org-mode
     - image/graphics in txt-files
 
-~/Dropbox/rsc/samples/code/orgmode-test.org 
+Settings {{{
+(Guile) Scheme {{{
+
+- And as an example, what exact
+  lines would I have to add to my
+  init.el to get it to include or
+  install geiser?
+
+Okay, here are the exact lines you would typically add to your init.el file to ensure that the geiser package is available and installed (if it's not already):
+Code snippet
+
+;; Ensure package.el is initialized and MELPA is configured
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(unless package-archive-contents
+  (package-refresh-contents))
+(package-initialize)
+
+;; Install geiser if it's not already installed
+(unless (package-installed-p 'geiser)
+  (package-install 'geiser))
+
+;; Optional: Load geiser mode automatically for Scheme files
+(add-to-list 'auto-mode-alist '("\\.scm\\'" . geiser-mode))
+(add-to-list 'auto-mode-alist '("\\.ss\\'" . geiser-mode))
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . geiser-mode)) ;; For Racket files as well, if you use it
+
+;; Optional: Basic configuration for geiser (you can customize further)
+(setq geiser-default-implementation 'guile) ;; Set Guile as the default implementation
+
+
+
+Explanation of each part:
+
+    ;; Ensure package.el is initialized and MELPA is configured:
+        (require 'package): Loads the package.el library, which is Emacs' built-in package manager.
+        (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/")): Adds the MELPA package archive to the list of sources Emacs checks for packages. MELPA is a popular community-maintained archive with many useful packages, including geiser.
+        (unless package-archive-contents (package-refresh-contents)): Checks if the list of available packages is downloaded. If not, it refreshes the package contents from the configured archives.
+        (package-initialize): Initializes the package system, making installed packages available.
+
+    ;; Install geiser if it's not already installed:
+        (unless (package-installed-p 'geiser) ...): This checks if the geiser package is already installed. package-installed-p returns t (true) if the package is installed and nil (false) otherwise.
+        (package-install 'geiser): If geiser is not installed, this line will download and install it from the configured package archives (in this case, MELPA).
+
+    ;; Optional: Load geiser mode automatically for Scheme files:
+        (add-to-list 'auto-mode-alist '("\\\\.scm\\''" . geiser-mode)): This tells Emacs to automatically switch to geiser-mode whenever you open a file with the .scm extension. The double backslashes are needed to escape the special characters in the regular expression. The \' at the end ensures it matches the whole filename component.
+        The following lines do the same for files with .ss and .rkt extensions, which are also commonly used for Scheme-like languages (including Racket, which geiser can also support).
+
+    ;; Optional: Basic configuration for geiser (you can customize further):
+        (setq geiser-default-implementation 'guile): This sets the default Scheme implementation that geiser will try to connect to as guile. Make sure you have guile installed on your system and that it's in your system's PATH.
+
+How to use these lines:
+
+    Open your init.el file (usually found at ~/.emacs or ~/.config/emacs/init.el).
+    Copy and paste these lines into your init.el file. You can place them anywhere after the initial comments or setup you might already have. It's generally good practice to group package-related configuration together.
+    Save your init.el file.
+    Restart Emacs.
+
+When Emacs starts, it will:
+
+    Initialize the package system.
+    Check if geiser is installed. If not, it will download and install it. You might see some activity in the minibuffer at the bottom of the Emacs window during this process.
+    For any .scm, .ss, or .rkt files you open, Emacs should automatically enable geiser-mode.
+    Set Guile as the default implementation for geiser.
+
+After Emacs restarts, try opening a .scm file. You should see syntax highlighting, and you can then use geiser's commands (like C-c C-s i to start the Guile REPL) to interact with your Guile environment.
+
+Remember to have Guile installed on your system for geiser to connect to it. If Guile is not in your system's PATH, you might need to configure geiser-guile-program to point to the Guile executable. You can do this with (setq geiser-guile-program "/path/to/guile") in your init.el.
+
+
+- Could we go back to Emacs and
+  geiser for just a bit: Could you
+  give me some direction on some
+  interesting and useful features
+  that are available when editing
+  and testing Guile Scheme code?
+
+Absolutely! geiser provides a wealth of fantastic features that significantly enhance the experience of editing and testing Guile Scheme code within Emacs. Here's a rundown of some of the most interesting and useful ones:
+
+1. Interactive REPL (Read-Eval-Print Loop):
+
+    Starting the REPL: The most fundamental feature is the interactive Guile REPL. You can typically start it with C-c C-s i (Ctrl+c Ctrl+s followed by i). This will open a new Emacs window or buffer where you can directly type and evaluate Guile expressions.
+    Evaluating Code from Buffer: You can send code from your current Scheme buffer to the REPL for evaluation:
+        C-c C-e (Eval Expression): Evaluates the expression at point (cursor).
+        C-c C-r (Eval Region): Evaluates the currently selected region of code.
+        C-c C-b (Eval Buffer): Evaluates the entire current buffer.
+    Output in REPL: The results of the evaluated expressions are displayed directly in the REPL buffer, allowing you to see the output and any errors immediately.
+
+2. Navigation and Information:
+
+    Finding Definitions: Quickly jump to the definition of a function, variable, or module:
+        M-. (Meta+period) on a symbol will take you to its definition.
+        M-*, (Meta+comma) will take you back to where you jumped from.
+    Finding Documentation: Access Guile's documentation directly within Emacs:
+        C-c C-d d (Describe Definition): Shows the documentation string (if available) for the symbol at point.
+        C-c C-d i (Describe Implementation): Shows information about the implementation of the symbol.
+        C-c C-d m (Describe Module): Shows information about the current module or the module at point.
+    Autocompletion: geiser often provides autocompletion for symbols as you type, especially when connected to the REPL. You can usually trigger it with M-TAB (Meta+Tab).
+
+3. Debugging:
+
+    Integration with Guile's Debugger: geiser provides excellent integration with Guile's built-in debugger.
+        Setting Breakpoints: You can set breakpoints in your code using C-c C-a b (Add Breakpoint).
+        Starting the Debugger: When your code hits a breakpoint, the debugger will activate in the REPL buffer, allowing you to step through code, inspect variables, and examine the call stack.
+        Stepping Commands: Common debugger commands like n (next), s (step), c (continue), f (finish), and q (quit) are available within the debugger.
+        Inspecting Variables: You can evaluate expressions in the debugger to inspect the values of variables.
+
+4. Code Editing Enhancements:
+
+    Syntax Highlighting: geiser (building on scheme-mode) provides accurate and helpful syntax highlighting, making your code easier to read and understand.
+    Indentation: It automatically handles Scheme's indentation rules, ensuring your code is formatted correctly and consistently.
+    Parenthesis Matching: Emacs' built-in parenthesis matching is enhanced in geiser-mode, making it easier to keep track of nested expressions.
+    Code Formatting: While geiser itself might not have extensive code formatting capabilities, it works well with external formatting tools that you can integrate into your Emacs workflow.
+
+5. Module Management:
+
+    Loading Modules: You can easily load Guile modules within the REPL using standard Guile syntax. geiser helps in keeping track of the loaded environment.
+    Exploring Modules: The "Describe Module" (C-c C-d m) command is very useful for understanding the contents of a Guile module.
+
+6. Customization:
+
+    Implementation Switching: If you work with multiple Scheme implementations, geiser allows you to switch between them (though you've already set Guile as the default).
+    REPL Customization: You can customize the appearance and behavior of the REPL buffer.
+    Keybindings: Many of geiser's keybindings can be customized to fit your preferences.
+
+How to Explore These Features:
+
+    Start geiser-mode: Open a .scm file, and Emacs should automatically enter geiser-mode (if you added the auto-mode-alist lines). You'll likely see (Geiser) in your mode line.
+    Start the REPL: Press C-c C-s i.
+    Evaluate Code: Type some simple Guile expressions in your .scm buffer and try C-c C-e, C-c C-r, and C-c C-b. Observe the output in the REPL.
+    Navigate: Place your cursor on a known function or variable in your code and try M-. to jump to its definition. Use M-*, to go back.
+    Check Documentation: With the cursor on a standard Guile function (like map or +), try C-c C-d d.
+    Experiment with Breakpoints and Debugging: Insert a (debug) statement in your Guile code. Evaluate the code (e.g., with C-c C-b). When the debug statement is reached, you should enter the Guile debugger in the REPL. Try the stepping commands (n, s). You can also try setting a breakpoint using C-c C-a b and then running your code.
+
+By actively using these keybindings and exploring the commands available under the C-c C-s and C-c C-d prefixes in geiser-mode, you'll quickly discover how powerful it is for Guile development in Emacs. Don't hesitate to consult the geiser documentation (often accessible via C-h i g geiser RET) for even more advanced features and customization options. Enjoy your Guile coding!
+
+
+}}}
+}}}
 
 ~/Empire/Doks/Comp/editor/emacs/masteringemacs-v3.txt    #mickey peterson
 ~/Empire/Doks/Comp/editor/emacs/emacsextend.txt          #glickstein
@@ -2245,6 +2386,12 @@ emacs lsp {{{
 }}}
 
 ptools {{{
+
+Load color-scheme based on name
+    a-x load-theme
+List color-schemes + Click-select:
+    a-x customize-themes
+
   eval. expression      c-x c-e
   word completion       sa-7  #a-/
 

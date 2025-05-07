@@ -1,10 +1,11 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
-Anki  ____
+Anki  ____  ¤¤¤
                         . ~/gdrive/rsc/data/lists/ref/comp/pr/Ankiman-Cookbook.txt
-                        ~/Dropbox/rsc/Doks/phone/learn/ankiman2021plus.txt
-                        ----
+                        ~/Dropbox/rsc/Doks/phone/learn/ankiman2021plus.Tags1.txt
+                          # ~/Dropbox/rsc/Doks/phone/learn/ankiman2021plus.txt
+                        ---- Te/Terms
                         card
                             .
                             a question and answer-pair
@@ -80,14 +81,14 @@ Anki  ____
                 ----
                 .
 
-Gimp
+Gimp  ¤¤
             ---- Gimp Regular
                 .
             ---- Gimp Scripting (tinyscheme, python)  -->  Pil(low)
                 .
             ---- G'Mic
                 .
-Inkscape
+Inkscape  ¤¤¤
                     ----
                     select, zoom, view
                     move, scale
@@ -119,7 +120,7 @@ Inkscape
                     edit|create|generate svg (with Vim - from svg code(**(!)))
                     CommandLine/scripting
                     svg clean
-Scribus
+Scribus  ¤¤(¤)
                     ----
                     scribus-man: (keyb-shortc.s) {{{
                      (renskrivn. sista delen av manualen (=keyboard shortcuts))
@@ -528,7 +529,10 @@ Scribus
                       LProf
 
                     }}}
-Audacity  @@(!)
+. fontforge
+                ----
+                .
+Audacity  ¤¤(¤)
             ~/Empire/Doks/Comp/mu/au/audacity/audacity-shortc.pdf
             File Menu ----
                 New  c-n
@@ -941,7 +945,7 @@ Audacity  @@(!)
                   Check Dependencies...
                 Check for Updates...
                 About Audacity...
-Blender
+Blender  ¤¤(¤)
                 ----
                 .
 Kdenlive  TODO: IMPORT 
@@ -950,13 +954,13 @@ Kdenlive  TODO: IMPORT
 pdftk  @@[@] [**]  (from Transcribe)
                 .
                 .
-potrace  [@@]
+potrace  ¤¤
                 .
                 .
-xsane  <@@>
+xsane  ¤¤
                 .
                 .
-imagick
+imagick  ¤[¤]
                         ~/Dropbox/rsc/Doks/phone/graf/Imagemagick2_usage-techniques.txt
                         ~/Dropbox/rsc/data/lists/ref/comp/cb/imagickcb.txt
                             ~/Dropbox/rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
@@ -965,7 +969,7 @@ imagick
                         .
                         ~/Dropbox/rsc/data/lists/ref/comp/cb/imagickcb.txt
                         ~/Dropbox/rsc/data/lists/ref/comp/pr/imagemagick_use-scripts.txt
-ffmpeg  (from Blender at-index (etc))  @(@!)
+ffmpeg  (from Blender at-index (etc))  ¤[¤¤[¤]]
                         ____
                         ~/Dropbox/rsc/data/lists/ref/comp/cb/ffmpegcb.txt
                         --
@@ -1366,7 +1370,7 @@ ffmpeg  (from Blender at-index (etc))  @(@!)
                         ~/Dropbox/rsc/Doks/phone/graf/pr/ffmpeg/FfmpegBook.txt
                             ~/Dropbox/rsc/Doks/phone/graf/pr/ffmpeg/Ffmpeg.txt  #=linkslist
                         ---- ----
-yt-dlp
+yt-dlp  ¤[¤]
                 ~/Dropbox/rsc/Doks/phone/Comp/media/ytdlp-man.txt
                 ~/gdrive/rsc/Doks/taskuj/mmedia/Mpv-Docs.txt
 
@@ -1384,9 +1388,6 @@ yt-dlp
                 test 1 - Blade Runner (Blade Runner 2049) ----
                     yt-dlp --download-sections "*00:00:20-00:02:00" -x --audio-format mp3 "https://www.youtube.com/watch?v=QjB3qextZbQ&list=OLAK5uy_kkL5jD6ELJzI6o9x3eJO2x87d-PzELkVY&index=22"
                     This example downloads the audio between 1 minute and 1 minute and 30 seconds.
-fontforge
-                ----
-                .
 
 Obs Studio (Win)
                 .

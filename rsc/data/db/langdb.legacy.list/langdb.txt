@@ -2,11 +2,11 @@ vim:fdm=indent:fdl=2:
 set fdm=indent fdl=1
       ~/Dropbox/rsc/Doks/Lang/Shorth/gregg-irish.txt
 
+___TAB1
 ___TAB2
 ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/lang/langdb1-legacy.txt
 
    ___TAB
-___TAB1
 ___TAB2
 ___freq
 
@@ -27,6 +27,12 @@ ___block3(=words)
       rosskopf - timo boll
     https://www.youtube.com/watch?v=ZUXMoBtGX2Q  30 min
     https://www.youtube.com/watch?v=v9xjSlNesvY  10 min
+    -- Es
+    https://www.youtube.com/@noticias
+    https://www.youtube.com/results?search_query=noticias+en+espanol
+    ====
+    -- nah
+    https://www.youtube.com/results?search_query=noticias+en+nahualt
 
 ___phrases_1isUniverb
 
@@ -18966,7 +18972,7 @@ LISTS (=freqs phrases books)
      |
       201-300: https://translate.google.com/#view=home&op=translate&sl=de&tl=en&text=ohne
 
-___freq=1/2
+___freq=1/2  %.*
 ___TAB=aux1 ___defrru_freq
 set fdm=indent fdl=3
 set fdm=indent fdl=2
@@ -18982,7 +18988,7 @@ set fdm=indent fdl=2
     ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Ru.pdf
     ~/gdrive/rsc/Doks/taskuj/Lang/Lang1/freq/Freq-Spa.pdf
 
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-De.txt  @@  __lang-1=de
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-De.txt  @@  __lang-1=de
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_ty.txt
                 1 ich  jag | I
                 2 sie ; hon // de | she // they
@@ -28993,7 +28999,7 @@ set fdm=indent fdl=2
                 9998 ungestört
                 9999 must
     --
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Fra.txt  @@  __lang-2=fr
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Fra.txt  @@  __lang-2=fr
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_fra.txt
                 1. de
                 2. la
@@ -33016,7 +33022,7 @@ set fdm=indent fdl=2
                 4000. poudre
     opensubtitles.x
     --
-    FreqRy 2 (**!)  __lang-4=ru
+    % FreqRy 2 (**!)  __lang-4=ru
                 evince -p 17 ~/Empire/Doks/Lang/ru/freqry.pdf &
                 s17 =start ordboken **
             1 и  and
@@ -33833,53 +33839,6 @@ set fdm=indent fdl=2
                 sätta 'é'-accenter på betonade vokaltecknen (=görs senare):
                     i e ja a o y (ju)
                 @i: /\vи|й
-rи́/[\u0401\u0410-\u044f\u0451]
-                @e: /\vе|ё
-rе́/[\u0401\u0410-\u044f\u0451]
-                 ja
-                @a: fаrа́/[\u0401\u0410-\u044f\u0451]
-                @o: /\vб|о
-rо́/[\u0401\u0410-\u044f\u0451]
-                @u: fуrу́/[\u0401\u0410-\u044f\u0451]
-                @j: fюrю́/[\u0401\u0410-\u044f\u0451]
-                @y: fыrы́/[\u0401\u0410-\u044f\u0451]
-                @f: /\vэ|Э
-rэ́/[\u0401\u0410-\u044f\u0451]
-
-                @e: fеrё
-
-                evince -p 26 ~/Empire/Doks/Lang/ru/freqry.pdf &
-                ___STARTLAST2020
-                    @n: /^"
-                    @a: O,ppu
-                nnoremap N /[^\u0401\u0410-\u044f\u0451 [:punct:]]
-
-:
-
-
-                NEXT/LAST OCR(***)(apr2020):
-                  - infoga sistasista ry fraserna (*) + ersätt latbokst.orden(*)
-                  - ta bort(!) + infoga alla jå
-                        - klipp '-' i vissa eng. ord (*/??)
-                        (+EV. LATINISERAT UTTAL (**))
-                     - infoga betoningstecknen ry
-
-                2 ST. MAKRONA: KLIPP ENG-ORDS_RAD + NÄSTA RAD
-                    +EN =STANNA PÅ RADEN (=om flera eng-ord)(**)
-
-                @a: A ; zjzmzo
-
-ddp-Jzt
-                @b: zjzmzo
-
-ddp-Jzt
-                @c: A ; zjzmzo
-
-ddp-Jzt
-
-                (Numrering klar: =till ca s 50(**))
-                 @n: "zyaW
-P00
                 Klipp "+ + Fånga som Block(**!)
                  @y: "+pG$d"_dGgt
 
@@ -55993,27 +55952,27 @@ P00
     ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Ru.txt
     --
 ___freq=2/2
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Spa.txt  @  __lang-3=es
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Spa.txt  @  __lang-3=es
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_spa.txt
       info guix **(!!)
      |
      |
       ~/Empire/Doks/Lang/ar/freqar.pdf  (-p 22)
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_ar.txt  __lang-5=zh
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Chin.txt  __lang-6=zh
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_ar.txt  __lang-5=zh
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/2/Freq-Chin.txt  __lang-6=zh
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_chins.txt
       https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists#Mandarin
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_jp.txt  __lang-7=zh
     ~/Empire/Doks/Lang/jp/Jp-FreqDict.pdf
 
 freqs-lists 2, 3
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_far.txt
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_far.txt
         https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Persian
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_hebr.txt
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_hin.txt
         https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Hindi_1900
         https://en.wiktionary.org/wiki/Appendix:Common_Hindi_words
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_tur.txt
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_tur.txt
         https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Turkish
         https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Turkish_WordList_10K
          https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Turkish_wordlist
@@ -65808,7 +65767,7 @@ freqs-lists 2, 3
                 syrjä
                 eurooppalainen
                 kansanpuolue
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_irl.txt
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_irl.txt
             //	Liosta Minicíochta Focal Gaeilge | Irish Word Frequency List
             //  A corpus-based, cleaned-up frequency list of Irish lemmas.
             //  Created by Michal Boleslav Měchura, http://www.lexiconista.com/
@@ -72274,7 +72233,7 @@ freqs-lists 2, 3
         http://frequencylists.blogspot.com/2016/08/5000-italian-sentences-sorted-from.html
     easteur
 
-    ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_wa.txt
+    % ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_wa.txt
         https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Welsh
     ~/Dropbox/rsc/data/lists/ref/lang/freq/freq_pt.txt
         https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/BrazilianPortuguese_wordlist

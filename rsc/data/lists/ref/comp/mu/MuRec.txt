@@ -1,7 +1,8 @@
 set foldmethod=indent foldlevel=2
 vim: fdm=indent:fdl=2:
 
-~/Dropbox/rsc/data/lists/at/muRecord.txt
+PICK OUT/OVER QUICKLISTS, LIKE YOUROCK-GUITAR ETC *******
+~/Dropbox/rsc/data/lists/at/muRecord.txt  ____  ____  ____  ____
 
 __
                 ----
@@ -49,17 +50,21 @@ Rosegarden
                         ~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/hydrog_roseg.vanki.txt
                         .
 hydrogen
-MuseScore 4
-                        ~/Dropbox/rsc/data/lists/keys.shortc/mscore3.shortckeys.tagged.txt
-                        ~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/Mscore3.vdeck.txt
-                        ~/Dropbox/rsc/data/lists/keys.shortc/mscore3/mscore3.shortckeys.txt
-                        ----
-                        ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/mscore3.man.raw.txt
-                        ~/Dropbox/rsc/data/lists/ref/comp/mu/mscore3-keys.txt
-                                ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zz_mscore3.txt
-                        ~/Dropbox/rsc/data/lists/ptools/mscore3.sort.txt
+MuseScore 4  HM??????  ¤¤¤
+                        mscore
                         ~/Dropbox/rsc/data/lists/ptools/mscore3.txt
                         ~/Dropbox/rsc/data/lists/learnqna/vanki/Mscore3.vdeck.txt
+                            ----
+                                ~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/Mscore3.vdeck.txt  __
+                                ~/Dropbox/rsc/data/lists/keys.shortc/mscore3.shortckeys.tagged.txt
+                                ~/Dropbox/rsc/data/lists/keys.shortc/mscore3/mscore3.shortckeys.txt
+                                ----
+                                .... ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/mscore3.man.raw.txt
+                                .... ~/Dropbox/rsc/data/lists/ref/comp/mu/mscore3-keys.txt
+                                ....       ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zz_mscore3.txt
+                                .... ~/Dropbox/rsc/data/lists/ptools/mscore3.sort.txt
+                            ----
+                        .
 Muse
 lmms,  flstudio mobile
                             https://docs.lmms.io/user-manual/getting-started/installation
@@ -71,7 +76,360 @@ PureData
 
   btmixer / alto s6
 maudio audiophile / focusrite scarlett
-yourock-guitar  ____
+yourock-guitar  ____  ¤¤¤
+                            - Test/Explore YouRock guitar-output (=for Instrumentalist) {{{
+                                    I guess the simplest approach would be to if you could suggest some tool (I'm using Ubuntu Linux) - command line or graphical - that could be used to inspect the signal sent when playing the same note on two different strings of the guitar. If I could isolate what is similar and what is different, I guess there would be a method to parse out which string is played, so the correct note on the correct string could light up in the graphics.
+                                    Absolutely! Here are a couple of tools you can use on Ubuntu Linux to inspect the MIDI data sent by your YouRock guitar when playing the same note on different strings:
+
+                                    1. ALSA MIDI Monitor (amidi):
+
+                                    amidi is a command-line tool included in the ALSA sound libraries. It allows you to monitor and view MIDI data flowing through your system.
+                                    Here's how to use it:
+
+                                    * Open a terminal window.
+                                    * Identify the MIDI port your YouRock guitar is connected to. You can use the command `lsmidi` to list available MIDI devices and ports. 
+                                    * Run the following command, replacing `[port number]` with the actual port number of your YouRock guitar:
+
+                                    ```bash
+                                    amidi -p [port number]
+                                    ```
+
+                                    * Play notes on different strings of your guitar. You'll see the corresponding MIDI data displayed in the terminal, including the note number, velocity, and channel information.
+                                    2. QjackCtl (Graphical Option):
+
+                                    QjackCtl is a graphical audio connection manager for Linux that also provides MIDI monitoring capabilities.
+                                    Here's how to use it:
+
+                                    * Install QjackCtl using your package manager:
+
+                                    ```bash
+                                    sudo apt install qjackctl
+                                    ```
+
+                                    * Launch QjackCtl.
+                                    * In the "Midi" tab, make sure your YouRock guitar is listed as an input port under "Midi In."
+                                    * Click the small red record button next to the input port. This activates MIDI monitoring for that port.
+                                    * Play notes on different strings of your guitar. You'll see the corresponding MIDI data displayed in the "Piano Roll" view, along with the note number, velocity, and channel information.
+                                    By using either amidi or QjackCtl, you can visually inspect the MIDI data sent when playing the same note on different strings. While the raw data might not explicitly indicate the string used, you might be able to identify patterns or subtle differences in the data that can help differentiate between strings.
+
+                                    Here are some potential areas to investigate:
+
+                                    Velocity: As mentioned earlier, notes played closer to the bridge might have slightly higher velocity values compared to notes played near the neck. This could be a starting point, but it won't be a foolproof indicator.
+                                    Onset characteristics: Analyze the initial portion of the MIDI data (note attack) to see if there are any variations in how quickly the note reaches its full velocity depending on the string played.
+                                    Time-series data (advanced): If you're comfortable with programming, you could capture the entire sequence of MIDI data points over time (including velocity changes) for each note played on different strings. This data can then be fed into a machine learning model to identify patterns and potentially improve string identification accuracy.
+                                    By carefully examining the MIDI data using these tools and potentially implementing some basic data analysis techniques, you might be able to extract enough information to differentiate between strings and control your SVG image lighting accordingly.
+
+                                    Additional Tips:
+
+                                    Experiment with playing techniques like picking dynamics (hard vs. soft) on different strings to see if it introduces any consistent variations in the MIDI data.
+                                    Search online forums or communities dedicated to Linux audio and MIDI for tips and tricks on analyzing MIDI data.
+                                    Remember, this approach might require some trial and error, but it can be a good starting point before diving into more complex machine learning solutions.
+                            }}}
+                                ~/Empire/Doks/Comp/mu/yrg-man.txt
+                                ~/Empire/Doks/Comp/mu/yrg_new.txt
+                                ~/Empire/Doks/Comp/mu/yrg-man2.txt
+                                ....   ~/Dropbox/yrg_manual.pdf  (=Search and find files (!!))
+                                    .. ~/gdrive/20180316_150807.jpg
+                                    .. ~/gdrive/20180316_150824.jpg
+                                    .. ~/gdrive/20180316_150845.jpg
+                                search: yrg manual pdf
+                                https://archive.org/details/yourockguitar/YRG_Manual_1.105/
+                                https://www.manualslib.com/manual/873713/Your-Rock-Guitar-1000.html
+                                https://www.manualslib.com/manual/830417/Your-Rock-Guitar-Model-1000.html?page=8#manual
+                                https://www.manualslib.com/manual/627641/Inspired-Instruments-You-Rock-Guitar.html
+                                 https://d1aeri3ty3izns.cloudfront.net/media/6/60241/download_60241.pdf
+                            ----
+
+                            Uppgifter/Cookbook {{{
+                                Strömkälla för yourock-gitarren
+                                    4 AA-batterier, el sladd till usb-uttag **
+                                kablar som går att koppla ut yrg:n med
+                                    3,5 mm el tele *
+                                sätt i/ta ur gitarrhalsen
+                                    klicka i/tryck låsspärren på baksidan uppåt + dra ut halsen
+                                antal inbyggda gitarr- och syntljud
+                                    25 st + 50 st
+                                Antal inbyggda Backing track-presets ***
+                                    99 st
+                                Lista på backing-tracks
+                                    s14 pdf		#1-25=hela kompspår, 26-34=olika trumspår mm,, 35=yourock-demo**
+                                lista på gitarrljud
+                                    s18 pdf
+                                Vad händer med ens inspelade 'anteckningar' om man "återställer" y-gitarren?
+                                    de raderas
+                                
+                                mute
+                                    hand på metalltråden bak på stallet 
+                                öka/minska strängtrycket
+                                    skruvarna bak på stallet (höger=hårdare, vänster=mjukare)
+                                upp/ner (=t.ex. 'välj nästa patch mm')
+                                    panelen, el +/-_knapparna bakom stallet ********
+
+
+
+                                spela m gitarrljud				music-knappen
+                                välj g-ljud						g-knappen + upp/ner
+                                välj b-track					håll track-knapp + upp/ner
+                                  tips: koppla in ext. ljud fr. tel, mp3 mm *			#=som b-track
+                                ändra volym b-track/g-ljud/synt			håll inne knapp + vrid volymratten
+                                spara byte ljud/preset mm				håll 'music' + tryck 'record'
+                                  (t.ex. bytt g-ljud för b-track)	
+                                                                                                                            slå på/av inbyggda gitarr/synt-ljud
+                                                                                                                                tryck guitar/synth-knapparna
+                                yourock-b-tracks				play/stop
+                                ------
+                                                                                                                            byt/aktivera syntljudet till ett visst gitarrljud
+                                                                                                                                synt-knappen + upp/ner
+                                spela in egna backing tracks
+                                    'record'
+                                -----
+                                ___0000
+                                'metronom'-spår för inspeln. **			track 24-26(ca)
+                                spela in *****							välj ljud o b-track + håll 'rec' o tryck play ***
+                                stoppa inspeln							tryck record
+                                lyssna inspelat							play
+                                punch-in/out							play =lyssna (+rec för punchin och out)
+                                sudda nuv. inspel.						håll rec 3 sek
+                                  (=på bakgr.spåret)
+                                        (anteckn./inspeln. sparas i b-spåret man spelat in till)
+                                spara ut inspeln./inspelad ant.			spela in som ljud(=audio) el(!) spela ut usb/midi till midi-seq
+
+
+                                ändra midikanal **						håll 'midi' + tryck +/-
+                                                            byt kanal el channel range för midi-kanal (för midi out)
+                                                                håll in midi-knappen
+                                sända midi över en kanal
+                                    välj kanal 1-16
+                                sända midi över kanalerna 1-6/7-12	
+                                    välj kanal 17/18
+
+
+                                vibrato (m.fl. effekter =beroende på vilken patch)
+                                    multi-joysticken nedanför vibratoarmen
+
+                                läge för att spela i öppna stämningar
+                                    'open'-knappen
+                                lista på tunings
+                                    s20 pdf
+                                olika stämningar
+                                    1-50=öppna stämningar, 51-60=capo-stämningar
+
+                                enkelt spela i samma tonart som nuv. backing track
+                                    slå på yourock-läget	#yourock-knappen
+                                ------
+                                läge för tapping
+                                    tap
+                                läge för sliding
+                                    slide
+                            }}}
+                            CONTENTS yrg 1000-ug01 (nyaste är gen2) {{{
+                                    whats in the box?  7
+                                Optional hardware and software  7 {{{ 
+                                      GameflexTM cartridges
+                                      Removable headstocks
+                                    Sound libraries
+                                    Jam Tracks
+                                    Accessories
+                                        http://www.yourockguitar.com/products-store/
+                                }}}
+                                knappar och kopplingspanelen - Input/output connections  7 {{{
+                                    på/av-knapp
+                                    anslut m gitarrkabel
+                                        =anslut till förstärkare o spela som en vanlig gitarr*
+                                    ljud ut (=anslut hörlurar)
+                                    ljud in
+                                        =kunna spela till mp3 från extern spelare, mm
+                                    midi ut
+                                        plugga in i midi-keyboard el annan ljudkälla**
+                                    usb till midi // usb till interface
+                                        så kan kontrollera program mm på datorn m midisignaler från gitarren // ladda in nya ljud/ny mjukvara till gitarren***
+                                }}}
+                                Digital guitar controls  8 {{{
+
+                                    multimode joystick (modulates guitar and synth sound)
+                                    mutebar (=om man lägger handen på stallet??)***
+                                    +/-_knapparna (till hö om stallet)
+                                    volymratt (mix av synt- o gitarrljud  +  externt mp3ljud o gitarrljudet)
+
+                                }}}
+                                CONTROL PANEL  se ev mer 9 {{{
+                                  knappar:
+                                    Music - tryck in för att kunna spela gitarren 'som en elektrisk gitarr'(???)
+                                    Open - Slå på läget för 'öppna stämningar'
+                                    Tap - 'tappingläget'***
+                                    Guitar - 'slår på/av inbyggda gitarrljud'
+                                     game - kunna spela yourockgames
+                                    Slide - läget optimerat för slides på brädan
+                                    YouRock - ??????
+                                    Synth - slår på syntljudsläget
+                                    leddisplay siffror
+                                    leddisplay 6stjärnorna - vilken av de 6 strängarna som låter just nu*
+                                    upp/ner-knapparna
+                                    Track*** - håll inne för att kunna välja Backingtrack
+                                    Midi - håll inne för att kunna ändra midikanal el midikanalsomfång
+                                    play - starta/stoppa playback av backingtracks
+                                    record - Spela in dina egna (backing)tracks(??)*******
+                                }}}
+                                Get connected!  10
+                                 Attaching the neck  10
+                                 Power  10
+                                 Audio  10
+                                 Game console 11
+                                 Detaching the neck  11
+
+                                Playing the internal sounds  12
+                                Playing backing tracks  13
+                                Playing with yourock-mode  14
+
+                                    playing games with you rock guitar®  15
+                                    using yourock guitar® with wii tm  16
+                                    using yourock guitar® with playstation 3 tm  16
+                                Playing synths over midi 17
+                                Setting the midi channel and mode  17
+                                Editing the presets  18
+                                Selecting guitar sounds  18
+                                Selecting synth sounds  19
+                                Playing open tunings  20
+
+                                Recording with yourock tracks  21
+
+                                Adjusting string tension  22
+                                    troubleshooting  22
+                                    before requesting service  22
+                                    specifications  23
+                                    regulatory notice  23
+                                    limited liability & warranty  24
+                                    copyrights & credits  25
+                            }}}
+
+                                ----
+                            mode for playing (=guitar sounds, etc)
+                            {{{
+                                'music' button
+                                --
+                                -p
+                                }}}
+                            Choose/Turn on Backing Track (**)
+                            {{{
+                                Hold 'Track' button
+                                 +up/down (buttons?) on panel // right of bridge
+                                --
+                                -p
+                                }}}
+                            (play external backing track)
+                            {{{
+                                connect eg. phone/player to 'in' jack
+                                --
+                                -p
+                                }}}
+                            play yourock (backing) tracks
+                            {{{
+                                play / stop  #on the panel
+                                --
+                                -p
+                                }}}
+                            change/activate synth sound to certain guitar sound
+                            {{{
+                                synth button (+up/down)
+                                --
+                                -p
+                                }}}
+                            change volume for guitar sound / backing track / synth **
+                            {{{
+                                hold corresponding button  + turn volume knob(!)
+                                --
+                                -p
+                                }}}
+                                ----
+
+                                ----
+                            good backing track for 'taking musical notes'  (=if do not want background music) (!)
+                            {{{
+                                tracks 24, 25, 26  #=metronome track
+                                --
+                                -p
+                                }}}
+                            play recorded (=notes etc)
+                            {{{
+                                press 'play' button
+                                --
+                                -p
+                                }}}
+                            vibrato (etc effects =depending on active patch)
+                            {{{
+                                multi-joystic below vibrato bar
+                                --
+                                -p
+                                }}}
+                            [list of tunings]
+                            {{{
+                                = page 20(??) of pdf
+                                --
+                                -p
+                                }}}
+                            [different tunings]
+                            {{{
+                                1-50   =open tunings
+                                51-60  =capo tunings
+                                --
+                                -p
+                                }}}
+                            simple way to play in same key as current backing track
+                            {{{
+                                turn on yourock mode (=the yourock button)
+                                --
+                                -p
+                                }}}
+                            [number of included guitar and synth patches]
+                            {{{
+                                guitar patches   25
+                                synth patches    50
+                                --
+                                -p
+                                }}}
+                                ----
+
+                                ----
+                            [list of guitar patches]
+                            {{{
+                                page 18(??) of pdf
+                                --
+                                -p
+                                }}}
+                            mute tone when playing
+                            {{{
+                                = hold hand on metal thread at back of bridge(!)
+                                --
+                                -p
+                                }}}
+                            decrease / increase string tension (!!)
+                            {{{
+                                = cross-headed screws at back of bridge (!!)
+                                increase tension  =  screw right
+                                decrease tension  =  screw left
+                                --
+                                -p
+                                }}}
+                            patches that are changeable (and which are not)
+                            {{{
+                                A-D are changeable
+                                0-3 are predefined/locked
+                                --
+                                -p
+                                }}}
+                            change bank (=sound patch group) directly (!)
+                            {{{
+                                bank up / tap-button
+                                --
+                                -p
+                                }}}
+                            set/adjust listening volume (=for connected headphones)
+                            {{{
+                                master level knob (=same as master volume when sound is connected out(?))
+                                --
+                                -p
+                                }}}
+                                ----
 qsynth
 zynaddsubfx
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/zynaddsubfx/zynaddsubfx-man_2020.txt
@@ -83,10 +441,10 @@ zynaddsubfx
 Clam
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/ClamFramework.txt
                         .
-Juce/+Distrho
+Juce/+Distrho  ___GEMINI
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/Juce-startw.txt
                         .
-pymidi
+pymidi  ___Gemini
 Csound
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csound-virtualsoundprocess_2000.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundBook.txt
@@ -788,6 +1146,334 @@ scoll:clojure (Overtone)
                     Revision: 0.9.1.2, Date: 17th December, 2013
                     Sam Aaron (sam.aaron gmail com)
 Nyq
-                        ~/Hämtningar/nyqsrc322.zip
-                        .
+                            ~/Hämtningar/nyqsrc322.zip
+                            .
+                            So this is actually what I found, which should be more than adequate I think (i.e. "paydirt" is an expression that could be used I guess?)
+
+                            liblo/osx/config.h
+                            misc/Makefile
+                            misc/makefile.lsp
+                            macosxproject/CMakeLists.txt
+                            tran/writemake.lsp
+                            snd/sndconfig.h
+                            docsrc/xlisp/xlisp-doc/reference/make-string-input-stream.htm
+                            docsrc/xlisp/xlisp-doc/reference/make-string-output-stream.htm
+                            docsrc/xlisp/xlisp-doc/reference/make-array.htm
+                            docsrc/xlisp/xlisp-doc/reference/make-symbol.htm
+                            jnyqide/build.xml
+                            jnyqide/make-osx-app.sh
+                            jnyqide/nyproject/build-impl.xml
+                            jnyqide/makejar.sh
+                            CMakeLists.txt
+                            libogg/win32/VS6/build_ogg_static_debug.bat
+                            libogg/win32/VS6/build_ogg_dynamic_debug.bat
+                            libogg/win32/VS6/build_ogg_static.bat
+                            libogg/win32/VS6/build_ogg_dynamic.bat
+                            libogg/include/ogg/config_types.h
+                            nylsf/config.h
+                            nylsf/static.cmake
+                            nylsf/GSM610/config.h
+                            nylsf/CMakeLists.txt
+                            nylsf/sfconfig.h
+
+                            ----
+                            Excellent! That list of files definitely looks promising. The presence of CMakeLists.txt and multiple Makefile variations suggests that the project likely uses either CMake or Make (or both) for its build process. This significantly increases our chances of getting it compiled on Linux.
+
+                            Let's focus on the CMakeLists.txt file first, as CMake is a cross-platform build system generator that is often preferred for projects aiming for wider compatibility.
+
+                            Here's a potential approach to try building Nyquist based on the files you found:
+
+                                Ensure CMake is installed: If you don't have CMake installed on your Arch system, you can install it using pacman:
+                                Bash
+
+                            sudo pacman -S cmake
+
+                            Create a build directory: It's good practice to build software outside of the source directory. Let's create a build directory inside the main Nyquist source directory:
+                            Bash
+
+                            mkdir build
+                            cd build
+
+                            Run CMake to generate the build files: Navigate into the build directory and run CMake, pointing it to the top-level directory of the Nyquist source (where CMakeLists.txt is located). You might need to adjust the path depending on where you are in your file system:
+                            Bash
+
+                            cmake ..
+
+                            CMake will then analyze the CMakeLists.txt file and generate the necessary build files (usually Makefiles) for your system.
+
+                            Build Nyquist using Make: After CMake successfully generates the build files, you can use the make command to compile the software:
+                            Bash
+
+                            make
+
+                            This will start the compilation process. You'll likely see a lot of output as the various parts of Nyquist are built.
+
+                            Install Nyquist (Optional): After a successful build, there might be an installation step. Often, this is done with the command:
+                            Bash
+
+                                sudo make install
+
+                                This will typically copy the compiled binaries and libraries to standard system directories (like /usr/local/bin or /usr/local/lib). However, for a standalone command-line tool, this step might not be strictly necessary if the executable is created within the build directory or a subdirectory within the source tree.
+
+                            Things to Watch Out For:
+
+                                Dependencies: CMake will often check for required dependencies on your system. If any are missing, the CMake step might fail with an error message indicating which libraries or tools are needed. You'll then need to install these dependencies using pacman (e.g., sudo pacman -S <dependency-name>-dev). The error messages from CMake should give you clues about what's missing.
+                                Build Errors: The make step might encounter compilation errors if there are issues with the code or your build environment. If this happens, carefully read the error messages to understand the problem. You might need to install additional development packages or adjust build flags.
+
+                            Let's try this process:
+
+                                Navigate to the top-level directory of the Nyquist source code you downloaded.
+                                Create a build directory: mkdir build
+                                Change into the build directory: cd build
+                                Run CMake: cmake .. (Make sure there are two dots after cmake and a space)
+                                If CMake succeeds, run Make: make
+
+                            Please share the output of the cmake .. command. This will tell us if CMake was able to configure the build environment and if any dependencies are missing. We can then proceed with the make command.
+
+                            This looks very promising indeed! Let's see what CMake tells us.
+CLM (Common Lisp Music)
+            https://github.com/radiganm/clm
+            https://ccrma.stanford.edu/software/snd/snd/clm.html
+            https://ccrma.stanford.edu/software/snd/snd/sndclm.html
+OpusModus (Win/Mac +=ca 4000 SEK)
+            https://opusmodus.com/
+
+
+An. Ljudsyntes = Freakascope Replacement
+                            Very good. Could I ask a question on another topic that would really help me in my music-studies: I will start to explore sound-synthesis shortly, and one book I came across (and that looks really promising) really emphasized the utility of using tools such as Freakoscope (I think it's called) to get a spectrum-printout. What that does is to give a very good overview of the harmonic composition of a sound, which makes it if not trivial at least much easier to reproduce a sound using synthesis-techniques.
+
+                            What I would like to explore is what software I could install and what languages (like CSound and SuperCollider, or other programming-languages) I can use to get that toolchain up and running. Could you give me a hand in exploring the possibilies?
+
+                            Absolutely! Exploring the spectral analysis of sound is a fantastic way to deepen your understanding of music and sound synthesis. You're right, a tool that provides a visual representation of the frequency content (a spectrum printout) is incredibly helpful for sound design and reproduction. Let's explore the software and language possibilities on your Arch Linux system:
+
+                            Software for Spectrum Analysis (Freakoscope-like Functionality):
+
+                            While there might not be a piece of software exactly named "Freakoscope" readily available on Linux (it could be a tool specific to a particular environment or a slightly misremembered name), the functionality you're describing is common in several audio analysis tools. Here are some excellent options you can install on Arch Linux:
+
+                                Sonic Visualiser: This is a powerful and free open-source application for visualizing and analyzing the characteristics of audio signals. It supports various visualizations, including spectrograms (which show the spectrum over time), and allows you to zoom, pan, and analyze specific frequency components.
+                                Bash
+
+                            sudo pacman -S sonic-visualiser
+
+                            Sonic Visualiser is likely the closest you'll get to the functionality you described with "Freakoscope." It's widely used in music analysis and sound research.
+
+                            Audacity: While primarily an audio editor, Audacity also has excellent spectrum analysis capabilities. You can select a portion of audio and then go to Analyze > Plot Spectrum... to get a detailed frequency analysis.
+                            Bash
+
+                            sudo pacman -S audacity
+
+                            Spek - Acoustic Spectrum Analyser: This is a simple, elegant, and focused spectrum analyzer. It provides a clear visual representation of the frequency content of audio files.
+                            Bash
+
+                            sudo pacman -S spek
+
+                            Qtractor: If you're getting into more advanced audio production on Linux, Qtractor is a powerful Digital Audio Workstation (DAW) that includes spectrum analysis tools within its plugin ecosystem (often via LADSPA or LV2 plugins).
+                            Bash
+
+                                sudo pacman -S qtractor
+
+                                You would then look for spectrum analyzer plugins within Qtractor (they might need to be installed separately, search for "ladspa plugins" or "lv2 plugins" in the Arch repositories).
+
+                            Languages and Libraries for Spectrum Analysis (for programmatic approaches):
+
+                            If you want to go beyond standalone applications and integrate spectrum analysis into your sound synthesis workflows or create your own tools, several programming languages and libraries are excellent choices on Arch Linux:
+
+                                Python: Python has a rich ecosystem of scientific and audio processing libraries:
+                                    Librosa: This is a fantastic library specifically designed for audio and music analysis. It provides functions for loading audio, computing spectrograms (which are the basis for spectrum printouts), and much more.
+                                    SciPy: The scientific Python library includes signal processing tools, such as the Fast Fourier Transform (FFT), which is fundamental for spectral analysis.
+                                    Matplotlib: A powerful plotting library for creating visualizations of the spectrum data.
+
+                                You can install these using pip:
+                                Bash
+
+                            pip install librosa scipy matplotlib
+
+                            With these libraries, you could write Python scripts to load audio files, calculate their spectra, and generate plots.
+
+                            SuperCollider: As you mentioned, SuperCollider is a powerful language for sound synthesis and algorithmic composition, and it also has built-in capabilities for audio analysis. You can analyze the spectrum of audio signals within the SuperCollider environment itself using objects like FFT and visualize the results using its plotting tools or by sending the data to other visualization software.
+
+                            Since you're already interested in SuperCollider, this could be a very integrated approach. You can synthesize a sound and immediately analyze its spectrum within the same environment.
+
+                            CSound: Another venerable and powerful computer music language, CSound also has extensive signal processing and analysis capabilities, including tools for spectral analysis. You would typically write CSound code to perform the analysis and then might use external tools or CSound's own output mechanisms to visualize the data.
+                            Bash
+
+                                sudo pacman -S csound
+
+                                Other Languages (Less Common for Direct Spectrum Analysis):
+                                    C/C++: These languages offer high performance and direct access to audio hardware and DSP libraries (like FFTW). However, they typically require more development effort for visualization.
+                                    Pure Data (Pd): A visual programming language for audio and multimedia, Pd has objects for performing FFT and analyzing the spectrum.
+
+                            Getting Started:
+
+                            For your initial exploration, I highly recommend starting with Sonic Visualiser. It provides a user-friendly interface and the exact type of detailed spectrum visualization you're looking for without requiring any programming. Simply load an audio file, and you can generate a spectrogram and analyze the frequency content at any point in time.
+
+                            As you delve deeper into sound synthesis and want more programmatic control, learning Python with Librosa and Matplotlib would be an excellent next step. You'll be able to automate analysis, integrate it into synthesis workflows, and create custom visualizations.
+
+                            SuperCollider is also a fantastic choice, especially if you plan to use it for synthesis. Its integrated analysis capabilities can be very powerful.
+
+                            CSound is a deep and rewarding language, but it might have a steeper learning curve initially compared to Python or SuperCollider for combined synthesis and visualization.
+
+                            By combining a tool like Sonic Visualiser for immediate visual feedback with the programmatic power of Python or SuperCollider, you'll have a robust toolchain for exploring the harmonic composition of sounds and informing your synthesis techniques. Good luck with your sound synthesis studies – it's a fascinating field!
+
+                            Just a quick follow-up, but how about Baudline?
+
+                            Yes, Baudline is another excellent piece of software for real-time spectral analysis and visualization on Linux! It's specifically designed for this purpose and offers a rich set of features.
+
+                            Key Features of Baudline:
+
+                                Real-time Spectrum Analysis: It can analyze live audio input from your sound card.
+                                Spectrograms: Creates detailed and colorful spectrogram displays showing frequency content over time.
+                                Various Transforms: Uses Fourier, correlation, and raster transforms for signal analysis.
+                                Multiple Displays: Offers Spectrogram, Spectrum, Waveform, and Histogram views.
+                                Audio Playback and Recording: Can play back audio files with effects and record audio.
+                                JACK Audio Connection Kit Support: Integrates well with the JACK audio server for low-latency audio processing.
+                                Wide Range of Audio Formats: Supports various file formats for loading and saving audio.
+                                Measurements: Provides tools for measuring peaks, fundamental frequencies, distortion, and power.
+                                Function Generator: Includes a built-in function generator for testing and experimentation.
+
+                            Installation on Arch Linux:
+
+                            While Baudline isn't in the main Arch repositories, you can likely find it in the AUR (Arch User Repository). You can install it using your preferred AUR helper (like yay, paru, or trizen):
+                            Bash
+
+                            yay -S baudline
+
+                            or
+                            Bash
+
+                            paru -S baudline
+
+                            or
+                            Bash
+
+                            trizen -S baudline
+
+                            The AUR helper will handle downloading the build files, compiling Baudline, and installing it on your system.
+
+                            Using Baudline:
+
+                            Once installed, you can typically launch Baudline from your application menu or by typing baudline in your terminal.
+
+                                Input Selection: You'll need to configure the audio input source in Baudline's settings. This could be your microphone, system audio output (if you want to analyze what's playing), or a specific JACK input if you're using JACK.
+                                Visualization: Experiment with the different display modes (Spectrogram, Spectrum, etc.) to see the frequency content in various ways.
+                                Real-time Analysis: If you select a live audio input, you'll see the spectrum and spectrogram update in real time as sound occurs.
+                                File Analysis: You can open audio files to analyze their spectral characteristics.
+
+                            Integration with Synthesis Tools:
+
+                            You can use Baudline alongside your synthesis tools (like SuperCollider or CSound) by:
+
+                                Analyzing Output: Direct the audio output of your synthesis environment to a virtual audio cable or through JACK, and then have Baudline listen to that input to visualize the spectrum of the synthesized sounds.
+                                Comparing Sounds: Analyze the spectrum of a target sound in Baudline and then try to recreate it in your synthesizer, using Baudline as a visual feedback tool to guide your parameter adjustments.
+
+                            In short, Baudline is an excellent and dedicated tool for the kind of spectral analysis you're interested in. Its real-time capabilities and focus on visualization make it very useful for understanding the harmonic content of sounds, which will indeed be a great asset in your sound synthesis studies. Make sure to explore its various settings and features to get the most out of it!
+
+                            Is it possible to interact with Baudline using any programming- or scripting-language?
+
+                            That's a great question, and the answer is indirectly, but with some limitations. Baudline itself is primarily a standalone graphical application and doesn't offer a direct, built-in API or scripting interface in the way that, for example, SuperCollider or Python libraries do.
+
+                            However, there are a few ways you might be able to interact with or automate tasks involving Baudline:
+
+                            1. Command-Line Arguments:
+
+                            Baudline has some command-line options that allow you to control certain aspects of its behavior when you launch it. You can see these by running baudline --help in your terminal. These options might include:
+
+                                Specifying an input audio device or file.
+                                Setting initial window configurations.
+                                Potentially triggering certain analysis modes.
+
+                            While this isn't a full scripting API, you could use shell scripting (like Bash) to launch Baudline with specific configurations based on your needs. For example, you could create a script that opens a particular audio file in Baudline with a specific window size.
+
+                            Example (Bash script):
+                            Bash
+
+#!/bin/bash
+
+                            audio_file="/path/to/your/audio.wav"
+                            baudline "$audio_file" -geometry 800x600
+
+                            2. Inter-Process Communication (IPC):
+
+                            More advanced users might explore IPC mechanisms available on Linux to potentially communicate with a running Baudline instance. This could involve techniques like:
+
+                                X Window System Automation: Tools like xdotool could be used to simulate keyboard and mouse events to interact with Baudline's graphical interface. This is a somewhat brittle approach and highly dependent on Baudline's UI remaining consistent.
+                                D-Bus: If Baudline exposes any D-Bus interfaces (which is not commonly the case for such focused applications, but worth a check with dbus-monitor), you might be able to send commands or retrieve information.
+
+                            These methods are generally more complex and less reliable than direct scripting APIs.
+
+                            3. Analyzing Baudline's Output (Indirect):
+
+                            If Baudline has features to save or export its analysis data (e.g., saving a spectrogram image or perhaps some numerical analysis results to a file), you could then use a scripting language to process that output. For example, you could:
+
+                                Run Baudline on an audio file.
+                                Have Baudline save a spectrogram image.
+                                Use Python with image processing libraries (like Pillow or OpenCV) to analyze the colors or patterns in the spectrogram.
+
+                            This is an indirect form of interaction, as your script isn't directly controlling Baudline, but rather working with the results it produces.
+
+                            4. Creating Your Own Tool (If Deep Integration is Needed):
+
+                            If you require very tight integration of spectral analysis within a larger automated workflow, you might consider using the underlying libraries that Baudline (or similar tools) are built upon. For example, many audio analysis tools rely on libraries for:
+
+                                Audio Decoding: Libraries like libsndfile or ffmpeg libraries.
+                                Digital Signal Processing (DSP): Libraries like FFTW (for Fast Fourier Transform).
+                                Graphics and Visualization: Libraries like Qt or GTK+.
+
+                            You could use these libraries directly in a language like Python, C++, or even SuperCollider to build a custom spectral analysis tool that fits your exact needs and can be controlled programmatically. This, of course, requires significant development effort.
+
+                            In summary, while Baudline is a powerful tool for visual spectral analysis, it doesn't offer a straightforward programming or scripting API for direct control. The most likely avenues for interaction would be through command-line arguments for initial setup or indirectly by analyzing any data or images that Baudline might export. For deeper programmatic integration, you might need to look at the underlying libraries or consider using tools like Python with audio analysis libraries or SuperCollider, which have strong scripting capabilities and built-in analysis features.
+
+Progr.languages = Interact with CSound/SuperCollider
+                            From what I can gather, there are a couple of programming-languages that can be used to interact with CSound and SuperCollider. Could you help me get an overview by listing some of them?
+
+                            You're right! Both CSound and SuperCollider have been designed with extensibility and interaction with other programming environments in mind. Here's an overview of some of the languages commonly used to interact with them:
+
+                            Interacting with SuperCollider:
+
+                            SuperCollider has a client-server architecture. The SuperCollider language (sclang) acts as the client, communicating with the synthesis server (scsynth) via the Open Sound Control (OSC) protocol. This OSC-based communication makes it inherently possible to interact with scsynth from virtually any language that has OSC client capabilities.
+
+                            Here are some popular languages and environments used to interact with SuperCollider:
+
+                                SuperCollider Language (sclang): While technically the primary language of SuperCollider, it's often used to control the server and can be considered interacting with the synthesis engine. You write sclang code to define synths, control parameters, and create musical structures that are then executed on scsynth.
+
+                                Python: Python has several libraries for OSC communication, such as python-osc. This allows you to write Python scripts that send OSC messages to scsynth to control synthesis parameters, trigger events, and more. This is a very popular way to integrate SuperCollider with other Python-based tools for data analysis, machine learning, or creative coding.
+
+                                Ruby: Libraries like rb-osc provide OSC capabilities in Ruby, making it possible to control SuperCollider from Ruby scripts.
+
+                                Haskell: The hsc3 library provides Haskell bindings for interacting with the SuperCollider server. This allows for a more functional programming approach to controlling SuperCollider.
+
+                                Scala: ScalaCollider is a library that enables interaction with SuperCollider using the Scala programming language.
+
+                                Clojure: Overtone is a powerful library built in Clojure that provides a high-level way to interact with SuperCollider, offering a unique functional approach to music creation.
+
+                                Scheme: rsc3 is a Scheme client for the SuperCollider server.
+
+                                JavaScript: With tools like WebSockets and OSC libraries for JavaScript (e.g., node-osc for Node.js or browser-based OSC libraries), you can even control SuperCollider from web applications.
+
+                                Pure Data (Pd) and Max/MSP: These visual programming environments have objects for sending and receiving OSC, allowing them to communicate with and control scsynth.
+
+                            Interacting with CSound:
+
+                            CSound has a more monolithic architecture, but it also offers various ways to be controlled and integrated with other languages:
+
+                                Python: The pyo library is a powerful Python module that embeds the CSound engine within Python. This allows you to write Python code to generate and process audio using CSound opcodes, control parameters in real-time, and even build graphical user interfaces.
+
+                                C/C++: CSound has a well-documented API in C, allowing developers to embed the CSound engine into their own C or C++ applications for custom audio processing.
+
+                                Java: JCsound provides Java bindings for the CSound API, enabling interaction with CSound from Java applications.
+
+                                Lua: Lua scripting can be integrated with CSound to control aspects of the synthesis and performance.
+
+                                CsoundACADEMY: This project provides a Python-based environment for interacting with CSound, particularly focused on educational purposes.
+
+                            Choosing a Language:
+
+                            The best language for you will depend on your existing programming skills, the specific goals of your project, and your preferred programming paradigm.
+
+                                If you're comfortable with Python and want a versatile language with strong audio processing libraries (like pyo for CSound or OSC libraries for SuperCollider), it's an excellent choice.
+                                If you're interested in functional programming, Haskell or Clojure (with Overtone) offer powerful ways to interact with SuperCollider.
+                                If you prefer visual programming environments, Pd or Max/MSP can communicate effectively with SuperCollider via OSC.
+                                If you need to embed the sound synthesis engine directly into a custom application with high performance requirements, C/C++ might be the way to go.
+
+                            Exploring the options available for both SuperCollider and CSound will open up a world of possibilities for integrating these powerful audio synthesis tools into your broader creative and technical workflows. Since you're on Arch Linux, you'll find that installing the necessary libraries for these languages is generally straightforward using pacman or pip.
 

@@ -1,6 +1,7 @@
 set foldmethod=indent foldlevel=0
 vim:fdm=indent:fdl=0:
 ___zzzz
+
 ___basicoperations
 ___DataStructs
             files.legacy
@@ -2618,12 +2619,14 @@ ___DataStructs
 
             Structure:
 
+            Organization|Arrangement --
             - Linear vs Non-linear: Does the
               data have a predefined order
               (linear) or a more flexible,
               hierarchical structure
               (non-linear)? Examples: Array
               (linear), Tree (non-linear).
+            Type-Constraint/Element Type-Restriction --
             - Homogeneous vs Heterogeneous: Can
               the data structure only store one
               type of data (homogeneous) or
@@ -2632,7 +2635,7 @@ ___DataStructs
               (homogeneous), Dictionary
               (heterogeneous).
 
-            Access:
+            Access: / Access-Method
 
             - Random access: Can you access any
               element directly using an index
@@ -2643,10 +2646,12 @@ ___DataStructs
 
             Modification:
 
+            Mutability --
             - Mutable vs Immutable: Can the
               data structure be modified after
               creation? Examples: List
               (mutable), String (immutable).
+            'Originality' -- (in the original memory-location)
             - In-place vs Out-of-place:
               Modifications change the original
               structure (in-place) or create a
@@ -2673,7 +2678,7 @@ ___DataStructs
               access by multiple threads or
               processes? This is important for
               multi-threaded programming.
-            - Persistence: Can the data
+            - Persistence: Can the data  __
               structure be stored and retrieved
               from persistent storage (e.g.,
               database)?
@@ -2958,7 +2963,20 @@ ___DataStructs
                 _p-mutab=_mut|_immut
                 _p-access=seq_bypos|bykey [+random-access]
 
+        F#
+            Tuple
+              (1, "hi", bool)
+            List
+              [1; 2; 3; 4]
+            ----
+            Record
+              {value : "string"; x: 2}
 
+            Discrim. Union
+            Array
+            seq
+            map
+            set
         Clojure
             Vector
               ["a", "b", "c"]
@@ -2984,20 +3002,6 @@ ___DataStructs
             ----
             Map
               %{name: "Al", age: 30}  %{name: 'Al', age: 30}
-        F#
-            Tuple
-              (1, "hi", bool)
-            List
-              [1; 2; 3; 4]
-            ----
-            Record
-              { value : "string"; x: 2 }
-
-            Discrim. Union
-            Array
-            seq
-            map
-            set
         OCaml
             ----
             Hash table

@@ -2096,15 +2096,1078 @@ a 'route-template'  ***
       // The extracted value can be injected into
       // the lambda handler.
       people.Where(p => p.FirstName.StartsWith(name)));
+    
+    N@N@n@If you send a request to
+    /person/Al for the app defined in
+    listing 5.1, the name parameter
+    will have the value "Al", and the
+    API will return the following JSON:
+    
+    [{"firstName":"Al","lastName":"Pacino"}]
+    
+      Note: By default, minimal APIs
+      serialize C# objects to JSON.
+      You'll see how to return other
+      types of results in section 5.3.
     --
     aspdnc_inact2023-p89_123...
+    }}}
+"5.2.2 Mapping verbs to endpoints"  **
+{{{
+    i.e. using different HTTP-verbs
+    
+    + Map*-methods, e.g. MapPost()
+    --
+    aspdnc_inact2023-p90_124.
+    }}}
+good introduction to/refresher on HTTP
+{{{
+    http://mng.bz/KeMK
+    --
+    aspdnc_inact2023-p90_124..
+    }}}
+Table 5.1 The minimal API map endpoints and the corresponding HTML-verbs  *!!
+{{{
+    Method
+      HTTP-verb
+      Expected operation
+    
+    MapGet(path, handler)
+    
+      GET
+    
+      Fetch data only; no modification
+      of state. May be safe to cache.
+    
+    MapPost(path, handler)
+    
+      POST
+    
+      Create a new resource.
+    
+    MapPut(path, handler)
+    
+      PUT
+    
+      Create or replace an existing
+      resource.
+    
+    MapDelete(path, handler)
+    
+      DELETE
+    
+      Delete the given resource.
+    
+    MapPatch(path, handler)
+    
+      PATCH
+    
+      Modify the given resource.
+    
+    MapMethods(path, methods, handler)
+    
+      Multiple verbs
+    
+      Multiple operations.
+    
+    Map(path, handler)
+    
+      All verbs
+    
+      Multiple operations.
+    
+    MapFallback(handler)
+    
+      All verbs
+    
+      Useful for SPA fallback-routes.
+    --
+    aspdnc_inact2023-p90_124...
+    }}}
+    ----
+
+    ----
+((some interesting notes about recommendations))
+{{{
+    Note: NN@You may notice that if
+    you use the MapMethods() and
+    Map()-methods listed in table
+    5.1, your API probably doesn't
+    correspond to the expected
+    operations of the-HTTP verbs it
+    supports, so I avoid these
+    methods where possible.
+    MapFallback() doesn't have a path
+    and is called only if no other
+    endpoint matches. Fallback-routes
+    can be useful when you have a SPA
+    that uses clientside routing.
+    N@See http://mng.bz/9DMl for a
+    description of the problem and an
+    alternative solution.
+    --
+    aspdnc_inact2023-p91_125..
+    }}}
+As I mentioned at the start of section 5.2.2, testing APIs that use verbs other than GET is tricky in the browser.
+{{{
+    You need to use
+    a tool that allows sending
+    arbitrary requests such as Postman
+    (https://www.postman.com) or the
+    HTTP Client plugin in JetBrains
+    Rider. In chapter 11 you'll
+    learn how to use a tool called
+    Swagger UI to visualize and test
+    your APIs.
+    
+        + Tip: The HTTP client plugin in
+        JetBrains Rider makes it easy to
+        craft HTTP requests from inside
+        your API, and even discovers all
+        the endpoints in your application
+        automatically, making them easier
+        to test. You can read more about
+        it at
+        https://www.jetbrains.com/help/rider/Http_client_in__product__code_editor.html.
+    --
+    aspdnc_inact2023-p91_125...
+    }}}
+3
+{{{
+    Tip: nn@You should never see this
+    response when you're calling the
+    API correctly, so if you receive
+    a 405-response, make sure to
+    check that you're using the right
+    HTTP-verb and the right path.
+    Often when I see a 405, I've used
+    the correct verb but made a typo
+    in the URL!
+    --
+    aspdnc_inact2023-p92_126.
+    }}}
+4
+{{{
+    In all the examples in this book so
+    far, you provide a lambda function
+    as the handler for an endpoint. But
+    in section 5.2.3, you'll see that
+    there are many ways to define the
+    nn@handler.
+    --
+    aspdnc_inact2023-p92_126.
+    }}}
+5
+{{{
+    // NN@N@You can also use local functions, introduced in C#
+    // 7.0, as handler methods.
+    app.MapDelete("/fruit/{id}", DeleteFruit);
+    
+    --
+    aspdnc_inact2023-p92_126..(.)
+    }}}
+6
+{{{
+    Listing 5.2 demonstrates the various ways you can pass handlers to an endpoint by simulating a simple API for interacting with a collection of Fruit items:
+    
+    - A lambda expression, as in the
+      MapGet("/fruit") endpoint
+    - A Func<T, TResult> variable, as
+      in the MapGet("/fruit/{id}")
+      endpoint
+    - A static method, as in the
+      MapPost endpoint
+    - A method on an instance variable,
+      as in the MapPut endpoint
+    - A local function, as in the
+      MapDelete endpoint
+    
+    NN@ All these approaches are
+    functionally identical, so you can
+    use whichever pattern works best
+    for you.
+    --
+    aspdnc_inact2023-p93_127.
+    }}}
+[concerning 'Handlers'(??)]  Complex types - that is, types that can't be extracted from the URL by means of ____
+{{{
+    route-parameters -
+    are created by deserializing the
+    JSON-body of a request.
+    --
+    aspdnc_inact2023-p93_127..(.)
+    }}}
+Organizing endpoints with files (!!!!)
+{{{
+    N@In practice, you'll likely want to
+    extract your endpoints to separate
+    files so as to modularize them and
+    make them easier to understand.
+    Embrace that urge; that's the way
+    they were intended to be used!
+    --
+    aspdnc_inact2023-p93_127...
+    }}}
+    ----
+
+    ----
+1
+{{{
+    TUT@Figure 5.3 Sending a POST-request with Postman.
+    The minimal API automatically deserializes the JSON in the request-body to a Fruit-instance before calling the endpoint-handler.
+    --
+    aspdnc_inact2023-p94_128..
+    }}}
+Throwing an exception whenever a user requests an id that doesn't exist clearly makes for a poor experience all round. A better approach is to ____
+{{{
+    return a status-code
+    indicating the problem, such as 404
+    Not Found or 400 Bad Request.
+    
+    NN@The most declarative way to do
+    this with minimal APIs is to return
+    an IResult instance.
+    --
+    aspdnc_inact2023-p94_128...
+    }}}
+te: POCO
+{{{
+    plain old CLR-object
+    --
+    aspdnc_inact2023-p94_128...
+    }}}
+4
+{{{
+    Figure 5.4 If you try to retrieve a fruit by using a nonexistent id for the simplistic API in listing 5.2, the endpoint throws an exception.
+    nn@This exception is handled by the DeveloperExceptionPageMiddleware but provides a poor experience.
+    --
+    aspdnc_inact2023-p95_129..
+    }}}
+In summary, the endpoint-middleware handles each return-type as follows:
+{{{
+    In summary, the endpoint-middleware
+    handles each return-type as
+    follows:
+    
+    - void or Task - The endpoint
+      returns a 200-response with no
+      body.
+    - string or Task<string> - The
+      endpoint returns a 200-response
+      with the string serialized to the
+      body as text/plain.
+    - N@IResult or Task<IResult> - The
+      endpoint executes the
+      IResult.ExecuteAsync method.
+      Depending on the implementation,
+      this type can customize the
+      response, returning any status
+      code.
+    - T or Task<T> - All other types
+      (such as POCO objects) are
+      serialized to JSON and returned
+      in the body of a 200-response as
+      application/json.
+    --
+    aspdnc_inact2023-p95_129...
+    }}}
+A well-designed API uses ____ to indicate to a client what went wrong when a request failed, as well as potentially provide more descriptive codes when a request is successful.
+{{{
+    status-codes
+    
+    + ASP.NET Core exposes the simple
+    static helper-types Results and
+    TypedResults in the namespace
+    Microsoft.AspNetCore.Http. You can
+    use these helpers to create a
+    response with common status codes,
+    optionally including a JSON-body.
+    --
+    aspdnc_inact2023-p95_129...
     }}}
 7
 {{{
+    Note: NN@Results and TypedResults
+    perform the same function, as
+    helpers for generating common
+    status-codes. The only difference
+    is that the Results-methods
+    return an IResult, whereas
+    TypedResults return a concrete
+    generic type, such as Ok<T>.
+    There's no difference in terms of
+    functionality, nn@but the generic
+    types are easier to use in
+    unit-tests and in
+    OpenAPI-documentation, as you'll
+    see in chapters 36 and 11.
+    TypedResults were added in .NET 7.
+    
+    +
+    The following listing shows an
+    updated version of listing 5.2, in
+    which we address some of the
+    deficiencies in the API and use
+    Results and TypedResults to return
+    different status-codes to clients.
+    --
+    aspdnc_inact2023-p96_130.
+    }}}
+8
+{{{
+    Listing 5.3 demonstrates several status codes, some of which you may not be familiar with:
+    
+    - 200 OK - The standard successful
+      response. n@It often includes
+      content in the body of the
+      response but doesn't have to.
+    - 201 Created - Often returned when
+      you successfully created an
+      entity on the server. The Created
+      result in listing 5.3 also
+      includes a Location-header to
+      describe the URL where the entity
+      can be found, as well as the
+      JSON-entity itself in the body of
+      the response.
+    - 204 No Content - Similar to a
+      200-response but without any
+      content in the response-body.
+    - 400 Bad Request - Indicates that
+      the request was invalid in some
+      way; often used to indicate
+      data-validation failures.
+    - 404 Not Found - Indicates that
+      the requested entity could not be
+      found.
+    --
+    aspdnc_inact2023-p97_131.
+    }}}
+    ----
+
+    ----
+1
+{{{
+    N@These status codes more
+    accurately describe your API and
+    can make an API easier to use. That
+    said, if you use only 200 OK
+    responses for all your successful
+    responses, few people will mind or
+    think less of you! You can see a
+    summary of all the possible status
+    codes and their expected uses at
+    http://mng.bz/jP4x.
+    --
+    aspdnc_inact2023-p97_131..
+    }}}
+((2))
+{{{
+    n@Note: The 404 status code in
+    particular causes endless debate
+    in online forums. Should it be
+    only used if the request didn't
+    match an endpoint? Is it OK to
+    use 404 to indicate a missing
+    entity (as in the previous
+    example)? There are endless
+    proponents in both camps, so take
+    your pick!
+    --
+    aspdnc_inact2023-p97_131..
+    }}}
+'Luckily, a web standard called Problem Details describes a consistent format to use.'
+{{{
     
     --
-    aspdnc_inact2023-p89_123...
+    aspdnc_inact2023-p98_132.
     }}}
+4
+{{{
+    N@ASP.NET Core includes two
+    helper-methods for generating
+    Problem Details responses from
+    minimal APIs: Results.Problem() and
+    Results.ValidationProblem() (plus
+    their TypedResults counterparts).
+    Both of these methods return
+    Problem Details JSON.
+    The only
+    difference is that Problem()
+    defaults to a 500 status-code,
+    whereas ValidationProblem()
+    defaults to a 400 status and
+    requires you to pass in a
+    Dictionary of validation-errors, as
+    shown in the following listing.
+    --
+    aspdnc_inact2023-p98_132..
+    }}}
+figure 5.5. You can override the default title and description by ____
+{{{
+    passing additional arguments to the Problem() and ValidationProblem() methods
+    --
+    aspdnc_inact2023-p99_133.
+    }}}
+6
+{{{
+    nn@There are essentially two
+    classes of errors, which are
+    handled differently: exceptions and
+    error status code responses. To
+    create a consistent API for
+    consumers, we need to make sure
+    that both error types return
+    Problem Details JSON in the
+    response.
+    --
+    aspdnc_inact2023-p100_134.
+    }}}
+N@You could add the middleware to your pipeline with an error-handling path of "/error":
+{{{
+    app.UseExceptionHandler("/error");
+    --
+    aspdnc_inact2023-p100_134.
+    }}}
+8
+{{{
+    N@Luckily, in .NET 7, you can
+    configure the
+    ExceptionHandlerMiddleware (and
+    DeveloperExceptionPageMiddleware)
+    to convert an exception to a
+    Problem Details response
+    automatically.
+    --
+    aspdnc_inact2023-p100_134..
+    }}}
+    ----
 
+    ----
+N@Instead of generating a Problem Details response in your endpoint handlers, you can ____
+{{{
+    add middleware to convert responses to
+    Problem Details automatically by
+    using the
+    StatusCodePagesMiddleware, as shown
+    in figure 5.7.
+    --
+    aspdnc_inact2023-p102_136..
+    }}}
+2
+{{{
+    n@Note: You can also use the
+    StatusCodePagesMiddleware to
+    reexecute the middleware-pipeline
+    with an error-handling path, as
+    you can with the
+    ExceptionHandlerMiddleware
+    (chapter 4).
+    
+    (+most useful for RPages-apps
+      w. separate err-pages
+      for specif. status-codes)
+    --
+    aspdnc_inact2023-p103_137.
+    }}}
+3
+{{{
+    NN@TT@The
+    StatusCodePagesMiddleware, coupled
+    with exception-handling middleware,
+    ensures that your API returns a
+    Problem Details response for all
+    error responses.
+    
+      Tip: nn@You can also customize
+      how the Problem Details response
+      is generated by passing
+      parameters to the
+      AddProblemDetails() method or by
+      implementing your own
+      IProblemDetailsService.
+    --
+    aspdnc_inact2023-p103_137...
+    }}}
+4
+{{{
+    So far in section 5.3, I've
+    described returning objects as
+    JSON, returning a string as text,
+    and returning custom status-codes
+    and Problem Details by using
+    Results. nn@Sometimes, however, you
+    need to return something bigger,
+    such as a file or a binary.
+    
+    Luckily, you can use the convenient
+    Results-class for that task too.
+    --
+    aspdnc_inact2023-p103_137...
+    }}}
+5
+{{{
+    - Results.Stream() - n@You can send
+      data to the client asynchronously
+      by using a Stream.
+    --
+    aspdnc_inact2023-p104_138.
+    }}}
+N@If you find yourself creating the same manual response several times, you could consider creating a ____ to encapsulate this logic.
+{{{
+    a custom IResult type
+    --
+    aspdnc_inact2023-p104_138..
+    }}}
+n@The following listing adds an additional check to the MapGet-endpoint to ensure that ____
+{{{
+    n@The following listing
+    adds an additional check to the
+    MapGet-endpoint to ensure that
+    the provided id isn't empty and that it
+    starts with the letter f.
+    --
+    aspdnc_inact2023-p104_138...
+    }}}
+fruit-type validation **(*)
+{{{
+    return _fruit.TryGetValue(id, out var fruit)
+      ? TypedResults.Ok(fruit)
+      : Results.Problem(statusCode: 404);
+    --
+    aspdnc_inact2023-p104_138...
+    }}}
+    ----
 
+    ----
+N@other cross-cutting activities include
+{{{
+    logging, authorization, and auditing.
+    --
+    aspdnc_inact2023-p105_139.
+    }}}
+2
+{{{
+    Luckily, ASP.NET Core includes a
+    feature in minimal APIs for running
+    these tangential concerns:
+    nn@endpoint-filters.
+    --
+    aspdnc_inact2023-p105_139.
+    }}}
+3
+{{{
+    nn@After the last filter
+    executes, calling next
+    invokes the endpoint
+    handler. After the
+    handler generates a
+    response, it passes back
+    through the filter pipeline.
+    --
+    aspdnc_inact2023-p105_139.
+    }}}
+4
+{{{
+    NNN@Note: The
+    EndpointFilterDelegate is a named
+    delegate type. It's effectively a
+    Func<EndpointFilterInvocationContext,
+    ValueTask<object?>>.
+    --
+    aspdnc_inact2023-p106_140...
+    }}}
+NN@N@Moving code to filters can reduce clutter in your endpoints, but
+{{{
+    it makes the flow of your
+    application harder to understand
+    --
+    aspdnc_inact2023-p108_142.
+    }}}
+TT@NN@5.4.2 Filters or middleware: Which should you choose?
+{{{
+    
+    --
+    aspdnc_inact2023-p108_142.
+    }}}
+7
+{{{
+    nnn@By contrast, there are three
+    main differences between middleware
+    and filters:
+    
+    - Middleware can run for all
+      requests; filters will run only
+      for requests that reach the
+      EndpointMiddleware and execute
+      the associated endpoint.
+    - Filters have access to additional
+      details about the endpoint that
+      will execute, such as the return
+      value of the endpoint, for
+      example an IResult. Middleware in
+      general won't see these
+      intermediate steps, so it sees
+      only the generated response.
+    - Filters can easily be restricted
+      to a subset of requests, such as
+      a single endpoint or a group of
+      endpoints. Middleware generally
+      applies to all requests (though
+      you can achieve something similar
+      with custom
+      middleware-components).
+    --
+    aspdnc_inact2023-p109_143.
+    }}}
+8
+{{{
+    That's all well and good, but how
+    should we interpret these
+    differences? When should we choose
+    one over the other?
+    
+    I like to think of middleware
+    versus filters as a question of
+    specificity. NN@Middleware is the
+    more general concept, operating on
+    lower-level primitives such as
+    HttpContext, so it has wider reach.
+    N@If the functionality you need has
+    no endpoint-specific requirements,
+    you should use a middleware
+    component. NN@NN@Exception handling
+    is a great example; exceptions
+    could happen anywhere in your
+    application, and you need to handle
+    them, so using exception-handling
+    middleware makes sense.
+    
+    NN@On the other hand, if you do
+    need access to endpoint details, or
+    if you want to behave differently
+    for some requests, you should
+    consider using a filter. Validation
+    is a good example. Not all requests
+    need the same validation. Requests
+    for static files, for example,
+    don't need parameter validation,
+    the way requests to an API endpoint
+    do. Applying validation to the
+    endpoints via filters makes sense
+    in this case.
+    
+      Tip: Where possible, consider
+      using middleware for
+      cross-cutting concerns. Use
+      filters when you need different
+      behavior for different endpoints
+      or where the functionality relies
+      on endpoint concepts such as
+      IResult objects.
+    --
+    aspdnc_inact2023-p109_143.
+    }}}
+    ----
+
+    ----
+1
+{{{
+    app.MapPost("/fruit/{id}", (Fruit fruit, string id) => { /* */ });
+    
+    Unfortunately, with this order, the
+    ValidateId filter described in
+    listing 5.9 won't work. The
+    ValidateId filter assumes that the
+    first parameter to the handler is
+    id, which isn't the case in our
+    revised MapPost implementation.
+    
+    NNN@ASP.NET Core provides a
+    solution that uses a
+    factory-pattern for filters. You
+    can register a filter-factory by
+    using the
+    AddEndpointFilterFactory() method.
+      ...   
+    --
+    aspdnc_inact2023-p110_144.
+    }}}
+2
+{{{
+    NN@The MethodInfo-property can be
+    used to control how the filter is
+    created based on the definition of
+    the endpoint-handler.
+    --
+    aspdnc_inact2023-p112_146.
+    }}}
+3
+{{{
+    5.4.4 Implementing the IEndpointFilter interface
+    
+    NNNN@Creating a lambda-method for
+    AddEndpointFilter() that satisfies
+    the compiler can be a frustrating
+    experience, depending on the level
+    of support your integrated
+    development environment (IDE)
+    provides. In this section you'll
+    learn how to sidestep the issue by
+    defining a class that implements
+    IEndpointFilter instead.
+    --
+    aspdnc_inact2023-p112_146.
+    }}}
+4
+{{{
+    NN@When designing APIs, it's
+    important to maintain consistency
+    in the routes you use for your
+    endpoints, which often means
+    duplicating part of the route
+    pattern across multiple APIs.
+    As an
+    example, all the endpoints in the
+    fruit API described throughout this
+    chapter (such as in listing 5.3)
+    start with the route prefix /fruit:
+    
+    - MapGet("/fruit", () => {/* */})
+    - MapGet("/fruit/{id}", (string id) => {/* */})
+    - MapPost("/fruit/{id}", (Fruit fruit, string id) => {/* */})
+    - MapPut("/fruit/{id}", (Fruit fruit, string id) => {/* */})
+    - MapDelete("/fruit/{id}", (string id) => {/* */})
+    --
+    aspdnc_inact2023-p113_147.
+    }}}
+NN@All this duplication can be removed by ____
+{{{
+    using route groups
+    --
+    aspdnc_inact2023-p114_148.
+    }}}
+N@Tip: If you don't want to add a prefix but still want to use the route group for applying filters, you can ____
+{{{
+    pass the prefix "/" to MapGroup().
+    --
+    aspdnc_inact2023-p114_148...
+    }}}
+HTTP verbs define ____  ****
+{{{
+    semantic expectation for a request.
+    --
+    aspdnc_inact2023-p116_150.
+    }}}
+8
+{{{
+    - NNNN@An HTTP API exposes methods
+      or endpoints that you can use to
+      access or change data on a server
+      using the HTTP protocol. An HTTP
+      API is typically called by mobile
+      or client-side web applications.
+    --
+    aspdnc_inact2023-p116_150.
+    }}}
+9
+{{{
+    (void + 200)
+    
+    NN@Any other object
+    returned from your endpoint
+    handler is serialized to JSON.
+    --
+    aspdnc_inact2023-p116_150.
+    }}}
+10
+{{{
+    - NNN@You can customize the
+    response by injecting an
+    HttpResponse object into your
+    endpoint handler and then setting
+    the status code and response
+    body.
+    --
+    aspdnc_inact2023-p116_150.
+    }}}
+    ----
+
+    ----
+1
+{{{
+    NN@NN@In section 6.4 I describe how
+    to use the routing-system to
+    generate URLs, which you can use to
+    create links and redirect requests
+    for your application. One benefit
+    of using a routing system is that
+    it decouples your handlers from the
+    underlying URLs they're associated
+    with. You can use URL generation to
+    avoid littering your code with
+    hardcoded URLs like
+    /product/view/3. Instead, you can
+    generate the URLs at runtime, based
+    on the routing system.
+    --
+    aspdnc_inact2023-p119_153.
+    }}}
+NN@NN@You can think of routing as being ____  *****
+{{{
+    the glue that ties the middleware-pipeline to endpoints
+    --
+    aspdnc_inact2023-p119_153.
+    }}}
+NNNN@NN@Routing is the process of ____  ****
+{{{
+    mapping an incoming request
+    to a method that will handle it
+    
+    + NNN@You can also use routing to enable
+    powerful features such as mapping
+    multiple URLs to the same handler
+    and automatically extracting data
+    from a request's URL.
+    --
+    aspdnc_inact2023-p119_153.
+    }}}
+NN@The process of ____ is routing
+{{{
+    mapping a request to a handler
+    --
+    aspdnc_inact2023-p119_153.
+    }}}
+5
+{{{
+    Definition: NNNN@Routing in
+    ASP.NET Core is the process of
+    selecting a specific handler for
+    an incoming HTTP request.
+    --
+    aspdnc_inact2023-p119_153.
+    }}}
+6
+{{{
+    Definition: The NNN@query string
+    is part of a URL containing
+    additional data that doesn't fit
+    in the path.
+    --
+    aspdnc_inact2023-p120_154.
+    }}}
+7
+{{{
+    NNN@N@It isn't used
+    by the routing infrastructure to
+    identify which handler to
+    execute,
+    NN@N@but ASP.NET Core can
+    extract values from the
+    query-string automatically in a
+    process called model-binding, as
+    you'll see in chapter 7.
+    --
+    aspdnc_inact2023-p120_154.
+    }}}
+Routing + 'the SEO-advantage'  ****
+{{{
+    NNNN@NN@The difference is that with
+    routing, you can completely
+    customize the URLs, as shown in
+    figure 6.2. This feature gives you
+    much more flexibility and can be
+    important in real-life applications
+    for search engine optimization
+    (SEO).
+    
+      Note: With the flexibility of
+      routing, you can encode the
+      hierarchy of your site properly
+      in your URLs, as described in
+      Google's SEO starter guide at
+      http://mng.bz/EQ2J.
+    --
+    aspdnc_inact2023-p121_155.
+    }}}
+    ----
+
+    ----
+1
+{{{
+    NN@With routing it's easy to modify
+    your exposed URLs without changing
+    any filenames or locations. You can
+    also use routing to create
+    friendlier URLs for users, which
+    can improve discovery and
+    "hackability." All of the following
+    routes could point to the same
+    handler:
+    
+    - /rates/view/1
+    - /rates/view/USD
+    - /rates/current-exchange-rate/USD
+    - /current-exchange-rate-fo
+    --
+    aspdnc_inact2023-p122_156.
+    }}}
+2
+{{{
+    NN@NN@Endpoint routing is
+    fundamental to all but the simplest
+    ASP.NET Core apps. It's implemented
+    with two pieces of middleware,
+    which you've already seen:
+    
+    - EndpointRoutingMiddleware - This
+      middleware chooses which
+      registered endpoints execute for
+      a given request at runtime. To
+      make it easier to distinguish
+      between the two types of
+      middleware, I'll be referring to
+      this middleware as the
+      RoutingMiddleware throughout this
+      book.
+    - EndpointMiddleware - This
+      middleware is typically placed at
+      the end of your middleware
+      pipeline. The middleware executes
+      the endpoint selected by the
+      RoutingMiddleware at runtime.
+    --
+    aspdnc_inact2023-p123_157.
+    }}}
+3
+{{{
+    You register the endpoints in your
+    application by calling Map*
+    functions on an
+    IEndpointRouteBuilder instance. In
+    .NET 7 apps, this instance
+    typically is a WebApplication
+    instance but doesn't have to be, as
+    you'll see in chapter 30.
+    --
+    aspdnc_inact2023-p123_157.
+    }}}
+4
+{{{
+    Definition: NNN@NN@An endpoint in
+    ASP.NET Core is a handler that
+    returns a response.
+    --
+    aspdnc_inact2023-p123_157.
+    }}}
+5
+{{{
+    Depending on the type of
+    application you're building,
+    minimal API-handlers, Razor Page
+    handlers, or MVC controller
+    action-methods typically make up
+    the bulk of the endpoints in an
+    application.
+    --
+    aspdnc_inact2023-p123_157.
+    }}}
+6
+{{{
+    - Nn@A health-check endpoint using
+      MapHealthChecks(). You can read
+      more about health checks at
+      http://mng.bz/N2YD.
+      (+two more examples)
+    --
+    aspdnc_inact2023-p123_157.
+    }}}
+7
+{{{
+    Definition: NN@N@A route-template
+    is a URL pattern that is used to
+    match against request-URLs, which
+    are strings of fixed values, such
+    as "/test" in the previous
+    listing. They can also contain
+    placeholders for variables, as
+    you'll see in section 6.3.
+    --
+    aspdnc_inact2023-p124_158.
+    }}}
+8
+{{{
+    NNn@Middleware placed before the
+    routing middleware cannot tell
+    which endpoint will be executed.
+    --
+    aspdnc_inact2023-p125_159.
+    }}}
+    ----
+
+    ----
+1
+{{{
+    NN@TUT@The StaticFileMiddleware in
+    figure 6.4 is placed before the
+    RoutingMiddleware, so it executes
+    before an endpoint is selected.
+    --
+    aspdnc_inact2023-p126_160.
+    }}}
+2
+{{{
+    NN@If you have a
+    piece of middleware that needs to
+    know which endpoint (if any) a
+    given request will execute, you
+    need to make sure to place it after
+    the RoutingMiddleware and before
+    the EndpointMiddleware.
+    --
+    aspdnc_inact2023-p126_160.
+    }}}
+*****
+{{{
+    NNNN@In this section
+    we explore the full range of
+    features available in
+    route-templates, such as:
+    
+    - default values
+    - optional segments
+    - constraints
+    --
+    aspdnc_inact2023-p126_160.
+    }}}
+a 'segment'
+{{{
+    The routing middleware parses a
+    route-template by splitting it into
+    NN@segments. A segment is typically
+    separated by the / character, but
+    it can be any valid character.
+    --
+    aspdnc_inact2023-p126_160.
+    }}}
+5
+{{{
+    
+    --
+    aspdnc_inact2023-p127_161.
+    }}}
+Ch. 6 - NOTE|TODO: FINISH ROUTING-CHAPTER[!!]
+
+    7. Model-binding and (-)validation in minimal APIs
+8. An introduction to dependency-injection  173
+9. Registering services with dependency-injection  190
+10. Configuring an ASP.NET Core application  215
+    11. Documenting APIs with OpenAPI  248
+
+19. Creating a website with MVC controllers 466
+20. Creating an HTTP API using web API controllers 486
+
+34. Building background tasks and services 846
+    35. Testing applications with xUnit 872
+    36. Testing ASP.NET Core applications 887
 

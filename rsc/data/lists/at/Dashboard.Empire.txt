@@ -7,21 +7,98 @@ ___calendarnow
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+TODO ADD 1 = STARTUPS 1 {{{
+
+Vanki LearnQna ----
+  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
+
+~/Desktop/Scratch.txt
+
+
+    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
+~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
+
+PROGR ----
+  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
+Clangs (C, Cpp, CSharp, Dlang) ----
+  cppDlang.prl.txt
+Web/Mobile/Cloud ----
+
+
+multimedia (incl. Anki):
+    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
+Vim/Emacs:  ¤¤¤
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Vim.txt ../ref/comp/editor/vim/Vim-Tocs.txt ../ref/comp/editor/vim/vim_excommands-functions.txt ../ref/comp/editor/vim/vimscrhardw-quickindex.txt ../ref/comp/editor/vim/vim-patternregex.txt
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Emacs.txt ../ref/comp/editor/emacs/elisp_refman.txt ../ref/comp/editor/emacs/emacs-mastextend.check.txt ../ref/comp/editor/emacs/Em1-notes_x2.txt ../ref/comp/editor/emacs/orgman-emacs.index.txt ../ref/comp/editor/emacs/emacs-dired.txt ../ref/comp/editor/emacs/emacsman1.index.txt ../ref/comp/editor/emacs/emacsrefcard-org.txt ../ref/comp/editor/emacs/emacsrefcard-shortessential.txt ../ref/comp/editor/emacs/emacsrefcard-Long.txt
+
+file/media:
+    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
+sysadm:  TODO: ADD WIN-TERMINAL  ¤¤¤
+    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
+markdown etc:  ¤¤¤
+    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
+[git, test/deploy]:
+    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
+
+scripting / Web ----  TODO: HTML, CSS, ETC  ¤¤¤
+    gvim -p ../ref/comp/cb/pycb.txt ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
+    Python.prl.txt
+System (incl. C#):
+    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
+FUNCT =LISP, F#, ML, ...:
+    gvim -p ../ref/comp/cb/clispcb.txt ../ref/comp/cb/schemecb.txt ../ref/comp/cb/clojure.txt ../ref/comp/cb/haskell.txt ../ref/comp/cb/sml-ocaml.txt ../ref/comp/cb/fs.txt
+
+Db:
+  gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
+
+
+    'ful som stryk'
+LANG1-REFS 1: (+maybe LangDb1)
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  // maybe add 'främord' etc
+
+
+Langs1 Ref-lists ----  __
+  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
+  --
+  ~/gdrive/rsc/media/pic-graphics/shorth/
+
+LANG-DB 1:
+  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt ../ref/lang/dandict2mini.txt
+                                           LangsDb.legacy ----
+                                                   ^
+                                                   |
+  or LangDb1.list.txt -----------------------------+
+  [+charAlfa]
+  . {{{
+    mada, wareware (no), sore de
+  }}}
+
+}}}
+Comp(etc)-Admin {{{
+
+- Langdoks (ref) till Phone [Bevingat, syn, ]
+
+}}}
+
 mini todo/bring (etc) {{{
-Today:
-- Bet. räkningar
 
 
 inköp: 9V-batt + laddare
   + Gatu-Förstärkare
 
-  - Text/Bladvändar-pedalen
-  - Barytongitarren (+Capo)
+- Text/Bladvändar-pedalen
+- Barytongitarren (+Capo)
 }}}
 scratch {{{
   U.Whfgrt. aäzaqr aåtbg fbz yvxanqr zva fvghngvba zlpxrg (=wboonqr fwäyi cå qvfcynlra, unqr vatn xbyyrtbe, xhaqr vagr obyyn bpu yäeqr fvt vagr få zlpxrg)
 }}}
 Anmäln. YH/BUV {{{
+    +sommarjobbare utför en uppgift + får betalt
+    jag har fått en sommarjobbares uppgifter
+        + ovett och dålig _ när jag inte kunnat utföra
+
+
 Jag har fått sköta skolan och varit ansvarig för kvalitetskontroll
     man verkar också ha infört mina idéer om bättre kontroll och feedback på Zocom
 [=Fråga till Ludvid nästa torsdag]
@@ -39,6 +116,61 @@ sen inte blivit backad av skolan
 skolan har sen inte backat upp mig
 +jag har fått jaga efter dem för att få handledn. att täcka upp
 (+förlängda frister p.g.a. allt extrajobb jag fått göra)
+
+
+MYH - Tillsyn ----
+'Jag behöver ert stöd för att kunna vara säker på att
+ - Kunna få ut mitt betyg och intyg
+ - kunna få ut de utlåtanden jag har rimlig rätt till
+ - kunna få den handledningshjälp jag behöver för att kunna göra min slutuppgift och förtjäna mitt betyg (och utifrån min reducerade förmåga)
+----
+Elever har betett sig illa + kastat mig framför tåget
+    och ingen  har fått någon påbackning för det
+Gisela Rego ----
+- LGruppen:
+  Det har förekommit uppgifter om (utfrysningar och) trakasserier på BUV (och kolla av Oscar G:s (och Micke X) reaktion(er))
+  + Hur ser ni på företagen på detta?  (=om det har förekommit trakass. på skolan och man inte tatt tag i det)
+- Christer J:
+  Be att få reda på namnen/veta vad nuvarande två klassrepresentanterna heter
+  Vad gör man om man får in trovärdiga uppgifter om utfrysningar och trakasserier
+. {{{
+  - Har inte gett tydliga reprimander till företaget, trots ... (väldigt uppenbara kvalitetsbrister)
+- Lärare vägrade kontakta _ när tveksamt
+    = gav istället _ som nästan brutit sig samman extrauppgift
+- +Skolan har inte undersökt det (utb.1 struntade, +R. hade åsikter men har inte åtgärdat) och, läraren verkar fortfarande anlitas av UaYH
+----
+    = Jag har i praktiken fått driva det stället i 1 år
+- Elever har fått göra lärares och personals(!) jobb (+sen ta (bl.a. ryktesmässigt) stryk från andra elever)
+- ingen extrahjälp till elever med extra behov
+- ingen social Feedb/signaler till _ elever (inte ens vid utfrysn./trakass.)
+  + Rektorn har hävdat att man inte har rätt att göra det (ingen rätt/möjlighet att sanktionera elever som beter sig illa)
+  - om en elev (t.o.m. en representant) trakasserar en annan elev, så är det inget problem  om de andra eleverna tycker eleven är/personen fungerar bra som representant
+- Företaget snålar på saker
+  - material för lärare
+  = inte rätt till handledn. om man kuggat (=jag fick anlita extern hjälp)
+    [måns + eva försöker smita undan]
+- A. ville inte prata med sin kollega (som betett sig illa)
+- Utb.1 tog flera gånger beslut för att dölja/dämpa kritik, snarare än att ta tag i fuskande handledare
+- Utb.l 1 ville inte ta tag i anmäln. om att lärare godkänt felaktig kod
+  (+försökte få redan helt nerkörd elev att göra jobbet (=meddela företaget) åt henne)
+- Utb.2: 'Repr. svarar ej? Inga probl. - du kan ju framföra det själv'
+- Utb.2 hävdar han (m.fl.) varit i kontakt med _ ang.  men den elev i gruppen som fortfarande pratar med mig  pratade med honom, och han hävdar att ingen (från skolan el. företaget) har kontaktat/hört sig för med honom om min roll i arbetet.
+----
+- handl. anser uppgiften jag fått på företaget är för svår, men han vågar/vill inte säga det i gemensamma möten med företaget, + Rektorn skulle höra av sig för uppföljning, men har inte hört av sig på en månad
+----
+Ingen som har betett sig illa/klantat sig etc. har fått be om ursäkt till mig
+}}}
+
++Detta är de personer i kedjan som jag har pratat med:
+ - Paul T (tidigare handledare på )
+ - Adam W
+- Gunilla J
+    godtyckl. beslut  (handl. får inte hjälpa dig)
+    Vänskapskorruption
+    håll tyst och gör som jag säger - jag har jobbat som l. i 40 år
+- Joakim N
+- Christer J
+- Björn Wärnberg
 
 
 'Dirt-List' (etc) ----
@@ -83,7 +215,11 @@ oscar, jonas, micke
 Hur menar du/klassen att jag 'råkat' hamna utanför?
 +Det var efter Oscar fryst ute mig som...
     några är ansvariga för det, om så stora delar av klassen,
-    el. är det de beryktade 'någon' och 'ingen'?
+        el. är det de beryktade 'någon' och 'ingen'?
+Hur gick det med det där 'felaktig kod'-ärendet?
+----
+
+Jag kan komma att behöva sjukskriva mig och gå i terapi efter det här
 
 }}}
 Calendar + Dailies {{{
@@ -259,75 +395,6 @@ v 23
   2025-06-10 fre
 
 }}}
-
-}}}
-
-TODO ADD 1 = STARTUPS 1 {{{
-
-Vanki LearnQna ----
-  ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
-
-~/Desktop/Scratch.txt
-
-
-    ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
-~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
-
-PROGR ----
-  gvim -p PROGR.cm.txt ../ref/comp/lang/PROGRLANG.DB.ref.txt
-Clangs (C, Cpp, CSharp, Dlang) ----
-  cppDlang.prl.txt
-Web/Mobile/Cloud ----
-
-
-multimedia (incl. Anki):
-    gvim -p ../ref/graf/pr/MultiMedia.txt ../ref/comp/mu/MuRec.txt
-Vim/Emacs:  ¤¤¤
-    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Vim.txt ../ref/comp/editor/vim/Vim-Tocs.txt ../ref/comp/editor/vim/vim_excommands-functions.txt ../ref/comp/editor/vim/vimscrhardw-quickindex.txt ../ref/comp/editor/vim/vim-patternregex.txt
-    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Emacs.txt ../ref/comp/editor/emacs/elisp_refman.txt ../ref/comp/editor/emacs/emacs-mastextend.check.txt ../ref/comp/editor/emacs/Em1-notes_x2.txt ../ref/comp/editor/emacs/orgman-emacs.index.txt ../ref/comp/editor/emacs/emacs-dired.txt ../ref/comp/editor/emacs/emacsman1.index.txt ../ref/comp/editor/emacs/emacsrefcard-org.txt ../ref/comp/editor/emacs/emacsrefcard-shortessential.txt ../ref/comp/editor/emacs/emacsrefcard-Long.txt
-
-file/media:
-    gvim -p ../ref/comp/sysadm/browse/file.txt ../ref/comp/hardw/hardw-devices.txt ../ref/comp/sysadm/browse/media.txt ../ref/comp/sysadm/browse/web.txt ../ref/comp/sysadm/browse/mail.txt ../ref/comp/sysadm/browse/remote.txt
-sysadm:  TODO: ADD WIN-TERMINAL  ¤¤¤
-    gvim -p ../ref/comp/cb/bcb.index.txt ../ref/comp/sysadm/cmdl-fu.shell.txt ../ref/comp/cb/RegexCb.txt ../ref/comp/cb/regex-vim.txt ../ref/comp/cb/pshell.txt
-markdown etc:  ¤¤¤
-    gvim -p ../ref/comp/cb/moffice.txt ../ref/comp/cb/loffice.txt ../ref/comp/cb/latexcb.txt
-[git, test/deploy]:
-    gvim -p ../ref/comp/cb/git.txt ../ref/comp/cb/compile-build.txt ../ref/comp/cb/Testing.txt ../ref/comp/cb/deploy-devops.txt ../ref/comp/cb/math-progr.txt ../ref/comp/cb/algos.txt ../ref/comp/cb/probltask-leetrosetta.txt ../ref/comp/cb/disassembly.txt
-
-scripting / Web ----  TODO: HTML, CSS, ETC  ¤¤¤
-    gvim -p ../ref/comp/cb/pycb.txt ../ref/comp/cb/jscb.txt ../ref/comp/cb/h5c3.txt ../ref/comp/cb/jqcb.txt ../ref/comp/cb/phpcb.txt ../ref/comp/cb/luacb.txt ../ref/comp/cb/elixir.txt
-    Python.prl.txt
-System (incl. C#):
-    gvim -p ../ref/comp/cb/asm.txt ../ref/comp/cb/cppcb.txt ../ref/comp/cb/dlangcb.txt ../ref/comp/cb/rustcb.txt ../ref/comp/cb/jcb.txt ../ref/comp/cb/cscb.txt ../ref/comp/cb/go-v.txt
-FUNCT =LISP, F#, ML, ...:
-    gvim -p ../ref/comp/cb/clispcb.txt ../ref/comp/cb/schemecb.txt ../ref/comp/cb/clojure.txt ../ref/comp/cb/haskell.txt ../ref/comp/cb/sml-ocaml.txt ../ref/comp/cb/fs.txt
-
-Db:
-  gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
-
-
-    'ful som stryk'
-LANG1-REFS 1: (+maybe LangDb1)
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-  // maybe add 'främord' etc
-
-
-Langs1 Ref-lists ----  __
-  gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
-  --
-  ~/gdrive/rsc/media/pic-graphics/shorth/
-
-LANG-DB 1:
-  gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt ../ref/lang/dandict2mini.txt
-                                           LangsDb.legacy ----
-                                                   ^
-                                                   |
-  or LangDb1.list.txt -----------------------------+
-  [+charAlfa]
-  . {{{
-    mada, wareware (no), sore de
-  }}}
 
 }}}
 
@@ -581,21 +648,28 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
     ---- 'MINIS|DAILIES' ---- ___index=0 {{{
     LEETCODE ETC(+SCRIPT-FU) CODE-PROBLEMS __ ****
             KAPA FILER/MAPPAR I LEGACY (=5 per dag) !!(! *****)
-VIMSCRIPT x4 (+Elisp Startwith)
-Termux  __  @@
-  OrgMode
-JupNotebooks, polyglot notebooks,  Pandas(etc)
-F# w. Datastructures
+VIMSCRIPT x4 (+Elisp Startwith) ____
 ----
-CSound (et al)  +Recording(!)
+   RSKRIFT RENSKRIVNING
+FUNCPY [!!]
+  CSOUND (ET AL)  +RECORDING(!)
+LANGDB1
+F# w. Datastructures
+
+OrgMode
+--
+Anki Restart 2021+  [=Q-marked]
+Termux  __  @@
+====
+JupNotebooks, polyglot notebooks,  Pandas(etc)
+----
     Saol 1/Bevingat/Ordspr. =Clean  @ +Idioms/Litt  arlang 1  +LangDb Prios 1-100(!) →
       Bevingat (Quotes, etc)
     . {{{
       - vta-apps Docs: Dualist
     }}}
     - Gregg Snippets [=10 per day]   [+images to refssection]
-    - LANGDB1, dan-words;  kanji-2000  -de | fr | ru |  spa  +jp,  @ ita (!)  (incl. set jp-dicts.ref(!!))   - lat [ 2-4 words etc (??)]
-    - Regex-patts (Vim, c#, Perl, ...)
+    - Regex-patts (Vim, C#, Perl, Pegged ...)
         - Some Sv-En words|phrases (+one quote|joke(quip)) + Write w. Shorth(!!) {{{
             ( =sjukv|samhinfo|facket mm(!) 2-4  Rel.Ond: 5 meningar
                 - Doyle FSpeech (=gregg++):  Plocka 10-20(-50) mest grundl. eng-ord(!!)
@@ -608,14 +682,15 @@ CSound (et al)  +Recording(!)
     LittBooks / Lyrics
 
     UNIVERSITY VIDEOS: STANFORD[!!]  + QUINCY LARSON-LINKS [!!!!]  @@!(!)
-    C (modern + hardw.)  +Sys.Archit.
+C (modern + hardw.)  +Sys.Archit.
       Htdp (+Refact, Beaut, Legacy)  CLisp  (+Lfe Sicp(+Sicp Clojure)?)  py-sicp  @
     JsCb-Notes 1 + jscb 2(!!), +PyCb, ClojCb  KotlFunct [**]  @@
-      Dlang[!! Ali, Mike P, Cookbook  etc]
+    Dlang[!! Ali, Mike P, Cookbook  etc]
     Org, Vimscript första koden (+↓↓), Elisp Startw.[!!]
     - vimscrhardw (first cmds custom!!), - lpy(x2)-ref, bash 1cmd   (+vimcasts etc)
     - FREEC-WEB (3-5 st!  +ExamProjects)  @@   - vlang
 
+Lyssna genom + planka (=mata in) några nya DFT(etc)-musikutkast[!!]
         --  @@@@@@@  ---VV  @
     - Fstyle: 'Doc is here' + Dft-Prios(!!)(**** =incl. Blues-Improv. acoustic) {{{
 dft curr 2023 {{{
@@ -672,25 +747,29 @@ dft curr 2023 {{{
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
     \v\@([^ ]?)+
 
-Termux  __  @@  ¤¤¤
 VIMSCRIPT x4 (+Elisp Startwith)
-  OrgMode
-JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
-Obsidian __ @ +MLEARN: FIRST DOKS + formulas w. Obsidian Md/Latex[!!]  _  ¤¤¤
+
 mermaid md
+Obsidian __ @ +MLEARN: FIRST DOKS + formulas w. Obsidian Md/Latex[!!]  _  ¤¤¤
+Lua (OpenMw, Mpv, NeoVim + NVim Touch, Ardour)
 Py/F# Sysadm. + Devops[!!]  ¤¤¤
-datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
-FuncPy  ¤¤¤
-    Lua (OpenMw, Mpv, NeoVim, Ardour)
+----
+  OrgMode
 Bcb, Bluebash  ¤¤¤  LINSYS: debbib
 
-Android Scripting [+Rclone] ¤¤¤
+Termux  __  @@  ¤¤¤
+JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
+datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
+FuncPy  ¤¤¤
+----
     ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤
   + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
     . {{{
     @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips ¤¤¤
     C# DotNet Core MVC + Blazor, Cs Funct 3
     }}}
+
+Android Scripting [+Rclone] ¤¤¤
 AVALONIA (+Maui)  ¤¤(¤)  Spectre Console
     XUnit, Cpp Gtest + 'Prop.based Testing'  ¤¤
 Dlang [Ali, +Learning, Cb]  +Pegged  ¤¤¤
@@ -699,24 +778,7 @@ NuShell  _  ¤¤(¤)
 ASM 1 (+binalys)  ¤¤
 Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
 REVEAL, IMPRESS  __ ¤¤¤
-    Latex Beamer
 Tracker/Localsearch + Sparql  ¤¤
-    winterminal  ¤ [=profiles, AWS-shell, etc **]
-Blue + CSound +Analog Synth. ¤¤¤  Nyq, Scoll  muHask*(*), Midi  @  Chuck  ORCH/POPROCK-ARR (etc)
-    Xonshell  __  ¤
-Bash/Dash-Mans {{{
-    Bluebash, Bcb, ....
-        Rute, ABSG, ....
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
-    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
-  }}}
-Mpv-Docs  ¤¤ | Yt-Downl
-    + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
-Gremlin + Neptune
-  'MuLäroplans-Träden' **(!!)
-WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
-  wappdev.js eloquent.js  +h5g / three.js (w.gamedev)
-    Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
 Abe Kotlin  ¤¤
 (gimp etc) C Py Scm (!!)  ¤¤¤
 Anki  ¤¤¤
@@ -724,31 +786,28 @@ Anki  ¤¤¤
 Datasci@ + Pandas[!!] @Webscrape ¤¤¤ / @GoogleHacks
 refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤
 @xsane, font(forge)/Scribus  ¤¤¤
-    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
-    Mojo  ¤¤¤
-    Devops, CI @  ¤¤¤
-algos
-        Scribus
     CSS + Sass/Compass
+    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
+Blue + CSound +Analog Synth. ¤¤¤  Nyq, Scoll  muHask*(*), Midi  @  Chuck  ORCH/POPROCK-ARR (etc)
+Bash/Dash-Mans {{{
+    Bluebash, Bcb, ....
+        Rute, ABSG, ....
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
+  }}}
+
+Mpv-Docs  ¤¤  Yt-Dlp  ¤
+Gremlin + Neptune
+  'MuLäroplans-Träden' **(!!)
+WEBDEV:  Freec'Restart'  (+Js Multimedia, 'drasnanim', ???)
+  wappdev.js eloquent.js  +h5g / three.js (w.gamedev)
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/DlangWiki-FunctionalGarden.txt
 ANDROID SCRIPTING/PROGRAMMING  [+Flutter, KIVY]
-    TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
-  CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
-----
-  Flutter+Dart    @
   GraphQL(!)  # ¤
     sqlitebrowser  ___onroad  + Shotwell (online Gallery)  ¤¤¤
 MongoDB Compass  ¤¤¤ / MongoDB Realm  @@  ¤¤(¤)
   REACT (+Mongo)  ##  _Clean_  ¤¤¤
 Java|Cloj Semantic-Web  ¤¤
-  Devops
-  . {{{
-    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
-    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
-
-    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
-    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
-  }}}
   Roslyn (+Analysis|CodeGen)
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
@@ -757,12 +816,8 @@ Java|Cloj Semantic-Web  ¤¤
 MidiCpp-Guy[!!]  h5g**  Listking ¤¤¤  jQuery(Cb), FREEC Compl,
 @Greasmonk, ¤¤¤ Ffox-plugins, Nyxt, lynx  pyweb(Pyramid),
     Xml ¤¤¤ (+xaml, faml, etc)
-    Puppet Lang + Patterns(etc)
-            Mpv-Docs  Yt-Dlp  ¤
-'linuxcommands core' [=Gemini-Q]  ¤[¤]
     JuPyter/Polyglot(?) Notebooks (etc)  __  ¤¤¤
 F# - TOCs + Concepts,  Fabulous (Fable, Suave)  ¤¤¤
-
   Reason + PureScript  ¤¤¤ ___onroad=maybye  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/compilesto/reasonml-qsguide_2019.txt
@@ -780,65 +835,75 @@ F# - TOCs + Concepts,  Fabulous (Fable, Suave)  ¤¤¤
   }}}
 Music With JavaScript ('Coding with Music')*  __ ¤¤¤
 Db:s + Ontologies(!) ¤¤¤
-
-Bash/Dash-Mans  ¤
-Roslyn + Analysis/CodeGen  __
-(Veracrypt)  + Puppet  __  ¤¤ {{{
-
-
-
-}}}
-    Nix Master
-Devops + Python (+iPy/Xonsh) ; F# Devops  _ ¤¤¤
-  Vim PyPlugins  __ | VIMSCRIPT (x4)  + Emacs[!!]  _  ¤
- LEARN REACT  [__]  [+=OldNotes 1]   Sass  ¤¤
+  (Veracrypt)
+  Nix Master
 Docker + Kubernetes + Azure Devops + GithubActions  __
   ----  Anki Redone  (+Vanki Vimtouch 1.0 / VimJutsu)  ¤
-  Arch Linux
-Lyn-Sys + Yocto + C/C++ Embed
 
+Clj  @ + 'javamethods'  #'cheats' + jDir14/PhrasebJava
+algos
+Arch Linux
+Lin-Sys + Yocto + C/C++ Embed
 
-    Nsplitdiff (+Soc.Framg)
-    + PShell
+    Latex Beamer
+    winterminal  ¤ [=profiles, AWS-shell, etc **]
+    Xonshell  __  ¤
+    + pyplugins  _ 'VTOUCH VANKI 1.5' ¤ [+VimJutsu]  ¤¤¤
+    Devops, CI @  ¤¤¤
+    TC CORE READTHROUGH + THE WIKI[!!]  __  ¤¤
+  CLEAN UP NEW DOTNETCORE-DOKS  __  ¤¤
 ----
-Rx.Net  ¤
+  Flutter+Dart    @
+  Devops
+  . {{{
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+
+    ~/Empire/Doks/Comp/PROGR/devops/PyDevops-ansibdockeraws_2019.txt
+    ~/Empire/Doks/Comp/PROGR/devops/py-fordevops_2020.txt
+  }}}
+    Puppet Lang + Patterns(etc)
+'linuxcommands core' [=Gemini-Q]  ¤[¤]
+
+Rx.Net  ¤  ReactiveUI  ¤¤(¤)
+Git, Github Projects  @GithubDocs @GitActions
+sed (+py/dlang etc)
+netrw (**)
+----
+Nsplitdiff (+Soc.Framg)
 Mojo  TODO:OCR
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
-
-  Git, Github Projects  @GithubDocs @GitActions
-sed (+py/dlang etc)
-
-    netrw (**)
-        JavaScript Functional
-        Elixir, Ocaml
-  [Dlang-proj + PhobosNext|Per Nordl.]
-        vlang, Go, Ring
-        Cloj. + Java
+[Dlang-proj + PhobosNext|Per Nordl.]
+vlang, Go, Ring
+Cloj. + Java
 (+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
-    ----
-            flux, xmonad, openb, ice, awes
-  Puppet w. puppet-lang
-    --
-    Aws(+dynamo), Docker, Kubernetes  CyberSec  @
-börja kolla quincy l-länkar @  +Stanford etc
-        Pluralsight, w3school, w3resources
-        kotlin/jetpack progr-videos(!!)
-            PHP + funct.
-Linux (Android etc) + Sys-Structure, Sysprogr
-    Cypher,
-SparQL
-    Pshell + Choco
-- websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
-        Audacity
 @AnlSynthesis + Midi@ + Keyb.Synths
-            [+Nyq (etc)]
-    Pyramid
-Csound(Qt + Blue), Scollider
+- websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
+Aws(+dynamo), Docker, Kubernetes  CyberSec  @
+börja kolla quincy l-länkar @  +Stanford etc
+Pluralsight, w3school, w3resources
+kotlin/jetpack progr-videos(!!)
+Linux (Android etc) + Sys-Structure, Sysprogr
+Cypher,
+Audacity
+Pyramid
+        Csound(Qt + Blue), Scollider
+PyAut3** +PyFunct, Gimp Python, +  @
+flux, xmonad, openb, ice, awes
+  webscrape, cv/mmedia, au-transcribe,
+    ----
+JavaScript Functional + Rx
+
+    Elixir, Ocaml
+
+Devops + Python (+iPy/Xonsh) ; F# Devops  _ ¤¤¤
+  Vim PyPlugins  __ | VIMSCRIPT (x4)  + Emacs[!!]  _  ¤
+    --
+            PHP + funct.
+
 
 ='Topics/Areas'   ~/Dropbox/rsc/aubooks/data.WISHLIST
     Bcb Etc (+Find/Xargs, etc), UNIX POW-TOOLS  @
-PyAut3** +PyFunct, Gimp Python, +  @
-      webscrape, cv/mmedia, au-transcribe,
     5 w3resources C# datetime-övningar
     Datasci, text-natlang  #to at.Python.bash
     WebSearch/GoogleTricks  #+grease/violent/tamper-monkey  @
@@ -1273,7 +1338,9 @@ Office.Rush [1]  # rush through + take review/notes {{{
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
-  sqlitebrowser
+CSound[FLOSS-MAN] + Scoll. [WEB-MINI; sclang|scide]
+    ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollDocs-GetStarted.txt
+sqlitebrowser
 F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
 gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
@@ -1359,7 +1426,7 @@ Wsl  ¤¤
 Inkscape + 'Graphics'
 
 
-  Roslyn (+Analysis|CodeGen)
+Roslyn (+Analysis|CodeGen)
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/cs-roslyncb_2017.txt
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/codegen/roslyn-codegen_2017.txt
@@ -1369,15 +1436,17 @@ Buckey's Godot
 }}}
 office.Overview [2]  # write summary|overview {{{
 
+ANKIMAN 2021+
+    ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
 Spectre Console  __ ¤¤
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
 }}}
   TODO ANKI: = add Q-tags for Major Wish-Areas[!!]
-~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
 Mermaid [****] {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/markup/mermaid.txt
 }}}
+Samsung Notes (+Phone/Tablet)
 
 Pegged, Tsv-Utils, Perlstyle-Regex
 
@@ -1491,7 +1560,23 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
 
+
+ReactiveUI
+  ..
+MongoDb
+  gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb4-qsguide_2018,mongodb-profnotes,pro-mongodb-guide_2015}.txt
+Kivy **
+  ~/Empire/Doks/Comp/lang/py/webmob/kivy/KivyDocs_2023.txt
 CSOUND-BOOK (+Csound FlossMan)
+OwlSemweb
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/ontology/Sparql-OWL_3wsites.txt  #All code for last Ref
+LILYPOND + SCHEME ****!!
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/ly/LilypondScheme-Book.txt **!!
+    ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundRefman-Startpart.txt
+----
+Pyramid
+  ~/Empire/Doks/Comp/lang/py/webmob/pyramid/PyramidFrawew-Docs_2023.txt
+
 
   winterminal  ¤ [=profiles, AWS-shell, etc **]
   . {{{
@@ -1584,6 +1669,27 @@ CSOUND-BOOK (+Csound FlossMan)
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
+  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+  . {{{
+    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
+      https://suave.io/
+
+FUNPROFIT
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
+
+
+
+  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
+
+    F# for Devops ----
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work-2//
+
+    https://mallibone.com/post/fsharp-scripting
+
+  }}}
   Xonshell  __  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/XonShell.Tags1.txt
@@ -1898,27 +2004,6 @@ further questions!
     ~/Empire/Doks/Comp/lang/webdev/db/semweb/semanticweb-clojjava_2010.txt
   }}}
 Anki  ¤¤¤
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
-  . {{{
-    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
-      https://suave.io/
-
-FUNPROFIT
-    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
-
-    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
-
-
-
-  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
-
-    F# for Devops ----
-    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
-    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work-2//
-
-    https://mallibone.com/post/fsharp-scripting
-
-  }}}
   Rx.Net  ¤
   . {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/RxDotnet-2e_2024.txt
@@ -2202,6 +2287,17 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
+Define Ontologies (=OWL etc)
+    FUNCPY ____ __  ****
+Org-Man  ¤¤¤
+SASS+Compass  ¤¤¤ {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
+}}}
+festival  __
+  CsFunct 3(??__)  ¤¤(¤)
+midish.txt
+    cd ~/Dropbox/rsc/Doks/phone/Comp/mu/pr/midish/
+----
 WSL (1+2)
   AspDnc + WebAPI (Tocs)
 Pegged  ¤¤¤
@@ -2217,19 +2313,11 @@ Pegged, Tsv-Utils, Perlstyle-Regex {{{
 }}}
 ====
 F# Suave
-Define Ontologies (=OWL etc)
 ----
 
-Org-Man  ¤¤¤
-SASS+Compass  ¤¤¤ {{{
-  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
-}}}
                                 AnkiMan (+Renskriv ___office)  ¤¤¤
-  festival
-  CsFunct 3(??__)  ¤¤(¤)
 Tiny Scheme, GimpScheme-Plugins  (GimpPy)
-            Samsung Notes (+Phone/Tablet)
-            Nyxt (+qutebrowser/'hackers browser')  ¤¤
+        Nyxt (+qutebrowser/'hackers browser')  ¤¤
 
                                 Termux
     PowerShell[!]  WSL ____

@@ -1,4 +1,5 @@
 ~/bin/scripts/at/at.Vim.bash
+___fmt35utils=2st
 
 vim over emacs:
     - mobile/android
@@ -48,7 +49,6 @@ Code-Navigation
   + Loc.lists (etc)
 
 
-___fmt35utils=2st
 ___Doks
 learning vim:Alex {{{
     gvim -O ~/Dropbox/rsc/samples/code/{tex/latexrapport.tex,matlab/settreupgsex.m}
