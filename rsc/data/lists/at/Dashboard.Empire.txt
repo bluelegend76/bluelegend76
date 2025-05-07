@@ -218,26 +218,53 @@ ___calendarnow
   - Tvungen att kontakta skolan (+förbereda för en anmälan till MYH)
   - kolla över önskemål från handledaren/Abe
 
+  }}}
+    Ingen träff med Ludvig
+Boka snack med Pernilla
+
+---- Maj
+v 19
+  2025-05-05 må {{{
+    Uraevx söezrqynqr aåtbg oen nat. 'aäe una neorgnqr cå qvfcynlra'
+
+  - Möte med Erik (önskemål för att kunna fokusera bättre)
+  - undersökn. Postman
+    - gjorde trivselundersökning
+        - kolla av med Erik:
+
+  - Gör undersökn. + Skicka material till Gisela R på MYH
+  . {{{
+    - (ivyxrg äe iäefg Tvfryn: Ngg syren oyve söeqeöwqn, ry. ngg ra (fbz erqna une slf. orfiäe) uåyyre cå ngg uryg hgcyåanf  bpu oyve genxnffrenq, bpu ni ra ni ercerfragnagrean qrffhgbz  + fxbyna gne rgg unyiåe cå fvt ngg gn va bpu yvgr inefnzg cengn zrq crefbara)
+
+    - (\a fi /j 5 dl ab
+  }}}
+    - Oeri gvyy xynffra (=oöewn fxvffn)
+  - ska jag kunna lägga de timmarna jag vill/känner att jag behöver på det, så märker jag att jag bränner för hårt, både fysiskt men framförallt psykiskt/mentalt
+
 t a s k - i n s t r u c t i o n s {{{
 
 280794: Create installation-functionality handler in Updater {{{
-  - installer shall run exe-file as a process (silently)
+  - installer shall run exe-file as a process (silently)  @e
       (+= Kolla material m. Erik)
-  - KUNNA/TESTA ANROPA WEB-API:T OCH FÅ UT VERSIONSNUMMER MM FRÅN ENDPOINT
+  - KUNNA/TESTA ANROPA WEB-API:T OCH FÅ UT VERSIONSNUMMER MM FRÅN ENDPOINT  @e
   L. Malm: 'Hur kan vi testköra en endpoint för att få tillbaks ett versionsnummer?'
       Kunna testköra sina Endpoints: Postman (=vanligast)
-      - TESTA I SWAGGER
+      - TESTA I SWAGGER  =??
       - FÖRSLAG/STRATEGI: BYGG GRUNDFUNKTIONALITET I WEB-API:T MED CONTROLLERS; SENARE: BRYT UT FUNKTIONALITEN MER EXAKT TILL FÄRDIG KLASSTRUKTUR
-  Abbe: 'Ska funktionalitet i Core användas/replikeras för att <<läsa av versionsnummer>>'(????)
 
-  Calculate checksum for file 1 (exe) + diff.sized exe
+  Abbe: 'Ska funktionalitet i Core användas/replikeras för att <<läsa av versionsnummer>>'(????)
+Abbe: Innehåller inte Core (m.fl.) filer info om var de ska/kommer att installeras?
+
+  Calculate checksum for file 1 (exe) + diff.sized exe(?)
 
 - TC Core är installerat.
-  Hur hittar och läser vi av versions-nummer (och path?) för ett installerat program?
+  Hur hittar och läser vi av versions-nummer (och path?) för ett installerat program?  @e
   --
-  Kolla i Windows Registry = ska innehålla 
+  "Kolla i Windows Registry = ska innehålla "
 }}}
-  281351: Create tokenServiceHandler for getting client access-token
+  281351: Create tokenServiceHandler for getting client access token
+Get client access token from where?  @e
+
   281111: Create http-client for handling batch-requests to graph
 281103: Create http-client for handling requests to sharepoint
 281370: Retrieve user group-memberships
@@ -252,13 +279,6 @@ show updater-client in 'system-tray'
 
 }}}
 
-  }}}
-    Ingen träff med Ludvig
-Boka snack med Pernilla
-
----- Maj
-v 19
-  2025-05-05 må {{{
   }}}
   2025-05-06 ti {{{
   }}}
@@ -12654,6 +12674,15 @@ Ant. Ch.J BUV {{{
 - Jag har fortfarande inte fått någon ursäkt av flera av de inblandade = Varför inte?
   DU/G. KOMMER BEHÖVA GÅ UT TILL KLASSEN MED _ FÖR ATT FÖRBÄTTRA MITT RYKTE
     (och när de sen kommer och gnäller behöver ni visa att ni står på min/rätt/den rimliga sida)
+
+}}}
+Anton 'Hur går det' {{{
+
+Tja för att ha blivit utnyttjad, nerslagen och misshandlad, rånad av en sekt och
+
+
+
+sen lämnad att förblöda ( + en sektmedlem som har garvat åt mig inför de andra och verkar ha suttit och chattat med någon annan i klassen samtidigt) så mår jag väl ganska/rätt ok.    Med tanke på att jag blivit utfryst, trakasserad och lite sånt  annat av en betydande del av klassen (inklusive fortfarande bekanta/kamrater till dig)  flera personer som du fortfarande har kontakt med   så vet jag inte exakt hur mycket jag är bekväm med att avslöja   100 hur mycket jag är bekväm med att   vill avslöja om var jag är och vad jag håller på med för tillfället   Men tack för frågan Anton    jo nu slipper jag ju i alla fall personer med svag karaktär och olika psykiska åkommor, så det är positivt (och nej det är inte Madelene jag pratar om)    Jo nu slipper jag ju i alla fall trakasserier och andra liknande tråkigheter (inklusive från representanter av alla *'* avarter...) men mer än så vet jag inte om jag vill säga om var jag är och håller på med, bl.a. med tanke på att det är flera av dina vänner och klasskamrater det rör sig om   Jag är frestad att svara på din fråga Anton  ( = du och Christian är ändå de två som nån gång skickat nåt meddelande och frågat 'Hur är det?') Eftersom jag blivit utfryst, trakasserad och lite annat av personer i klassen inklusive några av dina närmaste kompisar/personer som är representanter  så vet jag inte exakt hur mycket jag vill meddela om mina förehavanden  så vet jag inte exakt hur mycket jag kan, vill eller (för den delen) får meddela om vad jag håller på med just nu  hur framförallt Micke, Jonas och Oscar har betett sig mot mig  betett sig rätt illa mot mig, så vet jag (av olika skäl) inte riktigt hur mycket jag ska säga om vad jag håller på med just nu
 
 }}}
 
