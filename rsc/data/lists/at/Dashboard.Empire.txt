@@ -15,6 +15,9 @@ Vanki LearnQna ----
 ~/Desktop/Scratch.txt
 
 
+~/Dropbox/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
+
+
     ~/RiderProjects/bluelegend76/rsc/data/lists/at/.atscripts-list.txt
 ~/Dropbox/rsc/data/lists/todo/vankideckslegacy-organize.txt
 
@@ -1443,7 +1446,7 @@ Wsl  ¤¤
     */
   }}}
 ----
-Inkscape + 'Graphics'
+INKSCAPE + 'GRAPHICS'  ¤¤¤
 
 
 Roslyn (+Analysis|CodeGen)

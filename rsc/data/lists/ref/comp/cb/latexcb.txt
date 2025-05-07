@@ -29,8 +29,6 @@ Pandoc
 
                                 Example: You could have a CSV file with sales figures and use a Pandoc filter to create a well-structured report in LaTeX or a simple HTML table.
 
-                             
-
                             2. Content Manipulation and Transformation:
 
                                 Applying filters to modify content: Pandoc has a powerful filter system that allows you to write scripts (in Lua, Python, etc.) to manipulate the abstract syntax tree (AST) of the document during conversion. This opens up a wide range of possibilities:
@@ -95,7 +93,7 @@ Pandoc
                             -----
 
 ----
-Reveal.js ____
+Reveal.js ____  ¤¤¤
                     ~/Dropbox/rsc/Doks/phone/graf/revealjs.Tags2.txt
                     ~/Dropbox/Udt/rsc/doks/graf/present/reveal/js-reveal.txt
                         ~/Dropbox/Udt/rsc/doks/graf/present/reveal/revealjs.Tags1.txt
@@ -312,61 +310,8 @@ Impress.js
 Emacs Org
   TODO: MAY WANT TO CONVERT LIST TO FEATURES
   + NOTE DIFFERENT FLAVORS WITH ___TAGS
-Sphinx  <raw|Overview>
-                Sphinx
 
-                Sphinx is a powerful documentation generator primarily used for creating high-quality technical documentation, especially for software projects.
-
-                Key Features:
-
-                    ReStructuredText: Primarily uses reStructuredText as the source markup language, although it also supports Markdown with the MyST extension.
-
-                    Autodoc: Automatically generates documentation for Python objects (classes, functions, modules) by inspecting their docstrings.
-
-                    Cross-referencing:
-                        Easily link between different sections, figures, and code elements within your documentation.
-                        Supports cross-referencing to external documentation.
-
-                    Directives:
-                        Provides a rich set of directives for controlling document structure, including:
-                            .. include::: Include content from other files.
-                            .. figure::: Include images with captions.
-                            .. admonition::: Create attention, note, warning, etc., blocks.
-
-                    Themes:
-                        Offers a variety of themes to customize the look and feel of your generated documentation, such as the popular "Read the Docs" theme.
-
-                    Extensions:
-                        Extensible with numerous extensions that add support for various features, including:
-                            Math equations (using LaTeX)
-                            Support for other programming languages
-                            Integration with various tools and services
-
-                Code Example (Simplified Autodoc):
-                Python
-
-# In your Python module (my_module.py)
-                def my_function(arg1, arg2):
-                    """
-                    This is the docstring for my_function.
-
-                    Args:
-                        arg1: Description of argument 1
-                        arg2: Description of argument 2
-
-                    Returns:
-                        The result of the function.
-                    """
-                    # ... function implementation ... 
-
-                Strengths:
-
-                    Powerful and Feature-Rich: Sphinx offers a comprehensive set of features for creating professional-quality documentation.
-                    Excellent for Technical Documentation: Particularly well-suited for documenting software projects, APIs, and other technical topics.
-                    Large and Active Community: A strong community provides extensive documentation, tutorials, and support.
-                    Customization: Highly customizable through themes, extensions, and configuration options.
-
-  CommonMark  raw+TODO
+.  CommonMark  raw+TODO
 Markdown
                         https://www.markdownguide.org/basic-syntax/
                         header                    #
@@ -1108,10 +1053,10 @@ Jupyter Markdown
 
                   &#reference_number;
 polyglot notebooks[????]
-GitHub-flavor Markdown (GFM)
-                adds: tables, task-lists, user-mentions
-                suited for: writing clear, concise documentation within github ecosystem (readme-files, issue-descriptions (hm_eng), comments
-
+GitHub-flavored Markdown (GFM)
+  adds: tables, task-lists, user-mentions
+  suited for: writing clear, concise documentation within github ecosystem (readme-files, issue-descriptions (hm_eng), comments
+                .
                 task-lists --
                 - [x] Task completed
                 - [ ] Task not completed
@@ -1139,46 +1084,36 @@ Mermaid
                 Mermaid is a powerful tool for generating diagrams using a simple and concise text syntax. Here's a breakdown of some common constructs:
 
                 1. Basic Diagram Types:
-
-                    Flowcharts:
-                        graph LR (Left to Right)
-                        graph TD (Top to Down)
-                        graph RL (Right to Left)
-                        graph BT (Bottom to Top)
-                        Nodes are represented by square brackets []
-                        Connections are defined using --> (arrow)
-
-                    Sequence Diagrams:
-                        sequenceDiagram
-                        Participants are defined with participant Alice
-                        Messages are defined with Alice->>Bob: Hello
-
-                    Class Diagrams:
-                        classDiagram
-                        Classes are defined with class MyClass { and }
-                        Relationships (inheritance, association, etc.) are defined using arrows (e.g., --, -->, ..>)
-
-                    Gantt Charts:
-                        gantt
-                        Define tasks with section and task blocks
-                        Specify durations and dependencies between tasks
-
+                Flowcharts:
+                    graph LR (Left to Right)
+                    graph TD (Top to Down)
+                    graph RL (Right to Left)
+                    graph BT (Bottom to Top)
+                    Nodes are represented by square brackets []
+                    Connections are defined using --> (arrow)
+                Sequence Diagrams:
+                    sequenceDiagram
+                    Participants are defined with participant Alice
+                    Messages are defined with Alice->>Bob: Hello
+                Class Diagrams:
+                    classDiagram
+                    Classes are defined with class MyClass { and }
+                    Relationships (inheritance, association, etc.) are defined using arrows (e.g., --, -->, ..>)
+                Gantt Charts:
+                    gantt
+                    Define tasks with section and task blocks
+                    Specify durations and dependencies between tasks
                 2. Common Shapes:
-
                     Square: []
                     Circle: (( ))
                     Rounded Rectangle: ()()
                     Diamond: {}
                     Asymmetric Shape: <>
-
                 3. Styling:
-
                     Colors: fill:#color (e.g., fill:#97c2fc)
                     Text Styles: text-align:center, font-size:12px
                     Line Styles: stroke-width:2px, stroke-dasharray:5, 5
-
                 4. Advanced Features:
-
                     Subgraphs: Group related nodes within a subgraph.
                     Loops and Conditions: loop, alt, opt for conditional flows.
                     Notes: Note over and Note right of to add annotations.
@@ -1250,11 +1185,11 @@ Mermaid
                     Markdown: Easily integrate Mermaid diagrams into Markdown documents.
                     Jupyter Notebooks: Render Mermaid diagrams within Jupyter Notebooks.
                     VS Code: Use the Mermaid Support extension for syntax highlighting and live preview in VS Code.
-PlantUml
-----
-Pandoc Markdown (*)  #many extensions
-                adds: footnotes/references, definition-lists
-                suited for: academic writing, technical documentation,  cross-platform publishing
+.  PlantUml
+---- ---- ----
+Pandoc Markdown (*)  #many extensions  ¤¤¤(??)
+  adds: footnotes/references, definition-lists
+  suited for: academic writing, technical documentation,  cross-platform publishing
 
                 code-blocks --
                 tables --
@@ -1270,9 +1205,10 @@ Pandoc Markdown (*)  #many extensions
                 math-equations --
                 $...$  inline math
                 $$...$$  display math (hm_eng)
+'Obsidian Markdown'
 markdown extra
-                adds: tables, fenced code blocks(hm_eng), definition-list
-                suited for: readability, using markdown within html-blocks provides flexibility for integrating markdown with existing html-content
+  adds: tables, fenced code blocks(hm_eng), definition-list
+  suited for: readability, using markdown within html-blocks provides flexibility for integrating markdown with existing html-content
 
                 tables --
                 definition-lists --
@@ -1285,8 +1221,8 @@ markdown extra
                 Attributes for Inline Elements --  ___HM
                 <a href="https://example.com" id="my-link">Link</a>
 MultiMarkdown
-                adds: footnotes, citations, metadata
-                suited for: smart typography, metadata-support, strong focus on generating various output-formats (html, pdf, etc) due to its focus on semantic markup
+  adds: footnotes, citations, metadata
+  suited for: smart typography, metadata-support, strong focus on generating various output-formats (html, pdf, etc) due to its focus on semantic markup
 
                 footnotes --
                 definition-lists --
@@ -1304,8 +1240,14 @@ MultiMarkdown
                 author: John Doe
                 date: 2024-11-15
                 ---
-  writers markdown
+.  writers markdown
 Restructured Text  <raw>  #python documentation project
+  adds: 
+  suited for:
+                Key Strengths:
+                Versatility: Restructured Text is a powerful markup language with a wide range of features for creating complex documents, including technical documentation, tutorials, and manuals.
+                Strong Tooling: Supports various tools for document conversion, such as Sphinx, which is widely used for generating documentation for Python projects.
+                Readability: While the syntax might seem a bit more verbose than some other Markdown flavors, Restructured Text often results in well-structured and readable output.
                 Directives: Restructured Text extensively uses directives, which are special commands that control the document's structure and formatting.
 
                     Example (including a file):
@@ -1340,12 +1282,9 @@ Restructured Text  <raw>  #python documentation project
                     Targets:
                         Create named targets within the document for easy cross-referencing.
 
-                Key Strengths:
-
-                    Versatility: Restructured Text is a powerful markup language with a wide range of features for creating complex documents, including technical documentation, tutorials, and manuals.
-                    Strong Tooling: Supports various tools for document conversion, such as Sphinx, which is widely used for generating documentation for Python projects.
-                    Readability: While the syntax might seem a bit more verbose than some other Markdown flavors, Restructured Text often results in well-structured and readable output.
 Sphinx Markdown (MyST  <raw>)
+  adds: 
+  suited for: 
                 Directives:
 
                     {directive}: Allows you to use Sphinx directives (like .. include::) directly within your Markdown.
@@ -1372,10 +1311,69 @@ Sphinx Markdown (MyST  <raw>)
                     Combines Markdown's Simplicity with Sphinx's Power: MyST Markdown seamlessly integrates the ease of use of Markdown with the advanced features and capabilities of the Sphinx documentation framework.
                     Strong Support for Technical Documentation: Ideal for creating complex technical documentation, including tutorials, API references, and user guides.
                     Extensible: Allows you to leverage the full power of Sphinx extensions within your Markdown documents.
+Sphinx  <raw|Overview>  [uses reStructuredText (+MyST)]
+                Sphinx
+
+                Sphinx is a powerful documentation generator primarily used for creating high-quality technical documentation, especially for software projects.
+
+                Key Features:
+
+                    ReStructuredText: Primarily uses reStructuredText as the source markup language, although it also supports Markdown with the MyST extension.
+
+                    Autodoc: Automatically generates documentation for Python objects (classes, functions, modules) by inspecting their docstrings.
+
+                    Cross-referencing:
+                        Easily link between different sections, figures, and code elements within your documentation.
+                        Supports cross-referencing to external documentation.
+
+                    Directives:
+                        Provides a rich set of directives for controlling document structure, including:
+                            .. include::: Include content from other files.
+                            .. figure::: Include images with captions.
+                            .. admonition::: Create attention, note, warning, etc., blocks.
+
+                    Themes:
+                        Offers a variety of themes to customize the look and feel of your generated documentation, such as the popular "Read the Docs" theme.
+
+                    Extensions:
+                        Extensible with numerous extensions that add support for various features, including:
+                            Math equations (using LaTeX)
+                            Support for other programming languages
+                            Integration with various tools and services
+
+                Code Example (Simplified Autodoc):
+                Python
+
+# In your Python module (my_module.py)
+                def my_function(arg1, arg2):
+                    """
+                    This is the docstring for my_function.
+
+                    Args:
+                        arg1: Description of argument 1
+                        arg2: Description of argument 2
+
+                    Returns:
+                        The result of the function.
+                    """
+                    # ... function implementation ... 
+
+                Strengths:
+
+                    Powerful and Feature-Rich: Sphinx offers a comprehensive set of features for creating professional-quality documentation.
+                    Excellent for Technical Documentation: Particularly well-suited for documenting software projects, APIs, and other technical topics.
+                    Large and Active Community: A strong community provides extensive documentation, tutorials, and support.
+                    Customization: Highly customizable through themes, extensions, and configuration options.
 PEG Markdown
                 adds: smart typography, footnotes/references
                 suited for: strong emphasis on correctness, focus on performance, extensibility (designed to be easily extended with custom parsers and output formats)
   Hugo Markdown  <raw>
+                    Hugo allows you to use templates and data files to dynamically generate content, such as menus, sidebars, and other elements.
+                Key Strengths:
+                    Designed for Static Site Generation: Hugo Markdown is specifically designed for use with the Hugo static site generator, offering seamless integration with its features and templating engine.
+                    Powerful Features: Shortcodes, front matter, and dynamic content provide powerful tools for creating complex and feature-rich websites.
+                    Performance: Hugo is known for its speed and efficiency, making it a popular choice for building fast and responsive websites.
+
                 You got it! Here's Hugo Markdown with a focus on features beyond standard Markdown and including code examples:
 
                 Hugo Markdown
@@ -1407,14 +1405,6 @@ PEG Markdown
                     {{ range .Site.Data.myData }} 
                         {{ .name }} 
                     {{ end }}
-
-                    Hugo allows you to use templates and data files to dynamically generate content, such as menus, sidebars, and other elements.
-
-                Key Strengths:
-
-                    Designed for Static Site Generation: Hugo Markdown is specifically designed for use with the Hugo static site generator, offering seamless integration with its features and templating engine.
-                    Powerful Features: Shortcodes, front matter, and dynamic content provide powerful tools for creating complex and feature-rich websites.
-                    Performance: Hugo is known for its speed and efficiency, making it a popular choice for building fast and responsive websites.
   Critic Markup  <raw>  #often used together with e.g. MultiMarkdown
                 Focus: CriticMarkup is not a Markdown flavor itself, but rather a system for annotating and tracking changes within a Markdown document. It's designed for collaborative editing and review.
 
