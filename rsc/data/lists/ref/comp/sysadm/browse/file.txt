@@ -908,7 +908,7 @@ freecommander
                             .
                     File: Search in folders...  c-f7
                     File: Search  a-f7
-                            File: Split...  cs-i  # el. cs-l
+                            File: Split...  a_Enter s, cs-i  # el. cs-l
                             File: Unpack  a-f6
                     File: Verify MD5-checksums
                     File: View  f3
@@ -941,24 +941,23 @@ freecommander
                             Edit: Unselect all  a_el, c_k-
                     Edit: Unselect files with same extension  a_ef, a_k-
                     Edit: Unselect group...  a_et, k-
-                ___zzzz
                 Folder ----
-                            Folder: Add current folder  cs-v
+                            Folder: Add current folder to favorites  a_dva, cs-v
                             .
-                    Folder: Change left drive  a-f1
-                    Folder: Change right drive  a-f2
-                    Folder: Compare  a-v
+                    Folder: Change left drive  a_dl, a-f1
+                    Folder: Change right drive  a_dr, a-f2
+                    Folder: Compare  a_dc, a-v
                                 Folder: Compare management
                                 Folder: Control panel
                                 Folder: Desktop
                     Folder: Edit address bar  a-g
-                    Folder: Edit  cs-f
+                    Folder: Edit folder-favorites  a_dve, cs-f
                 Folder: Favorite folder  a_dva, a-up  [+go to fav = cs-1, cs-2 etc]
-                    Folder: Filter
+                    Folder: Set filter  a_dfs, c-f
                     Folder: Filter off
-                    Folder: Go to folder...
-                    Folder: Go up
-                open folder-history  a-down
+                    Folder: Go to folder...  a_dg
+                    Folder: Go up  ???
+                open folder-history  a-down  @@
                     folder-history back / next  a-left / a-right
                             Folder: Make folder-set  a_d,m
                             Folder: My documents
@@ -967,53 +966,52 @@ freecommander
                             Folder: Open folder in same pane
                         Folder: Open left folder on the right  c-right
                         Folder: Open right folder on the left  c-left
-                        Folder: Quick filter  c-y
-                        Folder: Quick filter off  a-y
-                        Folder: Root  c-home
+                        Folder: Quick filter  c-y  @@
+                        Folder: Quick filter off  a-Y
+                        // Folder: Root  c-home
                         Folder: Search  s-f7
-                            Folder: Set filter  c-f
                             Folder: Size of folders  a-f9
                             Folder: Size of selected folders  c-f9
                         Folder: Sort - switch
-                        Folder: Sort: Date/Time  c-f5
-                        Folder: Sort: Extension  cs-f4
-                        Folder: Sort: Name  c-f3
-                        Folder: Sort: Size  c-f6
-                        Folder: Sort: Type  c-f4
-                            Folder: Sort: Unsorted
+                        View: Sort by Date/Time  a_wod, c-f5
+                        View: Sort by Extension  a_woe, cs-f4
+                        View: Sort by Name  a_won, c-f3
+                        View: Sort by Size  a_wos, c-f6
+                        View: Sort by Type  a_wot, c-f4
+                            View: Sort: Unsorted  a_wou
                             Folder: Start-menu
                         Folder: Synchronize  a-s
                 View ----
                             View: 100% <-> 50%
                         View: Auto resize columns
                             ca-num...
-                        View: Details  c-f2
-                            View: Edit...  c-g
-                            View: Flat view - files  c-b
-                            View: Flat view - folders  cs-b
+                        View: Details  a_wd, c-f2
+                            View: Edit...  a_w , c-g
+                            View: Flat view - files  a_w , c-b
+                            View: Flat view - folders  a_w , cs-b
                             View: Horizontal
                             View: Large / Small icons  a_w,s/w,a
                             View: Layout restore  a_w,y,r
-                            View: Left to right  ca-right
-                            View: List  c-f1
-                            View: Minimize  s-Esc
-                        View: Only selected files  c-s
-                        View: Quick view  c-q
-                            View: Refresh  c-r
-                            View: Refresh all  cs-r
-                            View: Right to left  ca-left
-                            View: Same folder  c-e
+                            View: Left to right  a_w , ca-right
+                            View: List  a_wl, c-f1
+                            View: Minimize  a_w , s-Esc
+                        View only selected files  a_wn, c-s
+                        View: Quick view  a_wq, c-q
+                            View: Refresh  a_wr, c-r
+                            View: Refresh all  a_w , cs-r
+                            View: Right to left  a_w , ca-left
+                            View: Same folder  a_wm, c-e
                     View: Set active pane  Tab
                             View: Show/hide hidden and system files
-                            View: Split 0/100  cs-f1
-                            View: Split 100/0  cs-f3
+                            View: Split 0/100  a_w , cs-f1
+                            View: Split 100/0  a_w , cs-f3
                             View: Split 25/75
-                            View: Split 50/50  cs-f2
+                            View: Split 50/50  a_w , cs-f2
                             View: Split 75/25
-                        View: Split horizontal  c-h
-                        View: Swap  c-u
-                            View: Tab: Close all folder-tabs  cs-w
-                            View: Tab: Close folder-tab  c-w
+                        View: Split horizontal  a_wi, c-h
+                        View: Swap Panels  a_ww, c-u
+                            View: Tab: Close all folder-tabs  a_w , cs-w
+                            View: Tab: Close folder-tab  a_w , c-w
                             View: Tab: Copy folder-tab
                             View: Tab: Folder tab to left
                             View: Tab: Folder tab to right
@@ -1022,16 +1020,16 @@ freecommander
                         View: Tab: Lock folder-tab
                             View: Tab: Lock folder-tab - navigation to sub...
                             View: Tab: Lock folder-tab - no navigation
-                            View: Tab: New folder-tab  c-t, cs-t
-                        View: Tab: Next folder-tab  c-tab
-                            View: Tab: Previous folder-tab  cs-tab
+                            View: Tab: New folder-tab  a_wb, c-t, cs-t
+                        View: Tab: Next folder-tab  a_w , c-tab
+                            View: Tab: Previous folder-tab  a_w , cs-tab
                             View: Tab: Open in new folder-tab
                             View: Tab: Open in new folder-tab in other pane
                             View: Tab: Rename and lock folder-tab
-                        View: Tab: Swap folder-tabs  cs-u
-                            View: Thumbnails  c-i  # or c-l
+                        View: Tab: Swap folder-tabs  a_w , cs-u
+                            View: Thumbnails  a_wt, c-i  # or c-l
                         View: Toggle views  ___hm_eng
-                        View: Tree  a-t
+                        View: Tree  a_we, a-t
                             View: Tree - collapsed selected
                             View: Vertical
                         View: Views
