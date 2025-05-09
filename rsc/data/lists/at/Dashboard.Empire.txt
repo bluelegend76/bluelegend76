@@ -770,6 +770,7 @@ dft curr 2023 {{{
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
     \v\@([^ ]?)+
 
+Reveal.js / Impress.js
 VIMSCRIPT x4 (+Elisp Startwith)
 
 mermaid md
@@ -1587,7 +1588,8 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ReactiveUI
   ..
 MongoDb
-  gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb4-qsguide_2018,mongodb-profnotes,pro-mongodb-guide_2015}.txt
+  gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb-profnotes,pro-mongodb-guide_2015}.txt
+        (Done: mongodb4-qsguide_2018.txt)
 Kivy **
   ~/Empire/Doks/Comp/lang/py/webmob/kivy/KivyDocs_2023.txt
 CSOUND-BOOK (+Csound FlossMan)
@@ -12712,4 +12714,8 @@ Tja för att ha blivit utnyttjad, nerslagen och misshandlad, rånad av en sekt o
 sen lämnad att förblöda ( + en sektmedlem som har garvat åt mig inför de andra och verkar ha suttit och chattat med någon annan i klassen samtidigt) så mår jag väl ganska/rätt ok.    Med tanke på att jag blivit utfryst, trakasserad och lite sånt  annat av en betydande del av klassen (inklusive fortfarande bekanta/kamrater till dig)  flera personer som du fortfarande har kontakt med   så vet jag inte exakt hur mycket jag är bekväm med att avslöja   100 hur mycket jag är bekväm med att   vill avslöja om var jag är och vad jag håller på med för tillfället   Men tack för frågan Anton    jo nu slipper jag ju i alla fall personer med svag karaktär och olika psykiska åkommor, så det är positivt (och nej det är inte Madelene jag pratar om)    Jo nu slipper jag ju i alla fall trakasserier och andra liknande tråkigheter (inklusive från representanter av alla *'* avarter...) men mer än så vet jag inte om jag vill säga om var jag är och håller på med, bl.a. med tanke på att det är flera av dina vänner och klasskamrater det rör sig om   Jag är frestad att svara på din fråga Anton  ( = du och Christian är ändå de två som nån gång skickat nåt meddelande och frågat 'Hur är det?') Eftersom jag blivit utfryst, trakasserad och lite annat av personer i klassen inklusive några av dina närmaste kompisar/personer som är representanter  så vet jag inte exakt hur mycket jag vill meddela om mina förehavanden  så vet jag inte exakt hur mycket jag kan, vill eller (för den delen) får meddela om vad jag håller på med just nu  hur framförallt Micke, Jonas och Oscar har betett sig mot mig  betett sig rätt illa mot mig, så vet jag (av olika skäl) inte riktigt hur mycket jag ska säga om vad jag håller på med just nu
 
 }}}
+
+
+Jag har försökt att ta ansvar för det som jag(!) kan ta ansvar för.
+
 
