@@ -1,6 +1,32 @@
 vim:fdm=indent:fdl=2:
 set fdm=indent fdl=2
+___zzzz
 
+Davie Wilson - SystemCrafters
+                            https://www.youtube.com/watch?v=VcgjTEa0kU4&t=7m
+                            ----
+                            add/subtract heading-levels  1-6 stars
+                            Cycle outline/heading-levels ***  s-tab
+                            make word/text bold  *word*
+                            New Heading at certain outline-level  insert-mode at appropr. level + c-Enter
+                            new heading at cert. level BEFORE other subcontent  a-Enter
+                            Move Headings up/down [at same level]  a-up/a-down
+                            move subheading above heading (etc =move freely)  sa-up/sa-down
+                            --
+                            Convert text to link (external/internal)  mark text + c-c c-l  (org-insert-link)
+                            open/follow link  c-c c-o  (org-open-at-point)
+                            Tables  using pipes (+tab)
+                            bulleted / numbered lists  - list-item, 1. item 1
+                            Check-boxes  - [ ]
+                            toggle check-box  c-c c-x c-b  (org-toggle-checkbox)
+                            (create) new checkboxes  sa-Enter
+                            Fenced Code-blocks  #+begin_src emacs-lisp  #+end_src  18:43
+                            Adding Todo and Task-states **  * TODO Buy Eggs!
+                              org basic todo-states  Todo / Done
+                            Change/Toggle Task/Todo-State **!  c-c c-t / s-left/s-right  (org-todo)
+                            'property-drawers'  = attach metadata to Todo-headers (+tracking tasks etc)
+                            ___zzzz
+                                34:30 (davi-wilson config extras)
 ~/Empire/Doks/Comp/editor/emacs/cheatsh-qref/emacsrefcard_org01.pdf  ¤¤¤
                                 Org-Mode Reference Card (1/2) (for version 7.8.11)
                                 Getting Started

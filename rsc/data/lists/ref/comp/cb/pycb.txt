@@ -3,7 +3,14 @@ vim: fdm=indent:fdl=2:
 ___zzzz
 
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/funct/FuncPy.binder.Tags1.txt  ¤¤¤
-   .  ~/gdrive/FuncPy.binder.Tags1.txt
+                            In the pure case, one program is ____
+                                .
+                                one expression (plus supporting definitions)
+                            Functional programming worries about ____
+                                .
+                                what is to be computed rather than how it is to be computed
+                            ___zzzz
+.     ~/gdrive/FuncPy.binder.Tags1.txt
 ----
 ~/gdrive/JupNoteb.binder.Tags1.txt  ¤¤¤
 

@@ -236,6 +236,8 @@ sudo pacman -S evince fontforge
 sudo pacman -S pdftk xsane
 sudo pacman -S timidity-interfaces-extra midish
 sudo pacman -S shotwell
+sudo pacman -S libreoffice-still    #stable
+# sudo pacman -S libreoffice-fresh  #latest
 #--
 sudo pacman -S seq24
 sudo pacman -S soundstretch mma

@@ -43,7 +43,6 @@ https://www.reactiveui.net/docs/getting-started/ {{{
 https://www.reactiveui.net/docs/getting-started/#
 https://www.reactiveui.net/docs/getting-started/index.html
 https://www.reactiveui.net/docs/getting-started/#
-
 https://www.reactiveui.net/docs/getting-started/installation/index.html
 https://www.reactiveui.net/docs/getting-started/installation/avalonia.html
 https://www.reactiveui.net/docs/getting-started/installation/blazor.html
@@ -55,7 +54,6 @@ https://www.reactiveui.net/docs/getting-started/installation/xamarin-android.htm
 https://www.reactiveui.net/docs/getting-started/installation/xamarin-forms.html
 https://www.reactiveui.net/docs/getting-started/installation/xamarin-ios.html
 https://www.reactiveui.net/docs/getting-started/installation/xamarin-mac.html
-
 https://www.reactiveui.net/docs/getting-started/compelling-example.html
 https://www.reactiveui.net/docs/getting-started/minimum-versions.html
 
@@ -140,8 +138,10 @@ https://www.reactiveui.net/docs/handbook/view-models/boilerplate-code.html
 https://www.reactiveui.net/docs/handbook/when-activated.html
 https://www.reactiveui.net/docs/handbook/when-any.html
 https://www.reactiveui.net/docs/getting-started/#
+
 https://www.reactiveui.net/docs/reactive-programming/index.html
 https://www.reactiveui.net/docs/reactive-programming/videos.html
+
 https://www.reactiveui.net/docs/getting-started/#
 https://www.reactiveui.net/docs/resources/blogs.html
 https://www.reactiveui.net/docs/resources/in-the-news.html
