@@ -669,21 +669,22 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
 
 
 ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/ {{{
-  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/RevealImpress.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/RevealImpress.txt              @@
 
-  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/FuncPy.txt
-  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Lua.txt                        @@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Vimscr.txt                     @@@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/FuncPy.txt                     @@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Lua.txt                        @
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/JupNoteb-iPy-Pandas.txt        @
-  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Termux-AndrscriptTasker.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Termux-AndrscriptTasker.txt    @@
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/BASH.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Fsharp.txt                     @
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Fs-UiWeb.txt
-  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Anki1.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Anki1.txt                      
   ----
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/AnlSynthesis.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/JSWebdev.txt
   ----
-  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Emacs-Org.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Emacs-Org.txt                  @
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Elisp.txt
 }}}
 ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/ {{{
