@@ -654,7 +654,8 @@ Keyboard Shortcuts.Db1(...) ----
     .
 
 
-~/gdrive/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
+~/Dropbox/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
+    ~/gdrive/rsc/data/lists/mu/dft-thedoc_playlists-index.txt
 
 ## 'Trinity-proj.'
     . {{{
