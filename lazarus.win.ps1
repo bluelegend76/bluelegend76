@@ -177,8 +177,8 @@ New-Item -ItemType SymbolicLink -Path Documents\WindowsPowerShell\Microsoft.Powe
 New-Item -ItemType SymbolicLink -Path .vim -Target .\RiderProjects\bluelegend76\vim
 # TODO: CLONE + ADD VUNDLE
 New-Item -ItemType SymbolicLink -Path .ideavimrc -Target .\RiderProjects\bluelegend76\.ideavimrc
-LINK-IN vscode-settings
-LINK-IN bluelegend.kdbx -> HOME (=????)
+# LINK-IN vscode-settings
+# LINK-IN bluelegend.kdbx -> HOME (=????)
 
 # WSL/Ext4
 # sudo modprobe ext4
