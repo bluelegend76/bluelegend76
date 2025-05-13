@@ -1235,6 +1235,7 @@ MultiMarkdown
                 ---
 .  writers markdown
 Restructured Text  <raw>  #python documentation project
+'markdown extra'
   adds: 
   suited for:
                 Key Strengths:

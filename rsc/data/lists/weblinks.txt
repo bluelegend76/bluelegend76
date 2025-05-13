@@ -1,6 +1,50 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
 
+    https://www.myh.se/tillsyn
+    https://www.myh.se/tillsyn/tillsyn-av-yrkeshogskoleutbildning
+https://www.myh.se/tillsyn/lamna-klagomal-pa-en-utbildning
+https://www.myh.se/tillsyn/tillsyn-av-yrkeshogskoleutbildning
+https://duckduckgo.com/?q=mame+arcade+roms&t=newext&atb=v466-1&ia=web
+
+
+
+https://tes3mp.com/
+https://duckduckgo.com/?q=tinyml&t=newext&atb=v466-1&ia=web
+
+    https://hiq.se/en/Contact/#stockholm
+    Calle Isacsson
+
+
+https://www.programiz.com/csharp-programming/regex
+    https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-9.0
+https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
+
+https://www.myh.se/kontakta-oss
+  https://www.myh.se/kontakta-ratt-enhet-for-din-fraga
+
+https://rclone.org/dropbox/
+    https://medium.com/@data.dev.backyard/will-flet-flutter-in-python-change-the-web-app-development-landscape-for-entrepreneurs-and-python-5b28d33f2006
+https://rclone.org/#:~:text=Users%20call%20rclone%20%22The%20Swiss,really%20looks%20after%20your%20data.
+
+https://learnprompting.org/blog/guide-google-gemini
+https://zapier.com/blog/how-to-use-google-gemini/
+https://researchguides.library.syr.edu/c.php?g=1341750&p=10240017
+
+
+https://github.com/vim/colorschemes
+https://github.com/preservim/nerdtree
+https://github.com/powerline/powerline?tab=readme-ov-file
+https://github.com/vim-airline/vim-airline
+  https://linuxconfig.org/introduction-to-powerline-the-statusline-plugin-for-vim
+https://wiki.archlinux.org/title/Powerline
+
+  https://github.com/markedjs/marked
+
+https://docs.github.com/en/copilot
+https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide?tool=jetbrains
+
+
 ==============================
 Webnotes (=Here)
 Läs Igenom Enhetstester för TruckCom Updater + TruckCom Core
@@ -11610,9 +11654,20 @@ dlang redub
 
 
 
+https://bytes.usc.edu/cs104/wiki/linux
+  https://linkopingbudo.se/
+https://www.facebook.com/linkopingkendoiaido/posts/489456847811455/
 
 
+FairPhone LineageOS ----
+https://shop.fairphone.com/shop/fairphone-5-273?attr=97%2C153&color=97&select=152
+https://wiki.lineageos.org/devices/FP5/install/
+https://lineageos.org/
+https://wiki.lineageos.org/
+https://wiki.lineageos.org/devices/
+    https://www.refurbed.se/c/samsung-mobiltelefoner/?e87=Galaxy+S+Series&page=1&tile_type=electronics&page_type=category&category=5&sort_by=score
 
+  https://docs.beeware.org/en/latest/
 
 .NET Interactive / Polyglot Notebooks: Docs ----
 https://github.com/dotnet/interactive
@@ -11906,4 +11961,102 @@ Remember to install these browsers through the Arch User Repository (AUR) using 
 I hope this helps! Let me know if you have any other questions.
 
 }}}
+
+https://leanpub.com/cstips
+----
+https://leanpub.com/cleancodeprinciplesandpatterns2ndedition
+  https://leanpub.com/csharp-net-interview-compendium
+https://leanpub.com/be-a-learning-machine
+  https://leanpub.com/mental-models
+https://leanpub.com/buku-vim  ___lang=ind
+https://leanpub.com/gourmetvim
+
+https://leanpub.com/anidecalledvim
+
+https://www.amazon.com/NET-MAUI-Projects-multi-platform-desktop/dp/1837634912/?_encoding=UTF8&pd_rd_w=IngJA&content-id=amzn1.sym.c2cf8313-b86b-4327-9de4-9398adaa570b%3Aamzn1.symc.a68f4ca3-28dc-4388-a2cf-24672c480d8f&pf_rd_p=c2cf8313-b86b-4327-9de4-9398adaa570b&pf_rd_r=8BZJWDPQ1Y7J49P0G0VB&pd_rd_wg=zHAWq&pd_rd_r=e1047104-4a4e-44bf-addf-3de4952e5e3c&ref_=pd_hp_d_atf_ci_mcx_mr_ca_hp_atf_d
+    https://www.amazon.com/Getting-Started-Platform-WinUI-Hands-ebook/dp/B0BGZCD32H/ref=tmm_kin_swatch_0
+https://github.com/PacktPublishing/-Learn-WinUI-3.0
+
+
+https://www.jetbrains.com/help/rider/Code_Generation__Index.html
+https://rider-support.jetbrains.com/hc/en-us/community/posts/360001333540-XML-comment-Generating-for-Documentation
+https://www.jetbrains.com/rider/documentation/
+
+https://github.com/sumatrapdfreader/sumatrapdf/blob/master/docs/md/Command-line-arguments.md
+https://github.com/bluelegend76/bluelegend76
+
+
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio
+https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-9.0
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-8.0&viewFallbackFrom=aspnetcore-9.0
+https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/
+
+https://blog.jetbrains.com/dotnet/2019/03/07/testing-and-profiling-asp-net-core-rest-apis-from-rider-part1/
+https://blog.jetbrains.com/dotnet/2024/11/12/csharp-language-support-in-resharper-and-rider-2024-3/
+https://blog.jetbrains.com/dotnet/2024/09/17/building-a-graphql-client-in-net-with-jetbrains-rider-and-strawberryshake/
+https://blog.jetbrains.com/dotnet/2019/11/25/quick-overview-asp-net-core-rider/
+https://duckduckgo.com/?q=http+status+codes+list&t=newext&atb=v466-1__&ia=web
+    https://support.microsoft.com/en-us/office/use-markdown-formatting-in-microsoft-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772
+
+https://github.com/dotnet/roslynator
+https://josefpihrt.github.io/docs/roslynator/
+https://www.jetbrains.com/help/rider/Using_NET_Compiler_Analyzers.html
+
+https://www.svenskalag.se/mjolbyskf/sida/98939/medlemmar
+
+
+https://www.jetbrains.com/help/rider/Settings_Scopes.html#options
+    https://kafferosterietkoppar.se/info/dosera-ratt-for-ett-godare-kaffe/
+gherkin build yaml
+
+https://www.geeksforgeeks.org/figma-vs-inkscape/
+https://piktochart.com/tips/figma-vs-inkscape
+
+    questionare myh
+    https://response.questback.com/isa/qbv.dll/SQ?s=aZNDdRCjlFvuK72YmEySwWidGcPEWHW7nEs2tviWqbesRvIKcWAkg0WHDOfvzU-j0
+
+https://www.unison-lang.org/
+
+
+https://www.jetbrains.com/feedback/webstorm/?product=WebStorm&build=WS-243.26053.12&timezone=Europe%2FStockholm&eval=false&license=free
+
+https://www.yoctoproject.org/
+https://en.wikipedia.org/wiki/Yocto_Project
+
+https://learn.microsoft.com/en-us/power-automate/
+https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/scripting
+
+https://learn.microsoft.com/en-us/dotnet/api/system.io.fileinfo?view=net-9.0
+https://learn.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops
+NSwag
+https://github.com/RicoSuter/NSwag/wiki/NSwagStudio
+
+    https://paulkirtley.co.uk/2011/easy-way-to-use-fomes-fomentarius-as-tinder/
+
+https://hearthstone.blizzard.com/en-us
+
+
+https://traeide.com/docs/what-is-trae-ide
+
+
+Till Osman:
+https://apps.apple.com/us/app/termux/id6738933789
+
+https://github.com/discord/discord-api-docs
+
+
+
+Hej Gunilla, men som den här skolan har behandlat mig
+och medlemmar av klassen
+
+Angående avslutningsbuffen:
+Tackar för inbjudan,
+  inte velat ställa upp och vägrat svara på meddelande/förfrågan
+extremt överarbete
+när de vet att man råkat ut för ojysst överarbete
+men en _ skola där delar av klassen verkat vilja distansiera sig och med en av 'representanterna' som flera gånger suttit på kamera och skrattat och även verkat skickat meddelande till någon när man kommit in och ställt frågor och t.o.m. när man kommit in och låtit helt förstörd är jag osäker på om jag vill medverka på.
+och en av 'representanterna'
+flera gånger när man kommit in och ställt frågor och t.o.m. en gång när man kommit in och låtit helt förstörd suttit och skrattat på kamera och varje gång verkat sitta och skriva meddelande till någon, det vet jag inte om jag vill medverka på
+
+så har jag ingen anledning att medverka
 
