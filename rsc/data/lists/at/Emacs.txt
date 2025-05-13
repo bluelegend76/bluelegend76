@@ -5,6 +5,7 @@ emacs-30.1 ~/Dropbox/rsc/samples/code/orgmode-test.org &
     (+Org: = 5gt)
 
 gvim ~/.emacs.d/init.el
+    ~/Dropbox/rsc/samples/code/elisp/Org-DavyWil.el
 emacs-30.1 ~/.emacs.d/init.el
 
 emacs over vim:

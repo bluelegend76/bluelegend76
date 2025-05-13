@@ -4,6 +4,8 @@ ___zzzz
 
 [TODO: =REFMAN COMPLETE TO 'CHECKABLE REFLIST(??)(****)']
 
+~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Vimscr.txt
+----
 ~/Dropbox/Udt/rsc/data/lists/Tagged/vimscr-ibmtuts.Tags1.txt  ¤¤¤
                         ---- Ptools/trimmed Toc ----
                         Exceptions

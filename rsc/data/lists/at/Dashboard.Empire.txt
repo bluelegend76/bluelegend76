@@ -668,7 +668,42 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
     }}}
 
 
+~/Dropbox/Udt/rsc/data/lists/Tagged/trim/ {{{
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/RevealImpress.txt
 
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/FuncPy.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Lua.txt                        @@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/JupNoteb-iPy-Pandas.txt        @
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Termux-AndrscriptTasker.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/BASH.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Fsharp.txt                     @
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Fs-UiWeb.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Anki1.txt
+  ----
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/AnlSynthesis.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/JSWebdev.txt
+  ----
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Emacs-Org.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Elisp.txt
+}}}
+~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/ {{{
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/NuShell.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/LyScheme.txt           @@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/INKSCAPE.txt           @@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Dlang.txt              @
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Js-Cs_Rx.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/SpectreAvalonia.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Calc-etc.txt           @
+  ----
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/PyKivy.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Regex-sedVim.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Cloj-wOvertone.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/AspDnc.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/React.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Gimp-CPyScm.txt
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Git-wActions.txt
+}}}
+----
     ---- 'MINIS|DAILIES' ---- ___index=0 {{{
     LEETCODE ETC(+SCRIPT-FU) CODE-PROBLEMS __ ****
             KAPA FILER/MAPPAR I LEGACY (=5 per dag) !!(! *****)
@@ -798,11 +833,11 @@ Android Scripting [+Rclone] ¤¤¤
 AVALONIA (+Maui)  ¤¤(¤)  Spectre Console
     XUnit, Cpp Gtest + 'Prop.based Testing'  ¤¤
 Dlang [Ali, +Learning, Cb]  +Pegged  ¤¤¤
+    [Dlang-proj + PhobosNext|Per Nordl.]
 SSH  ¤¤¤
 NuShell  _  ¤¤(¤)
 ASM 1 (+binalys)  ¤¤
 Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
-REVEAL, IMPRESS  __ ¤¤¤
 Tracker/Localsearch + Sparql  ¤¤
 Abe Kotlin  ¤¤
 (gimp etc) C Py Scm (!!)  ¤¤¤
@@ -814,6 +849,7 @@ refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤
     CSS + Sass/Compass
     HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
 Blue + CSound +Analog Synth. ¤¤¤  Nyq, Scoll  muHask*(*), Midi  @  Chuck  ORCH/POPROCK-ARR (etc)
+     Csound(Qt + Blue), Scollider
 Bash/Dash-Mans {{{
     Bluebash, Bcb, ....
         Rute, ABSG, ....
@@ -898,21 +934,20 @@ netrw (**)
 Nsplitdiff (+Soc.Framg)
 Mojo  TODO:OCR
     Choco (+Puppet) + PowerShell (+AutoHotKeys)
-[Dlang-proj + PhobosNext|Per Nordl.]
 vlang, Go, Ring
 Cloj. + Java
 (+graphdb, SPARQL/CYPHER/GREMLIN, sqlite,   redis,  mongo)
+----
 @AnlSynthesis + Midi@ + Keyb.Synths
 - websearch (duckduck, Google, etc)  [+Webscraping] +lynx(etc)  @@
 Aws(+dynamo), Docker, Kubernetes  CyberSec  @
 börja kolla quincy l-länkar @  +Stanford etc
 Pluralsight, w3school, w3resources
 kotlin/jetpack progr-videos(!!)
-Linux (Android etc) + Sys-Structure, Sysprogr
+Linux (Android etc) + Sys-Structure,  Linux Sysprogr
 Cypher,
 Audacity
 Pyramid
-        Csound(Qt + Blue), Scollider
 PyAut3** +PyFunct, Gimp Python, +  @
 flux, xmonad, openb, ice, awes
   webscrape, cv/mmedia, au-transcribe,
@@ -1511,72 +1546,88 @@ A{VipJgv:s/[^ ],b ,e[^ ]//g
 RUSH/OVERVIEW DOKS-LIST[!!] {{{
   ...tagged... {{{
 
-## ~/gdrive/rsc/Doks/scratch/pshell/Win10keysdef.tags.txt
-~/gdrive/gambitscm-smallefficientnativeapps.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/bluebash.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002_1.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt
 
-~/Dropbox/rsc/aubooks/comp/shotwell-man.tags.txt
-~/Dropbox/rsc/aubooks/comp/thunar-man.tags.txt
-~/Dropbox/rsc/aubooks/comp/id3_easytag-vim-id3t-eyeD3.txt
-~/Dropbox/rsc/aubooks/comp/id3_easytag-vim-id3t-eyeD3.tags.txt
-~/Dropbox/rsc/aubooks/comp/dolphin-man.tags.txt
-~/Dropbox/rsc/Doks/PRIO/graphdbs.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/emacsmanual1.tags1.txt
+~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/em-mastext1.tagged.txt
+
 ~/Dropbox/rsc/Doks/phone/Comp/lang/scm/lydoc03-extend.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/mu/ly/lydoc03-extend.Tags1.txt
+
+~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/dlang/dlearn.tagged.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dlearn.tagged.txt
+~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/dlang-ali1.tagged.txt
+
+~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/scoll-mapvisu.tagged.txt
+~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/scoll-mapvisu.tagged.txt
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/cscb_2022.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/functional-cs.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/csfunct.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/designpatts.cs.Tags1.txt
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/fsharp-wikibooks.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/FsharpWikibooks.Tags1.txt
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/h5wappdevex.Tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/funct/jsfunctmaster.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/funct/functjs-begin.Tags1.txt
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/clojcb_2014.tags1.txt
+
+~/Dropbox/rsc/Doks/phone/clean/ipydocs-tut.tags1.txt
+--
+~/gdrive/gambitscm-smallefficientnativeapps.tags1.txt
+~/Dropbox/rsc/Doks/phone/clean/guile-against-r.tags1.txt
+
+~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/lpy01.tags.txt
+--
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/py3aut.Tags2.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/py3aut.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/py3aut.Tags1 (Case Conflict).txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/Python3Aut.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/py/sedawk-shscript-withPython.Tags1.txt
+
+~/Dropbox/rsc/aubooks/comp/shotwell-man.tags.txt
+
+
+~/Dropbox/rsc/aubooks/comp/thunar-man.tags.txt
+~/Dropbox/rsc/aubooks/comp/id3_easytag-vim-id3t-eyeD3.txt
+~/Dropbox/rsc/aubooks/comp/id3_easytag-vim-id3t-eyeD3.tags.txt
+~/Dropbox/rsc/aubooks/comp/dolphin-man.tags.txt
+
+~/Dropbox/rsc/Doks/PRIO/graphdbs.tags1.txt
+~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/graphdbs.tags1.txt
+
+
+
 ~/Dropbox/rsc/Doks/phone/Comp/lang/xml/xmlhacks100_2010.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/xml/xml-w3schools.ToClean.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/elx-erl/ElixirSchool.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/lang/svg/svganimdrasn.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dlearn.tagged.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/cscb_2022.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/functional-cs.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/fsharp-wikibooks.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/csfunct.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/designpatts.cs.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/graphdbs.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/h5wappdevex.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/funct/jsfunctmaster.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/js/funct/functjs-begin.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/FsharpWikibooks.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/clojcb_2014.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/loffice/starbasic/calc2011.fmt35.tags2.txt
-~/Dropbox/rsc/Doks/phone/Comp/loffice/starbasic/calc2011.fmt35.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/datasci/ai-mlearn/py/mlearnapps-ideatoprod_2020.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/bluebash.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/mutt-man.tagged1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002_1.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/editor/helix.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/editor/vim/neovimLua.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/editor/vim/lvimscrhard.Tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/evilman1.tags.txt
-~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/emacsmanual1.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/mu/ly/lydoc03-extend.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/scoll-mapvisu.tagged.txt
-~/Dropbox/rsc/Doks/phone/clean/ipydocs-tut.tags1.txt
 ~/Dropbox/rsc/Doks/phone/clean/nix-master_2024.tags1.txt
-~/Dropbox/rsc/Doks/phone/clean/guile-against-r.tags1.txt
-~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/dlang/dlearn.tagged.txt
 ~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/mutt-man.tagged1.txt
-~/Dropbox/rsc/Doks/phone.fmt35/0_todo/curr/scoll-mapvisu.tagged.txt
 ~/Dropbox/rsc/Doks/Comp/lang/java/jdir14.tagged.txt
 ~/Dropbox/rsc/Doks/Comp/vimdoc8/rman.files/tagsrch.txt
 ~/Dropbox/rsc/data/lists/ref/lang/shorthrskrift-FackVårdSökaren.tagged.txt
 ~/Dropbox/rsc/data/lists/keys.shortc/mscore3.shortckeys.tagged.txt
-~/Dropbox/rsc/data/lists/learnqna/vanki/pick.legacy/em-mastext1.tagged.txt
 ~/Dropbox/rsc/data/lists/learnqna/vanki/idiom-eng_list1.Tags.txt
 ~/Dropbox/rsc/data/lists/learnqna/vanki/MacXkeys.tags.txt
 ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/cpp/komvux2023-Cpp1.Tags2.txt
 ~/Dropbox/rsc/data/lists/learnqna/vanki/decks/comp/lang/webdev/freec01_h5c3.tags.txt
 ~/Dropbox/rsc/data/lists/learnqna/vanki/Win10keysdef.tags.txt
-~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/dlang-ali1.tagged.txt
-~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/lpy01.tags.txt
 ~/Dropbox/rsc/data/lists/learnqna/vanki/tagged/Win10keysdef.tags.txt
+## ~/gdrive/rsc/Doks/scratch/pshell/Win10keysdef.tags.txt
+
 ~/Dropbox/scratch/Math1_Komvux-mars2023.Tags1.txt
 ~/Dropbox/scratch/Math2_Komvux-mars2023-v2.Tags1.txt
 ~/Dropbox/scratch/Math2_Komvux-mars2023-v1.Tags.txt
