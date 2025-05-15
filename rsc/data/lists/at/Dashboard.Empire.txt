@@ -1400,8 +1400,9 @@ Office.Rush [1]  # rush through + take review/notes {{{
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
 
-CSound[FLOSS-MAN] + Scoll. [WEB-MINI; sclang|scide]
+CSound[FLOSS-MAN + Book] + Scoll. [WEB-MINI; sclang|scide]
     ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollDocs-GetStarted.txt
+
 sqlitebrowser
 F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{

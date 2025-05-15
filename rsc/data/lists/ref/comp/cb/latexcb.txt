@@ -1089,12 +1089,12 @@ Mermaid
                     Messages are defined with Alice->>Bob: Hello
                 Class Diagrams:
                     classDiagram
-                    Classes are defined with class MyClass { and }
-                    Relationships (inheritance, association, etc.) are defined using arrows (e.g., --, -->, ..>)
+                        Classes are defined with class MyClass { and }
+                        Relationships (inheritance, association, etc.) are defined using arrows (e.g., --, -->, ..>)
                 Gantt Charts:
                     gantt
-                    Define tasks with section and task blocks
-                    Specify durations and dependencies between tasks
+                        Define tasks with section and task blocks
+                        Specify durations and dependencies between tasks
                 2. Common Shapes:
                     Square: []
                     Circle: (( ))
@@ -1124,59 +1124,48 @@ Mermaid
 
                 You're right, I can provide a more comprehensive list of Mermaid constructs and features:
 
-                1. Diagram Types
-
-                    Flowcharts:
-                        graph LR (Left to Right)
-                        graph TD (Top to Down)
-                        graph RL (Right to Left)
-                        graph BT (Bottom to Top)
-                    Sequence Diagrams:
-                        sequenceDiagram
-                    Class Diagrams:
-                        classDiagram
-                    Gantt Charts:
-                        gantt
-                    State Diagrams:
-                        stateDiagram
-                    Entity Relationship Diagrams (ERDs):
-                        erDiagram
-                    User Journey Diagrams:
-                        journey
-
-                2. Basic Shapes & Nodes
-
-                    Square: []
-                    Circle: (( ))
-                    Rounded Rectangle: ()()
-                    Diamond: {}
-                    Asymmetric Shape: <>
-                    Subgraph: subgraph A { ... }
-
-                3. Connections & Relationships
-
-                    Arrows: -->, ->, --, ..> (for inheritance)
-                    Notes: Note over, Note right of
-
-                4. Styling
-
-                    Colors: fill:#color (e.g., fill:#97c2fc)
-                    Text Styles: text-align:center, font-size:12px, font-family
-                    Line Styles: stroke-width:2px, stroke-dasharray:5, 5, stroke-color
-
+                1. Diagram Types ----
+                Flowcharts:
+                    graph LR (Left to Right)
+                    graph TD (Top to Down)
+                    graph RL (Right to Left)
+                    graph BT (Bottom to Top)
+                Sequence Diagrams:
+                    sequenceDiagram
+                Class Diagrams:
+                    classDiagram
+                Gantt Charts:
+                    gantt
+                State Diagrams:
+                    stateDiagram
+                Entity Relationship Diagrams (ERDs):
+                    erDiagram
+                User Journey Diagrams:
+                    journey
+                2. Basic Shapes & Nodes ----
+                Square: []
+                Circle: (( ))
+                Rounded Rectangle: ()()
+                Diamond: {}
+                Asymmetric Shape: <>
+                Subgraph: subgraph A { ... }
+                3. Connections & Relationships ----
+                Arrows: -->, ->, --, ..> (for inheritance)
+                Notes: Note over, Note right of
+                4. Styling ----
+                Colors: fill:#color (e.g., fill:#97c2fc)
+                Text Styles: text-align:center, font-size:12px, font-family
+                Line Styles: stroke-width:2px, stroke-dasharray:5, 5, stroke-color
                 5. Advanced Features
-
-                    Loops: loop, while, repeat
-                    Conditions: if, else, alt
-                    Subgraphs: Group related nodes within a subgraph.
-                    Customizations: Define custom shapes and styles.
-                    HTML-like labels: Use basic HTML tags within node labels (e.g., <b>, <i>, <br>)
-
+                Loops: loop, while, repeat
+                Conditions: if, else, alt
+                Subgraphs: Group related nodes within a subgraph.
+                Customizations: Define custom shapes and styles.
+                HTML-like labels: Use basic HTML tags within node labels (e.g., <b>, <i>, <br>)
                 6. Integrations
-
-                    Markdown: Easily integrate Mermaid diagrams into Markdown documents.
-                    Jupyter Notebooks: Render Mermaid diagrams within Jupyter Notebooks.
-                    VS Code: Use the Mermaid Support extension for syntax highlighting and live preview in VS Code.
+                Markdown: Easily integrate Mermaid diagrams into Markdown documents.
+                Jupyter Notebooks: Render Mermaid diagrams within Jupyter Notebooks.
+                VS Code: Use the Mermaid Support extension for syntax highlighting and live preview in VS Code.
 .  PlantUml
 ---- ---- ----
 Pandoc Markdown (*)  #many extensions  ¤¤¤(??)
