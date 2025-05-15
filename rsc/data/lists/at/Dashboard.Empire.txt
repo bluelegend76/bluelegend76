@@ -571,12 +571,12 @@ TODO: STYTR-MALL.TXT till TELEFONEN
 - sista 5 linux-kommandon: gemini-sök ('Xonsh el. Bash för Linux-Sysadmin?')
 - CLEAN OUT NEWEST WEBNOTES ('AT BOTTOM' = Tracker + Sparql, etc)
 
-- Genomläsning TruckCom Core
+- Genomläsning TruckCom Core        @#
 - Gemini-frågor på TCC-kod(generellt) + på Uppgifts-Instruktionerna
-    - Warehouse Service-manualen
- - Vanki-Deck 1 med Peter L
+    - Warehouse Service-manualen    @#
+ - Vanki-Deck 1 med Peter L   @@
      ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
-- lägg ut senaste 2 videos med Henrik och Erik(!)
+- lägg ut senaste 2 videos med Henrik och Erik(!)  @@
     senaste snack med Erik:
     - checksum (=gör checksum för storlek för två filer + jämför dem)
     = Installation/Installer Utilities =klass+project
@@ -591,17 +591,17 @@ TODO: STYTR-MALL.TXT till TELEFONEN
     = Från Updater-koden kunna läsa av/avgöra vilken version av TCC som är installerat på datorn (=inte kunna hantera paket med choco etc)
     = Bästa sätt att ta reda på om TC är installerat  (=när/hur kan jag avgöra att det inte är installerat? - +=vilka platser att kolla på)
     - LISTA/FÖRSLAG: FEATURES ATT KUNNA LÄGGA TILL I FRAMTIDEN
-+ Mermaid-koden för/från Wikin
++ Mermaid-koden för/från Wikin  @#
 
-- Ny Vanki-Deck DotNet Core 23 (*)
+- Ny Vanki-Deck DotNet Core 23 (*)  @@
 ---- store
-- begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas
+- begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas  @@
     - hälsat på SW 5
-- CAN-skissen (+Manual)
+- CAN-skissen (+Manual)  @#
 ---- Vad Lärt?
-- Framkant i Planering
-- förhandling, tydlighet och kommunikation
- - vikten av priming-faktorer
+- Framkant i Planering                      ##
+- förhandling, tydlighet och kommunikation  ##
+ - vikten av priming-faktorer               ##
 
   Could you help me generate XML-comment documentation for this interface?
   Could you help me generate XML-comment documentation for the piece of code I have highlighted?
@@ -644,7 +644,7 @@ at.Ref.Cbs ----
 .vids Lia2 {{{
 
 put several files in playlist + start off (at specific time) in video no 'n':
-    mpv 1.mp4 --start=00:10:30 2.mp4 3.mp4 --playlist-start=2
+    mpv 1.mp4 --start=00:10:30 2.mp4 3.mp4 --playlist-start=2  @@
 
 mpv --start=00:13:00 --speed=1.65 ~/Video/Peter-L-20250227_102445.mp4 ~/Video/Peter-L-20250227_111046.mp4 ~/Video/Peter-L-20250227_132732.mp4 &
 
@@ -12718,5 +12718,55 @@ sen lämnad att förblöda ( + en sektmedlem som har garvat åt mig inför de an
 
 
 Jag har försökt att ta ansvar för det som jag(!) kan ta ansvar för.
+
+
+
+Makefile:
+TARGETS := presentation.html
+SOURCES := $(TARGET:%.html=%.md)
+
+.PHONY: all
+all: $(TARGETS)
+
+.PHONY: help
+help:
+	@echo "Targets:"
+	@echo "  * all - build all targets (default)"
+	@echo "  * <target>.html - build presentation output from source"
+	@echo "  * clean - remove all generated files, keeping only sources"
+
+%.html: %.md
+	pandoc $< -t slidy --standalone --metadata title="hej" -o $@
+
+.PHONY: clean
+clean:
+	-rm -f $(TARGETS) 
+
+
+special note: automatic variables
+
+
+
+TARGETS := presentation.html
+# Equivalent to "${TARGET%.html}.md" or "${TARGET/.html/.md}" in bash
+SOURCES := $(TARGET:%.html=%.md)
+
+
+.PHONY: all
+all: $(TARGETS)
+
+.PHONY: help
+help:
+	@echo "Targets:"
+	@echo "  * all - build all targets (default)"
+	@echo "  * <target>.html - build presentation output from source"
+	@echo "  * clean - remove all generated files, keeping only sources"
+
+%.html: %.md
+	pandoc $< -t slidy --standalone --metadata title="hej" -o $@
+
+.PHONY: clean
+clean:
+	-rm -f $(TARGETS) 
 
 
