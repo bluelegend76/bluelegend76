@@ -1399,11 +1399,15 @@ Office.Rush [1]  # rush through + take review/notes {{{
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
+
 CSound[FLOSS-MAN] + Scoll. [WEB-MINI; sclang|scide]
     ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollDocs-GetStarted.txt
 sqlitebrowser
 F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/FsFunprofit-Online.tags1.txt
+
+
 gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
 
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
@@ -2103,6 +2107,9 @@ Anki  ¤¤¤
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-Bash.txt
     ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/sh-dash.txt
   }}}
+
+~/Empire/Doks/Comp/lang/clangs/c/mu/auprogr-book_2011.txt
+
   Puppet
   Mojo  TODO:OCR
   Devops
