@@ -5,7 +5,7 @@ vim over emacs:
     - mobile/android
     - folding
     - translate-shell
-    - several keys as mappings
+    - 'several keys as mappings'
 
 gvim ~/.vimrc
 gvim ~/_vimrc
@@ -17400,7 +17400,7 @@ gn (=act on search-matches ****)
 
 g@  (=apply '@' globally)
 
-    ## noremap <leader>gv <Esc>yiw:vimgrep /<Ctrl+R>"/ % <bar> copen <bar> resize
+    ## noremap <leader>gv <Esc>yiw:vimgrep /<C-R>"/ % <bar> copen <bar> resize<CR>
 vimgrep /@/ % | copen | resize
 
 snabbant./summering (=personl. verkt.lista) practvim (juli 2018) {{{

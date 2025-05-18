@@ -563,14 +563,6 @@ Scratch-Area + todoscratch/'hänglista' + Daily {{{
 TODO: STYTR-MALL.TXT till TELEFONEN
     (+Senare: BOLLTRÄNINGSMALLAR.TXT inkl. Beskrivningarna)
 
-- Snabbkik på build/pipeline-process (10-15 min max)
-- Utgång/Träff i veckan/nästa vecka
- - Policy kika in när krasslig
-
-- freecommander accelerator-keys + cleanup
-- sista 5 linux-kommandon: gemini-sök ('Xonsh el. Bash för Linux-Sysadmin?')
-- CLEAN OUT NEWEST WEBNOTES ('AT BOTTOM' = Tracker + Sparql, etc)
-
 - Genomläsning TruckCom Core        @#
 - Gemini-frågor på TCC-kod(generellt) + på Uppgifts-Instruktionerna
     - Warehouse Service-manualen    @#
@@ -9061,6 +9053,11 @@ ___revealjs_mobileclicker
 ___MapGisEtc__FsharpAvaloniaFabulfablesuave
 ___Emacs_listchange_colorschemes
 
+___Clojure_Clojerl_LFE
+___Semweb_CsFsharp
+
+___TTS_SpeechInput_HotkeyPunctuation
+
 
 ___FSHARP_DATASTRUCTURES
 Another question: I would like to get your help with looking at and drilling F# data-structures, essentially to the point where I 'get it'. Would you be able to help me with that, and do you have any ideas about how it could be done? + If I then have some ideas about how we could improve on that scheme, we can discuss it.
@@ -12754,8 +12751,378 @@ Remember, the beauty of Nyxt is its flexibility. These are just starting points,
 
 
 
+___Clojure_Clojerl_LFE
+
+I'll get your thoughts on another question first: Could you give me an idea of some of the areas where the Clojure programming-language really shines and 'makes sense to use' if you know what I mean? Also, I would like to ask the same question about Clojerl (i.e. Clojure written using Erlang or something to that effect), and LFE, i.e. Lisp-flavored Erlang.
+
+That's a great set of questions, diving into the strengths of some interesting functional programming languages and their connections to the Erlang ecosystem! Let's break down where Clojure, Clojerl, and LFE really shine.
+
+Clojure: Where it Really Shines
+
+Clojure, a Lisp dialect that runs on the Java Virtual Machine (JVM), JavaScript engines, and the Common Language Runtime (CLR), excels in several key areas:
+
+    Concurrency and Parallelism: This is arguably one of Clojure's strongest suits. Its core design embraces immutability and provides powerful abstractions like agents, atoms, refs, and STM (Software Transactional Memory) that make it significantly easier to write safe and efficient concurrent code compared to many other languages. This makes it excellent for building high-performance, scalable applications.
+    Data Manipulation and Transformation: As a Lisp, Clojure has a strong focus on data as a fundamental concept. Its rich set of immutable data structures (lists, vectors, maps, sets) and powerful functions for transforming and manipulating them make it ideal for tasks like data processing, ETL (Extract, Transform, Load) pipelines, and working with complex data.
+    Pragmatism and Interoperability: Running on the JVM gives Clojure seamless access to the vast Java ecosystem and its extensive libraries. This pragmatism allows developers to leverage existing solutions when needed, rather than reinventing the wheel. Similarly, ClojureScript enables interoperability with JavaScript, making it a strong contender for full-stack development.
+    Functional Programming Paradigm: Clojure strongly encourages functional programming principles, leading to code that is often more concise, predictable, and easier to reason about and test. Immutability, pure functions, and higher-order functions are central to the language.
+    REPL-Driven Development: Clojure's Read-Eval-Print Loop (REPL) is a powerful tool for interactive development. It allows developers to evaluate code snippets in real-time, inspect data, and rapidly iterate on solutions. This significantly speeds up the development process and fosters a more exploratory approach.
+    Metaprogramming and Code Generation: Like other Lisps, Clojure has powerful metaprogramming capabilities through macros. Macros allow you to write code that writes other code, enabling the creation of domain-specific languages and abstractions that can significantly simplify complex tasks.
+    Building Robust and Scalable Systems: The combination of concurrency features, the stability and performance of the underlying platforms (JVM, JavaScript engines), and the focus on maintainable code makes Clojure well-suited for building large, robust, and scalable applications.
+
+Where Clojure "Makes Sense to Use":
+
+    Web Development: Full-stack development using ClojureScript on the frontend and Clojure on the backend (using frameworks like Ring and Compojure).
+    Data Processing and Analytics: Building data pipelines, performing data transformations, and developing analytical tools.
+    Distributed Systems: Leveraging its concurrency features for building distributed and fault-tolerant applications.
+    Financial Applications: Where concurrency, data integrity, and robustness are critical.
+    Scientific Computing and Machine Learning: While Python has a larger ecosystem, Clojure's data manipulation capabilities and performance can be advantageous in certain areas.
+    Anywhere where concurrency, immutability, and functional programming offer significant advantages in terms of correctness, maintainability, and performance.
+
+Clojerl: Clojure on Erlang
+
+Clojerl aims to bring the syntax and core principles of Clojure to the Erlang Virtual Machine (BEAM). The BEAM is renowned for its concurrency, fault tolerance, and distributed capabilities.
+
+    Where it Really Shines:
+        Leveraging the BEAM Ecosystem: Clojerl's primary strength lies in its ability to tap into the power of the BEAM. This includes Erlang's OTP (Open Telecom Platform), which provides battle-tested libraries and design patterns for building fault-tolerant and distributed systems.
+        Clojure Syntax and Concepts on the BEAM: For developers who appreciate Clojure's syntax, data structures, and functional approach, Clojerl offers a way to utilize these within the robust Erlang environment.
+        Concurrency and Distribution with Clojure Flavor: It allows building highly concurrent and distributed applications using Clojure-like abstractions, potentially making the BEAM's power more accessible to Clojure developers.
+
+    Where it "Makes Sense to Use":
+        Building Distributed and Fault-Tolerant Systems: Applications where resilience and the ability to handle failures gracefully are paramount (e.g., telecommunications, real-time systems).
+        Utilizing Erlang/OTP Libraries with Clojure Syntax: When you need the specific capabilities of Erlang/OTP but prefer Clojure's way of working.
+        Teams Familiar with Clojure Wanting BEAM Benefits: If your team has strong Clojure expertise and needs to build on the BEAM, Clojerl can lower the learning curve compared to learning Erlang from scratch.
+
+LFE: Lisp-flavored Erlang
+
+LFE is a Lisp syntax that compiles directly to Erlang bytecode and runs on the BEAM. It's a more direct approach to bringing Lisp to the Erlang ecosystem compared to running Clojure on it.
+
+    Where it Really Shines:
+        Direct Access to Erlang/OTP with Lisp Syntax: LFE provides a very thin layer over Erlang, allowing developers to directly interact with Erlang's features and libraries using a Lisp syntax. This can be appealing to Lisp developers who want the full power of Erlang without learning Erlang's Prolog-like syntax.
+        Concurrency, Distribution, and Fault Tolerance (Native to Erlang): LFE inherently benefits from the BEAM's strengths in these areas.
+        Metaprogramming with Lisp Macros: LFE retains the powerful macro system characteristic of Lisp, allowing for code abstraction and DSL creation within the Erlang environment.
+
+    Where it "Makes Sense to Use":
+        Erlang Development for Lisp Enthusiasts: For developers who love Lisp's syntax and metaprogramming capabilities and need to build applications on the BEAM.
+        Leveraging Existing Erlang Libraries and Ecosystem: When you need to work with specific Erlang/OTP components and prefer a Lisp interface.
+        Building High-Performance, Concurrent, and Distributed Systems with a Lisp Flavor: Applications requiring the robustness and scalability of Erlang, but with the expressiveness of Lisp.
+
+In Summary:
+
+    Clojure: Excels in concurrency, data manipulation, and pragmatism on the JVM and JavaScript, making it great for web development, data processing, and building scalable systems.
+    Clojerl: Bridges the gap between Clojure's syntax and the BEAM's concurrency and distribution capabilities, useful for teams familiar with Clojure needing Erlang's strengths.
+    LFE: Offers a direct Lisp syntax for developing on the Erlang VM, appealing to Lisp developers who want native access to Erlang's power and ecosystem.
+
+Each language offers a unique blend of features and targets specific needs and preferences within the functional and concurrent programming landscape. The "best" choice depends heavily on the specific project requirements, team expertise, and the desired ecosystem.
 
 
+___Semweb_CsFsharp
+
+Question: When it comes to RDF and semantic web-data, it seems to me (from the literature I've read on the subject) that Java is very much at the forefront (i.e. tools like AllegroGraph, Sesame and the like). Is that still the case, and if not, what other languages are there that could possibly provide good support? One candidate that I've researched a bit (and am keen to explore more) is Clojure, which being 'connected to the JVM' seems like a very good candidate. Also, if there are any workable bindings (and maybe also utilities) when it comes to C# and F#, and as a third candidate it would be interesting to hear what the state is for Python.
+
+You're right that Java has historically been very prominent in the RDF and Semantic Web space, largely due to the early development of frameworks like Jena and Sesame (now Eclipse RDF4J). However, the landscape has evolved, and while Java remains a strong player, other languages offer robust support and have thriving communities. Here's a breakdown:
+
+Java (Still a Strong Contender):
+
+    Pros:
+        Mature and stable libraries (Jena, RDF4J).
+        Extensive ecosystem and community support.
+        High performance, especially with optimized triplestores like AllegroGraph.
+        Proven track record in enterprise-level semantic web applications.
+    Cons:
+        Can be verbose and require more boilerplate code compared to some other languages.
+
+Clojure:
+
+    Pros:
+        Leverages the JVM, giving access to Java's RDF libraries (Jena, RDF4J).
+        Functional programming paradigm can lead to concise and expressive code.
+        Libraries like clojure-jena provide a Clojure-friendly interface to Jena.
+        Clojure is excellent at data manipulation, which is a key part of Semantic Web work.
+    Cons:
+        Smaller community compared to Java or Python.
+        The learning curve for functional programming can be steep for some.
+
+Python:
+
+    Pros:
+        Very popular and widely used language.
+        Excellent libraries like rdflib and SPARQLWrapper.
+        Easy to learn and use, making it suitable for rapid prototyping and data exploration.
+        Large and active community.
+    Cons:
+        Performance can be a concern for very large datasets or complex queries compared to Java.
+        While rdflib is very good, it is not as fast as some of the java based triplestores.
+
+C# and F#:
+
+    C#:
+        Libraries like dotNetRDF provide RDF support.
+        Integration with the .NET ecosystem can be advantageous for existing .NET projects.
+        Strong performance capabilities.
+    F#:
+        Can leverage dotNetRDF and other .NET libraries.
+        Functional programming paradigm is well-suited for data manipulation.
+        F# is very good for data processing.
+    Cons (C# and F#):
+        Smaller community compared to Java or Python in the RDF space.
+        While DotNetRDF is good, it is not as widely used as rdflib or Jena.
+
+Key Considerations:
+
+    Performance: Java and C# tend to offer the best performance, especially for large datasets and complex queries.
+    Ease of Use: Python is generally considered the easiest to learn and use. Clojure and F# have a steeper learning curve due to their functional nature.
+    Community and Ecosystem: Java and Python have the largest and most active communities.
+    Existing Infrastructure: If you're already working within a specific ecosystem (e.g., .NET), C# or F# might be a natural fit.
+
+In summary:
+
+    Java remains a powerful and reliable choice.
+    Python is excellent for ease of use and rapid prototyping.
+    Clojure is a very good alternative for those who like functional programming, and want to stay on the JVM.
+    C# and F# offer viable options for those working within the .NET ecosystem.
+
+Ultimately, the best language for your RDF and Semantic Web work will depend on your specific needs and preferences.
+
+
+
+https://kaldi-asr.org/doc/faq.html
+
+___TTS_SpeechInput_HotkeyPunctuation
+
+Could you give me some guidance and Direction on how to input text by voice like this?
+
+Absolutely! Let's break down how to input text by voice, similar to what you're asking. Here's a guide covering the key components and considerations:
+
+1. Speech-to-Text (STT) Engine:
+
+    What it does: This is the core of voice input. It converts spoken words into written text.
+    Options:
+        Operating System Built-in:
+            Windows: Windows Speech Recognition (older), Windows Voice Typing (newer, uses online services).
+            macOS: Dictation (built-in).
+            Linux: Various options, including Speech Recognition APIs, CMU Sphinx, and integration with online services.
+        Online Services (APIs):
+            Google Cloud Speech-to-Text: Highly accurate, supports many languages, offers customization.
+            Amazon Transcribe: Similar to Google's offering, integrates with AWS services.
+            Microsoft Azure Speech-to-Text: Part of Azure Cognitive Services.
+            AssemblyAI: Focuses on transcribing audio and video.
+            Deepgram: Real-time speech recognition.
+        Offline Libraries:
+            CMU Sphinx: Open-source, works offline, but may require more setup and training.
+
+2. Integration with Applications:
+
+    Direct Integration:
+        Some applications have built-in voice input features (e.g., word processors, browsers).
+        Operating system level voice typing often works system wide.
+    API Integration:
+        For custom applications or advanced workflows, you'll likely use an API.
+        This involves writing code to send audio to the STT engine and receive the transcribed text.
+    Intermediate Software (like AutoHotkey):
+        This is where your AutoHotkey work comes in. You can use AutoHotkey to:
+            Trigger voice input (e.g., with a hotkey).
+            Send the transcribed text to the desired application.
+            Perform post-processing (e.g., correcting errors, formatting).
+            Automate actions based on spoken commands.
+
+3. Workflow and Implementation:
+
+    Basic Workflow:
+        Trigger: User initiates voice input (e.g., presses a hotkey).
+        Capture: Audio is captured from the microphone.
+        Transcription: The STT engine converts the audio to text.
+        Insertion: The text is inserted into the target application.
+        Post-Processing (Optional): Corrections, formatting, or further actions are performed.
+    AutoHotkey Integration (Example Concepts):
+        Hotkey Trigger:
+            ^!v:: ; Ctrl+Alt+V
+        Voice Capture & Transcription:
+            This requires using an external tool or API. You might use a command-line tool for speech recognition, or a programming language (like Python) to interact with an API, and then have AutoHotkey run that script.
+            For example, you could run a python script that uses the google cloud speech to text api.
+        Text Retrieval:
+            The script that handles the voice recognition must output the text to a file, or the clipboard, so that Autohotkey can read it.
+        Text Insertion:
+            SendInput, %Clipboard%
+            Or, if the text is in a file:
+            FileRead, MyVar, C:\path\to\text.txt
+            SendInput, %MyVar%
+    Error Handling:
+        STT is not perfect. Implement ways to correct errors (e.g., voice commands for corrections, manual editing).
+    Customization:
+        Train the STT engine with your voice and vocabulary for better accuracy.
+        Use custom commands to trigger specific actions.
+
+Example of a conceptual workflow using python and AHK
+
+    Python Script (speech_to_text.py):
+        Uses a speech to text api to transcribe audio.
+        Saves the result to a text file.
+    AutoHotkey Script:
+        Hotkey triggers the python script.
+        AHK reads the text file.
+        AHK sends the text to the active window.
+
+Important Considerations:
+
+    Accuracy: STT accuracy varies depending on the engine, audio quality, and background noise.
+    Privacy: Be mindful of privacy when using online STT services.
+    Latency: Real-time STT can have latency, which may affect the user experience.
+    Microphone Quality: A good microphone is essential for accurate voice input.
+
+I hope this gives you a good starting point!
+
+The most obvious First Step here is to see how it works when I'm in putting text by just speaking for example, do I have to input different characters that separates words for instance or and sentences?
+
+You're absolutely right! Let's focus on that first step: understanding how basic speech-to-text (STT) works in a straightforward scenario.
+
+Basic Speech-to-Text Behavior:
+
+    Natural Language Processing (NLP):
+        Modern STT engines are powered by NLP, which means they're designed to understand natural language.
+        This means you generally don't need to manually insert spaces, punctuation, or sentence separators.
+    Word Spacing:
+        The STT engine analyzes the pauses and phonetic patterns in your speech to automatically insert spaces between words.
+    Punctuation (Often Automatic):
+        Many STT engines can infer basic punctuation, especially periods and commas, based on intonation and pauses.
+        For example, a longer pause and a downward inflection often result in a period.
+        However, the accuracy of automatic punctuation can vary.
+    Capitalization (Sometimes Automatic):
+        Some STT systems will automatically capitalize the first word of a sentence.
+        Others might require you to explicitly say "capital" before a word.
+    Special Punctuation:
+        For more complex punctuation (question marks, exclamation points, semicolons, etc.), you'll usually need to say the punctuation mark explicitly.
+            Example: "What is the time question mark" will be transcribed as "What is the time?".
+            Example: "That is amazing exclamation point" will be transcribed as "That is amazing!".
+    Testing it out:
+        The best way to understand how it works is to test it out. Use the built in voice typing or dictation that is included in your operating system.
+        Open a text editor, and use the operating systems built in voice typing. Speak normally, and observe how the text is entered.
+        Try different speaking styles, and different speeds to see how that effects the output.
+
+Here's a simple test you can do:
+
+    Open a text editor (like Notepad, TextEdit, or a word processor).
+    Activate your operating system's voice typing/dictation feature.
+    Speak a simple sentence:
+        "This is a test sentence."
+    Observe the output.
+    Try speaking a longer sentence with pauses:
+        "This is a longer sentence, with a comma, and then another phrase."
+    Try speaking a question:
+        "What time is it question mark"
+    Try speaking an exclamation:
+        "That is amazing exclamation point"
+    Observe the punctuation and spacing.
+
+Key Observations to Make:
+
+    How accurately are words spaced?
+    How often is punctuation inserted automatically?
+    How well does it handle different speaking speeds and volumes?
+    How well does it handle different types of sentences.
+
+By doing this, you'll gain a practical understanding of the capabilities and limitations of basic STT. This will help you plan how to use it effectively in your AutoHotkey scripts.
+
+Actually, I was thinking more about the little microphone icon that is placed here in the input box for Gemini search.
+
+Ah, you're interested in the specific behavior of the microphone icon within the Gemini search input box. That's a great point! Let's focus on that:
+
+Gemini's Built-in Microphone Icon:
+
+    Simplified Voice Input:
+        The microphone icon in the Gemini input box is designed for quick, conversational voice input.
+        It aims to make it easy to ask questions or give commands without typing.
+    Automatic Processing:
+        When you click the microphone icon and speak, Gemini's underlying speech-to-text engine handles the following:
+            Audio Capture: It captures your spoken words.
+            Transcription: It converts your speech into text.
+            Natural Language Understanding: It processes the text to understand your intent.
+    Emphasis on Conversational Input:
+        Gemini is optimized for natural, conversational language.
+        You can speak in complete sentences, ask questions, or give commands as if you were talking to another person.
+    Automatic Punctuation and Formatting:
+        Gemini's STT engine is designed to handle basic punctuation and formatting automatically.
+        It will typically insert spaces, periods, and sometimes commas based on your speech patterns.
+    Contextual Understanding:
+        Gemini's ability to understand context means it can often interpret your meaning even if your speech is slightly unclear.
+    Testing it out:
+        The best way to see how it works, is to press the microphone icon, and speak a few different types of sentences.
+            Speak a simple sentence.
+            Speak a complex sentence with a comma.
+            Ask a question.
+            Speak a command.
+        Observe how the text is written into the input box.
+
+Key Differences from General OS Voice Typing:
+
+    Integration:
+        Gemini's voice input is tightly integrated with its search and conversational capabilities.
+        It's specifically designed to understand and respond to user queries within the Gemini context.
+    Optimization:
+        Gemini's STT is likely optimized for the types of queries and commands that users typically enter into a search interface.
+    Contextual Awareness:
+        Gemini has a very strong contextual awareness, that will improve the accuracy of the transcription.
+
+In essence, the microphone icon in Gemini provides a streamlined and user-friendly way to interact with the system using your voice.
+
+I see that you recognize the word, as in putting a comma sign what other commands are there. For example, could I input quotation marks as well? I hope you see what I mean here, i.e. this last sentence I'm actually inputting by writing on the keyboard, because some things may be difficult to speak and get them right, specifically how you as the receiver would be able to discriminate between me talking about the word 'comma' or the sign ','. Could you give me some guidance there
+
+You've hit upon a very important point: how to differentiate between spoken words and the punctuation marks or symbols they represent. This is a common challenge in speech-to-text (STT) systems.
+
+Common Spoken Punctuation and Symbols:
+
+Here's a breakdown of how common punctuation and symbols are typically handled in STT engines, including Gemini:
+
+    Comma:
+        As you observed, you can say "comma" to insert a comma (,).
+    Period/Full Stop:
+        Often, a longer pause and a downward inflection in your voice will automatically insert a period (.).
+        You can also explicitly say "period" or "full stop."
+    Question Mark:
+        Say "question mark" to insert a question mark (?).
+    Exclamation Point/Exclamation Mark:
+        Say "exclamation point" or "exclamation mark" to insert an exclamation point (!).
+    Quotation Marks:
+        To insert quotation marks, you typically say:
+            "Open quote" or "start quote" for the opening quotation mark (").
+            "Close quote" or "end quote" for the closing quotation mark (").
+            Alternatively, "double quote" can be used.
+    Single Quotation Marks/Apostrophe:
+        "Single quote" or "apostrophe" will input a single quote (').
+    Colon:
+        Say "colon" to insert a colon (:).
+    Semicolon:
+        Say "semicolon" to insert a semicolon (;).
+    Hyphen:
+        Say "hyphen" to insert a hyphen (-).
+    Dash:
+        Say "dash" to insert a dash (—).
+    Parentheses/Brackets:
+        Say "open parenthesis" or "left parenthesis" for (.
+        Say "close parenthesis" or "right parenthesis" for ).
+        The same pattern applies to square brackets ([ and ]) and curly braces ({ and }).
+    New Line/Enter:
+        Say "new line" or "enter" to create a new line.
+
+Discriminating Between Spoken Words and Symbols:
+
+    Context:
+        STT engines use context to try to determine whether you're referring to the word itself or the symbol.
+        For example, if you say, "The word comma is used to separate items," the engine will likely transcribe "comma" as a word.
+        If you say "add a comma here", it will likely add the symbol.
+    Explicit Commands:
+        The most reliable way to insert punctuation is to use explicit commands like "comma," "period," "open quote," etc.
+    Pauses and Intonation:
+        Pauses and intonation can also help the STT engine distinguish between words and symbols.
+    Post-Editing:
+        Even with advanced STT, some manual post-editing is often necessary to correct errors and ensure accurate punctuation.
+
+Tips for Clarity:
+
+    Speak Clearly and Deliberately: Enunciate your words and avoid mumbling.
+    Use Explicit Commands: When inserting punctuation or symbols, use the specific commands mentioned above.
+    Practice: The more you use voice input, the better you'll become at speaking in a way that the STT engine understands.
+
+By following these guidelines, you can improve the accuracy of your voice input and minimize the need for manual corrections.
 
 }}}
 ----

@@ -11610,6 +11610,9 @@ https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_git/truckcom-docs?path=/Docu
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/TruckCom%20Project%20Wiki/10796/Production-computer-management
 https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/Requirements%20and%20documentation/25675/Package-syncing
 
+https://dev.azure.com/tmhe/TMHMS-Software-Development/_backlogs/backlog/Team-RnD-SW-6/Backlog%20items
+https://dev.azure.com/tmhe/TMHMS_TruckCom_Platform/_wiki/wikis/TruckCom%20Project%20Wiki/25035/Code-signing-certificate-used-in-pipelines
+https://dev.azure.com/tmhe/TMHMS-Development/_workitems/recentlyupdated/
 
 
 https://learn.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio?view=vs-2022
