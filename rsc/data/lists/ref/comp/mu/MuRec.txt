@@ -665,7 +665,7 @@ Distrho  ___GEMINI
                             This should give you a solid starting point for moving beyond basic "Hello World" examples with DPF. Good luck with your plugin development! Let me know if you have more specific questions as you progress.
 pymidi  ___Gemini
 Csound
-                        ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csound-virtualsoundprocess_2000.txt
+                        .  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/csound-virtualsoundprocess_2000.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundBook.txt
                         ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/man-tut/csound-flossman_2011.txt
                         ----
