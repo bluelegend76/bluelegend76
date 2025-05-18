@@ -1713,3 +1713,654 @@ evince -p 1 ~/Dropbox/rsc/data/lists/ref/comp/cb/latexcb.pdf &
             Using web forums
             Framing a really good question
 
+ACADEMIC WRITING WITH PANDOC (including bibliographies, etc)
+                            Pandoc Extensions for Academic Writing:
+
+                            These are features that extend standard Markdown and are specifically processed by Pandoc during conversion:
+
+                                Citations: Pandoc supports various citation styles through integration with bibliography files (e.g., .bib, .ris, .enl, .yaml). You can cite works within your text using a simple syntax: [@key] for author-year styles or [@key; p. 25] for including page numbers. Multiple citations can be included like this: [@key1, @key2].   
+
+                            Markdown
+
+                            As Smith (2023) argues [@smith2023], this phenomenon has significant implications.
+                            Recent studies [@jones2022; @brown1998, pp. 10-15] further support this view.
+
+                            Pandoc will then use the specified bibliography file and output format's citation style to render the citations correctly.
+
+                            Bibliography Generation: Pandoc automatically generates a bibliography section at the end of your document based on the cited keys in your text and the information in your bibliography file. You can specify the bibliography file using the --bibliography option when running Pandoc.  
+
+                            Bash
+
+                                pandoc report.md --output report.pdf --bibliography references.bib --citeproc
+
+                                The --citeproc option tells Pandoc to process the citations and generate the bibliography.  
+
+                                Footnotes: Create footnotes using [^label]. The footnote text is defined elsewhere using [^label]: Your footnote text here..
+                                Markdown
+
+                            This is a statement with a footnote[^1].
+
+                            [^1]: This is the text of the footnote.
+
+                            Footnotes are crucial for providing additional information or sources without interrupting the main flow of the text.
+
+                            Cross-references: Pandoc, with the appropriate filters, allows you to create cross-references to figures, tables, and sections. This typically involves assigning a label to the element and then referencing that label. For example:  
+
+                            Markdown
+
+                                ### Section on Methodology {#sec:methodology}
+
+                                ... as discussed in Section \@ref(sec:methodology).
+
+                                ![A sample figure](figure.png){#fig:sample}
+
+                                As shown in Figure \@ref(fig:sample)...
+
+                                You would typically use a Pandoc filter like pandoc-crossref to enable this functionality.  
+
+                                Tables: While basic Markdown tables are simple, Pandoc can handle more complex tables, especially when created using extensions like pipe tables or simple tables. For more intricate tables, you might consider generating them from a spreadsheet or using a tool that outputs Markdown table syntax.
+
+                                Mathematical Equations: Pandoc supports LaTeX math syntax enclosed in $ for inline equations and $$ for display equations.
+                                Markdown
+
+                            The Pythagorean theorem is <span class="math-inline">a^2 \+ b^2 \= c^2</span>.
+
+                            $$
+                            E = mc^2
+                            $$
+
+                            Pandoc will render these equations correctly in output formats that support mathematical typesetting (like PDF via LaTeX, or HTML via MathML or MathJax).
+
+                            Document Metadata: You can include metadata at the beginning of your Markdown document, enclosed in --- delimiters. This can include the title, author(s), date, and bibliography file.  
+
+                            YAML
+
+                            ---
+                            title: My Academic Report
+                            author: John Doe
+                            date: May 13, 2025
+                            bibliography: references.bib
+                            ---
+
+                            Pandoc uses this metadata to populate the title page and handle other document-level settings.  
+
+                            Tips for Using Markdown and Pandoc for Academic Reports:
+
+                                Choose a Citation Style: Decide on the citation style required for your report (e.g., APA, MLA, Chicago) and ensure your bibliography file is compatible with it. Pandoc uses Citation Style Language (CSL) files to handle different styles. You can specify the CSL file using the --csl option.
+                                Bash
+
+                            pandoc report.md --output report.pdf --bibliography references.bib --citeproc --csl apa.csl
+
+                             
+                            Manage Your Bibliography: Use a bibliography management tool like Zotero, Mendeley, or JabRef to organize your sources and export them in a compatible format (like .bib).
+                            Explore Pandoc Filters: For more advanced features like cross-referencing, consider using Pandoc filters. These are small programs that modify the Pandoc AST (Abstract Syntax Tree) during the conversion process.
+                            Customize Templates: For fine-grained control over the output format (especially for PDF via LaTeX), you can use custom Pandoc templates.  
+
+                                Keep Your Markdown Clean: Use consistent formatting and ensure your Markdown is well-structured. This will make it easier for Pandoc to process it correctly.
+
+                            By leveraging these Markdown features and Pandoc's extensions, you can effectively write academic reports with citations, bibliographies, footnotes, equations, and cross-references, often with a more streamlined writing process compared to directly using LaTeX. Remember to consult the Pandoc documentation for more detailed information on its various options and capabilities.
+                            Pandoc | Hacker News
+                            Source icon
+                            news.ycombinator.com
+                            How to use Markdown for writing documentation | Adobe Experience Cloud
+                            Source icon
+                            experienceleague.adobe.com
+                            Basic formatting syntax - Obsidian Help
+                            Source icon
+                            help.obsidian.md
+                            R Markdown Syntax: Emphasis, Formulas & Footnotes - Carpentry @ UCSB Library
+                            Source icon
+                            carpentry.library.ucsb.edu
+                            Lists | Writerside Documentation - JetBrains
+                            Source icon
+                            www.jetbrains.com
+
+                            Would you say that using Markdown on using a tool like LibreOffice is the simpler option for writing my report, i.e. provided that the requirements for my report (although an academic report) are not major?
+
+                            That's a great question, and the answer really hinges on what you mean by "simpler" and what aspects of the writing process you prioritize.
+
+                            In terms of the initial writing process itself, Markdown is often significantly simpler than LibreOffice. Here's why:
+
+                                Focus on Content: Markdown's plain text format allows you to focus solely on the content of your report without being distracted by formatting options. You're not constantly clicking buttons for bolding, italics, headings, etc. You simply use lightweight markup.   
+
+                            Less Visual Clutter: The writing environment in a plain text editor is typically much cleaner and less cluttered than the interface of a word processor like LibreOffice.
+                            Faster Input: For many, typing Markdown syntax becomes second nature and can be faster than navigating menus or using keyboard shortcuts for formatting in a WYSIWYG (What You See Is What You Get) editor.
+                            Portability and Longevity: Markdown files are plain text, making them highly portable across different operating systems and software. They are also likely to remain readable far into the future.  
+
+                                Version Control Friendly: Plain text files are much easier to track and manage with version control systems like Git, which can be very useful for larger projects or collaborations.
+
+                            However, LibreOffice might be considered simpler in other aspects, especially if your requirements are basic and you're not comfortable with command-line tools:
+
+                                WYSIWYG Interface: LibreOffice provides an immediate visual representation of how your document will look. This can be reassuring for users who prefer to see the formatting as they write.
+                                Familiarity: Many people are already familiar with word processors like LibreOffice and their interfaces. There's no learning curve for the basic functionalities.
+                                Built-in Features: Basic reports might not require complex citation management or cross-referencing. LibreOffice has built-in tools for simple formatting, lists, and basic bibliographies, which might be sufficient for your needs without requiring external tools like Pandoc.
+                                Direct Printing/Exporting: LibreOffice offers straightforward options for printing and exporting to common formats like PDF without needing an intermediary conversion step.   
+
+                            Here's a way to think about it based on your potential needs:
+
+                                If your report primarily involves straightforward text, headings, lists, and perhaps some basic formatting, and you value a clean writing environment and potential for more advanced features later (via Pandoc), then Markdown could be simpler. You might spend a little time learning the basic syntax initially, but the writing process itself can become very efficient.
+                                If your report requires immediate visual formatting, you're already comfortable with word processors, and your needs for citations and complex formatting are minimal, then LibreOffice might feel simpler because it leverages your existing knowledge and provides a direct visual output.
+
+                            Considering your mention of academic reports and potential need for references and bibliographies, the combination of Markdown and Pandoc becomes increasingly compelling for its power in handling these aspects in a structured and reproducible way. While LibreOffice has bibliography features, they can sometimes be less flexible and more prone to formatting inconsistencies than Pandoc's citation processing.
+
+                            In conclusion:
+
+                            For the initial writing of a relatively simple academic report, Markdown can be simpler due to its focus on content and clean interface. However, if you prioritize immediate visual formatting and are already comfortable with LibreOffice for basic tasks, it might feel simpler initially.
+
+                            Given that you mentioned academic reports and the likelihood of needing references, the long-term simplicity and power of Markdown + Pandoc for managing these aspects might outweigh the initial learning curve of Markdown syntax. You'd be separating content from presentation, which is a powerful paradigm for academic writing.
+
+                            Perhaps try writing a small section of your report in Markdown and converting it with Pandoc to see if the workflow suits you. This hands-on experience will likely give you the clearest answer for your specific needs and preferences.
+                            Creating Instructions with Markdown Syntax - Skillable
+                            Source icon
+                            docs.skillable.com
+                            Markdown (optional) | Technical Writing - Google for Developers
+                            Source icon
+                            developers.google.com
+                            How do I use Markdown? - IBM
+                            Source icon
+                            www.ibm.com
+                            Save a file as a pdf - Ask Athena - Bryn Mawr College
+                            Source icon
+                            askathena.brynmawr.edu
+
+                            I think one of my requirements (although maybe somewhat of a smaller concern) is to be able to see how many pages my report generates and that there are not too many orphaned paragraph-parts and such. This may very well be easier to see using a direct tool like LibreOffice, although again, this may also be remedied by exporting to pdf at regular intervals and previewing the results there?
+
+                            You've hit on a valid point. Page numbering and the visual layout for avoiding orphans and widows are definitely more immediately apparent in a WYSIWYG environment like LibreOffice. Here's a breakdown of why and how you might address these concerns with a Markdown + Pandoc workflow:
+
+                            LibreOffice Advantages for Pagination and Layout:
+
+                                Real-time Pagination: LibreOffice shows you page breaks as you type, allowing you to adjust content to avoid awkward breaks.
+                                Visual Layout Control: You can directly see how paragraphs flow across pages and make manual adjustments (though this can sometimes lead to inconsistencies).
+                                Widow and Orphan Control: LibreOffice has built-in settings to automatically prevent single lines of a paragraph from appearing at the top or bottom of a page.
+
+                            Markdown + Pandoc Approach:
+
+                            While Markdown itself doesn't handle pagination or layout directly, Pandoc (especially when converting to PDF via LaTeX) offers ways to manage these aspects, albeit with a slightly different workflow:
+
+                                Pagination is Output-Dependent: Page breaks are determined by the output format and the settings used during the Pandoc conversion. When converting to PDF (which often uses LaTeX in the background), the LaTeX engine handles pagination based on the document's content and any specified page settings.
+                                Previewing is Key: Your suggestion of exporting to PDF at regular intervals is the primary way to monitor page breaks and the overall layout when using Markdown + Pandoc. This allows you to see the final rendered output.
+                                LaTeX Control (for PDF output): If you're converting to PDF, you can leverage LaTeX commands within your Markdown (using raw LaTeX blocks) or through Pandoc's template system to influence pagination. For example, you could potentially adjust page margins, font sizes, or line spacing to affect the number of pages and paragraph flow.
+                                Widow and Orphan Control in LaTeX: LaTeX has robust features for handling widows and orphans. You can often configure these settings either directly in a custom LaTeX template that you use with Pandoc or by including specific LaTeX commands in your Markdown (if you're comfortable with LaTeX). For example, you might use commands like \widowpenalty and \clubpenalty.   
+
+                                Pandoc Filters: It's also conceivable that Pandoc filters could be developed or exist to analyze the generated LaTeX (before final PDF rendering) and potentially insert hints to improve paragraph flow, although this would be a more advanced approach.
+
+                            Simpler?
+
+                            For directly seeing and interactively adjusting page breaks and preventing orphans/widows as you write, LibreOffice offers a more immediate and visually intuitive experience. You see the results directly on the screen.
+
+                            With Markdown + Pandoc, you adopt a more iterative approach:
+
+                                Write in Markdown (focus on content).
+                                Convert to PDF (or your target format).
+                                Preview the output to check pagination and layout.
+                                Adjust the Markdown content or Pandoc conversion options (or LaTeX settings if needed).
+                                Repeat steps 2-4 until satisfied.
+
+                            Which is "simpler" depends on your tolerance for this iterative process versus the direct visual feedback of a WYSIWYG editor.
+
+                            Recommendation:
+
+                            Given your concern about pagination and layout, especially avoiding orphans and widows, you might find a hybrid approach beneficial initially:
+
+                                Write the bulk of your content in Markdown for the benefits of focus and clean syntax.
+                                Convert to a draft PDF frequently using Pandoc to check the overall flow and page breaks.
+                                If you encounter persistent issues with orphans or widows or need very precise page control, you could consider:
+                                    Learning some basic LaTeX commands to address these specifically and including them in your Markdown (within raw LaTeX blocks).
+                                    Exploring custom Pandoc LaTeX templates that might have better default settings for these aspects.
+                                    As a last resort, you could potentially bring the final PDF into a PDF editor to make minor adjustments, though this breaks the "pure" Markdown workflow.
+
+                            Ultimately, if seeing the exact pagination and layout in real-time is a high priority and your report's formatting needs aren't overly complex, LibreOffice might feel simpler in that specific regard. However, for the overall writing process and managing academic elements like citations, Markdown + Pandoc offers significant advantages that might outweigh the iterative approach to layout for many users.
+
+                            Could you give me an example of what a block of raw Latex looks like in Markdown, preferably using some commands that are relevant to the questions raised here previously? And, I would also be interested in seeing a sample of some bibliography information, probably using Yaml as that seems to me to be the simplest format-option. Note though: I would not say (not to my untrained eye at least) that Yaml would be the simplest option just because it's the simplest format by itself, i.e. .bib with the relevant exporting-tool (like Zotero) might actually be simpler, but I'm sure you can inform me in that case
+
+                            You're right to consider the overall workflow when thinking about "simplicity." While YAML might seem straightforward in its structure, the ecosystem around .bib files and bibliography management tools like Zotero can indeed make that route simpler in practice for many academic writers.
+
+                            Let's look at examples of both raw LaTeX in Markdown and a YAML bibliography entry:
+
+                            1. Raw LaTeX in Markdown for Pagination and Layout:
+
+                            Here's an example of how you might embed raw LaTeX commands within your Markdown to influence pagination and prevent orphans/widows when converting to PDF via Pandoc:
+                            Markdown
+
+                            ---
+                            title: My Report
+                            author: Your Name
+                            date: May 13, 2025
+                            output: pdf
+                            ---
+
+# Introduction
+
+                            This is the first section of my report. We will discuss important aspects of the topic here.
+
+                            A paragraph that might be in danger of having an orphan at the end of a page. It's important to ensure that single lines don't get left behind on a previous page.
+
+                            ```latex
+                            \widowpenalty=300
+                            \clubpenalty=300
+
+                            This paragraph follows the LaTeX commands aimed at preventing single lines at the beginning or end of a page. We hope these penalties will encourage LaTeX to keep related lines together.
+                            Further Discussion
+
+                            More content follows...
+
+
+                            **Explanation:**
+
+                            * **` ```latex ... ``` `:** This denotes a raw LaTeX block in Markdown. Pandoc will pass the content within these blocks directly to the LaTeX engine when generating the PDF.
+                            * **`\widowpenalty=300`:** This command in LaTeX discourages widows. A widow is the last line of a paragraph appearing alone at the top of the next page. The higher the penalty value (typically between 0 and 10000), the stronger the discouragement.
+                            * **`\clubpenalty=300`:** This command discourages clubs. A club is the first line of a paragraph appearing alone at the bottom of a page. Similar to `\widowpenalty`, a higher value means stronger discouragement.
+
+                            **Important Considerations for Raw LaTeX:**
+
+                            * **Output Format:** Raw LaTeX will only be interpreted by LaTeX. It won't have any effect if you convert your Markdown to other formats like HTML or EPUB.
+                            * **LaTeX Knowledge:** Using raw LaTeX effectively requires some understanding of LaTeX commands.
+                            * **Template Overrides:** For more complex layout adjustments, it's often better to modify a Pandoc LaTeX template rather than embedding numerous raw LaTeX blocks in your Markdown.
+
+                            **2. Sample Bibliography Information in YAML:**
+
+                            Here's an example of a bibliography entry in YAML format:
+
+                            ```yaml
+                            references:
+                            - id: smith2023
+                              type: book
+                              author:
+                              - family: Smith
+                                given: John
+                              title: Important Findings in Our Field
+                              publisher: Academic Press
+                              issued:
+                                year: 2023
+                            - id: jones2022
+                              type: article-journal
+                              author:
+                              - family: Jones
+                                given: Alice
+                              - family: Brown
+                                given: Bob
+                              title: New Perspectives on a Classic Problem
+                              journal: Journal of Advanced Research
+                              volume: 15
+                              issue: 2
+                              pages: 112-125
+                              issued:
+                                year: 2022
+
+                            Explanation:
+
+                                references:: This is the top-level key indicating the start of your bibliography entries.
+                                - id: smith2023: Each entry starts with a hyphen (-) indicating a list item, and id is a unique identifier that you will use to cite this work in your Markdown (e.g., [@smith2023]).
+                                type: book / type: article-journal: Specifies the type of bibliographic item. Pandoc supports various types.
+                                author:: An author can be a single person or a list of people. Each person has family (last name) and given (first name).
+                                title:: The title of the book or article.
+                                publisher: / journal:: The publisher of the book or the name of the journal.
+                                issued:: The publication date, typically with a year. You can also include month and day if needed.
+                                volume:, issue:, pages:: Specific details for journal articles.
+
+                            Why .bib with a Tool Might Be Simpler in Practice:
+
+                            You are absolutely correct in your intuition here. While YAML has a relatively clean syntax, using a bibliography management tool like Zotero offers a more integrated and often simpler workflow for several reasons:
+
+                                Automatic Data Extraction: Zotero (and similar tools) can automatically extract metadata (author, title, year, etc.) from various sources like web pages, PDFs, and databases. You don't have to manually enter all this information in YAML.
+                                Organization and Management: These tools allow you to organize your research materials, add notes, and easily manage a large library of sources.
+                                Effortless Export to .bib: Zotero and other tools can export your bibliography in the .bib format with a few clicks. Pandoc has excellent support for .bib files.
+                                Citation Style Integration: Zotero allows you to choose from a vast library of citation styles, and it will format your citations and bibliography according to the selected style when exporting to .bib. Pandoc can then use this .bib file and a CSL (Citation Style Language) file to generate correctly formatted citations in your output document.
+
+                            In summary:
+
+                            While YAML is a readable data serialization format, for managing academic bibliographies, the ecosystem and features offered by dedicated tools like Zotero and the widespread compatibility with the .bib format often make that a more practical and ultimately simpler solution for many researchers. You avoid the manual entry and formatting of each entry in YAML.
+
+                            If your bibliography is very small and unlikely to grow, YAML might be manageable. However, for most academic work, leveraging a bibliography manager and the .bib format is highly recommended. You would then tell Pandoc to use your .bib file during the conversion process.
+
+                            As the bibliographic information for my particular report is only three one or two Pdf-documents, I think I might be (at least tempted to) use the simpler Yaml inline-format here, but it's definitely something to consider.
+
+                            Ah, with only one or two PDF documents as your bibliographic sources for this specific report, the idea of using the simpler YAML inline format becomes quite appealing! For such a small number of references, the overhead of setting up a full bibliography manager and exporting to .bib might indeed feel like overkill.
+
+                            In that case, embedding the YAML directly within your Markdown document can be a very efficient way to handle your citations. Pandoc fully supports this approach.
+
+                            Here's how you would typically structure your Markdown file with inline YAML bibliography:
+                            Markdown
+
+                            ---
+                            title: My Concise Report
+                            author: Your Name
+                            date: May 13, 2025
+                            output: pdf
+                            bibliography:
+                            - id: author2023
+                              type: article-journal
+                              author:
+                              - family: Author
+                                given: A.
+                              title: Key Findings from Our Research
+                              journal: Journal of Important Results
+                              volume: 1
+                              issue: 1
+                              pages: 1-10
+                              issued:
+                                year: 2023
+                            - id: another2024
+                              type: book
+                              author:
+                              - family: Another
+                                given: B.
+                              title: A Comprehensive Overview
+                              publisher: Academic Publishers Inc.
+                              issued:
+                                year: 2024
+                            ---
+
+# Introduction
+
+                            Here, I cite the important findings from Author et al. [@author2023]. This is further supported by the comprehensive overview in Another (2024) [@another2024].
+
+## Main Body
+
+                            More text and potential further citations...
+
+# Conclusion
+
+                            Concluding remarks.
+
+                            Explanation:
+
+                                bibliography: in the YAML metadata: Instead of pointing to an external .bib file, you directly embed your bibliography entries as a YAML list under the bibliography key in the document's metadata (the part enclosed by ---).
+                                - id: ...: Each bibliography entry is a YAML dictionary with a unique id that you'll use for in-text citations.
+                                type:, author:, title:, journal:/publisher:, issued:, pages:: These are the same fields we discussed earlier for the separate YAML file.
+
+                            Advantages of Inline YAML for a Small Number of References:
+
+                                Self-Contained: Your bibliography is directly within your Markdown file, making it easy to share and manage for this specific report.
+                                No External File Management: You don't need to worry about keeping a separate .bib file in the correct location.
+                                Simpler for Very Few Sources: For just one or two entries, the manual entry in YAML might be quicker than exporting from a bibliography manager.
+
+                            Things to Keep in Mind:
+
+                                Complexity for More Sources: If your bibliography grows significantly in the future, managing it inline can become cumbersome.
+                                Reusability: Inline bibliographies are less reusable across different documents compared to a central .bib file.
+
+                            Therefore, for your current situation with just one or two PDF documents, using the inline YAML format within your Markdown metadata is a perfectly reasonable and potentially simpler approach. Just ensure you correctly format the YAML entries. Pandoc will happily process these inline references when generating your output.
+
+                            Go ahead and give it a try! It might be the most straightforward solution for your immediate needs. If your referencing needs expand in future projects, you can always transition to using a dedicated bibliography manager and .bib files then.
+
+                            The one question I have is how I format the information for the book on the last page of my report with that approach. Do you know what I'm referring to?
+
+                            Ah, you're likely referring to a situation where you might want to cite a specific page number from the book in your inline YAML bibliography. Yes, Pandoc allows you to include that information when you make the in-text citation.
+
+                            Here's how you would do it with the inline YAML approach you're considering:
+
+                            1. Your Inline YAML Bibliography (as before):
+                            Markdown
+
+                            ---
+                            title: My Concise Report
+                            author: Your Name
+                            date: May 13, 2025
+                            output: pdf
+                            bibliography:
+                            - id: author2023
+                              type: article-journal
+                              author:
+                              - family: Author
+                                given: A.
+                              title: Key Findings from Our Research
+                              journal: Journal of Important Results
+                              volume: 1
+                              issue: 1
+                              pages: 1-10
+                              issued:
+                                year: 2023
+                            - id: another2024
+                              type: book
+                              author:
+                              - family: Another
+                                given: B.
+                              title: A Comprehensive Overview
+                              publisher: Academic Publishers Inc.
+                              issued:
+                                year: 2024
+                            ---
+
+# Introduction
+
+                            Here, I cite the important findings from Author et al. [@author2023, p. 5]. This is further supported by the comprehensive overview in Another (2024) [@another2024, p. 123].
+
+## Main Body
+
+                            More text and potential further citations...
+
+# Conclusion
+
+                            Concluding remarks.
+
+                            2. In-text Citation with Page Number:
+
+                            The key is how you format the citation within your text:
+
+                                [@citation_id, p. <page_number>]: To cite a specific page, you simply add , p. <page_number> directly within the square brackets following the citation ID.
+
+                            In the example above:
+
+                                [@author2023, p. 5] will cite the article by "Author et al." and indicate that the information comes from page 5.
+                                [@another2024, p. 123] will cite the book by "Another (2024)" and specify page 123.
+
+                            Pandoc's Citation Processing:
+
+                            When Pandoc processes your Markdown with the --citeproc option (which is usually necessary for handling citations and bibliographies), it will interpret this syntax and format the citation according to the chosen citation style (specified via the --csl option if you're using one, or a default style if not specified). The page number will typically be included in the in-text citation as required by the style (e.g., "(Author, 2023, p. 5)" in APA style).  
+
+                            Important Note on Citation Styles:
+
+                            The exact formatting of the in-text citation and how the page number is displayed will depend on the Citation Style Language (CSL) file that Pandoc is using. Some styles might place the page number directly in the parenthesis, while others might handle it differently. If you have a specific style requirement, you'll want to ensure you're using the appropriate .csl file with Pandoc.
+
+                            But yes, to directly answer your question: you include the page number within the square brackets of your in-text citation, following the citation ID and a comma, like this: [@your_citation_id, p.your_page_number]. Pandoc will then handle it during the conversion process, provided you are using --citeproc.
+
+                            I was thinking more of the last page of my report where the title, publisher, year of publishing (etc) for the books are printed. Do I need to specify how that should be formatted, and would I need to specify that by hand using Markdown if I use this Yaml-approach?
+
+                            Ah, I understand now! You're asking about the bibliography section at the end of your report, where the full details of the cited book (title, publisher, year, etc.) are listed.
+
+                            With the inline YAML bibliography approach, Pandoc will automatically generate the bibliography section for you based on the information you provide in the YAML and the citation style you are using (or the default style if none is specified).  
+
+                            You do not need to manually format the bibliography entries using Markdown. Pandoc takes the structured data from your YAML and formats it according to the rules of the citation style.
+
+                            Here's how it works:
+
+                                You provide the bibliographic information in the YAML metadata with fields like title, publisher, issued (year), etc., as we discussed.
+                                You cite these items in your text using the @ syntax with their respective ids (e.g., [@another2024]).   
+
+                            When you run Pandoc to convert your Markdown to your desired output format (like PDF), you use the --citeproc option. This tells Pandoc to process the citations and generate the bibliography.  
+                            Pandoc, along with a CSL (Citation Style Language) file (specified with --csl), will take the information from your YAML and format the bibliography entries according to the chosen style. If you don't specify a CSL file, Pandoc will use a default style.  
+
+                            Example Pandoc Command:
+                            Bash
+
+                            pandoc your_report.md --output your_report.pdf --citeproc
+
+                            If you want to use a specific citation style (e.g., APA, MLA, Chicago):
+                            Bash
+
+                            pandoc your_report.md --output your_report.pdf --citeproc --csl apa.csl
+
+                            You would need to download the .csl file for your desired style and provide its path to Pandoc. You can find many CSL files in the CSL Styles Repository.  
+
+                            In summary:
+
+                                You provide the raw bibliographic data in a structured format (YAML in your case).
+                                Pandoc, guided by a citation style file, handles the formatting of the bibliography section automatically.   
+
+                                You don't need to manually type out or format the bibliography entries in Markdown.
+
+                            So, to answer your question directly: No, you do not need to specify the formatting of the bibliography by hand using Markdown if you use the inline YAML approach (and the --citeproc option with Pandoc). Pandoc takes care of that for you based on the citation style.
+
+                            This is one of the significant advantages of using a tool like Pandoc for academic writing – it separates the content (your Markdown) from the presentation (the formatted citations and bibliography).
+                            Pandoc User's Guide
+                            Source icon
+                            pandoc.org
+                            4.5 Bibliographies and citations | R Markdown Cookbook
+                            Source icon
+                            bookdown.org
+                            Scientific Writing with Markdown | Jaan Tollander de Balsch
+                            Source icon
+                            jaantollander.com
+                            Citations - Pandoc
+                            Source icon
+                            pandoc.org
+                            Specifying a citation style - Pandoc
+                            Source icon
+                            pandoc.org
+
+                            Great. That's what I was looking for. As you might well have suspected, the thing I was contemplating was if I would have needed to specify the citation-styles by hand somewhere, but the fact that the citation-styles for many popular formats can be downloaded ready to use is great news.
+
+                            You've got it exactly right! The availability of ready-to-use CSL (Citation Style Language) files is a huge time-saver and one of the real strengths of using Pandoc for academic writing. You don't have to worry about the intricate rules of different citation styles; you just need to point Pandoc to the correct .csl file.
+
+                            Think of it this way: the CSL file acts like a set of instructions for Pandoc. It tells Pandoc how to format both the in-text citations (e.g., author-year, numeric) and the bibliography entries (the order of information, punctuation, italics, etc.) according to the specific requirements of a style like APA, MLA, Chicago, Vancouver, and many more.
+
+                            Here's a quick recap of why this is so convenient:
+
+                                Vast Repository: The CSL Styles Repository is extensive, covering thousands of academic and journal-specific styles. You're very likely to find the one you need.
+                                Standardized Format: CSL is a well-defined XML-based format, ensuring consistency across different styles and implementations.
+                                Ease of Use: Once you have the .csl file, you simply tell Pandoc to use it with the --csl option during conversion. Pandoc and citeproc (the citation processor Pandoc uses) do the rest.
+                                Focus on Content: This system allows you to focus on writing your report in Markdown without getting bogged down in the minutiae of citation formatting. You handle the style at the conversion stage.
+                                Flexibility: If you need to submit your report to a different publication with a different citation style, you often just need to switch the --csl file in your Pandoc command – no need to reformat your entire bibliography!
+
+                            So, your intuition was spot on. The fact that these style definitions are readily available and can be easily used with Pandoc is a major advantage of this workflow, especially when dealing with academic reports that have strict formatting requirements. It definitely beats having to manually format everything yourself!
+
+                            Happy writing! Let me know if any other questions pop up as you work on your report.
+Markdown Tables
+                            Could you give me a breakdown of features available for creating tables in Markdown? Maybe both some basic features, and perhaps also some enhanced ones that I might want to use when writing an academic report?
+
+                            You're right, tables are crucial for presenting data in academic reports. Markdown offers a few ways to create them, ranging from basic to more enhanced, especially when combined with Pandoc. Here's a breakdown:
+
+                            1. Basic Markdown Tables (Pipe Tables):
+
+                            This is the most common and widely supported way to create tables in standard Markdown.
+
+                                Syntax:
+                                    Rows are separated by newlines.
+                                    Columns within a row are separated by pipe characters (|).
+                                    The first row is the header row.
+                                    A separator row consisting of hyphens (-) and optionally colons (:) is placed below the header to define column alignment.
+
+                                Example:
+                                Markdown
+
+                                | Header 1 | Header 2 | Header 3 |
+                                | -------- | :-------: | --------: |
+                                | Cell 1   | Cell 2    | Cell 3    |
+                                | Cell 4   | Cell 5    | Cell 6    |
+
+                                Alignment:
+                                    | -------- | : Left alignment (default).
+                                    | :-------: | : Center alignment (colons on both sides).
+                                    | --------: | : Right alignment (colon on the right side).
+
+                                Pros:
+                                    Simple and relatively easy to read in plain text.
+                                    Universally supported by most Markdown processors.
+
+                                Cons:
+                                    Can become difficult to manage for tables with many columns or complex content.
+                                    Limited formatting options within the table itself (e.g., no multi-row or multi-column cells in basic Markdown).
+
+                            2. Enhanced Markdown Tables (Beyond Basic Syntax):
+
+                            While standard Markdown's capabilities are limited, some Markdown extensions and tools like Pandoc enhance table creation:
+
+                                Simple Tables (Pandoc Extension):
+
+                                    Syntax: Uses hyphens and spaces to create table borders. Column alignment is determined by the relative positioning of the header text to the hyphens.
+
+                                    Example:
+                                    Markdown
+
+                                Header 1   Header 2    Header 3
+                                ---------- ----------- ---------
+                                Cell 1     Cell 2      Cell 3
+                                Cell 4     Cell 5      Cell 6
+
+                                Alignment:
+                                    Left: Header text aligned to the left of the hyphens.
+                                    Right: Header text aligned to the right of the hyphens.
+                                    Center: Header text centered over the hyphens.
+
+                                Pros: Can be slightly more readable for simple tables in plain text.
+
+                                Cons: Less widely supported than pipe tables and can be tricky with varying content lengths.
+
+                            Multiline Tables (Pandoc Extension):
+
+                                Syntax: Allows for line breaks within table cells. Cells are still separated by |, but you can have multiple lines of text within a single cell.
+
+                                Example:
+                                Markdown
+
+                                | Header 1 | Header 2             |
+                                | -------- | ---------------------- |
+                                | Line 1   | This cell has         |
+                                | Line 2   | multiple lines of text |
+                                | Another  | And so does this one.  |
+
+                                Pros: Useful for including more detailed information within table cells without making the rows excessively tall in the Markdown source.
+
+                                Cons: Still limited in terms of complex formatting.
+
+                            Grid Tables (Pandoc Extension):
+
+                                Syntax: Uses a grid of +, -, and | characters to define the table structure.
+
+                                Example:
+                                Markdown
+
+                                    +------------+------------+------------+
+                                    | Header 1   | Header 2   | Header 3   |
+                                    +============+============+============+
+                                    | Cell 1     | Cell 2     | Cell 3     |
+                                    +------------+------------+------------+
+                                    | Cell 4     | Cell 5     | Cell 6     |
+                                    +------------+------------+------------+
+
+                                    Pros: Can represent more complex table structures visually in plain text, including multi-line cells more clearly.
+
+                                    Cons: Can be quite verbose and less readable for simple tables.
+
+                            3. LaTeX Tables (for PDF Output via Pandoc):
+
+                            For academic reports often requiring precise formatting, you can embed raw LaTeX table code within your Markdown. Pandoc will pass this LaTeX directly to the LaTeX engine when generating a PDF.
+
+                                Syntax: Use standard LaTeX table environments like \begin{tabular}{...} ... \end{tabular}.
+
+                                Example:
+                                Markdown
+
+                                ```latex
+                                \begin{tabular}{|l|c|r|}
+                                \hline
+                                Header 1 & Header 2 & Header 3 \\
+                                \hline
+                                Cell 1   & Cell 2   & Cell 3   \\
+                                Cell 4   & Cell 5   & Cell 6   \\
+                                \hline
+                                \end{tabular}
+
+                                Enhanced Features (via LaTeX):
+                                    Multi-row and Multi-column Cells: Use commands like \multirow and \multicolumn.
+                                    Precise Formatting: Control borders, spacing, fonts, and more.
+                                    Complex Layouts: Create tables with merged cells, spanning headers, etc.
+
+                                Pros: Offers the full power and flexibility of LaTeX for table creation.
+
+                                Cons: Requires knowledge of LaTeX syntax and will only work when converting to LaTeX-based formats (like PDF). The Markdown source becomes less readable.
+
+                            Which to Use for an Academic Report?
+
+                                For simple data presentation where basic alignment is sufficient, basic Markdown (pipe tables) can work well and maintains readability across different output formats.
+                                If you need line breaks within cells for more detailed content without making the Markdown too wide, Pandoc's Multiline Tables are a good option.
+                                For more complex table structures, especially when targeting PDF output, embedding LaTeX tables provides the most control and allows for features like multi-row and multi-column cells. This is often necessary for publication-quality academic reports.
+                                Grid tables might be useful if you need a visual representation of a complex table in your Markdown source, even if it's a bit verbose.
+
+                            Recommendation:
+
+                            Start with basic Markdown (pipe tables) for simple data. If you encounter limitations, especially for PDF output, consider learning some basic LaTeX table syntax and embedding it directly. This gives you the most flexibility for complex academic tables. Pandoc will seamlessly integrate the LaTeX into your final PDF document.
+
+                            Remember to experiment with these different options to see what best suits your needs and the complexity of the data you need to present.
+
