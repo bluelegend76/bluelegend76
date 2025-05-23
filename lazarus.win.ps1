@@ -52,10 +52,8 @@ choco install microsoft-windows-terminal -y
 
 choco upgrade git -y
 choco install vim -y
-choco install emacs.install -y
 # ___Vundle_Windows=install
 
-choco install neovim -y
 choco install autohotkey -y
 choco install powertoys -y
 # pdf reader (with dark mode / command-line-based search)
@@ -66,13 +64,15 @@ choco install freecommander -y
 choco install keepassx -y
 choco install vlc -y
 
-choco install nodejs-lts
-choco install yarn
+# choco install neovim -y
+# choco install nodejs-lts
+# choco install yarn
 choco install nushell -y
 # choco install python -y
 choco install jupyter python3-virtualenv -y
 # choco install jupyterlab -y
 
+choco install emacs.install -y
 # Install DotNet Interactive
 dotnet tool install -g Microsoft.DotNet.Interactive
 # Register the DotNet Interactive kernel with Jupyter
