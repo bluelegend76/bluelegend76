@@ -7,7 +7,7 @@ ___calendarnow
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
-TODO ADD 1 = STARTUPS 1 {{{
+STARTUPS 1 {{{
 
 Vanki LearnQna ----
   ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
@@ -66,6 +66,7 @@ Langs1 Ref-lists ----  __
   --
   ~/gdrive/rsc/media/pic-graphics/shorth/
 
+  https://www.youtube.com/watch?v=Xx8FqNu0w-k  #befragung mit T.G.
 LANG-DB 1:
   gvim -p ../../db/langdb.legacy.list/langdb.txt ../../db/langdb.legacy.list/langdb.txt ../ref/lang/dandict2mini.txt
                                            LangsDb.legacy ----
@@ -316,44 +317,6 @@ v 19
     - Oeri gvyy xynffra (=oöewn fxvffn)
   - ska jag kunna lägga de timmarna jag vill/känner att jag behöver på det, så märker jag att jag bränner för hårt, både fysiskt men framförallt psykiskt/mentalt
 
-t a s k - i n s t r u c t i o n s {{{
-
-280794: Create installation-functionality handler in Updater {{{
-  - installer shall run exe-file as a process (silently)  @e
-      (+= Kolla material m. Erik)
-  - KUNNA/TESTA ANROPA WEB-API:T OCH FÅ UT VERSIONSNUMMER MM FRÅN ENDPOINT  @e
-  L. Malm: 'Hur kan vi testköra en endpoint för att få tillbaks ett versionsnummer?'
-      Kunna testköra sina Endpoints: Postman (=vanligast)
-      - TESTA I SWAGGER  =??
-      - FÖRSLAG/STRATEGI: BYGG GRUNDFUNKTIONALITET I WEB-API:T MED CONTROLLERS; SENARE: BRYT UT FUNKTIONALITEN MER EXAKT TILL FÄRDIG KLASSTRUKTUR
-
-  Abbe: 'Ska funktionalitet i Core användas/replikeras för att <<läsa av versionsnummer>>'(????)
-Abbe: Innehåller inte Core (m.fl.) filer info om var de ska/kommer att installeras?
-
-  Calculate checksum for file 1 (exe) + diff.sized exe(?)
-
-- TC Core är installerat.
-  Hur hittar och läser vi av versions-nummer (och path?) för ett installerat program?  @e
-  --
-  "Kolla i Windows Registry = ska innehålla "
-}}}
-  281351: Create tokenServiceHandler for getting client access token
-Get client access token from where?  @e
-
-  281111: Create http-client for handling batch-requests to graph
-281103: Create http-client for handling requests to sharepoint
-281370: Retrieve user group-memberships
-280792: Handling file-information in Updater
-280793: Handle process running in Updater
-        Launch installer-files downloaded with Updater
-281574: Handle retrieval of application-index
-281578: Handle retrieval of currently installed application-version
-281582: Handle downloading application-installers
-
-show updater-client in 'system-tray'
-
-}}}
-
   }}}
   2025-05-06 ti {{{
   }}}
@@ -563,37 +526,6 @@ Scratch-Area + todoscratch/'hänglista' + Daily {{{
 TODO: STYTR-MALL.TXT till TELEFONEN
     (+Senare: BOLLTRÄNINGSMALLAR.TXT inkl. Beskrivningarna)
 
-- Genomläsning TruckCom Core        @#
-- Gemini-frågor på TCC-kod(generellt) + på Uppgifts-Instruktionerna
-    - Warehouse Service-manualen    @#
- - Vanki-Deck 1 med Peter L   @@
-     ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
-- lägg ut senaste 2 videos med Henrik och Erik(!)  @@
-    senaste snack med Erik:
-    - checksum (=gör checksum för storlek för två filer + jämför dem)
-    = Installation/Installer Utilities =klass+project
-        som innehåller metoden för att räkna ut checksumman
-    +anropa den i testkonsoll-projektet o få ut checksum för första filen
-    +tredje klass i Utils: =jämföra två checksums
-    (test på samma fil x2 = samma resultat; test på två olika TC-exe:erna = inte samma resultat)
-     + interface
-     + IServiceCollection
-     compare 2 checksums
-
-    = Från Updater-koden kunna läsa av/avgöra vilken version av TCC som är installerat på datorn (=inte kunna hantera paket med choco etc)
-    = Bästa sätt att ta reda på om TC är installerat  (=när/hur kan jag avgöra att det inte är installerat? - +=vilka platser att kolla på)
-    - LISTA/FÖRSLAG: FEATURES ATT KUNNA LÄGGA TILL I FRAMTIDEN
-+ Mermaid-koden för/från Wikin  @#
-
-- Ny Vanki-Deck DotNet Core 23 (*)  @@
----- store
-- begärt ut (och tittat på) figma-skiss från Ida  # + signalerat senare att vill ha möte med Ida och Osman/Henrik/Thomas  @@
-    - hälsat på SW 5
-- CAN-skissen (+Manual)  @#
----- Vad Lärt?
-- Framkant i Planering                      ##
-- förhandling, tydlighet och kommunikation  ##
- - vikten av priming-faktorer               ##
 
   Could you help me generate XML-comment documentation for this interface?
   Could you help me generate XML-comment documentation for the piece of code I have highlighted?

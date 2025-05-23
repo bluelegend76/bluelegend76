@@ -4083,7 +4083,7 @@ Visual Studio:
 
     private set;
 ptools.Features-Hitlist
-            Unit Testing
+            'minimal Unit-Testing examples'  # or using F#-REPL
             .
 DotNet (Classes etc) ----
                 DDE

@@ -28,9 +28,8 @@ Installing Spectre Console into C# project
     NuGet Package-Manager:
     Install-Package Spectre.Console
 
-    Add using to C#-file:
+    Add 'using' to C#-file:
     using Spectre.Console;
-
 
     public class SpectreExample {
       public static void Main(string[] args) {
