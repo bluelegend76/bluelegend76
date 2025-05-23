@@ -596,6 +596,7 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/RevealImpress.txt              @@
 
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Vimscr.txt                     @@@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Markdown.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/FuncPy.txt                     @@
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/Lua.txt                        @
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/JupNoteb-iPy-Pandas.txt        @
@@ -614,6 +615,7 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
 ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/ {{{
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/NuShell.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/LyScheme.txt           @@
+  ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/SchemeLisp.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/INKSCAPE.txt           @@
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Dlang.txt              @
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Js-Cs_Rx.txt
@@ -626,6 +628,7 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/AspDnc.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/React.txt
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Gimp-CPyScm.txt
+Git (including crafting git-tools and git pipelines **)
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/prospects/Git-wActions.txt
 }}}
 ----
@@ -1323,9 +1326,14 @@ Office.Rush [1]  # rush through + take review/notes {{{
 # = Suited for Ontheroad
 ¤ = Toyota (etc) prio  [=Mainly CleanUp-Def (etc)]
 
-
+---- office.rush --------
 CSound[FLOSS-MAN + Book] + Scoll. [WEB-MINI; sclang|scide]
-    ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollDocs-GetStarted.txt
+. {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundBook.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/man-tut/csound-flossman_2011.txt
+  ----
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollDocs-GetStarted.txt
+}}}
 
 sqlitebrowser
 F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
@@ -1426,6 +1434,7 @@ Buckey's Godot
 }}}
 office.Overview [2]  # write summary|overview {{{
 
+---- office.Overview --------
 ANKIMAN 2021+
     ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
 Spectre Console  __ ¤¤
@@ -1475,11 +1484,6 @@ A{VipJgv:s/[^ ],b ,e[^ ]//g
     ../todo/MasterlistDownload-onedeepmans-online.txt  # Win
 RUSH/OVERVIEW DOKS-LIST[!!] {{{
   ...tagged... {{{
-
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/bluebash.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/1_unpowtools-3ed2002_1.Tags1.txt
-~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt
 
 ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/OrgmodeMan.tags1.txt
 ~/Dropbox/rsc/Doks/phone/Comp/editor/emacs/emacsmanual1.tags1.txt
@@ -1566,20 +1570,23 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 ~/Dropbox/bin/scripts/va/doc/svsyndb-tagging.txt
 }}}
 
-
-ReactiveUI
-  ..
+---- Office.Slog --------
 MongoDb
   gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb-profnotes,pro-mongodb-guide_2015}.txt
         (Done: mongodb4-qsguide_2018.txt)
 Kivy **
   ~/Empire/Doks/Comp/lang/py/webmob/kivy/KivyDocs_2023.txt
 CSOUND-BOOK (+Csound FlossMan)
+. {{{
+}}}
 OwlSemweb
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/ontology/Sparql-OWL_3wsites.txt  #All code for last Ref
 LILYPOND + SCHEME ****!!
   ~/Dropbox/rsc/Doks/phone/Comp/mu/ly/LilypondScheme-Book.txt **!!
-    ~/Dropbox/rsc/Doks/phone/Comp/mu/au/csound/CsoundRefman-Startpart.txt
+ReactiveUI
+. {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/ReactiveUI-Docs.txt
+}}}
 ----
 Pyramid
   ~/Empire/Doks/Comp/lang/py/webmob/pyramid/PyramidFrawew-Docs_2023.txt
@@ -2297,6 +2304,7 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 -- ontheroad.store ---- ___index=4 [4] {{{
 
+---- ontheroad.store --------
 Define Ontologies (=OWL etc)
     FUNCPY ____ __  ****
 Org-Man  ¤¤¤
@@ -13128,4 +13136,50 @@ help:
 clean:
 	-rm -f $(TARGETS) 
 
+
+Based on the search results, the
+closest quote I could find comes
+from a recent Newsweek article
+(April 23, 2025):
+
+When asked if [Pete] Hegseth should
+be fired by Trump or asked to
+resign amid the reports he shared
+attack-plans in a second
+Signal-chat with his wife, brother
+and personal lawyer, [Lt. General Ben]
+Hodges told Newsweek via email
+
+  "I think the first principle of
+   leadership is a willingness to
+   accept responsibility."
+
+He then elaborates on this by saying:
+
+  "I see zero evidence that the
+   President, Mr Hegseth, or frankly
+   anyone in this Administration is
+   actually willing to accept
+   responsibility for any mistakes.
+
+   This is dangerous because if one
+   doesn't acknowledge a mistake,
+   then there is little likelihood
+   that the necessary corrections
+   will be made to prevent it from
+   happening again."
+
+This aligns very closely with what
+you remember hearing, including the
+emphasis on accepting
+responsibility, particularly in the
+context of mistakes. While it might
+not be from a newscast, this
+written quote captures the essence
+of what you recalled.
+
+It seems General Hodges
+consistently emphasizes the
+importance of leaders taking
+responsibility. 
 
