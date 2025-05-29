@@ -309,7 +309,7 @@ Markdown
                         header                    #
                         paragraph
                         fetstil, kursivering      *fetstil*  _kursivt_
-                        blockquote                     > Mitt citat
+                        blockquote                > Mitt citat
                         list                      - punktlista   1. 2. numrerad lista
                         image                     ![bildtext](/sökväg/fil.png)  #+as var-reference(!)
                         code                      `   ```python

@@ -1574,14 +1574,14 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 MongoDb
   gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb-profnotes,pro-mongodb-guide_2015}.txt
         (Done: mongodb4-qsguide_2018.txt)
-Kivy **
+Kivy *
   ~/Empire/Doks/Comp/lang/py/webmob/kivy/KivyDocs_2023.txt
 CSOUND-BOOK (+Csound FlossMan)
 . {{{
 }}}
 OwlSemweb
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/ontology/Sparql-OWL_3wsites.txt  #All code for last Ref
-LILYPOND + SCHEME ****!!
+LILYPOND + SCHEME **!!
   ~/Dropbox/rsc/Doks/phone/Comp/mu/ly/LilypondScheme-Book.txt **!!
 ReactiveUI
 . {{{
@@ -2306,7 +2306,7 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
 
 ---- ontheroad.store --------
 Define Ontologies (=OWL etc)
-    FUNCPY ____ __  ****
+    FUNCPY ____ __  **
 Org-Man  ¤¤¤
 SASS+Compass  ¤¤¤ {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/c3/sass/SassCompCb_2016.txt
