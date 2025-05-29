@@ -1336,7 +1336,7 @@ CSound[FLOSS-MAN + Book] + Scoll. [WEB-MINI; sclang|scide]
 }}}
 
 sqlitebrowser
-F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+F# FunProfit + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/FsFunprofit-Online.tags1.txt
 
@@ -1437,6 +1437,10 @@ office.Overview [2]  # write summary|overview {{{
 ---- office.Overview --------
 ANKIMAN 2021+
     ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
+Lincmd.Org
+. {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt
+}}}
 Spectre Console  __ ¤¤
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
