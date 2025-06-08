@@ -192,6 +192,7 @@ yay -S insync
 clear
 echo "Installing some utilities (curl, rename, tree, ag/agrep, scrot, tesseract): ..."
 ## pacman -S curl
+sudo pacman -S bash-completion
 sudo pacman -S mc
 sudo pacman -S cmake cgdb
 sudo pacman -S renameutils

@@ -711,23 +711,24 @@ Csound
 
                         CSound:
 
-                            Plugin: csound-mode.
-                            Features:
-                                REPL (Read-Eval-Print Loop) based on running a Csound instance through the Csound API.
-                                Interactive code evaluation.
-                                Code completion.
-                                ElDoc (displays documentation in the minibuffer).
-                                Indentation rules.
-                                Syntax highlighting and rainbow delimited score parameters.
-                            Installation: Can be installed from MELPA (M-x package-install RET csound-mode RET) or manually by adding it to the load-path. Requires Emacs 25+ and Csound 6.10+.
-                            Alternative Plugin: Csound-x offers a dual-mode approach (orchestra and score in separate buffers) with features like compiling orchestras/scores, playing files, formatting, function visualization, score editing (column alignment), and opcode documentation access. Installation involves downloading and adding to Emacs' load-path.   
+                        Plugin: csound-mode.
+                        Features:
+                        - REPL (Read-Eval-Print Loop) based on running a Csound instance through the Csound API.
+                        - Interactive code-evaluation.
+                        - Code-completion.
+                        - ElDoc (displays documentation in the minibuffer).
+                        - Indentation-rules.
+                        - Syntax-highlighting and rainbow-delimited score-parameters.
+
+                        Installation: Can be installed from MELPA (M-x package-install RET csound-mode RET) or manually by adding it to the load-path. Requires Emacs 25+ and Csound 6.10+.
+                        Alternative Plugin: Csound-x offers a dual-mode approach (orchestra and score in separate buffers) with features like compiling orchestras/scores, playing files, formatting, function visualization, score editing (column alignment), and opcode documentation access. Installation involves downloading and adding to Emacs' load-path.   
 
                         SuperCollider:
 
-                            Plugin: scel.
-                            Features: Provides an Emacs Lisp interface to the SuperCollider system. Allows running sclang (the SuperCollider language interpreter) from within Emacs. Includes key bindings and potentially integration with the Help browser.
-                            Installation: Can be installed using SuperCollider's Quarks package manager (Quarks.install("https://github.com/supercollider/scel")), from a Debian package (supercollider-emacs), or by compiling from source with the -DSC_EL=ON flag. May require adding the load path in Emacs.
-                            Note: The Gentoo Wiki indicates that scel has not been updated since September 2021 and might have issues with starting the sclang server due to hardcoded command-line options. Another Emacs package, sclang-extensions, is also listed as unmaintained.
+                        Plugin: scel.
+                        Features: Provides an Emacs Lisp interface to the SuperCollider system. Allows running sclang (the SuperCollider language interpreter) from within Emacs. Includes key bindings and potentially integration with the Help browser.
+                        Installation: Can be installed using SuperCollider's Quarks package manager (Quarks.install("https://github.com/supercollider/scel")), from a Debian package (supercollider-emacs), or by compiling from source with the -DSC_EL=ON flag. May require adding the load path in Emacs.
+                        Note: The Gentoo Wiki indicates that scel has not been updated since September 2021 and might have issues with starting the sclang server due to hardcoded command-line options. Another Emacs package, sclang-extensions, is also listed as unmaintained.
 
                         JetBrains IDEs (e.g., IntelliJ IDEA, PyCharm)
 
@@ -785,6 +786,18 @@ Csound
                             csound-mode seems to offer a good level of integration with features like a REPL, code completion, and documentation lookup. With Evil, you should be able to navigate and interact with these features using your familiar Vim keybindings. For instance, moving around the code, selecting regions to evaluate, and accessing help should all be possible within the Evil framework.   
 
                             Csound-x's dual-buffer approach and various editing tools might also be navigable using Evil. The key will be to ensure that the keybindings provided by Csound-x don't interfere with your Evil setup or that you can customize them effectively.
+                        Keybindings
+                            https://github.com/hlolli/csound-mode
+                        C-c C-p csound-play Same as doing csound filename -odac
+                        C-c C-r csound-render Same as doing csound filename -o filename.wav
+                        C-c C-z csound-repl-start
+                        C-c C-k csound-abort-compilation abort compilation (e.g. playback)
+                        C-M-x/C-c C-c csound-evaluate-region
+                        C-x C-e csound-evaluate-line
+                        C-c C-l csound-repl-interaction-evaluate-last-expression
+                        C-c C-s csound-score-align-block cursor needs to be within a score block
+                        M-. csound-score-find-instr-def cursor needs to be within a score block
+                        C-c C-d h csound-manual-lookup searches for a function definition in the Csound-manual
 
                         Regarding SuperCollider with Emacs and Evil:
 
@@ -798,6 +811,42 @@ Csound
                             Ensure Evil is correctly configured and active.
                             Explore the functionality of the Csound and SuperCollider modes within the Evil context.
                             Be prepared to customize keybindings if there are any conflicts or if you want to tailor the experience further.
+
+                        Here are some of the most useful keyboard shortcuts for scel mode, focusing on what you asked for (compiling/previewing code) and some other common actions:
+
+                        Compiling and Previewing Code (Interpreting):
+
+                            C-c C-c (Control-c, Control-c): Interpret the current line or selected region. This is your primary shortcut for evaluating code.
+                            C-c C-d (Control-c, Control-d): Interpret the current selection. This is often used when you've explicitly highlighted a block of code. In some contexts, it might behave similarly to C-c C-c.
+                            C-M-x (Control-Meta-x): Evaluate the current "defun" (a defined function or code block). This is great for running entire functions or classes quickly.
+                            C-c C-f (Control-c, Control-f): Evaluate the entire current document (file). Use with caution, especially if you have a complex setup!
+
+                        Other Useful SuperCollider-Specific Shortcuts:
+
+                            C-c C-s (Control-c, Control-s): Stop all running sounds/the SuperCollider interpreter (Main.stop). This is crucial if a synth goes haywire!
+                            C-c C-r (Control-c, Control-r): Run Main.run. This is often used to boot your SuperCollider server and execute your main startup script.
+                            C-c C-l (Control-c, Control-l): Recompile the SuperCollider class library.
+                            C-c C-h (Control-c, Control-h): Open a help file for the word at point (where your cursor is). This is incredibly useful for looking up documentation on classes, methods, and functions.
+                            C-c C-m (Control-c, Control-m): Show method arguments (in the minibuffer). Very handy for knowing what arguments a function expects.
+                            C-c C-n (Control-c, Control-n) or M-TAB (Meta-Tab/Alt-Tab): Autocomplete a keyword.
+                            C-c < (Control-c, Shift-comma): Clear the "post window" (the output buffer).
+                            C-c C-p p (Control-c, Control-p, p): Show server panels.
+
+                        General Emacs Shortcuts (also very useful in scel):
+
+                            C-h m (Control-h, m): Describe Mode. This will show you a list of all active keybindings in the current mode, including scel's specific ones. This is your go-to for discovering more commands!
+                            C-x C-f (Control-x, Control-f): Find file (open a file).
+                            C-x C-s (Control-x, Control-s): Save file.
+                            C-x C-w (Control-x, Control-w): Save file as.
+                            C-x k (Control-x, k): Kill (close) buffer.
+                            C-/ (Control-slash) or C-x u (Control-x, u): Undo.
+                            M-w (Meta-w/Alt-w): Copy region.
+                            C-y (Control-y): Paste (yank).
+                            C-s (Control-s): Incremental search forward.
+                            C-r (Control-r): Incremental search backward.
+                            M-; (Meta-semicolon/Alt-semicolon): Comment/uncomment region (adds or removes //).
+
+                        + Check other bindings with c-h m
 
                         Given your long history with Vim, you'll likely find Emacs' customizability, combined with Evil, to be a very flexible and ultimately rewarding environment for your audio programming endeavors. Let me know if you decide to proceed and encounter any specific configuration questions!
                         916 Days of Emacs - Hacker News

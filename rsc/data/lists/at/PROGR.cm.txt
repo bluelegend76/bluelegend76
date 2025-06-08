@@ -1,6 +1,216 @@
 ~/bin/scripts/at/at.PROGR.cm.bash
 vim:fdm=marker:fdl=0:
 
+
+LEARN X IN Y MINUTES {{{
+
+Take a whirlwind tour of your next favorite language. Community-driven!
+
+Ada
+    APL
+    Arturo
+AsciiDoc
+AssemblyScript
+ATS
+    Ballerina
+Bash
+bc
+    BF
+    BQN
+C
+C#
+C++
+    Chapel
+CHICKEN
+    citron
+Clojure
+Clojure macros
+COBOL
+CoffeeScript
+    ColdFusion
+Common Lisp
+Coq
+Crystal
+CSS
+CSV
+CUE
+curto
+Cypher
+D
+Dart
+Dhall
+Easylang
+EDN
+Elixir
+Elm
+Emacs Lisp
+Erlang
+F#
+Factor
+fish
+Forth
+Fortran
+GDScript
+Gleam
+Go
+GolfScript
+Groovy
+Hack
+Haml
+Haskell
+Haxe
+HDL
+Hjson
+HOCON
+HQ9+
+HTML
+Hy
+Inform7
+Janet
+Java
+JavaScript
+Jinja
+JSON
+Jsonnet
+Julia
+kdb+
+Kotlin
+LaTeX
+LB Stanza
+LDPL
+Lean 4
+Less
+Lisp Flavoured Erlang (LFE)
+LiveScript
+Logtalk
+LOLCODE
+Lua
+M (MUMPS)
+Markdown
+MATLAB
+Mercury
+MiniScript
+MIPS Assembly
+MongoDB
+MoonScript
+Nim
+niva
+Nix
+Objective-C
+OCaml
+OpenSCAD
+OSL
+Paren
+Pascal
+PCRE
+Perl
+Phel
+Phix
+PHP
+Pod
+PowerShell
+Processing
+Prolog
+Pug
+PureScript
+Python
+Q#
+QML
+R
+Racket
+Raku
+RDF
+Reason
+Red
+ReScript
+reStructuredText (RST)
+Ruby
+Rust
+Sass
+Scala
+Self
+Sing
+SmallBASIC
+Smalltalk
+Solidity
+Sorbet
+SQL
+Standard ML
+Stylus
+Swift
+Tailspin
+Tcl
+tcsh
+Texinfo
+Textile
+TOML
+TypeScript
+Uxntal
+V
+Vala
+Vimscript
+Visual Basic
+WebAssembly
+Wikitext
+Wolfram
+XML
+YAML
+Zig
+Frameworks and Libraries
+	Translations
+AngularJS
+DirectX 9
+jQuery
+MessagePack
+OpenCV
+OpenGL
+p5.js
+PyQt
+Qt
+raylib
+ShutIt
+Statistical computing with Python
+Tools
+	Translations
+AMD
+Ansible
+AWK
+CMake
+Compojure
+Composer
+Docker
+Emacs
+Git
+HCL
+HTTPie
+jq
+Linker script
+Make
+Mercurial
+Nmap
+OpenMP
+Protocol Buffers
+Ruby ecosystem
+sed
+tmux
+Vim
+ZFS
+Algorithms & Data Structures
+	Translations
+Asymptotic Notation
+Dynamic Programming
+Lambda Calculus
+Set theory
+
+Want to add your favorite language to the list? Head on over to GitHub and send a pull request!
+
+All articles © the original author and contributors, and licensed under a CC BY-SA 3.0 license.
+
+Made by Adam Bard, handsome web developer
+
+}}}
+
+
 RIDER GENERATE CLASS DIAGRAMS {{{
   https://stackoverflow.com/questions/52695800/creating-class-dependency-diagram-in-rider-ide
   https://www.jetbrains.com/help/rider/Exploring_Type_Dependency_Graph.html  # tools > show type dependency diagram
@@ -46056,28 +46266,6 @@ By exploring options outside the city center and considering these factors, you 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 . {{{
 
 - Let's say I was writing a class
@@ -48002,4 +48190,6 @@ discuss specific use cases?
 
 
 }}}
+
+
 
