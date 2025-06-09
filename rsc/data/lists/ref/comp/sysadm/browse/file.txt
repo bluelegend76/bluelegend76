@@ -1283,6 +1283,7 @@ Info
                 tip - info-pages (to practice with) ----
                     info find  **
                     info guix  ___lang=spa
+                    info guile
                     info ed
                     info man
                     info info
@@ -1364,7 +1365,7 @@ Info
                         d   "(dir-node)  Välj noden ""(dir)"""
                         r   (xref-item)  Läs en fotnot eller korsreferens och välj dess nod
                         u   (up-node)  Välj uppnoden
-                        t   "(top-node)  Välj noden ""Top"" i denna fil"
+                    t   "(top-node)  Välj noden ""Top"" i denna fil"
                         m   (menu-item)  Läs en menypost och välj dess nod
                         l (litetL) **** (history-node)  Välj den senast valda noden ****
                         g   (goto-node)  Läs ett nodnamn och välj det
@@ -1372,7 +1373,7 @@ Info
                         info: < info: (first-node)  Välj den första noden i denna fil
                         info: C-x b info: (select-visited-node)  Välj en nod som har besökts nyligen i ett synligt fönster
                         d   Gå till huvudkatalognoden.
-                        t   Gå till den översta noden i detta dokument.
+                    t   Gå till den översta noden i detta dokument.
                         u   Gå en nivå uppåt.
                         n   Gå till nästa nod på denna nivå.
                         p   Gå till föregående nod på denna nivå.

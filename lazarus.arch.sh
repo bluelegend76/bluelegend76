@@ -192,6 +192,7 @@ yay -S insync
 clear
 echo "Installing some utilities (curl, rename, tree, ag/agrep, scrot, tesseract): ..."
 ## pacman -S curl
+sudo pacman -S bash-completion
 sudo pacman -S mc
 sudo pacman -S cmake cgdb
 sudo pacman -S renameutils
@@ -257,6 +258,7 @@ echo "Installing some media-utils, Dok/Pdf-readers, etc: ..."
 sudo pacman -S gimp gimp-plugin-gmic inkscape
 sudo pacman -S 
 #--
+sudo pacman -S obsidian
 sudo pacman -S scribus
 sudo pacman -S qrencode
 sudo pacman -S thunar ristretto

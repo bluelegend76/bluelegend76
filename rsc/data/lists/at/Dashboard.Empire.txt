@@ -7,6 +7,571 @@ ___calendarnow
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
+SCRATCH {{{
+
+Quick question: If I would like to check on Windows if a certain program is installed (and by the way, in my case it could be installed either as a regular program, or be running as a service)?
+
+You have a couple of good options for checking if a program or service is installed on Windows. Here's a breakdown:
+
+1. Checking for Installed Programs (GUI methods):
+
+    Settings App (Windows 10/11):
+        Go to Start > Settings > Apps > Apps & features.
+
+You can search for the program by name in the "Search this list" box, or scroll through the alphabetical list.
+
+Control Panel (Older Windows versions or more comprehensive list):
+
+    Open the Control Panel (you can search for it in the Start menu).
+
+Navigate to Programs > Programs and Features (or Uninstall a program).
+This will display a list of programs installed on your system.
+
+2. Checking for Installed Programs (Command Line/PowerShell):
+
+    wmic command (Command Prompt):
+    This command can list installed programs, though it might not be as comprehensive as winget.
+        Open Command Prompt (as administrator is often best).
+
+    Type: wmic product get name,version
+    Press Enter. This will list installed applications with their names and versions. You can pipe this to findstr to search for a specific program. For example: wmic product get name,version | findstr /i "ProgramName" (replace "ProgramName" with the actual name).
+
+winget command (Windows Package Manager - modern Windows):
+If winget is installed on your system (it's often pre-installed on modern Windows versions or available via the Microsoft Store), it's a powerful tool for managing and listing applications.
+
+    Open Command Prompt or PowerShell.
+    Type: winget list
+    To search for a specific program: winget list "Program Name" (you can use partial names).
+
+PowerShell (more robust for scripting):
+PowerShell offers a very flexible way to query installed programs, often by looking at the registry where installation information is stored.
+
+    Open PowerShell.
+    To get a list of most installed applications:
+    PowerShell
+
+Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher | Format-Table -AutoSize
+
+To search for a specific program:
+PowerShell
+
+        Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object {$_.DisplayName -like "*ProgramName*"} | Select-Object DisplayName, DisplayVersion, Publisher
+
+        (Replace "ProgramName" with the actual name or part of it).
+
+3. Checking for Services (GUI methods):
+
+    Services Manager:
+        Press Win + R, type services.msc, and press Enter.
+
+This opens the Services console, where you can see a list of all services, their status (Running, Stopped, etc.), and startup type. You can sort by name to find your service quickly.
+
+4. Checking for Services (Command Line/PowerShell):
+
+    sc command (Command Prompt):
+    The sc command is a powerful tool for interacting with Windows services.
+
+    Open Command Prompt (as administrator).
+    To check if a service exists: sc query "ServiceName" (replace "ServiceName" with the exact service name).
+
+        If the service exists, it will show its status and other details.
+        If it doesn't exist, you'll get an error like [SC] EnumQueryServicesStatus:OpenService FAILED 1060: The specified service does not exist as an installed service.
+
+PowerShell (Get-Service):
+This is generally the preferred method for scripting and checking services in PowerShell.
+
+    Open PowerShell.
+    To check if a service exists and its status:
+    PowerShell
+
+Get-Service "ServiceName" -ErrorAction SilentlyContinue
+
+(Replace "ServiceName" with the exact service name).
+
+    If the service exists, it will output its details.
+    If it doesn't exist, it will return nothing (because of -ErrorAction SilentlyContinue). You can then check if a result was returned. For example:
+    PowerShell
+
+            $service = Get-Service "MyNonExistentService" -ErrorAction SilentlyContinue
+            if ($service) {
+                Write-Host "Service exists and its status is $($service.Status)"
+            } else {
+                Write-Host "Service does not exist."
+            }
+
+Combining Checks:
+
+Since you mentioned it could be either a regular program or a service, you'd typically run both types of checks. If you're doing this programmatically (e.g., in a script), PowerShell offers the most flexibility to combine these checks and act upon the results.
+
+For example, a PowerShell script could:
+
+    Try to find the program in Apps & features or winget.
+    If not found, try to find a service with a similar name using Get-Service.
+
+Remember that some programs, especially portable ones, might not appear in "Apps & features" or as a service, but simply exist as an executable in a folder. In such cases, you'd need to check for the presence of the executable file itself in expected locations.
+
+I have a program named TruckCom Core that I know is installed and run as a service, not as a regular program. Could you help me sketch out how to check if it is installed (presumably using the second approach of querying services rather than the registry), and also how I could query its version, presumably using the standard System.Diagnostics-library?
+
+Let's sketch out a PowerShell script to check for your "TruckCom Core" service and then attempt to get its version using System.Diagnostics.FileVersionInfo.
+
+The key here is that services themselves don't directly have a "version" in the same way an installed program does. The version information is typically associated with the executable file that the service runs. So, our approach will be:
+
+    Find the Service: Use Get-Service to locate "TruckCom Core".
+    Get the Executable Path: If the service is found, retrieve the PathName property, which points to the service's executable.
+    Get File Version: Use System.Diagnostics.FileVersionInfo to inspect that executable file and extract its version information.
+
+Here's the PowerShell sketch:
+PowerShell
+
+# --- Part 1: Check if the "TruckCom Core" service is installed ---
+
+$serviceName = "TruckCom Core" # The exact name of your service
+
+Write-Host "Checking for service: '$serviceName'..."
+
+# Use Get-Service. -ErrorAction SilentlyContinue prevents an error if the service doesn't exist.
+$service = Get-Service -Name $serviceName -ErrorAction SilentlyContinue
+
+if ($service) {
+    Write-Host "Service '$serviceName' is installed."
+    Write-Host "Current Status: $($service.Status)"
+    Write-Host "Startup Type: $($service.StartType)"
+
+    # --- Part 2: Query the version of the service's executable ---
+
+    # Get the path to the service executable.
+    # The PathName property holds the path, but it's part of the service configuration.
+    # We can get this from WMI or by inspecting the service object itself if it provides it.
+    # A reliable way is via WMI as Get-Service doesn't directly expose PathName for all services.
+    Write-Host "Attempting to retrieve executable path for '$serviceName'..."
+
+    try {
+        $wmiService = Get-WmiObject -Class Win32_Service -Filter "Name='$serviceName'"
+
+        if ($wmiService) {
+            $executablePath = $wmiService.PathName.Trim('"') # Remove potential quotes around the path
+
+            if (Test-Path $executablePath) {
+                Write-Host "Executable Path: $executablePath"
+
+                # Use System.Diagnostics.FileVersionInfo to get file version
+                Write-Host "Querying file version using System.Diagnostics.FileVersionInfo..."
+                $fileVersionInfo = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($executablePath)
+
+                Write-Host "  File Version: $($fileVersionInfo.FileVersion)"
+                Write-Host "  Product Version: $($fileVersionInfo.ProductVersion)"
+                Write-Host "  Product Name: $($fileVersionInfo.ProductName)"
+                Write-Host "  Company Name: $($fileVersionInfo.CompanyName)"
+                Write-Host "  Legal Copyright: $($fileVersionInfo.LegalCopyright)"
+
+            } else {
+                Write-Warning "Executable file not found at '$executablePath'. Cannot determine version."
+            }
+        } else {
+            Write-Warning "Could not retrieve WMI service object for '$serviceName'. Cannot determine executable path."
+        }
+    }
+    catch {
+        Write-Error "An error occurred while getting service executable path or file version: $($_.Exception.Message)"
+    }
+
+} else {
+    Write-Host "Service '$serviceName' is NOT installed."
+}
+
+Write-Host "Script finished."
+
+Explanation and Considerations:
+
+    $serviceName = "TruckCom Core": Make sure this exact string matches the service name as it appears in the Windows Services manager (or in the sc query output). Service names are typically case-sensitive in some contexts, so being precise is best.
+    Get-Service -Name $serviceName -ErrorAction SilentlyContinue:
+        Get-Service is the standard PowerShell cmdlet to interact with services.
+        -Name $serviceName specifies which service to look for.
+        -ErrorAction SilentlyContinue is crucial here. If the service doesn't exist, Get-Service would normally throw an error and stop the script. This parameter tells it to simply return $null instead, allowing our if ($service) check to handle the "not installed" case gracefully.
+    Get-WmiObject -Class Win32_Service -Filter "Name='$serviceName'":
+        While Get-Service is great for status, it doesn't directly expose the PathName (the executable path) for all services in an easily accessible property.
+        Win32_Service is a WMI (Windows Management Instrumentation) class that provides more detailed information about installed services, including their PathName.
+        Filter "Name='$serviceName'" tells WMI to only return the service with that specific name.
+        Trim('"'): Service paths in WMI are often enclosed in double quotes (e.g., "C:\Program Files\App\service.exe"). .Trim('"') removes these if they exist, which is good practice before trying to access the file.
+    Test-Path $executablePath: This verifies if the identified executable file actually exists on the disk before attempting to query its version. This prevents errors if the path is somehow incorrect or the file was deleted.
+    [System.Diagnostics.FileVersionInfo]::GetVersionInfo($executablePath): This is the core of getting the file version.
+        [System.Diagnostics.FileVersionInfo] is how you access the .NET class.
+        ::GetVersionInfo($executablePath) is a static method that takes the path to an executable file and returns a FileVersionInfo object.
+    $fileVersionInfo.FileVersion, $fileVersionInfo.ProductVersion, etc.: The FileVersionInfo object has various properties that contain details embedded in the executable's metadata. FileVersion is typically the exact build number, while ProductVersion is often a more user-friendly version number. ProductName, CompanyName, and LegalCopyright can also be very useful for identification.
+    Error Handling (try...catch and Write-Warning/Write-Error): It's good practice to wrap potentially failing operations (like WMI queries or file access) in try...catch blocks to gracefully handle unexpected issues and provide informative messages.
+
+This script provides a solid framework for doing exactly what you described. You can save it as a .ps1 file (e.g., CheckTruckComCore.ps1) and run it from PowerShell.
+
+Great. I would like to use C# or F# for this task instead.
+
+No problem! Let's translate that logic into C# or F#. Both languages can achieve the same goal using similar underlying .NET classes.
+Option 1: C# Example
+
+This C# example will encapsulate the logic in a simple console application.
+C#
+
+using System;
+using System.Diagnostics; // For FileVersionInfo
+using System.ServiceProcess; // For ServiceController
+using System.Management; // For ManagementObjectSearcher (WMI)
+using System.IO; // For Path.GetFullPath
+
+public class ServiceChecker
+{
+    public static void Main(string[] args)
+    {
+        string serviceName = "TruckCom Core"; // The exact name of your service
+
+        Console.WriteLine($"Checking for service: '{serviceName}'...");
+
+        try
+        {
+            // --- Part 1: Check if the "TruckCom Core" service is installed ---
+            ServiceController service = new ServiceController(serviceName);
+
+            // Try to access a property to force an exception if the service doesn't exist
+            // This is a common pattern to check for existence with ServiceController
+            string status = service.Status.ToString();
+            Console.WriteLine($"Service '{serviceName}' is installed.");
+            Console.WriteLine($"Current Status: {status}");
+            Console.WriteLine($"Startup Type: {service.StartType}");
+
+            // --- Part 2: Query the version of the service's executable ---
+            Console.WriteLine($"Attempting to retrieve executable path for '{serviceName}'...");
+
+            string executablePath = GetServiceExecutablePath(serviceName);
+
+            if (!string.IsNullOrEmpty(executablePath) && File.Exists(executablePath))
+            {
+                Console.WriteLine($"Executable Path: {executablePath}");
+
+                Console.WriteLine("Querying file version using System.Diagnostics.FileVersionInfo...");
+                FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(executablePath);
+
+                Console.WriteLine($"  File Version: {fileVersionInfo.FileVersion}");
+                Console.WriteLine($"  Product Version: {fileVersionInfo.ProductVersion}");
+                Console.WriteLine($"  Product Name: {fileVersionInfo.ProductName}");
+                Console.WriteLine($"  Company Name: {fileVersionInfo.CompanyName}");
+                Console.WriteLine($"  Legal Copyright: {fileVersionInfo.LegalCopyright}");
+            }
+            else
+            {
+                Console.WriteLine($"Warning: Executable file not found at '{executablePath ?? "unknown path"}'. Cannot determine version.");
+            }
+        }
+        catch (InvalidOperationException)
+        {
+            // This exception is typically thrown by ServiceController if the service doesn't exist
+            Console.WriteLine($"Service '{serviceName}' is NOT installed.");
+        }
+        catch (ManagementException ex)
+        {
+            Console.WriteLine($"An error occurred while getting service executable path (WMI issue): {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+        }
+
+        Console.WriteLine("Script finished.");
+        Console.ReadKey(); // Keep console open
+    }
+
+    /// <summary>
+    /// Retrieves the full executable path for a given Windows service.
+    /// Uses WMI (Windows Management Instrumentation) for robustness.
+    /// </summary>
+    private static string GetServiceExecutablePath(string serviceName)
+    {
+        try
+        {
+            // Query WMI for the Win32_Service class
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(
+                $"SELECT PathName FROM Win32_Service WHERE Name = '{serviceName}'");
+
+            foreach (ManagementObject managementObject in searcher.Get())
+            {
+                string path = managementObject["PathName"]?.ToString();
+                if (!string.IsNullOrEmpty(path))
+                {
+                    // WMI paths can sometimes be enclosed in double quotes. Remove them.
+                    path = path.Trim('"');
+
+                    // If the path is relative or just a file name (e.g., "service.exe"),
+                    // GetFullPath will try to resolve it. Services usually have full paths.
+                    return Path.GetFullPath(path);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving executable path via WMI: {ex.Message}");
+        }
+        return null;
+    }
+}
+
+To run this C# code:
+
+    Open Visual Studio or a text editor.
+    Create a new C# Console Application project.
+    Paste the code into Program.cs (or ServiceChecker.cs if you rename the file).
+    Add References:
+        Right-click on your project in Solution Explorer.
+        Select "Add" > "Project Reference..." (or "Add Reference" if older Visual Studio).
+        Go to "Assemblies" > "Framework" (or "Assemblies" > "System").
+        Check System.Management.
+        Check System.ServiceProcess.
+        Click "OK".
+    Build and run the application.
+
+Option 2: F# Example
+
+F# offers a more functional approach, often with less boilerplate.
+F#
+
+open System
+open System.Diagnostics // For FileVersionInfo
+open System.ServiceProcess // For ServiceController
+open System.Management // For ManagementObjectSearcher (WMI)
+open System.IO // For Path.GetFullPath
+
+let getServiceExecutablePath (serviceName: string) =
+    try
+        let searcher = new ManagementObjectSearcher(sprintf "SELECT PathName FROM Win32_Service WHERE Name = '%s'" serviceName)
+        let mutable path = ""
+        for managementObject in searcher.Get() do
+            let objPath = managementObject.["PathName"]
+            if objPath <> null then
+                path <- objPath.ToString().Trim('"')
+                // Attempt to get full path in case it's not absolute
+                path <- Path.GetFullPath(path)
+                break
+        path
+    with
+    | ex ->
+        printfn $"Error retrieving executable path via WMI: {ex.Message}"
+        "" // Return empty string on error
+
+let checkServiceAndVersion (serviceName: string) =
+    printfn $"Checking for service: '{serviceName}'..."
+
+    try
+        // --- Part 1: Check if the "TruckCom Core" service is installed ---
+        let service = new ServiceController(serviceName)
+
+        // Accessing a property like .Status forces the check for existence
+        let status = service.Status.ToString()
+        printfn $"Service '{serviceName}' is installed."
+        printfn $"Current Status: {status}"
+        printfn $"Startup Type: {service.StartType}"
+
+        // --- Part 2: Query the version of the service's executable ---
+        printfn $"Attempting to retrieve executable path for '{serviceName}'..."
+
+        let executablePath = getServiceExecutablePath serviceName
+
+        if not (String.IsNullOrEmpty(executablePath)) && File.Exists(executablePath) then
+            printfn $"Executable Path: {executablePath}"
+
+            printfn "Querying file version using System.Diagnostics.FileVersionInfo..."
+            let fileVersionInfo = FileVersionInfo.GetVersionInfo(executablePath)
+
+            printfn $"  File Version: {fileVersionInfo.FileVersion}"
+            printfn $"  Product Version: {fileVersionInfo.ProductVersion}"
+            printfn $"  Product Name: {fileVersionInfo.ProductName}"
+            printfn $"  Company Name: {fileVersionInfo.CompanyName}"
+            printfn $"  Legal Copyright: {fileVersionInfo.LegalCopyright}"
+        else
+            printfn $"Warning: Executable file not found at '{executablePath}'. Cannot determine version."
+    with
+    | :? System.InvalidOperationException ->
+        printfn $"Service '{serviceName}' is NOT installed."
+    | :? System.Management.ManagementException as ex ->
+        printfn $"An error occurred while getting service executable path (WMI issue): {ex.Message}"
+    | ex ->
+        printfn $"An unexpected error occurred: {ex.Message}"
+
+// --- Execute the function ---
+[<EntryPoint>]
+let main argv =
+    checkServiceAndVersion "TruckCom Core"
+    0 // Return 0 for success
+
+To run this F# code:
+
+    Open Visual Studio.
+    Create a new F# Console Application project.
+    Paste the code into Program.fs.
+    Add References:
+        Right-click on your project in Solution Explorer.
+        Select "Add" > "Project Reference..." (or "Add Reference" if older Visual Studio).
+        Go to "Assemblies" > "Framework" (or "Assemblies" > "System").
+        Check System.Management.
+        Check System.ServiceProcess.
+        Click "OK".
+    Build and run the application.
+
+Key Similarities and Differences:
+
+    ServiceController: Both C# and F# use the System.ServiceProcess.ServiceController class to interact with Windows services. Trying to instantiate it with a non-existent service name or access its properties (like .Status) will throw an InvalidOperationException if the service isn't found, which is caught for the "not installed" case.
+    WMI (System.Management): Both use System.Management.ManagementObjectSearcher to query WMI (Win32_Service) for the PathName property, which is the most reliable way to get the service's executable path.
+    FileVersionInfo: Both use System.Diagnostics.FileVersionInfo.GetVersionInfo() to extract the version details from the executable file.
+    Error Handling:
+        C# uses try...catch blocks.
+        F# uses try...with expressions for pattern matching on exceptions.
+    Syntax: The primary difference is the syntax and paradigms: C# is object-oriented, while F# is functional-first, leading to more concise code in many cases.
+    References: Both require adding references to System.Management and System.ServiceProcess in your project, as these are not part of the default .NET core libraries for console applications.
+
+Choose whichever language you are more comfortable with! The underlying .NET BCL (Base Class Library) provides the same powerful tools.
+
+Could you explain to me what the character-sequence ':?' means in F#? I've seen that combination of a colon and a question-mark, but I have forgotten what it means
+
+In F#, the character sequence :? is used for type testing and casting within a match expression (or try...with blocks when catching exceptions by type). It's often referred to as a type test pattern or runtime type test.
+
+Here's a breakdown of what it means and how it's used:
+What it does:
+
+The :? pattern allows you to:
+
+    Test if an object is of a specific type (or a subtype).
+    Automatically cast the object to that type if the test succeeds.
+
+This is similar to C#'s is operator followed by a cast, or the as operator, but integrated directly into F#'s powerful pattern matching.
+Syntax:
+
+The general syntax is variable :? TypeName.
+Common Use Cases:
+1. In match expressions (Pattern Matching on Types)
+
+This is the most common place you'll see :?. It allows you to dispatch logic based on the runtime type of an object.
+
+Example:
+F#
+
+type Shape =
+    | Circle of float
+    | Square of float
+
+let processObject (obj: obj) =
+    match obj with
+    | :? string as s -> printfn $"It's a string: {s}"
+    | :? int as i -> printfn $"It's an integer: {i}"
+    | :? float as f -> printfn $"It's a float: {f}"
+    | :? System.Collections.IList as list ->
+        printfn $"It's a list (or array): {list.Count} items"
+    | _ -> printfn "Unknown type"
+
+processObject "Hello F#"
+processObject 123
+processObject 3.14
+processObject [| 1; 2; 3 |]
+processObject (Circle 5.0) // This will match the '_' case unless you handle 'obj' of type 'Shape'
+
+In this example:
+
+    s :? string checks if obj is a string. If it is, it's cast to string and bound to the variable s.
+    i :? int checks if obj is an int. If it is, it's cast to int and bound to i.
+    And so on.
+
+2. In try...with expressions (Catching Specific Exception Types)
+
+When handling exceptions, you can use :? to catch specific types of exceptions.
+
+Example (from the previous C# to F# translation):
+F#
+
+try
+    // ... some code that might throw an exception ...
+with
+| :? System.InvalidOperationException ->
+    printfn $"Service '{serviceName}' is NOT installed."
+| :? System.Management.ManagementException as ex ->
+    printfn $"An error occurred while getting service executable path (WMI issue): {ex.Message}"
+| ex -> // Catches any other exception
+    printfn $"An unexpected error occurred: {ex.Message}"
+
+Here:
+
+    :? System.InvalidOperationException catches an InvalidOperationException.
+    :? System.Management.ManagementException as ex catches a ManagementException and binds it to ex.
+
+Contrast with Type Annotations (:):
+
+Don't confuse :? with a simple colon : for type annotations.
+
+    : is used for type annotations (e.g., let x: int = 10), indicating the declared type of a variable or parameter during compilation.
+    :? is used for runtime type testing and casting within pattern matching or exception handling, dealing with the actual type of an object at runtime.
+
+In summary, :? in F# is a powerful and idiomatic way to perform runtime type checks and safe casts, often within the context of pattern matching, which is a cornerstone of F#'s expressiveness.
+You're referring to the F# type test pattern operator, written as :?.
+
+It's used within a match expression (or as an operator value :? Type) to check if a value is of a specific type at runtime. It's similar to C#'s is operator or as operator combined with a null check, but integrated directly into F#'s powerful pattern matching.
+
+Here's how it works and why you see it:
+
+Purpose:
+
+The :? operator is used to perform a runtime type test. This means it checks the actual type of an object at the time the code is running.
+
+Common Scenarios:
+
+    Pattern Matching (most common use):
+    This is where you'll most frequently encounter :?. It allows you to branch your code based on the runtime type of an object.
+    F#
+
+let processObject (obj: obj) =
+    match obj with
+    | :? string as s -> // If obj is a string, bind it to 's'
+        printfn $"It's a string: {s.Length} characters long."
+    | :? int as i -> // If obj is an int, bind it to 'i'
+        printfn $"It's an integer: {i}"
+    | _ -> // Catch all other types
+        printfn $"It's some other type: {obj.GetType().Name}"
+
+processObject "hello" // Output: It's a string: 5 characters long.
+processObject 123     // Output: It's an integer: 123
+processObject (DateTime.Now) // Output: It's some other type: DateTime
+
+In this example:
+
+    :? string as s checks if obj is a string. If it is, that obj is then downcasted to a string and bound to the new variable s, which you can then use with string-specific operations (like .Length).
+    :? int as i does the same for an integer.
+
+As a Boolean Operator (less common, but possible):
+You can also use :? as a boolean operator, similar to C#'s is keyword.
+F#
+
+    let myObject : obj = "Hello F#"
+    let isString = myObject :? string // Evaluates to true
+    let isInt = myObject :? int      // Evaluates to false
+
+    printfn $"Is it a string? {isString}"
+    printfn $"Is it an int? {isInt}"
+
+    However, if the compiler can statically determine that the test will always be false (e.g., let x = 5; x :? string), it will issue a warning or error because the test is redundant. To avoid this, you might explicitly box the value to obj first: (box x) :? string. This makes the runtime check meaningful.
+
+Why use :??
+
+    Polymorphism: It's essential when working with polymorphic types, especially when you have an obj (the universal base type in .NET) and you need to determine its specific underlying type to perform type-specific operations.
+
+    Error Handling (as seen in your service check): In your F# service check example, it was used to catch System.InvalidOperationException and System.Management.ManagementException. This allows you to differentiate between different kinds of exceptions and handle them appropriately.
+    F#
+
+    try
+        // ... code that might throw exceptions ...
+    with
+    | :? System.InvalidOperationException -> // Catches InvalidOperationException specifically
+        printfn $"Service '{serviceName}' is NOT installed."
+    | :? System.Management.ManagementException as ex -> // Catches ManagementException and binds it to 'ex'
+        printfn $"An error occurred while getting service executable path (WMI issue): {ex.Message}"
+    | ex -> // Catches any other exception
+        printfn $"An unexpected error occurred: {ex.Message}"
+
+In essence, :? provides a concise and idiomatic way in F# to perform type checking and safe downcasting, particularly useful within pattern matching constructs.
+
+}}}
+----
 STARTUPS 1 {{{
 
 Vanki LearnQna ----
@@ -1336,7 +1901,7 @@ CSound[FLOSS-MAN + Book] + Scoll. [WEB-MINI; sclang|scide]
 }}}
 
 sqlitebrowser
-F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+F# FunProfit + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
   . {{{
 ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/FsFunprofit-Online.tags1.txt
 
@@ -1437,6 +2002,10 @@ office.Overview [2]  # write summary|overview {{{
 ---- office.Overview --------
 ANKIMAN 2021+
     ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
+Lincmd.Org
+. {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt
+}}}
 Spectre Console  __ ¤¤
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
@@ -1683,7 +2252,7 @@ Pyramid
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
-  F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+  F#[!!!!] + Webframeworks (Giraffe, Fabulous, Fable, Suave, the SAFE-stack)  ¤¤¤
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/
@@ -2300,6 +2869,7 @@ gvim -c 'colors molokai_dark' ~/Empire/Doks/Comp/lang/py/webmob/{pyramid/Pyramid
         ~/Dropbox/rsc/lists/ref/Lang/Lat/vivlinglat.txt
         ~/Dropbox/rsc/Doks/phone.fmt35/todo/suitecrm.txt
     }}}
+~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/report.clojbooks
 --------------------------
 
 -- ontheroad.store ---- ___index=4 [4] {{{

@@ -152,7 +152,101 @@ By actively using these keybindings and exploring the commands available under t
 
 
 }}}
-XML-mode
+Common Lisp (Slime)  ¤
+Python
+Lua {{{
+Could you give me a couple of useful keyboard shortcuts and commands that can be used in Emacs for evaluation and such, both in the modes I would likely want to install (i.e. lua-mode, fennel-mode etc), and in Emacs itself (although focusing mostly on the former)?
+
+Sure thing! Given your interest in Lua, Fennel, Moonscript, and Teal, and your appreciation for Emacs's evaluation capabilities, let's break down some useful keyboard shortcuts and commands. We'll cover both general Emacs evaluation techniques and those specific to the modes you'll likely be using.
+
+As you noted, Emacs generally excels at interactive evaluation, which is fantastic for dynamic languages and those with a strong REPL culture like Lua and especially Fennel.
+Core Emacs Evaluation Commands (Universal)
+
+These commands work across many modes, including the ones you'll install, as they interact with Emacs's own Lisp interpreter or external processes.
+
+    M-x eval-buffer: Evaluates the entire current buffer as Emacs Lisp. While this directly evaluates Elisp, it's a powerful command to be aware of if you're ever writing Emacs Lisp code to extend your environment.
+    M-x eval-region: Evaluates the currently active region (text selection) as Emacs Lisp.
+    M-x eval-current-buffer: Similar to eval-buffer, but often used in programming modes to "re-evaluate" or load the current file as if it were a script.
+    M-x compile: Prompts you for a shell command to execute. The output appears in a *compilation* buffer, and Emacs can parse errors to jump to relevant lines in your code. This is extremely useful for languages that require a compilation step (like Teal) or for running transpilers (like Moonscript to Lua) or for executing your Lua scripts.
+        Example: You could type tl main.tl && lua main.lua to compile a Teal file and then run the resulting Lua.
+        Example: You could type moonc -o output.lua input.moon to transpile Moonscript.
+    M-x shell-command: Prompts you for a shell command and displays the output in the minibuffer or a new *shell-command output* buffer. Good for quick, single commands.
+    M-x start-process: Starts an external process. More for complex interactions than simple evaluation, but worth knowing.
+
+Evaluation and Interaction in Specific Modes
+
+The following commands are tailored for your specific language modes. These often integrate with a running REPL (Read-Eval-Print Loop) or send code to an external interpreter.
+1. Lua Mode (lua-mode / inf-lua.el)
+
+lua-mode provides basic syntax highlighting and indentation. For interactive evaluation, you'll typically use inf-lua (Inferior Lua mode) or a more modern LSP integration.
+
+    C-c C-l (or M-x inf-lua): Starts or switches to an Inferior Lua process. This opens a *inferior-lua* buffer where you can type Lua commands and see the output.
+    In *inferior-lua* buffer:
+        RET (Enter): Evaluates the line you typed.
+        C-c C-f: Evaluates the current file you're working on (sends it to the Lua process).
+        C-c C-e: Evaluates the current definition (function, variable assignment, etc.) at point.
+        C-c C-r: Evaluates the selected region.
+    In a Lua source buffer:
+        C-c C-e: Evaluate the current function or expression at point and send it to the inferior Lua process.
+        C-c C-r: Evaluate the currently selected region and send it to the inferior Lua process.
+
+2. Fennel Mode (fennel-mode)
+
+Fennel is a Lisp, and Emacs's Lisp heritage means its support for interactive Fennel development is excellent. fennel-mode will often integrate with a fennel-repl process.
+
+    C-c C-z: (Often the default for fennel-connect-and-switch-to-repl) Connects to or starts a Fennel REPL and switches to its buffer.
+    In a Fennel source buffer:
+        C-x C-e (Control-x, Control-e): Evaluate expression at point (last S-expression before cursor). This is perhaps the most fundamental and useful Lisp evaluation command. You'll use this constantly to test small pieces of code.
+        C-M-x (Control-Meta-x): Evaluate the current "defun" (top-level form, often a function definition like (fn [...] ...)). This is excellent for re-evaluating an entire function after changes.
+        C-c C-c: Evaluate the current buffer (or often the selected region) and send it to the REPL.
+        C-c C-r: Evaluate the selected region and send it to the REPL.
+        C-c C-k: Compile the current buffer.
+        C-c C-p: Toggle the current top-level form between (set!) and (local). (Useful for interactive development).
+    In the Fennel REPL buffer:
+        RET (Enter): Evaluates the line you typed.
+        C-M-x: Evaluate the last S-expression at point (often the line you just typed).
+        M-p and M-n: Navigate command history (previous/next).
+
+3. Moonscript Mode (moonscript-mode)
+
+Moonscript typically involves transpilation to Lua. moonscript-mode primarily offers syntax highlighting and indentation. For execution, you'll generally:
+
+    Use M-x compile: As mentioned above, this is your best friend here. You'd set up a compilation command like moonc -o output.lua %f && lua output.lua (where %f is the current file).
+    M-x shell-command: For one-off transpilation or execution.
+    M-! (Meta-Bang): Shell command on region. You could select a region, press M-!, and pipe it to moonc if you wanted to transpile a snippet on the fly, though this is less common.
+
+4. Teal Mode (teal-mode)
+
+Teal is a typed Lua. The workflow usually involves type-checking and then compiling to Lua before execution.
+
+    M-x compile: This is again your primary tool. You'd use commands like:
+        tl check %f: To run the type checker on the current file.
+        tl build %f: To compile the current Teal file to a Lua file.
+        tl build %f && lua $(dirname %f)/$(basename %f .tl).lua: To compile and then run the resulting Lua file.
+    teal-mode might offer a specific command to run tl check directly (e.g., C-c C-t or similar, depending on the specific package). Check its documentation (C-h m in teal-mode).
+    Like Moonscript, direct interactive REPL evaluation of Teal before compilation is less common. You'd likely evaluate the generated Lua code in a Lua REPL.
+
+General Emacs Tips for Interactive Development
+
+    C-h m (Control-h, m): Describe Mode. This is your best friend! It lists all the keybindings and commands for the current major mode and any minor modes. Always check this when in a new mode to discover its features.
+    C-h k (Control-h, k): Describe Key. Press C-h k then any keybinding, and Emacs will tell you what command it runs.
+    C-h f (Control-h, f): Describe Function. Prompts for a function name and tells you what it does, its arguments, and its keybindings.
+    C-h v (Control-h, v): Describe Variable. Prompts for a variable name and tells you its value and documentation.
+    C-g (Control-g): Quit or abort current command. Essential if you get stuck or run an unwanted command.
+    C-x C-e (Control-x, Control-e): Evaluate the Emacs Lisp expression before the cursor. While technically for Elisp, it's so fundamental to Emacs's philosophy that it's worth mastering for general interactive tasks.
+
+By combining these general Emacs evaluation techniques with the specific commands provided by lua-mode, fennel-mode, and strategic use of M-x compile for transpiled languages, you'll have a very powerful and flexible development environment for your Lua, Moonscript, Fennel, and Teal projects. Enjoy the interactive power of Emacs!
+}}}
+Dlang
+F#
+OCaml/Dune (Merlin)
+  SML
+HTML, CSS/SASS/Suzy, JavaScript/Reason/PureScript/Ts, REACT, (+PHP)
+XML-mode (nXML)
+  SVG
+  Prolog/Mercury
+Latex
+JSON
 Markdown-mode (+Org with Markdown) {{{
 
 Could you give me some quick direction on tools I can install and use for rendering Markdown with Pandoc, and also what tools are available for Markdown-mode, both these questions referring to using Emacs?
@@ -308,17 +402,15 @@ In short, while you might primarily use markdown-mode for editing .md files, hav
 
 
 }}}
+Csound, SuperCollider
+Clojure
+Elixir
+  Haskell
+asm
+Idris
+  https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
+PostScript
 }}}
-
-Checkup Special Modes ----  ****!!
-- Markdown
-- XML
-- JSON
-- HTML/CSS
-    - Dlang
-https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
-----
-- F#, Ocaml
 
 ~/Empire/Doks/Comp/editor/emacs/masteringemacs-v3.txt    #mickey peterson
 ~/Empire/Doks/Comp/editor/emacs/emacsextend.txt          #glickstein
