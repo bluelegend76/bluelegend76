@@ -2287,7 +2287,7 @@ Pyramid
     . {{{
       [Video-transcription + Taylor's Wiki]
     }}}
-  F#[!!!!] + Webframeworks (Giraffe, Fabulous, Fable, Suave, the SAFE-stack)  ¤¤¤
+  F#[!!!!] + Webframeworks (Giraffe, Fabulous, FABLE, BOLERO, Suave, the SAFE-stack)  ¤¤¤
   . {{{
     gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
       https://suave.io/

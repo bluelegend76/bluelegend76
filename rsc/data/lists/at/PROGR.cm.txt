@@ -607,6 +607,876 @@ One of the "cryptic" yet unifying aspects of Scheme (and Lisps) is the S-express
 
 Guile Scheme's syntax might seem foreign due to its heavy reliance on parentheses, but once you understand these core types and the meaning of common prefixes and forms, you'll find it incredibly consistent and expressive. The terseness often comes from nesting expressions, where the meaning is derived from the structure rather than explicit delimiters or keywords.
 
+
+Could we continue our exposé of programming-languages (by listing the types and its data-structures, especially with regard to the latter to focus mostly on the syntax which makes one able to read and understand code in explanatory books and such)? I would like to get a short exposé on the Elixir language.
+
+Alright, let's dive into Elixir! Elixir is a dynamic, functional language built on the Erlang Virtual Machine (BEAM), known for building scalable, fault-tolerant, and distributed applications. Its syntax is often described as being inspired by Ruby, making it quite readable.
+
+A fundamental concept in Elixir (inherited from Erlang) is immutability. Data structures, once created, cannot be changed. Any operation that appears to modify a structure actually returns a new copy of the structure with the changes, leaving the original intact.
+
+Elixir Types and Data Structures
+
+Elixir has a rich set of built-in types and data structures. Here's an overview focusing on their common syntax for readability:
+
+1. Basic Types
+
+    Integers: Whole numbers. Can use underscores for readability.
+
+Elixir
+
+1
+42
+1_000_000
+
+Also supports binary (0b), octal (0o), and hexadecimal (0x) notations:
+
+Elixir
+
+0b1010   # 10
+0o777    # 511
+0x1F     # 31
+
+Floats: Numbers with decimal points.
+Elixir
+
+3.14
+1.0
+1.23e-5  # Scientific notation
+
+Booleans: true and false.
+
+Elixir
+
+true
+false
+
+Atoms: Constants whose value is their own name. Similar to Symbols in Ruby or keywords in Clojure. They start with a colon :. true, false, and nil are also atoms (:true, :false, :nil).
+
+Elixir
+
+:ok
+:error
+:user_signed_in
+
+Atoms with spaces or special characters need to be quoted:
+Elixir
+
+:"Hello World"
+:'an atom with spaces'
+
+Strings: UTF-8 encoded binaries, enclosed in double quotes. Support interpolation.
+Elixir
+
+"Hello, Elixir!"
+name = "Alice"
+"Hello, #{name}!" # "Hello, Alice!" (interpolation)
+
+Multi-line strings are created with triple double-quotes:
+
+Elixir
+
+"""
+This is a multi-line
+string in Elixir.
+"""
+
+Charlists: A list of ASCII character codes, enclosed in single quotes. Less common for general text manipulation than strings, but useful for Erlang interop.
+Elixir
+
+    'hello' # Internally: [104, 101, 108, 108, 111]
+
+2. Collection Types (Data Structures)
+
+    Lists: Ordered collections of elements, enclosed in square brackets []. Can contain elements of any type. Efficient for prepending elements.
+
+Elixir
+
+[1, 2, 3]
+["apple", :banana, 3.14, true]
+
+Concatenation:
+Elixir
+
+[1, 2] ++ [3, 4] # => [1, 2, 3, 4]
+
+Head and Tail (Pattern Matching):
+Elixir
+
+[head | tail] = [1, 2, 3]
+# head is 1, tail is [2, 3]
+
+Tuples: Ordered collections of elements, enclosed in curly braces {}. Fixed-size once created, making them efficient for known-size groupings and faster access by index than lists. Often used for function return values (e.g., {:ok, value} or {:error, reason}).
+
+Elixir
+
+{:ok, "Success!"}
+{1, "hello", :world}
+
+Accessing elements (0-indexed):
+Elixir
+
+tuple = {:a, :b, :c}
+elem(tuple, 0) # => :a
+
+Updating (returns new tuple):
+Elixir
+
+put_elem({:a, :b, :c}, 0, :d) # => {:d, :b, :c}
+
+Pattern matching:
+Elixir
+
+{:ok, result} = {:ok, 123}
+# result is 123
+
+Keyword Lists: A special type of list used to pass options to functions. They are lists of two-element tuples where the first element (the key) is an atom, and the second is any value. They maintain insertion order, and keys can be duplicated.
+
+Elixir
+
+[name: "Alice", age: 30, city: "Uddevalla"]
+# This is syntactic sugar for:
+# [{:name, "Alice"}, {:age, 30}, {:city, "Uddevalla"}]
+
+Accessing values:
+Elixir
+
+options = [name: "Alice", age: 30]
+options[:name] # => "Alice"
+
+Often used as the last argument to functions, where the square brackets [] around them can be omitted:
+Elixir
+
+File.read("my_file.txt", encoding: :utf8, raw: true)
+# is equivalent to:
+File.read("my_file.txt", [encoding: :utf8, raw: true])
+
+Maps: Unordered collections of key-value pairs. Keys can be any data type (not just atoms), and they are unique. Maps provide efficient lookups.
+
+Elixir
+
+%{"name" => "Bob", :age => 40}
+
+If all keys are atoms, you can use a more concise syntax:
+Elixir
+
+%{name: "Charlie", email: "charlie@example.com"}
+# This is equivalent to:
+# %{:name => "Charlie", :email => "charlie@example.com"}
+
+Accessing values:
+Elixir
+
+user = %{name: "David", age: 25}
+user[:name]         # => "David"
+user.name           # => "David" (dot syntax for atom keys)
+user["non-atom-key"] # => nil if not found
+
+Updating/Adding values (returns new map):
+Elixir
+
+user = %{name: "David", age: 25}
+%{user | age: 26, city: "Gothenburg"}
+# => %{name: "David", age: 26, city: "Gothenburg"}
+
+Note: if you update a non-existent key with the %{map | key: value} syntax, it will raise a KeyError. To add new keys without error, use Map.put/3.
+
+Structs: Extensions of maps that require predefined keys (all of which must be atoms) and optional default values. They provide compile-time checks and are defined within modules.
+Elixir
+
+defmodule User do
+  defstruct name: "Guest", age: 0, active: true
+end
+
+# Creating a struct:
+%User{} # => %User{name: "Guest", age: 0, active: true}
+%User{name: "Eve", age: 30}
+# => %User{name: "Eve", age: 30, active: true}
+
+Accessing values (like maps with atom keys):
+Elixir
+
+user = %User{name: "Frank"}
+user.name # => "Frank"
+user.age  # => 0
+
+Binaries/Bitstrings: Raw sequences of bytes or bits, denoted by <<>>. Strings are a type of binary (UTF-8 encoded).
+
+Elixir
+
+<<1, 2, 3, 255>> # A binary of bytes
+<<"Hello", 0, "World">> # Concatenated binaries
+
+PIDs (Process Identifiers) / Ports / References: These are fundamental to Elixir's concurrency model (built on Erlang's Actor Model). They are used to identify and communicate with concurrent processes, external resources, and unique references. You'll encounter their syntax when dealing with concurrency.
+
+Elixir
+
+    #PID<0.100.0>
+    #Reference<0.12345>
+    #Port<0.1234>
+
+Other Important Syntactical Elements for Readability
+
+    Modules and Functions: Code is organized into modules, and functions are defined within them.
+    Elixir
+
+defmodule MyModule do
+  # Defines a public function
+  def greet(name) do
+    IO.puts "Hello, #{name}!"
+  end
+
+  # Defines a private function (only callable within MyModule)
+  defp internal_helper(value) do
+    # ...
+  end
+
+  # Function with a single expression can use `do:`
+  def add(a, b), do: a + b
+end
+
+# Calling a function:
+MyModule.greet("World") # => "Hello, World!"
+MyModule.add(5, 3)     # => 8
+
+    Functions can have multiple clauses (definitions) that are chosen based on pattern matching:
+```elixir
+defmodule Greeter do
+def hello(), do: "Hello, anonymous!"
+def hello(name), do: "Hello, #{name}!"
+def hello(name, "formal"), do: "Greetings, #{name}!"
+end
+
+Greeter.hello()          # => "Hello, anonymous!"
+Greeter.hello("Alice")   # => "Hello, Alice!"
+Greeter.hello("Bob", "formal") # => "Greetings, Bob!"
+```
+
+    Pattern Matching (= operator): In Elixir, = is not just an assignment operator; it's a match operator. It attempts to match the left-hand side pattern against the right-hand side value. If it matches, variables on the left are bound. If it doesn't match, a MatchError occurs.
+
+Elixir
+
+x = 10         # x is bound to 10
+{a, b} = {1, 2}  # a is bound to 1, b is bound to 2
+[head | tail] = [1, 2, 3] # head is 1, tail is [2, 3]
+
+# Pattern matching in function arguments is very common:
+def process_result({:ok, value}) do
+  "Success with #{value}"
+end
+def process_result({:error, reason}) do
+  "Failure because #{reason}"
+end
+
+process_result({:ok, 123})    # => "Success with 123"
+process_result({:error, "invalid input"}) # => "Failure because invalid input"
+
+# Pin operator `^` (to prevent rebinding in pattern matching)
+x = 10
+^x = 10   # Matches, x remains 10
+^x = 20   # MatchError! x is already 10, cannot match against 20
+
+Pipe Operator (|>): One of Elixir's most beloved features for creating readable, data-flow-oriented code. It takes the result of the expression on its left and passes it as the first argument to the function call on its right.
+
+Elixir
+
+" Hello World "
+|> String.trim()      # passes " Hello World " to String.trim/1
+|> String.upcase()    # passes "Hello World" to String.upcase/1
+|> String.split(" ")  # passes "HELLO WORLD" to String.split/2 as the first arg
+# Result: ["HELLO", "WORLD"]
+
+Anonymous Functions (fn ... end or & shorthand):
+Elixir
+
+    # Using fn/end
+    sum = fn a, b -> a + b end
+    sum.(1, 2) # => 3
+
+    # Using & shorthand (for simple anonymous functions)
+    add_one = &(&1 + 1) # &1 refers to the first argument
+    add_one.(5) # => 6
+
+    # With multiple arguments
+    multiply = &(&1 * &2)
+    multiply.(3, 4) # => 12
+
+This overview should give you a solid foundation for reading and understanding Elixir code in explanatory contexts! Its focus on immutability, pattern matching, and the pipe operator makes for a distinct and often very expressive coding style.
+
+A quick question when it comes to the dynamic nature of Elixir. There are several other languages I'm looking at that are strongly typed. Does that present a problem when compared to those other languages, or are there ways in which that is not as big a problem as one thinks?
+
+That's an excellent and very common question when considering dynamically typed languages like Elixir against strongly/statically typed ones!
+
+You're right that strongly typed languages (like Java, C#, Rust, Haskell, even TypeScript, or your interest in Lua Teal) offer compile-time guarantees about type correctness. This means many type-related errors are caught before your code even runs, leading to fewer runtime bugs and more confident refactoring.
+
+Elixir, being dynamically typed, performs type checks at runtime. This means:
+
+    Potential for Runtime Errors: A type mismatch might only be discovered when that specific line of code executes, potentially leading to a crash.
+    Less Compiler Guidance: The compiler won't tell you if you're trying to call a function with the wrong type of argument, making refactoring potentially riskier without strong test coverage.
+
+However, Elixir has several powerful features and a core philosophy that significantly mitigate these concerns, making its dynamic nature less of a problem in practice than one might initially think:
+
+    Pattern Matching (Structural Typing at Runtime):
+    This is perhaps the most significant "mitigation." Pattern matching allows you to define different function clauses (implementations) based on the structure and type of the incoming arguments. If an argument doesn't match any defined pattern, a MatchError occurs.
+
+    Example:
+    Elixir
+
+    def process_data({:ok, value}) do
+      # This clause only runs if the input is a tuple starting with :ok
+      "Processed: #{value}"
+    end
+    def process_data({:error, reason}) do
+      # This clause only runs if the input is a tuple starting with :error
+      "Failed: #{reason}"
+    end
+    def process_data(_), do: raise ArgumentError, "Invalid data format"
+
+This provides a strong form of runtime type checking and forces you to consider expected data shapes, acting as a form of "structural typing."
+
+Immutability:
+All data in Elixir (and Erlang) is immutable. When you "change" a data structure, you're actually creating a new one. This vastly simplifies reasoning about your code, reduces side effects, and eliminates an entire class of bugs related to mutable state and unexpected type changes. You don't have to worry about a function receiving a certain type and then having its internal structure mysteriously change elsewhere.
+
+"Let it Crash" Philosophy & OTP/BEAM:
+This is core to the Erlang VM (BEAM) on which Elixir runs. Instead of trying to prevent every possible error at compile time, the philosophy is to expect errors and design systems to recover from them.
+
+    If a type error occurs, the process will crash.
+    However, processes are organized into supervision trees via the OTP (Open Telecom Platform) framework. A supervisor monitors its children processes. If a child crashes, the supervisor can restart it, often automatically and transparently, leading to highly fault-tolerant systems.
+
+    This means that while a type error might occur, it often only affects a small, isolated part of the system, and the system quickly self-heals, making runtime type errors less catastrophic than in monolithic applications.
+
+Emphasis on Testing:
+Due to the dynamic nature, the Elixir community places a very high emphasis on comprehensive testing (unit, integration, and even property-based testing). Tests effectively become your "compile-time checks" for type correctness and behavior, ensuring that edge cases and unexpected inputs are handled.
+
+Dialyzer (Static Analysis Tool):
+While not part of the Elixir compiler, Dialyzer (from Erlang) is a powerful static analysis tool that can be used with Elixir. It performs a "success typing" analysis, inferring types in your code and warning you about potential type mismatches, dead code, and unreachable clauses. It's not a strict type checker (it's optional and doesn't reject compilation), but it provides excellent "soft" static type analysis that catches many common type-related errors.
+
+Type Specifications (Specs):
+    Elixir allows you to write function specifications using @spec. These are annotations that describe the expected types of arguments and return values.
+
+    Example:
+    Elixir
+
+        @spec add(integer, integer) :: integer
+        def add(a, b), do: a + b
+
+    These specs are primarily for documentation and for tools like Dialyzer. They provide human-readable type information and allow Dialyzer to perform more accurate analysis.
+
+Conclusion:
+
+While Elixir's dynamic typing does mean type errors are caught at runtime rather than compile-time, the language and its ecosystem provide robust mechanisms to manage this:
+
+    Pattern matching provides structural guarantees at runtime.
+
+Immutability simplifies reasoning and reduces hidden state bugs.
+OTP/BEAM's fault tolerance means crashes due to type errors are contained and managed.
+A strong testing culture compensates for compile-time checks.
+Tools like Dialyzer offer powerful static analysis.
+Specs provide excellent documentation and aid analysis.
+
+For many applications, especially those requiring high concurrency and fault tolerance (like web services, messaging systems, real-time applications), the benefits of Elixir's approach often outweigh the perceived downsides of dynamic typing, especially when combined with good development practices.
+
+Does it mean having to write more unit-testing and exception-type code in Elixir as compared to type-safe languages?
+
+You're asking a very important follow-up question that gets to the practical implications of dynamic typing!
+
+It's a nuanced answer for Elixir, especially compared to how "exception-type code" is handled in many other languages.
+Unit Testing: Yes, Generally More (for certain aspects)
+
+    Type Safety: In strongly (statically) typed languages, the compiler performs exhaustive checks for type compatibility. If a function expects an integer and you pass a string, the code simply won't compile. Unit tests for these specific type mismatches are often unnecessary.
+    Elixir's Approach: Since Elixir is dynamically typed, the compiler won't catch these errors. Therefore, unit tests become your primary safety net for ensuring that:
+        Functions receive the types and shapes of data they expect.
+        Functions return the types and shapes of data they promise.
+        Edge cases with unexpected data types are handled gracefully (or crash predictably).
+    Conclusion for Testing: Yes, you will generally write more unit tests in Elixir specifically to cover the correctness of data types and structures at function boundaries and throughout your system, which a static type checker would otherwise enforce. This is often viewed as a trade-off: more runtime safety via testing vs. compile-time safety via static types.
+
+Exception-Type Code (Error Handling): It's Different, Not Necessarily More
+
+This is where Elixir's philosophy, inherited from Erlang, significantly diverges from many other languages (both dynamic and static).
+
+    "Errors" (Crashes/Exceptions):
+        Other Languages (often): When an unrecoverable error occurs (like a type mismatch, invalid argument, or out-of-bounds access), the typical response is to throw an exception, and you are expected to catch and handle it with try/catch (or rescue/except) blocks. If uncaught, the program often terminates.
+        Elixir's "Let It Crash" Philosophy: For unexpected errors (including type mismatches that aren't caught by pattern matching, or arguments that fail runtime checks), Elixir embraces the "let it crash" philosophy. A process that encounters an unhandled error will crash.
+        Supervisors: This isn't chaos! These crashing processes are monitored by supervisors (part of OTP). A supervisor's job is to detect crashes and automatically restart the failed process (or its siblings, or the whole subtree) in a known good state. This allows the system as a whole to remain highly available and fault-tolerant.
+        Conclusion for Crashes: You will likely write significantly less traditional try/catch (or rescue) code directly around every potentially failing function call. Instead, you design your system with supervision trees, which is a different way of handling resilience. The "error handling" is done at a higher, architectural level, not always at the individual function call level.
+
+    "Expected Failures" (Return Tuples):
+        Other Languages (often): For expected, recoverable failures (e.g., file not found, network timeout, user input validation), these might be handled by checked exceptions, Result types (in Rust, Haskell), or just returning null/nil and checking.
+        Elixir's Idiom: Elixir strongly encourages returning a tuple {:ok, result} for success and {:error, reason} for failure. This is then processed using pattern matching.
+        Example:
+        Elixir
+
+        case File.read("non_existent_file.txt") do
+          {:ok, content}    -> IO.puts "File content: #{content}"
+          {:error, :enoent} -> IO.puts "File not found!"
+          {:error, reason}  -> IO.puts "An error occurred: #{reason}"
+        end
+
+        Conclusion for Expected Failures: You will write more code that uses explicit pattern matching to deconstruct and handle these {:ok, :error} tuples. This is a very common and idiomatic way to manage expected outcomes. While not "exception-type code" in the try/catch sense, it's a very explicit form of error handling for known failure modes.
+
+Overall Summary:
+
+    More Unit Tests: Yes, to cover type/shape correctness.
+    Less try/catch: Yes, for unexpected errors, due to the "let it crash" and supervisor model.
+    More Pattern Matching on {:ok, :error} tuples: Yes, for explicit handling of expected success/failure outcomes.
+
+So, it's not simply "more" or "less" code for error handling; it's a different paradigm for how errors (both unexpected crashes and expected failures) are managed, heavily leveraging Elixir's core features like immutability, pattern matching, and the BEAM's fault tolerance.
+
+Seems reassuring actually. Could we cover Lua Fennel next in our exposé? I'm gonna look at Lua too in a short bit, but Fennel seems very interesting to me, and having great potential for speeding up some of the development if handled correctly.
+
+Fantastic! Fennel is indeed a fascinating choice, especially if you're drawn to the power of Lisp while wanting to leverage the ubiquity and speed of Lua. Its promise of "speeding up some of the development if handled correctly" largely comes from its macro system and more consistent syntax.
+
+Let's unpack Fennel.
+Fennel: A Lisp that Compiles to Lua
+
+Fennel is a programming language that compiles to Lua. This means that when you write Fennel code (.fnl files), it's transformed into standard Lua code (.lua files) before being executed by the Lua interpreter (or LuaJIT). This offers some compelling advantages:
+
+    Lua Compatibility: You get full access to the entire Lua ecosystem – all Lua libraries, tools, and the Lua standard library work seamlessly.
+    Performance: Since it compiles to Lua, it inherits Lua's legendary performance, especially with LuaJIT.
+    Small Footprint: Like Lua, Fennel itself is very small and embeddable.
+    Lisp Advantages: It brings the power of Lisp (s-expressions, macros, code-as-data) to the Lua runtime, which can lead to incredibly concise and expressive code, as well as powerful language extensions via macros.
+
+Fennel's Core Philosophy and Differences from Lua
+
+Fennel aims to address some perceived shortcomings of Lua while maintaining its strengths:
+
+    No Accidental Globals: Fennel makes it much harder to accidentally create or use global variables, a common pitfall in Lua. You explicitly use global or _G when you truly intend to.
+    Opt-in Mutability for Locals: Local variables are immutable by default. If you need to reassign a local, you declare it with var. This encourages a more functional style and makes reassignments obvious.
+    Clearer Table Syntax: Lua uses {} for both sequential (array-like) and associative (map-like) tables. Fennel introduces distinct syntax: [] for sequential and {} for associative.
+    Dedicated Loop Constructs: Lua overloads for for both numeric and iterator-based loops. Fennel separates these into for (numeric) and each (iterator).
+    Pattern Matching & Destructuring: Fennel includes built-in support for destructuring assignments and pattern matching, which are absent in vanilla Lua.
+    No Operator Precedence / All Expressions: As a Lisp, Fennel uses prefix notation (Polish notation), eliminating operator precedence issues. Everything is an expression, meaning functions always return values, and there are no "statements" in the traditional sense. This regular structure is key to macros.
+    Macros: This is perhaps Fennel's most powerful feature. You can write code that manipulates other code at compile-time, allowing you to extend the language's syntax and create domain-specific languages (DSLs) within Fennel itself.
+
+Fennel Types and Data Structures (and their Lua counterparts)
+
+Fennel largely uses Lua's underlying types, but provides a more consistent Lisp-style syntax for them. Lua itself is dynamically typed.
+1. Basic Types
+
+    Numbers: Integers and floats are represented the same as in Lua. Underscores can be used for readability.
+    Code snippet
+
+1      ; integer
+3.14   ; float
+1_000_000 ; with underscore
+
+Lua only has one number type (double-precision float by default).
+
+Booleans: true and false.
+Code snippet
+
+true
+false
+
+In Lua, nil and false are falsy. All other values are truthy. Fennel follows this.
+
+Strings: Enclosed in double quotes " ". Support escaping.
+Code snippet
+
+"Hello, Fennel!"
+"A string with a \"quote\" inside."
+
+Unlike Lua, Fennel doesn't directly support single-quoted or long-bracket strings ([[...]]) for literals, though you can work with them via Lua interop or functions.
+
+nil: Represents the absence of a value.
+Code snippet
+
+nil
+
+Equivalent to Lua's nil.
+
+Symbols: Lisp's fundamental identifier. They are names that refer to variables, functions, or other values. Not directly a Lua type, but compile down to variable names or string keys.
+Code snippet
+
+    my-variable
+    a-function-name
+    +                  ; The addition operator as a symbol
+
+    By convention, dashes - are preferred as word separators in symbols.
+
+2. Collection Types (Data Structures)
+
+Lua has only one fundamental data structure: the table. Fennel uses Lua tables under the hood but provides different syntactic sugar to represent them in more structured ways:
+
+    Sequential Tables (Lists/Arrays): Ordered collections of elements, enclosed in square brackets []. They compile to Lua tables used as arrays (with numeric, 1-indexed keys).
+    Code snippet
+
+[1 2 3]
+["apple" "banana" "cherry"]
+[1 "hello" true nil {:key "value"}] ; Can mix types
+
+    Lua Equivalent: local t = {1, 2, 3} (or local t = {"apple", "banana", "cherry"})
+
+Associative Tables (Maps/Dictionaries/Objects): Key-value pairs, enclosed in curly braces {}. Keys are typically symbols (which compile to strings), but can be any Lua type.
+Code snippet
+
+{:name "Alice" :age 30 :city "Uddevalla"}
+
+If the key is a symbol, Fennel uses a convenient shorthand where the colon precedes the key symbol. You can also use other types as keys:
+Code snippet
+
+{"key with spaces" "value" 100 "a number key"}
+
+    Lua Equivalent: local t = {name = "Alice", age = 30, city = "Uddevalla"} (for atom keys) or local t = {["key with spaces"] = "value", [100] = "a number key"}.
+
+_G (Global Environment): Although Fennel discourages accidental globals, you can explicitly interact with Lua's global environment through _G.
+Code snippet
+
+    (set _G.my-global 42)
+    (print _G.my-global)
+
+Other Important Syntactical Elements
+
+    S-expressions: The fundamental building block of Lisp syntax. Code is represented as lists, enclosed in parentheses (). The first element in the list is usually a function or macro name, followed by its arguments.
+    Code snippet
+
+(+ 1 2)         ; equivalent to 1 + 2 in infix
+(print "Hello, world!")
+(if (> x 10)    ; if-conditional
+  (print "x is large")
+  (print "x is small"))
+
+Function Definition (fn / lambda):
+Code snippet
+
+(fn add [a b]     ; Define a function named `add`
+  (+ a b))
+
+(local my-func (fn [x] ; Anonymous function assigned to a local
+                 (* x 2)))
+
+(lambda [a b]      ; `lambda` is similar to `fn`, but can optionally
+  (+ a b))         ; provide arity checking (throws error if too few args)
+
+The fn form allows for variable arity (extra arguments are ignored, missing ones are nil), mimicking Lua's function behavior. lambda offers opt-in arity checking.
+
+Variable Declaration (local, var, set):
+Code snippet
+
+(local x 10)         ; Immutable local variable
+(var y 20)           ; Mutable local variable (can be reassigned)
+(set y 30)           ; Reassign a `var`
+
+This explicit distinction between local and var is a significant departure from Lua, which defaults to local but allows reassignment.
+
+Function Calls: Just s-expressions where the first element is the function.
+Code snippet
+
+(string.upper "hello") ; Accessing a method/field from a table
+
+Fennel also has a shorthand for method calls: (. object :method args) which is equivalent to object:method(args) in Lua.
+
+Macros (macro): Define functions that run at compile time to transform Fennel code into other Fennel code (which then compiles to Lua). This is how you extend the language.
+Code snippet
+
+(macro my-unless [condition body]
+  `(if (not ,condition) ,body)) ; Quasiquote syntax (backtick, comma)
+
+(my-unless (= x 0)
+  (print "x is not zero!"))
+; Compiles to: (if (not (= x 0)) (print "x is not zero!"))
+
+Quoting (', ``  ,,`): Essential for macros.
+
+    'foo (single quote): Prevents evaluation of foo, treating it as literal data (a symbol foo).
+    `foo (backtick / quasiquote): Similar to ', but allows for "unquoting" (,) parts of the expression, meaning those parts are evaluated. This is extremely powerful for generating code.
+    ,foo (comma / unquote): Used inside a quasiquote to evaluate foo and insert its result into the quoted structure.
+
+Comments (;): A semicolon ; makes the rest of the line a comment.
+Code snippet
+
+    (print "hello") ; This is a comment
+
+Fennel's concise, consistent Lisp syntax, combined with its compilation to performant Lua and powerful macro system, indeed offers a compelling approach for development, especially when targeting environments where Lua is prevalent (like game development, embedded systems, or configuration for tools like Neovim or AwesomeWM). The learning curve involves getting used to s-expressions and the functional programming mindset, but the expressiveness can be highly rewarding.
+
+Great. And is there splicing for macros also (as in many other Lisp-languages macros)?
+
+Yes, absolutely! Splicing is a fundamental and powerful concept in Fennel macros, just as it is in Common Lisp and Clojure.
+
+In Fennel, the unquote-splicing operator is ,@ (comma-at), precisely mirroring its use in other Lisp dialects (like ,@ in Common Lisp or ~@ in Clojure).
+What Splicing (@) Does
+
+When you're writing a macro template using quasiquotation (the backtick `), ,@ tells the macro expander:
+
+    Evaluate the expression that follows ,@.
+    Assume the result of that evaluation is a list.
+    Instead of inserting that list as a single element, insert each element of that list individually into the surrounding list in the template.
+
+This is crucial for building macro expansions where you need to generate a variable number of forms or take a list of forms from a macro argument and insert them directly into the expanded code.
+Example: A my-do Macro
+
+Let's illustrate with a simple my-do macro that takes a series of expressions and wraps them in a (do ...) block.
+
+Common Lisp/Clojure Equivalent:
+Clojure
+
+;; Clojure
+(defmacro my-do [& body]
+  `(do ~@body))
+
+;; Common Lisp
+(defmacro my-do (&body body) ; &body is a variant of &rest, implies a sequence of forms
+  `(progn ,@body))
+
+Fennel Example:
+Code snippet
+
+;; Fennel
+;; (macro my-do [& body] ...)
+;; `& body` is a rest parameter; it collects all subsequent arguments into a list.
+;; If you call (my-do (print "a") (print "b")), `body` will be `((print "a") (print "b"))`.
+
+(macro my-do [& body]
+  ;; The backtick ` starts quasiquotation.
+  ;; The `do` form is literal.
+  ;; `,@body` unquotes the `body` list and splices its elements (the forms)
+  ;; directly into the `do` form.
+  `(do ,@body))
+
+;; --- Example Usage ---
+
+(my-do
+  (print "This is the first expression.")
+  (local x (+ 1 2))
+  (print "The value of x is:" x)
+  (if (> x 2)
+    (print "x is greater than 2!")))
+
+;; --- What it Expands To (Conceptual) ---
+
+;; (do
+;;   (print "This is the first expression.")
+;;   (local x (+ 1 2))
+;;   (print "The value of x is:" x)
+;;   (if (> x 2)
+;;     (print "x is greater than 2!")))
+
+As you can see, ,@body takes the list of expressions (body) captured by the & body rest parameter and inserts each individual expression into the (do ...) form, effectively building a valid sequence of forms for the do block.
+
+This capability is one of the primary reasons Lisp macro systems (including Fennel's) are so powerful and are often cited as a key advantage for "speeding up some of the development" by allowing you to extend the language itself to fit your problem domain.
+
+Great. Could we now look at Lua also in our exposé?
+
+Alright, let's turn our attention to Lua, the language that powers Fennel and many of your target applications!
+
+Lua is a powerful, efficient, lightweight, embeddable, and multi-paradigm programming language. It's often chosen for its simplicity, speed, and versatility, especially in domains like game development, embedded systems, and as an extension language for applications (like NeoVim, MPV, VLC, OpenMW).
+Lua's Core Philosophy
+
+    Simplicity: Lua has a small core language and a minimalist design.
+    Embeddability: Designed to be easily integrated into other applications.
+    Performance: Highly optimized, especially with LuaJIT.
+    Flexibility: While fundamentally procedural and functional, it can easily implement object-oriented programming (OOP) paradigms using its powerful table data structure.
+    Dynamic Typing: Like Elixir, Lua is dynamically typed. Type checking happens at runtime.
+
+Lua Types and Data Structures
+
+Lua has a small number of fundamental types, but its table data structure is incredibly versatile, serving as the basis for arrays, dictionaries, objects, and more.
+1. Basic Types
+
+    nil: Represents the absence of a value. It's the only value of its type.
+    Lua
+
+nil
+
+Note: nil and false are the only falsy values in Lua. Everything else is truthy.
+
+Booleans: true and false.
+Lua
+
+true
+false
+
+Numbers: Lua historically had only one number type, typically a double-precision floating-point. Since Lua 5.3, it also supports integers. The interpreter handles conversion where possible.
+Lua
+
+42       -- Integer (since Lua 5.3)
+3.14     -- Float
+1.0      -- Float
+0xFF     -- Hexadecimal (255)
+0b1010   -- Binary (10, since Lua 5.3)
+
+Strings: Immutable sequences of bytes, usually UTF-8 encoded. Enclosed in single quotes '', double quotes "", or long brackets [[]].
+Lua
+
+"Hello, Lua!"
+'Another string'
+name = "Alice"
+"Hello, " .. name .. "!" -- String concatenation using `..`
+
+Long brackets allow for multi-line strings and don't interpret escape sequences:
+Lua
+
+[[This is a
+multi-line string.
+It can contain "quotes" and 'quotes'.]]
+
+-- Short long brackets (Lua 5.1 onwards for variable number of equals signs)
+[==[
+This is another
+long string.
+]==]
+
+Functions: First-class values, meaning they can be stored in variables, passed as arguments, and returned from other functions.
+Lua
+
+local function add(a, b)
+  return a + b
+end
+
+local subtract = function(a, b)
+  return a - b
+end
+
+print(add(1, 2))      -- 3
+print(subtract(5, 2)) -- 3
+
+Userdata: Represents arbitrary C data in Lua. Used for integrating Lua with C libraries.
+Lua
+
+-- You won't see raw userdata syntax; it's handled by C bindings
+-- E.g., a file handle from C, or a complex object exposed by an application
+local file = io.open("my_file.txt", "r") -- `file` is a userdata object
+
+Threads: Represents Lua coroutines. Used for cooperative multitasking.
+Lua
+
+    -- Coroutines are created with `coroutine.create`
+    local co = coroutine.create(function()
+      print("Hello from coroutine!")
+      coroutine.yield() -- Pause execution
+      print("Resumed!")
+    end)
+    -- Usage: coroutine.resume(co)
+
+    Light Userdata: Raw C pointers. Used for very low-level C integration. Less common in typical Lua scripts.
+
+2. The table Data Structure
+
+The table is Lua's most fundamental and versatile data structure. It's an associative array, meaning it can store key-value pairs where keys and values can be of any type (except nil for keys).
+
+    Syntax: Tables are created using curly braces {}.
+
+    Arrays (Sequential Tables): When keys are consecutive integers starting from 1, tables behave like arrays.
+    Lua
+
+local my_array = {10, 20, 30}
+print(my_array[1]) -- Accessing elements (1-indexed!) -> 10
+print(my_array[3]) -- -> 30
+print(#my_array)   -- Get length -> 3 (Lua 5.1+ for sequential tables)
+
+Dictionaries / Maps (Associative Tables): Keys can be strings, numbers, or even other tables or functions.
+Lua
+
+local user = {
+  name = "Bob",       -- String key 'name'
+  age = 25,           -- String key 'age'
+  ["city-name"] = "Paris", -- Key with special characters or spaces
+  [10] = "ten"        -- Number key
+}
+
+-- Accessing values:
+print(user.name)      -- Dot notation for valid identifier string keys -> Bob
+print(user["age"])    -- Bracket notation for any key type -> 25
+print(user["city-name"]) -- -> Paris
+print(user[10])       -- -> ten
+
+Mixed Tables: You can mix array-like and dictionary-like parts in the same table:
+Lua
+
+local mixed = {
+  "first", "second",       -- Array part (keys 1, 2)
+  name = "Mixed Table",   -- Dictionary part
+  type = "example"
+}
+print(mixed[1])      -- -> first
+print(mixed.name)    -- -> Mixed Table
+
+Objects (via Metatables): Lua uses tables and a concept called metatables to implement object-oriented programming (classes, inheritance, methods).
+Lua
+
+    -- Basic object/method syntax (sugar for table access)
+    local obj = { value = 10 }
+    function obj:increment(amount) -- `self` is automatically passed as first arg
+      self.value = self.value + (amount or 1)
+    end
+
+    obj:increment(5)   -- calls obj.increment(obj, 5)
+    print(obj.value)   -- -> 15
+
+Other Important Syntactical Elements for Readability
+
+    local Keyword: Crucial for defining local variables and avoiding accidental global variables. Good practice dictates using local always, unless a global is explicitly desired.
+    Lua
+
+local my_local_var = 123
+
+Blocks with do ... end: Used for creating scopes, often with local variables inside.
+Lua
+
+do
+  local temp = "scoped variable"
+  print(temp)
+end
+-- print(temp) -- This would cause an error (temp is out of scope)
+
+Control Structures:
+
+    if ... then ... elseif ... then ... else ... end:
+    Lua
+
+if x > 10 then
+  print("x is large")
+elseif x < 5 then
+  print("x is small")
+else
+  print("x is medium")
+end
+
+while ... do ... end:
+Lua
+
+local i = 1
+while i <= 3 do
+  print(i)
+  i = i + 1
+end
+
+repeat ... until ...:
+Lua
+
+local i = 1
+repeat
+  print(i)
+  i = i + 1
+until i > 3
+
+for loops:
+
+    Numeric for:
+    Lua
+
+for i = 1, 5, 2 do -- from 1 to 5, step 2
+  print(i) -- 1, 3, 5
+end
+
+Generic for (iterators): Used for iterating over tables or other iterables.
+Lua
+
+            for key, value in pairs({a = 1, b = 2}) do
+              print(key, value)
+            end
+            -- Output: a 1, b 2 (order not guaranteed)
+
+            for index, value in ipairs({10, 20, 30}) do -- Iterates only numerical keys from 1 up to first nil
+              print(index, value)
+            end
+            -- Output: 1 10, 2 20, 3 30
+
+    Comments:
+        Single-line: -- comment text
+        Multi-line: --[[ comment block --]] (can also be used to quickly comment/uncomment code blocks by adding/removing a - from the first --)
+
+Lua's strength lies in its minimal yet powerful set of features, particularly its flexible table data structure and first-class functions, which allow it to adapt to various programming styles.
+
 }}}
 ----
 LEARN X IN Y MINUTES {{{
