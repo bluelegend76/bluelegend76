@@ -2,7 +2,7 @@ vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
 ___calendarnow
 
-pre-offboard {{{
+ pre-offboard {{{
 Nivå: En LIA är inte en sommarjobbare, och def. ingen exjobbare.
 
 S.D: Nej jag förstår inte. Jag tycker de här instruktionerna är tydliga och inget är konstigt.
