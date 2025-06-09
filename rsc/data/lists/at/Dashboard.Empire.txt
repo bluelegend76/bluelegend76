@@ -1,19 +1,18 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
 ___calendarnow
-^[^:]\+:
 
-
+pre-offboard {{{
 Nivå: En LIA är inte en sommarjobbare, och def. ingen exjobbare.
 
 S.D: Nej jag förstår inte. Jag tycker de här instruktionerna är tydliga och inget är konstigt.
      och det ska inte vara en komplicerad uppgift.
 
-Instruktioner har inte varit klara och tydliga
-    (det är vad teammedlemmar själva har sagt när jag och L. och Abbe tittat på dem)
+Instruktioner har inte(!) varit klara och tydliga
+    (det är vad teammedlemmar själva har sagt + när jag och L. och Abbe tittat på dem)
 
 M.A: 
-M.A: 'Jag känner mina _ så jag köper inte vad du säger' är inte professionellt
+M.A: 'Jag känner mina _ så det kan jag inte ta till mig' är inte professionellt
 
 Inflexibel:
   Oerfaren +
@@ -21,8 +20,8 @@ Inflexibel:
 Att byta position hade innuburit MER arbete för min del.
 Att stanna kvar kunde möjligtvis vara en slitsam/otrevlig process NU/DET NÄRMASTE
 
-HUVUDPROBLEMET är att handledningen inte har fungerat.
-    [Det funkade UTMÄRKT med korta sittningar med Erik]
+HUVUDPROBLEMET är att handledningen inte har fungerat. (vilket beror på utgångspunkten)
+    [+Det funkade UTMÄRKT med korta sittningar med Erik]
 lett till frustration och låsning.
 [+/men VARFÖR?]
 
@@ -30,32 +29,14 @@ lett till frustration och låsning.
 "To me, the first principle of leadership is accepting responsibility.
 If one does not accept responsibility and own up to mistakes made, it is unlikely 
   that the mistakes/problems will be corrected"
-
-
-
-Det finns flera/några saker som jag är kritisk eller (i vissa fall t.o.m.) väldigt kritisk till
-(och vissa saker kommer du säkert att nämna)
-
-Hur mycket 
-kommer det fantastiska mängder kod
-
-att det ska komma betydande mängder produktionskod ur någon, annars kan man inte bedöma de
-
-Hur mycket *faktisk produktionskod* kommer ur ett typiskt exjobb?
-(När du är på plats ska du göra så mycket mer än 
-
-  om det är idén 
-Om idén är att
-då tycker jag faktiskt det är något man bör se över
-  attityden till/vad den attityden kommer ifrån
-och som bör ses över
-
-och det tycker jag du kan föra vidare
-
+}}}
 
     +React.txt
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
+
+intressant att se om du kan _ vad eller vilka det här kan vara ifrån?
+(+blir du taggad av pianogrejerna så ska jag skicka min absoluta favorit, och nej det är inte Beethoven, även om det kommer nära)
 
 SCRATCH {{{
 
@@ -623,6 +604,7 @@ In essence, :? provides a concise and idiomatic way in F# to perform type checki
 }}}
 ----
 STARTUPS 1 {{{
+^[^:]\+:
 
 Vanki LearnQna ----
   ../learnqna/vanki/TCCoreUdater-DotNetCore_notes.txt
