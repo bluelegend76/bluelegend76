@@ -5,7 +5,9 @@ ___ZZZZ
   mpv --start=00:14:50 ~/Videos/Peter-L-20250227_{102445,111046,132732}.mp4 &
 ___Gemini
 
-@b(ump):   3yyp}ddzc3-   #copy last q&a-post + bump i-number 1
+@b(ump):   3yy
+p}dd
+zc3-   #copy last q&a-post + bump i-number 1
 @s(plit):  o----yypO         #split (=put ---- + blank line + ----)
 
 mpv c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_102445.mp4 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_111046.mp4 c:/Users/SEDAALB2/Desktop/vids/Peter-L-20250227_132732.mp4
@@ -58,7 +60,7 @@ Installing Spectre Console into C# project
 
 
 ----
-'Jag har den här klassen som har ansvar för detta. Vad vill jag att den ska göra'
+'Jag har den här klassen som har ansvar för detta. Vad vill jag att den ska göra?'
 {{{
     = Vad behöver jag skicka in + Så ser man till att man gör det.
     (och sen går man vidare till nästa lager, och så implementerar man den)
@@ -133,7 +135,7 @@ resultat (=retur-typ) att skicka ut för (åtminstone vissa) controller-funktion
     ----
 
     ----
-[filer att ev. ta bort om saker knasar/felar]
+[filer att ev. ta bort om saker felar]
 {{{
     bin/
     obj/

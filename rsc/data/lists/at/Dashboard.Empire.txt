@@ -3,6 +3,56 @@ set fdm=marker syn= guifont=* | colors ron
 ___calendarnow
 ^[^:]\+:
 
+
+Nivå: En LIA är inte en sommarjobbare, och def. ingen exjobbare.
+
+S.D: Nej jag förstår inte. Jag tycker de här instruktionerna är tydliga och inget är konstigt.
+     och det ska inte vara en komplicerad uppgift.
+
+Instruktioner har inte varit klara och tydliga
+    (det är vad teammedlemmar själva har sagt när jag och L. och Abbe tittat på dem)
+
+M.A: 
+M.A: 'Jag känner mina _ så jag köper inte vad du säger' är inte professionellt
+
+Inflexibel:
+  Oerfaren +
+
+Att byta position hade innuburit MER arbete för min del.
+Att stanna kvar kunde möjligtvis vara en slitsam/otrevlig process NU/DET NÄRMASTE
+
+HUVUDPROBLEMET är att handledningen inte har fungerat.
+    [Det funkade UTMÄRKT med korta sittningar med Erik]
+lett till frustration och låsning.
+[+/men VARFÖR?]
+
+
+"To me, the first principle of leadership is accepting responsibility.
+If one does not accept responsibility and own up to mistakes made, it is unlikely 
+  that the mistakes/problems will be corrected"
+
+
+
+Det finns flera/några saker som jag är kritisk eller (i vissa fall t.o.m.) väldigt kritisk till
+(och vissa saker kommer du säkert att nämna)
+
+Hur mycket 
+kommer det fantastiska mängder kod
+
+att det ska komma betydande mängder produktionskod ur någon, annars kan man inte bedöma de
+
+Hur mycket *faktisk produktionskod* kommer ur ett typiskt exjobb?
+(När du är på plats ska du göra så mycket mer än 
+
+  om det är idén 
+Om idén är att
+då tycker jag faktiskt det är något man bör se över
+  attityden till/vad den attityden kommer ifrån
+och som bör ses över
+
+och det tycker jag du kan föra vidare
+
+
     +React.txt
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
@@ -2179,8 +2229,11 @@ Pyramid
   Termux  __  @@  ¤¤¤
   ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤¤
   . {{{
+  ~/gdrive/rsc/Doks/taskuj/LIA2/DotNetCore/AspDotnetCore-InAct-3e_2023.txt
+
   ~/RiderProjects/bluelegend76/rsc/data/lists/learnqna/vanki/decks/comp/lang/clangs/cs/webmob/AspDnc-Inact2023.vdeck.txt  ___vdeck
   --
+
   gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/webmob/dotnetcore/{AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,AspDotnetCore-WebAPI_2023,manning-morebooks/0_manning-extratitles_including-free,manning-morebooks/api-designpatts_BUY,manning-morebooks/apidelivery-automate,manning-morebooks/dotnetcore-inact-2e_mauiavalonia,manning-morebooks/webapi-test,manning-morebooks/webapis-design-2e}.txt
 
 
