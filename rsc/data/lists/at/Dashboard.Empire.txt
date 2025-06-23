@@ -2172,6 +2172,8 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 }}}
 
 ---- Office.Slog --------
+    gvim ~/{Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/gimpplugin-c,Empire/Doks/Comp/lang/clangs/c/pr/gimp/gimpcplug-wpoet_2019}.txt
+    ~/Empire/Doks/Comp/lang/clangs/c/pr/gimp/gimpcplug-wpoet_2019.txt
 MongoDb
   gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb-profnotes,pro-mongodb-guide_2015}.txt
         (Done: mongodb4-qsguide_2018.txt)
@@ -2190,7 +2192,7 @@ ReactiveUI
 }}}
 ----
 Pyramid
-  ~/Empire/Doks/Comp/lang/py/webmob/pyramid/PyramidFrawew-Docs_2023.txt
+  ~/Empire/Doks/Comp/lang/py/webmob/pyramid/PyramidFramew-Docs_2023.txt
 
 
   winterminal  ¤ [=profiles, AWS-shell, etc **]
