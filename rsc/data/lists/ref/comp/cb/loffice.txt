@@ -1,6 +1,10 @@
 vim:fdm=indent:fdl=2:
 set foldmethod=indent foldlevel=2
 
+LOffice Writer
+                            .
+                            Insert Footnote  a_i t right
+
 ## =INCLUDE HERE + ABOLISH[!!] ~/Dropbox/rsc/data/lists/ref/Loffice-Defaultstyles.txt
  ## =INCLUDE HERE + ABOLISH[!!] ~/Dropbox/rsc/data/lists/ref/Loffice-Defaultstyles.png
 

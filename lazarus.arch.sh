@@ -276,6 +276,9 @@ sudo pacman -S chromium-browser  #maybe not needed with official install
 sudo pacman -S freeplane
 sudo pacman -S tj3 vim-tjp
 
+pacman -S go-yq  # convert yaml to json (etc)
+yay -S graphql-playground-electron
+
 ## TODO: ADD XFCE DESKTOP KEYBOARD SETTINGS (=directory of xml-files)
 
 # sudo pacman -S kdeconnect kdeconnect-indicator
@@ -586,6 +589,7 @@ sudo pacman -S virtualbox
 # ytdlp
 # Markdown + Reveal.js {{{
 # sudo npm -g install instant-markdown-d
+# yay -S vim-instant-markdown
 # }}}
 # per n. emacs-install
 # Install Latest Docker Ubuntu {{{

@@ -214,6 +214,7 @@ Tools, Compilation (etc)        _c
         apt brew                _sh_
         ·                       _bas_
         ·                       _vb_
+        alire                   _ada_
         pack vundle             _vim_
         pip                     _py_
         packagist               _php_
@@ -386,7 +387,7 @@ basic properties                _c
         ·       _fth_
         ·       _ps_
         ·       _r_
-    special file endings        _c
+    file endings                _c
         ·       _sh_
           .ps1    _pshell_
         ·       _bas_
@@ -398,6 +399,7 @@ basic properties                _c
         ·       _lua_
         ·       _lisp_
         ·       _scm_
+        .l      picolisp
         ·       _el_
         ·       _c_
         ·       _cpp_
@@ -418,6 +420,9 @@ basic properties                _c
         ·       _asm_
         ·       _ps_
         ·       _r_
+        .xsh    _xonsh_
+
+        .tsx .jsx   ts/js + React
     typing (static / dynamic)   _c
         ·        _sh_
         ·        _bas_

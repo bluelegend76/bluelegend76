@@ -2,6 +2,8 @@ ref/lang/Langs1Refs.txt
 vim:fdm=indent:fdl=2:
 set fdm=indent syn= guifont=* | colors solarized8_dark_high
 
+iso 639 [=LANGCODES]
+
 cd ../ref/lang/
 ____ __
     TODO[?]: ARRANGE BY USE + TOPICS AS TAGS[??]

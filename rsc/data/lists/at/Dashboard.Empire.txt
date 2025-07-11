@@ -1,5 +1,7 @@
 vim:fdm=marker:
 set fdm=marker syn= guifont=* | colors ron
+___Dailies
+
 ___calendarnow
 
 pre-offboard {{{
@@ -1189,6 +1191,7 @@ Om jag ska peka på en enda sak, så skulle jag säga att det största enskilda 
     }}}
 
 
+___Dailies
 ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/ {{{
   ~/Dropbox/Udt/rsc/data/lists/Tagged/trim/RevealImpress.txt              @@
 
@@ -2172,6 +2175,12 @@ RUSH/OVERVIEW DOKS-LIST[!!] {{{
 }}}
 
 ---- Office.Slog --------
+gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/{*,webapi/*}.txt
+
+cd ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/webmob/new2025/
+--
+gvim {AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,dotnetcore-inact-2e_mauiavalonia,webapi/{AspDotnetCore-WebAPI_2023,webapis-design-2e,api-designpatts_BUY,apidelivery-automate,webapi-test,zz_manning-extratitles_including-free}}.txt
+
     gvim ~/{Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/gimpplugin-c,Empire/Doks/Comp/lang/clangs/c/pr/gimp/gimpcplug-wpoet_2019}.txt
     ~/Empire/Doks/Comp/lang/clangs/c/pr/gimp/gimpcplug-wpoet_2019.txt
 MongoDb
