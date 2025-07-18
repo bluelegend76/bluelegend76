@@ -205,7 +205,8 @@ sudo pacman -S tre
 silversearcher-ag
 # pacman -S tracker  #='tracker3 --help'
 # localsearch tinysparql
-sudo pacman -S ripgrep-all
+sudo pacman -S ripgrep-all  # rg
+sudo pacman -S tealdeer     # tldr (written in Rust)
 sudo pacman -S tesseract
 ## 30 = Eng
 sudo pacman -S translate-shell
