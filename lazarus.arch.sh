@@ -194,6 +194,7 @@ echo "Installing some utilities (curl, rename, tree, ag/agrep, scrot, tesseract)
 sudo pacman -S man-db man-pages
 ## pacman -S curl
 sudo pacman -S rsync
+sudo pacman -S yq
 sudo pacman -S bash-completion
 sudo pacman -S mc
 sudo pacman -S cmake cgdb
@@ -419,10 +420,10 @@ echo "Installing some Programming(and media)-related packages: ..."
 sudo pacman -S bpython
 sudo pacman -S ipython
 # sudo pacman -S python3-pip jupyter
-sudo pacman -S python3-pip jupyterlab
+sudo pacman -S python-pip jupyterlab
 sudo pacman -S python3-virtualenv
 pip3
-pip3 install yt-dlp  # __??
+sudo pacman -S yt-dlp  # __??
 sudo pacman -S qutebrowser
 ln -s ~/Dropbox/config/qutebrowser/config.py ~/.config/qutebrowser/config.py
 # ln -s ~/Dropbox/config/fluxbox/startup ~/.fluxbox/startup
