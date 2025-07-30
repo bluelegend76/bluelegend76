@@ -18,31 +18,66 @@ Settings (e.g. Setup for Programming-Languages (Guile Scheme, etc) ____) {{{
 ___config
 LEAN INIT.EL + LOAD SETTINGS FOR ALL LANGUAGES {{{
 
-You've hit on a critical point for a well-maintained Emacs configuration! As you add more languages and features, a single, monolithic init.el quickly becomes unwieldy. The approach you're describing - a lean init.el that loads modular configurations from separate files - is the gold standard for Emacs power users.
+You've hit on a critical point for
+a well-maintained Emacs-configuration!
+As you add more
+languages and features, a single,
+monolithic init.el quickly becomes
+unwieldy. The approach you're
+describing - a lean init.el that
+loads modular configurations from
+separate files - is the gold
+standard for Emacs power-users.
 
-We've definitely touched upon this implicitly with the use-package preamble, but now we'll formalize the directory structure and loading mechanism.
+We've definitely touched upon this
+implicitly with the use-package
+preamble, but now we'll formalize
+the directory structure and loading
+mechanism.
 
-Here's how to organize your init.el and supporting configuration files, focusing on modularity and cleanliness.
-The Goal: A Modular and Clean init.el
+Here's how to organize your init.el
+and supporting configuration-files,
+focusing on modularity and
+cleanliness. The Goal: A Modular
+and Clean init.el
 
-Your init.el will become a central dispatcher. It will:
+Your init.el will become a central
+dispatcher. It will:
 
-    Perform essential bootstrapping: Set up package management (use-package).
-    Define global settings: Very few, truly universal settings.
-    Load feature-specific configuration files: These files (or directories of files) will contain all the use-package declarations and specific customizations for individual languages, tools, or functionalities.
+- Perform essential bootstrapping:
+  Set up package-management
+  (use-package).
+- Define global settings: Very few,
+  truly universal settings.
+- Load feature-specific
+  configuration-files: These files
+  (or directories of files) will
+  contain all the use-package
+  declarations and specific
+  customizations for individual
+  languages, tools, or
+  functionalities.
 
-Recommended Directory Structure
+Recommended Directory-Structure
 
-A common and highly effective way to organize your Emacs configuration is to create a dedicated directory for your custom configurations, often called ~/.emacs.d/lisp/ or ~/.emacs.d/config/. Within that, you can have subdirectories for categories, or simply put language files directly.
+A common and highly effective way
+to organize your Emacs-configuration
+is to create a
+dedicated directory for your custom
+configurations, often called
+~/.emacs.d/lisp/ or
+~/.emacs.d/config/. Within that,
+you can have subdirectories for
+categories, or simply put language-files directly.
 
 Here's a possible structure:
 
 ~/.emacs.d/
-├── init.el                     ; The main Emacs initialization file
+├── init.el                     ; The main Emacs initialization-file
 ├── early-init.el               ; (Optional) For very early, package-manager-independent setup
-└── lisp/                       ; Or 'config/', a common directory for custom ELisp files
+└── lisp/                       ; Or 'config/', a common directory for custom ELisp-files
     ├── 00-core-settings.el     ; Global settings (e.g., UI, Dired, general editing)
-    ├── 10-programming.el       ; General programming environment settings (optional)
+    ├── 10-programming.el       ; General programming-environment settings (optional)
     ├── languages/              ; Directory for language-specific configurations
     │   ├── c-cpp.el
     │   ├── clojure.el
@@ -56,28 +91,37 @@ Here's a possible structure:
     │   ├── postscript.el
     │   ├── scheme-family.el    ; For Guile, Gambit, Chicken, Chez, Racket combined
     │   └── sml.el
-    ├── themes/                 ; If you store custom theme configurations
+    ├── themes/                 ; If you store custom theme-configurations
     │   └── my-theme.el
-    ├── ui/                     ; UI enhancements (e.g., modeline, dashboard)
+    ├── ui/                     ; UI-enhancements (e.g., modeline, dashboard)
     │   └── dashboard.el
     └── other-tools/            ; Other general tools (e.g., Org-mode, Magit, Projectile)
         ├── org-mode.el
         └── magit.el
 
-Naming Convention:
+Naming-Convention:
 
-    Using numerical prefixes (e.g., 00-, 10-) helps control the loading order, which can be crucial for some configurations that depend on others.
-    Grouping related languages (like lua-family.el or scheme-family.el) can keep the number of files manageable.
+- Using numerical prefixes (e.g.,
+  00-, 10-) helps control the
+  loading-order, which can be
+  crucial for some configurations
+  that depend on others.
+- Grouping related languages (like
+  lua-family.el or
+  scheme-family.el) can keep the
+  number of files manageable.
 
-The Lean init.el
+The Lean init.el ----
 
-Your init.el will be very simple. It will handle the package manager setup and then load all .el files from your lisp/ (or config/) directory.
-Code snippet
+Your init.el will be very simple.
+It will handle the package-manager
+setup and then load all .el-files
+from your lisp/ (or config/) directory.
 
-;;; init.el - Emacs Main Configuration File
+;;; init.el - Emacs Main Configuration-File
 
 ;; -----------------------------------------------------------
-;; 1. Essential Bootstrapping: Package Management (use-package)
+;; 1. Essential Bootstrapping: Package-Management (use-package)
 ;; -----------------------------------------------------------
 
 ;; Ensure package.el is loaded and archives are set up
@@ -99,7 +143,7 @@ Code snippet
 ;; 2. Global Settings (Minimal)
 ;; -----------------------------------------------------------
 
-;; Set custom file location (prevents clutter in init.el)
+;; Set custom file-location (prevents clutter in init.el)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (unless (file-exists-p custom-file)
   (write-file custom-file))
@@ -107,7 +151,7 @@ Code snippet
 
 ;; Set default indentation for modes not explicitly configured
 (setq-default indent-tabs-mode nil) ; Prefer spaces
-(setq-default tab-width 4)           ; Default to 4 spaces, override per mode
+(setq-default tab-width 4)          ; Default to 4 spaces, override per mode
 
 ;; More UI settings, e.g., line numbers, scroll bar, etc.
 (global-display-line-numbers-mode 1)
@@ -133,6 +177,7 @@ Code snippet
 
 (message "Finished loading Emacs configurations.")
 
+
 ;; -----------------------------------------------------------
 ;; Optional: Early Init File (for very early setup)
 ;; -----------------------------------------------------------
@@ -148,91 +193,134 @@ Code snippet
 
 How to Create and Fill the Modular Files
 
-Now, for each configuration we've discussed (Lua, Fennel, MoonScript, Teal, etc.):
+Now, for each configuration we've
+discussed (Lua, Fennel, MoonScript,
+Teal, etc.):
 
-    Create a new file: E.g., ~/.emacs.d/lisp/languages/lua-family.el
 
-    Move the use-package blocks: Take the entire use-package block for Lua, Fennel, MoonScript, Teal, and Eglot (for Lua) and paste it into lua-family.el.
-        Crucial: Remove the use-package preamble from the individual files! It only needs to be in init.el.
-        Example ~/.emacs.d/lisp/languages/lua-family.el content:
-    Code snippet
+Create a new file: E.g., ~/.emacs.d/lisp/languages/lua-family.el
 
-    ;;; lua-family.el --- Configuration for Lua, Fennel, MoonScript, Teal -*- lexical-binding: t; -*-
+Move the use-package blocks: Take
+the entire use-package block for
+Lua, Fennel, MoonScript, Teal, and
+Eglot (for Lua) and paste it into
+lua-family.el.
 
-    ;; All 'use-package' declarations will rely on the preamble in init.el
+- Crucial: Remove the use-package
+  preamble from the individual
+  files! It only needs to be in
+  init.el.
 
-    (use-package lua-mode
-      :mode "\\.lua\\'"
-      :hook (lua-mode . (lambda ()
-                           (setq indent-tabs-mode nil)
-                           (setq tab-width 2)
-                           (electric-pair-mode 1)
-                           (add-hook 'before-save-hook 'delete-trailing-whitespace nil t)))
-      :config
-      (use-package flycheck
-        :init (global-flycheck-mode)
-        :config
-        (flycheck-define-checker lua-luacheck
-          :command ("luacheck" source)
-          :error-patterns
-          ((error line-start (file-name) ":" line ":" column ": " (message) line-end)))
-        (add-hook 'lua-mode-hook (lambda () (flycheck-mode))))
+Example
+~/.emacs.d/lisp/languages/lua-family.el
+content:
 
-      (use-package company
-        :init (global-company-mode)
-        :config
-        (setq company-idle-delay 0.1)
-        (setq company-minimum-prefix-length 2)
-        (add-to-list 'company-backends 'company-capf)))
+;;; lua-family.el --- Configuration for Lua, Fennel, MoonScript, Teal -*- lexical-binding: t; -*-
 
-    (use-package eglot
-      :config
-      (add-to-list 'eglot-server-programs '(lua-mode . ("lua-language-server")))
-      (add-to-list 'eglot-server-programs '(teal-mode . ("lua-language-server")))
-      (add-hook 'eglot-managed-mode-hook
-                (lambda ()
-                  (when (or (eq major-mode 'lua-mode) (eq major-mode 'teal-mode))
-                    (add-hook 'before-save-hook #'eglot-format-buffer nil t)))))
+;; All 'use-package'-declarations will rely on the preamble in init.el
 
-    (use-package fennel-mode
-      :mode "\\.fnl\\'"
-      :hook (fennel-mode . (lambda ()
+(use-package lua-mode
+  :mode "\\.lua\\'"
+  :hook (lua-mode . (lambda ()
+                       (setq indent-tabs-mode nil)
+                       (setq tab-width 2)
+                       (electric-pair-mode 1)
+                       (add-hook 'before-save-hook 'delete-trailing-whitespace nil t)))
+  :config
+  (use-package flycheck
+    :init (global-flycheck-mode)
+    :config
+    (flycheck-define-checker lua-luacheck
+      :command ("luacheck" source)
+      :error-patterns
+      ((error line-start (file-name) ":" line ":" column ": " (message) line-end)))
+    (add-hook 'lua-mode-hook (lambda () (flycheck-mode))))
+
+  (use-package company
+    :init (global-company-mode)
+    :config
+    (setq company-idle-delay 0.1)
+    (setq company-minimum-prefix-length 2)
+    (add-to-list 'company-backends 'company-capf)))
+
+(use-package eglot
+  :config
+  (add-to-list 'eglot-server-programs '(lua-mode . ("lua-language-server")))
+  (add-to-list 'eglot-server-programs '(teal-mode . ("lua-language-server")))
+  (add-hook 'eglot-managed-mode-hook
+            (lambda ()
+              (when (or (eq major-mode 'lua-mode) (eq major-mode 'teal-mode))
+                (add-hook 'before-save-hook #'eglot-format-buffer nil t)))))
+
+(use-package fennel-mode
+  :mode "\\.fnl\\'"
+  :hook (fennel-mode . (lambda ()
+                          (setq indent-tabs-mode nil)
+                          (setq tab-width 2)
+                          (setq lisp-indent-offset 2)
+                          (electric-pair-mode 1)
+                          (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
+
+(use-package moonscript-mode
+  :mode "\\.moon\\'"
+  :hook (moonscript-mode . (lambda ()
                               (setq indent-tabs-mode nil)
                               (setq tab-width 2)
-                              (setq lisp-indent-offset 2)
                               (electric-pair-mode 1)
                               (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
 
-    (use-package moonscript-mode
-      :mode "\\.moon\\'"
-      :hook (moonscript-mode . (lambda ()
-                                  (setq indent-tabs-mode nil)
-                                  (setq tab-width 2)
-                                  (electric-pair-mode 1)
-                                  (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
+(use-package teal-mode
+  :mode "\\.tl\\'"
+  :hook (teal-mode . (lambda ()
+                        (setq indent-tabs-mode nil)
+                        (setq tab-width 2)
+                        (electric-pair-mode 1)
+                        (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
 
-    (use-package teal-mode
-      :mode "\\.tl\\'"
-      :hook (teal-mode . (lambda ()
-                            (setq indent-tabs-mode nil)
-                            (setq tab-width 2)
-                            (electric-pair-mode 1)
-                            (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
+;; End of lua-family.el
 
-    ;; End of lua-family.el
-
-    Repeat for other languages/features: Create c-cpp.el, dlang.el, markdown.el, postscript.el, sml.el, scheme-family.el, etc., moving the relevant use-package blocks into each.
+Repeat for other
+languages/features: Create
+c-cpp.el, dlang.el, markdown.el,
+postscript.el, sml.el,
+scheme-family.el, etc., moving the
+relevant use-package blocks into
+each.
 
 Advantages of This Modular Approach
 
-    Readability: Your init.el is clean and easy to understand at a glance.
-    Maintainability: When you want to modify settings for a specific language (e.g., Elixir), you know exactly which file to open (elixir.el).
-    Organization: Related configurations are grouped together.
-    Debugging: If Emacs starts acting up, you can comment out a single load-file line in init.el (or the dolist loop itself for a full revert) or comment out a specific .el file in lisp/ to quickly isolate the problem.
-    Sharing: It's easier to share parts of your config with others.
-    Performance (Minor): use-package already lazy-loads most packages, so the load-file for each modular config file is quick, as Emacs isn't doing much until you activate a specific mode.
+- Readability: Your init.el is
+  clean and easy to understand at a
+  glance.
+- Maintainability: When you want to
+  modify settings for a specific
+  language (e.g., Elixir), you know
+  exactly which file to open
+  (elixir.el).
+- Organization: Related
+  configurations are grouped
+  together.
+- Debugging: If Emacs starts acting
+  up, you can comment out a single
+  load-file line in init.el (or the
+  dolist loop itself for a full
+  revert) or comment out a specific
+  .el file in lisp/ to quickly
+  isolate the problem.
+- Sharing: It's easier to share
+  parts of your config with others.
+- Performance (Minor): use-package
+  already lazy-loads most packages,
+  so the load-file for each modular
+  config-file is quick, as Emacs
+  isn't doing much until you
+  activate a specific mode.
 
-This structure is robust and will scale very well as your Emacs configuration grows. It's an excellent way to keep your Emacs setup tidy and efficient!
+This structure is robust and will
+scale very well as your
+Emacs-configuration grows. It's an
+excellent way to keep your
+Emacs-setup tidy and efficient!
 
 }}}
 COMPLETION + INTELLISENSE {{{

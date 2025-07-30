@@ -138,15 +138,15 @@ mkdir -p ~/processdir/{compile,rds}/
 mkdir ~/dwhelper/
 read -p "Connect and mount External Main HDDrive 1(!), then Press Enter: "
 # connect external drive 1  + below = CREATE MANUALLY
-ln -s /media/bluelegend/${EXTHD1}/legacy/dropboxlegacy_pre2021/ dropbox-legacy
-ln -s /media/bluelegend/${EXTHD1}/Empire/
-ln -s /media/bluelegend/${EXTHD1}/legacy/
+ln -s /run/media/bluelegend/${EXTHD1}/legacy/dropboxlegacy_pre2021/ dropbox-legacy
+ln -s /run/media/bluelegend/${EXTHD1}/Empire/
+ln -s /run/media/bluelegend/${EXTHD1}/legacy/
 
-echo "Now cloning down own (=bluelegend76) Git repos: ..."
-mkdir ~/git && \
-  git clone https://github.com/bluelegend76/komvux2023-cpp.git ~/git/komvux2023-cpp && \
-  git clone https://github.com/bluelegend76/lilyblock-render.git ~/git/lilyblock-render
-  # TODO: Convert to for-loop on list of the repo names(!!)
+# echo "Now cloning down own (=bluelegend76) Git repos: ..."
+# mkdir ~/git && \
+#   git clone https://github.com/bluelegend76/komvux2023-cpp.git ~/git/komvux2023-cpp && \
+#   git clone https://github.com/bluelegend76/lilyblock-render.git ~/git/lilyblock-render
+#   # TODO: Convert to for-loop on list of the repo names(!!)
 
 echo "Installing Vims + linking up vim settings: ..."
 mkdir -p ~/.vim/bundle
@@ -191,7 +191,9 @@ yay -S insync
 
 clear
 echo "Installing some utilities (curl, rename, tree, ag/agrep, scrot, tesseract): ..."
+sudo pacman -S man-db man-pages
 ## pacman -S curl
+sudo pacman -S rsync
 sudo pacman -S bash-completion
 sudo pacman -S mc
 sudo pacman -S cmake cgdb
@@ -492,7 +494,7 @@ echo "(Nyquist is started with 'ny': )"
 # TODO: Add installation for Csound Blue
 
 echo "(Installing some media Extras)"
-#@@__ pacman -S discord
+sudo pacman -S discord
 sudo pacman -S pidgin
 
 echo "Installing speech-dispatcher (=for Firefox speech synthesis): "

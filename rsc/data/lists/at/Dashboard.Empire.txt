@@ -37,9 +37,6 @@ If one does not accept responsibility and own up to mistakes made, it is unlikel
     HTML, CSS, SASS [____]
 ../todo/MasterlistDownload-onedeepmans-online.txt
 
-intressant att se om du kan _ vad eller vilka det här kan vara ifrån?
-(+blir du taggad av pianogrejerna så ska jag skicka min absoluta favorit, och nej det är inte Beethoven, även om det kommer nära)
-
 SCRATCH {{{
 
 Quick question: If I would like to check on Windows if a certain program is installed (and by the way, in my case it could be installed either as a regular program, or be running as a service)?
@@ -1334,48 +1331,69 @@ dft curr 2023 {{{
 -- OFFICE.PROJS ___index=2  #'odin-tree' [+lists on gkeep(?)] {{{
     \v\@([^ ]?)+
 
-Reveal.js / Impress.js
-VIMSCRIPT x4 (+Elisp Startwith)
-
-mermaid md
+---- office.Projs|Tree -------
+    Sv.Words | Eng.Words
+gvim ~/Dropbox/rsc/Doks/upload/Notes_*.txt
+----
+    mermaid md
 Obsidian __ @ +MLEARN: FIRST DOKS + formulas w. Obsidian Md/Latex[!!]  _  ¤¤¤
-Lua (OpenMw, Mpv, NeoVim + NVim Touch, Ardour)
-Py/F# Sysadm. + Devops[!!]  ¤¤¤
 ----
-  OrgMode
-Bcb, Bluebash  ¤¤¤  LINSYS: debbib
-
-Termux  __  @@  ¤¤¤
-JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
-datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
-FuncPy  ¤¤¤
-----
-    ASP.NET CORE MVC __ (++Web APIs)  ¤¤¤
+DataStructures (+Functional)
+  Networking
+  refactoring + debugging
+     refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤
+  Xonshell (+NuShell)
+    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
+  Webscraping
+Archit.Sys
+Comp.Architecture
+Lua (OpenMw, Mpv, NeoVim + NVim Touch, Ardour)  + 'modern vim'
+SSH + make  ¤¤¤
+ Ocaml, Rust, Go, Zig, Vlang
+ Dlang (+pegged)
+Elixir/Phoenix (+LiveView)
+Clang
+React (+ReasonML)  (+MongoDB)
+  GraphQL
+Abe Kotlin  ¤¤  + Flutter (**)
+Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
+  @xsane, font(forge)/Scribus  ¤¤¤
+haskell + datanalys
+SemWeb, LinkedData
+  Tracker/Localsearch + TinySparql + Sparql  ¤¤
+  (gimp etc) C Py Scm (!!)  ¤¤¤
+AVALONIA + ReactiveUI  (+Maui)  ¤¤(¤)  Spectre Console
+    ASP.NET CORE MVC __ (+Web APIs)  ¤¤¤
   + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
     . {{{
     @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips ¤¤¤
     C# DotNet Core MVC + Blazor, Cs Funct 3
     }}}
+----
+  RelDatabase-tips
+Spring (+Vaadin)
+
+OrgMode
+Py/F# Sysadm. + Devops[!!]  ¤¤¤
+----
+Bcb (+Rute), Bluebash  ¤¤¤  LINSYS: debbib
+
+    Reveal.js / Impress.js
+    VIMSCRIPT x4 (+Elisp Startwith)
+Termux  __  @@  ¤¤¤
+JupNotebooks, polyglot notebooks, Pandas(etc)  ¤¤¤
+datastructures PROGR-List + Db(SqLite) + PROGR-Langs-list[!]
+FuncPy  ¤¤¤
+----
 
 Android Scripting [+Rclone] ¤¤¤
-AVALONIA (+Maui)  ¤¤(¤)  Spectre Console
+Datasci@ + Pandas[!!] @Webscrape ¤¤¤ / @GoogleHacks
     XUnit, Cpp Gtest + 'Prop.based Testing'  ¤¤
-Dlang [Ali, +Learning, Cb]  +Pegged  ¤¤¤
     [Dlang-proj + PhobosNext|Per Nordl.]
-SSH  ¤¤¤
-NuShell  _  ¤¤(¤)
 ASM 1 (+binalys)  ¤¤
-Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
-Tracker/Localsearch + Sparql  ¤¤
-Abe Kotlin  ¤¤
-(gimp etc) C Py Scm (!!)  ¤¤¤
 Anki  ¤¤¤
   F#[!!!!] + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
-Datasci@ + Pandas[!!] @Webscrape ¤¤¤ / @GoogleHacks
-refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤
-@xsane, font(forge)/Scribus  ¤¤¤
     CSS + Sass/Compass
-    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
 Blue + CSound +Analog Synth. ¤¤¤  Nyq, Scoll  muHask*(*), Midi  @  Chuck  ORCH/POPROCK-ARR (etc)
      Csound(Qt + Blue), Scollider
 Bash/Dash-Mans {{{
@@ -2035,6 +2053,8 @@ Buckey's Godot
 office.Overview [2]  # write summary|overview {{{
 
 ---- office.Overview --------
+Doxygen - generate documentation (etc)
+
 ANKIMAN 2021+
     ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
 Lincmd.Org
