@@ -2091,6 +2091,10 @@ Avalonia  __  ¤¤¤
 
 }}}
     -- office.Slog ___index=3 [3] {{{
+Emacs-setup (modular) {{{
+    gvim -p ~/RiderProjects/bluelegend76/rsc/data/lists/at/Emacs.txt ../ref/comp/editor/emacs/elisp_refman.txt ../ref/comp/editor/emacs/emacs-mastextend.check.txt ../ref/comp/editor/emacs/Em1-notes_x2.txt ../ref/comp/editor/emacs/orgman-emacs.index.txt ../ref/comp/editor/emacs/emacs-dired.txt ../ref/comp/editor/emacs/emacsman1.index.txt ../ref/comp/editor/emacs/emacsrefcard-org.txt ../ref/comp/editor/emacs/emacsrefcard-shortessential.txt ../ref/comp/editor/emacs/emacsrefcard-Long.txt
+    gvim ~/.emacs.d/init.el
+}}}
 ____ __
 
 VTOUCH-UTILS + VANKI (Rider/Android-git Revamp 1.0) [****] ____

@@ -1122,6 +1122,126 @@ You can find detailed information about Emacs modelines in the Emacs manual:
 Modelines can be a convenient way to ensure that Emacs correctly interprets the language and applies your preferred settings whenever you open a specific file, especially in projects where different files might require different configurations.
 
 }}}
+SYNTAX-HIGHLIGHTING FOR SEVERAL LANGUAGES (IN THE SAME FILE) {{{
+
+That's an excellent question, and yes, Emacs does indeed have impressive capabilities for multi-language syntax highlighting within a single file, often referred to as polymode or multi-mode editing.
+Emacs's Built-in Capabilities vs. Dedicated Solutions
+
+    Basic Built-in Handling:
+    Some major modes are designed to be aware of embedded languages to a certain extent. For instance:
+        web-mode: This is a powerful major mode for HTML, CSS, and JavaScript. If you open an .html file, web-mode will automatically detect and apply different syntax highlighting to the HTML tags, the contents of <style> blocks (CSS), and the contents of <script> blocks (JavaScript). It handles indentation reasonably well across these languages.
+        Lisp-like Languages (e.g., emacs-lisp-mode, clojure-mode): These often support a certain level of "inner language" highlighting for strings that contain other languages (e.g., SQL queries or regular expressions within Lisp strings), though this is more specialized.
+
+    For common web development (HTML/CSS/JS), web-mode often works "out of the box" for basic highlighting and indentation without extra steps beyond installing the web-mode package itself.
+
+    Dedicated Multi-Mode Solutions (Recommended for Full Power):
+    While web-mode is good, for true, robust multi-language editing where each embedded language behaves almost like its own major mode (with its own keybindings, specific LSP features, C-x C-e evaluation, etc.), you typically need a dedicated solution. The most popular and powerful package for this is polymode.
+
+    polymode allows you to define "host" modes (e.g., html-mode) and "inner" modes (e.g., css-mode, js-mode), along with the delimiters that mark their regions. When you move your cursor into an embedded CSS block, polymode effectively activates css-mode (or a derivative) just for that region, giving you all the features of css-mode within that context.
+
+Extra Setup Required for polymode
+
+Yes, polymode requires a bit of extra setup to define how it should handle different embedded languages, as it's highly customizable.
+
+Here's how you might configure polymode for HTML/CSS/JS, to be placed in your modular configuration (e.g., ~/.emacs.d/lisp/web.el):
+Code snippet
+
+;;; web.el --- Configuration for web development with polymode -*- lexical-binding: t; -*-
+
+;; Ensure polymode is installed
+(use-package polymode
+  :ensure t
+  :hook (html-mode . poly-web-mode) ; Activate poly-web-mode when html-mode starts
+  :config
+
+  ;; You might want to disable default web-mode for polymode,
+  ;; or ensure html-mode is the base for .html files.
+  ;; If you primarily use web-mode for web files, keep it:
+  (use-package web-mode
+    :mode (("\\.html?\\'" . web-mode)
+           ("\\.erb\\'" . web-mode)
+           ("\\.ejs\\'" . web-mode)
+           ("\\.php\\'" . web-mode)
+           ("\\.vue\\'" . web-mode))
+    :hook (web-mode . (lambda ()
+                        (setq indent-tabs-mode nil)
+                        (setq web-mode-markup-indent-offset 2) ; HTML indent
+                        (setq web-mode-css-indent-offset 2)    ; CSS indent
+                        (setq web-mode-javascript-indent-offset 2) ; JS indent
+                        (electric-pair-mode 1)
+                        (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
+
+
+  ;; Define the polymode for web files (HTML as host, CSS/JS as inner)
+  ;; This tells polymode to use `html-mode` as the base, and then embed
+  ;; `css-mode` for `<style>` blocks and `js-mode` for `<script>` blocks.
+  (define-hostmode poly-html-hostmode :mode 'html-mode)
+  (define-innermode poly-css-innermode :mode 'css-mode :hostmode 'poly-html-hostmode
+    :head-regex "<style[^>]*>" :tail-regex "</style>")
+  (define-innermode poly-js-innermode :mode 'js-mode :hostmode 'poly-html-hostmode
+    :head-regex "<script[^>]*>" :tail-regex "</script>")
+
+  ;; Now, combine these into a multi-mode
+  (define-multimode poly-web-mode
+    :hostmode 'poly-html-hostmode
+    :innermodes '(poly-css-innermode poly-js-innermode))
+
+  ;; Optional: Associate file types with `poly-web-mode` instead of `web-mode`
+  ;; If you prefer `polymode` over `web-mode` for multi-language files,
+  ;; you'd typically set this after the `web-mode` definition to override it.
+  ;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . poly-web-mode))
+  ;; Or, use a hook with `web-mode` if you want `web-mode` to be the base,
+  ;; and polymode to activate on top of it.
+  ;; A common pattern is to use `web-mode` as the major mode, and `polymode`
+  ;; acts like a minor mode on top of it. However, the above `define-hostmode`
+  ;; usually implies `html-mode` as the core.
+  ;; For HTML, `web-mode` is so good that you might not need polymode unless
+  ;; you have very specific requirements or non-standard embedding.
+
+  ;; Polymode shines more for things like Markdown with embedded code blocks,
+  ;; or configuration files with embedded snippets of other languages.
+  ;; For standard web files, `web-mode` is often sufficient for highlighting.
+
+  ;; If you want LSP with Polymode:
+  ;; Eglot generally works very well with polymode. When you're in an inner mode region,
+  ;; Eglot will correctly send requests to the LSP server appropriate for that inner mode.
+  ;; For example, when in a <script> block, Eglot will talk to your JavaScript LSP server.
+  ;; You just need to ensure you have your `eglot-server-programs` set up for `js-mode`
+  ;; and `css-mode` as usual in their respective config files (e.g., `javascript.el`, `css.el`).
+  ;; No special `polymode` configuration is typically needed for Eglot itself.
+  )
+
+Key Takeaways on Polymode Setup:
+
+    define-hostmode: Specifies the base mode for the file (e.g., html-mode).
+    define-innermode: Specifies the embedded mode (css-mode, js-mode), its host, and the regular expressions that define its start (:head-regex) and end (:tail-regex).
+    define-multimode: Combines the host and inner modes into a single multimode.
+    auto-mode-alist or Hooks: You then associate your file types with this new poly-web-mode using add-to-list 'auto-mode-alist.
+
+Polymode and LSP (Eglot)
+
+One of the greatest strengths of polymode is its excellent compatibility with LSP clients like Eglot. When you're editing within an embedded region managed by polymode:
+
+    Eglot Context: Eglot becomes aware of the "inner" major mode (e.g., js-mode when in a JavaScript block).
+    Correct Server Invocation: When you ask for completion or diagnostics (M-., C-x C-e), Eglot will correctly send the request to the appropriate language server for that embedded language, assuming you have configured eglot-server-programs for js-mode, css-mode, etc., in their respective language configuration files.
+
+So, for example, your javascript.el file would still have:
+Code snippet
+
+;;; javascript.el
+(use-package js-mode ...)
+(use-package eglot
+  :hook (js-mode . eglot-ensure)
+  :config
+  (add-to-list 'eglot-server-programs '(js-mode . ("typescript-language-server" "--stdio")))
+  ...)
+
+And polymode would ensure that when you're in a <script> block, Emacs behaves as if you're in js-mode, and Eglot will route requests to typescript-language-server.
+
+In conclusion, for simple highlighting in common web formats, web-mode might be enough without explicit polymode setup. But for true, interactive multi-language editing with full features like LSP, polymode is the way to go, and it does require specific configuration to tell it how your languages are embedded.
+
+}}}
+----
 INIT.EL-CONFIG (+Many Programming Languages Config) {{{
 
 Question: I have a couple of questions regarding Emacs-configuration. There are a couple of programming-languages that I would like to configure my Emacs-installation for. The specific things I would like to know are the necessary lines to put into my init.el for each language to work, and a quick list of some useful keyboard-shortcuts for compiling code, maybe navigation (and a couple of such things) when it comes to the specific languages. To be clear, I would like to avoid having to install packages interactively from the Emacs command-line first - everything needed should be in the init.el-file, so it can be set under version-control, and as soon as I open my Emacs, the things needed should be installed if not already installed. Are you with me so far?
@@ -5115,6 +5235,183 @@ Highly viable and extremely potent, especially for sophisticated, rule-driven, o
 In essence: If your goal is to build a "smart factory" that churns out Lua code, and you're willing to embrace the Lisp way of thinking (which revolves around data-as-code and macros), Common Lisp provides a level of power and flexibility that few other languages can match for this kind of task. It's often chosen when the problem domain itself benefits from being expressed as a language.
 
 }}}
+
+
+XML-mode (nXML) {{{
+
+Let's say I would like to try out Emacs' excellent XML-mode. Could you provide me with some content I could put in a file or buffer, and could you give me some direction on some interesting things I might be able to do in and with Emacs' XML-mode?
+
+Okay, let's get you started with Emacs' excellent XML-mode!
+
+Here's some sample XML content you can put into a file or an Emacs buffer:
+XML
+
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book category="COOKING">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+  <book category="WEB">
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+  <book category="FICTION">
+    <title lang="en">The Lord of the Rings</title>
+    <author>J.R.R. Tolkien</author>
+    <year>1954</year>
+    <price>22.99</price>
+  </book>
+</bookstore>
+
+You can copy and paste this directly into an empty buffer in Emacs (just open Emacs and type C-x C-f followed by a filename like sample.xml, then paste the content). Emacs should automatically recognize the .xml extension and activate XML-mode. If it doesn't, you can manually enable it by typing M-x xml-mode.
+
+Now, let's explore some interesting things you can do in and with Emacs' XML-mode:
+
+Basic Editing and Navigation:
+
+    Syntax Highlighting: You'll immediately notice that XML-mode provides syntax highlighting, making it easier to read and understand the structure of your XML. Different elements, attributes, and values will have distinct colors.
+
+    Indentation: XML-mode automatically indents your XML as you type, maintaining a consistent and readable structure. If your indentation gets messed up, you can re-indent the current line with TAB or the entire buffer with C-x h (mark whole buffer) followed by M-x indent-region.
+
+    Navigation: Use standard Emacs navigation commands like C-f, C-b, C-n, C-p, M-f, M-b to move around the buffer. You can also use C-s and C-r for searching.
+
+XML-Specific Features:
+
+    Tag Balancing: XML-mode helps you keep your tags balanced. When you type a closing tag (</), it often tries to complete it based on the currently open tags.
+
+    Element and Attribute Completion: Depending on your configuration and any associated schemas or DTDs (Document Type Definitions), XML-mode can offer completion suggestions for element and attribute names. You might need to configure this or install additional packages for more advanced completion.
+
+    Validation: XML-mode can often integrate with validation tools to check if your XML is well-formed and valid against a schema or DTD. You might need to set up a validator and configure Emacs to use it. Look for commands related to validation (often starting with xml-validate).
+
+    Outline Mode: A very useful feature is the integration with Outline mode (C-c @ C-o to toggle). This allows you to view the structure of your XML document as an outline, with elements as headings. You can then navigate and manipulate the structure easily, hiding and showing subtrees. Try using commands like TAB to cycle through visibility, M-h and M-l to change heading level, and M-@ to mark a subtree.
+
+    Folding: Similar to Outline mode, some configurations might offer code folding capabilities, allowing you to collapse and expand XML elements to focus on specific parts of the document.
+
+    Working with Schemas and DTDs: While the sample above doesn't use them, XML-mode provides features for associating your XML documents with schemas (like XSD) or DTDs. This enables more advanced validation and completion features. You'll typically declare these at the beginning of your XML file.
+
+    Transformation (with other tools): While XML-mode itself primarily focuses on editing, you can easily integrate it with other Emacs modes and external tools for transformations (like XSLT) or querying (like XPath). For example, you could have a separate buffer with an XSLT stylesheet and use Emacs to apply it to your XML file.
+
+Things to Try:
+
+    Open the sample.xml file in Emacs. Observe the syntax highlighting.
+
+    Try typing a new XML element. See how the indentation works. Type <new> and then press Enter. Now type </new> and see if it auto-completes or helps with balancing.
+
+    Select a portion of the XML and try M-x indent-region. See how it re-indents the selected text.
+
+    Try C-c @ C-o to enter Outline mode. Use TAB to show and hide parts of the XML structure. Use M-h and M-l to try changing the "heading" level (which corresponds to the XML element depth).
+
+    Introduce a deliberate error in your XML (e.g., an unclosed tag). See if XML-mode provides any visual cues or if you can configure it to report errors.
+
+Exploring these features will give you a good feel for how Emacs' XML-mode can enhance your experience when working with XML documents. Have fun experimenting!
+
+Another question: Are there any recommended tools or plugins for Emacs that can help with viewing, editing and authoring JSON files and content?
+
+Yes, Emacs has excellent support for working with JSON files, and there are several recommended tools and plugins that can enhance your viewing, editing, and authoring experience:
+
+1. Built-in json-mode:
+
+    This is the fundamental major mode for handling JSON files in Emacs. It provides:
+
+        Syntax Highlighting: Clearly distinguishes keys, values, strings, numbers, booleans, and special characters.
+
+        Indentation: Automatically indents JSON structures, making them more readable. You can customize the indentation level using js-indent-level (as json-mode is built on top of js-mode).
+
+        Basic Editing Commands: Inherits standard Emacs editing features.
+
+        Formatting: Includes json-pretty-print (bound to C-c C-f by default in some configurations or available via M-x) to reformat the JSON with proper indentation for better readability.
+
+2. Enhanced json-mode from MELPA/ELPA:
+
+    The version of json-mode available on package repositories like MELPA often includes additional features and improvements over the built-in version. You can install it using M-x package-install json-mode.
+
+    Key Bindings: This enhanced version often provides useful keybindings like:
+
+        C-c C-p: Display the path to the object at point using json-snatcher.
+
+        C-c P: Copy the path to the object at point to the kill ring.
+
+        C-c C-t: Toggle between true and false at point.
+
+        C-c C-k: Replace the sexp at point with null.
+
+        C-c C-i/C-c C-d: Increment/decrement the number at point.
+
+    JSON with Comments (jsonc-mode): This mode, often included with the enhanced json-mode, allows you to edit JSON files that contain comments (a common extension in some development environments).
+
+3. json-par (from MELPA):
+
+    This is a minor mode inspired by lispy for structural editing of JSON. It offers:
+
+        Structural Movement: Navigate the JSON structure based on its syntax (objects, arrays, members).
+
+        Completion: dabbrev-like completion for keys and values.
+
+        Oneline/Multiline Conversion: Easily convert between single-line and multi-line representations of JSON objects and arrays.
+
+        Cloning and Deleting: Structural commands for cloning and deleting JSON members.
+
+        Installation: Install via M-x package-install json-par. You'll typically want to add a hook to your json-mode-hook to enable it automatically for JSON files.
+
+4. jsonian-mode (from MELPA):
+
+    A newer major mode focused on performance, especially with large JSON files. It aims to minimize parsing and regex usage for faster navigation and highlighting.
+
+    Includes features like jsonian-path for getting the path to the element at point and jsonian-edit-string for easier editing of multi-line JSON strings.
+
+5. tree-sitter-mode and json-ts-mode (built-in in newer Emacs versions):
+
+    Newer versions of Emacs (29.1 onwards) have built-in support for Tree-sitter, a more robust and efficient parsing library.
+
+    json-ts-mode is a JSON major mode that utilizes Tree-sitter for more accurate and faster syntax highlighting and parsing. It can lead to better performance, especially with complex or large JSON files. You might need to enable it in your Emacs configuration if it's not the default for .json files.
+
+6. Validation Tools (Integration):
+
+    Emacs can be integrated with external JSON validation tools (like jsonlint) to check if your JSON is well-formed. You might need to configure this using tools like flycheck or flymake.
+
+    For example, you could install jsonlint via npm and then configure flycheck to use it for JSON files.
+
+7. Visualization (External Tools or Elisp):
+
+    While Emacs doesn't have a dedicated built-in JSON visualization tool like a tree view, you can achieve this through:
+
+        External Tools: Copying the JSON and using a dedicated online JSON viewer or a separate application.
+
+        Elisp: You could potentially write or find Elisp code that parses the JSON and displays it in a more visual tree-like structure within an Emacs buffer (though this is less common than the other tools). Packages like origami.el (though primarily for code folding) might offer some structural manipulation that could be adapted.
+
+        Org-mode and PlantUML: As mentioned in some discussions, you could potentially use Org-mode to structure and visualize JSON data using PlantUML diagrams, though this is more involved.
+
+8. Quicktype (quicktype.el from GitHub):
+
+    This tool helps with authoring by quickly creating type definitions (in various programming languages) from JSON samples. This can be useful when working with APIs or data structures where you need corresponding type declarations.
+
+Recommendations for Getting Started:
+
+    Ensure you have json-mode enabled: When you open a .json file, Emacs should ideally activate it automatically. If not, use M-x json-mode.
+
+    Install the enhanced json-mode from MELPA: This will likely give you a better out-of-the-box experience with useful keybindings and features.
+
+    Consider json-par for structural editing: If you find yourself frequently rearranging or manipulating the structure of your JSON, json-par can be very efficient.
+
+    Explore jsonian-mode for performance: If you work with very large JSON files, give jsonian-mode a try for smoother handling.
+
+    Look into tree-sitter-mode if you are on a recent Emacs: It offers a modern and efficient parsing approach.
+
+To install packages from MELPA, you'll need to have it set up in your Emacs configuration. Typically, this involves adding the MELPA repository to package-archives in your init file (~/.emacs or ~/.config/emacs/init.el) and then running M-x package-refresh-contents followed by M-x package-install <package-name>.
+
+By exploring these tools and modes, you should find a comfortable and efficient way to view, edit, and author JSON content within Emacs.
+
+}}}
+Latex-Mode
+PDF-Mode
+texinfo
+
+
 SuperCollider-mode; LUA-MODES (FENNEL ETC) {{{
 
 I'm having a bit of trouble finding a list of the keyboard-shortcuts for SuperCollider-mode in Emacs (I think the mode is called scel or something like that). Could you give me a hand? I.e. what I'm looking for first of all is how I compile and preview the results of a particular piece of code or score, but I'm quite glad for you to list a couple of more that would be of interest.
@@ -5506,127 +5803,6 @@ General Emacs Tips for Interactive Development
     C-x C-e (Control-x, Control-e): Evaluate the Emacs Lisp expression before the cursor. While technically for Elisp, it's so fundamental to Emacs's philosophy that it's worth mastering for general interactive tasks.
 
 By combining these general Emacs evaluation techniques with the specific commands provided by lua-mode, fennel-mode, and strategic use of M-x compile for transpiled languages, you'll have a very powerful and flexible development environment for your Lua, Moonscript, Fennel, and Teal projects. Enjoy the interactive power of Emacs!
-
-}}}
-
-
-SYNTAX-HIGHLIGHTING FOR SEVERAL LANGUAGES (IN THE SAME FILE) {{{
-
-That's an excellent question, and yes, Emacs does indeed have impressive capabilities for multi-language syntax highlighting within a single file, often referred to as polymode or multi-mode editing.
-Emacs's Built-in Capabilities vs. Dedicated Solutions
-
-    Basic Built-in Handling:
-    Some major modes are designed to be aware of embedded languages to a certain extent. For instance:
-        web-mode: This is a powerful major mode for HTML, CSS, and JavaScript. If you open an .html file, web-mode will automatically detect and apply different syntax highlighting to the HTML tags, the contents of <style> blocks (CSS), and the contents of <script> blocks (JavaScript). It handles indentation reasonably well across these languages.
-        Lisp-like Languages (e.g., emacs-lisp-mode, clojure-mode): These often support a certain level of "inner language" highlighting for strings that contain other languages (e.g., SQL queries or regular expressions within Lisp strings), though this is more specialized.
-
-    For common web development (HTML/CSS/JS), web-mode often works "out of the box" for basic highlighting and indentation without extra steps beyond installing the web-mode package itself.
-
-    Dedicated Multi-Mode Solutions (Recommended for Full Power):
-    While web-mode is good, for true, robust multi-language editing where each embedded language behaves almost like its own major mode (with its own keybindings, specific LSP features, C-x C-e evaluation, etc.), you typically need a dedicated solution. The most popular and powerful package for this is polymode.
-
-    polymode allows you to define "host" modes (e.g., html-mode) and "inner" modes (e.g., css-mode, js-mode), along with the delimiters that mark their regions. When you move your cursor into an embedded CSS block, polymode effectively activates css-mode (or a derivative) just for that region, giving you all the features of css-mode within that context.
-
-Extra Setup Required for polymode
-
-Yes, polymode requires a bit of extra setup to define how it should handle different embedded languages, as it's highly customizable.
-
-Here's how you might configure polymode for HTML/CSS/JS, to be placed in your modular configuration (e.g., ~/.emacs.d/lisp/web.el):
-Code snippet
-
-;;; web.el --- Configuration for web development with polymode -*- lexical-binding: t; -*-
-
-;; Ensure polymode is installed
-(use-package polymode
-  :ensure t
-  :hook (html-mode . poly-web-mode) ; Activate poly-web-mode when html-mode starts
-  :config
-
-  ;; You might want to disable default web-mode for polymode,
-  ;; or ensure html-mode is the base for .html files.
-  ;; If you primarily use web-mode for web files, keep it:
-  (use-package web-mode
-    :mode (("\\.html?\\'" . web-mode)
-           ("\\.erb\\'" . web-mode)
-           ("\\.ejs\\'" . web-mode)
-           ("\\.php\\'" . web-mode)
-           ("\\.vue\\'" . web-mode))
-    :hook (web-mode . (lambda ()
-                        (setq indent-tabs-mode nil)
-                        (setq web-mode-markup-indent-offset 2) ; HTML indent
-                        (setq web-mode-css-indent-offset 2)    ; CSS indent
-                        (setq web-mode-javascript-indent-offset 2) ; JS indent
-                        (electric-pair-mode 1)
-                        (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))))
-
-
-  ;; Define the polymode for web files (HTML as host, CSS/JS as inner)
-  ;; This tells polymode to use `html-mode` as the base, and then embed
-  ;; `css-mode` for `<style>` blocks and `js-mode` for `<script>` blocks.
-  (define-hostmode poly-html-hostmode :mode 'html-mode)
-  (define-innermode poly-css-innermode :mode 'css-mode :hostmode 'poly-html-hostmode
-    :head-regex "<style[^>]*>" :tail-regex "</style>")
-  (define-innermode poly-js-innermode :mode 'js-mode :hostmode 'poly-html-hostmode
-    :head-regex "<script[^>]*>" :tail-regex "</script>")
-
-  ;; Now, combine these into a multi-mode
-  (define-multimode poly-web-mode
-    :hostmode 'poly-html-hostmode
-    :innermodes '(poly-css-innermode poly-js-innermode))
-
-  ;; Optional: Associate file types with `poly-web-mode` instead of `web-mode`
-  ;; If you prefer `polymode` over `web-mode` for multi-language files,
-  ;; you'd typically set this after the `web-mode` definition to override it.
-  ;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . poly-web-mode))
-  ;; Or, use a hook with `web-mode` if you want `web-mode` to be the base,
-  ;; and polymode to activate on top of it.
-  ;; A common pattern is to use `web-mode` as the major mode, and `polymode`
-  ;; acts like a minor mode on top of it. However, the above `define-hostmode`
-  ;; usually implies `html-mode` as the core.
-  ;; For HTML, `web-mode` is so good that you might not need polymode unless
-  ;; you have very specific requirements or non-standard embedding.
-
-  ;; Polymode shines more for things like Markdown with embedded code blocks,
-  ;; or configuration files with embedded snippets of other languages.
-  ;; For standard web files, `web-mode` is often sufficient for highlighting.
-
-  ;; If you want LSP with Polymode:
-  ;; Eglot generally works very well with polymode. When you're in an inner mode region,
-  ;; Eglot will correctly send requests to the LSP server appropriate for that inner mode.
-  ;; For example, when in a <script> block, Eglot will talk to your JavaScript LSP server.
-  ;; You just need to ensure you have your `eglot-server-programs` set up for `js-mode`
-  ;; and `css-mode` as usual in their respective config files (e.g., `javascript.el`, `css.el`).
-  ;; No special `polymode` configuration is typically needed for Eglot itself.
-  )
-
-Key Takeaways on Polymode Setup:
-
-    define-hostmode: Specifies the base mode for the file (e.g., html-mode).
-    define-innermode: Specifies the embedded mode (css-mode, js-mode), its host, and the regular expressions that define its start (:head-regex) and end (:tail-regex).
-    define-multimode: Combines the host and inner modes into a single multimode.
-    auto-mode-alist or Hooks: You then associate your file types with this new poly-web-mode using add-to-list 'auto-mode-alist.
-
-Polymode and LSP (Eglot)
-
-One of the greatest strengths of polymode is its excellent compatibility with LSP clients like Eglot. When you're editing within an embedded region managed by polymode:
-
-    Eglot Context: Eglot becomes aware of the "inner" major mode (e.g., js-mode when in a JavaScript block).
-    Correct Server Invocation: When you ask for completion or diagnostics (M-., C-x C-e), Eglot will correctly send the request to the appropriate language server for that embedded language, assuming you have configured eglot-server-programs for js-mode, css-mode, etc., in their respective language configuration files.
-
-So, for example, your javascript.el file would still have:
-Code snippet
-
-;;; javascript.el
-(use-package js-mode ...)
-(use-package eglot
-  :hook (js-mode . eglot-ensure)
-  :config
-  (add-to-list 'eglot-server-programs '(js-mode . ("typescript-language-server" "--stdio")))
-  ...)
-
-And polymode would ensure that when you're in a <script> block, Emacs behaves as if you're in js-mode, and Eglot will route requests to typescript-language-server.
-
-In conclusion, for simple highlighting in common web formats, web-mode might be enough without explicit polymode setup. But for true, interactive multi-language editing with full features like LSP, polymode is the way to go, and it does require specific configuration to tell it how your languages are embedded.
 
 }}}
 NuShell {{{
@@ -6581,7 +6757,7 @@ ___config
   )
 
 }}}
-Lua  ___TODO {{{
+Lua  ___TODO (+MoonScript, Fennel, Teal) {{{
 
 Could you give me a couple of useful keyboard shortcuts and commands that can be used in Emacs for evaluation and such, both in the modes I would likely want to install (i.e. lua-mode, fennel-mode etc), and in Emacs itself (although focusing mostly on the former)?
 
@@ -7578,8 +7754,7 @@ This setup should provide a very capable and comfortable environment for working
 What's next on your Emacs configuration journey?
 
 }}}
-HTML, CSS/SASS/Suzy, JavaScript/Ts, REACT, (+PHP)
-    web-mode
+HTML, CSS/SASS/Suzy, JavaScript/Ts, REACT, (+PHP)  web-mode
 ReasonML, PureScript {{{
 
 Excellent! Adding ReasonML and PureScript will further enhance your Emacs for functional and type-safe programming. Both languages benefit greatly from Language Server Protocol (LSP) integration for a rich development experience.
@@ -7753,176 +7928,6 @@ PureScript Keyboard Shortcuts:
         M-x eglot-hover: Show type/doc info.
 
 With these additions, your modular Emacs configuration will now provide robust support for ReasonML and PureScript, fully leveraging their respective language servers for an optimal development experience!
-
-}}}
-XML-mode (nXML) {{{
-
-Let's say I would like to try out Emacs' excellent XML-mode. Could you provide me with some content I could put in a file or buffer, and could you give me some direction on some interesting things I might be able to do in and with Emacs' XML-mode?
-
-Okay, let's get you started with Emacs' excellent XML-mode!
-
-Here's some sample XML content you can put into a file or an Emacs buffer:
-XML
-
-<?xml version="1.0" encoding="UTF-8"?>
-<bookstore>
-  <book category="COOKING">
-    <title lang="en">Everyday Italian</title>
-    <author>Giada De Laurentiis</author>
-    <year>2005</year>
-    <price>30.00</price>
-  </book>
-  <book category="WEB">
-    <title lang="en">Learning XML</title>
-    <author>Erik T. Ray</author>
-    <year>2003</year>
-    <price>39.95</price>
-  </book>
-  <book category="FICTION">
-    <title lang="en">The Lord of the Rings</title>
-    <author>J.R.R. Tolkien</author>
-    <year>1954</year>
-    <price>22.99</price>
-  </book>
-</bookstore>
-
-You can copy and paste this directly into an empty buffer in Emacs (just open Emacs and type C-x C-f followed by a filename like sample.xml, then paste the content). Emacs should automatically recognize the .xml extension and activate XML-mode. If it doesn't, you can manually enable it by typing M-x xml-mode.
-
-Now, let's explore some interesting things you can do in and with Emacs' XML-mode:
-
-Basic Editing and Navigation:
-
-    Syntax Highlighting: You'll immediately notice that XML-mode provides syntax highlighting, making it easier to read and understand the structure of your XML. Different elements, attributes, and values will have distinct colors.
-
-    Indentation: XML-mode automatically indents your XML as you type, maintaining a consistent and readable structure. If your indentation gets messed up, you can re-indent the current line with TAB or the entire buffer with C-x h (mark whole buffer) followed by M-x indent-region.
-
-    Navigation: Use standard Emacs navigation commands like C-f, C-b, C-n, C-p, M-f, M-b to move around the buffer. You can also use C-s and C-r for searching.
-
-XML-Specific Features:
-
-    Tag Balancing: XML-mode helps you keep your tags balanced. When you type a closing tag (</), it often tries to complete it based on the currently open tags.
-
-    Element and Attribute Completion: Depending on your configuration and any associated schemas or DTDs (Document Type Definitions), XML-mode can offer completion suggestions for element and attribute names. You might need to configure this or install additional packages for more advanced completion.
-
-    Validation: XML-mode can often integrate with validation tools to check if your XML is well-formed and valid against a schema or DTD. You might need to set up a validator and configure Emacs to use it. Look for commands related to validation (often starting with xml-validate).
-
-    Outline Mode: A very useful feature is the integration with Outline mode (C-c @ C-o to toggle). This allows you to view the structure of your XML document as an outline, with elements as headings. You can then navigate and manipulate the structure easily, hiding and showing subtrees. Try using commands like TAB to cycle through visibility, M-h and M-l to change heading level, and M-@ to mark a subtree.
-
-    Folding: Similar to Outline mode, some configurations might offer code folding capabilities, allowing you to collapse and expand XML elements to focus on specific parts of the document.
-
-    Working with Schemas and DTDs: While the sample above doesn't use them, XML-mode provides features for associating your XML documents with schemas (like XSD) or DTDs. This enables more advanced validation and completion features. You'll typically declare these at the beginning of your XML file.
-
-    Transformation (with other tools): While XML-mode itself primarily focuses on editing, you can easily integrate it with other Emacs modes and external tools for transformations (like XSLT) or querying (like XPath). For example, you could have a separate buffer with an XSLT stylesheet and use Emacs to apply it to your XML file.
-
-Things to Try:
-
-    Open the sample.xml file in Emacs. Observe the syntax highlighting.
-
-    Try typing a new XML element. See how the indentation works. Type <new> and then press Enter. Now type </new> and see if it auto-completes or helps with balancing.
-
-    Select a portion of the XML and try M-x indent-region. See how it re-indents the selected text.
-
-    Try C-c @ C-o to enter Outline mode. Use TAB to show and hide parts of the XML structure. Use M-h and M-l to try changing the "heading" level (which corresponds to the XML element depth).
-
-    Introduce a deliberate error in your XML (e.g., an unclosed tag). See if XML-mode provides any visual cues or if you can configure it to report errors.
-
-Exploring these features will give you a good feel for how Emacs' XML-mode can enhance your experience when working with XML documents. Have fun experimenting!
-
-Another question: Are there any recommended tools or plugins for Emacs that can help with viewing, editing and authoring JSON files and content?
-
-Yes, Emacs has excellent support for working with JSON files, and there are several recommended tools and plugins that can enhance your viewing, editing, and authoring experience:
-
-1. Built-in json-mode:
-
-    This is the fundamental major mode for handling JSON files in Emacs. It provides:
-
-        Syntax Highlighting: Clearly distinguishes keys, values, strings, numbers, booleans, and special characters.
-
-        Indentation: Automatically indents JSON structures, making them more readable. You can customize the indentation level using js-indent-level (as json-mode is built on top of js-mode).
-
-        Basic Editing Commands: Inherits standard Emacs editing features.
-
-        Formatting: Includes json-pretty-print (bound to C-c C-f by default in some configurations or available via M-x) to reformat the JSON with proper indentation for better readability.
-
-2. Enhanced json-mode from MELPA/ELPA:
-
-    The version of json-mode available on package repositories like MELPA often includes additional features and improvements over the built-in version. You can install it using M-x package-install json-mode.
-
-    Key Bindings: This enhanced version often provides useful keybindings like:
-
-        C-c C-p: Display the path to the object at point using json-snatcher.
-
-        C-c P: Copy the path to the object at point to the kill ring.
-
-        C-c C-t: Toggle between true and false at point.
-
-        C-c C-k: Replace the sexp at point with null.
-
-        C-c C-i/C-c C-d: Increment/decrement the number at point.
-
-    JSON with Comments (jsonc-mode): This mode, often included with the enhanced json-mode, allows you to edit JSON files that contain comments (a common extension in some development environments).
-
-3. json-par (from MELPA):
-
-    This is a minor mode inspired by lispy for structural editing of JSON. It offers:
-
-        Structural Movement: Navigate the JSON structure based on its syntax (objects, arrays, members).
-
-        Completion: dabbrev-like completion for keys and values.
-
-        Oneline/Multiline Conversion: Easily convert between single-line and multi-line representations of JSON objects and arrays.
-
-        Cloning and Deleting: Structural commands for cloning and deleting JSON members.
-
-        Installation: Install via M-x package-install json-par. You'll typically want to add a hook to your json-mode-hook to enable it automatically for JSON files.
-
-4. jsonian-mode (from MELPA):
-
-    A newer major mode focused on performance, especially with large JSON files. It aims to minimize parsing and regex usage for faster navigation and highlighting.
-
-    Includes features like jsonian-path for getting the path to the element at point and jsonian-edit-string for easier editing of multi-line JSON strings.
-
-5. tree-sitter-mode and json-ts-mode (built-in in newer Emacs versions):
-
-    Newer versions of Emacs (29.1 onwards) have built-in support for Tree-sitter, a more robust and efficient parsing library.
-
-    json-ts-mode is a JSON major mode that utilizes Tree-sitter for more accurate and faster syntax highlighting and parsing. It can lead to better performance, especially with complex or large JSON files. You might need to enable it in your Emacs configuration if it's not the default for .json files.
-
-6. Validation Tools (Integration):
-
-    Emacs can be integrated with external JSON validation tools (like jsonlint) to check if your JSON is well-formed. You might need to configure this using tools like flycheck or flymake.
-
-    For example, you could install jsonlint via npm and then configure flycheck to use it for JSON files.
-
-7. Visualization (External Tools or Elisp):
-
-    While Emacs doesn't have a dedicated built-in JSON visualization tool like a tree view, you can achieve this through:
-
-        External Tools: Copying the JSON and using a dedicated online JSON viewer or a separate application.
-
-        Elisp: You could potentially write or find Elisp code that parses the JSON and displays it in a more visual tree-like structure within an Emacs buffer (though this is less common than the other tools). Packages like origami.el (though primarily for code folding) might offer some structural manipulation that could be adapted.
-
-        Org-mode and PlantUML: As mentioned in some discussions, you could potentially use Org-mode to structure and visualize JSON data using PlantUML diagrams, though this is more involved.
-
-8. Quicktype (quicktype.el from GitHub):
-
-    This tool helps with authoring by quickly creating type definitions (in various programming languages) from JSON samples. This can be useful when working with APIs or data structures where you need corresponding type declarations.
-
-Recommendations for Getting Started:
-
-    Ensure you have json-mode enabled: When you open a .json file, Emacs should ideally activate it automatically. If not, use M-x json-mode.
-
-    Install the enhanced json-mode from MELPA: This will likely give you a better out-of-the-box experience with useful keybindings and features.
-
-    Consider json-par for structural editing: If you find yourself frequently rearranging or manipulating the structure of your JSON, json-par can be very efficient.
-
-    Explore jsonian-mode for performance: If you work with very large JSON files, give jsonian-mode a try for smoother handling.
-
-    Look into tree-sitter-mode if you are on a recent Emacs: It offers a modern and efficient parsing approach.
-
-To install packages from MELPA, you'll need to have it set up in your Emacs configuration. Typically, this involves adding the MELPA repository to package-archives in your init file (~/.emacs or ~/.config/emacs/init.el) and then running M-x package-refresh-contents followed by M-x package-install <package-name>.
-
-By exploring these tools and modes, you should find a comfortable and efficient way to view, edit, and author JSON content within Emacs.
 
 }}}
   SVG
@@ -11279,6 +11284,7 @@ To Use It:
 This setup will give you a very capable Emacs environment for writing and interactively testing your Nyquist music programs!
 
 }}}
+
 }}}
 
 ~/Empire/Doks/Comp/editor/emacs/masteringemacs-v3.txt    #mickey peterson
