@@ -232,6 +232,7 @@ sudo pacman -S mpv audacious
 # +playerctl ?
 gtick
 sudo pacman -S lilypond
+sudo pacman -S frescobaldi
 sudo pacman -S ardour
 sudo pacman -S rosegarden
 # + python-ly
@@ -239,7 +240,7 @@ sudo pacman -S rosegarden
 yay -S tuxguitar
 sudo pacman -S evince fontforge
 sudo pacman -S pdftk xsane
-sudo pacman -S timidity-interfaces-extra midish
+sudo pacman -S timidity++ midish
 sudo pacman -S shotwell
 sudo pacman -S libreoffice-still    #stable
 # sudo pacman -S libreoffice-fresh  #latest

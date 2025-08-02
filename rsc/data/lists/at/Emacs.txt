@@ -5,7 +5,6 @@ ___config
 emacs-30.1 ~/Dropbox/rsc/samples/code/orgmode-test.org &
     (+Org: = 5gt)
 
-gvim ~/.emacs.d/init.el
 emacs-30.1 ~/.emacs.d/init.el
 
 emacs over vim:
@@ -14,6 +13,7 @@ emacs over vim:
     - org-mode
     - image/graphics in txt-files
 
+gvim ~/.emacs.d/init.el
 Settings (e.g. Setup for Programming-Languages (Guile Scheme, etc) ____) {{{
 ___config
 LEAN INIT.EL + LOAD SETTINGS FOR ALL LANGUAGES {{{
@@ -5409,7 +5409,6 @@ By exploring these tools and modes, you should find a comfortable and efficient 
 }}}
 Latex-Mode
 PDF-Mode
-texinfo
 
 
 SuperCollider-mode; LUA-MODES (FENNEL ETC) {{{
@@ -8490,6 +8489,7 @@ This setup should provide you with a very capable and integrated Emacs environme
 
 }}}
 Latex
+  texinfo
 JSON {{{
 
 Of course! JSON (JavaScript Object Notation) isn't a programming language in the traditional sense, but it's a ubiquitous data interchange format. Emacs offers fantastic tools for working with JSON, especially for formatting, syntax highlighting, and navigating its structure.
@@ -10441,9 +10441,22 @@ This setup should give you a very robust environment for developing in Idris, le
   https://github.com/idris-hackers/idris-mode  #Idris-Mode Emacs
 F* {{{
 
-F* (pronounced F star) is indeed another esoteric but extremely interesting language, a higher-order, dependently typed language for program verification. It compiles to F#, OCaml, and C, and is used for verifying critical software.
+F* (pronounced F star) is indeed
+another esoteric but extremely
+interesting language, a
+higher-order, dependently typed
+language for program-verification.
+It compiles to F#, OCaml, and C,
+and is used for verifying critical
+software.
 
-Emacs support for F* is primarily provided by fstar-mode. Similar to Idris, fstar-mode integrates with the F* interactive prover. It's often used alongside flycheck for displaying verification errors.
+Emacs support for F* is primarily
+provided by fstar-mode. Similar to
+Idris, fstar-mode integrates with
+the F* interactive prover. It's
+often used alongside flycheck for
+displaying verification errors.
+
 Emacs Configuration for F* (init.el)
 
 We'll set up fstar-mode and flycheck to get a good environment.

@@ -1334,44 +1334,182 @@ dft curr 2023 {{{
 ---- office.Projs|Tree -------
     Sv.Words | Eng.Words
 gvim ~/Dropbox/rsc/Doks/upload/Notes_*.txt
+~/Empire/Doks/va.20250706-1130/
 ----
     mermaid md
 Obsidian __ @ +MLEARN: FIRST DOKS + formulas w. Obsidian Md/Latex[!!]  _  ¤¤¤
+Audacity+Nyquist  (Pre: Emacs Inits **) {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/nyq/audacity-nyquist.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/nyq/nyquist-algocompos.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/nyq/nyquist-intro.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/nyq/nyquistrefman3-16.txt
+}}}
 ----
-DataStructures (+Functional)
-  Networking
-  refactoring + debugging
-     refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤
-  Xonshell (+NuShell)
-    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
-  Webscraping
-Archit.Sys
-Comp.Architecture
-Lua (OpenMw, Mpv, NeoVim + NVim Touch, Ardour)  + 'modern vim'
-SSH + make  ¤¤¤
- Ocaml, Rust, Go, Zig, Vlang
- Dlang (+pegged)
-Elixir/Phoenix (+LiveView)
-Clang
-React (+ReasonML)  (+MongoDB)
-  GraphQL
-Abe Kotlin  ¤¤  + Flutter (**)
+DataStructures (+Functional) {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cpp/DatastructProblsolv-Cpp-2e_2003.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/PROGR/datastructs/funct/purefunct-datastructs_1998.txt
+
+  [??]
+  ~/Dropbox/rsc/Doks/phone/Comp/PROGR/datastructs/funct/functreact-domainmodel_2017.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/PROGR/datastructs/funct/reactive-despatts_2017.txt
+}}}
+.  Networking {{{
+  ~/Dropbox/rsc/Doks/upload/bornhack-networking.txt
+}}}
+[!!].  refactoring + debugging (+Unit Testing) {{{
+  refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤  (+dissasemble?)
+
+  gvim ~/Empire/Doks/Comp/PROGR/refact/{refact-2e_2019,efflegcode,refct,legacycode-beyond_2016,refact-divein_2019,refact-designsmells_2015,refact-despatts_2012,refact-topatts_2005,db-refact_2006}.txt
+  + LLDB
+  gvim ~/Empire/Doks/Comp/debug/{debugeff-66_2017,Cgdb_2022,debugart-gdbddd_2008,debugit_2009,debug-optim-legacycode_2003,gdb-debuggingwith_2022}.txt
+  gvim ~/Empire/Doks/Comp/PROGR/revengineer/{AsmUnderstand-revengin_2019,datamine-revengin_1997,x86disassembly_2013,ghidra-revengineer_2020,revengineer-forbeg_2014}.txt
+}}}
+.  Xonshell (+NuShell) {{{
+  ~/Dropbox/rsc/Doks/upload/XonShell.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_cb-oneline.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/nushell_docs-book.txt
+}}}
+.    HTML, HTTP/TCPIP + 'The Web'  ¤¤¤
+.  Webscraping {{{
+  ~/Dropbox/rsc/Doks/upload/webscraping-datascience_2018.txt
+}}}
+[!] Archit.Sys {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/archit.sys/linprogrinterf_2010.txt
+
+}}}
+(!) Comp.Architecture {{{
+  gvim ~/Empire/Doks/Comp/archit.comp/*.txt
+}}}
+Lua (OpenMw, Mpv, NeoVim + NVim Touch, Ardour)  + 'modern vim' {{{
+  ~/Dropbox/rsc/Doks/upload/lua/luaprogrin4ed.txt
+  ~/Dropbox/rsc/Doks/upload/lua/fennel-docs.txt
+  ~/Dropbox/rsc/Doks/upload/lua/teal-tut.txt
+}}}
+SSH + make  ¤¤¤ {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/pr/v/ssh-defguide.txt
+
+  https://www.gnu.org/software/make/manual/make.pdf
+    https://archive.org/details/manuallib-id-587/page/n3/mode/2up
+  https://www.kakupesa.net/kakk/BPOSS/The_Linux_Development_Platform/CH04.pdf
+  https://www3.nd.edu/~zxu2/acms60212-40212/Makefile.pdf
+  http://www.hpc.lsu.edu/training/weekly-materials/Workshops/Fortran-2012/LONI_MakeTutorial_Spring2012.pdf
+}}}
+. Ocaml, Rust, Go, Zig, Vlang {{{
+  ~/Dropbox/rsc/Doks/upload/ocaml-rworld-2e.txt
+}}}
+Ly-Scheme(!) {{{
+  ~/Dropbox/rsc/Doks/upload/ly-scheme/lydoc03-extend.txt
+  ~/Dropbox/rsc/Doks/upload/ly-scheme/LilypondScheme-Book.txt
+}}}
+. Dlang (+pegged) {{{
+  ~/Dropbox/rsc/Doks/upload/dlang-pegged/Pegged.txt
+  ~/Dropbox/rsc/Doks/upload/dlang-pegged/pegged-howworks.txt
+  ~/Dropbox/rsc/Doks/upload/dlang-pegged/pegged-intro.txt
+  ~/Dropbox/rsc/Doks/upload/dlang-pegged/Pegged-Wiki.txt
+}}}
+Elixir/Phoenix (+LiveView) {{{
+  ~/Dropbox/rsc/Doks/upload/phoenix14-progr.txt
+}}}
+Clang {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/mu/au/auprogr-book_2011.txt
+  gvim ~/{Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/gimpplugin-c,Empire/Doks/Comp/lang/clangs/c/pr/gimp/gimpcplug-wpoet_2019}.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/gui/gtk/cgtk-progrintro_2019.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/arm-baremetal-ebook.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/c21cent_2015.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/c-begtopro_2020.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/ceffectivepro_2020.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/chandsonnetw-sockets_2019.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/chardway.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/clearn_2020.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/cpractprogr-80_2020.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/cprogr-begguide_2022.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/cprogr-embedded_2000.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/cprogr-learn_2020.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/cprogr-learn_2022.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/gnu-codingstandards_2021.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/modc-qref-2e_2019.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/modernc.txt
+}}}
+React (+ReasonML)  (+MongoDB) {{{
+  ~/Dropbox/rsc/Doks/upload/freec-03_frontendlibs.txt
+  ~/Dropbox/rsc/Doks/upload/reasonml2.txt
+}}}
+.  GraphQL {{{
+  ~/Dropbox/rsc/Doks/upload/graphql-fullst_2020.txt
+}}}
+Abe Kotlin  ¤¤  + Flutter (**) {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/kotlfunct_2021.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/java/kotlin/KotlinMultiplatform-Rider.txt
+  
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/dart-flutter/
+}}}
+[!] Funct Algos/Patts {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/algos/clojscala-functprogrpatts_2013.txt
+
+  scheme
+  ~/Dropbox/rsc/Doks/phone/Comp/PROGR/algos/funct/algos-forfunctprogr_2018.txt
+  haskell
+  ~/Dropbox/rsc/Doks/phone/Comp/PROGR/algos/funct/functalgos-pearls_2010.txt
+  lisp
+  ~/Dropbox/rsc/Doks/phone/Comp/PROGR/algos/funct/funct-datastructsalgos_2017.txt
+
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/algos/clojalgodatastruct.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/algos/funct-datastructsalgos_2017.txt
+}}}
 Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
-  @xsane, font(forge)/Scribus  ¤¤¤
-haskell + datanalys
-SemWeb, LinkedData
-  Tracker/Localsearch + TinySparql + Sparql  ¤¤
-  (gimp etc) C Py Scm (!!)  ¤¤¤
-AVALONIA + ReactiveUI  (+Maui)  ¤¤(¤)  Spectre Console
-    ASP.NET CORE MVC __ (+Web APIs)  ¤¤¤
+.  @xsane, font(forge)/Scribus  ¤¤¤
+haskell + datanalys {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/haskell/datanalys/hask-datanalys_2015.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/haskell/datanalys/haskell-dataanalysiscb_2014.txt
+}}}
+SemWeb, LinkedData {{{
+  Slog|Clean: ~/Empire/Doks/Comp/lang/webdev/db/semweb/*.txt
+
+  ~/Dropbox/rsc/Doks/upload/webdataapi-forknowlgraphs_2021.txt
+  ~/Dropbox/rsc/Doks/upload/semanticweb-clojjava_2010.txt
+  ~/Dropbox/rsc/Doks/upload/linkeddata-patterns_2022.txt
+  Owl
+}}}
+.  Tracker/Localsearch + TinySparql + Sparql  ¤¤ {{{
+}}}
+PyML (SciKit, Keras, ....) {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/datasci/ai-mlearn/py/mlearn-scikitkerastflow-2e_2019.txt
+}}}
+.  (gimp etc) C Py Scm (!!)  ¤¤¤
+AVALONIA + ReactiveUI  (+Maui)  ¤¤(¤)  Spectre Console {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/ReactiveUI-Docs.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/RxDotnet-2e_2024.txt
+}}}
+.    ASP.NET CORE MVC __ (+Web APIs)  ¤¤¤ {{{
+  gvim {AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,dotnetcore-inact-2e_mauiavalonia,webapi/{AspDotnetCore-WebAPI_2023,webapis-design-2e,api-designpatts_BUY,apidelivery-automate,webapi-test,zz_manning-extratitles_including-free}}.txt
+}}}
   + Cs-Tips 70, Cs DesPatts, Xunit-Patts  ¤¤¤
     . {{{
     @c#funct, C# Docs Avanc. C# Des.patts, C# 50-70 Tips ¤¤¤
     C# DotNet Core MVC + Blazor, Cs Funct 3
+
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/funct/CsFunct3_2021.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/effective-cs-with-scottm_2017.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/cs-despatts_2018.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/designpatts.cs.Cleaned1.txt
+    ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/designpatts.cs.Tags1.txt
     }}}
 ----
-  RelDatabase-tips
-Spring (+Vaadin)
+.  RelDatabase-tips {{{
+}}}
+Spring (+Vaadin) {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/java/webdev/spring/
+
+  # ~/Empire/Doks/Comp/lang/java/webdev/vaadinprogr_2016.txt
+  [+VAADIN-MAN]
+}}}
 
 OrgMode
 Py/F# Sysadm. + Devops[!!]  ¤¤¤
