@@ -1345,6 +1345,7 @@ Audacity+Nyquist  (Pre: Emacs Inits **) {{{
   ~/Dropbox/rsc/Doks/phone/Comp/mu/au/nyq/nyquist-intro.txt
   ~/Dropbox/rsc/Doks/phone/Comp/mu/au/nyq/nyquistrefman3-16.txt
 }}}
+INSTALL: New emacs-init,  Nyquist, Blue, CLM
 ----
 DataStructures (+Functional) {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cpp/DatastructProblsolv-Cpp-2e_2003.txt
@@ -1355,10 +1356,13 @@ DataStructures (+Functional) {{{
   ~/Dropbox/rsc/Doks/phone/Comp/PROGR/datastructs/funct/functreact-domainmodel_2017.txt
   ~/Dropbox/rsc/Doks/phone/Comp/PROGR/datastructs/funct/reactive-despatts_2017.txt
 }}}
+paralellism/concurrency {{{
+  ~/Empire/Doks/Comp/parallel-concurr/concurr7models.txt
+}}}
 .  Networking {{{
   ~/Dropbox/rsc/Doks/upload/bornhack-networking.txt
 }}}
-[!!].  refactoring + debugging (+Unit Testing) {{{
+[!].  refactoring + debugging (+Unit Testing) {{{
   refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤  (+dissasemble?)
 
   gvim ~/Empire/Doks/Comp/PROGR/refact/{refact-2e_2019,efflegcode,refct,legacycode-beyond_2016,refact-divein_2019,refact-designsmells_2015,refact-despatts_2012,refact-topatts_2005,db-refact_2006}.txt
@@ -1461,13 +1465,26 @@ Abe Kotlin  ¤¤  + Flutter (**) {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/java/cloj/algos/funct-datastructsalgos_2017.txt
 }}}
 Inkscape (+shorth, Notes, Storm-lists, Music-Teaching)  +Gvim dok-templates Xml-Editing (etc))   @@  ¤¤¤
-.  @xsane, font(forge)/Scribus  ¤¤¤
+.  @xsane, font(forge)/Scribus  ¤¤¤ {{{
+  ~/Dropbox/rsc/Doks/phone/graf/g_xsane_scantut-doks.txt
+}}}
 haskell + datanalys {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/haskell/datanalys/hask-datanalys_2015.txt
   ~/Dropbox/rsc/Doks/phone/Comp/lang/haskell/datanalys/haskell-dataanalysiscb_2014.txt
 }}}
+.  golang {{{
+  ~/Empire/Doks/Comp/lang/go-v/{
+  Go-Succinctly_2017,
+  golang,
+  gocb,
+  goprogr-getgoing_2018,
+
+  ~/Empire/Doks/Comp/lang/go-v/datastructs-patts-algos/go-datastructsalgos_2019.txt
+  ~/Empire/Doks/Comp/lang/go-v/datastructs-patts-algos/go-designpatt_2017.txt
+}}}
 SemWeb, LinkedData {{{
-  Slog|Clean: ~/Empire/Doks/Comp/lang/webdev/db/semweb/*.txt
+  Slog|Clean:
+  ~/Empire/Doks/Comp/lang/webdev/db/semweb/*.txt
 
   ~/Dropbox/rsc/Doks/upload/webdataapi-forknowlgraphs_2021.txt
   ~/Dropbox/rsc/Doks/upload/semanticweb-clojjava_2010.txt
@@ -1502,6 +1519,7 @@ AVALONIA + ReactiveUI  (+Maui)  ¤¤(¤)  Spectre Console {{{
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/designpatts.cs.Tags1.txt
     }}}
 ----
+  microservices
 .  RelDatabase-tips {{{
 }}}
 Spring (+Vaadin) {{{
@@ -2348,6 +2366,7 @@ gvim {AspDotnetCore-InAct-3e_2023,AspDotnetCore7-Pro-10e_2023,dotnetcore-inact-2
 MongoDb
   gvim ~/Empire/Doks/Comp/lang/webdev/db/nosql/mongo/{mongodb-profnotes,pro-mongodb-guide_2015}.txt
         (Done: mongodb4-qsguide_2018.txt)
+Python - Pyramid [!!]
 Kivy *
   ~/Empire/Doks/Comp/lang/py/webmob/kivy/KivyDocs_2023.txt
 CSOUND-BOOK (+Csound FlossMan)

@@ -192,6 +192,7 @@ yay -S insync
 clear
 echo "Installing some utilities (curl, rename, tree, ag/agrep, scrot, tesseract): ..."
 sudo pacman -S man-db man-pages
+sudo mandb
 ## pacman -S curl
 sudo pacman -S rsync
 sudo pacman -S yq
@@ -281,12 +282,22 @@ sudo pacman -S chromium-browser  #maybe not needed with official install
 sudo pacman -S freeplane
 sudo pacman -S tj3 vim-tjp
 
-pacman -S go-yq  # convert yaml to json (etc)
+pacman -S go-yq  # yq: convert yaml to json (etc)
 yay -S graphql-playground-electron
+yay -S javafx-scenebuilder
+
 
 ## TODO: ADD XFCE DESKTOP KEYBOARD SETTINGS (=directory of xml-files)
 
-# sudo pacman -S kdeconnect kdeconnect-indicator
+# STEAM
+sudo gvim /etc/pacman.conf
+clear
+read -p "Uncomment '[multilib] + mirrorlist'-line: "
+# https://linuxgenie.net/download-install-steam-arch-linux/
+sudo pacman -S signal-desktop
+# WHATSAPP
+sudo pacman -S nmap && yay -S zenmap
+
 sudo pacman -S kdeconnect
 # sudo pacman -S libmtp simple-mtpfs android-tools gvfs
 sudo pacman -S android-tools
