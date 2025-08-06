@@ -60,6 +60,8 @@ yay -Syu dropbox
 dropbox start
 dropbox start &
 
+sudo pacman -S syncthing
+
 EXTHD1='3a7592f8-41d6-4c29-b6d0-53533881b86a'
 read -p "[Pre 0] Current ExtHd 1 set to ${EXTHD1}. Exit and modify if this setup has changed[!]: "
 read -p "[Pre 1/3] Start off with a done Dropbox and Fluxbox install. Ready?: "
