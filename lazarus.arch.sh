@@ -173,8 +173,10 @@ ln -s ~/bluelegend76/vim/spell ~/.vim/spell
 # FIXME __ :
 echo "Now linking up vimrc and emacs inits: ..."
 ln -s ~/bluelegend76/.vimrc
+# If using next line: Add gitignore (for Emacs system-dirs) to Git-repo
 # mkdir .emacs.d
 ln -s ~/bluelegend76/.emacs.d ~/.emacs.d
+ln -s ~/bluelegend76/.emacs.d/init.el ~/.emacs.d/init.el
 ## ln -s ~/bluelegend76/.emacs.d/lilypond/ ~/.emacs.d/lilypond
 
 # helix editor {{{
