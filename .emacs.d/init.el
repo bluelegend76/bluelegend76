@@ -124,10 +124,25 @@
   :init (global-flycheck-mode))
 
 ;;; Slime ----
+; (add-to-list 'load-path "/usr/share/quicklisp")
+; (load "/usr/share/quicklisp/quicklisp.lisp")
+; 
 ; (setq inferior-lisp-program "sbcl")
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq inferior-lisp-program "sbcl")
+
+; ;; Use the system-wide quicklisp from pacman
+; (add-to-list 'load-path "/usr/share/quicklisp")
+; (load "/usr/share/quicklisp/quicklisp.lisp")
+; 
+; ;; Configure SLIME
+; (require 'quicklisp-slime-helper)
+; (quicklisp-slime-setup)
+; (setq slime-lisp-implementations
+;       '((sbcl ("sbcl"))))
+; (setq inferior-lisp-program "sbcl")
+
 
 ;;; ===========================================================================
 ;;; LilyPond

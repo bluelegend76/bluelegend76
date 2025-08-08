@@ -1128,6 +1128,9 @@ yay -S flutter
 
 # }}}
 sudo pacman -S sbcl emacs-slime
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install :path "~/.quicklisp/")' --eval '(quit)'
+sbcl --load ~/.quicklisp/setup.lisp --eval '(ql:add-to-init-file)' --eval '(quit)'
 # *(*)? install CLisp (+slime) Ubuntu(!) [@@@@ TODO] {{{
 # sudo apt-get install sbcl
 # shell: =
