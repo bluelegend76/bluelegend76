@@ -1339,6 +1339,13 @@ yay -S mongodb-compass
 #   https://go.dev/doc/install
 # }}}
 sudo pacman -S supercollider sc3-plugins
+scide ~/bluelegend76/scoll_scel-install.scd &
+# TODO: START/RUN EMACS WITH:
+#   emacs -f sclang-start
+#     sclang-start
+#     sclang-eval-buffer
+#     sclang-stop
+
 # ¤[¤] ==== TODO: (**) Csound vim, Supercollider, ChucK {{{
 # CSOUND:
 # https://github.com/luisjure/csound-vim
