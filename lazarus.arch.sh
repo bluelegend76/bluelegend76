@@ -1036,6 +1036,9 @@ jshell
 
 # }}}
 # --
+# yay -S neo4j-desktop
+yay -S neo4j-community
+yay -S cypher-shell
 # ¤¤? (**) neo4j ubuntu {{{
 #   https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
 #
