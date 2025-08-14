@@ -11,6 +11,8 @@
 #              /##.~   ~.##\  #   %#e" #  #
 #             /.^         ^.\ 
 
+# https://wiki.archlinux.org/title/Arch_build_system
+
 # Main/Daily updating via Pacman/Yay:
 # sudo pacman -Syu; yay -Syu
 
@@ -247,6 +249,8 @@ sudo pacman -S lilypond
 sudo pacman -S frescobaldi
 sudo pacman -S ardour
 sudo pacman -S rosegarden
+# ----
+sudo pacman -S reaper
 # + python-ly
 # ____
 yay -S tuxguitar
@@ -271,6 +275,9 @@ yay -S csound-blue
 # pmidi
   #start w. 'timidity -ia {files}' ***
 
+sudo pacman -S openshot
+sudo pacman -S davinci-resolve
+
 echo "Installing some media-utils, Dok/Pdf-readers, etc: ..."
 sudo pacman -S gimp gimp-plugin-gmic inkscape
 sudo pacman -S 
@@ -284,7 +291,7 @@ sudo pacman -S a2ps okular xchm
 sudo pacman -S calibre
 #@@__ sudo apt-get install djvulibre-bin
 # wget https://0x2a.at/site/projects/djvu2pdf/djvu2pdf_0.9.2-1_all.deb
-sudo pacman -S extra/nyxt
+sudo pacman -S nyxt
 teams (aur)
 sudo pacman -S pandoc enscript
 sudo pacman -S festival
@@ -297,6 +304,11 @@ pacman -S go-yq  # yq: convert yaml to json (etc)
 yay -S graphql-playground-electron
 yay -S javafx-scenebuilder
 
+# Protege
+# Apache Jena
+#   https://jena.apache.org/download/
+#   https://downloads.apache.org/jena/binaries/
+
 
 ## TODO: ADD XFCE DESKTOP KEYBOARD SETTINGS (=directory of xml-files)
 
@@ -306,6 +318,7 @@ clear
 read -p "Uncomment '[multilib] + mirrorlist'-line: "
 # https://linuxgenie.net/download-install-steam-arch-linux/
 sudo pacman -S signal-desktop
+# https://wiki.archlinux.org/title/WhatsApp  (WhatsApp Web)
 # WHATSAPP
 sudo pacman -S nmap && yay -S zenmap
 
@@ -519,6 +532,7 @@ echo "(Nyquist is started with 'ny': )"
 
 echo "(Installing some media Extras)"
 sudo pacman -S discord
+# 2.2 'Discord asks for Update'  https://wiki.archlinux.org/title/Discord
 sudo pacman -S pidgin
 
 echo "Installing speech-dispatcher (=for Firefox speech synthesis): "

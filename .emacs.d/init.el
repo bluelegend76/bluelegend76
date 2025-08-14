@@ -35,8 +35,9 @@
 
 ;(load-theme 'wombat)
 ;; (load-theme 'doom-solarized-dark-high-contrast)
-(load-theme 'deeper-blue)
-;(load-theme 'tango-dark)
+; (load-theme 'deeper-blue)
+; (load-theme 'tango-dark)
+(load-theme 'doom-ir-black)
 ;(set-face-attribute 'default nil :font "Fira Code Retina" :height 100)
 
 ; c-x c-e  ||  a-x eval-buffer
@@ -122,6 +123,9 @@
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
+
+(global-font-lock-mode t)
+
 
 ;;; Slime ----
 ; (add-to-list 'load-path "/usr/share/quicklisp")
@@ -303,6 +307,44 @@
 ;; Add any other general Emacs-configurations below this line
 
 
+;;; Clojure
+;; Load use-package if it's not already loaded
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+;; Clojure mode and its dependencies
+(use-package clojure-mode
+  :ensure t)
+
+(use-package cider
+  :ensure t
+  :hook (clojure-mode . cider-mode)
+  :bind (:map cider-mode-map
+              ("C-c C-c" . cider-eval-last-sexp)
+              ("C-c C-e" . cider-eval-last-sexp-and-replace)))
+
+(use-package paredit
+  :ensure t
+  :init
+  (add-hook 'clojure-mode-hook #'paredit-mode)
+  (add-hook 'cider-repl-mode-hook #'paredit-mode))
+
+;; LSP support
+(use-package lsp-mode
+  :ensure t
+  :init (add-hook 'clojure-mode-hook 'lsp-deferred))
+
+(use-package lsp-ui
+  :ensure t
+  :hook (lsp-mode . lsp-ui-mode))
+
+;; Suppress native compiler warnings (optional but recommended)
+(setq native-comp-async-report-warnings-errors '((not (comp-warn-missing-vars (not t)))))
+
+;;
+(add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -313,7 +355,15 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff"
     "#eeeeec"])
  '(custom-safe-themes
-   '("9b54ba84f245a59af31f90bc78ed1240fca2f5a93f667ed54bbf6c6d71f664ac"
+   '("f4d1b183465f2d29b7a2e9dbe87ccc20598e79738e5d29fc52ec8fb8c576fcfd"
+     "ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0"
+     "f1e8339b04aef8f145dd4782d03499d9d716fdc0361319411ac2efc603249326"
+     "13096a9a6e75c7330c1bc500f30a8f4407bd618431c94aeab55c9855731a95e1"
+     "aec7b55f2a13307a55517fdf08438863d694550565dee23181d2ebd973ebd6b8"
+     "7ec8fd456c0c117c99e3a3b16aaf09ed3fb91879f6601b1ea0eeaee9c6def5d9"
+     "3f24dd8f542f4aa8186a41d5770eb383f446d7228cd7a3413b9f5e0ec0d5f3c0"
+     "22a0d47fe2e6159e2f15449fcb90bbf2fe1940b185ff143995cc604ead1ea171"
+     "9b54ba84f245a59af31f90bc78ed1240fca2f5a93f667ed54bbf6c6d71f664ac"
      "f6665ce2f7f56c5ed5d91ed5e7f6acb66ce44d0ef4acfaa3a42c7cfe9e9a9013"
      default))
  '(exwm-floating-border-color "#011417")
@@ -325,9 +375,7 @@
  '(jdee-db-requested-breakpoint-face-colors (cons "#01323d" "#93a61a"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#01323d" "#56697A"))
  '(objed-cursor-color "#ec423a")
- '(package-selected-packages
-   '(csound-mode doom-modeline doom-themes evil flycheck-lilypond
-		 lsp-mode rainbow-delimiters))
+ '(package-selected-packages nil)
  '(pdf-view-midnight-colors (cons "#8d9fa1" "#002732"))
  '(rustic-ansi-faces
    ["#002732" "#ec423a" "#93a61a" "#c49619" "#3c98e0" "#e2468f" "#3cafa5"
