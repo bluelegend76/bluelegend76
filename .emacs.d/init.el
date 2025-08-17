@@ -346,6 +346,22 @@
 (add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
 
 
+(defun next-theme ()
+  "Load the next theme from the custom-enabled-themes list."
+  (interactive)
+  (let* ((themes (custom-available-themes))
+         (current-theme (car (custom-enabled-themes)))
+         (current-index (cl-position current-theme themes :test 'eq)))
+    (if current-theme
+        ;; Disable current theme to see changes
+        (disable-theme current-theme))
+    (let ((next-theme (nth (mod (1+ current-index) (length themes)) themes)))
+      (load-theme next-theme t))))
+
+(global-set-key (kbd "<C-f7>") 'next-theme)
+; (global-set-key (kbd "C-F8") 'next-theme)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -355,7 +371,11 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff"
     "#eeeeec"])
  '(custom-safe-themes
-   '("f4d1b183465f2d29b7a2e9dbe87ccc20598e79738e5d29fc52ec8fb8c576fcfd"
+   '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
+     "02d422e5b99f54bd4516d4157060b874d14552fe613ea7047c4a5cfa1288cf4f"
+     "32f22d075269daabc5e661299ca9a08716aa8cda7e85310b9625c434041916af"
+     "6963de2ec3f8313bb95505f96bf0cf2025e7b07cefdb93e3d2e348720d401425"
+     "f4d1b183465f2d29b7a2e9dbe87ccc20598e79738e5d29fc52ec8fb8c576fcfd"
      "ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0"
      "f1e8339b04aef8f145dd4782d03499d9d716fdc0361319411ac2efc603249326"
      "13096a9a6e75c7330c1bc500f30a8f4407bd618431c94aeab55c9855731a95e1"
