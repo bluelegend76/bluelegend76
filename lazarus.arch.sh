@@ -188,6 +188,9 @@ ln -s ~/bluelegend76/.emacs.d/init.el ~/.emacs.d/init.el
 # }}}
 # yi editor
 
+# NOTe: MAY ALREADY BE INSTALLED BY DEFAULT ON ARCH
+sudo pacman -S syncthing
+
 read -p "Do a ':PluginInstall' in gvim, then press 'Enter' here to continue: "
 
 echo "Creating directory for Gdrive: ..."
@@ -241,7 +244,7 @@ sudo pacman -S keepassxc
   # gydl (??)
 # sudo apt-get install anki
 # pavucontrol  Already Installed (+Extra Music-Mixer)
-sudo pacman -S mpv audacious
+sudo pacman -S vlc mpv audacious
 # +python-mpv
 # +playerctl ?
 gtick
