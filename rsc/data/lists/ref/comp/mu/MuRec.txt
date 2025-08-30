@@ -4,6 +4,14 @@ vim: fdm=indent:fdl=2:
 PICK OUT/OVER QUICKLISTS, LIKE YOUROCK-GUITAR ETC *******
 ~/Dropbox/rsc/data/lists/at/muRecord.txt  ____  ____  ____  ____
 
+
+~/SyncThing/rsc/Doks/Comp/mu/rec/nTrackStudio-Android.txt
+    ~/SyncThing/rsc/Doks/Comp/mu/rec/nTrackStudio-Linux.txt
+~/SyncThing/rsc/Doks/Comp/mu/rec/ntrack-manual_win.txt
+----
+~/SyncThing/rsc/Doks/Comp/mu/au/sunvox.txt
+
+
 __
                 ----
                 .
@@ -69,6 +77,7 @@ Muse
 lmms,  flstudio mobile
                             https://docs.lmms.io/user-manual/getting-started/installation
                             .
+Qtractor
 calf/lv, ladspa
 guitarix
 rakarrack
@@ -819,6 +828,127 @@ Csound
                             Potential for further customization: Being in the Emacs ecosystem, you can further enhance your LilyPond workflow with other Emacs packages if needed.
 
                         Feel free to adjust the keybindings and indentation rules in the init.el to match your preferences. Let me know if you encounter any issues or have further customization requests!
+csound-mode (Emacs)
+                            Major mode csound-mode
+
+                            The major mode is Csound Mode mode defined in csound-mode.el:
+
+                            A major mode for interacting and coding Csound
+
+                            This mode runs the hook 'csound-mode-hook', as the final or
+                            penultimate step during initialization.
+
+
+                            Key             Binding
+
+                            C-x C-e		csound-repl-evaluate-line
+
+                            C-M-x		csound-repl-evaluate-region
+                            M-.		csound-score-find-instr-def
+
+                            C-c C-c		csound-repl-evaluate-region
+                            C-c C-k		csound-abort-compilation
+                            C-c C-l		csound-repl-interaction-evaluate-last-expression
+                            C-c C-n		csound-skeleton-new-csd
+                            C-c C-p		csound-play
+                            C-c C-r		csound-render
+                            C-c C-s		csound-score-align-block
+                            C-c C-z		csound-repl-start
+
+                            C-c C-d h	csound-manual-lookup
+
+                              Local minor mode auto-save-mode
+
+                            Auto-Save minor mode (no indicator):
+                            Toggle auto-saving in the current buffer (Auto Save mode).
+
+                            When this mode is enabled, Emacs periodically saves each file-visiting
+                            buffer in a separate "auto-save file".  This is a safety measure to
+                            prevent you from losing more than a limited amount of work if the
+                            system crashes.
+
+                            Auto-saving does not alter the file visited by the buffer: the visited
+                            file is changed only when you request saving it explicitly (such as
+                            with C-x C-s).  If you want to save the buffer into its
+                            visited files automatically, use M-x auto-save-visited-mode).
+
+                            For more details, see Info node '(emacs) Auto Save'.
+
+                            This is a minor mode.  If called interactively, toggle the 'Auto-Save
+                            mode' mode.  If the prefix argument is positive, enable the mode, and if
+                            it is zero or negative, disable the mode.
+
+                            If called from Lisp, toggle the mode if ARG is 'toggle'.  Enable the
+                            mode if ARG is nil, omitted, or is a positive number.  Disable the mode
+                            if ARG is a negative number.
+
+                            To check whether the minor mode is enabled in the current buffer,
+                            evaluate '(and buffer-auto-save-file-name (>= buffer-saved-size 0))'.
+
+                            The mode's hook is called both when the mode is enabled and when it is
+                            disabled.
+----
+sclang-mode (Emacs)
+                            Major mode sclang-mode
+
+                            The major mode is SCLang mode defined in sclang-mode.el:
+
+                            Major mode for editing SuperCollider language code.
+
+                            Key             Binding
+
+                            )		sclang-electric-brace
+                            *		sclang-electric-star
+                            /		sclang-electric-slash
+                            ]		sclang-electric-brace
+                            }		sclang-electric-brace
+
+                            C-M-h		sclang-goto-help-browser
+                            C-M-x		sclang-eval-defun
+
+                            C-c C-c		sclang-eval-region-or-line
+                            C-c C-d		sclang-eval-region
+                            C-c C-e		sclang-eval-expression
+                            C-c C-f		sclang-eval-document
+                            C-c C-h		sclang-find-help
+                            C-c C-k		sclang-edit-dev-source
+                            C-c C-l		sclang-recompile
+                            C-c RET		sclang-show-method-args
+                            C-c C-n		sclang-complete-symbol
+                            C-c C-o		sclang-start
+                            C-c C-r		sclang-main-run
+                            C-c C-s		sclang-main-stop
+                            C-c C-w		sclang-switch-to-workspace
+                            C-c C-y		sclang-open-help-gui
+                            C-c :		sclang-find-definitions
+                            C-c ;		sclang-find-references
+                            C-c <		sclang-clear-post-buffer
+                            C-c >		sclang-show-post-buffer
+                            C-c [		sclang-dump-interface
+                            C-c h		sclang-find-help-in-gui
+                            C-c {		sclang-dump-full-interface
+                            C-c }		sclang-pop-definition-mark
+
+                            C-M-q		prog-indent-sexp
+                            M-q		prog-fill-reindent-defun
+
+                            C-c C-p b	sclang-server-boot
+                            C-c C-p d	sclang-server-display-default
+                            C-c C-p f	sclang-server-free-all
+                            C-c C-p m	sclang-server-make-default
+                            C-c C-p n	sclang-next-server
+                            C-c C-p o	sclang-server-dump-osc
+                            C-c C-p p	sclang-show-server-panel
+                            C-c C-p q	sclang-server-quit
+
+                            C-c C-p r n	sclang-server-prepare-for-record
+                            C-c C-p r p	sclang-server-pause-recording
+                            C-c C-p r r	sclang-server-record
+                            C-c C-p r s	sclang-server-stop-recording
+
+                            In addition to any hooks its parent mode 'prog-mode' might have run,
+                            this mode runs the hook 'sclang-mode-hook', as the final or
+                            penultimate step during initialization.
 SCollider IDE
                 ~/Dropbox/rsc/data/lists/ref/ScolliderIDE-Shortcuts.pdf
                 Themes: Dark, Dracula (etc)
@@ -1908,4 +2038,93 @@ Progr.languages = Interact with CSound/SuperCollider
                                 If you need to embed the sound synthesis engine directly into a custom application with high performance requirements, C/C++ might be the way to go.
 
                             Exploring the options available for both SuperCollider and CSound will open up a world of possibilities for integrating these powerful audio synthesis tools into your broader creative and technical workflows. Since you're on Arch Linux, you'll find that installing the necessary libraries for these languages is generally straightforward using pacman or pip.
+
+
+
+
+- Could you also help me do the
+  same with the SuperCollider IDE,
+  CsoundQt, and the NyquistIDE,
+  just for me to get an overview?
+
+You're right, each of these
+sound-programming environments has
+its own unique set of
+keyboard-shortcuts tailored to its
+specific workflow. Here's an
+overview of some useful shortcuts
+for SuperCollider IDE, CsoundQt,
+and NyquistIDE.
+
+SuperCollider IDE
+
+The SuperCollider IDE is designed
+for live-coding and is highly
+keyboard-centric. The shortcuts
+focus on code-evaluation,
+documentation, and managing the
+server.
+
+- c-Enter: Evaluate the current
+  line, a selected region, or an
+  entire code-block.
+- c-.: Stop all currently running
+  code and free all synths. This is
+  your "panic-button."
+- c-d: Open the Help-Browser and
+  find the help-page for the word
+  under the cursor. This is
+  invaluable for quick reference.
+- c-l: Recompile the class-library.
+  This is necessary after you
+  install a new Quark (package) or
+  modify a class-file.
+- Tab: Auto-indent the current line
+  or a selected block of code.
+- c-f: Find text in the current
+  document.
+
+
+CsoundQt
+
+CsoundQt is a front-end for Csound
+that provides a more traditional
+IDE-experience with features for
+code-editing, compiling, and
+running scores.
+
+- c-r: Run the Csound-code.
+- cs-w: Evaluate only the selected
+  code, which is useful for testing
+  small snippets.
+- c-/ (cs-7): Comment or uncomment
+  the selected text with the
+  semicolon-character (;).
+- c-i: Indent the selected code or
+  the current line.
+
+
+NyquistIDE
+
+Nyquist is a language primarily
+used within Audacity, and the
+NyquistIDE is a simplified
+environment for developing
+Nyquist-plugins. The shortcuts are
+more focused on text-editing and
+running the code.
+
+- c-Enter: Execute the code in the
+  editor-window.
+- c-f: Open the find-and-replace
+  dialog.
+
+You can learn more about some of
+the most useful keyboard shortcuts
+for digital audio workstations in
+general from Top 10 Keyboard
+Shortcuts for DAWs that you GOTTA
+KNOW!.
+
+https://www.youtube.com/watch?v=tWXUDJivh8M
 

@@ -1687,6 +1687,56 @@ Made by Adam Bard, handsome web developer
 
 }}}
 
+MATHS FOR PROGRAMMING {{{
+
+So, let's go on to the maths and programming question: I have studied programming and computer-science, but on a shorter more vocational-style educational program. I'm looking for an overview or a list of some mathematical areas I could study (perhaps going to Khan Academy or other online resources) to get some better skills usable for enhancing my programming-skills, i.e. being better able to understand and choose more wisely when it comes to datastructures etc. Could you give me some suggestions?
+
+This is a fantastic question and a great way to think about long-term skill development. Your intuition that math provides the underlying theory for many core computer science concepts, like data structures, is correct. The most relevant field of mathematics for a programmer is discrete mathematics.
+
+Here is a list of key mathematical topics, ordered from most essential for general programming to more specialized, with a brief explanation of how each applies to what you do:
+
+1. Discrete Mathematics 🧮
+
+This is the most crucial area for understanding algorithms and data structures. Unlike continuous math (like calculus), discrete math deals with distinct, separate values, which is exactly how computers operate.
+
+    Logic and Proofs: Understanding logical connectives (AND, OR, NOT) and logical reasoning is the foundation of programming. It helps you design robust if-else statements, understand Boolean expressions, and reason about the correctness of your code.
+
+    Set Theory: Sets are collections of unique elements. This is directly relevant to programming concepts like lists, arrays, and especially hash sets. Knowing set operations (union, intersection, difference) is essential for efficient data manipulation and database queries.
+
+    Graph Theory: Graphs are mathematical structures used to model relationships (e.g., social networks, road maps, web pages). It's a fundamental part of many algorithms, including those for finding the shortest path (like in GPS) or optimizing network routing.
+
+    Combinatorics: This is the art of counting. It helps you understand how many possible combinations or permutations of items there are, which is key for analyzing algorithms that need to explore many possibilities, such as in game theory or cryptography.
+
+2. Number Theory 🔢
+
+    Integers and Modulo Arithmetic: Understanding prime numbers, divisibility, and modular arithmetic is critical for cryptography, hashing functions, and certain algorithms that involve cyclic data (like calendars or clocks).
+
+    Number Systems: While most programmers work with decimal numbers, a deep understanding of binary, hexadecimal, and other number systems is fundamental to working with low-level data, memory, and bitwise operations.
+
+3. Complexity Theory (Big O Notation) 🕰️
+
+This is a core computer science topic, but it is deeply rooted in mathematics. Big O notation provides a standardized way to describe the efficiency of an algorithm in terms of time and space. Learning to analyze an algorithm's Big O complexity will help you make informed decisions about which data structure or algorithm is best for a given problem.
+
+4. Linear Algebra 📊
+
+While not as universally applicable as discrete math for general programming, it's essential for specific fields.
+
+    Vectors and Matrices: These are fundamental to computer graphics, game development, machine learning, and data science. Understanding matrix multiplication, transformations, and linear systems is a prerequisite for working with 2D and 3D graphics, or implementing machine learning algorithms from scratch.
+
+    Licensed by Google
+
+Where to Study?
+
+    Khan Academy: Has excellent courses on Algebra, Discrete Mathematics, and Linear Algebra. Their step-by-step approach is perfect for self-study.
+
+    MIT OpenCourseWare: The course "Mathematics for Computer Science" (6.042J) is a gold standard and provides a college-level introduction to the topics.
+
+    GeeksforGeeks and Dev.to: Websites like these have many articles and tutorials that specifically link mathematical concepts to their programming applications.
+
+I have kept your question about the Nyxt browser and Lisp-coding in mind, just let me know when you're ready to move on to that.
+
+}}}
+
 
 RIDER GENERATE CLASS DIAGRAMS {{{
   https://stackoverflow.com/questions/52695800/creating-class-dependency-diagram-in-rider-ide
@@ -1700,7 +1750,45 @@ ____ __
 ___AutoHotKey=Svorak****
 
 ___NEWEST
-___projs2git_cleanlist2024
+___projs2git_cleanlist2024 {{{
+CLEAN MINIMAL LIST PROGRAMMING-LANGUAGES
+
+Bash-Scripts, Conversion-Utils (etc)    # incl. drs-scripts refactorings
+  +BCB/Rute/BlueBash/'Bashisms'
+refactoring
+Music with C, C++ Datastructures, (Cpp 1-projs)     # C/C++
+  Gimp C
+  Linux System-Programming (+some embedded)
+LLL2 Refactoring
+----
+INSTRUMENTALISM-APPS (incl. Graph Database)
+  Asm (+webassembly??)
+
+Mermaid
+Doxygen
+  Lua
+Clojure (+Spring/Vaadin)
+  Csound, SuperCollider  Nyquist
+  GoLang +Hugo/Gomplate (Rust)
+  React + ReasonML  + GraphQL
+Lisp, Scheme
+Semantic Web
+  Python with MACHINE-LEARN (+HyLang: PyVideo, Pillow,  PyGimp)
+  JuPyter(/Polyglot) Notebooks
+    Inkscape
+C#/F# (w. ReactiveUI) + Avalonia (+WebAPI etc)
+    Roslyn
+  XUnit
+Kotlin/Flutter
+Ocaml (+SML)
+  SQL DB
+Dlang (+Pegged/TsvUtils)
+java, make
+  Haskell, Elixir, Prolog
+
+JSON, XML, yaml
+
+}}}
 
 https://en.wikipedia.org/wiki/Bin_packing_problem
     https://github.com/hylo-lang/hylo

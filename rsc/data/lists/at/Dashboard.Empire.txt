@@ -651,7 +651,7 @@ Db:
   gvim -p ../ref/comp/cb/Db.sql.txt ../ref/comp/cb/db.graph.txt ../ref/comp/cb/db.nosql.txt
 
 
-    'ful som stryk'
+    'ful som stryk' (ful som en påse nötter)
 LANG1-REFS 1: (+maybe LangDb1)
   gvim -p ../ref/lang/Langs1Refs.txt ../ref/lang/sv.thes.svsyn.txt ../ref/lang/cmp.en.dict.en2sv-prsm.txt ../ref/lang/Quotes.txt
   // maybe add 'främord' etc
@@ -1313,6 +1313,7 @@ dft curr 2023 {{{
             [[ = in at.muTeach.bash ]]
         }}}
     - drs 'Hallå Där!' + karaoke-pres(=videos)
+- GUIT-PATT, SÅNGÖVN., + PATTS GUITAR[!!]
     - listen|document: Genres, 2 songs + its lyrics(!)      pre: 'Lathund'(!|??)
       - dfs sångövn.programmet =in office + 'mobile'(!!)
 
@@ -1333,6 +1334,7 @@ dft curr 2023 {{{
 
 ---- office.Projs|Tree -------
     Sv.Words | Eng.Words
+gvim ~/Dropbox/rsc/Doks/upload/*.txt
 gvim ~/Dropbox/rsc/Doks/upload/Notes_*.txt
 ~/Empire/Doks/va.20250706-1130/
 ----
@@ -1361,6 +1363,8 @@ paralellism/concurrency {{{
 }}}
 .  Networking {{{
   ~/Dropbox/rsc/Doks/upload/bornhack-networking.txt
+
+  nmap, zenmap, (lua)
 }}}
 [!].  refactoring + debugging (+Unit Testing) {{{
   refact, legacycode, TDD(etc) @  +C-CppFunct  ¤¤¤  (+dissasemble?)
@@ -1403,12 +1407,44 @@ SSH + make  ¤¤¤ {{{
 }}}
 . Ocaml, Rust, Go, Zig, Vlang {{{
   ~/Dropbox/rsc/Doks/upload/ocaml-rworld-2e.txt
+
+
+  gvim ~/Empire/Doks/Comp/lang/go-v/{golang,gocb,Go-Succinctly_2017,goprogr-getgoing_2018,goprogr-byex_2015}.txt
+  gvim ~/Empire/Doks/Comp/lang/go-v/**/*.txt
+
+      ~/Empire/Doks/Comp/lang/go-v/vlang.txt
+
+  ~/Empire/Doks/Comp/lang/zig/*.txt
+
+  gvim ~/Empire/Doks/Comp/lang/rust/*.txt
+  gvim ~/Empire/Doks/Comp/lang/rust/**/*.txt
+}}}
+.   golang {{{
+  ~/Empire/Doks/Comp/lang/go-v/{
+  Go-Succinctly_2017,
+  golang,
+  gocb,
+  goprogr-getgoing_2018,
+
+  ~/Empire/Doks/Comp/lang/go-v/datastructs-patts-algos/go-datastructsalgos_2019.txt
+  ~/Empire/Doks/Comp/lang/go-v/datastructs-patts-algos/go-designpatt_2017.txt
 }}}
 Ly-Scheme(!) {{{
   ~/Dropbox/rsc/Doks/upload/ly-scheme/lydoc03-extend.txt
   ~/Dropbox/rsc/Doks/upload/ly-scheme/LilypondScheme-Book.txt
 }}}
 . Dlang (+pegged) {{{
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dlearn.tagged.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dcookb.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/DlangWiki-FunctionalGarden.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dlang-dbi--hsteoh.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dlang-wbright_dasbetterc.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dprogrin-ali.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/dwebdev.txt
+
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/tsvutils/TsvUtils1.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/dlang/tsvutils/TsvUtils2.txt
+
   ~/Dropbox/rsc/Doks/upload/dlang-pegged/Pegged.txt
   ~/Dropbox/rsc/Doks/upload/dlang-pegged/pegged-howworks.txt
   ~/Dropbox/rsc/Doks/upload/dlang-pegged/pegged-intro.txt
@@ -1437,6 +1473,13 @@ Clang {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/gnu-codingstandards_2021.txt
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/modc-qref-2e_2019.txt
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/c/modernc.txt
+}}}
+.  Lisp {{{
+  ~/Empire/Doks/Comp/lang/lisp/*isp*.txt
+
+  ~/Empire/Doks/Comp/lang/lisp/cheatsh-qref/*.txt
+  ~/Empire/Doks/Comp/lang/lisp/gui/*.txt
+  ~/Empire/Doks/Comp/lang/lisp/webdev/*.txt
 }}}
 React (+ReasonML)  (+MongoDB) {{{
   ~/Dropbox/rsc/Doks/upload/freec-03_frontendlibs.txt
@@ -1472,16 +1515,6 @@ haskell + datanalys {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/haskell/datanalys/hask-datanalys_2015.txt
   ~/Dropbox/rsc/Doks/phone/Comp/lang/haskell/datanalys/haskell-dataanalysiscb_2014.txt
 }}}
-.  golang {{{
-  ~/Empire/Doks/Comp/lang/go-v/{
-  Go-Succinctly_2017,
-  golang,
-  gocb,
-  goprogr-getgoing_2018,
-
-  ~/Empire/Doks/Comp/lang/go-v/datastructs-patts-algos/go-datastructsalgos_2019.txt
-  ~/Empire/Doks/Comp/lang/go-v/datastructs-patts-algos/go-designpatt_2017.txt
-}}}
 SemWeb, LinkedData {{{
   Slog|Clean:
   ~/Empire/Doks/Comp/lang/webdev/db/semweb/*.txt
@@ -1490,14 +1523,21 @@ SemWeb, LinkedData {{{
   ~/Dropbox/rsc/Doks/upload/semanticweb-clojjava_2010.txt
   ~/Dropbox/rsc/Doks/upload/linkeddata-patterns_2022.txt
   Owl
+
+  +SUMO
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/ontology/ontology101.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/ontology/Ontol-Pease.txt
+  ~/Dropbox/rsc/Doks/phone/Comp/lang/webdev/db/semweb/ontology/vampire-prover_2012.txt
 }}}
 .  Tracker/Localsearch + TinySparql + Sparql  ¤¤ {{{
+
+
 }}}
 PyML (SciKit, Keras, ....) {{{
   ~/Dropbox/rsc/Doks/phone/Comp/datasci/ai-mlearn/py/mlearn-scikitkerastflow-2e_2019.txt
 }}}
 .  (gimp etc) C Py Scm (!!)  ¤¤¤
-AVALONIA + ReactiveUI  (+Maui)  ¤¤(¤)  Spectre Console {{{
+INIT.EL:  AVALONIA + ReactiveUI  (+Maui)  ¤¤(¤)  Spectre Console {{{
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/Avalonia.txt
     ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/SpectreConsole.tags1.txt
   ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/rx/ReactiveUI-Docs.txt
@@ -2109,35 +2149,9 @@ CSound[FLOSS-MAN + Book] + Scoll. [WEB-MINI; sclang|scide]
   ~/Dropbox/rsc/Doks/phone/Comp/mu/au/scoll/ScollDocs-GetStarted.txt
 }}}
 
-sqlitebrowser
-F# FunProfit + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
-  . {{{
-~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/FsFunprofit-Online.tags1.txt
-
-
-gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
-
-    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
-      https://suave.io/
-
-  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
-
-    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
-
-    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
-
-
-    F# for Devops ----
-    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
-    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work-2//
-
-    https://mallibone.com/post/fsharp-scripting
-
-  }}}
-
-SSH {{{
-  ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
-}}}
+SPARQL, RDF, LOCALSEARCH (ETC)
+FSTAR [x2 !!]  (+Idris)
+----
 NuShell  ¤¤¤
 SemWeb + Sparql  ¤¤¤ {{{
 
@@ -2186,6 +2200,36 @@ Sparql Cheat sheet pdf
   ~/Empire/Doks/Comp/lang/webdev/db/semweb/social-semantic-web-web-20-was-nun_2009.txt
   ~/Empire/Doks/Comp/lang/webdev/db/semweb/semwebsearch-te_2007.txt
 }}}
+
+sqlitebrowser  [+'the keyboard-shortcut database']
+F# FunProfit + Webframeworks (Fabulous, Fable, Suave)  ¤¤¤
+  . {{{
+~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/FsFunprofit-Online.tags1.txt
+
+
+gvim ~/Dropbox/rsc/Doks/phone/Comp/lang/clangs/cs/fs/*.txt -c 'b Funprofit'
+
+    gvim ~/gdrive/rsc/Doks/taskuj/Cs/Fs/{Fable/Fable-framew,Fabulous/Fabulous-framew}.txt
+      https://suave.io/
+
+  gvim ~/Dropbox/Udt/rsc/doks/comp/lang/clangs/cs/fs/{fsfunprofit-FsAtWork,devlife-fsscripting}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fsdeepdives_2015,fs-domainmodel_2018,fs-ess_2023,FsharpRealworld,fsharp-survguide,fswebmob-netmvtazurewbebsock_2013,functprogr-realworld_2010}.txt
+
+    gvim ~/Empire/Doks/Comp/lang/clangs/csharp/fsharp/{fs-domainmodel_2018,fs-datastructsalgos_2015,FsharpDocs_2022plus,FsharpRealworld,fsharp-survguide,FsGetprogr_2018}.txt
+
+
+    F# for Devops ----
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively
+    https://fsharpforfunandprofit.com/posts/low-risk-ways-to-use-fsharp-at-work-2//
+
+    https://mallibone.com/post/fsharp-scripting
+
+  }}}
+
+SSH {{{
+  ~/Dropbox/Udt/rsc/doks/comp/pr/ssh-defguide.txt
+}}}
 Wsl  ¤¤
   . {{{
     ~/gdrive/rsc/Doks/taskuj/WSL/*.txt
@@ -2213,6 +2257,7 @@ Doxygen - generate documentation (etc)
 
 ANKIMAN 2021+
     ~/Dropbox/Udt/rsc/data/lists/Tagged/ankiman2021plus.tags1.txt
+Org-Mode [!!]
 Lincmd.Org
 . {{{
   ~/Dropbox/rsc/Doks/phone/Comp/sysadm/lin/lincmdorg.Tags1.txt

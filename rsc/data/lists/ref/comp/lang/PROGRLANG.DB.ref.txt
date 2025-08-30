@@ -248,6 +248,7 @@ Tools, Compilation (etc)        _c
         ·                       _ps_
         posit mran(?)           _r_
         tlmgr                   _tex_  texlive
+        Quark                   _scoll_
     central repo                _c
         maven central           _java_
     Compile, Run                _c
