@@ -11,6 +11,8 @@
 #              /##.~   ~.##\  #   %#e" #  #
 #             /.^         ^.\ 
 
+# https://wiki.archlinux.org/title/Arch_build_system
+
 # Main/Daily updating via Pacman/Yay:
 # sudo pacman -Syu; yay -Syu
 
@@ -54,6 +56,9 @@ sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+cd
+git clone https://github.com/bluelegend76/bluelegend76.git
 
 cd
 yay -Syu dropbox
@@ -109,26 +114,29 @@ sudo pacman -S noto-fonts-cjk
 # TODO: CHANGE MAJOR CONFIG-PATH TO GITHUB/BLUELEGEND76
 echo "Now linking up bashrc, inputrc: ..."
 rm -f ~/.bashrc ~/.inputrc ~/.profile
-ln -s ~/Dropbox/config/.bashrc
-ln -s ~/Dropbox/config/.inputrc
-ln -s ~/Dropbox/config/.profile
+# ln -s ~/Dropbox/config/.bashrc
+# ln -s ~/Dropbox/config/.inputrc
+# ln -s ~/Dropbox/config/.profile
+ln -s ~/bluelegend76/.bashrc
+ln -s ~/bluelegend76/.inputrc
+ln -s ~/bluelegend76/.profile
 # For Keyb3: Alt-gr + Lessthan/GreaterThan
-ln -s ~/Dropbox/config/keymap/.keyb3_altgr-lessgreater.xmodmap
+## ln -s ~/Dropbox/config/keymap/.keyb3_altgr-lessgreater.xmodmap
 # Frescobaldi, Isabelle Prover (etc)  Interface Color-Theme CSS/Style 
 
-echo "Linking up flux-settings: ..."
-read -p "[Tip Fluxbox: Good menus theme ='Squared Blue': "
-rm -f ~/.fluxbox/startup ~/.fluxbox/keys
-ln -s ~/Dropbox/config/fluxbox/startup ~/.fluxbox/startup
-ln -s ~/Dropbox/config/fluxbox/keys ~/.fluxbox/keys
+# echo "Linking up flux-settings: ..."
+# read -p "[Tip Fluxbox: Good menus theme ='Squared Blue': "
+# rm -f ~/.fluxbox/startup ~/.fluxbox/keys
+# ln -s ~/Dropbox/config/fluxbox/startup ~/.fluxbox/startup
+# ln -s ~/Dropbox/config/fluxbox/keys ~/.fluxbox/keys
 
-echo "(Installing some dockapps): ..."
-# pacman -S wmmoonclock wmnd wmcpuload wmtime wmbattery
+# echo "(Installing some dockapps): ..."
+# # pacman -S wmmoonclock wmnd wmcpuload wmtime wmbattery
 sudo pacman -S gnome-clocks
 # --
-read -p "Tip: Now try Refreshing Fluxbox: "
+# read -p "Tip: Now try Refreshing Fluxbox: "
 
-echo "Installing Git ... "
+echo "Installing some Git-tools ... "
 sudo pacman -S meld diffuse
 # yay -S gitkraken
 # git-gui
@@ -160,15 +168,18 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # rm -f ~/.vim/{colors,plugin,spell}/
 # OR, USE RMDIR(!!)
 # OR(!!!!) OPEN .VIM-DIR WITH THUNAR/DOLPHIN, AND REMOVE BY HAND
-ln -s ~/Dropbox/config/vim/colors ~/.vim/colors  #TODO TODO
-ln -s ~/Dropbox/config/vim/plugin ~/.vim/plugin
-ln -s ~/Dropbox/config/vim/spell ~/.vim/spell
+ln -s ~/bluelegend76/vim/colors ~/.vim/colors  #TODO TODO
+ln -s ~/bluelegend76/vim/plugin ~/.vim/plugin
+ln -s ~/bluelegend76/vim/spell ~/.vim/spell
 
+# FIXME __ :
 echo "Now linking up vimrc and emacs inits: ..."
-ln -s ~/Dropbox/config/.vimrc
-mkdir .emacs.d
-ln -s ~/Dropbox/config/emacs/init.el ~/.emacs.d/init.el
-ln -s ~/Dropbox/config/emacs/lilypond/ ~/.emacs.d/lilypond
+ln -s ~/bluelegend76/.vimrc
+# If using next line: Add gitignore (for Emacs system-dirs) to Git-repo
+# mkdir .emacs.d
+ln -s ~/bluelegend76/.emacs.d ~/.emacs.d
+ln -s ~/bluelegend76/.emacs.d/init.el ~/.emacs.d/init.el
+## ln -s ~/bluelegend76/.emacs.d/lilypond/ ~/.emacs.d/lilypond
 
 # helix editor {{{
 #  sudo add-apt-repository ppa:maveonair/helix-editor
@@ -176,6 +187,9 @@ ln -s ~/Dropbox/config/emacs/lilypond/ ~/.emacs.d/lilypond
 #  sudo apt install helix
 # }}}
 # yi editor
+
+# NOTe: MAY ALREADY BE INSTALLED BY DEFAULT ON ARCH
+sudo pacman -S syncthing
 
 read -p "Do a ':PluginInstall' in gvim, then press 'Enter' here to continue: "
 
@@ -230,7 +244,7 @@ sudo pacman -S keepassxc
   # gydl (??)
 # sudo apt-get install anki
 # pavucontrol  Already Installed (+Extra Music-Mixer)
-sudo pacman -S mpv audacious
+sudo pacman -S vlc mpv audacious
 # +python-mpv
 # +playerctl ?
 gtick
@@ -238,6 +252,8 @@ sudo pacman -S lilypond
 sudo pacman -S frescobaldi
 sudo pacman -S ardour
 sudo pacman -S rosegarden
+# ----
+sudo pacman -S reaper
 # + python-ly
 # ____
 yay -S tuxguitar
@@ -262,6 +278,9 @@ yay -S csound-blue
 # pmidi
   #start w. 'timidity -ia {files}' ***
 
+sudo pacman -S openshot
+sudo pacman -S davinci-resolve
+
 echo "Installing some media-utils, Dok/Pdf-readers, etc: ..."
 sudo pacman -S gimp gimp-plugin-gmic inkscape
 sudo pacman -S 
@@ -275,7 +294,7 @@ sudo pacman -S a2ps okular xchm
 sudo pacman -S calibre
 #@@__ sudo apt-get install djvulibre-bin
 # wget https://0x2a.at/site/projects/djvu2pdf/djvu2pdf_0.9.2-1_all.deb
-sudo pacman -S extra/nyxt
+sudo pacman -S nyxt
 teams (aur)
 sudo pacman -S pandoc enscript
 sudo pacman -S festival
@@ -288,6 +307,11 @@ pacman -S go-yq  # yq: convert yaml to json (etc)
 yay -S graphql-playground-electron
 yay -S javafx-scenebuilder
 
+# Protege
+# Apache Jena
+#   https://jena.apache.org/download/
+#   https://downloads.apache.org/jena/binaries/
+
 
 ## TODO: ADD XFCE DESKTOP KEYBOARD SETTINGS (=directory of xml-files)
 
@@ -297,6 +321,7 @@ clear
 read -p "Uncomment '[multilib] + mirrorlist'-line: "
 # https://linuxgenie.net/download-install-steam-arch-linux/
 sudo pacman -S signal-desktop
+# https://wiki.archlinux.org/title/WhatsApp  (WhatsApp Web)
 # WHATSAPP
 sudo pacman -S nmap && yay -S zenmap
 
@@ -510,6 +535,7 @@ echo "(Nyquist is started with 'ny': )"
 
 echo "(Installing some media Extras)"
 sudo pacman -S discord
+# 2.2 'Discord asks for Update'  https://wiki.archlinux.org/title/Discord
 sudo pacman -S pidgin
 
 echo "Installing speech-dispatcher (=for Firefox speech synthesis): "
@@ -1027,6 +1053,9 @@ jshell
 
 # }}}
 # --
+# yay -S neo4j-desktop
+yay -S neo4j-community
+yay -S cypher-shell
 # ¤¤? (**) neo4j ubuntu {{{
 #   https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
 #
@@ -1119,6 +1148,9 @@ yay -S flutter
 
 # }}}
 sudo pacman -S sbcl emacs-slime
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install :path "~/.quicklisp/")' --eval '(quit)'
+sbcl --load ~/.quicklisp/setup.lisp --eval '(ql:add-to-init-file)' --eval '(quit)'
 # *(*)? install CLisp (+slime) Ubuntu(!) [@@@@ TODO] {{{
 # sudo apt-get install sbcl
 # shell: =
@@ -1327,6 +1359,13 @@ yay -S mongodb-compass
 #   https://go.dev/doc/install
 # }}}
 sudo pacman -S supercollider sc3-plugins
+scide ~/bluelegend76/scoll_scel-install.scd &
+# TODO: START/RUN EMACS WITH:
+#   emacs -f sclang-start
+#     sclang-start
+#     sclang-eval-buffer
+#     sclang-stop
+
 # ¤[¤] ==== TODO: (**) Csound vim, Supercollider, ChucK {{{
 # CSOUND:
 # https://github.com/luisjure/csound-vim
