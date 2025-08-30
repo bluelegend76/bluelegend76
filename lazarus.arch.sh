@@ -252,9 +252,22 @@ sudo pacman -S lilypond
 sudo pacman -S frescobaldi
 sudo pacman -S ardour
 sudo pacman -S rosegarden
+sudo pacman -S qpwgraph
+sudo pacman -S qtractor lmms
 # ----
 sudo pacman -S reaper
 # + python-ly
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+sudo systemctl enable --now snapd.socket
+# If AppArmor is enabled in your system, enable the service which loads AppArmor profiles for snaps:
+# sudo systemctl enable --now snapd.apparmor.service
+sudo ln -s /var/lib/snapd/snap /snap
+
+# Either log out and back in again, or restart your system, to ensure snap’s paths are updated correctly.
+# Install n-Track Studio
+sudo snap install n-trackstudio
 # ____
 yay -S tuxguitar
 sudo pacman -S evince fontforge
