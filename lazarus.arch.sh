@@ -292,13 +292,14 @@ yay -S csound-blue
   #start w. 'timidity -ia {files}' ***
 
 sudo pacman -S openshot
-sudo pacman -S davinci-resolve
+sudo pacman -S kdenlive
+# sudo pacman -S davinci-resolve
 
 echo "Installing some media-utils, Dok/Pdf-readers, etc: ..."
 sudo pacman -S gimp gimp-plugin-gmic inkscape
 sudo pacman -S 
 #--
-sudo pacman -S obsidian
+sudo pacman -S obsidian  #joplin
 sudo pacman -S scribus
 sudo pacman -S qrencode
 sudo pacman -S thunar ristretto
@@ -315,6 +316,20 @@ sudo pacman -S festival
 sudo pacman -S chromium-browser  #maybe not needed with official install
 sudo pacman -S freeplane
 sudo pacman -S tj3 vim-tjp
+
+# Warp-terminal
+sudo sh -c "echo -e '\n[warpdotdev]\nServer = https://releases.warp.dev/linux/pacman/$repo/$arch' >> /etc/pacman.conf"
+sudo pacman-key -r "linux-maintainers@warp.dev"
+sudo pacman-key --lsign-key "linux-maintainers@warp.dev"
+sudo pacman -Syu warp-terminal
+# Zed-editor
+sudo vim /etc/pacman.conf
+## Add the following lines to the very end of the file:
+[zed-editor]
+SigLevel = Optional TrustAll
+Server = https://zed.dev/releases/archlinux
+#---
+sudo pacman -Syu zed
 
 pacman -S go-yq  # yq: convert yaml to json (etc)
 yay -S graphql-playground-electron
