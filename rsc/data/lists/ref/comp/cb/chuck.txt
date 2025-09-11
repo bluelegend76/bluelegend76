@@ -1,5 +1,0 @@
-set foldmethod=indent foldlevel=2
-vim: fdm=indent:fdl=2:
-
-~/Empire/Doks/Comp/mu/au/chuck/chuck-progrformusicians_2015.pdf  #=to text
-
