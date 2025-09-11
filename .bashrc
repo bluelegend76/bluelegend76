@@ -186,6 +186,31 @@ function weather {
   curl wttr.in/${1}
 }
 
+
+function sort-by-date() {
+  ls | sort -t'_' -k2,2 -r | gvim -
+}
+
+## function sort-by-date() {
+##     # Define ANSI color codes
+##     local RED='\033[0;31m'
+##     local NC='\033[0m' # No Color
+## 
+##     # Use 'find' to get filenames and 'sort' to order them
+##     # Use a 'while read' loop to process each filename
+##     find . -maxdepth 1 -type f -name "*_*.txt" | sort -t'_' -k2,2 -r | while read -r filename; do
+##         # Extract the year from the filename using a robust regex match
+##         local year=$(grep -o -E '[0-9]{4}' <<< "$filename")
+## 
+##         # Replace the first occurrence of the year with the colored version
+##         # using Bash's built-in parameter expansion
+##         local colored_filename="${filename/${year}/${RED}${year}${NC}}"
+## 
+##         # Print the final colored filename using printf
+##         printf '%s\n' "$colored_filename"
+##     done
+## }
+
 # # Adding Mappings for Missing Keys on Wireless Keyboard 3
 # # For Keyb3: Alt-gr + Lessthan/GreaterThan
 # xmodmap ~/.keyb3_altgr-lessgreater.xmodmap
